@@ -69,6 +69,8 @@
 
 - [isDate](objects/isDate) - Checks if a "value" is a date.
 
+- [isElement](objects/isElement) - Checks if "value" is a DOM element.
+
 - [isEmpty](objects/isEmpty) - Checks if a "value" is empty.
 
 - [isString](objects/isString) - Checks if a "value" is a string.
