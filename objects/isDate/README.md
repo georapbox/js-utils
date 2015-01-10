@@ -1,7 +1,7 @@
 ##isDate
 >Checks if 'value' is a date.
 
->Returs true if 'value' is a date.
+>Returs true if value is a date.
 
 ####Syntax
 ```js
