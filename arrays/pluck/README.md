@@ -6,14 +6,12 @@
 pluck(array, key)
 ```
 
-- ```js
-array
-```
+- <code>array</code>
+
 The array to iterate over.
 
-- ```js
-key
-```
+- <code>key</code>
+
 The name of the property to pluck.
 
 ####Example
