@@ -3,8 +3,11 @@
 
 ####Syntax
 ```js
-html
+escapeHTML(html)
 ```
+
+- <code>html</code>
+
 The HTML string to escape.
 
 ####Example

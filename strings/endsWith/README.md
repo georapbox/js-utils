@@ -6,14 +6,12 @@
 endsWith(str, suffix)
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The original string.
 
-- ```js
-suffix
-```
+- <code>suffix</code>
+
 The substring (suffix) we want to check against.
 
 ####Example
