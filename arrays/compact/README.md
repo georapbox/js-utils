@@ -7,9 +7,8 @@
 compact(array)
 ```
 
-- ```js
-array
-```
+- <code>array</code>
+
 The array to compact.
 
 ####Example
