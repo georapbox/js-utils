@@ -21,6 +21,8 @@
 
 - [pluck](arrays/pluck) - Retrieves the value of a specified property from all elements in an array.
 
+- [sortBy](arrays/sortBy) -
+
 - [uniq](arrays/uniq) - Removes duplicate primitive values from an array.
 
 ####Strings

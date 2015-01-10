@@ -7,24 +7,20 @@ http://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects
 sortBy(arr, field, [ascending], [primer])
 ```
 
-- ```js
-arr {Array}
-```
+- <code>arr {Array}</code>
+
 The array of objects to sort.
 
-- ```js
-field {String}
-```
+- <code>field {String}</code>
+
 The property to sort by.
 
-- ```js
-ascending {Boolean} (Optional)
-```
+- <code>ascending {Boolean} (Optional)</code>
+
 The sorting order. Default is true (ascending).
 
-- ```js
-primer {Function} (Optional)
-```
+- <code>primer {Function} (Optional)</code>
+
 Manipulates the field to sort by.
 
 ####Example

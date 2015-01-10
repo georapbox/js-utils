@@ -6,9 +6,8 @@
 uniq(arr)
 ```
 
-- ```js
-arr
-```
+- <code>arr</code>
+
 The array to iterate over.
 
 ####Example
