@@ -6,19 +6,16 @@
 contains(str, subStr [, caseInsensitive])
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The initial string.
 
-- ```js
-subStr
-```
+- <code>subStr</code>
+
 The string we want to check if is included in the initial string.
 
-- ```js
-caseInsensitive (Optional)
-```
+- <code>caseInsensitive (Optional)</code>
+
 If true, the lookup is case insensitive. Default is undefined (falsey).
 
 ####Example
