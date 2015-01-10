@@ -4,14 +4,12 @@
 ####Syntax
 forOwn(object, [callback])
 
-- ```js
-object
-```
+- <code>object</code>
+
 The object to iterate over.
 
-- ```js
-callback (Optional)
-```
+- <code>callback (Optional)</code>
+
 The function called per iteration.
 
 ####Example
