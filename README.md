@@ -9,13 +9,13 @@
 
 ####Arrays
 - [Polyfills](arrays/polyfills) - Collection of array polyfills.
- - Array.prototype.every()
- - Array.prototype.filter()
- - Array.prototype.forEach()
- - Array.prototype.indexOf()
- - Array.prototype.lastIndexOf()
- - Array.prototype.map()
- - Array.prototype.some()
+ - [Array.prototype.every()](arrays/polyfills#arrayprototypeevery)
+ - [Array.prototype.filter()](arrays/polyfills#arrayprototypefilter)
+ - [Array.prototype.forEach()](arrays/polyfills#arrayprototypeforeach)
+ - [Array.prototype.indexOf()](arrays/polyfills#arrayprototypeindexof)
+ - [Array.prototype.lastIndexOf()](arrays/polyfills#arrayprototypelastindexof)
+ - [Array.prototype.map()](arrays/polyfills#arrayprototypemap)
+ - [Array.prototype.some()](arrays/polyfills#arrayprototypesome)
 
 - [compact](arrays/compact) - Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
 
