@@ -6,24 +6,20 @@
 replaceAll(str, subStr, replaceStr [, caseInsensitive])
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The initial string.
 
-- ```js
-subStr
-```
+- <code>subStr</code>
+
 The substring to replace.
 
-- ```js
-replaceStr
-```
+- <code>replaceStr</code>
+
 The substring to replace with.
 
-- ```js
-caseInsensitive (Optional)
-```
+- <code>caseInsensitive (Optional)</code>
+
 If true, the lookup is case insensitive. Default is undefined (falsey).
 
 ####Example

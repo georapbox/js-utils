@@ -6,14 +6,12 @@
 removeSuffix(str, suffix)
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The initial string.
 
-- ```js
-suffix
-```
+- <code>suffix</code>
+
 The substring to remove from the original string.
 
 ####Example

@@ -6,14 +6,12 @@
 removePrefix(str, prefix)
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The initial string.
 
-- ```js
-prefix
-```
+- <code>prefix</code>
+
 The substring to remove from the original string.
 
 ####Example
