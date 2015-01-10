@@ -6,14 +6,12 @@
 capitalize(str [, lowerCaseRest])
 ```
 
-- ```js
-string
-```
+- <code>string</code>
+
 The string to capitalize its first character.
 
-- ```js
-lowerCaseRest (Optional)
-```
+- <code>lowerCaseRest (Optional)</code>
+
 Boolean that indicates if the rest of the string will be converted to lower case. Default is undefined (falsey).
 
 ####Example

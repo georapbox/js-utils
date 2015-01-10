@@ -6,14 +6,12 @@
 camelize(str [, camelizeSpaces])
 ```
 
-- ```js
-string
-```
+- <code>string</code>
+
 The string to camelize.
 
-- ```js
-camelizeSpaces (Optional)
-```
+- <code>camelizeSpaces (Optional)</code>
+
 Boolean that indicates if spaces are camelized or not. Default is undefined (falsey).
 
 ####Example

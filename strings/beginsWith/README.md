@@ -6,14 +6,12 @@
 beginsWith(str, prefix)
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The original string
 
-- ```js
-prefix
-```
+- <code>prefix</code>
+
 The substring (prefix) we want to check against.
 
 ####Example
