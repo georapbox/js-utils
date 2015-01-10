@@ -7,7 +7,7 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Ar
 arr.every(callback[, thisArg])
 ```
 
-- ```js
+- ```
 callback
 ```
 Function to test for each element, taking three arguments:
