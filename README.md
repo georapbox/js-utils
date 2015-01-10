@@ -65,4 +65,6 @@
 
 - [isArray](objects/isArray) - Returns true if an object is an array, else returns false.
 
+- [isEmpty](objects/isEmpty) - Returns true if an object is empty, else returns false.
+
 - [isString](objects/isString) - Returns true if an object is a string, else returns false.
