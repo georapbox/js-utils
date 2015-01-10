@@ -6,9 +6,8 @@
 trim(str)
 ```
 
-- ```js
-string
-```
+- <code>string</code>
+
 The string to be trimmed
 
 ####Example
@@ -27,10 +26,10 @@ var trimmed = trim(str); // Lorem ipsum dolor si amet.
 trimLeft(str)
 ```
 
-- ```js
-string
-```
+- <code>string</code>
+
 The string to be trimmed
+
 ####Example
 ```js
 var str = '    Lorem ipsum dolor si amet.';
@@ -47,9 +46,8 @@ var trimmed = trimLeft(str); // Lorem ipsum dolor si amet.
 trimRight(str)
 ```
 
-- ```js
-string
-```
+- <code>string</code>
+
 The string to be trimmed
 
 ####Example

@@ -6,14 +6,12 @@
 strip(str, [string1], [string2], ...)
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The initial string.
 
-- ```js
-[string1], [string2], ...
-```
+- <code>[string1], [string2], ...</code>
+
 The substrings to remove from the original string.
 
 ####Example

@@ -6,14 +6,12 @@
 subStr(str, n)
 ```
 
-- ```js
-str
-```
+- <code>str</code>
+
 The initial string.
 
-- ```js
-n
-```
+- <code>n</code>
+
 The number of characters (positive or negative) the new string has.
 
 If n >= 0, returns a substring from the left end of the string.<br/>
