@@ -7,28 +7,24 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Ar
 arr.every(callback[, thisArg])
 ```
 
-- ```js
-callback
-```
+- <code>callback</code>
+
 Function to test for each element, taking three arguments:
- - ```js
- currentValue
- ```
+
+- <code>currentValue</code>
+
 The current element being processed in the array.
 
- - ```js
- index
- ```
+- <code>index</code>
+
 The index of the current element being processed in the array.
 
- - ```js
- array
- ```
+- <code>array</code>
+
 The array every was called upon.
 
-- ```js
-thisArg (Optional)
-```
+- <code>thisArg (Optional)</code>
+
 Value to use as this when executing callback.
 
 ---
