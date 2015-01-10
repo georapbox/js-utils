@@ -52,9 +52,9 @@
 
 - [trim](strings/trim#trim) - Removes whitespace from both ends of a string.
 
-- [trimLeft](strings/trim#trimLeft) - Removes whitespace from the left end of a string.
+- [trimLeft](strings/trim#trimleft) - Removes whitespace from the left end of a string.
 
-- [trimRight](strings/trim#trimRight) - Removes whitespace from the right end of a string.
+- [trimRight](strings/trim#trimright) - Removes whitespace from the right end of a string.
 
 ####Objects
 - [extend](objects/extend) - Merges (deep copy) the contents of two or more objects together into the first object.
