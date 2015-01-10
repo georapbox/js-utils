@@ -62,3 +62,5 @@
 - [forIn](objects/forIn) - Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
 - [forOwn](objects/forOwn) - Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
+
+- [isArray](objects/isArray) - Returns true if an object is an array, else returns false.
