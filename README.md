@@ -73,4 +73,6 @@
 
 - [isEmpty](objects/isEmpty) - Checks if a "value" is empty.
 
+- [isNumber](objects/isNumber) - Checks if a "value" is a number.
+
 - [isString](objects/isString) - Checks if a "value" is a string.
