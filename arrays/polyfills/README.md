@@ -11,17 +11,17 @@ arr.every(callback[, thisArg])
 
 Function to test for each element, taking three arguments:
 
-- <code>currentValue</code>
+ - <code>currentValue</code>
 
-The current element being processed in the array.
+ The current element being processed in the array.
 
-- <code>index</code>
+ - <code>index</code>
 
-The index of the current element being processed in the array.
+ The index of the current element being processed in the array.
 
-- <code>array</code>
+ - <code>array</code>
 
-The array every was called upon.
+ The array every was called upon.
 
 - <code>thisArg (Optional)</code>
 
@@ -38,14 +38,12 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Ar
 arr.filter(callback[, thisArg])
 ```
 
-- ```js
-callback
-```
+- <code>callback</code>
+
 Function to test each element of the array. Return true to keep the element, false otherwise.
 
-- ```js
-thisArg
-```
+- <code>thisArg</code>
+
 Value to use as this when executing callback.
 
 ---
@@ -59,28 +57,24 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 arr.forEach(callback[, thisArg])
 ```
 
-- ```js
-callback
-```
+- <code>callback</code>
+
 Function that produces an element of the new Array, taking three arguments:
- - ```js
- currentValue
- ```
+
+ - <code>currentValue</code>
+
  The current element being processed in the array.
 
- - ```js
- index
- ```
+ - <code>index</code>
+
  The index of the current element being processed in the array.
 
- - ```js
- array
- ```
+ - <code>array</code>
+
  The array forEach was called upon.
 
-- ```js
-thisArg (Optional)
-```
+- <code>thisArg (Optional)</code>
+
 Value to use as this when executing callback.
 
 ---
@@ -94,14 +88,12 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Ar
 arr.indexOf(searchElement[, fromIndex = 0])
 ```
 
-- ```js
-searchElement
-```
+- <code>searchElement</code>
+
 Element to locate in the array.
 
-- ```js
-fromIndex
-```
+- <code>fromIndex</code>
+
 The index to start the search at. If the index is greater than or equal to the array's length, -1 is returned, which means the array will not be searched. If the provided index value is a negative number, it is taken as the offset from the end of the array. Note: if the provided index is negative, the array is still searched from front to back. If the calculated index is less than 0, then the whole array will be searched. Default: 0 (Entire array is searched).
 
 ---
@@ -115,14 +107,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 arr.lastIndexOf(searchElement[, fromIndex = arr.length])
 ```
 
-- ```js
-searchElement
-```
+- <code>searchElement</code>
+
 Element to locate in the array.
 
-- ```js
-fromIndex (Optional)
-```
+- <code>fromIndex (Optional)</code>
+
 The index at which to start searching backwards. Defaults to the array's length, i.e. the whole array will be searched. If the index is greater than or equal to the length of the array, the whole array will be searched. If negative, it is taken as the offset from the end of the array. Note that even when the index is negative, the array is still searched from back to front. If the calculated index is less than 0, -1 is returned, i.e. the array will not be searched.
 
 ---
@@ -136,29 +126,24 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 arr.map(callback[, thisArg])
 ```
 
-- ```js
-callback
-```
+- <code>callback</code>
+
 Function that produces an element of the new Array, taking three arguments:
 
- - ```js
- currentValue
- ```
+ - <code>currentValue</code>
+
  The current element being processed in the array.
 
- - ```js
- index
- ```
+ - <code>index</code>
+
  The index of the current element being processed in the array.
 
- - ```js
- array
- ```
+ - <code>array</code>
+
  The array map was called upon.
 
-- ```js
-thisArg (Optional)
-```
+- <code>thisArg (Optional)</code>
+
 Value to use as this when executing callback.
 
 ---
@@ -172,12 +157,10 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Ar
 arr.some(callback[, thisArg])
 ```
 
-- ```js
-callback
-```
+- <code>callback</code>
+
 Function to test for each element.
 
-- ```js
-thisArg (Optional)
-```
+- <code>thisArg (Optional)</code>
+
 Value to use as this when executing callback.
