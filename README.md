@@ -64,3 +64,5 @@
 - [forOwn](objects/forOwn) - Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
 - [isArray](objects/isArray) - Returns true if an object is an array, else returns false.
+
+- [isString](objects/isString) - Returns true if an object is a string, else returns false.
