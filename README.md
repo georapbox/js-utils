@@ -50,11 +50,11 @@
 
 - [subStr](strings/subStr) - Returns a substring denoted by n (positive or negative) characters.
 
-- [trim](strings/trim) - Removes whitespace from both ends of a string.
+- [trim](strings/trim#trim) - Removes whitespace from both ends of a string.
 
-- [trimLeft](strings/trim) - Removes whitespace from the left end of a string.
+- [trimLeft](strings/trim#trimLeft) - Removes whitespace from the left end of a string.
 
-- [trimRight](strings/trim) - Removes whitespace from the right end of a string.
+- [trimRight](strings/trim#trimRight) - Removes whitespace from the right end of a string.
 
 ####Objects
 - [extend](objects/extend) - Merges (deep copy) the contents of two or more objects together into the first object.
