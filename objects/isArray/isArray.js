@@ -4,9 +4,9 @@
  * @returns {Boolean} Returns true if array, else false.
  */
 function isArray(value) {
-    if (Array.isArray) {
-        return Array.isArray(value);
-    } else {
-        return value instanceof Array || Object.prototype.toString.call(value) === '[object Array]';
-    }
+    return value &&
+        typeof value == 'object' &&
+        typeof value.length == 'number' &&
+        Object.prototype.toString.call(value) == '[object Array]' ||
+        false;
 }

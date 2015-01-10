@@ -67,6 +67,8 @@
 
 - [isBoolean](objects/isBoolean) - Checks if a "value" is a boolean value.
 
+- [isDate](objects/isDate) - Checks if a "value" is a date.
+
 - [isEmpty](objects/isEmpty) - Checks if a "value" is empty.
 
 - [isString](objects/isString) - Checks if a "value" is a string.
