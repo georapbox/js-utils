@@ -1,8 +1,8 @@
 /**
- * Returns true if an object is a string, else returns false.
- * @param   {Object} obj The object to check if is string.
- * @returns {Boolean}
+ * Checks if 'value' is string.
+ * @param   {*}       'value' to check if is string.
+ * @returns {Boolean} Returns true if string, else false.
  */
-function isString(obj) {
-    return Object.prototype.toString.call(obj) === '[object String]';
+function isString(value) {
+    return Object.prototype.toString.call(value) === '[object String]';
 }

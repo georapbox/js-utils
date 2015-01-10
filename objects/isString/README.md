@@ -1,14 +1,16 @@
 ##isString
->Returns true if an object is a string, else returns false.
+>Checks if 'value' is string.
+
+>Returns true if 'value' is a string, else returns false.
 
 ####Syntax
 ```js
-isString(obj)
+isString(value)
 ```
 
-- <code>obj</code>
+- <code>value</code>
 
-The object to check if is string.
+The value to check.
 
 ####Example
 ```js

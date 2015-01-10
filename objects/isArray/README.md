@@ -1,14 +1,16 @@
 ##isArray
->Returns true if an object is an array, else returns false.
+>Checks if 'value' is array.
+
+>Returns true if 'value' is an array, else returns false.
 
 ####Syntax
 ```js
-isArray(obj)
+isArray(value)
 ```
 
-- <code>obj</code>
+- <code>value</code>
 
-The object to check if is array.
+The value to check.
 
 ####Example
 ```js

@@ -1,18 +1,18 @@
 ##isEmpty
->Returns true if an object is empty, else returns false.
+>Checks if 'value' is empty.
 
-> - null and undefined are "empty"
-- zero length is empty in case of array and string
-- No own (enumerable) properties is empty in case of object literals
+>Returns true if 'value' is empty, else returns false.
+
+>Arrays, strings, or arguments objects with a length of 0 and objects with no own enumerable properties are considered "empty".
 
 ####Syntax
 ```js
-isEmpty(obj)
+isEmpty(value)
 ```
 
-- <code>obj</code>
+- <code>value</code>
 
-The object to check if is empty.
+The value to check.
 
 ####Example
 ```js

@@ -1,12 +1,12 @@
 /**
- * Returns true if an object is an array, else returns false.
- * @param   {Object}  obj The object to check if is array.
- * @returns {Boolean}
+ * Checks if 'value' is array.
+ * @param   {*}  value The 'value' to check if is array.
+ * @returns {Boolean} Returns true if array, else false.
  */
-function isArray(obj) {
+function isArray(value) {
     if (Array.isArray) {
-        return Array.isArray(obj);
+        return Array.isArray(value);
     } else {
-        return obj instanceof Array || Object.prototype.toString.call(obj) === '[object Array]';
+        return value instanceof Array || Object.prototype.toString.call(value) === '[object Array]';
     }
 }

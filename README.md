@@ -63,8 +63,10 @@
 
 - [forOwn](objects/forOwn) - Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
-- [isArray](objects/isArray) - Returns true if an object is an array, else returns false.
+- [isArray](objects/isArray) - Checks if a "value" is an array.
 
-- [isEmpty](objects/isEmpty) - Returns true if an object is empty, else returns false.
+- [isBoolean](objects/isBoolean) - Checks if a "value" is a boolean value.
 
-- [isString](objects/isString) - Returns true if an object is a string, else returns false.
+- [isEmpty](objects/isEmpty) - Checks if a "value" is empty.
+
+- [isString](objects/isString) - Checks if a "value" is a string.
