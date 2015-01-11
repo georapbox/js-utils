@@ -3,7 +3,7 @@
 
 **smallsJS** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions (pick & go) for everyday tasks.
 
-<small>*Because sometimes we need **small** solutions and not a whole library.*</small>
+<small>*Because sometimes we need <strong>small</strong> solutions and not a whole library.*</small>
 
 ###Table of contents
 
