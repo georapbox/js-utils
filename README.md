@@ -19,6 +19,8 @@
 
 - [compact](arrays/compact) - Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
 
+- [findIndex](arrays/findIndex) - Returns the index of the first element that passes the callback check.
+
 - [pluck](arrays/pluck) - Retrieves the value of a specified property from all elements in an array.
 
 - [sortBy](arrays/sortBy) - Sorts an **array of objects** by a property.
