@@ -19,7 +19,9 @@
 
 - [compact](arrays/compact) - Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
 
-- [findIndex](arrays/findIndex) - Returns the index of the first element that passes the callback check.
+- [findIndex](arrays/findIndex) - Returns the index of the first element of a collection that passes the callback check.
+
+- [findLastIndex](arrays/findLastIndex) - Returns the index of the first element of a collection that passes the callback check, iterating from right to left.
 
 - [pluck](arrays/pluck) - Retrieves the value of a specified property from all elements in an array.
 
