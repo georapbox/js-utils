@@ -60,6 +60,8 @@
 
 - [trimRight](strings/trim#trimright) - Removes whitespace from the right end of a string.
 
+- [wrapHTML](strings/wrapHTML) - Wraps a string with a HTML tag with attributes if specified.
+
 ####Objects
 - [extend](objects/extend) - Merges (deep copy) the contents of two or more objects together into the first object.
 
