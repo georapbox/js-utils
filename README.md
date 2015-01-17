@@ -40,6 +40,8 @@
 
 - [count](strings/count) - Counts the occurrences of substring in a string.
 
+- [dasherize](strings/dasherize) - Converts a camel cased string into a string delimited by dashes.
+
 - [endsWith](strins/endsWith) - Returns true if string ends with substring (suffix).
 
 - [escapeHTML](strings/escapeHTML) - Escapes a HTML string.
