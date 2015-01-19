@@ -19,6 +19,8 @@
 
 - [compact](arrays/compact) - Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
 
+- [difference](arrays/difference) - Creates an array excluding all values of the provided arrays.
+
 - [findIndex](arrays/findIndex) - Returns the index of the first element of a collection that passes the callback check.
 
 - [findLastIndex](arrays/findLastIndex) - Returns the index of the first element of a collection that passes the callback check, iterating from right to left.
