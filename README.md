@@ -56,6 +56,8 @@
 
 - [strip](strings/strip) - Returns a new string with all occurrences of arguments passed removed.
 
+- [stripHTML](strings/stripHTML) - Returns a new string with all HTML tags removed.
+
 - [subStr](strings/subStr) - Returns a substring denoted by n (positive or negative) characters.
 
 - [trim](strings/trim#trim) - Removes whitespace from both ends of a string.
