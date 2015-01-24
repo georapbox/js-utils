@@ -72,6 +72,9 @@
 
 - [wrapHTML](strings/wrapHTML) - Wraps a string with a HTML tag with attributes if specified.
 
+####Numbers
+- [randomBetween](numbers/randomBetween) - Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.
+
 ####Objects
 - [extend](objects/extend) - Merges (deep copy) the contents of two or more objects together into the first object.
 
