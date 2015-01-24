@@ -64,6 +64,8 @@
 
 - [trimRight](strings/trim#trimright) - Removes whitespace from the right end of a string.
 
+- [truncate](strings/truncate) - Truncates a string based on character count.
+
 - [unescapeHTML](strings/unescapeHTML) - Unescapes a HTML string.
 
 - [wrapHTML](strings/wrapHTML) - Wraps a string with a HTML tag with attributes if specified.
