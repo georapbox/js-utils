@@ -9,7 +9,7 @@ function escapeHTML(html) {
             '&': '&amp;',
             '<': '&lt;',
             '>': '&gt;',
-            '"': '&#34;'
+            '"': '&quot;'
         };
 
 		return charsToReplace[tag] || tag;
