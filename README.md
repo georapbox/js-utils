@@ -73,6 +73,12 @@
 - [wrapHTML](strings/wrapHTML) - Wraps a string with a HTML tag with attributes if specified.
 
 ####Numbers
+- [average](numbers/average) - Calculates the average of a set of numbers.
+
+- [max](numbers/max) - Returns the largest of zero or more numbers.
+
+- [min](numbers/min) - Returns the smallest of zero or more numbers.
+
 - [randomBetween](numbers/randomBetween) - Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.
 
 ####Objects
