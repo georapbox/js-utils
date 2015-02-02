@@ -79,6 +79,8 @@
 
 - [min](numbers/min) - Returns the smallest of zero or more numbers.
 
+- [numberFormat](numbers/numberFormat) - Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.
+
 - [randomBetween](numbers/randomBetween) - Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.
 
 ####Objects
