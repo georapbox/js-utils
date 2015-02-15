@@ -60,6 +60,8 @@
 
 - [subStr](strings/subStr) - Returns a substring denoted by n (positive or negative) characters.
 
+- [supplant](strings/supplant) - supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
+
 - [trim](strings/trim#trim) - Removes whitespace from both ends of a string.
 
 - [trimLeft](strings/trim#trimleft) - Removes whitespace from the left end of a string.
