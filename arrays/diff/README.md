@@ -5,14 +5,14 @@
 
 ####Syntax
 ```js
-difference(array, values)
+diff(arrA, arrB)
 ```
 
-- <code>array {Array}</code>
+- <code>arrA {Array}</code>
 
 The array to process.
 
-- <code>[values] {Array}</code>
+- <code>[arrB] {Array}</code>
 
 Array of values to exclude from the original array.
 
@@ -25,7 +25,7 @@ var o = {
 var a = [1, 2, 3, 4, 5, o],
     b = [5, 2, 10, o];
 
-difference(a, b); // => Array [1, 3, 4]
-difference(a, []); // => Array [1, 2, 3, 4, 5, Object]
-difference(a) // => Array []
+diff(a, b); // => Array [1, 3, 4]
+diff(a, []); // => Array [1, 2, 3, 4, 5, Object]
+diff(a) // => Array []
 ```
