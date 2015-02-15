@@ -106,4 +106,6 @@
 
 - [isNumber](objects/isNumber) - Checks if a "value" is a number.
 
+- [isObject](objects/isObject) - Checks if <code>value</code> is the language type of <code>Object</code>.
+
 - [isString](objects/isString) - Checks if a "value" is a string.
