@@ -18,5 +18,5 @@ isObject([1, 2, 3]); // => true
 isObject('Hello World!'); // => false
 isObject(false); // => false
 isObject(new String('Hello world')); // => true
-isObject(); // => undefined
+isObject(); // => false
 ```

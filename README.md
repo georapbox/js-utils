@@ -108,4 +108,6 @@
 
 - [isObject](objects/isObject) - Checks if <code>value</code> is the language type of <code>Object</code>.
 
+- [isPlainObject](objects/isPlainObject) - Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
+
 - [isString](objects/isString) - Checks if a "value" is a string.
