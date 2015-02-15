@@ -39,7 +39,7 @@ var str = '' +
         hobbies: ['coding', 'music', 'gaming']
     };
 
-    template(str, data);
+    supplant(str, data);
     // => My name is John Doe and my job is Frontend Developer.
     // => My hobbies are:
     // => - coding

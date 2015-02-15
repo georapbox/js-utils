@@ -7,7 +7,7 @@
  * @param   {Object} data The object that acts as our model.
  * @returns {String} The final string.
  */
-function template(str, data) {
+function supplant(str, data) {
     str = str.innerHTML || str;
 
     return str.replace(/{{([^{{}}]*)}}/g, function (a, b) {
