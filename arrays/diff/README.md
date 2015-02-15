@@ -3,7 +3,7 @@
 
 ####Syntax
 ```js
-diff(arrA, arrB)
+diff(arrA [, arrB])
 ```
 
 - <code>arrA {Array}</code>
