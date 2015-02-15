@@ -9,11 +9,11 @@ and if the key has a string value or number value, it is substituted for the bra
 supplant(string, data)
 ```
 
-- <code>string</code>
+- <code>string {String}</code>
 
 The initial string to substitude.
 
-- <code>data</code>
+- <code>data {Object}</code>
 
 An object to add as our model.
 
