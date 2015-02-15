@@ -1,8 +1,6 @@
 ##difference
 >Creates an array excluding all values of the provided arrays.
 
->**NOTE:** For older browsers support (ie IE7, 8), also include the [Array.prototype.filter()](arrays/polyfills#arrayprototypefilter) & [Array.prototype.indexOf()](arrays/polyfills#arrayprototypeindexof).
-
 ####Syntax
 ```js
 diff(arrA, arrB)
