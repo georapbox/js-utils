@@ -21,6 +21,8 @@
 
 - [diff](arrays/diff) - Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.
 
+- [filter](arrays/filter) - Creates a new array with all elements that pass the test implemented by the provided callback function.
+
 - [findIndex](arrays/findIndex) - Returns the index of the first element of a collection that passes the callback check.
 
 - [findLastIndex](arrays/findLastIndex) - Returns the index of the first element of a collection that passes the callback check, iterating from right to left.
