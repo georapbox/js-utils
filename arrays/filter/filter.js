@@ -6,7 +6,9 @@
  * @returns {array} The result array.
  */
 function filter(arr, callback, thisArg) {
-	if (arr == null) {
+	'use strict';
+
+    if (arr == null) { // jshint ignore:line
 		return [];
 	}
 

@@ -4,11 +4,14 @@
  * Returns a new duplicates-free array.
  * @param {Array} arr The array to iterate over.
  * @returns {Array} The final duplicates-free array.
- */function uniq(arr) {
+ */
+function uniq(arr) {
+    'use strict';
+
     var newArr = [],
         len = arr.length,
-		i,
-		j,
+        i,
+        j,
         found;
 
     for (i = 0; i < len; i += 1) {

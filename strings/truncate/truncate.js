@@ -6,6 +6,8 @@
  * @returns {String} The truncated string.
  */
 function truncate(string, characterCount, delimiter) {
+    'use strict';
+
     if (characterCount > string.length || !characterCount) {
         return string;
     }

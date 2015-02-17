@@ -4,6 +4,8 @@
  * @returns {Boolean} Returns true if 'value' is a date, else returns false.
  */
 function isDate(value) {
+    'use strict';
+
     return value &&
         typeof value === 'object' &&
         Object.prototype.toString.call(value) === '[object Date]' ||

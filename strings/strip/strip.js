@@ -4,6 +4,8 @@
  * @returns {String} the final string.
  */
 function strip(str) {
+    'use strict';
+
     var i = 1,
         len = arguments.length;
 

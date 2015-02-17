@@ -4,5 +4,6 @@
  * @returns {Boolean} Returns true if 'value' is a DOM element, else false.
  */
 function isElement(value) {
+    'use strict';
     return value && value.nodeType === 1 || false;
 }

@@ -5,6 +5,8 @@
  * @returns {Array} an array with the values.
  */
 function pluck(array, key) {
+    'use strict';
+
 	var arr = [],
 		index = -1,
 		len = array.length,

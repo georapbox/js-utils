@@ -4,5 +4,6 @@
  * @returns {String} The stripped string.
  */
 function stripHTML(string) {
+    'use strict';
     return string.replace(/<[^>]+>/g, '');
 }

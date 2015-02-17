@@ -7,6 +7,8 @@
  * @returns {Number}  The pseudo-random number.
  */
 function randomBetween(min, max, floatPoint) {
+    'use strict';
+
     var isFloatPoint = floatPoint === true;
 
     min = isFloatPoint ? parseFloat(min) : parseInt(min, 10);

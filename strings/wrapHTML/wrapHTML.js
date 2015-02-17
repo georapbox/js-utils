@@ -6,7 +6,9 @@
  * @returns {String} The final wrapped string.
  */
 function wrapHTML(string, nodeName, nodeAttributes) {
-    if (nodeName!= null) {
+    'use strict';
+
+    if (nodeName != null) { // jshint ignore:line
         var elementName = nodeName.replace(/[</>]/g, ''),
             elementAttributes = '',
             dasherizedProp,

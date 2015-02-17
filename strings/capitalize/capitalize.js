@@ -5,6 +5,8 @@
  * @returns {String} A new capitalized string.
  */
 function capitalize(str, lowerCaseRest) {
+    'use strict';
+
     var firstChar = str.substr(0, 1).toUpperCase(),
         restStr = lowerCaseRest === true ? str.substring(1).toLocaleLowerCase() : str.substring(1);
 

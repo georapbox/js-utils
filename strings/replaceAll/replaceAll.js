@@ -7,6 +7,8 @@
  * @returns {String} The new string.
  */
 function replaceAll(str, subStr, replaceStr, caseInsensitive) {
+    'use strict';
+
     // Case insensitive lookup.
     if (caseInsensitive === true) {
         subStr = subStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

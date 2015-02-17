@@ -6,7 +6,9 @@
  * @returns {Object} The original object.
  */
 function forIn(obj, callback) {
-	for (var key in obj) {
+    'use strict';
+
+	for (var key in obj) { // jshint ignore:line
 		callback && callback(obj[key], key, obj);
 	}
 

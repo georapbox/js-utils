@@ -6,6 +6,8 @@
  * @returns {Number}   The index of the first element that matches the callabck check.
  */
 function findIndex(array, callback) {
+    'use strict';
+
     var index = -1,
         length = array ? array.length : 0;
 

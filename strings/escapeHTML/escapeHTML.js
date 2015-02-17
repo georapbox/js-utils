@@ -4,6 +4,8 @@
  * @returns {String} The escaped string.
  */
 function escapeHTML(html) {
+    'use strict';
+
     return html.replace(/[&<>"]/g, function (tag) {
 		var charsToReplace = {
             '&': '&amp;',

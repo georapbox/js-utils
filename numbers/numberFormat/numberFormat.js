@@ -10,13 +10,15 @@
  * @returns {string} The formatted number as a string.
  */
 function numberFormat(nNumber, nDecimals, sDecimalSeperator, sThousandSeperator) {
+    'use strict';
+
     if (isNaN(nNumber) || nNumber == null) { // jshint ignore: line
         return nNumber || '';
     }
 
     nNumber = typeof nNumber === 'string' ? parseFloat(nNumber) : nNumber;
     nNumber = nNumber.toFixed(~~nDecimals);
-    sThousandSeperator = typeof sThousandSeperator == 'string' ? sThousandSeperator : ',';
+    sThousandSeperator = typeof sThousandSeperator === 'string' ? sThousandSeperator : ',';
 
     var parts = nNumber.split('.'),
         integerPart = parts[0],

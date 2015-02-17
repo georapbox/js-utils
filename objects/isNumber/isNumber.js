@@ -5,6 +5,8 @@
  * @returns {Boolean} Returns true if 'value' is a number, else false.
  */
 function isNumber(value) {
+    'use strict';
+
     return value &&
         typeof value === 'object' &&
         Object.prototype.toString.call(value) === '[object Number]' &&

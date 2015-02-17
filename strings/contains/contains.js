@@ -6,6 +6,8 @@
  * @returns {Boolean}
  */
 function contains(str, subStr, caseInsensitive) {
+    'use strict';
+
     // Case insensitive lookup.
     if (caseInsensitive === true) {
         subStr = subStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

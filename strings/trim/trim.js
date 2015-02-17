@@ -3,6 +3,8 @@
  * @param {String} str The string to trim.
  */
 function trim(str) {
+    'use strict';
+
     return String.prototype.trim ?
         str.trim() :
         str.replace(/(^\s*|\s*$)/g, '');
@@ -13,6 +15,8 @@ function trim(str) {
  * @param {String} str The string to left trim.
  */
 function trimLeft(str) {
+    'use strict';
+
     return str.replace(/^\s+/, '');
 }
 
@@ -21,5 +25,7 @@ function trimLeft(str) {
  * @param {String} str The string to right trim.
  */
 function trimRight(str) {
+    'use strict';
+
     return str.replace(/\s+$/, '');
 }

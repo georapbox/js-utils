@@ -5,7 +5,9 @@
  * @param {object} [thisArg] Value to use as "this" when executing callback.
  */
 function forEach(arr, callback, thisArg) {
-	if (arr == null) {
+	'use strict';
+
+    if (arr == null) { // jshint ignore:line
 		throw new TypeError('forEach expects an array as first parameter.');
 	}
 

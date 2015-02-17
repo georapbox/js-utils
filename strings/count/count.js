@@ -5,7 +5,9 @@
  * @param {Boolean} [Optional] caseInsensitive If true, the lookup is case insensitive.
  * @returns {Number} Number of occurences.
  */
-function count(str, subStr, caseInsensitive){
+function count(str, subStr, caseInsensitive) {
+    'use strict';
+
     str += '';
     subStr += '';
 

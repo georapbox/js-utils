@@ -6,6 +6,8 @@
  * @returns {Array} Array of values not included in the exclusion set.
  */
 function diff(arrA, arrB) {
+    'use strict';
+
     var len = arrA.length,
         arr = [];
 

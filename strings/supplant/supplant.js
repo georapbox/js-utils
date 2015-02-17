@@ -8,6 +8,8 @@
  * @returns {String} The final string.
  */
 function supplant(str, data) {
+    'use strict';
+
     str = str.innerHTML || str;
 
     return str.replace(/{{([^{{}}]*)}}/g, function (a, b) {
@@ -20,7 +22,7 @@ function supplant(str, data) {
         for (i; i < l; i++) {
             // If the key doesn't exist in the object do not process.
             // Mirrors how the function worked for bad values.
-            if (c[p[i]] == null) {
+            if (c[p[i]] == null) { // jshint ignore:line
                 return a;
             }
 

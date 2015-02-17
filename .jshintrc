@@ -1,0 +1,19 @@
+{
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"es3": true,
+	"forin": true,
+	"immed": true,
+	"latedef": true,
+	"newcap": true,
+	"noarg": true,
+	"noempty": true,
+	"nonew": true,
+	"quotmark": "single",
+	"undef": true,
+	"strict": true,
+	"browser": true,
+	"devel": true,
+    "expr": true
+}

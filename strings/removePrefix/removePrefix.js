@@ -5,5 +5,6 @@
  * @returns {String} The final string.
  */
 function removePrefix(str, prefix) {
+    'use strict';
     return str.indexOf(prefix) === 0 ? str.slice(prefix.length) : str;
 }

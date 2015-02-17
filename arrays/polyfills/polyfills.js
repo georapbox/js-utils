@@ -11,7 +11,7 @@
  * MDN: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
  */
 if (Array.prototype.every) {
-    Array.prototype.every = function(fun /*, thisArg */) {
+    Array.prototype.every = function (fun /*, thisArg */) {
         'use strict';
 
         if (this === void 0 || this === null) {
@@ -46,7 +46,7 @@ if (Array.prototype.every) {
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
  */
 if (!Array.prototype.filter) {
-    Array.prototype.filter = function(fun /*, thisArg */) {
+    Array.prototype.filter = function (fun /*, thisArg */) {
         'use strict';
 
         if (this === void 0 || this === null) {
@@ -93,7 +93,9 @@ if (!Array.prototype.filter) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.com/#x15.4.4.18
 if (!Array.prototype.forEach) {
-    Array.prototype.forEach = function(callback, thisArg) {
+    Array.prototype.forEach = function (callback, thisArg) {
+        'use strict';
+
         var T, k;
 
         if (this == null) {
@@ -156,7 +158,9 @@ if (!Array.prototype.forEach) {
  */
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function (searchElement, fromIndex) {
-        if ( this === undefined || this === null ) {
+        'use strict';
+
+        if (this === undefined || this === null) {
             throw new TypeError('"this" is null or not defined');
         }
 
@@ -195,7 +199,7 @@ if (!Array.prototype.indexOf) {
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
  */
 if (!Array.prototype.lastIndexOf) {
-    Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
+    Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
         'use strict';
 
         if (this === void 0 || this === null) {
@@ -245,6 +249,8 @@ if (!Array.prototype.lastIndexOf) {
 // Reference: http://es5.github.com/#x15.4.4.19
 if (!Array.prototype.map) {
     Array.prototype.map = function (callback, thisArg) {
+        'use strict';
+
         var T, A, k;
 
         if (this == null) {
@@ -323,7 +329,7 @@ if (!Array.prototype.map) {
  * MDN: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some
  */
 if (!Array.prototype.some) {
-    Array.prototype.some = function(fun /*, thisArg */) {
+    Array.prototype.some = function (fun /*, thisArg */) {
         'use strict';
 
         if (this === void 0 || this === null) {

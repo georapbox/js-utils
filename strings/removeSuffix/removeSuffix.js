@@ -5,6 +5,8 @@
  * @returns {String} The final string.
  */
 function removeSuffix(str, suffix) {
+    'use strict';
+
     var strLen = str.length,
         suffixLen = suffix.length;
 

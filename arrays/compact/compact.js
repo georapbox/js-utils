@@ -10,6 +10,8 @@
  * // => [1, 2, 3]
  */
 function compact(array) {
+    'use strict';
+
     var index = -1,
         length = array ? array.length : 0,
         resIndex = -1,

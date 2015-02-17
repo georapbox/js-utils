@@ -5,5 +5,6 @@
  * @returns {Boolean}
  */
 function beginsWith(str, prefix) {
+    'use strict';
     return str.substr(0, prefix.length) === prefix;
 }

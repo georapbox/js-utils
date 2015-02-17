@@ -8,6 +8,8 @@
  * @returns {String}   The final string.
  */
 function subStr(str, n) {
+    'use strict';
+
     if (typeof n === 'number') {
         return n >= 0 ? str.substr(0, n) : str.substr(str.length + n, -n);
     }

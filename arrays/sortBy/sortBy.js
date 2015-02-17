@@ -8,6 +8,8 @@
  * @returns {Array}    The sorted array.
  */
 function sortBy(arr, field, ascending, primer) {
+    'use strict';
+
 	var key = function (x) {
 		return primer ? primer(x[field]) : x[field];
 	};

@@ -4,6 +4,8 @@
  * @returns {String} The unescaped string.
  */
 function unescapeHTML(str) {
+    'use strict';
+
     return str.
         replace(/&lt;/g, '<').
         replace(/&gt;/g, '>').

@@ -5,6 +5,8 @@
  * @returns {Number} The average number of the set of data provided.
  */
 function average() {
+    'use strict';
+
     var sum = 0,
         count = 0,
         argsLen = arguments.length,

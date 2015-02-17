@@ -6,6 +6,8 @@
  * @returns {Boolean} Returns true if empty, else false.
  */
 function isEmpty(value) {
+    'use strict';
+
     // null and undefined are "empty".
     if (value == null) {
         return true;

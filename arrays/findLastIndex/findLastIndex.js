@@ -6,6 +6,8 @@
  * @returns {Number}   The index of the first element that matches the callabck check.
  */
 function findLastIndex(array, callback) {
+    'use strict';
+
     var length = array ? array.length : 0;
 
     while (length--) {
