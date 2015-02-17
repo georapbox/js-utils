@@ -1,6 +1,4 @@
-<sup>[[Source code]](filter.js)</sup>
-
-##filter
+##filter <sup>[[Source code]](filter.js)</sup>
 >Creates a new array with all elements that pass the test implemented by the provided callback function.
 
 ####Syntax
