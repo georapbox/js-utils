@@ -1,4 +1,4 @@
-<small>[[Source code]](filter.js)</small>
+<sup>[[Source code]](filter.js)</sup>
 
 ##filter
 >Creates a new array with all elements that pass the test implemented by the provided callback function.
