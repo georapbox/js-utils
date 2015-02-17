@@ -25,6 +25,8 @@
 
 - [findLastIndex](arrays/findLastIndex) - Returns the index of the first element of a collection that passes the callback check, iterating from right to left.
 
+- [forEach](arrays/forEach) - Executes a provided callback function once per array element.
+
 - [pluck](arrays/pluck) - Retrieves the value of a specified property from all elements in an array.
 
 - [sortBy](arrays/sortBy) - Sorts an **array of objects** by a property.
