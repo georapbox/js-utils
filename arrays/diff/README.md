@@ -1,4 +1,4 @@
-##difference
+##diff
 >Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.
 
 ####Syntax
