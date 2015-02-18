@@ -1,0 +1,15 @@
+{
+  "name": "smallsJS",
+  "version": "0.1.12",
+  "description": "A collection of javascript standalone functions for everyday tasks.",
+  "homepage": "https://github.com/georapbox/smallsJS",
+  "license": "Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.",
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-htmlfile-reporter": "^0.1.2",
+    "karma-ie-launcher": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5"
+  }
+}

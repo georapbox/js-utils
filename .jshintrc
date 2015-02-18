@@ -15,5 +15,11 @@
 	"strict": true,
 	"browser": true,
 	"devel": true,
-    "expr": true
+    "expr": true,
+    "node": true,
+    "predef": [
+        "describe",
+        "expect",
+        "it"
+    ]
 }
