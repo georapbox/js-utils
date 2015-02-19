@@ -118,7 +118,8 @@
 
 ##Installation
 - To clone the repository, run: <code>git clone https://github.com/georapbox/smallsJS.git</code>
-- To install dev dependancies, (from the root folder of the project) run: <code>npm install</code> (Required to build the documentation and run the tests)
+- To install dev dependancies, (from the root folder of the project) run: <code>npm install</code>
+(Required to [build the documentation](#build-the-documentation) and run the tests)
 
 ##Build the documentation
 From the root folder of the project, run: <code>grunt buildDocs</code>.
