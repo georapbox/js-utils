@@ -115,3 +115,11 @@
 - [isPlainObject](src/objects/isPlainObject) - Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
 
 - [isString](src/objects/isString) - Checks if a "value" is a string.
+
+##Installation
+- To clone the repository, run: <code>git clone https://github.com/georapbox/smallsJS.git</code>
+- To install dev dependancies, (from the root folder of the project) run: <code>npm install</code> (Required to build the documentation and run the tests)
+
+##Build the documentation
+From the root folder of the project, run: <code>grunt buildDocs</code>.
+This will create a <code>docs</code> folder to the root of the project, containing all <code>README</code> files converted to HTML documents.
