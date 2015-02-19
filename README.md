@@ -81,6 +81,8 @@
 ####Numbers
 - [average](src/numbers/average) - Calculates the average of a set of numbers.
 
+- [isEven](scr/numbers/isEven) - Checks if a number is even.
+
 - [max](src/numbers/max) - Returns the largest of zero or more numbers.
 
 - [min](src/numbers/min) - Returns the smallest of zero or more numbers.
