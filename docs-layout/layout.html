@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= appName %></title>
+	<meta name="author" content="<%= author %>">
+	<link rel="stylesheet" href="<%= basepath %>/styles.css">
+</head>
+<body>
+	<div class="site">
+		<div id="slider">
+			<div class="frames">
+				<div class="frame frame-center">
+					<div id="readme" class="announce">
+						<div id="markdown" class="wikistyle">
+							<% if (showAppName === true) { %>
+								<h1>
+									<a href="../../README.html">
+										<%= appName %>
+									</a>
+								</h1>
+							<% } %>
+							<%= document %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>@author: <a href="<%= homepage %>"><%= author %></a></p>
+		</div>
+	</div>
+</body>
+</html>
