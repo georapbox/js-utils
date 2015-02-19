@@ -14,6 +14,7 @@ module.exports = function (grunt) {
 						basename: function (src) {
 							return src.substr(src.lastIndexOf(path.sep) + 1);
 						},
+						path: '../docs-layout',
 						author: '<%= pkg.author %>',
 						appName: '<%= pkg.name %>',
 						"homepage": "https://github.com/georapbox/",
@@ -22,7 +23,7 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					src: 'README.md',
-					dest: 'docs/README.html'
+					dest: 'docs/index.html'
 				}]
 			},
     		multiple_files: {
@@ -33,6 +34,7 @@ module.exports = function (grunt) {
 						basename: function (src) {
 							return src.substr(src.lastIndexOf(path.sep) + 1);
 						},
+						path: '../../../../docs-layout',
 						author: '<%= pkg.author %>',
 						appName: '<%= pkg.name %>',
 						"homepage": "https://github.com/georapbox/",
