@@ -1,8 +1,6 @@
 ##filter
 >Creates a new array with all elements that pass the test implemented by the provided callback function.
 
->[[Source code]](filter.js)
-
 ####Syntax
 ```js
 filter(array, callback [, thisArg])
