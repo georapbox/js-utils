@@ -15,7 +15,7 @@
 						<div id="markdown" class="wikistyle">
 							<% if (showAppName === true) { %>
 								<h1>
-									<a href="../../README.html">
+									<a href="../../../README.html">
 										<%= appName %>
 									</a>
 								</h1>
@@ -25,7 +25,11 @@
 					</div>
 				</div>
 			</div>
-			<p>@author: <a href="<%= homepage %>"><%= author %></a></p>
+			<p>
+			    @author: <a href="<%= homepage %>"><%= author %></a>
+			    <br/>
+			    Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license.
+            </p>
 		</div>
 	</div>
 </body>
