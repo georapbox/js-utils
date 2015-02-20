@@ -83,6 +83,8 @@
 
 - [isEven](src/numbers/isEven) - Checks if a number is even.
 
+- [isOdd](src/numbers/isOdd) - Checks if a number is odd.
+
 - [max](src/numbers/max) - Returns the largest of zero or more numbers.
 
 - [min](src/numbers/min) - Returns the smallest of zero or more numbers.
