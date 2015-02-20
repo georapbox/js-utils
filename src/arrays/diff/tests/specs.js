@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('diff', function () {
+    describe('arrays/diff', function () {
         var a = [1, 2, 3, 4, {}],
             b = [5, 2, 10];
 

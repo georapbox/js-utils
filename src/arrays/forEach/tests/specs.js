@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('forEach', function () {
+    describe('arrays/forEach', function () {
         var arr = ['a', 'b', 'c'];
 
         it('expects that the callback iterates over the array', function () {

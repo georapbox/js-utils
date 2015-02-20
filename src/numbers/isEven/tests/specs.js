@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('isEven', function () {
+    describe('numbers/isEven', function () {
         it('expects 2 to be even', function () {
             expect(isEven(2)).toBe(true);
         });

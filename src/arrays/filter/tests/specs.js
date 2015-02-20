@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('filter', function () {
+    describe('arrays/filter', function () {
         var arr = ['a', {a: 'b'}, 1, 'b', 2, {c: 'd'}, 'c'];
 
         it('expects the return value to be "[{a: \'b\'}]"', function () {

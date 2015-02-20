@@ -23,7 +23,7 @@ module.exports = function (config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'**/*.js'
+			'src/**/*.js'
 		],
 
 		// list of files to exclude
@@ -44,7 +44,7 @@ module.exports = function (config) {
 		],
 
 		htmlReporter: {
-    		outputFile: 'tests/test-results.html'
+    		outputFile: 'tests-reporter/index.html'
     	},
 
 		// web server port
