@@ -20,6 +20,7 @@
     "predef": [
         "describe",
         "expect",
-        "it"
+        "it",
+        "spyOn"
     ]
 }
