@@ -8,7 +8,6 @@ function isNumber(value) {
     'use strict';
 
     return value &&
-        typeof value === 'object' &&
         Object.prototype.toString.call(value) === '[object Number]' &&
         typeof value === 'number' ||
         false;
