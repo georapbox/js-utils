@@ -16,7 +16,6 @@ The value to check.
 ```js
 isNumber(10) // => true
 isNumber('10') // => false
-isNumber(new Number(NaN)) // => true
 isNumber(new Date()) // => false
 isNumber(new Date().getTime()) // => true
 isNumber(true); // => false
