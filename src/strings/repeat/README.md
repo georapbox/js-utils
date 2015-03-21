@@ -1,4 +1,4 @@
-###[Strings](/src/strings) > repeat
+###[Strings](../) > repeat
 ```js
 repeat(string, count)
 ```
