@@ -5,8 +5,8 @@ repeat(string, count)
 
 > Returns a string repeated <code>count</code> times.
 
-- <code>{string} string</code> The string to process.
-- <code>{number} count</code> Times to repeat the string.
+- <code>@param {string} string</code> The string to process.
+- <code>@param {number} count</code> Times to repeat the string.
 
 ####Example
 ```js
