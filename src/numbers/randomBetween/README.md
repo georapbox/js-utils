@@ -1,22 +1,22 @@
-##randomBetween
->Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.
+###[Numbers](../) > randomBetween
 
-####Syntax
 ```js
-randomBetween(min, max, [floatPoint])
+randomBetween(min, max [, floatPoint])
 ```
 
-- <code>min {Number}</code>
+>Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.
+
+- <code>min {number}</code>
 
 The minimum value of the range.
 
-- <code>max {Number}</code>
+- <code>max {number}</code>
 
 The maximum value of the range.
 
-- <code>[floatPoint] {Boolean}</code>
+- <code>[floatPoint] {boolean}</code>
 
-Optional. If true the returned number will be floating-point. Default is undefined (falsey).
+If true the returned number will be floating-point. Default is undefined (falsey).
 
 ####Example
 ```js

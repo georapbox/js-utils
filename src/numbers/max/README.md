@@ -1,4 +1,5 @@
-##max
+###[Numbers](../) > max
+
 >Returns the largest of zero or more numbers.
 
 ####Syntax
@@ -6,7 +7,7 @@
 max([value1 [, value2, ...]]);
 ```
 
-- <code>value1, value2, ...</code>
+- <code>value1, value2, ... {number}</code>
 
 Numbers
 
@@ -16,7 +17,7 @@ Numbers
 max(numArray);
 ```
 
-- <code>numArray</code>
+- <code>numArray {array}</code>
 
 An array of numbers.
 

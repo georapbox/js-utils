@@ -1,11 +1,11 @@
-##formatNumber
->Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.
->Returns the formatted number as a string.
+###[Numbers](../) > formatNumber
 
-####Syntax
 ```js
 formatNumber(nNumber [, nDecimals=0 [, sDecimalSeperator='.' [, sThousandSeperator=',']]])
 ```
+
+>Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.
+>Returns the formatted number as a string.
 
 - <code>nNumber {number}</code>
 

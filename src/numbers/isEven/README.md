@@ -1,12 +1,12 @@
-##isEven
->Checks if a number is even.
+###[Numbers](../) > isEven
 
-####Syntax
 ```js
 isEven(value)
 ```
 
-- <code>value {Number}</code>
+>Checks if a number is even.
+
+- <code>value {number}</code>
 
 The number to check if even.
 

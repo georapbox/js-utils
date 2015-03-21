@@ -1,4 +1,4 @@
-##min
+###[Numbers](../) > min
 >Returns the smallest of zero or more numbers.
 
 ####Syntax
@@ -6,7 +6,7 @@
 min([value1 [, value2, ...]]);
 ```
 
-- <code>value1, value2, ...</code>
+- <code>value1, value2, ... {number}</code>
 
 Numbers
 
@@ -16,7 +16,7 @@ Numbers
 min(numArray);
 ```
 
-- <code>numArray</code>
+- <code>numArray {array}</code>
 
 An array of numbers.
 

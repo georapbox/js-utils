@@ -1,4 +1,6 @@
-##average
+###[Numbers](../) > average
+
+
 >Calculates the average of a set of numbers.
 
 ####Syntax
@@ -6,7 +8,7 @@
 average([value1 [, value2, ...]]);
 ```
 
-- <code>value1, value2, ...</code>
+- <code>value1, value2, ... {number}</code>
 
 A set of numbers.
 
@@ -16,7 +18,7 @@ A set of numbers.
 average(numArray);
 ```
 
-- <code>numArray</code>
+- <code>numArray {array}</code>
 
 An array of numbers.
 
