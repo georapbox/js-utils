@@ -1,16 +1,16 @@
-##removePrefix
->Removes substring from start of a string.
+###[Strings](../) > removePrefix
 
-####Syntax
 ```js
 removePrefix(str, prefix)
 ```
 
-- <code>str</code>
+>Removes substring from start of a string.
 
-The initial string.
+- <code>str {string}</code>
 
-- <code>prefix</code>
+The string to process.
+
+- <code>prefix {string}</code>
 
 The substring to remove from the original string.
 

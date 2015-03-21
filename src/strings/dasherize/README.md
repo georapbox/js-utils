@@ -1,10 +1,10 @@
-##dasherize
->Converts a camel cased string into a string delimited by dashes.
+###[Strings](../) > dasherize
 
-####Syntax
 ```js
 dasherize(string)
 ```
+
+>Converts a camel cased string into a string delimited by dashes.
 
 - <code>string {String}</code>
 

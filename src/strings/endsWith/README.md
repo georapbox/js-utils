@@ -1,16 +1,16 @@
-##endsWith
-> Returns true if string ends with substring (suffix).
+###[Strings](../) > endsWith
 
-####Syntax
 ```js
 endsWith(str, suffix)
 ```
 
-- <code>str</code>
+> Returns true if string ends with substring (suffix).
 
-The original string.
+- <code>str {string}</code>
 
-- <code>suffix</code>
+The string to process.
+
+- <code>suffix {string}</code>
 
 The substring (suffix) we want to check against.
 

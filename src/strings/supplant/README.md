@@ -1,19 +1,19 @@
-##supplant
+###[Strings](../) > supplant
+
+```js
+supplant(string, data)
+```
+
 >supplant() does variable substitution on a string.
 It scans through the string looking for expressions enclosed in {{ }} braces.
 If an expression is found, use it as a key on the object,
 and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
 
-####Syntaxt
-```js
-supplant(string, data)
-```
-
-- <code>string {String}</code>
+- <code>string {string}</code>
 
 The initial string to substitude.
 
-- <code>data {Object}</code>
+- <code>data {object}</code>
 
 An object to add as our model.
 

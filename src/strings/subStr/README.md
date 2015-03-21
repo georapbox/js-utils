@@ -1,16 +1,16 @@
-##subStr
->Returns a substring denoted by n (positive or negative) characters.
+###[Strings](../) > subStr
 
-####Syntax
 ```js
 subStr(str, n)
 ```
 
-- <code>str</code>
+>Returns a substring denoted by n (positive or negative) characters.
 
-The initial string.
+- <code>str {string}</code>
 
-- <code>n</code>
+The string to process.
+
+- <code>n {number}</code>
 
 The number of characters (positive or negative) the new string has.
 

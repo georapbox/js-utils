@@ -1,23 +1,23 @@
-##subStrAfterChars
+###[Strings](../) > subStrAfterChars
+
+```js
+subStrAfterChars(str, chars [, last])
+```
+
 >Returns a substring after a specific sequence of character(s).
 
 >By default looks for the first occuerence of this sequence.
 >If the character or sequence of characters not found, returns the initial string.
 
-####Syntax
-```js
-subStrAfterChars(str, chars [, last])
-```
-
-- <code>str</code>
+- <code>str {string}</code>
 
 The initial string to process.
 
-- <code>chars</code>
+- <code>chars {string}</code>
 
 One or more characters to use for the lookup.
 
-- <code>[last]</code>
+- <code>[last] {boolean}</code>
 
 If <code>true</code> or any truthy value, will lookup for the lsat occurence of the character or sequence of characters specified.
 Default value is <code>undefined</code>.

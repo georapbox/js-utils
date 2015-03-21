@@ -1,20 +1,20 @@
-##wrapHTML
->Wraps a string with a HTML tag with attributes if specified.
+###[Strings](../) > wrapHTML
 
-####Syntax
 ```js
-wrapHTML(string, nodeName, [nodeAttribures])
+wrapHTML(string, nodeName [, nodeAttribures])
 ```
 
-- <code>string {String}</code>
+>Wraps a string with a HTML tag with attributes if specified.
+
+- <code>string {string}</code>
 
 The string to wrap with the HTML tag.
 
-- <code>nodeName {String}</code>
+- <code>nodeName {string}</code>
 
 The HTML tag name that we want to wrap the string with.
 
-- <code>nodeAttributes {Object} (Optional)</code>
+- <code>[nodeAttributes] {object}</code>
 
 The desired attributes of the HTML element.
 

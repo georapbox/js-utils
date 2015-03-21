@@ -1,20 +1,21 @@
-##contains
->Returns true if the string contains the passed string.
+###[Strings](../) > contains
 
-####Syntax
 ```js
 contains(str, subStr [, caseInsensitive])
 ```
 
-- <code>str</code>
+>Returns true if the string contains the passed string.
+
+
+- <code>str {string}</code>
 
 The initial string.
 
-- <code>subStr</code>
+- <code>subStr {string}</code>
 
 The string we want to check if is included in the initial string.
 
-- <code>caseInsensitive (Optional)</code>
+- <code>[caseInsensitive] {boolean}</code>
 
 If true, the lookup is case insensitive. Default is undefined (falsey).
 

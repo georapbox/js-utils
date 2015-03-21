@@ -1,24 +1,24 @@
-##replaceAll
->Returns a new string with all occurrences of subStr replaced with replaceStr.
+###[Strings](../) > replaceAll
 
-####Syntax
 ```js
 replaceAll(str, subStr, replaceStr [, caseInsensitive])
 ```
 
-- <code>str</code>
+>Returns a new string with all occurrences of subStr replaced with replaceStr.
 
-The initial string.
+- <code>str {string}</code>
 
-- <code>subStr</code>
+The string to process.
+
+- <code>subStr {string}</code>
 
 The substring to replace.
 
-- <code>replaceStr</code>
+- <code>replaceStr {string}</code>
 
 The substring to replace with.
 
-- <code>caseInsensitive (Optional)</code>
+- <code>[caseInsensitive] {boolean}</code>
 
 If true, the lookup is case insensitive. Default is undefined (falsey).
 

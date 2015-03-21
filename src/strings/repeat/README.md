@@ -1,14 +1,19 @@
-####[smallsJS](../../) > [Strings](../) > repeat
+###[Strings](../) > repeat
 ```js
 repeat(string, count)
 ```
 
 > Returns a string repeated <code>count</code> times.
 
-- <code>@param {string} string</code> The string to process.
-- <code>@param {number} count</code> Times to repeat the string.
+- <code>string {string}</code>
 
-#####Example
+The string to process.
+
+- <code>count {number}</code>
+
+Times to repeat the string.
+
+####Example
 ```js
 repeat('&nbsp;', 4); // => '&nbsp;&nbsp;&nbsp;&nbsp;'
 repeat('&nbsp;', 2.5); // => '&nbsp;&nbsp;'

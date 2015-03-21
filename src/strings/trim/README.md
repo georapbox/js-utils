@@ -1,12 +1,12 @@
-## trim
->Removes whitespace from both ends of a string.
+###[Strings](../) > trim
 
-####Syntax
 ```js
 trim(str)
 ```
 
-- <code>string</code>
+>Removes whitespace from both ends of a string.
+
+- <code>string {string}</code>
 
 The string to be trimmed
 
@@ -18,15 +18,15 @@ var trimmed = trim(str); // Lorem ipsum dolor si amet.
 
 ---
 
-## trimLeft
->Removes whitespace from the left end of a string.
+###[Strings](../) > trimLeft
 
-####Syntax
 ```js
 trimLeft(str)
 ```
 
-- <code>string</code>
+>Removes whitespace from the left end of a string.
+
+- <code>string {string}</code>
 
 The string to be trimmed
 
@@ -38,15 +38,15 @@ var trimmed = trimLeft(str); // Lorem ipsum dolor si amet.
 
 ---
 
-## trimRight
->Removes whitespace from the right end of a string.
+###[Strings](../) > trimRight
 
-####Syntax
 ```js
 trimRight(str)
 ```
 
-- <code>string</code>
+>Removes whitespace from the right end of a string.
+
+- <code>string {string}</code>
 
 The string to be trimmed
 

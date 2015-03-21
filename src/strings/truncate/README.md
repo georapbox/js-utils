@@ -1,22 +1,22 @@
-##truncate
->Truncates a string based on character count.
+###[Strings](../) > truncate
 
-####Syntax
 ```js
-truncate(string, characterCount, [delimiter])
+truncate(string, characterCount [, delimiter])
 ```
 
-- <code>string {String}</code>
+>Truncates a string based on character count.
+
+- <code>string {string}</code>
 
 The string to truncate.
 
-- <code>characterCount {Number}</code>
+- <code>characterCount {number}</code>
 
 The number of characters the truncated string will contain. If ommitted or falsey, the default string is returned.
 
-- <code>[delimiter] {String}</code>
+- <code>[delimiter] {string}</code>
 
-Optional. The delimiter to add at the end of the truncated string. Default value is "...".
+The delimiter to add at the end of the truncated string. Default value is "...".
 
 ####Example
 ```js

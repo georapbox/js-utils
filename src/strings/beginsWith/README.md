@@ -1,16 +1,16 @@
-##beginsWith
->Returns true if string begins with substring (prefix).
+###[Strings](../) > beginsWith
 
-####Syntax
 ```js
 beginsWith(str, prefix)
 ```
 
-- <code>str</code>
+>Returns true if string begins with substring (prefix).
+
+- <code>str {string}</code>
 
 The original string
 
-- <code>prefix</code>
+- <code>prefix {string}</code>
 
 The substring (prefix) we want to check against.
 

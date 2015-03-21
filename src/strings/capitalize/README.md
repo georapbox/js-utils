@@ -1,16 +1,17 @@
-##capitalize
->Capitalizes the first character of a string.
+###[Strings](../) > capitalize
 
-####Syntax
 ```js
 capitalize(str [, lowerCaseRest])
 ```
 
-- <code>string</code>
+>Capitalizes the first character of a string.
+
+
+- <code>string {string}</code>
 
 The string to capitalize its first character.
 
-- <code>lowerCaseRest (Optional)</code>
+- <code>[lowerCaseRest] {boolean}</code>
 
 Boolean that indicates if the rest of the string will be converted to lower case. Default is undefined (falsey).
 

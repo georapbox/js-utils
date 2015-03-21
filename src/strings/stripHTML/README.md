@@ -1,10 +1,10 @@
-##stripHTML
->Returns a new string with all HTML tags removed.
+###[Strings](../) > stripHTML
 
-####Syntax
 ```js
 stripHTML(string)
 ```
+
+>Returns a new string with all HTML tags removed.
 
 - <code>string {String}</code>
 

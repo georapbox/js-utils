@@ -1,16 +1,16 @@
-##strip
->Returns a new string with all occurrences of [string1], [string2], ... removed.
+###[Strings](../) > strip
 
-####Syntax
 ```js
 strip(str, [string1], [string2], ...)
 ```
 
-- <code>str</code>
+>Returns a new string with all occurrences of [string1], [string2], ... removed.
 
-The initial string.
+- <code>str {string}</code>
 
-- <code>[string1], [string2], ...</code>
+The string to process.
+
+- <code>[string1], [string2], ... </code>
 
 The substrings to remove from the original string.
 

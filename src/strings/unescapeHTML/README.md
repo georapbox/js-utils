@@ -1,12 +1,12 @@
-##unescapeHTML
->Unscapes a HTML string.
+###[Strings](../) > unescapeHTML
 
-####Syntax
 ```js
 unescapeHTML(str)
 ```
 
-- <code>str {String}</code>
+>Unscapes a HTML string.
+
+- <code>str {string}</code>
 
 The HTML string to unescape.
 
