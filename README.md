@@ -56,6 +56,8 @@
 
 - [removeSuffix](src/strings/removeSuffix) - Removes substring (suffix) from end of a string.
 
+- [repeat](src/strings/repeat) - Returns a string repeated <code>count</code> times.
+
 - [replaceAll](src/strings/replaceAll) -Returns a new string with all occurrences of subStr replaced with replaceStr.
 
 - [strip](src/strings/strip) - Returns a new string with all occurrences of arguments passed removed.
