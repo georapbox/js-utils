@@ -1,16 +1,16 @@
-##isEmpty
->Checks if 'value' is empty.
+###[Objects](../) > isEmpty
 
->Returns true if 'value' is empty, else returns false.
-
->Arrays, strings, or arguments objects with a length of 0 and objects with no own enumerable properties are considered "empty".
-
-####Syntax
 ```js
 isEmpty(value)
 ```
 
-- <code>value</code>
+>Checks if <code>value</code> is empty.
+
+>Returns true if <code>value</code> is empty, else returns false.
+
+>Arrays, strings, or arguments objects with a length of 0 and objects with no own enumerable properties are considered "empty".
+
+- <code>value {*}</code>
 
 The value to check.
 
