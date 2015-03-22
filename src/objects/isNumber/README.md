@@ -1,14 +1,14 @@
-##isNumber
-> Checks if 'value' is a number.
+###[Objects](../) > isNumber
 
-> Note: "NaN" is considered a number.
-
-####Syntax
 ```js
 isNumber(value)
 ```
 
-- <code>value</code>
+> Checks if <code>value</code> is a number.
+
+> Note: "NaN" is considered a number.
+
+- <code>value {*}</code>
 
 The value to check.
 
