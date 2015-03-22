@@ -1,16 +1,16 @@
-##diff
->Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.
+###[Arrays](../) > diff
 
-####Syntax
 ```js
 diff(arrA [, arrB])
 ```
 
-- <code>arrA {Array}</code>
+>Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.
+
+- <code>arrA {array}</code>
 
 The array to process.
 
-- <code>[arrB] {Array}</code>
+- <code>[arrB] {array}</code>
 
 Array of values to exclude from the original array.
 

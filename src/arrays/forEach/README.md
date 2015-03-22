@@ -1,21 +1,21 @@
-##forEach
->Executes a provided callback function once per array element.
->To break from the iteration at any time, have the callback <code>return false</code>.
+###[Arrays](../) > forEach
 
-####Syntax
 ```js
 forEach(array, callback [, thisArg])
 ```
 
-- <code>array {Array}</code>
+>Executes a provided callback function once per array element.
+>To break from the iteration at any time, have the callback <code>return false</code>.
+
+- <code>array {array}</code>
 
 The array to iterate over.
 
-- <code>callback {Function}</code>
+- <code>callback {function}</code>
 
 The callback function to execute per array element.
 
-- <code>[thisArg] {Object}</code>
+- <code>[thisArg] {object}</code>
 
 Value to use as <code>this</code> when executing callback.
 

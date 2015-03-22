@@ -1,4 +1,4 @@
-##Array.prototype.every()
+###[Arrays](../) > Array.prototype.every()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 >The **every()** method tests whether all elements in the array pass the test implemented by the provided function.
 
@@ -29,7 +29,7 @@ Value to use as this when executing callback.
 
 ---
 
-##Array.prototype.filter()
+###[Arrays](../) > Array.prototype.filter()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 >The **filter()** method creates a new array with all elements that pass the test implemented by the provided function.
 
@@ -48,7 +48,7 @@ Value to use as this when executing callback.
 
 ---
 
-##Array.prototype.forEach()
+###[Arrays](../) > Array.prototype.forEach()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 >The **forEach()** method executes a provided function once per array element.
 
@@ -79,7 +79,7 @@ Value to use as this when executing callback.
 
 ---
 
-##Array.prototype.indexOf()
+###[Arrays](../) > Array.prototype.indexOf()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 >The **indexOf()** method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
@@ -98,7 +98,7 @@ The index to start the search at. If the index is greater than or equal to the a
 
 ---
 
-##Array.prototype.lastIndexOf()
+###[Arrays](../) > Array.prototype.lastIndexOf()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 >The **lastIndexOf()** method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
 
@@ -117,7 +117,7 @@ The index at which to start searching backwards. Defaults to the array's length,
 
 ---
 
-##Array.prototype.map()
+###[Arrays](../) > Array.prototype.map()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 >The **map()** method creates a new array with the results of calling a provided function on every element in this array.
 
@@ -148,7 +148,7 @@ Value to use as this when executing callback.
 
 ---
 
-##Array.prototype.some()
+###[Arrays](../) > Array.prototype.some()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 >The **some()** method tests whether some element in the array passes the test implemented by the provided function.
 

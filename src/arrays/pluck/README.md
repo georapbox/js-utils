@@ -1,16 +1,16 @@
-##pluck
->Retrieves the value of a specified property from all elements in an array.
+###[Arrays](../) > pluck
 
-####Syntax
 ```js
 pluck(array, key)
 ```
 
-- <code>array</code>
+>Retrieves the value of a specified property from all elements in an array.
+
+- <code>array {array}</code>
 
 The array to iterate over.
 
-- <code>key</code>
+- <code>key {string}</code>
 
 The name of the property to pluck.
 

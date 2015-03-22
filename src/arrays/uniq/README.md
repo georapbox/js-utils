@@ -1,12 +1,12 @@
-##uniq
->Removes duplicate primitive values from an array. Returns a new duplicates-free array.
+###[Arrays](../) > uniq
 
-####Syntax
 ```js
 uniq(arr)
 ```
 
-- <code>arr</code>
+>Removes duplicate primitive values from an array. Returns a new duplicates-free array.
+
+- <code>arr {array}</code>
 
 The array to iterate over.
 

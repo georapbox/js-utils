@@ -1,13 +1,13 @@
-##compact
->Creates an array with all falsey values removed.
->'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
+###[Arrays](../) > compact
 
-####Syntax
 ```js
 compact(array)
 ```
 
-- <code>array</code>
+>Creates an array with all falsey values removed.
+>'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
+
+- <code>array {array}</code>
 
 The array to compact.
 
