@@ -1,12 +1,12 @@
-##isElement
-> Checks if 'value' is a DOM element.
+###[Objects](../) > isElement
 
-####Syntax
 ```js
 isElement(value)
 ```
 
-- <code>value</code>
+> Checks if <code>value</code> is a DOM element.
+
+- <code>value {*}</code>
 
 The value to check.
 
