@@ -1,14 +1,14 @@
-##isString
->Checks if 'value' is string.
+###[Objects](../) > isString
 
->Returns true if 'value' is a string, else returns false.
-
-####Syntax
 ```js
 isString(value)
 ```
 
-- <code>value</code>
+>Checks if <code>value</code> is string.
+
+>Returns true if <code>value</code> is a string, else returns false.
+
+- <code>value {*}</code>
 
 The value to check.
 
