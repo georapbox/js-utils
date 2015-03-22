@@ -4,7 +4,7 @@
 isArray(value)
 ```
 
->Checks if 'value' is array.
+>Checks if <code>value</code> is array.
 
 >Returns true if 'value' is an array, else returns false.
 
