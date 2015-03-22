@@ -9,13 +9,13 @@
 
 ####Arrays
 - [Polyfills](src/arrays/polyfills) - Collection of array polyfills.
- - [Array.prototype.every()](src/arrays/polyfills#arrayprototypeevery)
- - [Array.prototype.filter()](src/arrays/polyfills#arrayprototypefilter)
- - [Array.prototype.forEach()](src/arrays/polyfills#arrayprototypeforeach)
- - [Array.prototype.indexOf()](src/arrays/polyfills#arrayprototypeindexof)
- - [Array.prototype.lastIndexOf()](src/arrays/polyfills#arrayprototypelastindexof)
- - [Array.prototype.map()](src/arrays/polyfills#arrayprototypemap)
- - [Array.prototype.some()](src/arrays/polyfills#arrayprototypesome)
+ - [Array.prototype.every()](src/arrays/polyfills#arrays--arrayprototypeevery)
+ - [Array.prototype.filter()](src/arrays/polyfills#arrays--arrayprototypefilter)
+ - [Array.prototype.forEach()](src/arrays/polyfills#arrays--arrayprototypeforeach)
+ - [Array.prototype.indexOf()](src/arrays/polyfills#arrays--arrayprototypeindexof)
+ - [Array.prototype.lastIndexOf()](src/arrays/polyfills#arrays--arrayprototypelastindexof)
+ - [Array.prototype.map()](src/arrays/polyfills#arrays--arrayprototypemap)
+ - [Array.prototype.some()](src/arrays/polyfills#arrays--arrayprototypesome)
 
 - [compact](src/arrays/compact) - Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
 
