@@ -1,10 +1,10 @@
-##isObject
->Checks if <code>value</code> is the language type of <code>Object</code>.
+###[Objects](../) > isObject
 
-####Syntax
 ```js
 isObject(value)
 ```
+
+>Checks if <code>value</code> is the language type of <code>Object</code>.
 
 - <code>value {*}</code>
 
