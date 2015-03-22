@@ -1,14 +1,17 @@
-##forOwn
+###[Objects](../) > forIn
+
+```js
+forIn(object [, callback])
+```
+
 >Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
-####Syntax
-forIn(object, [callback])
 
-- <code>object</code>
+- <code>object {object}</code>
 
 The object to iterate over.
 
-- <code>callback (Optional)</code>
+- <code>[callback] {function}</code>
 
 The function called per iteration.
 

@@ -1,14 +1,16 @@
-##forOwn
+###[Objects](../) > forOwn
+
+```js
+forOwn(object [, callback])
+```
+
 >Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
-####Syntax
-forOwn(object, [callback])
-
-- <code>object</code>
+- <code>object {object}</code>
 
 The object to iterate over.
 
-- <code>callback (Optional)</code>
+- <code>[callback] {function}</code>
 
 The function called per iteration.
 

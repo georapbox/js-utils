@@ -1,14 +1,14 @@
-##isArray
->Checks if 'value' is array.
+###[Objects](../) > isArray
 
->Returns true if 'value' is an array, else returns false.
-
-####Syntax
 ```js
 isArray(value)
 ```
 
-- <code>value</code>
+>Checks if 'value' is array.
+
+>Returns true if 'value' is an array, else returns false.
+
+- <code>value {*}</code>
 
 The value to check.
 
