@@ -1,7 +1,7 @@
 #smallsJS
 > Not yet another Javascript library.
 
-**smallsJS** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick for everyday tasks.
+**smallsJS** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from, for everyday tasks.
 
 *Because sometimes we need <strong>small</strong> solutions and not a whole library.*
 
@@ -70,11 +70,11 @@
 
 - [supplant](src/strings/supplant) - supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
 
-- [trim](src/strings/trim#trim) - Removes whitespace from both ends of a string.
+- [trim](src/strings/trim#strings--trim) - Removes whitespace from both ends of a string.
 
-- [trimLeft](src/strings/trim#trimleft) - Removes whitespace from the left end of a string.
+- [trimLeft](src/strings/trim#strings--trimleft) - Removes whitespace from the left end of a string.
 
-- [trimRight](src/strings/trim#trimright) - Removes whitespace from the right end of a string.
+- [trimRight](src/strings/trim#strings--trimright) - Removes whitespace from the right end of a string.
 
 - [truncate](src/strings/truncate) - Truncates a string based on character count.
 
