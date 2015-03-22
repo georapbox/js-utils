@@ -1,14 +1,14 @@
-##isFunction
-> Checks if 'value' is a function.
+###[Objects](../) > isFunction
 
->Returns true if value is a function, else returns false.
-
-####Syntax
 ```js
 isFunction(value)
 ```
 
-- <code>value</code>
+> Checks if <code>value</code> is a function.
+
+>Returns true if <code>value</code> is a function, else returns false.
+
+- <code>value {*}</code>
 
 The value to check.
 
