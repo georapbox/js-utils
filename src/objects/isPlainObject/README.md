@@ -1,10 +1,10 @@
-##isPlainObject
->Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
+###[Objects](../) > isPlainObject
 
-####Syntax
 ```js
 isPlainObject(value)
 ```
+
+>Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
 
 - <code>value {*}</code>
 
