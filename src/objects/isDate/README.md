@@ -1,14 +1,14 @@
-##isDate
->Checks if 'value' is a date.
+###[Objects](../) > isDate
 
->Returs true if value is a date.
-
-####Syntax
 ```js
 isDate(value)
 ```
 
-- <code>value</code>
+>Checks if <code>value</code> is a date.
+
+>Returs true if value is a date.
+
+- <code>value {*}</code>
 
 The value to check.
 
