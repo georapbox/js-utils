@@ -1,14 +1,14 @@
-##isBoolean
->Checks if 'value' is a boolean value.
+###[Objects](../) > isBoolean
 
->Returns true is 'value' is boolean, else returns false.
-
-####Syntax
 ```js
 isBoolean(value)
 ```
 
-- <code>value</code>
+>Checks if <code>value</code> is a boolean value.
+
+>Returns true is 'value' is boolean, else returns false.
+
+- <code>value {*}</code>
 
 The value to check.
 
