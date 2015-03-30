@@ -52,6 +52,12 @@
 
 - [escapeHTML](src/strings/escapeHTML) - Escapes a HTML string.
 
+- [pad](src/strings/pad#strings--pad) - Pad <code>str</code> on **both** sides to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.
+
+- [padLeft](src/strings/pad#strings--padleft) - Pad <code>str</code> on **left** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.
+
+- [padRight](src/strings/pad#strings--padright) - Pad <code>str</code> on **right** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.
+
 - [removePrefix](src/strings/removePrefix) - Removes substring (prefix) from start of a string.
 
 - [removeSuffix](src/strings/removeSuffix) - Removes substring (suffix) from end of a string.
