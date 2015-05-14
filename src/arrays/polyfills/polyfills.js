@@ -3,9 +3,9 @@
 // http://www.ibiblio.org/pub/Linux/LICENSES/mit.license
 
 /**
- * Syntax: arr.every(callback[, thisArg])
- * Description: The every() method tests whether all elements in the array
- *              pass the test implemented by the provided function.
+ * arr.every(callback[, thisArg])
+ * The every() method tests whether all elements in the array
+ * pass the test implemented by the provided function.
  * @param {Function} callback: Function to test for each element.
  * @param [thisArg]: Value to use as this when executing callback.
  * MDN: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
@@ -36,11 +36,10 @@ if (Array.prototype.every) {
     };
 }
 
-
 /**
- * Syntax: arr.filter(callback[, thisArg])
- * Description: The filter() method creates a new array with all elements that
- *              pass the test implemented by the provided function.
+ * arr.filter(callback[, thisArg])
+ * The filter() method creates a new array with all elements that
+ * pass the test implemented by the provided function.
  * @param {Function} callback Function to test each element of the array.
  * @param [thisArg] Value to use as this when executing callback.
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -82,10 +81,9 @@ if (!Array.prototype.filter) {
     };
 }
 
-
 /**
- * Syntax: arr.forEach(callback[, thisArg])
- * Description: The forEach() method executes a provided function once per array element.
+ * arr.forEach(callback[, thisArg])
+ * The forEach() method executes a provided function once per array element.
  * @param {Function} callback: Function to execute for each element.
  * @param [thisArg]: Value to use as this when executing callback.
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
@@ -147,11 +145,10 @@ if (!Array.prototype.forEach) {
     };
 }
 
-
 /**
- * Syntax: arr.indexOf(searchElement[, fromIndex])
- * Description: The indexOf() method returns the first index at which a given
- *              element can be found in the array, or -1 if it is not present.
+ * arr.indexOf(searchElement[, fromIndex])
+ * The indexOf() method returns the first index at which a given
+ * element can be found in the array, or -1 if it is not present.
  * @param searchElement: Element to locate in the array.
  * @param {Number} [fromIndex]: Default: 0 (Entire array is searched).
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
@@ -189,11 +186,10 @@ if (!Array.prototype.indexOf) {
     };
 }
 
-
 /**
- * Syntax: array.lastIndexOf(searchElement[, fromIndex])
- * Description: The lastIndexOf() method returns the last index at which a given element can be found in the array,
- *              or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+ * array.lastIndexOf(searchElement[, fromIndex])
+ * The lastIndexOf() method returns the last index at which a given element can be found in the array,
+ * or -1 if it is not present. The array is searched backwards, starting at fromIndex.
  * @param  searchElement: Element to locate in the array.
  * @param {Number} [fromIndex]: The index at which to start searching backwards. Defaults to the array's length.
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
@@ -233,11 +229,10 @@ if (!Array.prototype.lastIndexOf) {
     };
 }
 
-
 /**
- * Syntax: arr.map(callback[, thisArg])
- * Description: The map() method creates a new array with the results of
- *              calling a provided function on every element in this array.
+ * arr.map(callback[, thisArg])
+ * The map() method creates a new array with the results of
+ * calling a provided function on every element in this array.
  * @param {Function} callback: Function that produces an element of the new Array, taking three arguments:
  *                             1. currentValue: The current element being processed in the array.
  *                             2. index: The index of the current element being processed in the array.
@@ -320,10 +315,9 @@ if (!Array.prototype.map) {
     };
 }
 
-
 /**
- * Syntax: arr.some(callback[, thisArg])
- * Description: The some() method tests whether some element in the array passes the test implemented by the provided function.
+ * arr.some(callback[, thisArg])
+ * The some() method tests whether some element in the array passes the test implemented by the provided function.
  * @param {Function} callback: Function to test for each element.
  * @param [thisArg]: Value to use as this when executing callback.
  * MDN: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some
@@ -351,5 +345,48 @@ if (!Array.prototype.some) {
         }
 
         return false;
+    };
+}
+
+/**
+ * arr.reduce(callback[, initialValue])
+ * The reduce() method applies a function against an accumulator and each value of the array
+ * (from left-to-right) has to reduce it to a single value.
+ * @param {function} callback Function to execute on each value in the array, taking four arguments:
+ *                            1. previousValue: The value previously returned in the last invocation of the callback, or initialValue, if supplied.
+ *                            2. currentValue: The current element being processed in the array.
+ *                            3. index: The index of the current element being processed in the array.
+ *                            4. array: The array reduce was called upon.
+ * @param {object} [initialValue] Object to use as the first argument to the first call of the callback.
+ * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+ */
+if (!Array.prototype.reduce) {
+    Array.prototype.reduce = function(callback /*, initialValue*/) {
+        'use strict';
+
+        if (this == null) {
+            throw new TypeError('Array.prototype.reduce called on null or undefined');
+        }
+        if (typeof callback !== 'function') {
+            throw new TypeError(callback + ' is not a function');
+        }
+        var t = Object(this), len = t.length >>> 0, k = 0, value;
+        if (arguments.length == 2) {
+            value = arguments[1];
+        } else {
+            while (k < len && !(k in t)) {
+                k++;
+            }
+            if (k >= len) {
+                throw new TypeError('Reduce of empty array with no initial value');
+            }
+            value = t[k++];
+        }
+        for (; k < len; k++) {
+            if (k in t) {
+                value = callback(value, t[k], k, t);
+            }
+        }
+        return value;
     };
 }

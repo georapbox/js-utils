@@ -16,6 +16,7 @@
  - [Array.prototype.lastIndexOf()](src/arrays/polyfills#arrays--arrayprototypelastindexof)
  - [Array.prototype.map()](src/arrays/polyfills#arrays--arrayprototypemap)
  - [Array.prototype.some()](src/arrays/polyfills#arrays--arrayprototypesome)
+ - [Array.prototype.reduce()](src/arrays/polyfills#arrays--arrayprototypereduce)
 
 - [compact](src/arrays/compact) - Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
 
