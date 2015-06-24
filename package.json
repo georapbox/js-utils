@@ -5,9 +5,14 @@
   "author": "George Raptis (georapbox@gmail.com)",
   "homepage": "https://github.com/georapbox/smallsJS",
   "license": "Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.",
+  "scripts": {
+    "test": "karma start"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-md2html": "^0.2.1",
+    "karma": "^0.12.33",
+    "karma-cli": "0.0.4",
     "karma-chrome-launcher": "^0.1.4",
     "karma-firefox-launcher": "^0.1.3",
     "karma-htmlfile-reporter": "^0.1.2",
