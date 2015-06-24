@@ -59,6 +59,8 @@
 
 - [padRight](src/strings/pad#strings--padright) - Pad <code>str</code> on **right** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.
 
+- [randomString](src/strings/randomString) - Generates a random string of <code>n</code> characters, from the <code>chars</code> string provided by the user.
+
 - [removePrefix](src/strings/removePrefix) - Removes substring (prefix) from start of a string.
 
 - [removeSuffix](src/strings/removeSuffix) - Removes substring (suffix) from end of a string.
