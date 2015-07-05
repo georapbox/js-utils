@@ -929,7 +929,7 @@ body {
 }
 
 .about #the_team {
-	width: 920px;
+	width: 100%;
 	clear: both;
 }
 
@@ -1655,7 +1655,7 @@ p.notification-settings label {
 
 .site {
 	margin: 0 auto;
-	width: 920px;
+	max-width: 1200px;
 	padding: 0 15px;
 }
 
@@ -12419,7 +12419,7 @@ ul.grouplist>li ul.actions li {
 .pagehead {
 	position: relative;
 	margin: -20px 0 10px -25px;
-	width: 920px;
+	width: 100%;
 	padding: 20px 25px 0;
 	background: url('../images/modules/pagehead/background-white.png') 0 0 no-repeat;
 }
@@ -13522,7 +13522,7 @@ ul.org-members li {
 }
 
 .discussion-timeline .breakout {
-	width: 920px;
+	width: 100%;
 }
 
 .discussion-timeline p.explain {
@@ -15163,7 +15163,8 @@ ul.smallnav li a.selected .count {
 }
 
 #readme {
-	font: 13.34px helvetica, arial, freesans, clean, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 #readme.announce {
@@ -15181,13 +15182,13 @@ ul.smallnav li a.selected .count {
 
 #readme div.plain,
 #readme div.wikistyle {
-	background-color: #fafafa;
+	/*background-color: #fafafa;*/
 	padding: .7em;
 }
 
 #readme.announce div.plain,
 #readme.announce div.wikistyle {
-	border: 1px solid #e9e9e9;
+	/*border: 1px solid #e9e9e9;*/
 }
 
 #readme.blob div.plain,
@@ -17641,7 +17642,7 @@ table#toc {
 	border-top: 1px solid #d8d8d8;
 	border-left: 1px solid #d8d8d8;
 	border-right: 1px solid #d8d8d8;
-	width: 920px;
+	width: 100%;
 	font-size: 13px;
 	margin: 0;
 	margin-bottom: 1em;
@@ -20603,12 +20604,12 @@ input.tree-finder-input {
 }
 
 #slider .frames {
-	width: 10000px;
+	/*width: 10000px;*/
 }
 
 #slider .frames .frame {
 	float: left;
-	width: 920px;
+	width: 100%;
 	margin-right: 100px;
 }
 
@@ -22641,15 +22642,11 @@ input.tree-finder-input {
 .wikistyle pre {
 	margin: 1em 0;
 	font-size: 12px;
-	background-color: #eee;
-	border: 1px solid #ddd;
-	padding: 5px;
+	/*background-color: #eee;
+	border: 1px solid #ddd;*/
+	/*padding: 5px;*/
 	color: #444;
 	overflow: auto;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px inset;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 }
 
 .wikistyle pre::-webkit-scrollbar {
@@ -22680,17 +22677,17 @@ input.tree-finder-input {
 }
 
 .wikistyle pre code {
-	padding: 0!important;
-	font-size: 12px!important;
-	background-color: #eee!important;
+	padding: 10px !important;
+	font-size: 14px!important;
+	/*background-color: #eee!important;*/
 	border: none!important;
 }
 
 .wikistyle code {
-	font-size: 12px!important;
-	background-color: #f8f8ff!important;
-	color: #444!important;
-	padding: 0 .2em!important;
+	font-size: 14px!important;
+	/*background-color: #f8f8ff!important;*/
+	/*color: #444!important;*/
+	padding: 3px 5px !important;
 	border: 1px solid #dedede!important;
 }
 
