@@ -139,9 +139,9 @@
 (Required to build the documentation and run the tests)
 
 ##Build the documentation
-From the root folder of the project, run: <code>grunt buildDocs</code>.
+From the root folder of the project, run: <code>$ npm run docs</code>.
 This will create a <code>docs</code> folder to the root of the project, containing all <code>README</code> files converted to HTML documents.
 
 ##Run the tests
-From the root folder of the project, run: <code>npm run test</code>.
+From the root folder of the project, run: <code>$ npm run test</code>.
 Apart from the results in terminal, this will create a <code>tests-reporter</code> folder to the root of the project, that contains an HTML document with the tests results.

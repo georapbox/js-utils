@@ -1,12 +1,13 @@
 {
   "name": "smallsJS",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "A collection of javascript standalone functions for everyday tasks.",
   "author": "George Raptis (georapbox@gmail.com)",
   "homepage": "https://github.com/georapbox/smallsJS",
   "license": "Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "docs": "grunt buildDocs"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
