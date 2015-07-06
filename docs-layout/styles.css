@@ -22542,16 +22542,27 @@ input.tree-finder-input {
 
 .wikistyle table {
 	margin: 1em 0!important;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+.wikistyle table tr:nth-child(2n) {
+    background: #f9fafc;
 }
 
 .wikistyle table th {
 	border-bottom: 1px solid #bbb!important;
-	padding: .2em 1em!important;
+	padding: .4em 1em!important;
+    background: #f5f5f5;
 }
 
 .wikistyle table td {
 	border-bottom: 1px solid #ddd!important;
-	padding: .2em 1em!important;
+	padding: .4em 1em!important;
+}
+
+.wikistyle table td:first-child {
+    border-right: 1px solid #ddd;
 }
 
 .wikistyle a code,
