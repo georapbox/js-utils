@@ -46,7 +46,10 @@ module.exports = function (grunt) {
 					cwd: 'src',
 					src: ['**/*.md'],
 					dest: 'docs/src/',
-					ext: '.html'
+                    ext: '.html',
+                    rename: function(dest, src) {
+                        return dest + src.replace('README','index');
+                    }
 				}]
 			}
 		}
@@ -54,6 +57,7 @@ module.exports = function (grunt) {
 
     // Load plugins.
     grunt.loadNpmTasks('grunt-md2html');
+    grunt.loadNpmTasks('grunt-rename');
 
     // Register task(s).
     grunt.registerTask(
