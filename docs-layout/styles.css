@@ -22547,13 +22547,16 @@ input.tree-finder-input {
 }
 
 .wikistyle table tr:nth-child(2n) {
-    background: #f9fafc;
+    background: #F8F8F8;
 }
 
 .wikistyle table th {
-	border-bottom: 1px solid #bbb!important;
+	border-bottom: 1px solid #ddd!important;
 	padding: .4em 1em!important;
-    background: #f5f5f5;
+}
+
+.wikistyle table th:first-child {
+    border-right: 1px solid #ddd;
 }
 
 .wikistyle table td {
