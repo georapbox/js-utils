@@ -6,19 +6,19 @@
  * @use extend({}, obj1, objN)
 */
 function extend() {
-	'use strict';
+    'use strict';
 
-	for (var i = 1, l = arguments.length; i < l; i++) {
-		for (var key in arguments[i]) {
+    for (var i = 1, l = arguments.length; i < l; i++) {
+        for (var key in arguments[i]) {
             if (arguments[i].hasOwnProperty(key)) {
                 if (arguments[i][key] && arguments[i][key].constructor && arguments[i][key].constructor === Object) {
-                	arguments[0][key] = arguments[0][key] || {};
-                	extend(arguments[0][key], arguments[i][key]);
+                    arguments[0][key] = arguments[0][key] || {};
+                    extend(arguments[0][key], arguments[i][key]);
                 } else {
-                	arguments[0][key] = arguments[i][key];
+                    arguments[0][key] = arguments[i][key];
                 }
             }
-	    }
-	}
-	return arguments[0];
+        }
+    }
+    return arguments[0];
 }

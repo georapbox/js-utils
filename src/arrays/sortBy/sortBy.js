@@ -10,18 +10,18 @@
 function sortBy(arr, field, ascending, primer) {
     'use strict';
 
-	var key = function (x) {
-		return primer ? primer(x[field]) : x[field];
-	};
+    var key = function (x) {
+        return primer ? primer(x[field]) : x[field];
+    };
 
-	return arr.sort(function (a, b) {
-		var A = key(a),
+    return arr.sort(function (a, b) {
+        var A = key(a),
             B = key(b);
 
         if (typeof ascending === 'undefined') {
             ascending = true;
         }
 
-		return ((A < B) ? -1 : ((A > B) ? 1 : 0)) * [-1, 1][+!!ascending];
-	});
+        return ((A < B) ? -1 : ((A > B) ? 1 : 0)) * [-1, 1][+!!ascending];
+    });
 }

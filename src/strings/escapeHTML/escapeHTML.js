@@ -7,13 +7,13 @@ function escapeHTML(html) {
     'use strict';
 
     return html.replace(/[&<>"]/g, function (tag) {
-		var charsToReplace = {
+        var charsToReplace = {
             '&': '&amp;',
             '<': '&lt;',
             '>': '&gt;',
             '"': '&quot;'
         };
 
-		return charsToReplace[tag] || tag;
-	});
+        return charsToReplace[tag] || tag;
+    });
 }

@@ -7,18 +7,18 @@
 function pluck(array, key) {
     'use strict';
 
-	var arr = [],
-		index = -1,
-		len = array.length,
-		arrItem;
+    var arr = [],
+        index = -1,
+        len = array.length,
+        arrItem;
 
-	while (++index < len) {
-		arrItem = array[index];
+    while (++index < len) {
+        arrItem = array[index];
 
-		if (arrItem.hasOwnProperty(key)) {
-			arr[arr.length] = arrItem[key];
-		}
-	}
+        if (arrItem.hasOwnProperty(key)) {
+            arr[arr.length] = arrItem[key];
+        }
+    }
 
-	return arr;
+    return arr;
 }

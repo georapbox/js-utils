@@ -176,7 +176,7 @@ if (!Array.prototype.indexOf) {
             }
         }
 
-        for (;fromIndex < length; fromIndex++) {
+        for (; fromIndex < length; fromIndex++) {
             if (this[fromIndex] === searchElement) {
                 return fromIndex;
             }
@@ -249,7 +249,7 @@ if (!Array.prototype.map) {
         var T, A, k;
 
         if (this == null) {
-            throw new TypeError(" this is null or not defined");
+            throw new TypeError(' this is null or not defined');
         }
 
         // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
@@ -261,8 +261,8 @@ if (!Array.prototype.map) {
 
         // 4. If IsCallable(callback) is false, throw a TypeError exception.
         // See: http://es5.github.com/#x9.11
-        if (typeof callback !== "function") {
-            throw new TypeError(callback + " is not a function");
+        if (typeof callback !== 'function') {
+            throw new TypeError(callback + ' is not a function');
         }
 
         // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -361,7 +361,7 @@ if (!Array.prototype.some) {
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
  */
 if (!Array.prototype.reduce) {
-    Array.prototype.reduce = function(callback /*, initialValue*/) {
+    Array.prototype.reduce = function (callback /*, initialValue*/) {
         'use strict';
 
         if (this == null) {

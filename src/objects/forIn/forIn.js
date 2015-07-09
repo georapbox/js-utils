@@ -8,9 +8,9 @@
 function forIn(obj, callback) {
     'use strict';
 
-	for (var key in obj) { // jshint ignore:line
-		callback && callback(obj[key], key, obj);
-	}
+    for (var key in obj) { // jshint ignore:line
+        callback && callback(obj[key], key, obj);
+    }
 
-	return obj;
+    return obj;
 }

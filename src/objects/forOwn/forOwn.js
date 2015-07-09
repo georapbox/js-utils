@@ -6,13 +6,13 @@
  * @returns {Object} The original object.
  */
 function forOwn(obj, callback) {
-	'use strict';
+    'use strict';
 
     for (var key in obj) {
-		if (obj.hasOwnProperty(key)) {
-			callback && callback(obj[key], key, obj);
-		}
-	}
+        if (obj.hasOwnProperty(key)) {
+            callback && callback(obj[key], key, obj);
+        }
+    }
 
-	return obj;
+    return obj;
 }

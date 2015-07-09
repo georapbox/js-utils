@@ -5,22 +5,22 @@
  * @param {object} [thisArg] Value to use as "this" when executing callback.
  */
 function forEach(arr, callback, thisArg) {
-	'use strict';
+    'use strict';
 
     if (arr == null) { // jshint ignore:line
-		throw new TypeError('forEach expects an array as first parameter.');
-	}
+        throw new TypeError('forEach expects an array as first parameter.');
+    }
 
-	if (typeof callback !== 'function') {
-		throw new TypeError('forEach expects a callback function.');
-	}
+    if (typeof callback !== 'function') {
+        throw new TypeError('forEach expects a callback function.');
+    }
 
-	var i = 0,
-		len = arr.length;
+    var i = 0,
+        len = arr.length;
 
-	for (i; i < len; i++) {
-		if (callback.call(thisArg, arr[i], i, arr) === false) {
-			return;
-		}
-	}
+    for (i; i < len; i++) {
+        if (callback.call(thisArg, arr[i], i, arr) === false) {
+            return;
+        }
+    }
 }

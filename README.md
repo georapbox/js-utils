@@ -1,13 +1,13 @@
-#smallsJS
+# smallsJS
 > Not yet another Javascript library.
 
 **smallsJS** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from, for everyday tasks.
 
 *Because sometimes we need <strong>small</strong> solutions and not a whole library.*
 
-###Table of contents
+### Table of contents
 
-####Arrays
+#### Arrays
 
 |Method|Description|
 |------|-----------|
@@ -33,7 +33,7 @@
 |[Array.prototype.some()](src/arrays/polyfills#arrays--arrayprototypesome)|
 |[Array.prototype.reduce()](src/arrays/polyfills#arrays--arrayprototypereduce)|
 
-####Strings
+#### Strings
 |Method|Description|
 |------|-----------|
 |[beginsWith](src/strings/beginsWith)|Returns true if string begins with substring (prefix).|
@@ -64,7 +64,7 @@
 |[unescapeHTML](src/strings/unescapeHTML)|Unescapes a HTML string.|
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 
-####Numbers
+#### Numbers
 |Method|Description|
 |------|-----------|
 |[average](src/numbers/average)|Calculates the average of a set of numbers.|
@@ -75,7 +75,7 @@
 |[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.|
 |[randomBetween](src/numbers/randomBetween)|Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.|
 
-####Objects
+#### Objects
 |Method|Description|
 |------|-----------|
 |[extend](src/objects/extend)|Merges (deep copy) the contents of two or more objects together into the first object.|
@@ -92,15 +92,17 @@
 |[isPlainObject](src/objects/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
 |[isString](src/objects/isString)|Checks if a "value" is a string.|
 
-##Installation
+
+
+## Installation
 - To clone the repository, run: <code>git clone https://github.com/georapbox/smallsJS.git</code>
 - To install dev dependancies, (from the root folder of the project) run: <code>npm install</code><br/>
 (Required to build the documentation and run the tests)
 
-##Build the documentation
+## Build the documentation
 From the root folder of the project, run: <code>$ npm run docs</code>.
 This will create a <code>docs</code> folder to the root of the project, containing all <code>README</code> files converted to HTML documents.
 
-##Run the tests
+## Run the tests
 From the root folder of the project, run: <code>$ npm run test</code>.
 Apart from the results in terminal, this will create a <code>tests-reporter</code> folder to the root of the project, that contains an HTML document with the tests results.

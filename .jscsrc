@@ -1,23 +1,37 @@
 {
-    "requireSpaceBeforeBlockStatements": true,
+    "requireCurlyBraces": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "try",
+        "catch"
+    ],
+    "validateIndentation": 4,
+    // "validateQuoteMarks": "'",
+    "requireSpacesInForStatement": true,
     "requireParenthesesAroundIIFE": true,
-    "requireMultipleVarDecl": true,
+    "requireLineFeedAtFileEnd": true,
     "requireBlocksOnNewline": true,
     "disallowPaddingNewlinesInBlocks": true,
     "disallowEmptyBlocks": true,
-    "disallowSpacesInsideParentheses": true,
     "disallowSpaceAfterObjectKeys": true,
     "requireSpaceBeforeObjectValues": true,
     "requireCommaBeforeLineBreak": true,
-    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceBeforeBinaryOperators": [
+        "=", "+=", "-=", "*=", "/=", "%=", "<<=", ">>=", ">>>=",
+        "&=", "|=", "^=", "+=",
+
+        "+", "-", "*", "/", "%", "<<", ">>", ">>>", "&",
+        "|", "^", "&&", "||", "===", "==", ">=",
+        "<=", "<", ">", "!=", "!=="
+    ],
     "requireSpaceAfterBinaryOperators": true,
-    "requireCamelCaseOrUpperCaseIdentifiers": true,
     "disallowTrailingComma": true,
-    "requireCapitalizedConstructors": true,
     "requireDotNotation": true,
     "disallowYodaConditions": true,
     "disallowNewlineBeforeBlockStatements": true,
-    "validateParameterSeparator": ", ",
     "requireSpacesInConditionalExpression": {
         "afterTest": true,
         "beforeConsequent": true,
@@ -25,7 +39,6 @@
         "beforeAlternate": true
     },
     "requireSpacesInFunctionExpression": {
-        "beforeOpeningRoundBrace": true,
         "beforeOpeningCurlyBrace": true
     },
     "requireSpacesInAnonymousFunctionExpression": {
@@ -51,10 +64,11 @@
         "typeof",
         "function"
     ],
-        "disallowKeywords": [
-        "with"
+    "disallowKeywordsOnNewLine": [
+        "else",
+        "catch"
     ],
-        "disallowKeywordsOnNewLine": [
-        "else"
-    ]
+    "disallowMultipleLineBreaks": true,
+    "disallowSpacesInsideObjectBrackets": "all",
+    "disallowSpacesInsideArrayBrackets": "all"
 }

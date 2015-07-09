@@ -6,24 +6,24 @@
  * @returns {array} The result array.
  */
 function filter(arr, callback, thisArg) {
-	'use strict';
+    'use strict';
 
     if (arr == null) { // jshint ignore:line
-		return [];
-	}
+        return [];
+    }
 
-	if (typeof callback !== 'function') {
-		throw new TypeError('filter expects a callback function.');
-	}
+    if (typeof callback !== 'function') {
+        throw new TypeError('filter expects a callback function.');
+    }
 
-	var len = arr.length,
-		res = arr.slice();
+    var len = arr.length,
+        res = arr.slice();
 
-	while (len--) {
-		if (!callback.call(thisArg, arr[len], len, arr)) {
-			res.splice(len, 1);
-		}
-	}
+    while (len--) {
+        if (!callback.call(thisArg, arr[len], len, arr)) {
+            res.splice(len, 1);
+        }
+    }
 
-	return res;
+    return res;
 }

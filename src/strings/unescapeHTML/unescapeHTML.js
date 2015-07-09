@@ -11,6 +11,6 @@ function unescapeHTML(str) {
         replace(/&gt;/g, '>').
         replace(/&quot;/g, '"').
         replace(/&#034;/g, '"').
-        replace(/&#039;/g, "'").
+        replace(/&#039;/g, "'"). // jshint ignore: line
         replace(/&amp;/g, '&');
 }
