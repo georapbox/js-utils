@@ -13,7 +13,7 @@ function chompRight(str, suffix) {
         };
 
     if (!is_string(str) || (!is_string(suffix) && !suffix_exists)) {
-        return new TypeError('chompRight expects two strings as arguments, istead saw ' + typeof str + ' and ' + typeof suffix);
+        throw new TypeError('Two strings were expected as arguments, instead saw ' + typeof str + ' and ' + typeof suffix);
     }
 
     return !suffix_exists &&

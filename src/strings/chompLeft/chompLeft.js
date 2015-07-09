@@ -9,7 +9,7 @@ function chompLeft(str, prefix) {
 
     // @NOTE: Use non strict equality to check for both undefined and null.
     if (typeof str !== 'string' || (typeof prefix !== 'string' && prefix != null)) {
-        return new TypeError('chompLeft expects two strings as arguments, istead saw ' + typeof str + ' and ' + typeof prefix);
+        throw new TypeError('Two strings were expected as arguments, instead saw ' + typeof str + ' and ' + typeof prefix);
     }
 
     return str.indexOf(prefix) === 0 ? str.slice(prefix.length) : str;
