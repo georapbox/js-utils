@@ -40,6 +40,7 @@
 |[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[chompLeft](src/strings/chompLeft)|Removes a prefix from the beginning of a string.|
+|[chompRight](src/strings/chompRight)|Removes a suffix from the end of a string.|
 |[contains](src/strings/contains)|Returns true if the string contains the passed string, else returns false.|
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
