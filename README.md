@@ -92,7 +92,10 @@
 |[isPlainObject](src/objects/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
 |[isString](src/objects/isString)|Checks if a "value" is a string.|
 
-
+#### Misc
+|Method|Description|
+|------|-----------|
+|[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 
 ## Installation
 - To clone the repository, run: <code>git clone https://github.com/georapbox/smallsJS.git</code>
