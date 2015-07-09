@@ -96,6 +96,7 @@
 |Method|Description|
 |------|-----------|
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
+|[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
 ## Installation
 - To clone the repository, run: <code>git clone https://github.com/georapbox/smallsJS.git</code>
