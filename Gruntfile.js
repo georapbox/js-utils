@@ -57,7 +57,6 @@ module.exports = function (grunt) {
 
     // Load plugins.
     grunt.loadNpmTasks('grunt-md2html');
-    grunt.loadNpmTasks('grunt-rename');
 
     // Register task(s).
     grunt.registerTask(
