@@ -95,6 +95,11 @@
 |[isPlainObject](src/objects/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
 |[isString](src/objects/isString)|Checks if a "value" is a string.|
 
+#### DOM
+|Method|Description|
+|------|-----------|
+|[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
+
 #### Misc
 |Method|Description|
 |------|-----------|
