@@ -14,3 +14,9 @@ function chompLeft(str, prefix) {
 
     return str.indexOf(prefix) === 0 ? str.slice(prefix.length) : str;
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = chompLeft;
+}

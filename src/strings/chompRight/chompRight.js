@@ -21,3 +21,9 @@ function chompRight(str, suffix) {
         str.slice(0, str.length - suffix.length) :
         str;
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = chompRight;
+}

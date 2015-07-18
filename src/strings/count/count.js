@@ -39,3 +39,9 @@ function count(str, subStr, caseInsensitive) {
 
     return n;
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = count;
+}

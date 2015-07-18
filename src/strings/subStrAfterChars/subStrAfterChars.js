@@ -23,3 +23,9 @@ function subStrAfterChars(str, chars, last) {
             return result;
         }()) : new TypeError('subStrAfterChars expects at least two arguments.');
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = subStrAfterChars;
+}

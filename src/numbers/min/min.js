@@ -10,3 +10,9 @@ function min() {
         Math.min.apply(null, arguments[0]) :
         Math.min.apply(null, arguments);
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = min;
+}

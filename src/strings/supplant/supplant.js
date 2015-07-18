@@ -35,3 +35,9 @@ function supplant(str, data) {
         return typeof c === 'string' || typeof c === 'number' ? c : a;
     });
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = supplant;
+}

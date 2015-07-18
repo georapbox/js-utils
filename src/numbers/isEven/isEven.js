@@ -12,3 +12,9 @@ function isEven(value) {
 
     return value & 1 ? false : true;
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = isEven;
+}

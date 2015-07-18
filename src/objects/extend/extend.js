@@ -22,3 +22,9 @@ function extend() {
     }
     return arguments[0];
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = extend;
+}
