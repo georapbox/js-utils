@@ -18,3 +18,9 @@ function findLastIndex(array, callback) {
 
     return -1;
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = findLastIndex;
+}

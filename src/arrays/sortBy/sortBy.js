@@ -25,3 +25,9 @@ function sortBy(arr, field, ascending, primer) {
         return ((A < B) ? -1 : ((A > B) ? 1 : 0)) * [-1, 1][+!!ascending];
     });
 }
+
+// Required for building process.
+// You can ommit if just need the function.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = sortBy;
+}
