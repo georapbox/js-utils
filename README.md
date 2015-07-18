@@ -1,9 +1,9 @@
-# smallsJS
+# jsEssentials
 > Not yet another Javascript library.
 
-**smallsJS** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from, for everyday tasks.
+**jsEssentials** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from, for everyday tasks.
 
-*Because sometimes we need <strong>small</strong> solutions and not a whole library.*
+*Because sometimes we don't need a whole library to get the job done.*
 
 ### Table of contents
 
@@ -108,7 +108,7 @@
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
 ## Installation
-- To clone the repository, run: <code>git clone https://github.com/georapbox/smallsJS.git</code>
+- To clone the repository, run: <code>git clone https://github.com/georapbox/jsEssentials.git</code>
 - To install dev dependancies, (from the root folder of the project) run: <code>npm install</code><br/>
 (Required to build the documentation and run the tests)
 

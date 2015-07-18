@@ -1,10 +1,7 @@
 (function () {
     'use strict';
 
-    var pkg = require('./package.json');
-    var name = pkg.name;
-
-    var o = {
+    var jsEssentials = {
         arrays: {
             compact: require('./src/arrays/compact/compact')
         },
@@ -16,7 +13,7 @@
     };
 
     if (window) {
-        window[name] = o;
-        o = null;
+        window.jsEssentials = jsEssentials;
+        jsEssentials = null;
     }
 }());

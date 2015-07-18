@@ -2,6 +2,5 @@
 node_modules/
 docs/
 tests-reporter/
+dist/
 demo.html
-js-essentials.js
-js-essentials.min.js

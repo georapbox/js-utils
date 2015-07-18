@@ -4,16 +4,29 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
     transform = require('vinyl-transform'),
-    exorcist = require('exorcist'),
-    buffer = require('vinyl-buffer');
+    buffer = require('vinyl-buffer'),
+    header = require('gulp-header');
+
+var pkg = require('./package.json');
+var banner = [
+    '/**',
+    ' * <%= pkg.name %> - <%= pkg.description %>',
+    ' * @version v<%= pkg.version %>',
+    ' * @author <%= pkg.author %>',
+    ' * @link <%= pkg.homepage %>',
+    ' * @license <%= pkg.license %>',
+    ' */',
+    ''
+].join('\n');
 
 gulp.task('build:dev', function () {
     return browserify('./main.js', {
         debug: true
     }).
     bundle().
-    pipe(source('js-essentials.js')).
-    pipe(gulp.dest('./'));
+    pipe(source(pkg.name + '.js')).
+    pipe(header(banner, {pkg: pkg})).
+    pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build:live', function () {
@@ -21,11 +34,12 @@ gulp.task('build:live', function () {
         debug: true
     }).
     bundle().
-    pipe(source('js-essentials.js')).
+    pipe(source(pkg.name + '.js')).
     pipe(buffer()).
     pipe(uglify()).
     pipe(rename({
         extname: '.min.js'
     })).
-    pipe(gulp.dest('./'));
+    pipe(header(banner, {pkg: pkg})).
+    pipe(gulp.dest('./dist'));
 });
