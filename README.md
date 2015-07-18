@@ -98,6 +98,7 @@
 #### DOM
 |Method|Description|
 |------|-----------|
+|[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
 #### Misc
