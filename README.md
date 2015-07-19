@@ -44,6 +44,7 @@
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](src/strings/contains)|Returns true if the string contains the passed string, else returns false.|
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
+|[countWords](src/strings/countWords)|Counts words in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
 |[endsWith](strins/endsWith)|Returns true if string ends with substring (suffix).|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
