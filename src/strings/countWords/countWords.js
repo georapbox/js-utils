@@ -1,6 +1,6 @@
 /**
  * Counts the words of a string.
- * @param {} str The initial string to process.
+ * @param {string} str The string to process.
  * @return {number}  The number of words the string contains.
  */
 function countWords(str) {
