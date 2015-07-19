@@ -12,7 +12,7 @@ The string to process.
 
 ####Example
 ```js
-countWords('Hello world!        \nThis is a message     from outter\tspace.'); // => 9
+countWords('Hello world!        \n This is a message     from outter\tspace.'); // => 9
 countWords(''); // => 0
 countWords(); // => Throws type error.
 countWords(100); // => Throws type error.
