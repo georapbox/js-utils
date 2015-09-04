@@ -101,6 +101,7 @@
 |------|-----------|
 |[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
+|[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
 
 #### Misc
 |Method|Description|

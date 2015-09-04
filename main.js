@@ -71,7 +71,8 @@
         },
         dom: {
             whichAnimationEnd: require('./src/dom/whichAnimationEnd/whichAnimationEnd'),
-            whichTransitionEnd: require('./src/dom/whichTransitionEnd/whichTransitionEnd')
+            whichTransitionEnd: require('./src/dom/whichTransitionEnd/whichTransitionEnd'),
+            scroll: require('./src/dom/scroll/scroll')
         },
         misc: {
             debounce: require('./src/misc/debounce/debounce'),
