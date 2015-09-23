@@ -22,16 +22,16 @@
 |[uniq](src/arrays/uniq)|Removes duplicate primitive values from an array.|
 
 
-|[Polyfills](src/arrays/polyfills) - Collection of array polyfills.|
-|------|
-|[Array.prototype.every()](src/arrays/polyfills#arrays--arrayprototypeevery)|
-|[Array.prototype.filter()](src/arrays/polyfills#arrays--arrayprototypefilter)|
-|[Array.prototype.forEach()](src/arrays/polyfills#arrays--arrayprototypeforeach)|
-|[Array.prototype.indexOf()](src/arrays/polyfills#arrays--arrayprototypeindexof)|
-|[Array.prototype.lastIndexOf()](src/arrays/polyfills#arrays--arrayprototypelastindexof)|
-|[Array.prototype.map()](src/arrays/polyfills#arrays--arrayprototypemap)|
-|[Array.prototype.some()](src/arrays/polyfills#arrays--arrayprototypesome)|
-|[Array.prototype.reduce()](src/arrays/polyfills#arrays--arrayprototypereduce)|
+|[Polyfills](src/arrays/polyfills) - Collection of array polyfills.|Description|
+|------------------------------------------------------------------|-----------|
+|[Array.prototype.every()](src/arrays/polyfills#arrays--arrayprototypeevery)|Tests whether all elements in the array pass the test implemented by the provided function.|
+|[Array.prototype.filter()](src/arrays/polyfills#arrays--arrayprototypefilter)|Creates a new array with all elements that pass the test implemented by the provided function.|
+|[Array.prototype.forEach()](src/arrays/polyfills#arrays--arrayprototypeforeach)|Executes a provided function once per array element.|
+|[Array.prototype.indexOf()](src/arrays/polyfills#arrays--arrayprototypeindexof)|Returns the first index at which a given element can be found in the array, or -1 if it is not present.|
+|[Array.prototype.lastIndexOf()](src/arrays/polyfills#arrays--arrayprototypelastindexof)|Returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.|
+|[Array.prototype.map()](src/arrays/polyfills#arrays--arrayprototypemap)|Creates a new array with the results of calling a provided function on every element in this array.|
+|[Array.prototype.some()](src/arrays/polyfills#arrays--arrayprototypesome)|Tests whether some element in the array passes the test implemented by the provided function.|
+|[Array.prototype.reduce()](src/arrays/polyfills#arrays--arrayprototypereduce)|Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.|
 
 #### Strings
 |Method|Description|

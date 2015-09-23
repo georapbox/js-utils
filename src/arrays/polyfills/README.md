@@ -1,8 +1,8 @@
-###[Arrays](../) > Array.prototype.every()
+### [Arrays](../) > Array.prototype.every()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 >The **every()** method tests whether all elements in the array pass the test implemented by the provided function.
 
-####Syntax
+#### Syntax
 ```js
 arr.every(callback[, thisArg])
 ```
@@ -29,11 +29,11 @@ Value to use as this when executing callback.
 
 ---
 
-###[Arrays](../) > Array.prototype.filter()
+### [Arrays](../) > Array.prototype.filter()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 >The **filter()** method creates a new array with all elements that pass the test implemented by the provided function.
 
-####Syntax
+#### Syntax
 ```js
 arr.filter(callback[, thisArg])
 ```
@@ -48,11 +48,11 @@ Value to use as this when executing callback.
 
 ---
 
-###[Arrays](../) > Array.prototype.forEach()
+### [Arrays](../) > Array.prototype.forEach()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 >The **forEach()** method executes a provided function once per array element.
 
-####Syntax
+#### Syntax
 ```js
 arr.forEach(callback[, thisArg])
 ```
@@ -79,11 +79,11 @@ Value to use as this when executing callback.
 
 ---
 
-###[Arrays](../) > Array.prototype.indexOf()
+### [Arrays](../) > Array.prototype.indexOf()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 >The **indexOf()** method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
-####Syntax
+#### Syntax
 ```js
 arr.indexOf(searchElement[, fromIndex = 0])
 ```
@@ -98,11 +98,11 @@ The index to start the search at. If the index is greater than or equal to the a
 
 ---
 
-###[Arrays](../) > Array.prototype.lastIndexOf()
+### [Arrays](../) > Array.prototype.lastIndexOf()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 >The **lastIndexOf()** method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
 
-####Syntax
+#### Syntax
 ```js
 arr.lastIndexOf(searchElement[, fromIndex = arr.length])
 ```
@@ -117,11 +117,11 @@ The index at which to start searching backwards. Defaults to the array's length,
 
 ---
 
-###[Arrays](../) > Array.prototype.map()
+### [Arrays](../) > Array.prototype.map()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 >The **map()** method creates a new array with the results of calling a provided function on every element in this array.
 
-####Syntax
+#### Syntax
 ```js
 arr.map(callback[, thisArg])
 ```
@@ -148,11 +148,11 @@ Value to use as this when executing callback.
 
 ---
 
-###[Arrays](../) > Array.prototype.some()
+### [Arrays](../) > Array.prototype.some()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 >The **some()** method tests whether some element in the array passes the test implemented by the provided function.
 
-####Syntax
+#### Syntax
 ```js
 arr.some(callback[, thisArg])
 ```
@@ -164,3 +164,38 @@ Function to test for each element.
 - <code>thisArg (Optional)</code>
 
 Value to use as this when executing callback.
+
+---
+
+### [Arrays](../) > Array.prototype.reduce()
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+>The **reduce()** method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+
+#### Syntax
+```js
+arr.reduce(callback[, initialValue])
+```
+
+- <code>callback</code>
+
+Function to execute on each value in the array, taking four arguments:
+
+- <code>previousValue</code>
+
+The value previously returned in the last invocation of the callback, or initialValue, if supplied. (See below.)
+
+- <code>currentValue</code>
+
+The current element being processed in the array.
+
+- <code>index</code>
+
+The index of the current element being processed in the array.
+
+- <code>array</code>
+
+The array reduce was called upon.
+
+- <code>initialValue (Optional)</code>
+
+Value to use as the first argument to the first call of the callback.
