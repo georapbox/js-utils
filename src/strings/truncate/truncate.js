@@ -20,9 +20,3 @@ function truncate(string, characterCount, delimiter) {
     truncated = truncated + delimiter;
     return truncated;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = truncate;
-}

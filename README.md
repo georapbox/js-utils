@@ -114,13 +114,6 @@
 - To install dev dependancies, (from the root folder of the project) run: <code>$ npm install</code><br/>
 (Required to build the documentation, run the tests, etc)
 
-## Bundle up
-Although **jsEssentials** is meant to be used as standalone functions to cherrypick from, there is also the possibility to bundle up all the methods in one file, to be used in the browser.
-To bundle up, [browserify](http://browserify.org/) was used. If you need to customize the bundle, you can change the <code>main.js</code> file by removing any of the methods that you don't need.
-
-When you have decided which methods to include run <code>$ npm run build:dev</code> to generate the unminified bundle or <code>$ npm run build:live</code> to generate the minified bundle.
-These two commands will generate the final bundles (jsEssentials.js & jsEssentials.min.js respectively) under <code>dist/</code> foler.
-
 ## Build the documentation
 From the root folder of the project, run: <code>$ npm run docs</code>.
 This will create a <code>docs</code> folder to the root of the project, containing all <code>README</code> files converted to HTML documents.

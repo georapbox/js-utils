@@ -18,9 +18,3 @@ function replaceAll(str, subStr, replaceStr, caseInsensitive) {
     // Case sensitive lookup.
     return str.split(subStr).join(replaceStr);
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = replaceAll;
-}

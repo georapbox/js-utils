@@ -26,9 +26,3 @@ function repeat(string, count) {
     count = count | 0; // Floor count.
     return new Array(count + 1).join(string);
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = repeat;
-}

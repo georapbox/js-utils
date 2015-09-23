@@ -26,9 +26,3 @@ function pad(str, len, ch) {
 
     return left + str + right;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = pad;
-}

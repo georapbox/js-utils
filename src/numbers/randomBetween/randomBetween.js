@@ -17,9 +17,3 @@ function randomBetween(min, max, floatPoint) {
     var rInt = Math.random() * (max - min);
     return isFloatPoint ? rInt + min : Math.floor(rInt) + min;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = randomBetween;
-}

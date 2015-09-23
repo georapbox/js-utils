@@ -26,9 +26,3 @@ function numberFormat(nNumber, nDecimals, sDecimalSeperator, sThousandSeperator)
 
     return integerPart.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + sThousandSeperator) + fractionalPart;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = numberFormat;
-}

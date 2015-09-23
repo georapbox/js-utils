@@ -14,9 +14,3 @@ function unescapeHTML(str) {
         replace(/&#039;/g, "'"). // jshint ignore: line
         replace(/&amp;/g, '&');
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = unescapeHTML;
-}

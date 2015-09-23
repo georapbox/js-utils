@@ -10,9 +10,3 @@ function max() {
         Math.max.apply(null, arguments[0]) :
         Math.max.apply(null, arguments);
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = max;
-}

@@ -36,9 +36,3 @@ function average() {
 
     return count > 0 ? sum / count : 0;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = average;
-}

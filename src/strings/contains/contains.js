@@ -17,9 +17,3 @@ function contains(str, subStr, caseInsensitive) {
     // Case sensitive lookup.
     return str.indexOf(subStr) > -1;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = contains;
-}

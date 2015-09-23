@@ -7,9 +7,3 @@ function isElement(value) {
     'use strict';
     return value && value.nodeType === 1 || false;
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = isElement;
-}

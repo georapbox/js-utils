@@ -24,9 +24,3 @@ function forEach(arr, callback, thisArg) {
         }
     }
 }
-
-// Required for building process.
-// You can ommit if just need the function.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = forEach;
-}
