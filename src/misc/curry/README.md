@@ -4,14 +4,10 @@
 curry(fn)
 ```
 > Returns a curried equivalent of the provided function.
-> Currying refers to the process of transforming a function with multiple arity into
-> the same function with less arity. The curried effect is achieved by binding some of
-> the arguments to the first function invoke, so that those values are fixed for the next invocation.<br/>
-> https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe
 
 - <code>fn {function}</code>
 
-A callback function to create higher-order "factory" functions.
+The function to curry.
 
 #### Example
 ```js
@@ -45,14 +41,15 @@ A callback function to create higher-order "factory" functions.
 
 // Example 3
 (function () {
-    var sum = function () {
-        return Array.prototype.reduce.call(arguments, function (previousVal, currentVal) {
-            return previousVal + currentVal
-        });
-    }
+    var sum = function (a, b, c) {
+        'use strict';
+        return a + b + c;
+    };
 
-    var mySum = curry(sum, 10);
-    mySum(5); // => 15
-    mySum(5, 20, 10); // => 45
+    var mySum = curry(sum),
+        a = mySum(10),
+        b = a(20);
+
+    b(5); // => 35
 }());
 ```
