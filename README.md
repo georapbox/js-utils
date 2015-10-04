@@ -107,7 +107,7 @@
 |Method|Description|
 |------|-----------|
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
-|[curry](src/misc/curry)|Transforms a function with multiple arity into the same function with less arity.|
+|[curry](src/misc/curry)|Returns a curried equivalent of the provided function.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
 ## Installation

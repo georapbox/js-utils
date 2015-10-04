@@ -3,7 +3,7 @@
 ```js
 curry(fn)
 ```
-
+> Returns a curried equivalent of the provided function.
 > Currying refers to the process of transforming a function with multiple arity into
 > the same function with less arity. The curried effect is achieved by binding some of
 > the arguments to the first function invoke, so that those values are fixed for the next invocation.<br/>

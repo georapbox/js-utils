@@ -4,8 +4,8 @@
  * the same function with less arity. The curried effect is achieved by binding some of
  * the arguments to the first function invoke, so that those values are fixed for the next invocation.
  * [https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe]
- * @param fn {function} A callback function to create higher-order "factory" functions.
- * @returns {function} The function to curry.
+ * @param fn {function} The function to curry.
+ * @return {function} A new, curried function.
  */
 function curry(fn) {
     'use strict';
