@@ -1,11 +1,11 @@
-###[Arrays](../) > sortBy
+### [Arrays](../) > sortBy
 
 ```js
 sortBy(arr, field [, ascending] [, primer])
 ```
 
 http://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects
->Sorts an **array of objects** by a property.
+> Sorts an **array of objects** by a property.
 
 - <code>arr {array}</code>
 
@@ -23,7 +23,7 @@ The sorting order. Default is true (ascending).
 
 Manipulates the field to sort by.
 
-####Example
+#### Example
 ```js
 var homes = [{
     "h_id": 8,
@@ -53,13 +53,3 @@ sortBy(homes, 'price', true, function (field) {
 });
 // => "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
 ```
-
-
-
-
-
-
-
-
-
-

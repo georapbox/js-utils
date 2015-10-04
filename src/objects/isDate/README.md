@@ -1,18 +1,18 @@
-###[Objects](../) > isDate
+### [Objects](../) > isDate
 
 ```js
 isDate(value)
 ```
 
->Checks if <code>value</code> is a date.
+> Checks if <code>value</code> is a date.
 
->Returs true if value is a date.
+> Returs true if value is a date.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isDate(new Date()); // => true
 isDate(new Date().getTime()); // => false

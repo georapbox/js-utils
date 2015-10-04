@@ -1,4 +1,4 @@
-###[Strings](../) > endsWith
+### [Strings](../) > endsWith
 
 ```js
 endsWith(str, suffix)
@@ -14,7 +14,7 @@ The string to process.
 
 The substring (suffix) we want to check against.
 
-####Example
+#### Example
 ```js
 var str = 'Lorem ipsum dolor sit amet';
 

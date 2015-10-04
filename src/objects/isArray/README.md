@@ -1,18 +1,18 @@
-###[Objects](../) > isArray
+### [Objects](../) > isArray
 
 ```js
 isArray(value)
 ```
 
->Checks if <code>value</code> is array.
+> Checks if <code>value</code> is array.
 
->Returns true if 'value' is an array, else returns false.
+> Returns true if 'value' is an array, else returns false.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isArray(['a', 'b', 'c', 'd']); // => true
 isArray(100); // => false

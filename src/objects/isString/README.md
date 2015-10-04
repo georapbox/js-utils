@@ -1,4 +1,4 @@
-###[Objects](../) > isString
+### [Objects](../) > isString
 
 ```js
 isString(value)
@@ -8,11 +8,11 @@ isString(value)
 
 >Returns true if <code>value</code> is a string, else returns false.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isString(['a', 'b', 'c', 'd']); // ==> false
 isString(100); // ==> false

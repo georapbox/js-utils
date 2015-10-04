@@ -1,4 +1,4 @@
-###[Objects](../) > isNumber
+### [Objects](../) > isNumber
 
 ```js
 isNumber(value)
@@ -8,11 +8,11 @@ isNumber(value)
 
 > Note: "NaN" is considered a number.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isNumber(10) // => true
 isNumber('10') // => false

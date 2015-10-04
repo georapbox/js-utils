@@ -1,4 +1,4 @@
-###[Strings](../) > countWords
+### [Strings](../) > countWords
 
 ```js
 countWords(str)
@@ -10,7 +10,7 @@ countWords(str)
 
 The string to process.
 
-####Example
+#### Example
 ```js
 countWords('Hello world!        \n This is a message     from outter\tspace.'); // => 9
 countWords(''); // => 0

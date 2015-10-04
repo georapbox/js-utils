@@ -1,16 +1,16 @@
-###[Numbers](../) > isOdd
+### [Numbers](../) > isOdd
 
 ```js
 isOdd(value)
 ```
 
->Checks if a number is odd.
+> Checks if a number is odd.
 
 - <code>value {number}</code>
 
 The number to check if odd.
 
-####Example
+#### Example
 ```js
 isOdd(0); //=> false
 isOdd(2); //=> false

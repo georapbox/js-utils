@@ -1,10 +1,10 @@
-###[Strings](../) > randomString
+### [Strings](../) > randomString
 
 ```js
 randomString(n, chars)
 ```
 
->Generates a random string of n characters, from the "chars" string.
+> Generates a random string of n characters, from the "chars" string.
 
 - <code>n {number}</code>
 
@@ -16,7 +16,7 @@ The characters to use in order to generate the string.
 
 Default value: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.
 
-####Example
+#### Example
 ```js
 randomString(10); // => "RvXYUH6Swm"
 randomString(10, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // => "SFUNKJHYDH"

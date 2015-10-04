@@ -1,10 +1,10 @@
-###[Strings](../) > replaceAll
+### [Strings](../) > replaceAll
 
 ```js
 replaceAll(str, subStr, replaceStr [, caseInsensitive])
 ```
 
->Returns a new string with all occurrences of subStr replaced with replaceStr.
+> Returns a new string with all occurrences of subStr replaced with replaceStr.
 
 - <code>str {string}</code>
 
@@ -22,7 +22,7 @@ The substring to replace with.
 
 If true, the lookup is case insensitive. Default is undefined (falsey).
 
-####Example
+#### Example
 ```js
 var str = 'Lorem ispum 5 dolor sit amet.';
 

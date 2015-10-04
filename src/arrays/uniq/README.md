@@ -1,16 +1,16 @@
-###[Arrays](../) > uniq
+### [Arrays](../) > uniq
 
 ```js
 uniq(arr)
 ```
 
->Removes duplicate primitive values from an array. Returns a new duplicates-free array.
+> Removes duplicate primitive values from an array. Returns a new duplicates-free array.
 
 - <code>arr {array}</code>
 
 The array to iterate over.
 
-####Example
+#### Example
 ```js
 var arr = [
 	'a',

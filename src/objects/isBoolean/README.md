@@ -1,18 +1,18 @@
-###[Objects](../) > isBoolean
+### [Objects](../) > isBoolean
 
 ```js
 isBoolean(value)
 ```
 
->Checks if <code>value</code> is a boolean value.
+> Checks if <code>value</code> is a boolean value.
 
->Returns true is 'value' is boolean, else returns false.
+> Returns true is 'value' is boolean, else returns false.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isBoolean(true); // => true
 isBoolean(false); // => true

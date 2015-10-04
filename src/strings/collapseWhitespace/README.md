@@ -1,4 +1,4 @@
-###[Strings](../) > collapseWhitespace
+### [Strings](../) > collapseWhitespace
 
 ```js
 collapseWhitespace(str)
@@ -10,7 +10,7 @@ collapseWhitespace(str)
 
 The initial string to process.
 
-####Example
+#### Example
 ```js
 collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  '); \\ => 'Lorem ispum dolor sit amet.'
 ```

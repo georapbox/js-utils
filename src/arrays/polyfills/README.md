@@ -1,8 +1,7 @@
 ### [Arrays](../) > Array.prototype.every()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
->The **every()** method tests whether all elements in the array pass the test implemented by the provided function.
+> The **every()** method tests whether all elements in the array pass the test implemented by the provided function.
 
-#### Syntax
 ```js
 arr.every(callback[, thisArg])
 ```
@@ -31,7 +30,7 @@ Value to use as this when executing callback.
 
 ### [Arrays](../) > Array.prototype.filter()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
->The **filter()** method creates a new array with all elements that pass the test implemented by the provided function.
+> The **filter()** method creates a new array with all elements that pass the test implemented by the provided function.
 
 #### Syntax
 ```js
@@ -50,7 +49,7 @@ Value to use as this when executing callback.
 
 ### [Arrays](../) > Array.prototype.forEach()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
->The **forEach()** method executes a provided function once per array element.
+> The **forEach()** method executes a provided function once per array element.
 
 #### Syntax
 ```js
@@ -81,7 +80,7 @@ Value to use as this when executing callback.
 
 ### [Arrays](../) > Array.prototype.indexOf()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
->The **indexOf()** method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+> The **indexOf()** method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
 #### Syntax
 ```js
@@ -100,7 +99,7 @@ The index to start the search at. If the index is greater than or equal to the a
 
 ### [Arrays](../) > Array.prototype.lastIndexOf()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
->The **lastIndexOf()** method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+> The **lastIndexOf()** method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
 
 #### Syntax
 ```js
@@ -119,7 +118,7 @@ The index at which to start searching backwards. Defaults to the array's length,
 
 ### [Arrays](../) > Array.prototype.map()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
->The **map()** method creates a new array with the results of calling a provided function on every element in this array.
+> The **map()** method creates a new array with the results of calling a provided function on every element in this array.
 
 #### Syntax
 ```js
@@ -150,7 +149,7 @@ Value to use as this when executing callback.
 
 ### [Arrays](../) > Array.prototype.some()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some
->The **some()** method tests whether some element in the array passes the test implemented by the provided function.
+> The **some()** method tests whether some element in the array passes the test implemented by the provided function.
 
 #### Syntax
 ```js
@@ -169,7 +168,7 @@ Value to use as this when executing callback.
 
 ### [Arrays](../) > Array.prototype.reduce()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
->The **reduce()** method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+> The **reduce()** method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
 #### Syntax
 ```js

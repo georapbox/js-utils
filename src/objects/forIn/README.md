@@ -1,10 +1,10 @@
-###[Objects](../) > forIn
+### [Objects](../) > forIn
 
 ```js
 forIn(object [, callback])
 ```
 
->Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
+> Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
 
 - <code>object {object}</code>
@@ -15,7 +15,7 @@ The object to iterate over.
 
 The function called per iteration.
 
-####Example
+#### Example
 ```js
 function Shape() {
 	this.x = 0;

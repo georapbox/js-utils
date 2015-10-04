@@ -1,12 +1,12 @@
-###[Objects](../) > extend
+### [Objects](../) > extend
 
 ```js
 extend({}, obj1, objN)
 ```
 
->Merges (deep copy) the contents of two or more objects together into the first object.
+> Merges (deep copy) the contents of two or more objects together into the first object.
 
-####Example
+#### Example
 ```js
 var object1 = {
     apple: 0,

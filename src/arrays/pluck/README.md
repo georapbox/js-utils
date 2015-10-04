@@ -1,10 +1,10 @@
-###[Arrays](../) > pluck
+### [Arrays](../) > pluck
 
 ```js
 pluck(array, key)
 ```
 
->Retrieves the value of a specified property from all elements in an array.
+> Retrieves the value of a specified property from all elements in an array.
 
 - <code>array {array}</code>
 
@@ -14,7 +14,7 @@ The array to iterate over.
 
 The name of the property to pluck.
 
-####Example
+#### Example
 ```js
 var books = [
 	{ title: 'Around the World in Eighty Days', author: 'Jules Verne' },

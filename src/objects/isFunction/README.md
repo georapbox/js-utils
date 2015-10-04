@@ -1,4 +1,4 @@
-###[Objects](../) > isFunction
+### [Objects](../) > isFunction
 
 ```js
 isFunction(value)
@@ -6,13 +6,13 @@ isFunction(value)
 
 > Checks if <code>value</code> is a function.
 
->Returns true if <code>value</code> is a function, else returns false.
+> Returns true if <code>value</code> is a function, else returns false.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isFunction(function test() {
     return 'This is test function.';

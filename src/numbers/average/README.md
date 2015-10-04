@@ -1,12 +1,10 @@
-###[Numbers](../) > average
+### [Numbers](../) > average
 
-
->Calculates the average of a set of numbers.
-
-####Syntax
 ```js
 average([value1 [, value2, ...]]);
 ```
+
+> Calculates the average of a set of numbers.
 
 - <code>value1, value2, ... {number}</code>
 
@@ -22,7 +20,7 @@ average(numArray);
 
 An array of numbers.
 
-####Example
+#### Example
 ```js
 average(); // => 0
 average(7); // => 7

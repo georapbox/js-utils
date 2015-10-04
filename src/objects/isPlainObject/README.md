@@ -1,16 +1,16 @@
-###[Objects](../) > isPlainObject
+### [Objects](../) > isPlainObject
 
 ```js
 isPlainObject(value)
 ```
 
->Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
+> Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 function Foo() {
     this.a = 1;

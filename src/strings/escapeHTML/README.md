@@ -1,16 +1,16 @@
-###[Strings](../) > escapeHTML
+### [Strings](../) > escapeHTML
 
 ```js
 escapeHTML(html)
 ```
 
->Escapes a HTML string.
+> Escapes a HTML string.
 
 - <code>html {string}</code>
 
 The HTML string to escape.
 
-####Example
+#### Example
 ```js
 escapeHTML('<script src="main.js"><\/script>');
 // => &lt;script src=&#34;main.js&#34;&gt;&lt;/script&gt;

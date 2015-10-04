@@ -1,10 +1,10 @@
-###[Strings](../) > supplant
+### [Strings](../) > supplant
 
 ```js
 supplant(string, data)
 ```
 
->supplant() does variable substitution on a string.
+> supplant() does variable substitution on a string.
 It scans through the string looking for expressions enclosed in {{ }} braces.
 If an expression is found, use it as a key on the object,
 and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
@@ -17,7 +17,7 @@ The initial string to substitude.
 
 An object to add as our model.
 
-####Example
+#### Example
 ```js
 var str = '' +
     '<p>My name is {{person.fName}} {{person.lName}} and my job is {{person.position}}.</p>' +

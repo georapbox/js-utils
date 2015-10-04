@@ -1,10 +1,10 @@
-###[Strings](../) > subStr
+### [Strings](../) > subStr
 
 ```js
 subStr(str, n)
 ```
 
->Returns a substring denoted by n (positive or negative) characters.
+> Returns a substring denoted by n (positive or negative) characters.
 
 - <code>str {string}</code>
 
@@ -18,7 +18,7 @@ If n >= 0, returns a substring from the left end of the string.<br/>
 If n < 0, returns a substring from the right end of the string.<br/>
 If n is not of type number, returns the whole string intact.
 
-####Example
+#### Example
 ```js
 var str = 'Lorem ispum dolor sit amet.';
 

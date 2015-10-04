@@ -1,10 +1,10 @@
-###[Arrays](../) > filter
+### [Arrays](../) > filter
 
 ```js
 filter(array, callback [, thisArg])
 ```
 
->Creates a new array with all elements that pass the test implemented by the provided callback function.
+> Creates a new array with all elements that pass the test implemented by the provided callback function.
 
 - <code>array {array}</code>
 
@@ -18,7 +18,7 @@ The callback function to test each element of the array.
 
 Value to use as <code>this</code> when executing callback.
 
-####Example
+#### Example
 ```js
 var arr = ['a', {a: 'b'}, 1, 'b', 2, {c: 'd'}, 'c'];
 

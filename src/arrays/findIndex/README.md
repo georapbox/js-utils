@@ -1,12 +1,12 @@
-###[Arrays](../) > findIndex
+### [Arrays](../) > findIndex
 
 ```js
 findIndex(array, callback)
 ```
 
->Returns the index of the first element of a collection that passes the callback check.
+> Returns the index of the first element of a collection that passes the callback check.
 
->If no element passes the callback check, returns -1.
+> If no element passes the callback check, returns -1.
 
 - <code>array {array}</code>
 
@@ -16,7 +16,7 @@ The array to check.
 
 The function called per iteration.
 
-####Example
+#### Example
 ```js
 var heroes = [
     {

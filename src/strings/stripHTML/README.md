@@ -1,16 +1,16 @@
-###[Strings](../) > stripHTML
+### [Strings](../) > stripHTML
 
 ```js
 stripHTML(string)
 ```
 
->Returns a new string with all HTML tags removed.
+> Returns a new string with all HTML tags removed.
 
 - <code>string {String}</code>
 
 The string to strip.
 
-####Example
+#### Example
 ```js
 var str = '<p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit.<br/> <span class="mollitia">Mollitia</span> quos dicta, doloremque veritatis.</p>';
 

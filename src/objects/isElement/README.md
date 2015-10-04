@@ -1,4 +1,4 @@
-###[Objects](../) > isElement
+### [Objects](../) > isElement
 
 ```js
 isElement(value)
@@ -6,11 +6,11 @@ isElement(value)
 
 > Checks if <code>value</code> is a DOM element.
 
-- <code>value {*}</code>
+- <code>value {\*}</code>
 
 The value to check.
 
-####Example
+#### Example
 ```js
 isElement('Lorem ipusm dolr sit amet.'); // => false
 isElement(document.body); // => true

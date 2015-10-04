@@ -1,11 +1,10 @@
-###[Numbers](../) > max
+### [Numbers](../) > max
 
->Returns the largest of zero or more numbers.
-
-####Syntax
 ```js
 max([value1 [, value2, ...]]);
 ```
+
+> Returns the largest of zero or more numbers.
 
 - <code>value1, value2, ... {number}</code>
 
@@ -21,7 +20,7 @@ max(numArray);
 
 An array of numbers.
 
-####Example
+#### Example
 ```js
 max(); // => -Infinity
 max(5); // => 5

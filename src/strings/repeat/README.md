@@ -1,4 +1,5 @@
-###[Strings](../) > repeat
+### [Strings](../) > repeat
+
 ```js
 repeat(string, count)
 ```
@@ -13,7 +14,7 @@ The string to process.
 
 Times to repeat the string.
 
-####Example
+#### Example
 ```js
 repeat('&nbsp;', 4); // => '&nbsp;&nbsp;&nbsp;&nbsp;'
 repeat('&nbsp;', 2.5); // => '&nbsp;&nbsp;'

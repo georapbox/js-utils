@@ -1,10 +1,10 @@
-###[Numbers](../) > min
->Returns the smallest of zero or more numbers.
+### [Numbers](../) > min
 
-####Syntax
 ```js
 min([value1 [, value2, ...]]);
 ```
+
+> Returns the smallest of zero or more numbers.
 
 - <code>value1, value2, ... {number}</code>
 
@@ -20,7 +20,7 @@ min(numArray);
 
 An array of numbers.
 
-####Example
+#### Example
 ```js
 min(); // => Infinity
 min(5); // => 5

@@ -1,10 +1,10 @@
-###[Strings](../) > strip
+### [Strings](../) > strip
 
 ```js
 strip(str, [string1], [string2], ...)
 ```
 
->Returns a new string with all occurrences of [string1], [string2], ... removed.
+> Returns a new string with all occurrences of [string1], [string2], ... removed.
 
 - <code>str {string}</code>
 
@@ -14,7 +14,7 @@ The string to process.
 
 The substrings to remove from the original string.
 
-####Example
+#### Example
 ```js
 var str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';
 

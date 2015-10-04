@@ -1,4 +1,4 @@
-###[Strings](../) > pad
+### [Strings](../) > pad
 
 ```js
 pad(str, len [, ch])
@@ -18,7 +18,7 @@ The length of the padding.
 
 The character(s) to use for padding. Default is space.
 
-####Example
+#### Example
 ```js
 pad('Hello', 9); // => "  Hello  "
 pad('Hello', 9, '-'); // => "--Hello--"
@@ -28,7 +28,7 @@ pad('Hello', 5, '-'); // => "Hello" (len is the same as str.length)
 
 ---
 
-###[Strings](../) > padLeft
+### [Strings](../) > padLeft
 
 ```js
 pad(str, len [, ch])
@@ -48,7 +48,7 @@ The length of the padding.
 
 The character(s) to use for padding. Default is space.
 
-####Example
+#### Example
 ```js
 padLeft('Hello', 10); // => "-----Hello"
 padLeft('Hello', 5, '-'); // => "Hello"
@@ -56,7 +56,7 @@ padLeft('Hello', 5, '-'); // => "Hello"
 
 ---
 
-###[Strings](../) > padRight
+### [Strings](../) > padRight
 
 ```js
 pad(str, len [, ch])
@@ -76,7 +76,7 @@ The length of the padding.
 
 The character(s) to use for padding. Default is space.
 
-####Example
+#### Example
 ```js
 padRight('Hello', 10); // => "Hello-----"
 padRight('Hello', 5, '-'); // => "Hello"

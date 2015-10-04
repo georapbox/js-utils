@@ -1,10 +1,10 @@
-##removeSuffix
->Removes substring from end of a string.
+###[Strings](../) > removeSuffix
 
-####Syntax
 ```js
 removeSuffix(str, suffix)
 ```
+
+> Removes substring from end of a string.
 
 - <code>str</code>
 
@@ -14,7 +14,7 @@ The initial string.
 
 The substring to remove from the original string.
 
-####Example
+#### Example
 ```js
 removeSuffix('foobar', 'bar'); // 'foo'
 removeSuffix('foobar', 'foo'); // 'foobar'

@@ -1,10 +1,10 @@
-###[Strings](../) > truncate
+### [Strings](../) > truncate
 
 ```js
 truncate(string, characterCount [, delimiter])
 ```
 
->Truncates a string based on character count.
+> Truncates a string based on character count.
 
 - <code>string {string}</code>
 
@@ -18,7 +18,7 @@ The number of characters the truncated string will contain. If ommitted or false
 
 The delimiter to add at the end of the truncated string. Default value is "...".
 
-####Example
+#### Example
 ```js
 var str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 

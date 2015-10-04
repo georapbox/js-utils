@@ -1,13 +1,13 @@
-###[Strings](../) > subStrAfterChars
+### [Strings](../) > subStrAfterChars
 
 ```js
 subStrAfterChars(str, chars [, last])
 ```
 
->Returns a substring after a specific sequence of character(s).
+> Returns a substring after a specific sequence of character(s).
 
->By default looks for the first occuerence of this sequence.
->If the character or sequence of characters not found, returns the initial string.
+> By default looks for the first occuerence of this sequence.
+> If the character or sequence of characters not found, returns the initial string.
 
 - <code>str {string}</code>
 
@@ -22,7 +22,7 @@ One or more characters to use for the lookup.
 If <code>true</code> or any truthy value, will lookup for the lsat occurence of the character or sequence of characters specified.
 Default value is <code>undefined</code>.
 
-####Example
+#### Example
 ```js
 subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '_');
 // => 'IPSUM DOLOR_SIT AMET'
