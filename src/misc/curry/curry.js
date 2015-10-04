@@ -15,7 +15,7 @@ function curry(fn) {
         }
 
         return function () {
-            return curried(args.concat([].slice.apply(arguments)));
+            return curried(args.concat([].slice.call(arguments)));
         };
     }
 
