@@ -50,8 +50,8 @@ The character(s) to use for padding. Default is space.
 
 #### Example
 ```js
-padLeft('Hello', 10); // => "-----Hello"
-padLeft('Hello', 5, '-'); // => "Hello"
+padLeft('Hello', 10); // => "     Hello"
+padLeft('Hello', 5, '-'); // => "-----Hello"
 ```
 
 ---
@@ -78,6 +78,6 @@ The character(s) to use for padding. Default is space.
 
 #### Example
 ```js
-padRight('Hello', 10); // => "Hello-----"
-padRight('Hello', 5, '-'); // => "Hello"
+padRight('Hello', 10); // => "Hello     "
+padRight('Hello', 5, '-'); // => "Hello-----"
 ```
