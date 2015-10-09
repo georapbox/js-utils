@@ -92,6 +92,7 @@
 |[isElement](src/objects/isElement)|Checks if "value" is a DOM element.|
 |[isEmpty](src/objects/isEmpty)|Checks if a "value" is empty.|
 |[isFunction](src/objects/isFunction)|Checks if "value" is a function.|
+|[isNaN](src/objects/isNaN)|Determines whether a value is NaN or not.|
 |[isNumber](src/objects/isNumber)|Checks if a "value" is a number.|
 |[isObject](src/objects/isObject)|Checks if <code>value</code> is the language type of <code>Object</code>.|
 |[isPlainObject](src/objects/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
