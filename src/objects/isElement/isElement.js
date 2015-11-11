@@ -5,5 +5,5 @@
  */
 function isElement(value) {
     'use strict';
-    return value && value.nodeType === 1 || false;
+    return value && value.nodeType === 1 && value instanceof Element === true || false;
 }
