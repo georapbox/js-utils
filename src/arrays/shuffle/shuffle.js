@@ -1,6 +1,7 @@
 /**
  * Randomize array element order in-place.
  * Using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+ * Nice explanation and visualization [http://bost.ocks.org/mike/shuffle/]
  * @param {array} array The array to shuffle.
  */
 function shuffle(array) {
@@ -8,8 +9,7 @@ function shuffle(array) {
 
     var currentIndex = array.length,
         temporaryValue,
-        randomIndex,
-        newArr;
+        randomIndex;
 
     // While there remain elements to shuffle...
     while (currentIndex) {
