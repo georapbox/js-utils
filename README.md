@@ -103,6 +103,7 @@
 #### DOM
 |Method|Description|
 |------|-----------|
+|[preloadImages](src/dom/preloadImages)|Asynchronsouly load images to browser so that can be cached.|
 |[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
 |[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
