@@ -15,6 +15,7 @@
     "postinstall": "grunt postinstall"
   },
   "devDependencies": {
+    "chalk": "^1.1.1",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-md2html": "^0.2.1",

@@ -1,5 +1,6 @@
 /*global module*/
-var pkg = require('./package');
+var pkg = require('./package'),
+    chalk = require('chalk');
 
 module.exports = function (grunt) {
     'use strict';
@@ -76,22 +77,29 @@ module.exports = function (grunt) {
     );
 
     grunt.registerTask('postinstall', 'Run this after npm install', function () {
-        console.log("=================================================================");
-		console.log("   _     ______                    _   _       _");
-		console.log("  (_)   |  ____|                  | | (_)     | |");
-		console.log("   _ ___| |__   ___ ___  ___ _ __ | |_ _  __ _| |___");
-		console.log("  | / __|  __| / __/ __|/ _ \\ '_ \\| __| |/ _` | / __|");
-		console.log("  | \\__ \\ |____\\__ \\__ \\  __/ | | | |_| | (_| | \\__ \\");
-		console.log("  | |___/______|___/___/\\___|_| |_|\\__|_|\\__,_|_|___/");
-		console.log(" _/ |");
-		console.log("|__/");
-		console.log("@name " + pkg.name);
-        console.log("@version " + pkg.version);
-        console.log("@description " + pkg.description);
-        console.log("@author " + pkg.author);
-		console.log("@homepage " + pkg.homepage);
-		console.log("@repository " + pkg.repository.url);
-		console.log("@license " + pkg.license);
-		console.log("=================================================================");
+		console.log(chalk.blue("   _     ______                    _   _       _"));
+		console.log(chalk.blue("  (_)   |  ____|                  | | (_)     | |"));
+		console.log(chalk.blue("   _ ___| |__   ___ ___  ___ _ __ | |_ _  __ _| |___"));
+		console.log(chalk.blue("  | / __|  __| / __/ __|/ _ \\ '_ \\| __| |/ _` | / __|"));
+		console.log(chalk.blue("  | \\__ \\ |____\\__ \\__ \\  __/ | | | |_| | (_| | \\__ \\"));
+		console.log(chalk.blue("  | |___/______|___/___/\\___|_| |_|\\__|_|\\__,_|_|___/"));
+		console.log(chalk.blue(" _/ |"));
+		console.log(chalk.blue("|__/"));
+		console.log(chalk.magenta("@name ") + pkg.name);
+        console.log(chalk.magenta("@version ") + pkg.version);
+        console.log(chalk.magenta("@description ") + pkg.description);
+        console.log(chalk.magenta("@author ") + pkg.author);
+		console.log(chalk.magenta("@homepage ") + pkg.homepage);
+		console.log(chalk.magenta("@repository ") + pkg.repository.url);
+		console.log(chalk.magenta("@license ") + pkg.license);
+        console.log("");
+        console.log(chalk.blue("Basic Commands"));
+        console.log("==============");
+        console.log("");
+        console.log(chalk.green("$ npm run docs"));
+        console.log("Creates a docs folder to the root of the project, containing all README files converted to HTML documents.");
+        console.log("");
+        console.log(chalk.green("$ npm run test"));
+        console.log("Runs the tests and creates a tests-reporter folder to the root of the project, that contains an HTML document with the tests results.");
     });
 };
