@@ -29,12 +29,56 @@
 					</div>
 				</div>
 			</div>
-			<p>
-			    Author: <a href="<%= homepage %>"><%= author %></a>
-			    <br/>
-			    Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license.
-            </p>
+			<div class="footer">
+<pre style="font-size:8px;">
+   _     ______                    _   _       _
+  (_)   |  ____|                  | | (_)     | |
+   _ ___| |__   ___ ___  ___ _ __ | |_ _  __ _| |___
+  | / __|  __| / __/ __|/ _ \ '_ \| __| |/ _` | / __|
+  | \__ \ |____\__ \__ \  __/ | | | |_| | (_| | \__ \
+  | |___/______|___/___/\___|_| |_|\__|_|\__,_|_|___/
+ _/ |
+|__/
+</pre>
+<pre>
+
+@name <%= appName %>
+@name <%= version %>
+@description <%= description %>
+@author <%= author %>
+@homepage <%= homepage %>
+@repository <%= repository %>
+@license <%= license %>
+</pre>
+				<p>
+					<!-- Author: <a href="<%= homepage %>"><%= author %></a>
+					<br/>
+					Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license. -->
+
+				</p>
+			</div>
 		</div>
+
 	</div>
+
+	<script>
+		console.log("=================================================================");
+		console.log("   _     ______                    _   _       _");
+		console.log("  (_)   |  ____|                  | | (_)     | |");
+		console.log("   _ ___| |__   ___ ___  ___ _ __ | |_ _  __ _| |___");
+		console.log("  | / __|  __| / __/ __|/ _ \\ '_ \\| __| |/ _` | / __|");
+		console.log("  | \\__ \\ |____\\__ \\__ \\  __/ | | | |_| | (_| | \\__ \\");
+		console.log("  | |___/______|___/___/\\___|_| |_|\\__|_|\\__,_|_|___/");
+		console.log(" _/ |");
+		console.log("|__/");
+		console.log("@name <%= appName %>");
+		console.log("@name <%= version %>");
+		console.log("@description <%= description %>");
+		console.log("@author <%= author %>");
+		console.log("@homepage <%= homepage %>");
+		console.log("@repository <%= repository %>");
+		console.log("@license <%= license %>");
+		console.log("=================================================================");
+	</script>
 </body>
 </html>

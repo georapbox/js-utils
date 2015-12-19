@@ -1,4 +1,6 @@
 /*global module*/
+var pkg = require('./package');
+
 module.exports = function (grunt) {
     'use strict';
 
@@ -17,7 +19,11 @@ module.exports = function (grunt) {
 						path: '../docs-layout',
 						author: '<%= pkg.author %>',
 						appName: '<%= pkg.name %>',
-						"homepage": "https://github.com/georapbox/",
+                        version: '<%= pkg.version %>',
+                        description: '<%= pkg.description %>',
+						homepage: "'<%= pkg.homepage %>'",
+                        repository: "<%= pkg.repository.url %>",
+                        license: "<%= pkg.license %>",
 						showAppName: false
 					}
 				},
@@ -37,7 +43,11 @@ module.exports = function (grunt) {
 						path: '../../../../docs-layout',
 						author: '<%= pkg.author %>',
 						appName: '<%= pkg.name %>',
-						"homepage": "https://github.com/georapbox/",
+                        version: '<%= pkg.version %>',
+                        description: '<%= pkg.description %>',
+						homepage: "'<%= pkg.homepage %>'",
+                        repository: "<%= pkg.repository.url %>",
+                        license: "<%= pkg.license %>",
 						showAppName: true
 					}
 				},
@@ -64,4 +74,24 @@ module.exports = function (grunt) {
         'Converts Markdown documentation files to HTML',
         ['md2html']
     );
+
+    grunt.registerTask('postinstall', 'Run this after npm install', function () {
+        console.log("=================================================================");
+		console.log("   _     ______                    _   _       _");
+		console.log("  (_)   |  ____|                  | | (_)     | |");
+		console.log("   _ ___| |__   ___ ___  ___ _ __ | |_ _  __ _| |___");
+		console.log("  | / __|  __| / __/ __|/ _ \\ '_ \\| __| |/ _` | / __|");
+		console.log("  | \\__ \\ |____\\__ \\__ \\  __/ | | | |_| | (_| | \\__ \\");
+		console.log("  | |___/______|___/___/\\___|_| |_|\\__|_|\\__,_|_|___/");
+		console.log(" _/ |");
+		console.log("|__/");
+		console.log("@name " + pkg.name);
+        console.log("@version " + pkg.version);
+        console.log("@description " + pkg.description);
+        console.log("@author " + pkg.author);
+		console.log("@homepage " + pkg.homepage);
+		console.log("@repository " + pkg.repository.url);
+		console.log("@license " + pkg.license);
+		console.log("=================================================================");
+    });
 };

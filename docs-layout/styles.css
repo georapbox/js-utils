@@ -1,3 +1,14 @@
+.footer {
+	clear: both;
+	border-top: 1px solid #dadada;
+	padding-top: 10px;
+}
+
+.footer pre {
+	color: #818b94;
+	line-height: 1.3;
+}
+
 body {
 	overflow: auto !imporntant;
 }

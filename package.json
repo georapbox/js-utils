@@ -1,13 +1,18 @@
 {
   "name": "jsEssentials",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "A collection of javascript standalone functions for everyday tasks.",
   "author": "George Raptis <georapbox@gmail.com>",
   "homepage": "https://github.com/georapbox/jsEssentials",
-  "license": "Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:georapbox/jsEssentials.git"
+  },
+  "license": "(MIT)",
   "scripts": {
     "test": "karma start",
-    "docs": "grunt buildDocs"
+    "docs": "grunt buildDocs",
+    "postinstall": "grunt postinstall"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
