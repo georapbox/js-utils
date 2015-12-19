@@ -24,6 +24,6 @@ preloadImages([
     'http://www.pageresource.com/wallpapers/wallpaper/fantasy-wallpaper-wallpapers.jpg',
     'http://www.magic4walls.com/wp-content/uploads/2013/12/fantasy-wallpaper-castle-wallpapers-array-wallwuzz-hd-wallpaper-4802.jpg'
 ], function (images) {
-    console.log(images.length + ' have been succesfully loaded.');
+    console.log('All ' + images.length + ' images have been succesfully loaded.');
 });
 ```
