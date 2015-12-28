@@ -1,4 +1,4 @@
-### [Objects](../) > isFunction
+### [is](../) > isFunction
 
 ```js
 isFunction(value)

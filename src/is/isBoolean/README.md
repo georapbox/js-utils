@@ -1,4 +1,4 @@
-### [Objects](../) > isBoolean
+### [is](../) > isBoolean
 
 ```js
 isBoolean(value)

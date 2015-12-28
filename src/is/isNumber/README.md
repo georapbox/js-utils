@@ -1,4 +1,4 @@
-### [Objects](../) > isNumber
+### [is](../) > isNumber
 
 ```js
 isNumber(value)

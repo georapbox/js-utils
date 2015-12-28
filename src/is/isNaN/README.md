@@ -1,4 +1,4 @@
-### [Objects](../) > isNaN
+### [is](../) > isNaN
 
 ```js
 isNaN(value)

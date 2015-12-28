@@ -88,17 +88,6 @@
 |[extend](src/objects/extend)|Merges (deep copy) the contents of two or more objects together into the first object.|
 |[forIn](src/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[forOwn](src/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
-|[isArray](src/objects/isArray)|Checks if a "value" is an array.|
-|[isBoolean](src/objects/isBoolean)|Checks if a "value" is a boolean value.|
-|[isDate](src/objects/isDate)|Checks if a "value" is a date.|
-|[isElement](src/objects/isElement)|Checks if "value" is a DOM element.|
-|[isEmpty](src/objects/isEmpty)|Checks if a "value" is empty.|
-|[isFunction](src/objects/isFunction)|Checks if "value" is a function.|
-|[isNaN](src/objects/isNaN)|Determines whether a value is NaN or not.|
-|[isNumber](src/objects/isNumber)|Checks if a "value" is a number.|
-|[isObject](src/objects/isObject)|Checks if <code>value</code> is the language type of <code>Object</code>.|
-|[isPlainObject](src/objects/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
-|[isString](src/objects/isString)|Checks if a "value" is a string.|
 
 #### DOM
 |Method|Description|
@@ -107,6 +96,21 @@
 |[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
 |[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
+
+#### is
+|Method|Description|
+|------|-----------|
+|[isArray](src/is/isArray)|Checks if a "value" is an array.|
+|[isBoolean](src/is/isBoolean)|Checks if a "value" is a boolean value.|
+|[isDate](src/is/isDate)|Checks if a "value" is a date.|
+|[isElement](src/is/isElement)|Checks if "value" is a DOM element.|
+|[isEmpty](src/is/isEmpty)|Checks if a "value" is empty.|
+|[isFunction](src/is/isFunction)|Checks if "value" is a function.|
+|[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
+|[isNumber](src/is/isNumber)|Checks if a "value" is a number.|
+|[isObject](src/is/isObject)|Checks if <code>value</code> is the language type of <code>Object</code>.|
+|[isPlainObject](src/is/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
+|[isString](src/is/isString)|Checks if a "value" is a string.|
 
 #### Misc
 |Method|Description|

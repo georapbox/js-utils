@@ -1,4 +1,4 @@
-### [Objects](../) > isElement
+### [is](../) > isElement
 
 ```js
 isElement(value)

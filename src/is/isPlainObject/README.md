@@ -1,4 +1,4 @@
-### [Objects](../) > isPlainObject
+### [is](../) > isPlainObject
 
 ```js
 isPlainObject(value)

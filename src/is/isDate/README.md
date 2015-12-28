@@ -1,4 +1,4 @@
-### [Objects](../) > isDate
+### [is](../) > isDate
 
 ```js
 isDate(value)

@@ -1,4 +1,4 @@
-### [Objects](../) > isEmpty
+### [is](../) > isEmpty
 
 ```js
 isEmpty(value)

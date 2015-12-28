@@ -1,4 +1,4 @@
-### [Objects](../) > isArray
+### [is](../) > isArray
 
 ```js
 isArray(value)
