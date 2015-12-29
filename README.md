@@ -117,6 +117,7 @@
 |[isOdd](src/is/isOdd)|Checks if a number is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if a "value" is an object created by the <code>Object</code> constructor.|
 |[isString](src/is/isString)|Checks if a "value" is a string.|
+|[isUndefined](src/is/isUndefined)|Checks if a "value" is undefined.|
 
 
 #### Misc
