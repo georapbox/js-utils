@@ -117,6 +117,7 @@
 |[isObject](src/is/isObject)|Checks if a "value" is the language type of <code>Object</code>.|
 |[isOdd](src/is/isOdd)|Checks if a number is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if a "value" is an object created by the <code>Object</code> constructor.|
+|[isRegexp](src/is/isRegexp)|Checks if a "value" is a regular expression.|
 |[isString](src/is/isString)|Checks if a "value" is a string.|
 |[isUndefined](src/is/isUndefined)|Checks if a "value" is undefined.|
 
