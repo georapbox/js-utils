@@ -5,10 +5,5 @@
  */
 function isArray(value) {
     'use strict';
-
-    return value &&
-        typeof value === 'object' &&
-        typeof value.length === 'number' &&
-        Object.prototype.toString.call(value) === '[object Array]' ||
-        false;
+    return !!value && Object.prototype.toString.call(value) === '[object Array]';
 }

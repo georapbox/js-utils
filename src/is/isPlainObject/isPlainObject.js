@@ -5,5 +5,5 @@
  */
 function isPlainObject(value) {
     'use strict';
-    return !!value && typeof value === 'object' && value.constructor === Object;
+    return typeof value === 'object' && value.constructor === Object;
 }

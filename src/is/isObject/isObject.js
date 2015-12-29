@@ -5,7 +5,5 @@
  */
 function isObject(value) {
     'use strict';
-
-    var type = typeof value;
-    return !!value && (type === 'function' || type === 'object' || false);
+    return !!value && typeof value === 'function' || typeof value === 'object';
 }

@@ -5,8 +5,5 @@
  */
 function isBoolean(value) {
     'use strict';
-
-    return (value === true || value === false || value && typeof obj === 'object') &&
-        (Object.prototype.toString.call(value) === '[object Boolean]') ||
-        false;
+    return value === true || value === false || Object.prototype.toString.call(value) === '[object Boolean]';
 }

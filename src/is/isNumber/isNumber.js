@@ -6,9 +6,5 @@
  */
 function isNumber(value) {
     'use strict';
-
-    return value != null && // NOTE: Using non strict equality to check against null and undefined.
-        Object.prototype.toString.call(value) === '[object Number]' &&
-        typeof value === 'number' ||
-        false;
+    return typeof value === 'number' || Object.prototype.toString.call(value) === '[object Number]';
 }
