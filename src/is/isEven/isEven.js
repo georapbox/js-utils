@@ -5,10 +5,8 @@
  */
 function isEven(value) {
     'use strict';
-
     if (value == null || (Object.prototype.toString.call(value) !== '[object Number]' && typeof value !== 'number')) { // jshint ignore:line
-        throw new TypeError('isEven expects a parameter of type "Number", instead saw "' + typeof value + '"');
+        throw new TypeError('Expected a parameter of type "Number", instead saw "' + typeof value + '"');
     }
-
     return value & 1 ? false : true;
 }

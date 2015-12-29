@@ -36,6 +36,7 @@
 |[Array.prototype.some()](src/arrays/polyfills#arrays--arrayprototypesome)|Tests whether some element in the array passes the test implemented by the provided function.|
 |[Array.prototype.reduce()](src/arrays/polyfills#arrays--arrayprototypereduce)|Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.|
 
+
 #### Strings
 |Method|Description|
 |------|-----------|
@@ -71,16 +72,16 @@
 |[unescapeHTML](src/strings/unescapeHTML)|Unescapes a HTML string.|
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 
+
 #### Numbers
 |Method|Description|
 |------|-----------|
 |[average](src/numbers/average)|Calculates the average of a set of numbers.|
-|[isEven](src/numbers/isEven)|Checks if a number is even.|
-|[isOdd](src/numbers/isOdd)|Checks if a number is odd.|
 |[max](src/numbers/max)|Returns the largest of zero or more numbers.|
 |[min](src/numbers/min)|Returns the smallest of zero or more numbers.|
 |[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.|
 |[randomBetween](src/numbers/randomBetween)|Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.|
+
 
 #### Objects
 |Method|Description|
@@ -88,6 +89,7 @@
 |[extend](src/objects/extend)|Merges (deep copy) the contents of two or more objects together into the first object.|
 |[forIn](src/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[forOwn](src/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
+
 
 #### DOM
 |Method|Description|
@@ -97,6 +99,7 @@
 |[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
+
 #### is
 |Method|Description|
 |------|-----------|
@@ -105,12 +108,15 @@
 |[isDate](src/is/isDate)|Checks if a "value" is a date.|
 |[isElement](src/is/isElement)|Checks if "value" is a DOM element.|
 |[isEmpty](src/is/isEmpty)|Checks if a "value" is empty.|
+|[isEven](src/is/isEven)|Checks if a number is even.|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNumber](src/is/isNumber)|Checks if a "value" is a number.|
 |[isObject](src/is/isObject)|Checks if <code>value</code> is the language type of <code>Object</code>.|
+|[isOdd](src/is/isOdd)|Checks if a number is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if <code>value</code> is an object created by the <code>Object</code> constructor.|
 |[isString](src/is/isString)|Checks if a "value" is a string.|
+
 
 #### Misc
 |Method|Description|

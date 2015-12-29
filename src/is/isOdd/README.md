@@ -1,4 +1,4 @@
-### [Numbers](../) > isOdd
+### [is](../) > isOdd
 
 ```js
 isOdd(value)

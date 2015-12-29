@@ -1,4 +1,4 @@
-### [Numbers](../) > isEven
+### [is](../) > isEven
 
 ```js
 isEven(value)
