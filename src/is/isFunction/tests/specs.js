@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isFunction', function () {
+    describe('is/isFunction', function () {
         it('isFunction(function test() {}) should return true', function () {
             expect(isFunction(function test() {})).toEqual(true);
         });

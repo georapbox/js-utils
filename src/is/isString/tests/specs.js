@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isString', function () {
+    describe('is/isString', function () {
         it('isString(\'404\') should return true', function () {
             expect(isString('404')).toEqual(true);
         });

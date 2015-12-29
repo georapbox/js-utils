@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isElement', function () {
+    describe('is/isElement', function () {
         it('isElement(isElement(document.getElementsByTagName(\'head\')[0]) should return true', function () {
             expect(isElement(document.getElementsByTagName('head')[0])).toEqual(true);
         });

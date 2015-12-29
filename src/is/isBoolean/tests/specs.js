@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isBoolean', function () {
+    describe('is/isBoolean', function () {
         it('isBoolean(true) should return true', function () {
             expect(isBoolean(true)).toBe(true);
         });

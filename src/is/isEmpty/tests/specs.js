@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isEmpty', function () {
+    describe('is/isEmpty', function () {
         it('isEmpty([]) should return true', function () {
             expect(isEmpty([])).toEqual(true);
         });

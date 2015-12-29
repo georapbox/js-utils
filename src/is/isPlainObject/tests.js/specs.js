@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isPlainObject', function () {
+    describe('is/isPlainObject', function () {
         function Foo() {
             this.foo = 'bar';
         }

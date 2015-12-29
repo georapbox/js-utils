@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isArray', function () {
+    describe('is/isArray', function () {
         it('isArray([\'a\', \'b\', \'c\', \'d\']) should return true', function () {
             expect(isArray(['a', 'b', 'c', 'd'])).toBe(true);
         });

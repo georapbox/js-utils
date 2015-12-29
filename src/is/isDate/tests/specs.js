@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isDate', function () {
+    describe('is/isDate', function () {
         it('isDate(new Date()) should return true', function () {
             expect(isDate(new Date())).toEqual(true);
         });

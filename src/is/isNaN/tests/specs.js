@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('objects/isNaN', function () {
+    describe('is/isNaN', function () {
         it('isNaN(NaN) should return true', function () {
             expect(isNaN(NaN)).toEqual(true);
         });
