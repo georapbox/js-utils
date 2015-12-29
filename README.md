@@ -111,6 +111,7 @@
 |[isEven](src/is/isEven)|Checks if a number is even.|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
+|[isNull](src/is/isNull)|Checks if a "value" is null.|
 |[isNumber](src/is/isNumber)|Checks if a "value" is a number.|
 |[isObject](src/is/isObject)|Checks if a "value" is the language type of <code>Object</code>.|
 |[isOdd](src/is/isOdd)|Checks if a number is odd.|
