@@ -109,6 +109,7 @@
 |[isElement](src/is/isElement)|Checks if "value" is a DOM element.|
 |[isEmpty](src/is/isEmpty)|Checks if a "value" is empty.|
 |[isEven](src/is/isEven)|Checks if a number is even.|
+|[isExisty](src/is/isExisty)|Checks if a "value" is existy (Not null or undefined).|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNull](src/is/isNull)|Checks if a "value" is null.|
