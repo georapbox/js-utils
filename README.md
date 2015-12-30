@@ -111,6 +111,7 @@
 |[isEven](src/is/isEven)|Checks if a number is even.|
 |[isExisty](src/is/isExisty)|Checks if a "value" is existy (Not null or undefined).|
 |[isFalse](src/is/isFalse)|Checks if a "value" is false (strict equality).|
+|[isFalsy](src/is/isFalsy)|Checks if a "value" is falsy.|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNonExisty](src/is/isNonExisty)|Checks if a "value" is non existy (null or undefined).|
