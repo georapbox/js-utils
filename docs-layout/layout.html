@@ -11,25 +11,34 @@
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-	<div class="site">
-		<div id="slider">
-			<div class="frames">
-				<div class="frame frame-center">
-					<div id="readme" class="announce">
-						<div id="markdown" class="wikistyle">
-							<% if (showAppName === true) { %>
-								<h1>
-									<a href="../../../index.html">
-										<%= appName %>
-									</a>
-								</h1>
-							<% } %>
-							<%= document %>
+	<div class="header">
+		<div class="site">
+			<h1><%= appName %></h1>
+			<blockquote>Not yet another Javascript library</blockquote>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="site">
+			<div id="slider">
+				<div class="frames">
+					<div class="frame frame-center">
+						<div id="readme" class="announce">
+							<div id="markdown" class="wikistyle">
+								<% if (showAppName === true) { %>
+									<a href="../../../index.html">back</a>
+								<% } %>
+								<%= document %>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="footer">
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="site">
 <pre style="font-size:8px;">
    _     ______                    _   _       _
   (_)   |  ____|                  | | (_)     | |
@@ -42,7 +51,6 @@
 </pre>
 <pre>
 
-@name <%= appName %>
 @version <%= version %>
 @description <%= description %>
 @author <%= author %>
@@ -50,16 +58,15 @@
 @repository <%= repository %>
 @license <%= license %>
 </pre>
-				<p>
-					<!-- Author: <a href="<%= homepage %>"><%= author %></a>
-					<br/>
-					Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license. -->
+			<p>
+				<!-- Author: <a href="<%= homepage %>"><%= author %></a>
+				<br/>
+				Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license. -->
 
-				</p>
-			</div>
+			</p>
 		</div>
-
 	</div>
+
 
 	<script>
 		console.log("=================================================================");
@@ -71,7 +78,6 @@
 		console.log("  | |___/______|___/___/\\___|_| |_|\\__|_|\\__,_|_|___/");
 		console.log(" _/ |");
 		console.log("|__/");
-		console.log("@name <%= appName %>");
 		console.log("@version <%= version %>");
 		console.log("@description <%= description %>");
 		console.log("@author <%= author %>");

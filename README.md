@@ -50,7 +50,7 @@
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
 |[countWords](src/strings/countWords)|Counts words in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
-|[endsWith](src/strins/endsWith)|Returns true if string ends with substring (suffix).|
+|[endsWith](src/strings/endsWith)|Returns true if string ends with substring (suffix).|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
 |[pad](src/strings/pad#strings--pad)|Pad <code>str</code> on **both** sides to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
 |[padLeft](src/strings/pad#strings--padleft)|Pad <code>str</code> on **left** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|

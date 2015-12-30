@@ -1,7 +1,50 @@
+#jsessentials {
+	display: none;
+}
+
+#jsessentials + blockquote {
+	display: none;
+}
+
+.wrapper {
+	width: 100%;
+	padding-top: 70px;
+	background-color: #fff;
+}
+
+.header,
+.header .site {
+	background-color: #181d1f;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	box-sizing: border-box;
+	height: 70px;
+	padding-top: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+	color: #fff;
+	font-weight: normal;
+}
+
+.header blockquote {
+	color: #4183c4;
+}
+
 .footer {
 	clear: both;
-	border-top: 1px solid #dadada;
-	padding-top: 10px;
+	padding: 40px 0 20px 0;
+}
+
+.footer .site {
+	background-color: #fff;
 }
 
 .footer pre {
@@ -1668,6 +1711,7 @@ p.notification-settings label {
 	margin: 0 auto;
 	max-width: 960px;
 	padding: 0 15px;
+	background-color: #fff;
 }
 
 #header {
@@ -6050,7 +6094,7 @@ body {
 }
 
 body {
-	background-color: white;
+	background-color: #fff;
 	font: 13.34px helvetica, arial, freesans, clean, sans-serif;
 	*font-size: small;
 	line-height: 1.4;
@@ -15179,7 +15223,7 @@ ul.smallnav li a.selected .count {
 }
 
 #readme.announce {
-	margin: 1em 0;
+	margin: 0;
 }
 
 #readme.blob {
@@ -22702,10 +22746,11 @@ input.tree-finder-input {
 }
 
 .wikistyle pre code {
-	padding: 10px !important;
+	padding: 15px !important;
 	font-size: 14px!important;
 	/*background-color: #eee!important;*/
 	border: none!important;
+	border-radius: 2px;
 }
 
 .wikistyle code {

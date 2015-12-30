@@ -85,7 +85,6 @@ module.exports = function (grunt) {
 		console.log(chalk.blue("  | |___/______|___/___/\\___|_| |_|\\__|_|\\__,_|_|___/"));
 		console.log(chalk.blue(" _/ |"));
 		console.log(chalk.blue("|__/"));
-		console.log(chalk.magenta("@name ") + pkg.name);
         console.log(chalk.magenta("@version ") + pkg.version);
         console.log(chalk.magenta("@description ") + pkg.description);
         console.log(chalk.magenta("@author ") + pkg.author);
