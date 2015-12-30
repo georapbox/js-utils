@@ -122,6 +122,7 @@
 |[isRegexp](src/is/isRegexp)|Checks if a "value" is a regular expression.|
 |[isString](src/is/isString)|Checks if a "value" is a string.|
 |[isTrue](src/is/isTrue)|Checks if a "value" is true (strict equality).|
+|[isTruthy](src/is/isTruthy)|Checks if a "value" is truthy.|
 |[isUndefined](src/is/isUndefined)|Checks if a "value" is undefined.|
 
 
