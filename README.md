@@ -110,6 +110,7 @@
 |[isEmpty](src/is/isEmpty)|Checks if a "value" is empty.|
 |[isEven](src/is/isEven)|Checks if a number is even.|
 |[isExisty](src/is/isExisty)|Checks if a "value" is existy (Not null or undefined).|
+|[isFalse](src/is/isFalse)|Checks if a "value" is false (strict equality).|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNonExisty](src/is/isNonExisty)|Checks if a "value" is non existy (null or undefined).|
@@ -120,6 +121,7 @@
 |[isPlainObject](src/is/isPlainObject)|Checks if a "value" is an object created by the <code>Object</code> constructor.|
 |[isRegexp](src/is/isRegexp)|Checks if a "value" is a regular expression.|
 |[isString](src/is/isString)|Checks if a "value" is a string.|
+|[isTrue](src/is/isTrue)|Checks if a "value" is true (strict equality).|
 |[isUndefined](src/is/isUndefined)|Checks if a "value" is undefined.|
 
 
