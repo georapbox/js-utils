@@ -44,6 +44,8 @@ module.exports = function (config) {
         ],
 
         htmlReporter: {
+            pageTitle: 'jsEssentials',
+            subPageTitle: 'Unit Test Results',
             outputFile: 'tests-reporter/index.html'
         },
 
