@@ -17,9 +17,7 @@
     /* -------------------------------------------------------------------------- */
 
     var ARRAY = '[object Array]',
-        STRING = '[object String]',
-        FUNCTION = '[object Function]',
-        NUMBER = '[object Number]';
+        FUNCTION = '[object Function]';
 
     var toString = Object.prototype.toString,
         arraySlice = Array.prototype.slice,
@@ -30,11 +28,7 @@
     }
 
     function isArray(value) {
-        return value &&
-            typeof value === 'object' &&
-            typeof value.length === 'number' &&
-            toString.call(value) === ARRAY ||
-            false;
+        return !!value && toString.call(value) === ARRAY;
     }
 
     function isPlainObject(value) {
