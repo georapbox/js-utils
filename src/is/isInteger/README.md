@@ -22,6 +22,6 @@ isInteger(0.1);               // => false
 isInteger(Math.PI);           // => false
 isInteger(NaN);               // => false
 isInteger('10');              // => false
-isInteger(Math.MAX_VALUE);    // => false
+isInteger(Number.MAX_VALUE);    // => false
 isInteger(Infinity);          // => false
 ```
