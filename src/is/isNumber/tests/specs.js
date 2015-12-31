@@ -12,6 +12,10 @@
             expect(isNumber(new Date().getTime())).toEqual(true);
         });
 
+        it('isNumber(NaN) should return false', function () {
+            expect(isNumber(NaN)).toEqual(false);
+        });
+
         it('isNumber(\'302\') should return false', function () {
             expect(isNumber('302')).toEqual(false);
         });
