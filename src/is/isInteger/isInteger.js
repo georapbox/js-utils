@@ -1,0 +1,13 @@
+/**
+ * Checks if 'value' is an integer number.
+ * @param {*} value The value to check.
+ * @return {Boolean} If the target value is an integer, returns true, otherwise returns false.
+ *         If the value is NaN or infinite, returns false.
+ */
+function isInteger(value) {
+    'use strict';
+    return (Object.prototype.toString.call(value) === '[object Number]' ||
+        typeof value === 'number') &&
+        isFinite(value) &&
+        Math.floor(value) === value;
+}
