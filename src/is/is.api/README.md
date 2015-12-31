@@ -10,7 +10,8 @@ This gives the ability to add as many functions as one desires according to the 
 ## API default public methods
 
 - **extend(object)**<br>
-Use this method to include any functions to be used with the API. **NOTE** Use only functions that return a ```boolean``` for the API to work properly.
+Use this method to include any functions to be used with the API.<br>
+**NOTE** Use only functions that return a ```boolean``` for the API to work properly.
 
 - **not**<br>
 Calls the predicate function and reverses the sense of the predicate result
