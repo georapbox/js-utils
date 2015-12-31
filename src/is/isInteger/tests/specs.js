@@ -32,10 +32,6 @@
             expect(isInteger('10')).toEqual(false);
         });
 
-        it('isInteger(Number.MAX_VALUE) should return false', function () {
-            expect(isInteger(Number.MAX_VALUE)).toEqual(false);
-        });
-
         it('isInteger(Infinite) should return false', function () {
             expect(isInteger(Infinity)).toEqual(false);
         });

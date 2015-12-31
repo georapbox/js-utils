@@ -8,6 +8,6 @@ function isInteger(value) {
     'use strict';
     return (Object.prototype.toString.call(value) === '[object Number]' ||
         typeof value === 'number') &&
-        isFinite(value) &&
+        value !== Infinity && value !== -Infinity &&
         Math.floor(value) === value;
 }
