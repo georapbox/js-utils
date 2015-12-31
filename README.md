@@ -101,6 +101,10 @@
 
 
 #### is
+
+[is.api](src/is/is.api) - A minimal API for the ```is``` functions below that provides ```not```, ```all``` and ```any``` interfaces. <br>
+<small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
+
 |Method|Description|
 |------|-----------|
 |[isArray](src/is/isArray)|Checks if a "value" is an array.|
