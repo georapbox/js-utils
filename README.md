@@ -113,6 +113,7 @@
 |[isFalse](src/is/isFalse)|Checks if a "value" is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if a "value" is falsy.|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
+|[isHexadecimal](src/is/isHexadecimal)|Checks if a "value" matches a hexadecimal regular expression.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNonExisty](src/is/isNonExisty)|Checks if a "value" is non existy (null or undefined).|
 |[isNull](src/is/isNull)|Checks if a "value" is null.|
