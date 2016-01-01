@@ -3,7 +3,7 @@
  * @param {*} value The 'value' to check.
  * @returns {Boolean} Returns true if value is a finite number, else false.
  */
-function isFinite(value) {
+function isFiniteNum(value) {
     'use strict';
     var toString = Object.prototype.toString,
         NUMBER = '[object Number]';

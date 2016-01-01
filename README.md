@@ -116,7 +116,7 @@
 |[isExisty](src/is/isExisty)|Checks if a "value" is existy (Not null or undefined).|
 |[isFalse](src/is/isFalse)|Checks if a "value" is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if a "value" is falsy.|
-|[isFinite](src/is/isFinite)|Checks if a "value" is a finit number.|
+|[isFiniteNum](src/is/isFiniteNum)|Checks if a "value" is a finit number.|
 |[isFunction](src/is/isFunction)|Checks if "value" is a function.|
 |[isHexadecimal](src/is/isHexadecimal)|Checks if a "value" matches a hexadecimal regular expression.|
 |[isHexColor](src/is/isHexColor)|Checks if a "value" matches a hexadecimal color regular expression.|
