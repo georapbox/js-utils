@@ -13,7 +13,7 @@
 <body>
 	<div class="header">
 		<div class="site">
-			<h1><%= appName %></h1>
+			<h1><%= appName %> <small>(v<%= version %>)</small></h1>
 			<blockquote>Not yet another Javascript library</blockquote>
 		</div>
 	</div>
@@ -25,7 +25,7 @@
 					<div class="frame frame-center">
 						<div id="readme" class="announce">
 							<div id="markdown" class="wikistyle">
-								<% if (showAppName === true) { %>
+								<% if (innerPage === true) { %>
 									<a href="../../../index.html">back</a>
 								<% } %>
 								<%= document %>
@@ -58,12 +58,7 @@
 @repository <%= repository %>
 @license <%= license %>
 </pre>
-			<p>
-				<!-- Author: <a href="<%= homepage %>"><%= author %></a>
-				<br/>
-				Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license. -->
-
-			</p>
+			<p><a href="CHANGELOG.html">CHANGELOG</a></p>
 		</div>
 	</div>
 

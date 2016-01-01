@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 						basename: function (src) {
 							return src.substr(src.lastIndexOf(path.sep) + 1);
 						},
+                        innerPage: false,
 						path: '../docs-layout',
 						author: '<%= pkg.author %>',
 						appName: '<%= pkg.name %>',
@@ -24,13 +25,15 @@ module.exports = function (grunt) {
                         description: '<%= pkg.description %>',
 						homepage: "'<%= pkg.homepage %>'",
                         repository: "<%= pkg.repository.url %>",
-                        license: "<%= pkg.license %>",
-						showAppName: false
+                        license: "<%= pkg.license %>"
 					}
 				},
 				files: [{
 					src: 'README.md',
 					dest: 'docs/index.html'
+				},{
+					src: 'CHANGELOG.md',
+					dest: 'docs/CHANGELOG.html'
 				}]
 			},
     		multiple_files: {
@@ -41,6 +44,7 @@ module.exports = function (grunt) {
 						basename: function (src) {
 							return src.substr(src.lastIndexOf(path.sep) + 1);
 						},
+                        innerPage: true,
 						path: '../../../../docs-layout',
 						author: '<%= pkg.author %>',
 						appName: '<%= pkg.name %>',
@@ -48,8 +52,7 @@ module.exports = function (grunt) {
                         description: '<%= pkg.description %>',
 						homepage: "'<%= pkg.homepage %>'",
                         repository: "<%= pkg.repository.url %>",
-                        license: "<%= pkg.license %>",
-						showAppName: true
+                        license: "<%= pkg.license %>"
 					}
 				},
 				files: [{

@@ -34,6 +34,11 @@
 	font-weight: normal;
 }
 
+.header h1 small {
+	font-size: 16px;
+	opacity: 0.7;
+}
+
 .header blockquote {
 	color: #4183c4;
 }
