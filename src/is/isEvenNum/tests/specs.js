@@ -1,19 +1,19 @@
-/*global isEven*/
+/*global isEvenNum*/
 
 (function () {
     'use strict';
 
-    describe('is/isEven', function () {
+    describe('is/isEvenNum', function () {
         it('expects 2 to be even', function () {
-            expect(isEven(2)).toBe(true);
+            expect(isEvenNum(2)).toBe(true);
         });
 
 		it('expects 0 to be even', function () {
-            expect(isEven(0)).toBe(true);
+            expect(isEvenNum(0)).toBe(true);
         });
 
 		it('expects 3 not to be even', function () {
-            expect(isEven(3)).toBe(false);
+            expect(isEvenNum(3)).toBe(false);
         });
     });
 }());

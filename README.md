@@ -112,7 +112,7 @@
 |[isDate](src/is/isDate)|Checks if a "value" is a date.|
 |[isElement](src/is/isElement)|Checks if "value" is a DOM element.|
 |[isEmpty](src/is/isEmpty)|Checks if a "value" is empty.|
-|[isEven](src/is/isEven)|Checks if a number is even.|
+|[isEvenNum](src/is/isEvenNum)|Checks if a number is even.|
 |[isExisty](src/is/isExisty)|Checks if a "value" is existy (Not null or undefined).|
 |[isFalse](src/is/isFalse)|Checks if a "value" is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if a "value" is falsy.|
@@ -127,7 +127,7 @@
 |[isNull](src/is/isNull)|Checks if a "value" is null.|
 |[isNumber](src/is/isNumber)|Checks if a "value" is a number.|
 |[isObject](src/is/isObject)|Checks if a "value" is the language type of <code>Object</code>.|
-|[isOdd](src/is/isOdd)|Checks if a number is odd.|
+|[isOddNum](src/is/isOddNum)|Checks if a number is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if a "value" is an object created by the <code>Object</code> constructor.|
 |[isRegexp](src/is/isRegexp)|Checks if a "value" is a regular expression.|
 |[isString](src/is/isString)|Checks if a "value" is a string.|
