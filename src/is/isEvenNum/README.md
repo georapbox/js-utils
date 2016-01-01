@@ -6,7 +6,7 @@ isEvenNum(value)
 
 > Checks if a number is even.
 
-- <code>value {number}</code>
+- <code>value {Number}</code>
 
 The number to check if even.
 

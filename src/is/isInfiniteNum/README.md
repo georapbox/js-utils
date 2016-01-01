@@ -8,9 +8,9 @@ isInfiniteNum(value)
 
 > Returns true if 'value' is an infinite number, else returns false.
 
-- <code>value {\*}</code>
+- <code>value {Number}</code>
 
-The value to check.
+The number to check if infinite.
 
 #### Example
 ```js
@@ -19,7 +19,7 @@ isInfiniteNum(NaN);       // => false
 isInfiniteNum(-Infinity); // => true
 isInfiniteNum(0);         // => false
 isInfiniteNum(2e64);      // => false
-isInfiniteNum(null);      // => false
-isInfiniteNum(undefined); // => false
-isInfiniteNum('0');       // => false
+isInfiniteNum(null);      // => throws TypeError
+isInfiniteNum(undefined); // => throws TypeError
+isInfiniteNum('0');       // => throws TypeError
 ```

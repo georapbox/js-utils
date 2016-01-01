@@ -8,9 +8,9 @@ isFiniteNum(value)
 
 > Returns true if 'value' is a finite number, else returns false.
 
-- <code>value {\*}</code>
+- <code>value {Number}</code>
 
-The value to check.
+The number to check if finite.
 
 #### Example
 ```js
@@ -19,7 +19,7 @@ isFiniteNum(NaN);       // => false
 isFiniteNum(-Infinity); // => false
 isFiniteNum(0);         // => true
 isFiniteNum(2e64);      // => true
-isFiniteNum(null);      // => false
-isFiniteNum(undefined); // => false
-isFiniteNum('0');       // => false
+isFiniteNum(null);      // => throws TypeError
+isFiniteNum(undefined); // => throws TypeError
+isFiniteNum('0');       // => throws TypeError
 ```

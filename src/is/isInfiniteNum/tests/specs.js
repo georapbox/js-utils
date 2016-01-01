@@ -20,16 +20,22 @@
             expect(isInfiniteNum(0)).toBe(false);
         });
 
-        it('isInfiniteNum("0") should return false', function () {
-            expect(isInfiniteNum('0')).toBe(false);
+        it('isInfiniteNum("0") should throw TypeError', function () {
+            expect(function () {
+                return isInfiniteNum('0');
+            }).toThrow();
         });
 
-        it('isInfiniteNum(null) should return false', function () {
-            expect(isInfiniteNum(null)).toBe(false);
+        it('isInfiniteNum(null) should throw TypeError', function () {
+            expect(function () {
+                return isInfiniteNum(null);
+            }).toThrow();
         });
 
-        it('isInfiniteNum(undefined) should return false', function () {
-            expect(isInfiniteNum(undefined)).toBe(false);
+        it('isInfiniteNum(undefined) should throw TypeError', function () {
+            expect(function () {
+                return isInfiniteNum(undefined);
+            }).toThrow();
         });
 
         it('isInfiniteNum(2e64) should return false', function () {

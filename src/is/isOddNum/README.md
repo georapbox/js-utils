@@ -6,7 +6,7 @@ isOddNum(value)
 
 > Checks if a number is odd.
 
-- <code>value {number}</code>
+- <code>value {Number}</code>
 
 The number to check if odd.
 
