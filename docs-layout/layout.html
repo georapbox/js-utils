@@ -20,19 +20,11 @@
 
 	<div class="wrapper">
 		<div class="site">
-			<div id="slider">
-				<div class="frames">
-					<div class="frame frame-center">
-						<div id="readme" class="announce">
-							<div id="markdown" class="wikistyle">
-								<% if (innerPage === true) { %>
-									<a href="../../../index.html">back</a>
-								<% } %>
-								<%= document %>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="wikistyle">
+				<% if (innerPage === true) { %>
+					<p><a href="../../../index.html"><i class="icon-left-open"></i>BACK</a></p>
+				<% } %>
+				<%= document %>
 			</div>
 		</div>
 	</div>
@@ -49,8 +41,8 @@
  _/ |
 |__/
 </pre>
-<pre>
 
+<pre style="font-size:13px;">
 @version <%= version %>
 @description <%= description %>
 @author <%= author %>
