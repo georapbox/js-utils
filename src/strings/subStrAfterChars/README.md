@@ -19,7 +19,7 @@ One or more characters to use for the lookup.
 
 - <code>[last] {boolean}</code>
 
-If <code>true</code> or any truthy value, will lookup for the lsat occurence of the character or sequence of characters specified.
+If <code>true</code> or any truthy value, will lookup for the last occurence of the character or sequence of characters specified.
 Default value is <code>undefined</code>.
 
 #### Example
