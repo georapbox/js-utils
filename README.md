@@ -1,4 +1,4 @@
-# jsEssentials
+# jsEssentials [![Build Status](https://travis-ci.org/georapbox/jsEssentials.svg?branch=master)](https://travis-ci.org/georapbox/jsEssentials) [![Dependencies](https://david-dm.org/georapbox/jsEssentials.svg?theme=shields.io)](https://david-dm.org/georapbox/jsEssentials) [![devDependency Status](https://david-dm.org/georapbox/jsEssentials/dev-status.svg)](https://david-dm.org/georapbox/jsEssentials#info=devDependencies)
 > Not yet another Javascript library.
 
 **jsEssentials** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from, for everyday tasks.
