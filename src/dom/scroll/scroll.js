@@ -3,7 +3,9 @@
  */
 (function (name, context, definition) {
     'use strict';
-    if (typeof module !== 'undefined' && module.exports) {
+    if (typeof define === 'function' && define.amd) {
+        define(definition);
+    } else if (typeof module !== 'undefined' && module.exports) {
         module.exports = definition();
     } else {
         context[name] = definition();
@@ -114,7 +116,7 @@
         easeInOutQuint: function (t) { // acceleration until halfway, then deceleration
             return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
         }
-    }; 
+    };
 
     /**
      * http://paulirish.com/2011/requestanimationframe-for-smart-animating/
