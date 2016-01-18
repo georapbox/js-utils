@@ -1,16 +1,15 @@
-# CHANGELOG
+# v1.3.0
+- Add <code>stripPunctuation</code> function to **Strings** category.
+- Add <code>lines</code> function to **Strings** category.
+
+# v1.2.0
+- Rename <code>isOdd</code>, <code>isEven</code>, <code>isFinite</code> and <code>isInfinite</code> to <code>isOddNum</code>, <code>isEvenNum</code>, <code>isFiniteNum</code> and <code>isInfiniteNum</code> accordingly.
+
+- Refactor <code>isOddNum</code>, <code>isEvenNum</code>, <code>isFiniteNum</code> and <code>isInfiniteNum</code> to accept only numbers as arguments. If not, will throw TypeError.
+
+- Refactor <code>isNumber</code> to return true if <code>NaN</code> is passed, as in Javascript NaN is considered to be a number. (<code>typeof NaN === 'number'</code> resolves to true)
 
 
-### v1.2.0
-- Rename ```isOdd```, ```isEven```, ```isFinite``` and ```isInfinite``` to ```isOddNum```, ```isEvenNum```,
-```isFiniteNum``` and ```isInfiniteNum``` accordingly.
-
-- Refactor ```isOddNum```, ```isEvenNum```, ```isFiniteNum``` and ```isInfiniteNum``` to accept only numbers as arguments.
-If not, will throw TypeError.
-
-- Refactor ```isNumber``` to return true if ```NaN``` is passed, as in Javascript NaN is considered to be a number. (```typeof NaN === 'number'``` resolves to true)
-
-
-### v1.1.0
-- Add ```is.api``` to provide a more functional approach while working with ```is``` functions.
+# v1.1.0
+- Add <code>is.api<code> to provide a more functional approach while working with <code>is</code> functions.
 - Add more functions to **"is"** category.

@@ -55,6 +55,7 @@
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
 |[endsWith](src/strings/endsWith)|Returns true if string ends with substring (suffix).|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
+|[lines](src/strings/lines)|Returns an array with the lines of a a string.|
 |[pad](src/strings/pad#strings--pad)|Pad <code>str</code> on **both** sides to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
 |[padLeft](src/strings/pad#strings--padleft)|Pad <code>str</code> on **left** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
 |[padRight](src/strings/pad#strings--padright)|Pad <code>str</code> on **right** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
@@ -65,6 +66,7 @@
 |[replaceAll](src/strings/replaceAll)|Returns a new string with all occurrences of subStr replaced with replaceStr.
 |[strip](src/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
 |[stripHTML](src/strings/stripHTML)|Returns a new string with all HTML tags removed.|
+|[stripPunctuation](src/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|
 |[subStr](src/strings/subStr)|Returns a substring denoted by n (positive or negative) characters.|
 |[subStrAfterChars](src/strings/subStrAfterChars)|Returns a substring after a specific sequence of character(s).|
 |[supplant](src/strings/supplant)|supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.|
