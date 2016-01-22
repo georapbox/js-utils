@@ -6,13 +6,9 @@
  */
 function removeSuffix(str, suffix) {
     'use strict';
-
+    
     var strLen = str.length,
         suffixLen = suffix.length;
 
-    if (str.indexOf(suffix, strLen - suffixLen) !== -1) {
-        return str.slice(0, strLen - suffixLen);
-    } else {
-        return str;
-    }
+    return str.indexOf(suffix, strLen - suffixLen) !== -1 ? str.slice(0, strLen - suffixLen) : str;
 }
