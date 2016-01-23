@@ -142,7 +142,7 @@
 ### HTML5 Canvas
 |Function|Description|
 |--------|-----------|
-|CanvasContext|A class that provides jQuery-style chained access to 2D context methods and properties.|
+|[CanvasContext](src/canvas/canvasContext)|A class that provides jQuery-style chained access to 2D context methods and properties.|
 
 
 #### Misc
@@ -151,6 +151,7 @@
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[curry](src/misc/curry)|Returns a curried equivalent of the provided function.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
+
 
 ## Installation
 - To clone the repository, run: <code>git clone https://github.com/georapbox/jsEssentials.git</code>
