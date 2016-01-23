@@ -12,8 +12,8 @@
 
 #### Arrays
 
-|Method|Description|
-|------|-----------|
+|Function|Description|
+|--------|-----------|
 |[compact](src/arrays/compact)|Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.|
 |[diff](src/arrays/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
 |[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
@@ -41,8 +41,8 @@
 
 
 #### Strings
-|Method|Description|
-|------|-----------|
+|Function|Description|
+|--------|-----------|
 |[beginsWith](src/strings/beginsWith)|Returns true if string begins with substring (prefix).|
 |[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
@@ -77,8 +77,8 @@
 
 
 #### Numbers
-|Method|Description|
-|------|-----------|
+|Function|Description|
+|--------|-----------|
 |[average](src/numbers/average)|Calculates the average of a set of numbers.|
 |[max](src/numbers/max)|Returns the largest of zero or more numbers.|
 |[min](src/numbers/min)|Returns the smallest of zero or more numbers.|
@@ -87,20 +87,11 @@
 
 
 #### Objects
-|Method|Description|
-|------|-----------|
+|Function|Description|
+|--------|-----------|
 |[extend](src/objects/extend)|Merges (deep copy) the contents of two or more objects together into the first object.|
 |[forIn](src/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[forOwn](src/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
-
-
-#### DOM
-|Method|Description|
-|------|-----------|
-|[preloadImages](src/dom/preloadImages)|Asynchronsouly load images to browser so that can be cached.|
-|[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
-|[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
-|[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
 
 #### is
@@ -108,8 +99,8 @@
 [is.api](src/is/is.api) - A minimal API for the ```is``` functions below that provides ```not```, ```all``` and ```any``` interfaces. <br>
 <small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
 
-|Method|Description|
-|------|-----------|
+|Function|Description|
+|--------|-----------|
 |[isArray](src/is/isArray)|Checks if a "value" is an array.|
 |[isBoolean](src/is/isBoolean)|Checks if a "value" is a boolean value.|
 |[isDate](src/is/isDate)|Checks if a "value" is a date.|
@@ -139,9 +130,24 @@
 |[isUndefined](src/is/isUndefined)|Checks if a "value" is undefined.|
 
 
+#### DOM
+|Function|Description|
+|--------|-----------|
+|[preloadImages](src/dom/preloadImages)|Asynchronsouly load images to browser so that can be cached.|
+|[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
+|[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
+|[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
+
+
+### HTML5 Canvas
+|Function|Description|
+|--------|-----------|
+|CanvasContext|A class that provides jQuery-style chained access to 2D context methods and properties.|
+
+
 #### Misc
-|Method|Description|
-|------|-----------|
+|Function|Description|
+|--------|-----------|
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[curry](src/misc/curry)|Returns a curried equivalent of the provided function.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
