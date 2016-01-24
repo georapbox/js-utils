@@ -143,6 +143,7 @@
 |Function|Description|
 |--------|-----------|
 |[CanvasContext](src/canvas/canvasContext)|A class that provides jQuery-style chained access to 2D context methods and properties.|
+|[convertImageToBase64](src/canvas/convertImageToBase64)|Converts an image's content to Data URI scheme.|
 
 
 #### Misc
