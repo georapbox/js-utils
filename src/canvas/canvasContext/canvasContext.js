@@ -36,6 +36,7 @@
     /**
      * Creates the chainable methods and properties
      * for each canvas method or property accordingly.
+     * @this {CanvasContext}
      */
     CanvasContext.setup = function () {
         var methods = [
