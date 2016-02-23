@@ -5,6 +5,6 @@ branches:
   only:
     - master
 before_script:
-  - npm install
+    - npm install
 script:
     - npm run test
