@@ -1,4 +1,5 @@
 # v1.3.2
+- Add <code>compose</code> function to **Misc** category.
 - Add <code>isEventsupported</code> function to **DOM** category.
 
 # v1.3.1

@@ -4,9 +4,7 @@
 
 > Not yet another Javascript library.
 
-**jsEssentials** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from, for everyday tasks.
-
-*Because sometimes we don't need a whole library to get the job done.*
+**jsEssentials** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from and get the job done.
 
 ### Table of contents
 
@@ -151,6 +149,7 @@
 |Function|Description|
 |--------|-----------|
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
+|[compose](src/misc/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
 |[curry](src/misc/curry)|Returns a curried equivalent of the provided function.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
