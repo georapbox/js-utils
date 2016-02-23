@@ -9,7 +9,6 @@
         "catch"
     ],
     "validateIndentation": 4,
-    // "validateQuoteMarks": "'",
     "requireSpacesInForStatement": true,
     "requireParenthesesAroundIIFE": true,
     "requireLineFeedAtFileEnd": true,
@@ -29,6 +28,7 @@
     ],
     "requireSpaceAfterBinaryOperators": true,
     "disallowTrailingComma": true,
+    "requireTrailingComma": false,
     "requireDotNotation": true,
     "disallowYodaConditions": true,
     "disallowNewlineBeforeBlockStatements": true,
@@ -70,5 +70,9 @@
     ],
     "disallowMultipleLineBreaks": true,
     "disallowSpacesInsideObjectBrackets": "all",
-    "disallowSpacesInsideArrayBrackets": "all"
+    "disallowSpacesInsideArrayBrackets": "all",
+    "disallowMultipleVarDecl": false,
+    "maximumLineLength": false,
+    "requirePaddingNewLinesAfterBlocks": false,
+    "disallowQuotedKeysInObjects": false
 }
