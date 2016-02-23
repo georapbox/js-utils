@@ -15,7 +15,7 @@ The name of the event to check if is supported.
 An HTML node to check if an event is supported on.
 
 Use it if you need to check for an event on a specific element.
-Some events are supported on specific elements, eg `resize` is supported on `window` but not on a `div` element.
+Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.
 
 If omited the results are cached and next calls with the same `eventName` will return the results from cache.
 

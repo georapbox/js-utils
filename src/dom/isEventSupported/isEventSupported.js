@@ -16,7 +16,7 @@ var isEventSupported = (function (win, doc, undefined) {
      * Checks if an event is supported in a browser environment.
      * @param {String} eventName The event to check if is supported.
      * @param {Object} [element] An HTML node to check if an event is supported on.
-     *        Some events are supported on specific elements, eg `resize` is supported on `window` but not on a `div` element.
+     *        Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.
      *        If omited the results are cached and next calls with the same `eventName` will return the results from cache.
      * @return {Boolean} True if event is supported, else false.
      */
