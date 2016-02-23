@@ -1,4 +1,7 @@
-# v1.4.0
+# v1.3.2
+- Add <code>isEventsupported</code> function to **DOM** category.
+
+# v1.3.1
 - Add <code>CanvasContext</code> class to **HTML5 Canvas** category.
 - Add <code>convertImageToBase64</code> function to **HTML5 Canvas** category.
 
