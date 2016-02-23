@@ -134,6 +134,7 @@
 |Function|Description|
 |--------|-----------|
 |[preloadImages](src/dom/preloadImages)|Asynchronsouly load images to browser so that can be cached.|
+|[isEventSupported](src/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
 |[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
 |[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
