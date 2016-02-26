@@ -4,22 +4,20 @@
 shuffle(array)
 ```
 
-> Randomize array element order in-place, using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+**NOTE:** Prior to v1.3.3, `shuffle` used to process and alter the original array. Now returns a new copy of the original source array leaving the last one intact for purity.
 
-> **NOTE:** Although it does return the array for convenience, the shuffle is done in-place. So if you do not want to modify the original array, make a copy of it first with ```.slice(0)```.
+> Returns a new array with its elements' order randomeized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.
 
 - <code>array {array}</code>
 
-The array to shuffle.
+The original array to shuffle.
 
 #### Example
 ```js
 var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
-// Modify the original array
-shuffle(arr); // => [ "b", "f", "h", "e", "d", "c", "g", "a" ]
 
-// Copy the array
-var newArr = arr.slice(0);
-shuffle(newArr);
+var shuffled = shuffle(arr);
+console.log(shuffled); // => [ 'b', 'f', 'h', 'e', 'd', 'c', 'g', 'a' ]
+console.log(arr);      // => ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 ```

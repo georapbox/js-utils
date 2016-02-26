@@ -1,26 +1,28 @@
 /**
- * Randomize array element order in-place.
+ * Randomize an array elements' order.
  * Using the Fisher-Yates (aka Knuth) Shuffle algorithm.
  * Nice explanation and visualization [http://bost.ocks.org/mike/shuffle/]
  * @param {array} array The array to shuffle.
+ * @return {array} A new array (copy of the original) with its elements randomised.
  */
 function shuffle(array) {
     'use strict';
 
-    var currentIndex = array.length,
+    var newArray = array.slice(0), // Ensure that original array stays intact.
+        currentIndex = newArray.length,
         temporaryValue,
         randomIndex;
 
-    // While there remain elements to shuffle...
+    // While remaining elements to shuffle...
     while (currentIndex) {
         // Pick a remaining element...
         randomIndex = (Math.random() * currentIndex--) | 0;
 
         // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        temporaryValue = newArray[currentIndex];
+        newArray[currentIndex] = newArray[randomIndex];
+        newArray[randomIndex] = temporaryValue;
     }
 
-    return array;
+    return newArray;
 }
