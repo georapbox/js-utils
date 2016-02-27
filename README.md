@@ -88,6 +88,7 @@
 |[extend](src/objects/extend)|Merges (deep copy) the contents of two or more objects together into the first object.|
 |[forIn](src/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[forOwn](src/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
+|[container](src/objects/container)|Acts as a wrapper/container around the `value` passed in.|
 
 
 #### is
@@ -148,7 +149,6 @@
 |--------|-----------|
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[compose](src/misc/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
-|[container](src/misc/container)|Acts as a wrapper/container around the `value` passed in.|
 |[curry](src/misc/curry)|Returns a curried equivalent of the provided function.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 

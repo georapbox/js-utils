@@ -1,5 +1,5 @@
 # v1.3.3
-- Add `container` in **Misc** category.
+- Add `container` in **Objects** category.
 - Refactor `shuffle` in **Arrays** category to return a copy of the original array and not shuffle in place.
 Altering the original source made the function "impure".
 
