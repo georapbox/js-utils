@@ -150,6 +150,7 @@
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[compose](src/misc/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
 |[curry](src/misc/curry)|Returns a curried equivalent of the provided function.|
+|[partial](src/misc/partial)|Generates a function that has one or more arguments "bound" or partially applied.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
 
