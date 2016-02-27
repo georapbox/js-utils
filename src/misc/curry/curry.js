@@ -2,8 +2,8 @@
  * Transforms a function of N arguments in such a way that it can
  * be called as a chain of N functions each with a single argument.
  * @param {Function} fn The function to curry.
- * @param {Number} [n] The number of arguments in case that the
- *        function's arity cannot be automatically determined.
+ * @param {Number} [n] The number of expected arguments in case that
+ *        the function's arity cannot be automatically determined.
  * @return {function} A new, curried function.
  */
 function curry(fn, n) {

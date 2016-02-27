@@ -1,13 +1,18 @@
 ### [Misc](../) > curry
 
 ```js
-curry(fn)
+curry(fn, [, n])
 ```
-> Returns a curried equivalent of the provided function.
+> Transforms a function of N arguments in such a way that it can
+be called as a chain of N functions each with a single argument.
 
-- <code>fn {function}</code>
+- <code>fn {Function}</code>
 
 The function to curry.
+
+- <code>[n] {Number}</code>
+
+The number of expected arguments in case that the function's arity cannot be automatically determined.
 
 #### Example
 ```js
@@ -46,7 +51,7 @@ The function to curry.
         return a + b + c;
     };
 
-    var mySum = curry(sum),
+    var mySum = curry(sum, 3),
         a = mySum(10),
         b = a(20);
 
