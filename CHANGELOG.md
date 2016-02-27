@@ -1,6 +1,7 @@
 # v1.3.3
 - Add `container` in **Objects** category.
 - Add `partial` in **Misc** category.
+- Minor refactor to `curry` function to accept an optional argument specifying the number of expected arguments in cases that the function's arity cannot be automatically determined.
 - Refactor `shuffle` in **Arrays** category to return a copy of the original array and not shuffle in place.
 Altering the original source made the function "impure".
 
