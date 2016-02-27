@@ -23,11 +23,31 @@ The function that the value is passed in.
 #### Example(s)
 
 ```js
-var first = function (item) {
-    return item[0];
-};
+var
+    getFirst = function (item) {
+        return item[0];
+    },
+    capitalize = function (item) {
+        return item.toUpperCase();
+    },
+    reverse = function (arr) {
+        return arr.reverse();
+    };
 
-var capitalize = function (item) {
-    return item.toUpperCase();
-};
+var c = container(['a', 'b', 'c']),      // => {val: ['a', 'b', 'c']}
+    reversed = c.map(reverse),           // => {val: ['c', 'b', 'a']}
+    first = reversed.map(getFirst),      // => {val: 'c'}
+    capital = first.map(capitalize),     // => {val: 'C'}
+    match = capital.map(function (val) {
+        return val.match(/cat/gi);
+    });                                  // => {val: null}
+
+// The above could be also written like this:
+container(['a', 'b', 'c'])
+    .map(reverse)
+    .map(getFirst)
+    .map(capitalize)
+    .map(function (val) {
+        return val.match(/cat/gi);
+    });
 ```
