@@ -9,7 +9,8 @@
 function curry(fn, n) {
     'use strict';
 
-    var initialArguments = [].slice.call(arguments, 2),
+    var slice = Array.prototype.slice,
+        initialArguments = slice.call(arguments, 2),
         argumentsLength = typeof n !== 'number' ? fn.length : n;
 
     function curried(args) {
@@ -18,7 +19,7 @@ function curry(fn, n) {
         }
 
         return function () {
-            return curried(args.concat([].slice.call(arguments)));
+            return curried(args.concat(slice.call(arguments)));
         };
     }
 
