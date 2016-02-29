@@ -22,6 +22,7 @@
 |[sort](src/arrays/sort)|Sorts an **array of primitive values**.|
 |[sortBy](src/arrays/sortBy)|Sorts an **array of objects** by a property.|
 |[uniq](src/arrays/uniq)|Removes duplicate primitive values from an array.|
+|[zip](src/arrays/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 
 
 |[Polyfills](src/arrays/polyfills) - Collection of array polyfills.|Description|

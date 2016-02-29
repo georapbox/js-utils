@@ -1,3 +1,7 @@
+# v1.3.4
+- Add `zip` in **Arrays** category.
+
+
 # v1.3.3
 - Add `container` in **Objects** category.
 - Add `partial` in **Misc** category.
