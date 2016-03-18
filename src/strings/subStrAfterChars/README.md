@@ -9,15 +9,15 @@ subStrAfterChars(str, chars [, last])
 > By default looks for the first occurrence of this sequence.
 > If the character or sequence of characters not found, returns the initial string.
 
-- <code>str {string}</code>
+- <code>str {String}</code>
 
 The initial string to process.
 
-- <code>chars {string}</code>
+- <code>chars {String}</code>
 
 One or more characters to use for the lookup.
 
-- <code>[last] {boolean}</code>
+- <code>[last] {Boolean}</code>
 
 If <code>true</code> or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified.
 Default value is <code>undefined</code>.
