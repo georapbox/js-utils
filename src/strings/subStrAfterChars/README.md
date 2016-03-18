@@ -6,7 +6,7 @@ subStrAfterChars(str, chars [, last])
 
 > Returns a substring after a specific sequence of character(s).
 
-> By default looks for the first occuerence of this sequence.
+> By default looks for the first occurrence of this sequence.
 > If the character or sequence of characters not found, returns the initial string.
 
 - <code>str {string}</code>
@@ -19,7 +19,7 @@ One or more characters to use for the lookup.
 
 - <code>[last] {boolean}</code>
 
-If <code>true</code> or any truthy value, will lookup for the last occurence of the character or sequence of characters specified.
+If <code>true</code> or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified.
 Default value is <code>undefined</code>.
 
 #### Example
