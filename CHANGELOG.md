@@ -1,3 +1,7 @@
+# v1.3.5
+- Add `subStrBeforeChars` in **Strings** category.
+
+
 # v1.3.4
 - Add `zip` in **Arrays** category.
 
