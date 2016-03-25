@@ -1,4 +1,8 @@
 # v1.3.5
+- Add `inRange` in **Numbers** category.
+
+
+# v1.3.5
 - Add `subStrBeforeChars` in **Strings** category.
 
 

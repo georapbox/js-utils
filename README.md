@@ -78,6 +78,7 @@
 |Function|Description|
 |--------|-----------|
 |[average](src/numbers/average)|Calculates the average of a set of numbers.|
+|[inRange](src/numbers/inRange)|Checks if a number is between start and up to but not including, end.|
 |[max](src/numbers/max)|Returns the largest of zero or more numbers.|
 |[min](src/numbers/min)|Returns the smallest of zero or more numbers.|
 |[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.|
