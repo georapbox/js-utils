@@ -10,6 +10,7 @@
 
 |Function|Description|
 |--------|-----------|
+|[chunk](src/arrays/chunk)|Creates an array of elements split into groups the length of size specified.|
 |[compact](src/arrays/compact)|Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.|
 |[diff](src/arrays/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
 |[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
@@ -17,7 +18,7 @@
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
 |[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
-|[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomeized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
+|[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
 |[reverse](src/arrays/reverse)|Reverses an array in place. The first array element becomes the last and the last becomes the first.|
 |[sort](src/arrays/sort)|Sorts an **array of primitive values**.|
 |[sortBy](src/arrays/sortBy)|Sorts an **array of objects** by a property.|

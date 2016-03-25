@@ -1,5 +1,6 @@
-# v1.3.5
+# v1.3.6
 - Add `inRange` in **Numbers** category.
+- Add `chunk` in **Arrays** category.
 
 
 # v1.3.5
