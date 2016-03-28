@@ -1,3 +1,7 @@
+# v2.0.0
+- Rename `Strings>beginsWidth` to `Strings>startsWith` and use `String.prototype.startsWith` if available.
+
+
 # v1.3.6
 - Add `inRange` in **Numbers** category.
 - Add `chunk` in **Arrays** category.

@@ -41,7 +41,7 @@
 #### Strings
 |Function|Description|
 |--------|-----------|
-|[beginsWith](src/strings/beginsWith)|Returns true if string begins with substring (prefix).|
+|[startsWith](src/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
