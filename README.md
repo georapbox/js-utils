@@ -41,7 +41,6 @@
 #### Strings
 |Function|Description|
 |--------|-----------|
-|[startsWith](src/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
@@ -60,6 +59,7 @@
 |[removeSuffix](src/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
 |[repeat](src/strings/repeat)|Returns a string repeated <code>count</code> times.|
 |[replaceAll](src/strings/replaceAll)|Returns a new string with all occurrences of subStr replaced with replaceStr.
+|[startsWith](src/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[strip](src/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
 |[stripHTML](src/strings/stripHTML)|Returns a new string with all HTML tags removed.|
 |[stripPunctuation](src/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|

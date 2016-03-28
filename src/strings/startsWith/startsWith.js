@@ -1,6 +1,6 @@
 /**
  * Determines whether a string begins with the characters of another string,
- * returning true or false as appropriate
+ * returning true or false as appropriate.
  * @param {String} str The string to process.
  * @param {String} prefix The characters to be searched for at the start of the string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for `prefix`.

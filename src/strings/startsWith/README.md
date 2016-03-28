@@ -4,15 +4,15 @@
 startsWith(str, prefix)
 ```
 
-> Returns true if string begins with substring (prefix).
+> Determines whether a string begins with the characters of another string, returning true or false as appropriate
 
 - `str {String}`
 
-The original string
+The string to process.
 
 - `prefix {String}`
 
-The substring (prefix) we want to check against.
+The characters to be searched for at the start of the string.
 
 - `[position=0] {Number}`
 
