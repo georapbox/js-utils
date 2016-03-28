@@ -4,7 +4,7 @@
 startsWith(str, prefix)
 ```
 
-> Determines whether a string begins with the characters of another string, returning true or false as appropriate
+> Determines whether a string begins with the characters of another string, returning true or false as appropriate.
 
 - `str {String}`
 
