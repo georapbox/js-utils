@@ -1,5 +1,6 @@
 # v2.0.0
 - Rename `Strings>beginsWidth` to `Strings>startsWith` and use `String.prototype.startsWith` if available.
+- Refactor `Strings>endsWith` to use `String.prototype.endsWith` if available.
 
 
 # v1.3.6
