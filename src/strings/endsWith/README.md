@@ -1,23 +1,33 @@
 ### [Strings](../) > endsWith
 
 ```js
-endsWith(str, suffix)
+endsWith(subjectString, searchString, [position=str.length])
 ```
 
-> Returns true if string ends with substring (suffix).
+> Determines whether a string ends with the characters of another string, returning true or false as appropriate.
 
-- <code>str {string}</code>
+- `subjectString {String}`
 
 The string to process.
 
-- <code>suffix {string}</code>
+- `searchString {String}`
 
-The substring (suffix) we want to check against.
+The characters to be searched for at the end of the original string.
+
+- `[position=str.length]` {Number}
+
+Search within this string as if this string were only this long; defaults to the original string's actual length, clamped within the range established by this string's length.
 
 #### Example
 ```js
-var str = 'Lorem ipsum dolor sit amet';
+var str = 'To be, or not to be, that is the question.';
 
-endsWith(str, 'amet'); // true
-endsWith(str, 'Lorem'); //false
+endsWith(str, 'question.');
+// -> true
+
+endsWith(str, 'to be');
+// -> false
+
+endsWith(str, 'to be', 19);
+// -> true
 ```

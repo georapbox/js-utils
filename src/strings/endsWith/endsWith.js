@@ -1,10 +1,35 @@
 /**
- * Returns true if string ends with suffix.
- * @param {String} str The original string.
- * @param {String} suffix The substring to check against.
+ * Determines whether a string ends with the characters of another string,
+ * returning true or false as appropriate.
+ * @param {String} subjectString The string to process.
+ * @param {String} searchString The characters to be searched for at the end of the original string.
+ * @param {Number} [position=str.length] Search within this string as if this string were only this long;
+ *        defaults to the original string's actual length, clamped within the range established by this string's length.
  * @returns {Boolean}
  */
-function endsWith(str, suffix) {
+function endsWith(subjectString, searchString, position) {
     'use strict';
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+
+    var lastIndex;
+
+    if (String.prototype.endsWith) {
+        return subjectString ? subjectString.endsWith(searchString, position) : false;
+    }
+
+    if (!searchString) {
+        return false;
+    }
+
+    subjectString = subjectString.toString();
+    searchString = searchString.toString();
+
+    if (typeof position !== 'number' || !isFinite(position) ||
+        Math.floor(position) !== position || position > subjectString.length) {
+        position = subjectString.length;
+    }
+
+    position -= searchString.length;
+    lastIndex = subjectString.indexOf(searchString, position);
+
+    return lastIndex !== -1 && lastIndex === position;
 }
