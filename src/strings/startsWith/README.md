@@ -1,16 +1,16 @@
 ### [Strings](../) > startsWith
 
 ```js
-startsWith(str, prefix)
+startsWith(subjectString, searchString, [position=0])
 ```
 
 > Determines whether a string begins with the characters of another string, returning true or false as appropriate.
 
-- `str {String}`
+- `subjectString {String}`
 
 The string to process.
 
-- `prefix {String}`
+- `searchString {String}`
 
 The characters to be searched for at the start of the string.
 
