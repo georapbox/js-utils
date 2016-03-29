@@ -5,7 +5,7 @@
  * @param {String} searchString The characters to be searched for at the end of the original string.
  * @param {Number} [position=str.length] Search within this string as if this string were only this long;
  *        defaults to the original string's actual length, clamped within the range established by this string's length.
- * @returns {Boolean}
+ * @returns {Boolean} True if `subjectString` ends with `searchString`, else false.
  */
 function endsWith(subjectString, searchString, position) {
     'use strict';

@@ -48,7 +48,7 @@
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
 |[countWords](src/strings/countWords)|Counts words in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
-|[endsWith](src/strings/endsWith)|Returns true if string ends with substring (suffix).|
+|[endsWith](src/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
 |[lines](src/strings/lines)|Returns an array with the lines of a a string.|
 |[pad](src/strings/pad#strings--pad)|Pad <code>str</code> on **both** sides to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|

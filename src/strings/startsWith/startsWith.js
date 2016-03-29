@@ -4,7 +4,7 @@
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the start of the string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for `prefix`.
- * @returns {Boolean}
+ * @returns {Boolean} True if `subjectString` starts with `searchString`, else false.
  */
 function startsWith(subjectString, searchString, position) {
     'use strict';
