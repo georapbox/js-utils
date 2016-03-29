@@ -51,9 +51,9 @@
 |[endsWith](src/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
 |[lines](src/strings/lines)|Returns an array with the lines of a a string.|
-|[pad](src/strings/pad#strings--pad)|Pad <code>str</code> on **both** sides to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
-|[padLeft](src/strings/pad#strings--padleft)|Pad <code>str</code> on **left** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
-|[padRight](src/strings/pad#strings--padright)|Pad <code>str</code> on **right** side to the given <code>len</code>, with optional <code>ch</code> defaulting to a space.|
+|[pad](src/strings/pad)|Pad <code>subjectString</code> on **both** sides to the given <code>len</code>, with optional <code>chars</code> defaulting to a space.|
+|[padLeft](src/strings/padLeft)|Pad <code>subjectString</code> on **left** side to the given <code>len</code>, with optional <code>chars</code> defaulting to a space.|
+|[padRight](src/strings/padRight)|Pad <code>subjectString</code> on **right** side to the given <code>len</code>, with optional <code>chars</code> defaulting to a space.|
 |[randomString](src/strings/randomString)|Generates a random string of <code>n</code> characters, from the <code>chars</code> string provided by the user.|
 |[removePrefix](src/strings/removePrefix)|Removes substring (prefix) from start of a string.|
 |[removeSuffix](src/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
@@ -67,9 +67,9 @@
 |[subStrAfterChars](src/strings/subStrAfterChars)|Returns a substring after a specific sequence of character(s).|
 |[subStrBeforeChars](src/strings/subStrBeforeChars)|Returns a substring before a specific sequence of character(s).|
 |[supplant](src/strings/supplant)|supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.|
-|[trim](src/strings/trim#strings--trim)|Removes whitespace from both ends of a string.|
-|[trimLeft](src/strings/trim#strings--trimleft)|Removes whitespace from the left end of a string.|
-|[trimRight](src/strings/trim#strings--trimright)|Removes whitespace from the right end of a string.|
+|[trim](src/strings/trim)|Removes whitespace from both ends of a string.|
+|[trimLeft](src/strings/trimLeft)|Removes whitespace from the left end of a string.|
+|[trimRight](src/strings/trimRight)|Removes whitespace from the right end of a string.|
 |[truncate](src/strings/truncate)|Truncates a string based on character count.|
 |[unescapeHTML](src/strings/unescapeHTML)|Unescapes a HTML string.|
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
