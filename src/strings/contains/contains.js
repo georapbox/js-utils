@@ -1,19 +1,29 @@
 /**
- * Returns true if subStr is included in str.
- * @param {String} str The initial string.
- * @param {String} subStr The string we want to check if included in initial string.
- * @param {Boolean} [Optional] caseInsensitive If true, the lookup is case insensitive. Default is undefined (falsey).
- * @returns {Boolean}
+ * Determines whether one string may be found within another string, returning true or false as appropriate.
+ * @param {String} subjectString The string to process.
+ * @param {String} searchString A string to be searched for within the original string.
+ * @param {Number} [position=0] The position in the original string at which to begin searching for searchString; defaults to 0.
+ * @returns {Boolean} True if searchString is found within subjectString, else false.
  */
-function contains(str, subStr, caseInsensitive) {
+function contains(subjectString, searchString, position) {
     'use strict';
 
-    // Case insensitive lookup.
-    if (caseInsensitive === true) {
-        subStr = subStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        return str.search(new RegExp(subStr, 'i')) > -1 ? true : false;
+    var subjectLength,
+        searchLength;
+
+    if (String.prototype.includes) {
+        return subjectString.includes(searchString, position);
     }
 
-    // Case sensitive lookup.
-    return str.indexOf(subStr) > -1;
+    if (!searchString) {
+        return false;
+    }
+
+    position = parseInt(position, 10) || 0;
+    subjectLength = subjectString.length;
+    searchLength = searchString.length;
+
+    return position + searchLength <= subjectLength ?
+        subjectString.indexOf(searchString, position) !== -1 :
+        false;
 }

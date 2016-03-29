@@ -44,7 +44,7 @@
 |[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
-|[contains](src/strings/contains)|Returns true if the string contains the passed string, else returns false.|
+|[contains](src/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
 |[countWords](src/strings/countWords)|Counts words in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|

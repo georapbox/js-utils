@@ -1,31 +1,39 @@
 ### [Strings](../) > contains
 
 ```js
-contains(str, subStr [, caseInsensitive])
+contains(subjectString, searchString [, position=0])
 ```
 
-> Returns true if the string contains the passed string.
+> Determines whether one string may be found within another string, returning true or false as appropriate.
 
+- `subjectString {String}`
 
-- <code>str {string}</code>
+The string to process.
 
-The initial string.
+- `searchString {String}`
 
-- <code>subStr {string}</code>
+A string to be searched for within the original string.
 
-The string we want to check if is included in the initial string.
+- `[position=0] {Number}`
 
-- <code>[caseInsensitive] {boolean}</code>
-
-If true, the lookup is case insensitive. Default is undefined (falsey).
+The position in the original string at which to begin searching for searchString; defaults to 0.
 
 #### Example
 ```js
-var str = 'Lorem ipsum | dolor si *amet.';
+var str = 'To be, or not to be, that is the question.';
 
-contains(str, 'lorem')); // false
-contains(str, '*')); // true
-contains(str, '|')); // true
-contains(str, 'aaa')); // false
-contains(str, 'lorem', true)); // true (case insensitive lookup)
+contains(str, 'To be');
+// -> true
+
+contains(str, 'question');
+// -> true
+
+contains(str, 'nonexistent');
+// -> false
+
+contains(str, 'To be', 1);
+// -> false
+
+contains(str, 'TO BE');
+// -> false
 ```
