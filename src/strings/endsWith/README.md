@@ -1,7 +1,7 @@
 ### [Strings](../) > endsWith
 
 ```js
-endsWith(subjectString, searchString, [position=str.length])
+endsWith(subjectString, searchString [, position=str.length])
 ```
 
 > Determines whether a string ends with the characters of another string, returning true or false as appropriate.

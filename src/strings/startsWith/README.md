@@ -1,7 +1,7 @@
 ### [Strings](../) > startsWith
 
 ```js
-startsWith(subjectString, searchString, [position=0])
+startsWith(subjectString, searchString [, position=0])
 ```
 
 > Determines whether a string begins with the characters of another string, returning true or false as appropriate.
