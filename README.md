@@ -72,6 +72,7 @@
 |[trimRight](src/strings/trimRight)|Removes whitespace from the right end of a string.|
 |[truncate](src/strings/truncate)|Truncates a string based on character count.|
 |[unescapeHTML](src/strings/unescapeHTML)|Unescapes a HTML string.|
+|[urlSearchParams](src/strings/urlSearchParams)|Factory to access the URL search parameters.|
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 
 
