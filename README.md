@@ -2,7 +2,7 @@
 
 # jsEssentials
 
-A collection of javascript standalone functions to cherrypick from and get the job done.
+A collection of standalone javascript utility functions.
 
 #### Arrays
 
