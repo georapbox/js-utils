@@ -152,9 +152,10 @@
 #### Misc
 |Function|Description|
 |--------|-----------|
-|[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[compose](src/misc/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
 |[curry](src/misc/curry)|Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.|
+|[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
+|[once](src/misc/once)|Ensure a given functionality only runs once.|
 |[partial](src/misc/partial)|Generates a function that has one or more arguments "bound" or partially applied.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
