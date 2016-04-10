@@ -2,9 +2,7 @@
 
 # jsEssentials
 
-> Not yet another Javascript library.
-
-**jsEssentials** is by no means a library and it's not meant to be one. It's just a collection of javascript standalone functions to cherrypick from and get the job done.
+A collection of javascript standalone functions to cherrypick from and get the job done.
 
 #### Arrays
 
