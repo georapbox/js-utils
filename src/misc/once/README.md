@@ -6,7 +6,7 @@ once(func, [, thisArg])
 
 > Ensure a given functionality only runs once.
 
-- `func {Object}`
+- `func {Function}`
 
 Callback function to be executed only one time.
 
