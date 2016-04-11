@@ -120,7 +120,7 @@ A collection of standalone javascript utility functions.
 |[isNonExisty](src/is/isNonExisty)|Checks if a "value" is non existy (null or undefined).|
 |[isNull](src/is/isNull)|Checks if a "value" is null.|
 |[isNumber](src/is/isNumber)|Checks if a "value" is a number.|
-|[isObject](src/is/isObject)|Checks if a "value" is the language type of <code>Object</code>.|
+|[isObject](src/is/isObject)|Checks if `value` is a plain object, i.e. is constructed by the built-in Object constructor and inherits directly from `Object.prototype` or `null`.|
 |[isOddNum](src/is/isOddNum)|Checks if a number is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if a "value" is an object created by the <code>Object</code> constructor.|
 |[isRegexp](src/is/isRegexp)|Checks if a "value" is a regular expression.|

@@ -4,7 +4,7 @@
 isPlainObject(value)
 ```
 
-> Checks if <code>value</code> is an object created by the <code>Object</code> constructor.
+> Checks if `value` is a plain object, i.e. is constructed by the built-in Object constructor and inherits directly from `Object.prototype` or `null`.
 
 - <code>value {\*}</code>
 
@@ -16,11 +16,33 @@ function Foo() {
     this.a = 1;
 }
 
-isPlainObject({}); // => true
-isPlainObject({foo: 'bar'}); // => true
-isPlainObject(new Foo()); // => false
-isPlainObject(Object.create(null)); // => false
-isPlainObject(Object.create({})); // => true
-isPlainObject([1, 2, 3]); // => false
-isPlainObject(); // => false
+isPlainObject({});
+// -> true
+
+isPlainObject({foo: 'bar'});
+// -> true
+
+isPlainObject(new Foo());
+// -> false
+
+isPlainObject(Object.create(null));
+// -> true
+
+isPlainObject(Object.create({}));
+// -> true
+
+isPlainObject([1, 2, 3]);
+// -> false
+
+isPlainObject(null);
+// -> false
+
+isPlainObject();
+// -> false
+
+isPlainObject(100);
+// -> false
+
+isPlainObject('lorem ipsum');
+// -> false
 ```
