@@ -155,6 +155,7 @@ A collection of standalone javascript utility functions.
 |[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[once](src/misc/once)|Ensure a given functionality only runs once.|
 |[partial](src/misc/partial)|Generates a function that has one or more arguments "bound" or partially applied.|
+|[poll](src/misc/poll)|Periodically check for application's status updates.|
 |[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
 
