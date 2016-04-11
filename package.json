@@ -1,7 +1,7 @@
 {
   "name": "jsEssentials",
   "version": "1.0.0",
-  "description": "A collection of javascript standalone functions for everyday tasks.",
+  "description": "A collection of standalone javascript utility functions.",
   "author": "George Raptis <georapbox@gmail.com>",
   "homepage": "https://github.com/georapbox/jsEssentials",
   "repository": {
