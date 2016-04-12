@@ -6,7 +6,7 @@ isEmpty(value)
 
 > Checks if `value` is empty.
 
-> Arrays, strings, or arguments objects with a length of 0 and plain objects with both own enumerable and inherited from prototypes properties are considered "empty".
+> Arrays, strings, or arguments objects with a length of 0 and plain objects containing no own enumerable or inherited from prototypes properties are considered "empty".
 
 - `value {*}`
 
