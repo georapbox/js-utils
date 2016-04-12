@@ -8,6 +8,8 @@ isEmpty(value)
 
 > Arrays, strings, or arguments objects with a length of 0 and plain objects containing no own enumerable or inherited from prototypes properties are considered "empty".
 
+**NOTE:** In case of objects, the argument should always be a plain JavaScript Object as other types of object (DOM elements, primitive strings/numbers, host objects) may not give consistent results across browsers.
+
 - `value {*}`
 
 The value to check.
