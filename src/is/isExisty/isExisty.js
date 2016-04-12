@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is existy (Not null or undefined).
  * @param {*} value The value to check.
- * @returns {boolean} Returns true if the 'value' is existy, else false.
+ * @return {Boolean} true|false Returns true if the 'value' is existy, else false.
  */
 function isExisty(value) {
     'use strict';

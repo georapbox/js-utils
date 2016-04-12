@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is undefined.
  * @param {*} value The value to check.
- * @returns {boolean} Returns true if the 'value' is undefined, else false.
+ * @return {Boolean} true|false Returns true if the 'value' is undefined, else false.
  */
 function isUndefined(value) {
     'use strict';

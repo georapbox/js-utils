@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is a boolean value.
- * @param   {*}       value The value to check.
- * @returns {Boolean} Returns true if the 'value' is a boolean value, else false.
+ * @param {*} value The value to check.
+ * @return {Boolean} true|false Returns true if the 'value' is a boolean value, else false.
  */
 function isBoolean(value) {
     'use strict';

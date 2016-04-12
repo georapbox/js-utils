@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is a falsy one.
  * @param {*} value The value to check.
- * @returns {boolean} Returns true if the 'value' is falsy, else false.
+ * @return {Boolean} true|false Returns true if the 'value' is falsy, else false.
  */
 function isFalsy(value) {
     'use strict';

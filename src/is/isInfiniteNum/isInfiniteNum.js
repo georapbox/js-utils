@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is an infinite number.
  * @param {Number} value The number to check.
- * @returns {Boolean} Returns true if value is an infinite number, else false.
+ * @return {Boolean} true|false Returns true if value is an infinite number, else false.
  */
 function isInfiniteNum(value) {
     'use strict';

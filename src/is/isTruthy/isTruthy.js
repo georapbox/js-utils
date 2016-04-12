@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is a truthy one.
  * @param {*} value The value to check.
- * @returns {boolean} Returns true if the 'value' is truthy, else false.
+ * @return {Boolean} true|false Returns true if the 'value' is truthy, else false.
  */
 function isTruthy(value) {
     'use strict';

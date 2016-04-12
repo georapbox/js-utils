@@ -1,7 +1,7 @@
 /**
  * Checks if a number is odd.
  * @param {Number} value The number to check.
- * @returns {Boolean} Returns true if number is odd, else false.
+ * @return {Boolean} true|false Returns true if number is odd, else false.
  */
 function isOddNum(value) {
     'use strict';

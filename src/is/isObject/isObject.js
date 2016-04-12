@@ -1,7 +1,7 @@
 /**
  * Checks if "value" is the language type of "Object".
  * @param {*} value The value to check.
- * @returns {boolean} Returns true if "value" is an object, else false.
+ * @return {Boolean} true|false Returns true if "value" is an object, else false.
  */
 function isObject(value) {
     'use strict';

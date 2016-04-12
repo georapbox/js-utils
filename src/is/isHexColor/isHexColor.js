@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' matches a hexadecimal color regular expression.
  * @param {*} value The value to check.
- * @return {Boolean} Returns true if 'value' is a hexadecimal color regexp, else false.
+ * @return {Boolean} true|false Returns true if 'value' is a hexadecimal color regexp, else false.
  */
 function isHexColor(value) {
     'use strict';

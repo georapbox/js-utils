@@ -1,7 +1,7 @@
 /**
  * Checks if 'value' is a finite number.
  * @param {Number} value The 'value' to check.
- * @returns {Boolean} Returns true if value is a finite number, else false.
+ * @return {Boolean} true|false Returns true if value is a finite number, else false.
  */
 function isFiniteNum(value) {
     'use strict';

@@ -1,7 +1,7 @@
 /**
  * Checks if a number is even.
  * @param {Number} value The number to check.
- * @returns {Boolean} Returns true if number is even, else false.
+ * @return {Boolean} true|false Returns true if number is even, else false.
  */
 function isEvenNum(value) {
     'use strict';

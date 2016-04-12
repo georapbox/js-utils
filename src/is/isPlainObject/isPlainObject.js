@@ -1,7 +1,7 @@
 /**
  * Checks if `value` is a plain object (created using "{}" or "new Object").
  * @param {*} value The value to check.
- * @return {Boolean} true|false Returns true if "value" is a plain object, else false.
+ * @return {Boolean} true|false true|false Returns true if "value" is a plain object, else false.
  */
 function isPlainObject(value) {
     'use strict';
