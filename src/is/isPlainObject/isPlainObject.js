@@ -1,26 +1,27 @@
 /**
- * Checks if `value` is a plain object, i.e. is constructed by the built-in
- * Object constructor and inherits directly from `Object.prototype` or `null`.
+ * Checks if `value` is a plain object (created using "{}" or "new Object").
  * @param {*} value The value to check.
- * @returns {Boolean} Returns true if "value" is an object created by the "Object" constructor, else false.
+ * @return {Boolean} true|false Returns true if "value" is a plain object, else false.
  */
 function isPlainObject(value) {
     'use strict';
 
-    var toString = {}.toString,
-        proto;
+    var hasOwn = {}.hasOwnProperty;
 
-    if (typeof value === 'object' && value !== null) {
-        // Use ES5 Object.getPrototypeOf if supported
-        if (typeof Object.getPrototypeOf === 'function') {
-            proto = Object.getPrototypeOf(value);
-            return proto === Object.prototype || value.constructor === Object || proto === null;
-        }
-
-        // Otherwise, use internal class
-        // This should be reliable as if getPrototypeOf not supported, in pre-ES5
-        return toString.call(value) === '[object Object]' && value.constructor === Object;
+    // Not plain objects:
+    // - null or undefined
+    // - Any object or value whose internal [[Class]] property is not "[object Object]"
+    // - DOM nodes
+    // - window
+    if (value == null || typeof value !== 'object' || value.nodeType || value === value.window) {
+        return false;
     }
 
-    return false;
+    if (value.constructor && !hasOwn.call(value.constructor.prototype, 'isPrototypeOf')) {
+        return false;
+    }
+
+    // If the function hasn't returned already, we're confident that
+    // `value` is a plain object, created by {} or constructed with new Object.
+    return true;
 }

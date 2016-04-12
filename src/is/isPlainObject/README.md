@@ -4,9 +4,11 @@
 isPlainObject(value)
 ```
 
-> Checks if `value` is a plain object, i.e. is constructed by the built-in Object constructor and inherits directly from `Object.prototype` or `null`.
+> Checks if `value` is a plain object (created using "{}" or "new Object")
 
-- <code>value {\*}</code>
+**NOTE:** Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
+
+- `value {*}`
 
 The value to check.
 
@@ -22,6 +24,9 @@ isPlainObject({});
 isPlainObject({foo: 'bar'});
 // -> true
 
+isPlainObject(new Object({foo: 'bar'}));
+// -> true
+
 isPlainObject(new Foo());
 // -> false
 
@@ -29,6 +34,9 @@ isPlainObject(Object.create(null));
 // -> true
 
 isPlainObject(Object.create({}));
+// -> true
+
+isPlainObject(Object.create({foo: 'bar'}));
 // -> true
 
 isPlainObject([1, 2, 3]);

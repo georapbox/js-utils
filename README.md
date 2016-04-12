@@ -101,33 +101,33 @@ A collection of standalone javascript utility functions.
 
 |Function|Description|
 |--------|-----------|
-|[isArray](src/is/isArray)|Checks if a "value" is an array.|
-|[isBoolean](src/is/isBoolean)|Checks if a "value" is a boolean value.|
-|[isDate](src/is/isDate)|Checks if a "value" is a date.|
-|[isElement](src/is/isElement)|Checks if "value" is a DOM element.|
-|[isEmpty](src/is/isEmpty)|Checks if a "value" is empty.|
+|[isArray](src/is/isArray)|Checks if `value` is an array.|
+|[isBoolean](src/is/isBoolean)|Checks if `value` is a boolean value.|
+|[isDate](src/is/isDate)|Checks if `value` is a date.|
+|[isElement](src/is/isElement)|Checks if `value` is a DOM element.|
+|[isEmpty](src/is/isEmpty)|Checks if `value` is empty.|
 |[isEvenNum](src/is/isEvenNum)|Checks if a number is even.|
-|[isExisty](src/is/isExisty)|Checks if a "value" is existy (Not null or undefined).|
-|[isFalse](src/is/isFalse)|Checks if a "value" is false (strict equality).|
-|[isFalsy](src/is/isFalsy)|Checks if a "value" is falsy.|
-|[isFiniteNum](src/is/isFiniteNum)|Checks if a "value" is a finit number.|
-|[isFunction](src/is/isFunction)|Checks if "value" is a function.|
-|[isHexadecimal](src/is/isHexadecimal)|Checks if a "value" matches a hexadecimal regular expression.|
-|[isHexColor](src/is/isHexColor)|Checks if a "value" matches a hexadecimal color regular expression.|
-|[isInfiniteNum](src/is/isInfiniteNum)|Checks if a "value" is an infinit number.|
-|[isInteger](src/is/isInteger)|Checks if a "value" is an integer number.|
+|[isExisty](src/is/isExisty)|Checks if `value` is existy (Not null or undefined).|
+|[isFalse](src/is/isFalse)|Checks if `value` is false (strict equality).|
+|[isFalsy](src/is/isFalsy)|Checks if `value` is falsy.|
+|[isFiniteNum](src/is/isFiniteNum)|Checks if `value` is a finit number.|
+|[isFunction](src/is/isFunction)|Checks if `value` is a function.|
+|[isHexadecimal](src/is/isHexadecimal)|Checks if `value` matches a hexadecimal regular expression.|
+|[isHexColor](src/is/isHexColor)|Checks if `value` matches a hexadecimal color regular expression.|
+|[isInfiniteNum](src/is/isInfiniteNum)|Checks if `value` is an infinit number.|
+|[isInteger](src/is/isInteger)|Checks if `value` is an integer number.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
-|[isNonExisty](src/is/isNonExisty)|Checks if a "value" is non existy (null or undefined).|
-|[isNull](src/is/isNull)|Checks if a "value" is null.|
-|[isNumber](src/is/isNumber)|Checks if a "value" is a number.|
+|[isNonExisty](src/is/isNonExisty)|Checks if `value` is non existy (null or undefined).|
+|[isNull](src/is/isNull)|Checks if `value` is null.|
+|[isNumber](src/is/isNumber)|Checks if `value` is a number.|
 |[isObject](src/is/isObject)|Checks if `value` is a plain object, i.e. is constructed by the built-in Object constructor and inherits directly from `Object.prototype` or `null`.|
 |[isOddNum](src/is/isOddNum)|Checks if a number is odd.|
-|[isPlainObject](src/is/isPlainObject)|Checks if a "value" is an object created by the <code>Object</code> constructor.|
-|[isRegexp](src/is/isRegexp)|Checks if a "value" is a regular expression.|
-|[isString](src/is/isString)|Checks if a "value" is a string.|
-|[isTrue](src/is/isTrue)|Checks if a "value" is true (strict equality).|
-|[isTruthy](src/is/isTruthy)|Checks if a "value" is truthy.|
-|[isUndefined](src/is/isUndefined)|Checks if a "value" is undefined.|
+|[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
+|[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
+|[isString](src/is/isString)|Checks if `value` is a string.|
+|[isTrue](src/is/isTrue)|Checks if `value` is true (strict equality).|
+|[isTruthy](src/is/isTruthy)|Checks if `value` is truthy.|
+|[isUndefined](src/is/isUndefined)|Checks if `value` is undefined.|
 
 
 #### DOM
