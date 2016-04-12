@@ -18,7 +18,7 @@ function isPlainObject(value) {
         }
 
         // Otherwise, use internal class
-        // This should be reliable as if getPrototypeOf not supported, is pre-ES5
+        // This should be reliable as if getPrototypeOf not supported, in pre-ES5
         return toString.call(value) === '[object Object]' && value.constructor === Object;
     }
 
