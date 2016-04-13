@@ -4,15 +4,15 @@
 sort(arr [, ascending])
 ```
 
-> Sorts an **array of primitive values**.
+> Sorts an array (not in place) of **primitive values**.
 
-- <code>arr {array}</code>
+- `arr {Array}`
 
 The array to sort.
 
-- <code>[ascending] {boolean}</code>
+- `[ascending] {Boolean}`
 
-The sorting order. Default is true (ascending).
+The sorting order. Default is `true` (ascending).
 
 #### Example
 ```js
