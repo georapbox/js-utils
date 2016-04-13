@@ -1,27 +1,26 @@
 ### [Arrays](../) > sortBy
 
 ```js
-sortBy(arr, field [, ascending] [, primer])
+sortBy(arr, field [, ascending=true] [, primer])
 ```
 
-http://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects
-> Sorts an **array of objects** by a property.
+> Sorts an array of **objects** (not in place) by a property.
 
-- <code>arr {array}</code>
+- `arr {Array}`
 
 The array of objects to sort.
 
-- <code>field {string}</code>
+- `field {String}`
 
 The property to sort by.
 
-- <code>[ascending] {boolean}</code>
+- `[ascending=true] {Boolean}`
 
-The sorting order. Default is true (ascending).
+Optional. The sorting order. Default is true (ascending). This is not optional if `primer` is required.
 
-- <code>[primer] {function}</code>
+- `[primer] {Function}`
 
-Manipulates the field to sort by.
+Optional. Manipulates the field to sort by.
 
 #### Example
 ```js

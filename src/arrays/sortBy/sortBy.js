@@ -1,11 +1,11 @@
 /**
- * http://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects
- * Sorts an array of objects by property.
- * @param   {Array}    arr       The array to sort.
- * @param   {String}   field     The field to sort the array by.
- * @param   {Boolean}  ascending [Optional] Defines the sort order. Default is true (ascending).
- * @param   {Function} primer    [Optional] Manipulates the field to sort by.
- * @returns {Array}    The sorted array.
+ * Sorts an array of objects (not in place) by property.
+ * @param {Array} arr The array to sort.
+ * @param {String} field The field to sort the array by.
+ * @param {Boolean} [ascending=true] Defines the sort order. Default is true (ascending).
+ *        This is not optional if `primer` is required.
+ * @param {Function} [primer] Manipulates the field to sort by.
+ * @returns {Array} The new sorted array.
  */
 function sortBy(arr, field, ascending, primer) {
     'use strict';
@@ -14,11 +14,11 @@ function sortBy(arr, field, ascending, primer) {
         return primer ? primer(x[field]) : x[field];
     };
 
-    return arr.sort(function (a, b) {
+    return arr.slice().sort(function (a, b) {
         var A = key(a),
             B = key(b);
 
-        if (typeof ascending === 'undefined') {
+        if (typeof ascending !== 'boolean') {
             ascending = true;
         }
 
