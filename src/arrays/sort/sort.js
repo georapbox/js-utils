@@ -1,9 +1,9 @@
 /**
  * Sorts an array of primitive values.
- * @NOTE: For legacy browsers use the Array.prototype.map polyfill.
- * @param {array} arr The array to sort.
- * @param {boolean} [ascending] Defines the sort order. Default is true (ascending).
- * @return {array} The sorted array.
+ * @NOTE: For legacy browsers use the `Array.prototype.map polyfill`.
+ * @param {Array} arr The array to sort.
+ * @param {Boolean} [ascending=true] Defines the sort order. Default is true (ascending).
+ * @return {Array} The new sorted array.
  */
 function sort(arr, ascending) {
     'use strict';
