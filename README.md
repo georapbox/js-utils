@@ -105,6 +105,7 @@ A collection of standalone javascript utility functions.
 |[isBoolean](src/is/isBoolean)|Checks if `value` is a boolean value.|
 |[isDate](src/is/isDate)|Checks if `value` is a date.|
 |[isElement](src/is/isElement)|Checks if `value` is a DOM element.|
+|[isEmail](src/is/isEmail)|Validates a string as email address.|
 |[isEmpty](src/is/isEmpty)|Checks if `value` is empty.|
 |[isEvenNum](src/is/isEvenNum)|Checks if a number is even.|
 |[isExisty](src/is/isExisty)|Checks if `value` is existy (Not null or undefined).|
