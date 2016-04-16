@@ -43,10 +43,10 @@
     }
 
     /**
-     * Create a new cookie.
+     * Creates a new cookie.
      * @param {String} name The name of the cookie to create.
      * @param {String} value The value of the cookie to create.
-     * @param {String} [expiresOn=''] When the cookie expires.
+     * @param {String} [expiresOn=''] Denotes when the cookie expires.
      *        If is of type `number`, denotes the number of days the cookie is active.
      *        If is set to 0 cookie's expiration is set to Session.
      *        If is of type `string` the provided string must be of UTC/GMT format
@@ -59,7 +59,7 @@
         if (typeof expiresOn === 'number' && expiresOn !== 0) {
             date = new Date();
             date.setTime(date.getTime() + (Math.ceil(expiresOn) * 24 * 60 * 60 * 1000));
-            expires = '; expires=' + date.toGMTString();
+            expires = '; expires=' + date.toUTCString();
         } else if (typeof expiresOn === 'string') {
             expires = '; expires=' + expiresOn;
         } else {
