@@ -17,7 +17,7 @@ A collection of standalone javascript utility functions.
 |[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
 |[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
-|[reverse](src/arrays/reverse)|Reverses an array in place. The first array element becomes the last and the last becomes the first.|
+|[reverse](src/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
 |[sort](src/arrays/sort)|Sorts an **array of primitive values**.|
 |[sortBy](src/arrays/sortBy)|Sorts an **array of objects** by a property.|
 |[uniq](src/arrays/uniq)|Removes duplicate primitive values from an array.|

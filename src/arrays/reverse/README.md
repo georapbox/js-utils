@@ -4,10 +4,10 @@
 reverse(array)
 ```
 
-> Reverses an array in place.
+> Reverses an array (not in place).
 > The first array element becomes the last and the last becomes the first.
 
-- <code>array {array}</code>
+- `array {Array}`
 
 The array to reverse.
 
@@ -15,5 +15,6 @@ The array to reverse.
 ```js
 var numbers = [1, 2, 3];
 
-reverse(numbers); // => [3, 2, 1]
+var reversedNumbers = reverse(numbers); 
+// -> [3, 2, 1]
 ```

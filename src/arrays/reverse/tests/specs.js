@@ -4,10 +4,12 @@
     'use strict';
 
     describe('arrays/reverse', function () {
-        var numbers = [1, 2, 3];
+        it('should return a new reversed array', function () {
+            var numbers = [1, 2, 3],
+                revNumbers = reverse(numbers);
 
-        it('should return the array reversed', function () {
-            expect(reverse(numbers)).toEqual([3, 2, 1]);
+            expect(numbers).toEqual([1, 2, 3]);
+            expect(revNumbers).toEqual([3, 2, 1]);
         });
     });
 }());
