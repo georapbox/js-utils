@@ -74,5 +74,9 @@
     "disallowMultipleVarDecl": false,
     "maximumLineLength": false,
     "requirePaddingNewLinesAfterBlocks": false,
-    "disallowQuotedKeysInObjects": false
+    "disallowQuotedKeysInObjects": false,
+    "requireSpaceAfterComma": true,
+    "requireSpaceBeforeComma": false,
+    "disallowSpaceAfterComma": false,
+    "disallowSpaceBeforeComma": true
 }
