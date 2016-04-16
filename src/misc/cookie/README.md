@@ -1,5 +1,7 @@
 ### [Misc](../) > cookie
 
+### cookie.create
+
 ```js
 cookie.create(name, value [, expiresOn=''] [, path='/'])
 ```
@@ -49,6 +51,8 @@ cookie.create('my-cookie6', 'test6', new Date(2016, 5, 20, 3, 30, 20, 20).toUTCS
 
 ---
 
+### cookie.read
+
 ```js
 cookie.read([name])
 ```
@@ -80,6 +84,8 @@ cookie.read();
 ```
 
 ---
+
+### cookie.remove
 
 ```js
 cookie.remove(name)
