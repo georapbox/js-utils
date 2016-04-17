@@ -58,7 +58,7 @@
 
         if (typeof expiresOn === 'number' && expiresOn !== 0) {
             date = new Date();
-            date.setTime(date.getTime() + (Math.ceil(expiresOn) * 24 * 60 * 60 * 1000));
+            date.setTime(date.getTime() + Math.ceil(expiresOn) * 24 * 60 * 60 * 1000);
             expires = '; expires=' + date.toUTCString();
         } else if (typeof expiresOn === 'string') {
             expires = '; expires=' + expiresOn;

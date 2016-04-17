@@ -13,9 +13,9 @@ function chunk(array, size) {
     var MAX_INTEGER = 1.7976931348623157e+308,
         length, result, index, resIndex;
 
-    size = (size === Infinity || size === -Infinity) ?
-        ((size < 0 ? -1 : 1) * MAX_INTEGER) :
-        (parseInt(size, 10) || 0);
+    size = size === Infinity || size === -Infinity ?
+        (size < 0 ? -1 : 1) * MAX_INTEGER :
+        parseInt(size, 10) || 0;
 
     length = array ? array.length : 0;
 
@@ -25,10 +25,11 @@ function chunk(array, size) {
 
     index = 0;
     resIndex = 0;
-    result = [(Math.ceil(length / size))];
+    result = [Math.ceil(length / size)];
 
     while (index < length) {
-        result[resIndex++] = array.slice(index, (index += size));
+        result[resIndex] = array.slice(index, index += size);
+        resIndex += 1;
     }
 
     return result;
