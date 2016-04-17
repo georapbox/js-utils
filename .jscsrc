@@ -84,5 +84,10 @@
     "disallowMultipleLineBreaks": true,
     "disallowMultipleVarDecl": false,
     "requirePaddingNewLinesAfterBlocks": false,
-    "disallowQuotedKeysInObjects": false
+    "disallowQuotedKeysInObjects": false,
+    "validateQuoteMarks": {
+        "mark": "'",
+        "escape": true,
+        "ignoreJSX": true
+    }
 }
