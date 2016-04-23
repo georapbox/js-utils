@@ -102,7 +102,8 @@ A collection of standalone javascript utility functions.
 |[debounce](src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[negate](src/function/negate)|Creates a function that negates the result of the predicate `func`.|
 |[once](src/function/once)|Ensure a given functionality only runs once.|
-|[partial](src/function/partial)|Generates a function that has one or more arguments "bound" or partially applied.|
+|[partial](src/function/partial)|Creates a function that invokes `func` with `args` **prepended** to the arguments it receives.|
+|[partialRight](src/function/partialRight)|Creates a function that invokes `func` with `args` **appended** to the arguments it receives.|
 |[throttle](src/function/throttle)|Limits the number of times a function can be called in a given period.|
 
 

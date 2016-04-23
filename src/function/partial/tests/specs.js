@@ -4,19 +4,14 @@
     'use strict';
 
     describe('Function/partial', function () {
-        function add() {
-            var args = Array.prototype.slice.call(arguments);
-            return args.reduce(function (accum, val) {
-                return accum + val;
-            }, 0);
-        }
+        var greet = function (greeting, name) {
+            return greeting + ' ' + name;
+        };
 
-        var addOne = partial(add, 1);
+        var sayHelloTo = partial(greet, 'Hello');
 
-        it('should return a new function with one or more arguments partially applied', function () {
-            expect(addOne(2)).toEqual(3);
-            expect(addOne(2, 3)).toEqual(6);
-            expect(addOne(9, 1, 4)).toEqual(15);
+        it('partially applied arguments are prepended to the arguments', function () {
+            expect(sayHelloTo('George')).toEqual('Hello George');
         });
     });
 }());
