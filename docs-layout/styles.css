@@ -74,7 +74,7 @@ body {
 
 .wikistyle h1 {
 	font-size: 170%;
-	border-top: 2px solid #aaa;
+	border-top: 1px solid #aaa;
 	padding-top: .5em;
 	margin-top: 1.5em;
 }
@@ -88,7 +88,7 @@ body {
 .wikistyle h2 {
 	font-size: 150%;
 	margin-top: 1.5em;
-	border-top: 2px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
 	padding-top: .5em;
 }
 
