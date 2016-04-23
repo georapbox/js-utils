@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('arrays/reverse', function () {
+    describe('Array/reverse', function () {
         it('should return a new reversed array', function () {
             var numbers = [1, 2, 3],
                 revNumbers = reverse(numbers);

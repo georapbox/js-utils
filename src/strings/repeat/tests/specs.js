@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/repeat', function () {
+    describe('String/repeat', function () {
         it('repeat(\'&nbsp; \', 3) should return \'&nbsp;&nbsp;&nbsp;\'', function () {
             expect(repeat('&nbsp;', 3)).toBe('&nbsp;&nbsp;&nbsp;');
         });

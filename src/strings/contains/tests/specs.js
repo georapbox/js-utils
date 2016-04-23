@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/contains', function () {
+    describe('String/contains', function () {
         it('String should contain the specified search string', function () {
             var str = 'To be, or not to be, that is the question.';
 

@@ -1,4 +1,4 @@
-### [Misc](../) > debounce
+### [Function](../) > debounce
 
 ```js
 debounce(callback, n [, immediate])

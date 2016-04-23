@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/removePrefix', function () {
+    describe('String/removePrefix', function () {
         it('removePrefix(\'Hello world!\', \'Hello \') should return "world!"', function () {
             expect(removePrefix('Hello world!', 'Hello ')).toEqual('world!');
         });

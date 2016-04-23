@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('arrays/zip', function () {
+    describe('Array/zip', function () {
         it('should create an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on', function () {
             var arr1 = [1, 2, 3],
                 arr2 = [11, 22],

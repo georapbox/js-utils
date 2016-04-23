@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('numbers/inRange', function () {
+    describe('Number/inRange', function () {
         it('should test if number is in range', function () {
             expect(inRange(3, 2, 4)).toBe(true);
             expect(inRange(-3, -2, -6)).toBe(true);

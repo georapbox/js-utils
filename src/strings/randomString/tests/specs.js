@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/randomString', function () {
+    describe('String/randomString', function () {
         it('generates a random string of 10 characters', function () {
             expect(randomString(10).length).toEqual(10);
         });

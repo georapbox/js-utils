@@ -1,4 +1,4 @@
-### [Misc](../) > curry
+### [Function](../) > curry
 
 ```js
 curry(fn [, n])

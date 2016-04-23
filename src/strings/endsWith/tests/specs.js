@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/endsWith', function () {
+    describe('String/endsWith', function () {
         it('String should end with specified search string', function () {
             expect(endsWith('To be, or not to be, that is the question.', 'question.')).toBe(true);
             expect(endsWith('To be, or not to be, that is the question.', 'question')).toBe(false);

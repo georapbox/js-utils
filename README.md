@@ -4,9 +4,9 @@
 
 A collection of standalone javascript utility functions.
 
-#### Arrays
+## Array
 
-|Function|Description|
+|Name|Description|
 |--------|-----------|
 |[chunk](src/arrays/chunk)|Creates an array of elements split into groups the length of size specified.|
 |[compact](src/arrays/compact)|Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.|
@@ -36,8 +36,8 @@ A collection of standalone javascript utility functions.
 |[Array.prototype.reduce()](src/arrays/polyfills#arrays--arrayprototypereduce)|Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.|
 
 
-#### Strings
-|Function|Description|
+## String
+|Name|Description|
 |--------|-----------|
 |[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
@@ -74,8 +74,8 @@ A collection of standalone javascript utility functions.
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 
 
-#### Numbers
-|Function|Description|
+## Number
+|Name|Description|
 |--------|-----------|
 |[average](src/numbers/average)|Calculates the average of a set of numbers.|
 |[inRange](src/numbers/inRange)|Checks if a number is between start and up to but not including, end.|
@@ -85,8 +85,8 @@ A collection of standalone javascript utility functions.
 |[randomBetween](src/numbers/randomBetween)|Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.|
 
 
-#### Objects
-|Function|Description|
+## Object
+|Name|Description|
 |--------|-----------|
 |[extend](src/objects/extend)|Merges (deep copy) the contents of two or more objects together into the first object.|
 |[forIn](src/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
@@ -94,12 +94,22 @@ A collection of standalone javascript utility functions.
 |[container](src/objects/container)|Acts as a wrapper/container around the `value` passed in.|
 
 
-#### is
+## Function
+|Name|Description|
+|--------|-----------|
+|[compose](src/function/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
+|[curry](src/function/curry)|Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.|
+|[debounce](src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
+|[once](src/function/once)|Ensure a given functionality only runs once.|
+|[partial](src/function/partial)|Generates a function that has one or more arguments "bound" or partially applied.|
+|[throttle](src/function/throttle)|Limits the number of times a function can be called in a given period.|
 
+
+## is
 [is.api](src/is/is.api) - A minimal API for the ```is``` functions below that provides ```not```, ```all``` and ```any``` interfaces. <br>
 <small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
 
-|Function|Description|
+|Name|Description|
 |--------|-----------|
 |[isArray](src/is/isArray)|Checks if `value` is an array.|
 |[isBoolean](src/is/isBoolean)|Checks if `value` is a boolean value.|
@@ -131,8 +141,8 @@ A collection of standalone javascript utility functions.
 |[isUndefined](src/is/isUndefined)|Checks if `value` is undefined.|
 
 
-#### DOM
-|Function|Description|
+## DOM
+|Name|Description|
 |--------|-----------|
 |[preloadImages](src/dom/preloadImages)|Asynchronsouly load images to browser so that can be cached.|
 |[isEventSupported](src/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
@@ -141,24 +151,18 @@ A collection of standalone javascript utility functions.
 |[whichTransitionEnd](src/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
 
-### HTML5 Canvas
-|Function|Description|
+## HTML5 Canvas
+|Name|Description|
 |--------|-----------|
 |[CanvasContext](src/canvas/canvasContext)|A class that provides jQuery-style chained access to 2D context methods and properties.|
 |[convertImageToBase64](src/canvas/convertImageToBase64)|Converts an image's content to Data URI scheme.|
 
 
-#### Misc
-|Function|Description|
+## Misc
+|Name|Description|
 |--------|-----------|
-|[compose](src/misc/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
 |[cookie](src/misc/cookie)|Create, read and delete cookies.|
-|[curry](src/misc/curry)|Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.|
-|[debounce](src/misc/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
-|[once](src/misc/once)|Ensure a given functionality only runs once.|
-|[partial](src/misc/partial)|Generates a function that has one or more arguments "bound" or partially applied.|
 |[poll](src/misc/poll)|Periodically check for application's status updates.|
-|[throttle](src/misc/throttle)|Limits the number of times a function can be called in a given period.|
 
 
 ## Installation

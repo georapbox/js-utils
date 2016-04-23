@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('arrays/chunk', function () {
+    describe('Array/chunk', function () {
         it('should create an array of elements split into groups the length of size specified', function () {
             expect(chunk([1, 2, 3, 4], 2)).toEqual([[1, 2], [3, 4]]);
 

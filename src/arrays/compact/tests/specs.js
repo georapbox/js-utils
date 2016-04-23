@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('arrays/compact', function () {
+    describe('Array/compact', function () {
         var arr = [0, 1, false, 2, '', 3, null];
 
         it('tracks all the arguments of its calls', function () {

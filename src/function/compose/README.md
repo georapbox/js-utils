@@ -1,4 +1,4 @@
-### [Misc](../) > compose
+### [Function](../) > compose
 
 ```js
 compose([func1] [, funct2] [, func3] [, ...])

@@ -1,4 +1,4 @@
-### [Misc](../) > once
+### [Function](../) > once
 
 ```js
 once(func, [, thisArg])

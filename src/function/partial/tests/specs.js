@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('misc/partial', function () {
+    describe('Function/partial', function () {
         function add() {
             var args = Array.prototype.slice.call(arguments);
             return args.reduce(function (accum, val) {

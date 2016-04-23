@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/removeSuffix', function () {
+    describe('String/removeSuffix', function () {
         it('removeSuffix(\'Hello world!\', \'world!\') should return "Hello "', function () {
             expect(removeSuffix('Hello world!', 'world!')).toEqual('Hello ');
         });

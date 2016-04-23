@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/subStrAfterChars', function () {
+    describe('String/subStrAfterChars', function () {
         it('With string "LOREM_IPSUM DOLOR_SIT AMET", The substring after the first occurence of "SIT ", should be "AMET"', function () {
             expect(subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ')).toBe('AMET');
         });

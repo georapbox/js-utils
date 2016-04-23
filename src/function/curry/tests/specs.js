@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('misc/curry', function () {
+    describe('Function/curry', function () {
         var sum = function (a, b, c) {
             return a + b + c;
         },

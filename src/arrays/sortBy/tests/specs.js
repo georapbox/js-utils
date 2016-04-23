@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('arrays/sortBy', function () {
+    describe('Array/sortBy', function () {
         var people = [
             {name: 'Elena', age: '2'},
             {name: 'George', age: '33'},

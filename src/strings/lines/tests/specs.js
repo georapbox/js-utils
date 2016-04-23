@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    describe('strings/lines', function () {
+    describe('String/lines', function () {
         var str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
 
         it('should return an array with the lines from a string', function () {

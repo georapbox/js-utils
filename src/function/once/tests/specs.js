@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('misc/once', function () {
+    describe('Function/once', function () {
         it('should execute a function only one time', function () {
             var num = 0;
             var canOnlyFireOnce = once(function () {

@@ -1,4 +1,4 @@
-### [Misc](../) > throttle
+### [Function](../) > throttle
 
 ```js
 throttle(callback, n)

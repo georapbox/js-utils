@@ -1,4 +1,4 @@
-### [Misc](../) > partial
+### [Function](../) > partial
 
 ```js
 partial(fn [, args...])

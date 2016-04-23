@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('misc/compose', function () {
+    describe('Function/compose', function () {
         function capitalize(item) {
             return item.toUpperCase();
         }

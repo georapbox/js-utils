@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('strings/startsWith', function () {
+    describe('String/startsWith', function () {
         it('"Hello world!" starts with "Hello" is true', function () {
             expect(startsWith('Hello world', 'Hello')).toEqual(true);
         });
