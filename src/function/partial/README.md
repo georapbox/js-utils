@@ -3,15 +3,15 @@
 ```js
 partial(fn [, args...])
 ```
-> Creates a function that invokes `func` with `partials` **prepended** to the arguments it receives.
+> Creates a function that invokes `func` with `args` **prepended** to the arguments it receives.
 
 - `fn {Function}`
 
-The function to be invoked with the bound arguments.
+The function to be invoked with the partially applied arguments.
 
 - `[args...] {*}`
 
-Some number of the originally-specified arguments to be passed.
+The arguments to be partially applied.
 
 #### Examples
 ```js
