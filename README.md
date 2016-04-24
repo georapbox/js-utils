@@ -97,6 +97,7 @@ A collection of standalone javascript utility functions.
 ## Function
 |Name|Description|
 |--------|-----------|
+|[before](src/function/before)|Creates a function that invokes `func` while it’s called less than `n` times.|
 |[compose](src/function/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
 |[curry](src/function/curry)|Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.|
 |[debounce](src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
