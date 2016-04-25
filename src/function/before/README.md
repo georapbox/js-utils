@@ -6,15 +6,15 @@ before(n, func)
 > Creates a function that invokes `func` while it’s called less than n times.
 > `func` is invoked with the this binding and arguments of the created function.
 
-`n {Number}`
+- `n {Number}`
 
-- The number of calls before `func` is no longer invoked. A positive integer is expected.<br>
+The number of calls before `func` is no longer invoked. A positive integer is expected.<br>
 If a negative number or 0, `func` is never invoked.<br>
 If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
 
-`func {Function}`
+- `func {Function}`
 
-- The function to restrict.
+The function to restrict.
 
 #### Example
 ```js
