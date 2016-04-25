@@ -4,7 +4,7 @@
 delay(func, [wait=0] /*, args...*/)
 ```
 > Invokes `func` after `wait` milliseconds.
-> Any additional arguments are provided to func when it’s invoked.
+> Any additional arguments are provided to `func` when it’s invoked.
 > Returns the timer's id.
 
 - `func {Function}`

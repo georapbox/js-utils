@@ -1,6 +1,6 @@
 /**
  * Invokes `func` after `wait` milliseconds.
- * Any additional arguments are provided to func when it’s invoked.
+ * Any additional arguments are provided to `func` when it’s invoked.
  * @param {Function} func The function to delay.
  * @param {Number} [wait=0] The number of milliseconds to delay invokation.
  * @param {*} [args] The arguments to invoke `func` with.
