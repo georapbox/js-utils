@@ -8,8 +8,9 @@ before(n, func)
 
 `n {Number}`
 
-- The number of calls before `func` is no longer invoked. A positive integer is expected.
-`func` is never invoked if any of the following are passed: a negative number, `NaN`, '-Infinity', `Infinity`
+- The number of calls before `func` is no longer invoked. A positive integer is expected.<br>
+If a negative number or 0, `func` is never invoked.<br>
+If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
 
 `func {Function}`
 

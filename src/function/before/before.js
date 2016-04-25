@@ -1,8 +1,9 @@
 /**
- * Creates a function that invokes `func` while it’s called less than n times.
+ * Creates a function that invokes `func` while it’s called less than `n` times.
  * `func` is invoked with the this binding and arguments of the created function.
  * @param {Number} n The number of calls before `func` is no longer invoked. A positive integer is expected.
- *        `func` is never invoked if any of the following are passed: a negative number, `NaN`, '-Infinity', `Infinity`
+ *        If a negative number or 0, `func` is never invoked.
+ *        If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
  * @param {Function} func The function to restrict.
  * @return {Function} Returns the new restricted function.
  */
