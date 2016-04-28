@@ -190,7 +190,7 @@ if (!Array.prototype.indexOf) {
  * array.lastIndexOf(searchElement[, fromIndex])
  * The lastIndexOf() method returns the last index at which a given element can be found in the array,
  * or -1 if it is not present. The array is searched backwards, starting at fromIndex.
- * @param  searchElement: Element to locate in the array.
+ * @param searchElement: Element to locate in the array.
  * @param {Number} [fromIndex]: The index at which to start searching backwards. Defaults to the array's length.
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
  */
@@ -234,9 +234,9 @@ if (!Array.prototype.lastIndexOf) {
  * The map() method creates a new array with the results of
  * calling a provided function on every element in this array.
  * @param {Function} callback: Function that produces an element of the new Array, taking three arguments:
- *                             1. currentValue: The current element being processed in the array.
- *                             2. index: The index of the current element being processed in the array.
- *                             3. array: The array map was called upon.
+ *        1. currentValue: The current element being processed in the array.
+ *        2. index: The index of the current element being processed in the array.
+ *        3. array: The array map was called upon.
  * @param [thisArg]: Value to use as this when executing callback.
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
  */
@@ -352,11 +352,11 @@ if (!Array.prototype.some) {
  * arr.reduce(callback[, initialValue])
  * The reduce() method applies a function against an accumulator and each value of the array
  * (from left-to-right) has to reduce it to a single value.
- * @param {function} callback Function to execute on each value in the array, taking four arguments:
- *                            1. previousValue: The value previously returned in the last invocation of the callback, or initialValue, if supplied.
- *                            2. currentValue: The current element being processed in the array.
- *                            3. index: The index of the current element being processed in the array.
- *                            4. array: The array reduce was called upon.
+ * @param {Function} callback Function to execute on each value in the array, taking four arguments:
+ *        1. previousValue: The value previously returned in the last invocation of the callback, or initialValue, if supplied.
+ *        2. currentValue: The current element being processed in the array.
+ *        3. index: The index of the current element being processed in the array.
+ *        4. array: The array reduce was called upon.
  * @param {object} [initialValue] Object to use as the first argument to the first call of the callback.
  * MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
  */
@@ -389,4 +389,92 @@ if (!Array.prototype.reduce) {
         }
         return value;
     };
+}
+
+/**
+ * Array.from(arrayLike[, mapFn[, thisArg]])
+ * The Array.from() method creates a new Array instance from an array-like or iterable object.
+ * In ES6, class syntax allows for the subclassing of both built-in and user defined classes;
+ * as a result, class-side static methods such as Array.from are "inherited" by subclasses
+ * of Array and create new instances of the subclass, not Array.
+ * @param {Object} arrayLike An array-like or iterable object to convert to an array.
+ * @param {Function} [mapFn] Optional. Map function to call on every element of the array.
+ * @param {Object} [thisArg] Optional. Value to use as this when executing mapFn.
+ * MDN: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+ */
+if (!Array.from) {
+    Array.from = (function () {
+        var toStr = Object.prototype.toString;
+        var isCallable = function (fn) {
+            return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+        };
+        var toInteger = function (value) {
+            var number = Number(value);
+            if (isNaN(number)) { return 0; }
+            if (number === 0 || !isFinite(number)) { return number; }
+            return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+        };
+        var maxSafeInteger = Math.pow(2, 53) - 1;
+        var toLength = function (value) {
+            var len = toInteger(value);
+            return Math.min(Math.max(len, 0), maxSafeInteger);
+        };
+
+        // The length property of the from method is 1.
+        return function from(arrayLike/*, mapFn, thisArg */) {
+            // 1. Let C be the this value.
+            var C = this;
+
+            // 2. Let items be ToObject(arrayLike).
+            var items = Object(arrayLike);
+
+            // 3. ReturnIfAbrupt(items).
+            if (arrayLike == null) {
+                throw new TypeError('Array.from requires an array-like object - not null or undefined');
+            }
+
+            // 4. If mapfn is undefined, then let mapping be false.
+            var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+            var T;
+            if (typeof mapFn !== 'undefined') {
+                // 5. else
+                // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
+                if (!isCallable(mapFn)) {
+                    throw new TypeError('Array.from: when provided, the second argument must be a function');
+                }
+
+                // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
+                if (arguments.length > 2) {
+                    T = arguments[2];
+                }
+            }
+
+            // 10. Let lenValue be Get(items, "length").
+            // 11. Let len be ToLength(lenValue).
+            var len = toLength(items.length);
+
+            // 13. If IsConstructor(C) is true, then
+            // 13. a. Let A be the result of calling the [[Construct]] internal method of C with an argument list containing the single item len.
+            // 14. a. Else, Let A be ArrayCreate(len).
+            var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+
+            // 16. Let k be 0.
+            var k = 0;
+            // 17. Repeat, while k < len… (also steps a - h)
+            var kValue;
+            while (k < len) {
+                kValue = items[k];
+                if (mapFn) {
+                    A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+                } else {
+                    A[k] = kValue;
+                }
+                k += 1;
+            }
+            // 18. Let putStatus be Put(A, "length", len, true).
+            A.length = len;
+            // 20. Return A.
+            return A;
+        };
+    }());
 }

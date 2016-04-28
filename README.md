@@ -26,6 +26,7 @@ A collection of standalone javascript utility functions.
 
 |[Polyfills](src/arrays/polyfills) - Collection of array polyfills.|Description|
 |------------------------------------------------------------------|-----------|
+|[Array.from()](src/arrays/polyfills#arrays--from)|The Array.from() method creates a new Array instance from an array-like or iterable object.|
 |[Array.prototype.every()](src/arrays/polyfills#arrays--arrayprototypeevery)|Tests whether all elements in the array pass the test implemented by the provided function.|
 |[Array.prototype.filter()](src/arrays/polyfills#arrays--arrayprototypefilter)|Creates a new array with all elements that pass the test implemented by the provided function.|
 |[Array.prototype.forEach()](src/arrays/polyfills#arrays--arrayprototypeforeach)|Executes a provided function once per array element.|
