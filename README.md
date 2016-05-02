@@ -140,6 +140,7 @@ A collection of standalone javascript utility functions.
 |[isOddNum](src/is/isOddNum)|Checks if a number is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
 |[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
+|[isSafeInteger](src/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
 |[isString](src/is/isString)|Checks if `value` is a string.|
 |[isTrue](src/is/isTrue)|Checks if `value` is true (strict equality).|
 |[isTruthy](src/is/isTruthy)|Checks if `value` is truthy.|
