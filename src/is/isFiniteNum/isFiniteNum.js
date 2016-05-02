@@ -5,8 +5,12 @@
  */
 function isFiniteNum(value) {
     'use strict';
-    if (value == null || typeof value !== 'number') {
-        return false;
+
+    if (Number.isFinite) {
+        return Number.isFinite(value);
     }
-    return value !== Infinity && value !== -Infinity && value === value;
+
+    return value != null && typeof value === 'number' &&
+        value !== Infinity && value !== -Infinity &&
+        value === value;
 }
