@@ -20,22 +20,16 @@
             expect(isFiniteNum(0)).toBe(true);
         });
 
-        it('isFiniteNum("0") should throw TypeError', function () {
-            expect(function () {
-                return isFiniteNum('0');
-            }).toThrow();
+        it('isFiniteNum("0") should return false', function () {
+            expect(isFiniteNum('0')).toBe(false);
         });
 
-        it('isFiniteNum(null) should throw TypeError', function () {
-            expect(function () {
-                return isFiniteNum(null);
-            }).toThrow();
+        it('isFiniteNum(null) should return false', function () {
+            expect(isFiniteNum(null)).toBe(false);
         });
 
-        it('isFiniteNum(undefined) should throw TypeError', function () {
-            expect(function () {
-                return isFiniteNum(undefined);
-            }).toThrow();
+        it('isFiniteNum(undefined) should return false', function () {
+            expect(isFiniteNum(undefined)).toBe(false);
         });
 
         it('isFiniteNum(2e64) should return true', function () {

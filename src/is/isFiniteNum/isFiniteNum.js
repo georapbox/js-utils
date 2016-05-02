@@ -5,12 +5,8 @@
  */
 function isFiniteNum(value) {
     'use strict';
-    if (value == null || (Object.prototype.toString.call(value) !== '[object Number]' && typeof value !== 'number')) {
-        throw {
-            name: 'TypeError',
-            message: 'Expected a parameter of type "Number", instead saw ' + typeof value
-        };
+    if (value == null || typeof value !== 'number') {
+        return false;
     }
-    return value !== Infinity && value !== -Infinity && // check against infinity
-        value === value;                                // check if not NaN
+    return value !== Infinity && value !== -Infinity && value === value;
 }
