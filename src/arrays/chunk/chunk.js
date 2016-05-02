@@ -10,7 +10,7 @@
 function chunk(array, size) {
     'use strict';
 
-    var MAX_INTEGER = 1.7976931348623157e+308,
+    var MAX_INTEGER = Number.MAX_VALUE || 1.7976931348623157e+308,
         length, result, index, resIndex;
 
     size = size === Infinity || size === -Infinity ?
