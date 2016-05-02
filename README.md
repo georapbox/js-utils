@@ -118,6 +118,7 @@ A collection of standalone javascript utility functions.
 |Name|Description|
 |--------|-----------|
 |[isArray](src/is/isArray)|Checks if `value` is an array.|
+|[isArrayLike](src/is/isArrayLike)|Checks if `value` is array-like.|
 |[isBoolean](src/is/isBoolean)|Checks if `value` is a boolean value.|
 |[isDate](src/is/isDate)|Checks if `value` is a date.|
 |[isElement](src/is/isElement)|Checks if `value` is a DOM element.|
