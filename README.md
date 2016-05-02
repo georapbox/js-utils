@@ -131,7 +131,6 @@ A collection of standalone javascript utility functions.
 |[isFunction](src/is/isFunction)|Checks if `value` is a function.|
 |[isHexadecimal](src/is/isHexadecimal)|Checks if `value` matches a hexadecimal regular expression.|
 |[isHexColor](src/is/isHexColor)|Checks if `value` matches a hexadecimal color regular expression.|
-|[isInfiniteNum](src/is/isInfiniteNum)|Checks if `value` is an infinit number.|
 |[isInteger](src/is/isInteger)|Checks if `value` is an integer number.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNonExisty](src/is/isNonExisty)|Checks if `value` is non existy (null or undefined).|
