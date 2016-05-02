@@ -4,16 +4,24 @@
     'use strict';
 
     describe('is/isNaN', function () {
-        it('isNaN(NaN) should return true', function () {
-            expect(isNaN(NaN)).toEqual(true);
-        });
+        it('check if value is NaN', function () {
+            expect(isNaN(NaN)).toBe(true);
 
-        it('isNaN(10) should return false', function () {
-            expect(isNaN(10)).toEqual(false);
-        });
+            expect(isNaN(10)).toBe(false);
 
-        it('isNaN(undefined + 5) should return true', function () {
-            expect(isNaN(undefined + 5)).toEqual(true);
+            expect(isNaN(undefined + 5)).toBe(true);
+
+            expect(isNaN(Number.NaN)).toBe(true);
+
+            expect(isNaN('NaN')).toBe(false);
+
+            expect(isNaN(undefined)).toBe(false);
+
+            expect(isNaN({})).toBe(false);
+
+            expect(isNaN(true)).toBe(false);
+
+            expect(isNaN(null)).toBe(false);
         });
     });
 }());
