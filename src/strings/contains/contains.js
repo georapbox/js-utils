@@ -11,12 +11,12 @@ function contains(subjectString, searchString, position) {
     var subjectLength,
         searchLength;
 
-    if (String.prototype.includes) {
-        return subjectString.includes(searchString, position);
-    }
-
     if (!searchString) {
         return false;
+    }
+
+    if (String.prototype.includes) {
+        return subjectString.includes(searchString, position);
     }
 
     position = parseInt(position, 10) || 0;
