@@ -4,51 +4,51 @@
 chunk(array, [size=0])
 ```
 
->  Creates an array of elements split into groups the length of `size`.
-> If array can’t be split evenly, the final chunk will be the remaining elements.
+Creates an array of elements split into groups the length of `size`.
+If array can’t be split evenly, the final chunk will be the remaining elements.
 
-- `array {Array}`
+#### Arguments
 
-The array to process.
+- `array` _(array)_: The array to process.
 
-- `[size=0] {Number}`
+- `[size=0]` _(number)_: Optional. Default value is 0. The length of each chunk. If `size` is a float number, it is converted to integer using `parseInt`. If `size` is lower than 1, an empty array is returned.
 
-The length of each chunk.<br/>
-If `size` is a float number, it is converted to integer using `parseInt`.<br/>
-If `size` is lower than 1, an empty array is returned.
+#### Returns
 
-#### Example
+_(array)_: Returns the new array containing chunks.
+
+#### Examples
 ```js
 chunk([1, 2, 3, 4], 2);
-// =>  [[1, 2], [3, 4]]
+// ->  [[1, 2], [3, 4]]
 
 chunk([1, 2, 3, 4, 5], 2);
-// =>  [[1, 2], [3, 4], [5]]
+// ->  [[1, 2], [3, 4], [5]]
 
 chunk([1, 2, 3, 4, 5], -1);
-// =>  []
+// ->  []
 
 chunk([1, 2, 3, 4, 5]);
-// =>  []
+// ->  []
 
 chunk([1, 2, 3, 4, 5], null);
-// =>  []
+// ->  []
 
 chunk([1, 2, 3, 4], 3);
-// =>  [[1, 2, 3], [4]]
+// ->  [[1, 2, 3], [4]]
 
 chunk([1, 2, 3, 4], '3');
-// =>  [[1, 2, 3], [4]]
+// ->  [[1, 2, 3], [4]]
 
 chunk([1, 2, 3, 4], Infinity);
-// =>  [[1, 2, 3, 4]]
+// ->  [[1, 2, 3, 4]]
 
 chunk([1, 2, 3, 4], -Infinity);
-// =>  []
+// ->  []
 
 chunk([1, 2, 3, 4], 2.7);
-// =>  [[1, 2], [3, 4]]
+// ->  [[1, 2], [3, 4]]
 
 chunk([1, 2, 3, 4], 'test');
-// =>  []
+// ->  []
 ```
