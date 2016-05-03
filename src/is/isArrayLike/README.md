@@ -16,11 +16,24 @@ The value to check.
 ```js
 function noop() {}
 
+function dummy() {
+    return arguments;
+}
+
+var args = dummy();
+
+
 isArrayLike([1, 2, 3]));
 // -> true
 
 isArrayLike('abc'));
 // -> true
+
+isArrayLike(0));
+// -> false
+
+isArrayLike({foo: 'bar'}));
+// -> false
 
 isArrayLike(noop));
 // -> false
@@ -34,7 +47,6 @@ isArrayLike());
 isArrayLike(document.body.children);
 // -> true
 
-// Inside a function's body
-isArrayLike(arguments));
+isArrayLike(args));
 // -> true
 ```
