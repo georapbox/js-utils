@@ -1,26 +1,30 @@
 /**
  * Creates a new array with all elements that pass the test implemented by the provided callback function.
- * @param {array} arr The array to iterate over.
- * @callback {function} callback Function to test each element of the array.
- * @param {object} [thisArg] Value to use as "this" when executing callback.
- * @returns {array} The result array.
+ * @param {Array} array The array to iterate over.
+ * @callback {Function} callback Function to test each element of the array.
+ * @param {Object} [thisArg] Value to use as `this` when executing callback.
+ * @returns {Array} The result array.
  */
-function filter(arr, callback, thisArg) {
+function filter(array, callback, thisArg) {
     'use strict';
 
-    if (arr == null) { // jshint ignore:line
+    var toString = Object.prototype.toString,
+        isArray = toString.call(array) === '[object Array]',
+        len, res;
+
+    if (array == null || !isArray) {
         return [];
     }
 
     if (typeof callback !== 'function') {
-        throw new TypeError('filter expects a callback function.');
+        throw new TypeError('Expected a function');
     }
 
-    var len = arr.length,
-        res = arr.slice();
+    len = array.length;
+    res = array.slice();
 
     while (len--) {
-        if (!callback.call(thisArg, arr[len], len, arr)) {
+        if (!callback.call(thisArg, array[len], len, array)) {
             res.splice(len, 1);
         }
     }
