@@ -4,13 +4,15 @@
 isArrayLike(value)
 ```
 
-> Checks if value is array-like.
+Checks if value is array-like.
 A value is considered array-like if it’s not a function and has a `value.length` that’s an
 integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
-- `value {*}`
+**NOTE:** If an object has a property named `length`, `isArrayLike` returns true.
 
-The value to check.
+#### Arguments
+
+- `value` _(*)_: The value to check.
 
 #### Example
 ```js
