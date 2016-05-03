@@ -4,19 +4,18 @@
 findIndex(array, callback)
 ```
 
-> Returns the index of the first element of a collection that passes the callback check.
+Returns the index of the first element of a collection that passes the callback check.
+If no element passes the callback check, returns -1.
 
-> If no element passes the callback check, returns -1.
+- `array` _(array)_: The array to check.
 
-- <code>array {array}</code>
+- `callback` _(function)_: The function called per iteration.
 
-The array to check.
+#### Returns
 
-- <code>callback {function}</code>
+_(number)_: Returns the index of the first element that matches the `callback` check.
 
-The function called per iteration.
-
-#### Example
+#### Examples
 ```js
 var heroes = [
     {
@@ -42,12 +41,12 @@ var numbers = [1, 2, 3];
 findIndex(characters, function (chr, index, array) {
     return chr === 'E';
 });
-// => 4
+// -> 4
 
 findIndex(heroes, function (hero, index, array) {
     return hero.name === 'Clark Kent';
 });
-// => 1
+// -> 1
 
 findIndex(heroes, function (hero, index, array) {
     if (hero.specialPowers) {
@@ -56,10 +55,10 @@ findIndex(heroes, function (hero, index, array) {
         }
     }
 });
-// => 2
+// -> 2
 
 findIndex(numbers, function (n) {
     return n > 10;
 });
-// => -1
+// -> -1
 ```
