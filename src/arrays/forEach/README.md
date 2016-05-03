@@ -4,34 +4,29 @@
 forEach(array, callback [, thisArg])
 ```
 
-> Executes a provided callback function once per array element.
-> To break from the iteration at any time, have the callback <code>return false</code>.
+Executes a provided callback function once per array element. To break from the iteration at any time, have the callback return `false`.
 
-- <code>array {array}</code>
+#### Arguments
 
-The array to iterate over.
+- `array` _(array)_: The array to iterate over.
 
-- <code>callback {function}</code>
+- `callback` _(function)_: The callback function to execute per array element.
 
-The callback function to execute per array element.
+- `[thisArg]` _(object)_: Optional. Value to use as `this` when executing callback.
 
-- <code>[thisArg] {object}</code>
-
-Value to use as <code>this</code> when executing callback.
-
-#### Example
+#### Examples
 ```js
 var arr = ['a', 'b', 'c', 'd', 'e'];
 
 forEach(arr, function (item, index, obj) {
     console.log(item);
 });
-// => a, b, c, d, e
+// -> a, b, c, d, e
 
 forEach(arr, function (item, index, obj) {
     console.log(index);
 });
-// => 0, 1, 2, 3, 4
+// -> 0, 1, 2, 3, 4
 
 forEach(arr, function (item, index, obj) {
     console.log(item);
@@ -39,7 +34,7 @@ forEach(arr, function (item, index, obj) {
         return false;
     }
 });
-// => a, b, c
+// -> a, b, c
 
 forEach(arr, function (item, index, obj) {
     console.log(this);
