@@ -4,14 +4,19 @@
 compact(array)
 ```
 
-> Creates an array with all falsey values removed.
-> 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
+Creates an array with all falsy values removed.
+`false`, `null`, `0`, `""`, `undefined`, and `NaN` are falsy.
 
-- <code>array {array}</code>
+#### Arguments
 
-The array to compact.
+- `array` _(array)_: The array to compact.
+
+#### Returns
+
+_(array)_: Returns the new array of filtered values.
 
 #### Example
 ```js
-compact([0, 1, false, 2, '', 3, null]); // [1, 2, 3]
+compact([0, 1, false, 2, '', 3, null]);
+// -> [1, 2, 3]
 ```
