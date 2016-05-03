@@ -1,9 +1,8 @@
 /**
- * Returns the index of the first element of a collection that passes the callback check,
- * iterating the elements from right to left.
- * @param   {Array}    array    The array to check.
- * @param   {Function} callback The function called per iteration.
- * @returns {Number}   The index of the first element that matches the callabck check.
+ * Returns the index of the last element of a collection that passes the callback check.
+ * @param {Array} array The array to check.
+ * @param {Function} callback The function called per iteration.
+ * @returns {Number} The index of the last element that matches the callback check.
  */
 function findLastIndex(array, callback) {
     'use strict';

@@ -4,19 +4,20 @@
 findLastIndex(array, callback)
 ```
 
-> Returns the index of the first element of a collection that passes the callback check, iterating the elements from **right to left**.
+Returns the index of the last element of a collection that passes the callback check.
+If no element passes the callback check, returns -1.
 
-> If no element passes the callback check, returns -1.
+#### Arguments
 
-- <code>array {array}</code>
+- `array` _(array)_: The array to check.
 
-The array to check.
+- `callback` _(function)_: The function called per iteration.
 
-- <code>callback {function}</code>
+#### Returns
 
-The function called per iteration.
+_(number)_: The index of the last element that matches the `callback` check.
 
-#### Example
+#### Examples
 ```js
 var heroes = [
     {
@@ -42,12 +43,12 @@ var numbers = [1, 2, 3];
 findLastIndex(characters, function (chr, index, array) {
     return chr === 'E';
 });
-// => 7
+// -> 7
 
 findLastIndex(heroes, function (hero, index, array) {
     return hero.name === 'Clark Kent';
 });
-// => 1
+// -> 1
 
 findLastIndex(heroes, function (hero, index, array) {
     if (hero.specialPowers) {
@@ -56,10 +57,10 @@ findLastIndex(heroes, function (hero, index, array) {
         }
     }
 });
-// => 2
+// -> 2
 
 findLastIndex(numbers, function (n) {
     return n > 10;
 });
-// => -1
+// -> -1
 ```

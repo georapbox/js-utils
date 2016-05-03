@@ -7,6 +7,8 @@ findIndex(array, callback)
 Returns the index of the first element of a collection that passes the callback check.
 If no element passes the callback check, returns -1.
 
+#### Arguments
+
 - `array` _(array)_: The array to check.
 
 - `callback` _(function)_: The function called per iteration.
