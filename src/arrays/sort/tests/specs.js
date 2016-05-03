@@ -22,5 +22,10 @@
         it('should sort strings in descending order', function () {
             expect(sort(drinks, false)).toEqual(['wine', 'tequila', 'martini', 'coffee']);
         });
+
+        it('should sort numbers in ascending order and remove values like null, undefined or NaN', function () {
+            expect(sort([4, 6, undefined, 2, 9, -10, 100, 321, -2, null, 99], true))
+                .toEqual([-10, -2, 2, 4, 6, 9, 99, 100, 321]);
+        });
     });
 }());
