@@ -1,20 +1,24 @@
 ### [Arrays](../) > sort
 
 ```js
-sort(arr [, ascending=true])
+sort(array [, ascending=true])
 ```
 
-> Sorts an array (not in place) of **primitive values**.
+Sorts an array (not in place) of **primitive values**.
 
-- `arr {Array}`
+**NOTE:** For legacy browsers' support use `Array.prototype.map` polyfill.
 
-The array to sort.
+#### Arguments
 
-- `[ascending=true] {Boolean}`
+- `array` _(array)_: The array to sort.
 
-The sorting order. Default is `true` (ascending).
+- `[ascending=true]` _(boolean)_: Optional. Default value is `true` (ascending). The sorting order.
 
-#### Example
+#### Returns
+
+_(array)_: A new sorted array.
+
+#### Examples
 ```js
 sort(['Delta', 'Omega', 'alpha', 'CHARLIE', 'lorem', 'bravo']);
 // -> ['alpha', 'bravo', 'CHARLIE', 'Delta', 'lorem', 'Omega']

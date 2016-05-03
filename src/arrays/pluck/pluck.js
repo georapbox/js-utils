@@ -2,7 +2,7 @@
  * Retrieves the value of a specified property from all elements in an array.
  * @param {Array} array The array to iterate over.
  * @param {String} key The name of the property to pluck.
- * @returns {Array} an array with the values.
+ * @returns {Array} Returns the result array.
  */
 function pluck(array, key) {
     'use strict';

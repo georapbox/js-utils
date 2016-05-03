@@ -4,13 +4,15 @@
 shuffle(array)
 ```
 
-**NOTE:** Prior to v1.3.3, `shuffle` used to process and alter the original array. Now returns a new copy of the original source array leaving the last one intact for purity.
+Creates a new array with its elements' order randomeized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.
 
-> Returns a new array with its elements' order randomeized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+#### Arguments
 
-- <code>array {array}</code>
+- `array` _(array)_: The original array to shuffle.
 
-The original array to shuffle.
+#### Returns
+
+_(array)_: A new shuffled array.
 
 #### Example
 ```js

@@ -1,27 +1,22 @@
 ### [Arrays](../) > uniq
 
 ```js
-uniq(arr)
+uniq(array)
 ```
 
-> Removes duplicate primitive values from an array. Returns a new duplicates-free array.
+Removes duplicate primitive values from an array. Returns a new duplicates-free array.
 
-- <code>arr {array}</code>
+#### Arguments
 
-The array to iterate over.
+- `array` _(array)_: The array to iterate over.
+
+#### Returns
+
+_(array)_: The result array.
 
 #### Example
 ```js
-var arr = [
-	'a',
-	'a',
-	'b',
-	true,
-	'2',
-	2,
-	false,
-	true
-];
+var arr = ['a', 'a', 'b', true, '2', 2, false, true];
 
-uniq(arr); // ["a", "b", true, "2", 2, false]
+uniq(arr); // -> ['a', 'b', true, '2', 2, false]
 ```
