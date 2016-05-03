@@ -4,18 +4,27 @@
 isNull(value)
 ```
 
-> Checks if <code>value</code> is null.
+Checks if `value` is `null`.
 
-> Returns true is 'value' is null, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is null, else returns `false`.
+
+#### Examples
 ```js
-isNull(null); // => true
-isNull(true); // => false
-isNull({ a: 'a' }); // => false
-isNull(); // => false
+isNull(null);
+// -> true
+
+isNull(true);
+// -> false
+
+isNull({a: 'a'});
+// -> false
+
+isNull();
+// -> false
 ```

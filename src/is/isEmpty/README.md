@@ -4,17 +4,20 @@
 isEmpty(value)
 ```
 
-> Checks if `value` is empty.
-
-> Arrays, strings, or arguments objects with a length of 0 and plain objects containing no own enumerable or inherited from prototypes properties are considered "empty".
+Checks if `value` is empty.
+Arrays, strings, or arguments objects with a length of 0 and plain objects containing no own enumerable or inherited from prototypes properties are considered "empty".
 
 **NOTE:** Use with caution as DOM elements, primitive strings/numbers, host objects may not give consistent results across browsers.
 
-- `value {*}`
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is considered empty, else returns `false`.
+
+#### Examples
 ```js
 isEmpty(['a', 'b', 'c', 'd']);
 // -> false

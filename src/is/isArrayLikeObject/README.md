@@ -4,15 +4,19 @@
 isArrayLikeObject(value)
 ```
 
-> Checks if value is array-like and object as well.
+Checks if `value` is array-like and object as well.
 A value is considered array-like if it’s not a function and has a `value.length` that’s an
 integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
-- `value {*}`
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is array-like and object as well, else returns `false`.
+
+#### Examples
 ```js
 function noop() {}
 

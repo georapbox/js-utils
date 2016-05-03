@@ -4,19 +4,36 @@
 isObject(value)
 ```
 
-> Checks if <code>value</code> is the language type of <code>Object</code>.
+Checks if `value` is the language type of `Object`.
 
-- <code>value {\*}</code>
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is object, else returns `false`.
+
+#### Examples
 ```js
-isObject({}); // => true
-isObject(function test() {}); // => true
-isObject([1, 2, 3]); // => true
-isObject('Hello World!'); // => false
-isObject(false); // => false
-isObject(new String('Hello world')); // => true
-isObject(); // => false
+isObject({});
+// -> true
+
+isObject(function test() {});
+// -> true
+
+isObject([1, 2, 3]);
+// -> true
+
+isObject('Hello World!');
+// -> false
+
+isObject(false);
+// -> false
+
+isObject(new String('Hello world'));
+// -> true
+
+isObject();
+// -> false
 ```

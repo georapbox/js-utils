@@ -4,16 +4,21 @@
 isDate(value)
 ```
 
-> Checks if <code>value</code> is a date.
+Checks if `value` is a date.
 
-> Returs true if value is a date.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is a date, else returns `false`.
+
+#### Examples
 ```js
-isDate(new Date()); // => true
-isDate(new Date().getTime()); // => false
+isDate(new Date());
+// -> true
+
+isDate(new Date().getTime());
+// -> false
 ```

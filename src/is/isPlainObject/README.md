@@ -4,15 +4,19 @@
 isPlainObject(value)
 ```
 
-> Checks if `value` is a plain object (created using "{}" or "new Object")
+Checks if `value` is a plain object (created using "{}" or "new Object")
 
 **NOTE:** Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
 
-- `value {*}`
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is plain object, else returns `false`.
+
+#### Examples
 ```js
 function Foo() {
     this.a = 1;

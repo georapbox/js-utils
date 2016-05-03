@@ -4,22 +4,39 @@
 isFalsy(value)
 ```
 
-> Checks if <code>value</code> is falsy.
+Checks if `value` is falsy.
 
-> Returns true is 'value' is falsy, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is falsy, else returns `false`.
+
+#### Examples
 ```js
-isFalsy(true); // => false
-isFalsy(' '); // => false
-isFalsy(1); // => false
-isFalsy(false); // => true
-isFalsy(''); // => true
-isFalsy(); // => true
-isFalsy(0); // => true
-isFalsy(NaN); // => true
+isFalsy(true);
+// -> false
+
+isFalsy(' ');
+// -> false
+
+isFalsy(1);
+// -> false
+
+isFalsy(false);
+// -> true
+
+isFalsy('');
+// -> true
+
+isFalsy();
+// -> true
+
+isFalsy(0);
+// -> true
+
+isFalsy(NaN);
+// -> true
 ```

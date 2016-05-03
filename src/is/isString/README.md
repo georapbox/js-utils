@@ -4,18 +4,27 @@
 isString(value)
 ```
 
->Checks if <code>value</code> is string.
+Checks if `value` is string.
 
->Returns true if <code>value</code> is a string, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is string, else returns `false`.
+
+#### Examples
 ```js
-isString(['a', 'b', 'c', 'd']); // ==> false
-isString(100); // ==> false
-isString('Lorem ipsum dolor sit amet'); // ==> true
-isString({ a: 'a', b: 'b' }); // ==> false
+isString(['a', 'b', 'c', 'd']);
+// -> false
+
+isString(100);
+// -> false
+
+isString('Lorem ipsum dolor sit amet');
+// -> true
+
+isString({ a: 'a', b: 'b' });
+// -> false
 ```

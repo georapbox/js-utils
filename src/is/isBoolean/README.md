@@ -4,18 +4,27 @@
 isBoolean(value)
 ```
 
-> Checks if <code>value</code> is a boolean value.
+Checks if `value` is a boolean value.
 
-> Returns true is 'value' is boolean, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is boolean, else returns `false`.
+
+#### Examples
 ```js
-isBoolean(true); // => true
-isBoolean(false); // => true
-isBoolean({ a: 'a' }); // => false
-isBoolean(null); // => false
+isBoolean(true);
+// -> true
+
+isBoolean(false);
+// -> true
+
+isBoolean({a: 'a'});
+// -> false
+
+isBoolean(null);
+// -> false
 ```

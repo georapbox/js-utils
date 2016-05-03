@@ -4,13 +4,17 @@
 isEmail(value)
 ```
 
-> Validates a string as email address.
+Validates a string as email address.
 
-- `value {String}`
+#### Arguments
 
-The string to validate.
+- `value` _(string)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is a valid email, else returns `false`.
+
+#### Examples
 ```js
 isEmail('me@example.com';
 // -> true

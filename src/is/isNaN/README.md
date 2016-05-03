@@ -4,15 +4,19 @@
 isNaN(value)
 ```
 
-> Determines whether a value is NaN or not. <br/>
+Checks if `value` is `NaN` or not.
 
-> NOTE: NaN is of type "number" and it is also the only primitive value which does not equal itself.
+***NOTE:*** `NaN` is of type "number" and it is also the only primitive value which does not equal itself.
 
-- `value {*}`
+#### Arguments
 
-The value to check if is `NaN`.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is `NaN`, else returns `false`.
+
+#### Examples
 ```js
 isNaN(5);
 // -> false

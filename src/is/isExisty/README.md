@@ -4,17 +4,24 @@
 isExisty(value)
 ```
 
-> Checks if <code>value</code> is existy (Not null or undefined).
+Checks if `value` is existy (Not null or undefined).
 
-> Returns true is 'value' is existy, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is existy, else returns `false`.
+
+#### Examples
 ```js
-isExisty('Foo'); // => true
-isExisty(null); // => false
-isExisty(); // => false
+isExisty('Foo');
+// -> true
+
+isExisty(null);
+// -> false
+
+isExisty();
+// -> false
 ```

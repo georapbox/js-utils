@@ -4,20 +4,29 @@
 isUndefined(value)
 ```
 
-> Checks if <code>value</code> is undefined.
+Checks if `value` is `undefined`.
 
-> Returns true is 'value' is undefined, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is undefined, else returns `false`.
+
+#### Examples
 ```js
 var foo;
 
-isUndefined(foo); // => true
-isUndefined(null); // => false
-isUndefined({a: 'a'}); // => false
-isUndefined(); // => true
+isUndefined(foo);
+// -> true
+
+isUndefined(null);
+// -> false
+
+isUndefined({foo: 'bar'});
+// -> false
+
+isUndefined();
+// -> true
 ```

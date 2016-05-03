@@ -4,15 +4,24 @@
 isElement(value)
 ```
 
-> Checks if <code>value</code> is a DOM element.
+Checks if `value` is a DOM element.
 
-- <code>value {\*}</code>
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is a DOM element, else returns `false`.
+
+#### Examples
 ```js
-isElement('Lorem ipusm dolr sit amet.'); // => false
-isElement(document.body); // => true
-isElement(document.getElementsByTagName('head')[0]) // => true
+isElement('Lorem ipusm dolr sit amet.');
+// -> false
+
+isElement(document.body);
+// -> true
+
+isElement(document.getElementsByTagName('head')[0])
+// -> true
 ```

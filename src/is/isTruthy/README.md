@@ -4,22 +4,39 @@
 isTruthy(value)
 ```
 
-> Checks if <code>value</code> is truthy.
+Checks if `value` is truthy.
 
-> Returns true is 'value' is truthy, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is truthy, else returns `false`.
+
+#### Examples
 ```js
-isTruthy(true); // => true
-isTruthy(' '); // => true
-isTruthy(1); // => true
-isTruthy(false); // => false
-isTruthy(''); // => false
-isTruthy(); // => false
-isTruthy(0); // => false
-isTruthy(NaN); // => false
+isTruthy(true);
+// -> true
+
+isTruthy(' ');
+// -> true
+
+isTruthy(1);
+// -> true
+
+isTruthy(false);
+// -> false
+
+isTruthy('');
+// -> false
+
+isTruthy();
+// -> false
+
+isTruthy(0);
+// -> false
+
+isTruthy(NaN);
+// -> false
 ```

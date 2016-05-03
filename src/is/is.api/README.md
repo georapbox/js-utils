@@ -1,6 +1,6 @@
 ### [is](../) > is.api
 
-> **is.api** is a minimal API for the ```is``` functions that provides ```not```, ```all``` and ```any``` interfaces,
+**is.api** is a minimal API for the ```is``` functions that provides ```not```, ```all``` and ```any``` interfaces,
 so that they can be used in a more functional way.
 
 **is.api** exposes a global variable ```is``` with only 4 methods by default.
@@ -33,18 +33,30 @@ is.extend({
 });
 
 /* Check if a value is array */
-is.array([1, 2, 3]); // => true
-is.array({foo: 'bar'}); // => false
+is.array([1, 2, 3]);
+// -> true
+
+is.array({foo: 'bar'});
+// -> false
 
 /* Check if a value is NOT an array */
-is.not.array([1, 2, 3]); // => false
-is.not.array({foo: 'bar'}); // => true
+is.not.array([1, 2, 3]);
+// -> false
+
+is.not.array({foo: 'bar'});
+// -> true
 
 /* Check if all values are arrays */
-is.all.array([1, 2, 3], ['a', 'b', 'c']); // => true
-is.all.array([1, 2, 3], 10); // => false
+is.all.array([1, 2, 3], ['a', 'b', 'c']);
+// -> true
+
+is.all.array([1, 2, 3], 10);
+// -> false
 
 /* Check if any of the values are arrays */
-is.any.array([1, 2, 3], 10); // => true
-is.any.array(5, 10); // => false
+is.any.array([1, 2, 3], 10);
+// -> true
+
+is.any.array(5, 10);
+// -> false
 ```

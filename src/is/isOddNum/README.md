@@ -4,16 +4,27 @@
 isOddNum(value)
 ```
 
-> Checks if a number is odd.
+Checks if a number is odd.
 
-- <code>value {Number}</code>
+#### Arguments
 
-The number to check if odd.
+- `value` _(number)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is an odd number, else returns `false`.
+
+#### Examples
 ```js
-isOddNum(0); //=> false
-isOddNum(2); //=> false
-isOddNum(3); //=> true
-isOddNum(5); //=> true
+isOddNum(0);
+// -> false
+
+isOddNum(2);
+// -> false
+
+isOddNum(3);
+// -> true
+
+isOddNum(5);
+// -> true
 ```

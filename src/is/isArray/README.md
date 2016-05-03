@@ -4,18 +4,29 @@
 isArray(value)
 ```
 
-> Checks if <code>value</code> is array.
+Checks if `value` is array.
 
-> Returns true if 'value' is an array, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
+
+#### Returns
+
+_(boolean)_: Returns `true` if value is an array, else returns `false`.
 
 The value to check.
 
 #### Example
 ```js
-isArray(['a', 'b', 'c', 'd']); // => true
-isArray(100); // => false
-isArray('Lorem ipsum dolor sit amet'); // => false
-isArray({ a: 'a', b: 'b' }); // => false
+isArray(['a', 'b', 'c', 'd']);
+// -> true
+
+isArray(100);
+// -> false
+
+isArray('Lorem ipsum dolor sit amet');
+// -> false
+
+isArray({ a: 'a', b: 'b' });
+// -> false
 ```

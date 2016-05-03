@@ -4,16 +4,27 @@
 isEvenNum(value)
 ```
 
-> Checks if a number is even.
+Checks if a number is even.
 
-- <code>value {Number}</code>
+#### Arguments
 
-The number to check if even.
+- `value` _(number)_: The number to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if number is even, else returns `false`.
+
+#### Examples
 ```js
-isEvenNum(0); //=> true
-isEvenNum(2); //=> true
-isEvenNum(3); //=> false
-isEvenNum(5); //=> false
+isEvenNum(0);
+// -> true
+
+isEvenNum(2);
+// -> true
+
+isEvenNum(3);
+// -> false
+
+isEvenNum(5);
+// -> false
 ```

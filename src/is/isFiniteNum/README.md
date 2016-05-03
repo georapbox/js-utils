@@ -4,15 +4,17 @@
 isFiniteNum(value)
 ```
 
-> Checks if <code>value</code> is a finite number.
+Checks if `value` is a finite number.
 
-> Returns true if 'value' is a finite number, else returns false.
+#### Arguments
 
-- `value {Number}`
+- `value` _(*)_: The value to check.
 
-The number to check if finite.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is a finite number, else returns `false`.
+
+#### Examples
 ```js
 isFiniteNum(Infinity);
 // -> false

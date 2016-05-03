@@ -4,20 +4,29 @@
 isNonExisty(value)
 ```
 
-> Checks if <code>value</code> is non existy (null or undefined).
+Checks if `value` is non existy (null or undefined).
 
-> Returns true is 'value' is non existy, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value non existy, else returns `false`.
+
+#### Examples
 ```js
 var foo;
 
-isNonExisty(foo); // => true
-isNonExisty(null); // => true
-isNonExisty({foo: 'bar'}); // => false
-isNonExisty(); // => true
+isNonExisty(foo);
+// -> true
+
+isNonExisty(null);
+// -> true
+
+isNonExisty({foo: 'bar'});
+// -> false
+
+isNonExisty();
+// -> true
 ```

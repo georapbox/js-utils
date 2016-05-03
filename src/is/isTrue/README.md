@@ -4,17 +4,24 @@
 isTrue(value)
 ```
 
-> Checks if <code>value</code> is true (strict equality).
+Checks if `value` is `true` (strict equality).
 
-> Returns true is 'value' is true, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
+
+_(boolean)_: Returns `true` if value is `true`, else returns `false`.
 
 #### Example
 ```js
-isTrue(true); // => true
-isTrue(false); // => false
-isTrue(); // => false
+isTrue(true);
+// -> true
+
+isTrue(false);
+// -> false
+
+isTrue();
+// -> false
 ```

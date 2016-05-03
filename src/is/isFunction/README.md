@@ -4,21 +4,23 @@
 isFunction(value)
 ```
 
-> Checks if <code>value</code> is a function.
+Checks if `value` is a function.
 
-> Returns true if <code>value</code> is a function, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is function, else returns `false`.
+
+#### Examples
 ```js
 isFunction(function test() {
     return 'This is test function.';
 });
-// => true
+// -> true
 
 isFunction('This is a test function.');
-// => false
+// -> false
 ```

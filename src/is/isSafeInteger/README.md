@@ -4,13 +4,17 @@
 isSafeInteger(value)
 ```
 
-> Checks if an integer number is in the safe range, i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).
+Checks if an integer number is in the safe range, i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).
 
-- `value {*}`
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is safe integer, else returns `false`.
+
+#### Examples
 ```js
 isSafeInteger(3));
 // -> true

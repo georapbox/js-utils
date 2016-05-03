@@ -4,17 +4,30 @@
 isHexadecimal(value)
 ```
 
-> Checks if <code>value</code> matches a hexadecimal regular expression.
+Checks if `value` matches a hexadecimal regular expression.
 
-- <code>value {\*}</code>
+#### Arguments
 
-The value to check.
+- `value` _(*)_: The value to check.
 
-#### Example
+#### Returns
+
+_(boolean)_: Returns `true` if value is a hexadecimal expression, else returns `false`.
+
+#### Examples
 ```js
-isHexadecimal('f5f5f5') // => true
-isHexadecimal('9c0') // => true
-isHexadecimal(333) // => true
-isHexadecimal('foo') // => false
-isHexadecimal(6.6) // => false
+isHexadecimal('f5f5f5');
+// -> true
+
+isHexadecimal('9c0');
+// -> true
+
+isHexadecimal(333);
+// -> true
+
+isHexadecimal('foo');
+// -> false
+
+isHexadecimal(6.6);
+// -> false
 ```

@@ -4,16 +4,21 @@
 isRegexp(value)
 ```
 
-> Checks if <code>value</code> is a regular expression.
+Checks if `value` is a regular expression.
 
-> Returns true is 'value' is regular expression, else returns false.
+#### Arguments
 
-- <code>value {\*}</code>
+- `value` _(*)_: The value to check.
 
-The value to check.
+#### Returns
 
-#### Example
+_(boolean)_: Returns `true` if value is regualr expression, else returns `false`.
+
+#### Examples
 ```js
-isRegexp(/^[0-9a-fA-F]+$/); // => true
-isRegexp('/^[0-9a-fA-F]+$/'); // => false
+isRegexp(/^[0-9a-fA-F]+$/);
+// -> true
+
+isRegexp('/^[0-9a-fA-F]+$/');
+// -> false
 ```
