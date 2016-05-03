@@ -9,7 +9,7 @@ function isArrayLike(value) {
     'use strict';
 
     var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1,
-        len = value && value.length;
+        len = !!value && value.length;
 
     return value != null && typeof value !== 'function' &&
         typeof len === 'number' && len > -1 && len % 1 === 0 && len <= MAX_SAFE_INTEGER;
