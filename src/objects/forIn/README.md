@@ -4,16 +4,13 @@
 forIn(object [, callback])
 ```
 
-> Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
+Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
+#### Arguments
 
-- <code>object {object}</code>
+- `object` _(object)_: The object to iterate over.
 
-The object to iterate over.
-
-- <code>[callback] {function}</code>
-
-The function called per iteration.
+- `[callback]` _(function)_: Optional. The function called per iteration.
 
 #### Example
 ```js
@@ -29,7 +26,6 @@ Shape.prototype.move = function(x, y) {
 
 forIn(new Shape, function(value, key, obj) {
 	console.log(key);
+	// -> "x", "y", "move"
 });
-
-// "x", "y", "move"
 ```

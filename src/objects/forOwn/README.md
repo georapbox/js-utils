@@ -4,15 +4,13 @@
 forOwn(object [, callback])
 ```
 
-> Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
+Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
 
-- <code>object {object}</code>
+#### Arguments
 
-The object to iterate over.
+- `object` _(object)_: The object to iterate over.
 
-- <code>[callback] {function}</code>
-
-The function called per iteration.
+- `[callback]` _(function)_: The function called per iteration.
 
 #### Example
 ```js
@@ -28,7 +26,6 @@ Shape.prototype.move = function(x, y) {
 
 forOwn(new Shape, function(value, key, obj) {
 	console.log(key);
+	// -> "x", "y"
 });
-
-// "x", "y"
 ```

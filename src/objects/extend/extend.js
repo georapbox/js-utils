@@ -3,6 +3,7 @@
  * @param {Object} target The object to extend. It will receive the new properties.
  * @param {Object} object1 An object containing additional properties to merge in.
  * @param {Object} objectN Additional objects containing properties to merge in.
+ * @return {Object} Returns the merged object.
  * @use extend({}, obj1, objN)
 */
 function extend() {

@@ -4,23 +4,33 @@
 container(value)
 ```
 
-> Acts as a wrapper/container around the `value` passed in.
+Acts as a wrapper/container around the `value` passed in.
 
-- <code>value {\*}</code>
+#### Arguments
 
-The value to wrap. Can be of any type.
+- `value` _(*)_: The value to wrap.
+
+#### Returns
+
+_(object)_: Returns the container object.
+
+---
 
 ```js
 .map(fn)
 ```
 
-- <code>fn {Function}</code>
+A `container` method that allows grabbing the value from the container and pass it to the function `fn`. When we are done mapping the value goes back to the container.
 
-The function that the value is passed in.
+#### Arguments
 
-> A `container` method that allows grabbing the value from the container and pass it to the function `fn`. When we are done mapping the value goes back to the container.
+- `fn` _(function)_: The function that the value is passed in.
 
-#### Example(s)
+#### Returns
+
+_(object)_: Returns the mapped object.
+
+#### Examples
 
 ```js
 var
@@ -34,13 +44,13 @@ var
         return arr.reverse();
     };
 
-var c = container(['a', 'b', 'c']),      // => {val: ['a', 'b', 'c']}
-    reversed = c.map(reverse),           // => {val: ['c', 'b', 'a']}
-    first = reversed.map(getFirst),      // => {val: 'c'}
-    capital = first.map(capitalize),     // => {val: 'C'}
+var c = container(['a', 'b', 'c']),      // -> {val: ['a', 'b', 'c']}
+    reversed = c.map(reverse),           // -> {val: ['c', 'b', 'a']}
+    first = reversed.map(getFirst),      // -> {val: 'c'}
+    capital = first.map(capitalize),     // -> {val: 'C'}
     match = capital.map(function (val) {
         return val.match(/cat/gi);
-    });                                  // => {val: null}
+    });                                  // -> {val: null}
 
 // The above could be also written like this:
 container(['a', 'b', 'c'])
