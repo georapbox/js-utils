@@ -4,7 +4,13 @@
     'use strict';
 
     describe('String/countWords', function () {
-        it('String "Hello world!        \n This is a message     from outter\tspace." has 9 words.', function () {
+        it('should count words in a subject string', function () {
+            expect(function () {
+                return countWords({});
+            }).toThrow();
+
+            expect(countWords('')).toEqual(0);
+
             expect(countWords('Hello world!        \n This is a message     from outter\tspace.'))
                 .toEqual(9);
         });
