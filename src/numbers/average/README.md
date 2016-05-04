@@ -4,11 +4,11 @@
 average([value1 [, value2, ...]]);
 ```
 
-> Calculates the average of a set of numbers.
+Calculates the average of a set of numbers.
 
-- <code>value1, value2, ... {number}</code>
+#### Arguments
 
-A set of numbers.
+- `value1, value2, ...` _(number)_: A set of numbers.
 
 **or**
 
@@ -16,18 +16,37 @@ A set of numbers.
 average(numArray);
 ```
 
-- <code>numArray {array}</code>
+#### Arguments
 
-An array of numbers.
+- `numArray` _(array)_: An array of numbers.
 
-#### Example
+#### Returns
+
+_(number)_: Returns the average of numbers provided.
+
+#### Examples
 ```js
-average(); // => 0
-average(7); // => 7
-average([7]); // => 7
-average(2, 4); // => 3
-average([2, 4]); // => 3
-average(5, 10, 50, -45, 6, 7); // => 5.5
-average([5, 10, 50, -45, 6, 7]); // => 5.5
-average(5, 4, null, true, '12', Infinity); // => 4.5 (Ommits any non number value)
+average();
+// -> 0
+
+average(7);
+// -> 7
+
+average([7]);
+// -> 7
+
+average(2, 4);
+// -> 3
+
+average([2, 4]);
+// -> 3
+
+average(5, 10, 50, -45, 6, 7);
+// -> 5.5
+
+average([5, 10, 50, -45, 6, 7]);
+// -> 5.5
+
+average(5, 4, null, true, '12', Infinity);
+// -> 4.5 (Omits any non number value)
 ```

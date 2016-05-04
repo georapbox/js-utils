@@ -4,44 +4,44 @@
 inRange(num, start, end);
 ```
 
-> Checks if a number is between start and up to but not including, end.
-> If start is greater than end the params are swapped to support negative ranges.
+Checks if a number is between start and up to but not including, end.
+If start is greater than end the params are swapped to support negative ranges.
 
-- `num {Number}`
+#### Arguments
 
-The number to check.
+- `num` _(number)_: The number to check.
 
-- `start {Number}`
+- `start` _(number)_: The start of the range.
 
-The start of the range.
+- `end` _(number)_: The end of the range.
 
-- `end {Number}`
+#### Returns
 
-The end of the range.
+_(boolean)_: Returns true if number is in the range, else false.
 
-#### Example
+#### Examples
 ```js
 inRange(3, 2, 4);
-// => true
+// -> true
 
 inRange(-3, -2, -6);
-// => true
+// -> true
 
 inRange(4, 8, 2);
-// => true
+// -> true
 
 inRange(4.5, 8.2, 2.1);
-// => true
+// -> true
 
 inRange('4.5', '8.2', '2.1');
-// => true (arguments can be cast to type "number")
+// -> true (arguments can be cast to type "number")
 
 inRange(4, 8);
-// => false (all arguments are required)
+// -> false (all arguments are required)
 
 inRange(4);
-// => false (all arguments are required)
+// -> false (all arguments are required)
 
 inRange(4, 'b8', 'c2');
-// => false (all arguments must be of type "number")
+// -> false (all arguments must be of type "number")
 ```

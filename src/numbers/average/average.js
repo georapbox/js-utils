@@ -2,9 +2,10 @@
  * Calculates the average of a set of numbers.
  * Accepts any number of numbers as parameters, or an array of numbers.
  * Ommits any non number value.
- * @returns {Number} The average number of the set of data provided.
+ * @param {Number|Array} [...args] A set of numbers or an array of numbers.
+ * @return {Number} The average number of the set of data provided.
  */
-function average() {
+function average(/*...args*/) {
     'use strict';
 
     var sum = 0,
