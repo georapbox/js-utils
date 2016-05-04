@@ -4,14 +4,21 @@
 dasherize(string)
 ```
 
-> Converts a camel cased string into a string delimited by dashes.
+Converts a camel cased string into a string delimited by dashes.
 
-- <code>string {String}</code>
+#### Arguments
 
-The string to dasherize
+- `str` _(string)_: The string to dasherize.
 
-#### Example
+#### Returns
+
+_(string)_: Returns the result string.
+
+#### Examples
 ```js
-dasherize('backgroundColor'); // => "background-color"
-dasherize('MozBackgroundImage'); // => "-moz-background-image"
+dasherize('backgroundColor');
+// -> "background-color"
+
+dasherize('MozBackgroundImage');
+// -> "-moz-background-image"
 ```

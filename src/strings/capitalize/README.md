@@ -4,20 +4,26 @@
 capitalize(str [, lowerCaseRest])
 ```
 
-> Capitalizes the first character of a string.
+Capitalizes the first character of a string.
 
+#### Arguments
 
-- <code>string {string}</code>
+- `str` _(string)_: The string to capitalize its first character.
 
-The string to capitalize its first character.
+- `[lowerCaseRest]` _(boolean)_: OPtional. Default is undefined (falsy). Indicates if the rest of the string will be converted to lower case.
 
-- <code>[lowerCaseRest] {boolean}</code>
+#### Returns
 
-Boolean that indicates if the rest of the string will be converted to lower case. Default is undefined (falsey).
+_(string)_: Returns the capitalized string.
 
-#### Example
+#### Examples
 ```js
-capitalize('hello'); // 'Hello'
-capitalize('hElLo'); // 'HElLo'
-capitalize('hElLo', true); // 'Hello'
+capitalize('hello');
+// -> 'Hello'
+
+capitalize('hElLo');
+// -< 'HElLo'
+
+capitalize('hElLo', true);
+// -> 'Hello'
 ```

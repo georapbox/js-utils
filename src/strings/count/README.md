@@ -4,27 +4,40 @@
 count(str, subStr [, caseInsensitive])
 ```
 
-> Counts the occurrences of substring in a string.
+Counts the occurrences of substring in a string.
+
+#### Arguments
 
 
-- <code>str {string}</code>
+- `str` _(string)_: The initial string.
 
-The initial string.
+- `subStr` _(string)_: The string we want to count its occurrences in the initial string.
 
-- <code>subStr {string}</code>
+- `[caseInsensitive]` _(boolean)_: Optional. Defaults to undefined (falsy). If true, the lookup is case insensitive.
 
-The string we want to count its occurences in the initial string.
+#### Returns
 
-- <code>[caseInsensitive] {boolean}</code>
+_(number)_: Returns the number of occurrences of substring in original string.
 
-If true, the lookup is case insensitive. Default is undefined (falsey).
-
-#### Example
+#### Examples
 ```js
 var str = 'Lorem ipsum dolor sit | amet, consectetur - adipisicing elit. Aperiam inventore neque doloremque dolor ibus impedit ipsam, incidunt. Doloremque eveniet sit, illo, et incidunt, maiores sequi accusantium impedit aperiam officiis aspernatur nobis.';
 
-count(str, 'dolor')); // 3
-count(str, 'dolor', true)); // 4 (case insensitive lookup)
-count(str, '|')); // 1
-count(str, ',')); // 5
+count(str, 'dolor'));
+// -> 3
+
+count(str, 'dolor', true));
+// -> 4 (case insensitive lookup)
+
+count(str, '|'));
+// -> 1
+
+count(str, ','));
+// -> 5
+
+count(str, '');
+// -> 245
+
+count(str, {}));
+// -> Throws TypeError
 ```

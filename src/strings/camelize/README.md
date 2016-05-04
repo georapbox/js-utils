@@ -4,20 +4,29 @@
 camelize(str [, camelizeSpaces])
 ```
 
-> Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).
+Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).
 
-- <code>string {string}</code>
+#### Arguments
 
-The string to camelize.
+- `string` _(string)_: The string to camelize.
 
-- <code>[camelizeSpaces] {boolean}</code>
+- `[camelizeSpaces]` _(boolean)_: Optional. Default is undefined (falsy). Indicates if spaces are camelized or not.
 
-Boolean that indicates if spaces are camelized or not. Default is undefined (falsey).
+#### Returns
 
-#### Example
+_(string)_: Returns the camelized string.
+
+#### Examples
 ```js
-camelize('hello_world'); // 'helloWorld'
-camelize('-moz-animation'); // 'MozAnimation'
-camelize('lorem ipsum', true); // 'loremIpsum'
-camelize('lorem ipsum'); // 'lorem ipsum'
+camelize('hello_world');
+// -> 'helloWorld'
+
+camelize('-moz-animation');
+// -> 'MozAnimation'
+
+camelize('lorem ipsum', true);
+// -> 'loremIpsum'
+
+camelize('lorem ipsum');
+// ->'lorem ipsum'
 ```

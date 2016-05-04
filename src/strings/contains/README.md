@@ -4,21 +4,21 @@
 contains(subjectString, searchString [, position=0])
 ```
 
-> Determines whether one string may be found within another string, returning true or false as appropriate.
+Determines whether one string may be found within another string, returning true or false as appropriate.
 
-- `subjectString {String}`
+#### Arguments
 
-The string to process.
+- `subjectString` _(string)_: The string to process.
 
-- `searchString {String}`
+- `searchString` _(string)_: A string to be searched for within the original string.
 
-A string to be searched for within the original string.
+- `[position=0]` _(number)_: Optional. Defaults to 0. The position in the original string at which to begin searching for searchString.
 
-- `[position=0] {Number}`
+#### Returns
 
-The position in the original string at which to begin searching for searchString; defaults to 0.
+_(boolean)_: Returns true if searchString is found within subjectString, else false.
 
-#### Example
+#### Examples
 ```js
 var str = 'To be, or not to be, that is the question.';
 

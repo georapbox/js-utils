@@ -4,16 +4,27 @@
 countWords(str)
 ```
 
-> Returns the number of words in a string.
+Counts the number of words in a string.
 
-- <code>str {String}</code>
+#### Arguments
 
-The string to process.
+- `str` _(string)_: The string to process.
 
-#### Example
+#### Returns
+
+_(number)_: Returns the number of words.
+
+#### Examples
 ```js
-countWords('Hello world!        \n This is a message     from outter\tspace.'); // => 9
-countWords(''); // => 0
-countWords(); // => Throws type error.
-countWords(100); // => Throws type error.
+countWords('Hello world!        \n This is a message     from outter\tspace.');
+// -> 9
+
+countWords('');
+// -> 0
+
+countWords();
+// -> Throws TypeError.
+
+countWords(100);
+// -> Throws TypeError.
 ```

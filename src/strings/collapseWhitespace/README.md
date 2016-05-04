@@ -4,13 +4,18 @@
 collapseWhitespace(str)
 ```
 
-> Converts all adjacent whitespace characters to a single space.
+Converts all adjacent whitespace characters to a single space.
 
-- <code>str {string}</code>
+#### Arguments
 
-The initial string to process.
+- `str` _(string)_: The initial string to process.
+
+#### Returns
+
+_(string)_: Returns the result string.
 
 #### Example
 ```js
-collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  '); \\ => 'Lorem ispum dolor sit amet.'
+collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
+// -> 'Lorem ispum dolor sit amet.'
 ```
