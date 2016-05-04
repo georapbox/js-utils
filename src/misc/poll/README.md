@@ -3,29 +3,22 @@
 ```js
 poll(func, [, interval=100] [, successCallback] [, timeout] [, timeoutCallback])
 ```
-> Periodically check for application's status updates.
 
-- `fn {Function}`
+Periodically check for application's status updates.
 
-The function to be called repeatedly. If returns a truthy value, stop polling.
+#### Arguments
 
-- `[interval=100] {Number}`
+- `fn` _(function)_: The function to be called repeatedly. If returns a truthy value, stop polling.
 
-Optional. The time (milliseconds) that `poll` should wait before each call to `fn`. Default is 100 milliseconds.
+- `[interval=100]` _(number)_: Optional. Default value is 100. The time (milliseconds) that `poll` should wait before each call to `fn`.
 
-- `[successCallback] {Function}`
+- `[successCallback]` _(function)_: Optional. Function to be executed if `fn` returns any truthy value.
 
-Optional. Function to be executed if `fn` returns any truthy value.
+- `[timeout]` _(number)_: Optional. The time (milliseconds) to continue calling `fn` until polling times out. If `undefined` or `null` polling never times out and will continue to call `fn` for ever.
 
-- `[timeout] {Number}`
+- `[timeoutCallback]` _(function)_: Optional. Function to be executed if poll times out.
 
-Optional. The time (milliseconds) to continue calling `fn` until polling times out. If `undefined` or `null` polling never times out and will continue to call `fn` for ever.
-
-- `[timeoutCallback] {Function}`
-
-Optional. Function to be executed if poll times out.
-
-#### Example(s)
+#### Examples
 ```js
 /* Example 1 */
 // Periodically check every 500 milliseconds if popup element is visible.

@@ -6,29 +6,19 @@
 cookie.create(name, value [, expiresOn=''] [, path='/'])
 ```
 
-> Creates a new cookie.
+Creates a new cookie.
 
-- `name {String}`
+#### Arguments
 
-The name of the cookie to create.
+- `name` _(string)_: The name of the cookie to create.
 
-- `value {String}`
+- `value` _(string)_: The value of the cookie to create.
 
-The value of the cookie to create.
+- `[expiresOn='']` _(string)_: Optional. Default value is empty string. Denotes when the cookie expires. If is of type `number`, denotes the number of days the cookie is active. If is set to 0 cookie's expiration is set to Session. If is of type `string` the provided string must be of UTC/GMT format eg. "Mon, 25 Apr 2016 02:47:11 UTC", else expirations is set to Session.
 
-- `[expiresOn=''] {String}`
+- `[path='/']` _(string)_: Optional. Default value is `/` The directory where the cookie is active.
 
-Optional. Denotes when the cookie expires.<br/>
-If is of type `number`, denotes the number of days the cookie is active.<br/>
-If is set to 0 cookie's expiration is set to Session.<br/>
-If is of type `string` the provided string must be of UTC/GMT format
-eg. "Mon, 25 Apr 2016 02:47:11 UTC", else expirations is set to Session.
-
-- `[path='/'] {String}`
-
-Optional. The directory where the cookie is active.
-
-#### Example
+#### Examples
 ```js
 // Create a cookie with name "my-cookie1" and value "test1" that expires 3 days from now.
 cookie.create('my-cookie1', 'test1', 3);
@@ -56,14 +46,18 @@ cookie.create('my-cookie6', 'test6', new Date(2016, 5, 20, 3, 30, 20, 20).toUTCS
 ```js
 cookie.read([name])
 ```
-> Reads a cookie by its name.
 
-- `[name] {String}`
+Reads a cookie by its name.
 
-The name of the cookie to read.<br/>
-If not provided or is not of type `string` the whole cookie string is returned.
+#### Arguments
 
-#### Example
+- `[name]` _(string)_: The name of the cookie to read. If not provided or is not of type `string` the whole cookie string is returned.
+
+#### Returns
+
+_(string)_: Returns the the cookie string by its name.
+
+#### Examples
 ```js
 /* From the example above and supposing we are on root directory. */
 
@@ -91,13 +85,13 @@ cookie.read();
 cookie.remove(name)
 ```
 
-> Deletes a cookie by its name.
+Deletes a cookie by its name.
 
-- `name {String}`
+#### Arguments
 
-The name of the cookie to delete.
+- `name` _(string)_: The name of the cookie to delete.
 
-#### Example
+#### Examples
 ```js
 /* From the examples above and supposing we are on root directory. */
 
