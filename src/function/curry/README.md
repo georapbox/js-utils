@@ -3,18 +3,19 @@
 ```js
 curry(fn [, n])
 ```
-> Transforms a function of N arguments in such a way that it can
-be called as a chain of N functions each with a single argument.
+Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.
 
-- <code>fn {Function}</code>
+#### Arguments
 
-The function to curry.
+- `fn` _(function)_: The function to curry.
 
-- <code>[n] {Number}</code>
+- `[n]` _(number)_: Optional. The number of expected arguments in case that the function's arity cannot be automatically determined.
 
-The number of expected arguments in case that the function's arity cannot be automatically determined.
+#### Returns
 
-#### Example
+_(function)_: Returns a new, curried function.
+
+#### Examples
 ```js
 // Example 1
 (function () {
@@ -23,8 +24,12 @@ The number of expected arguments in case that the function's arity cannot be aut
     };
 
     var babyKoalas = curry(babyAnimals, 'koalas');
-    babyKoalas('elephants'); // => "I love koalas and elephants."
-    babyKoalas('lions'); // =>  "I love koalas and lions."
+
+    babyKoalas('elephants');
+    // -> "I love koalas and elephants."
+
+    babyKoalas('lions');
+    // ->  "I love koalas and lions."
 }());
 
 // Example 2
@@ -41,7 +46,9 @@ The number of expected arguments in case that the function's arity cannot be aut
     };
 
     var seq5 = curry(sequence, 1);
-    seq5(5); // => [1, 2, 3, 4, 5]
+
+    seq5(5);
+    // -> [1, 2, 3, 4, 5]
 }());
 
 // Example 3
@@ -55,6 +62,7 @@ The number of expected arguments in case that the function's arity cannot be aut
         a = mySum(10),
         b = a(20);
 
-    b(5); // => 35
+    b(5);
+    // -> 35
 }());
 ```

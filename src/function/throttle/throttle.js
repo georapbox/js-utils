@@ -1,7 +1,8 @@
 /**
  * Limits the number of times a function can be called in a given period.
- * @param {function} callback The function to be executed.
- * @param {number} n Time of delay in milliseconds.
+ * @param {Function} callback The function to be executed.
+ * @param {Number} [n=0] Optional. Default value is 0. Time of delay in milliseconds.
+ * @return {Function} Returns the throttled function.
  */
 function throttle(callback, n) {
     'use strict';
@@ -14,7 +15,7 @@ function throttle(callback, n) {
             wait = true;
             setTimeout(function () {
                 wait = false;
-            }, n);
+            }, n || 0);
         }
     };
 }

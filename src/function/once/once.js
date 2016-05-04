@@ -1,8 +1,8 @@
 /**
  * Ensure a given functionality only runs once.
- * @param {Function} func Callback function to be executed only one time.
+ * @param {Function} func The function to restrict.
  * @param {Object} [thisArg] Value to use as this when executing callback.
- * @return {Function}
+ * @return {Function} Returns the new restricted function.
  */
 function once(func, thisArg) {
     'use strict';

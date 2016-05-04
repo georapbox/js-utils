@@ -4,12 +4,16 @@
 negate(func)
 ```
 
-> Creates a function that negates the result of the predicate `func`.
+Creates a function that negates the result of the predicate `func`.
 The `func` predicate is invoked with the `this` binding and arguments of the created function.
 
-- `func {Function}`
+#### Arguments
 
-The predicate to negate.
+- `func` _(function)_: The predicate to negate.
+
+#### Returns
+
+_(function)_: Returns a new negated function.
 
 #### Examples
 ```js

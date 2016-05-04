@@ -3,15 +3,18 @@
 ```js
 partialRight(fn [, args...])
 ```
-> Creates a function that invokes `func` with `args` **appended** to the arguments it receives.
 
-- `fn {Function}`
+Creates a function that invokes `func` with `args` **appended** to the arguments it receives.
 
-The function to be invoked with the partially applied arguments.
+#### Arguments
 
-- `[args...] {*}`
+- `fn` _(function)_: The function to be invoked with the partially applied arguments.
 
-The arguments to be partially applied.
+- `[args...]` _(*)_: Optional. The arguments to be partially applied.
+
+#### Returns
+
+_(function)_: Returns a function that invokes the originally-specified function `fn`.
 
 #### Example
 ```js

@@ -1,28 +1,27 @@
 ### [Function](../) > debounce
 
 ```js
-debounce(callback, n [, immediate])
+debounce(callback, [, n=0] [, immediate])
 ```
 
-> Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for
-> 'n' milliseconds. If `immediate` is passed, trigger the function on the leading edge, instead of the trailing.
+Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds. If `immediate` is passed, trigger the function on the leading edge, instead of the trailing.
 
-- <code>callback {function}</code>
+#### Arguments
 
-The function to be executed.
+- `callback` _(function)_: The function to be executed.
 
-- <code>n {number}</code>
+- `[n=0]` _(number)_: Optional. Default value is 0. Time of delay in milliseconds. It is required if you need to use `immediate`.
 
-Time of delay in milliseconds.
+- `[immediate]` _(boolean)_: Optional. If true or any truthy value, triggers the function on the leading edge.
 
-- <code>[immediate] {boolean}</code>
+#### Returns
 
-If true or any truthy value, triggers the function on the leading edge.
+_(function)_: Returns a new debounced function.
 
 #### Example
 ```js
 var doSomething = debounce(function () {
-    // Do your magic here...
+    // Do something...
 }, 250);
 
 window.addEventListener('resize', doSomething, false);

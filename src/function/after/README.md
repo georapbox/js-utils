@@ -3,18 +3,19 @@
 ```js
 after(n, func)
 ```
-> Creates a function that invokes `func` once it's called `n` or more times.
-> `func` is invoked with the this binding and arguments of the created function.
 
-- `n {Number}`
+Creates a function that invokes `func` once it's called `n` or more times.
+`func` is invoked with the this binding and arguments of the created function.
 
-The number of calls before `func` is invoked. A positive integer is expected.<br>
-If a negative number or 0, `func` is invoked immediately.<br>
-If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
+#### Arguments
 
-- `func {Function}`
+- `n` _(number)_: The number of calls before `func` is invoked. A positive integer is expected. If a negative number or 0, `func` is invoked immediately. If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
 
-The function to restrict.
+- `func` _(function)_: The function to restrict.
+
+#### Returns
+
+_(function)_: Returns the new restricted function.
 
 #### Example
 ```js

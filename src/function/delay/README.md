@@ -3,21 +3,20 @@
 ```js
 delay(func, [wait=0] /*, args...*/)
 ```
-> Invokes `func` after `wait` milliseconds.
-> Any additional arguments are provided to `func` when it’s invoked.
-> Returns the timer's id.
 
-- `func {Function}`
+Invokes `func` after `wait` milliseconds. Any additional arguments are provided to `func` when it’s invoked.
 
-The function to delay.
+#### Arguments
 
-- `[wait=0] {Number}`
+- `func` _(function)_: The function to delay.
 
-The number of milliseconds to delay invokation.
+- `[wait=0]` _(number)_: Optional. Default value is 1. The number of milliseconds to delay invokation.
 
-- `[args...] {*}`
+- `[args...]` _(*)_: Optional. The arguments to invoke `func` with.
 
-The arguments to invoke `func` with.
+#### Returns
+
+_(number)_: Returns the timer's id.
 
 #### Example
 ```js
