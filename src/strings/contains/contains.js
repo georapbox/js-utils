@@ -3,7 +3,7 @@
  * @param {String} subjectString The string to process.
  * @param {String} searchString A string to be searched for within the original string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for searchString; defaults to 0.
- * @returns {Boolean} True if searchString is found within subjectString, else false.
+ * @returns {Boolean} Returns true if searchString is found within subjectString, else false.
  */
 function contains(subjectString, searchString, position) {
     'use strict';
@@ -11,7 +11,11 @@ function contains(subjectString, searchString, position) {
     var subjectLength,
         searchLength;
 
-    if (!searchString) {
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    if (typeof searchString !== 'string') {
         return false;
     }
 
