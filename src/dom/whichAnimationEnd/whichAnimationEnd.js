@@ -1,6 +1,6 @@
 /**
  * Detects the supported property name for the "animationend" event.
- * @returns {string} The supported property name or undefined if not supported.
+ * @returns {String} The supported property name or undefined if not supported.
  */
 function whichAnimationEnd() {
     'use strict';

@@ -4,23 +4,14 @@
 scroll.to([options] [, callback])
 ```
 
-> Easing based scrolling to a specified y point inside page.
+Easing based scrolling to a specified y point inside page.
 
-- <code>[options] {object}</code>
+#### Arguments
 
-    A user defined options object.
-
-    - <code>[options.y] {number}</code>
-
-    The "y" point (in pixels) to scroll to inside page. Default is ```0```.
-
-    - <code>[options.duration] {number}</code>
-
-    The duration (in milliseconds) the scroll takes to complete. Default is ```400```.
-
-    - <code>[options.easing] {function}</code>
-
-    The easing method of the scrolling animation. Default is ```scroll.easing.linear```.
+- [options] _(object)_: Optional. A user defined options object.
+    - `[options.y]` _(number)_: The "y" point (in pixels) to scroll to inside page. Default is `0`.
+    - `[options.duration]` _(number)_: The duration (in milliseconds) the scroll takes to complete. Default is `400`.
+    - `[options.easing]` _(function)_: The easing method of the scrolling animation. Default is `scroll.easing.linear`.
 
     Available easing methods:
     - linear
@@ -38,9 +29,7 @@ scroll.to([options] [, callback])
     - easeInOutQuint
 
 
-- <code>[callback] {function}</code>
-
-A callback function to be executed after scroll is completed.
+- `[callback]` _(function)_: Optional A callback function to be executed after scroll is completed.
 
 ### Examples
 

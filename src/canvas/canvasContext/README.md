@@ -6,18 +6,18 @@ https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Canvas
 CanvasContext(canvas)
 ```
 
-> A class that provides jQuery-style chained access to 2D context methods and properties.
+A class that provides jQuery-style chained access to 2D context methods and properties.
 
-- <code>canvas {Object|String}</code>
+#### Arguments
 
-The HTML5 canvas element or a string representing the ```id``` of a canvas element.
+- `canvas` _(object|string)_: The HTML5 canvas element or a string representing the `id` of a canvas element.
 
 #### Example
 ```js
 // Use context to get access to underlying context
 var canvas = document.getElementById('canvas');
 
-var ctx = Canvas2DContext(canvas)
+var ctx = CanvasContext(canvas)
     .rect(0, 0, canvas.width, canvas.height)
     .lineWidth(20)
     .strokeStyle('dodgerblue')
@@ -27,7 +27,7 @@ var ctx = Canvas2DContext(canvas)
     .context;
 
 // Use property name as a function (but without arguments) to get the value
-var strokeStyle = Canvas2DContext(canvas)
-    .strokeStyle('rgb(50,110,210)')
+var strokeStyle = CanvasContext(canvas)
+    .strokeStyle('rgb(50, 110, 210)')
     .strokeStyle();
 ```

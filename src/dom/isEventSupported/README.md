@@ -4,28 +4,36 @@
 isEventSupported(eventName [, element])
 ```
 
-> Checks if an event is supported in a browser environment.
+Checks if an event is supported in a browser environment.
 
-- <code>eventName {String}</code>
+#### Arguments
 
-The name of the event to check if is supported.
+- `eventName` _(string)_: The name of the event to check if is supported.
 
-- <code>[element] {Object}</code>
+- `[element]` _(object)_: Optional. An HTML node to check if an event is supported on. Use it if you need to check for an event on a specific element. Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element. If omitted the results are cached and next calls with the same `eventName` will return the results from cache.
 
-An HTML node to check if an event is supported on.
+#### Returns
 
-Use it if you need to check for an event on a specific element.
-Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.
+_(boolean)_: Returns true if event is supported, else false.
 
-If omited the results are cached and next calls with the same `eventName` will return the results from cache.
-
-#### Example
+#### Examples
 ```js
-isEventSupported('submit'); // => true - Checks on a `form` element
-isEventSupported('click'); // => true - Checks on a `div` element
-isEventSupported('resize'); // => false - Checks on a `div` element
-isEventSupported('resize', window); // => true - Checks on a `window`
-isEventSupported('keyup'); // => true - Checks on a `div` element
-isEventSupported('keyup', document.createElement('input')); // => true - Checks on an `input` element
+isEventSupported('submit');
+// -> true - Checks on a `form` element
+
+isEventSupported('click');
+// -> true - Checks on a `div` element
+
+isEventSupported('resize');
+// -> false - Checks on a `div` element
+
+isEventSupported('resize', window);
+// -> true - Checks on a `window`
+
+isEventSupported('keyup');
+// -> true - Checks on a `div` element
+
+isEventSupported('keyup', document.createElement('input'));
+// -> true - Checks on an `input` element
 
 ```

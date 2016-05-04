@@ -4,5 +4,8 @@
 whichAnimationEnd()
 ```
 
-> Detects the supported property name for the "animationend" event.
-> Returns the supported property name (animationend, oAnimationEnd, webkitAnimationEnd) or <code>undefined</code> if not supported.
+Detects the supported property name for the `animationend` event.
+
+#### Returns
+
+_(string)_: Returns the supported property name (animationend, oAnimationEnd, webkitAnimationEnd) or `undefined` if not supported.
