@@ -4,7 +4,7 @@
  * If an expression is found, use it as a key on the object,
  * and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
  * @param {String} subjectString  The initial string to substitude its expressions.
- * @param {Object} data The object that acts as our model.
+ * @param {Object} data A plain object that acts as our model.
  * @return {String} Returns the result string.
  */
 function supplant(subjectString, data) {
@@ -12,6 +12,14 @@ function supplant(subjectString, data) {
 
     if (typeof subjectString !== 'string') {
         throw new TypeError('Expected a string');
+    }
+
+    if (data == null) {
+        return subjectString;
+    }
+
+    if (typeof data !== 'object') {
+        throw new TypeError('Expected a plain object');
     }
 
     return subjectString.replace(/{{([^{{}}]*)}}/g, function (a, b) {
