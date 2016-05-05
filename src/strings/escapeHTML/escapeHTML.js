@@ -1,12 +1,16 @@
 /**
  * Escapes a HTML string.
  * @param {String} html The HTML string to escape.
- * @returns {String} The escaped string.
+ * @returns {String} Returns the escaped string.
  */
-function escapeHTML(html) {
+function escapeHTML(subjectString) {
     'use strict';
 
-    return html.replace(/[&<>"]/g, function (tag) {
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    return subjectString.replace(/[&<>"]/g, function (tag) {
         var charsToReplace = {
             '&': '&amp;',
             '<': '&lt;',

@@ -10,6 +10,7 @@
 
         it('removeSuffix(\'Hello world!\', \'Hello\') should return "Hello world!"', function () {
             expect(removeSuffix('Hello world!', 'Hello')).toEqual('Hello world!');
+            expect(removeSuffix('Hello world!', '')).toEqual('Hello world!');
         });
     });
 }());

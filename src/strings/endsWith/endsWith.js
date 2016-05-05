@@ -3,20 +3,24 @@
  * returning true or false as appropriate.
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the end of the original string.
- * @param {Number} [position=str.length] Search within this string as if this string were only this long;
+ * @param {Number} [position=str.length] Optional. Search within this string as if this string were only this long;
  *        defaults to the original string's actual length, clamped within the range established by this string's length.
- * @returns {Boolean} True if `subjectString` ends with `searchString`, else false.
+ * @returns {Boolean} Returns true if `subjectString` ends with `searchString`, else false.
  */
 function endsWith(subjectString, searchString, position) {
     'use strict';
 
     var lastIndex;
 
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
     if (String.prototype.endsWith) {
         return subjectString ? subjectString.endsWith(searchString, position) : false;
     }
 
-    if (!searchString) {
+    if (searchString == null) {
         return false;
     }
 

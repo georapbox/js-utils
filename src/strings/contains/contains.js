@@ -15,13 +15,16 @@ function contains(subjectString, searchString, position) {
         throw new TypeError('Expected a string');
     }
 
-    if (typeof searchString !== 'string') {
-        return false;
-    }
-
     if (String.prototype.includes) {
         return subjectString.includes(searchString, position);
     }
+
+    if (searchString == null) {
+        return false;
+    }
+
+    subjectString = subjectString.toString();
+    searchString = searchString.toString();
 
     position = parseInt(position, 10) || 0;
     subjectLength = subjectString.length;

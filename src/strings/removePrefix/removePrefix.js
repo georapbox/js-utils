@@ -1,10 +1,15 @@
 /**
  * Removes prefix from start of a string.
- * @param {String} str The original string.
+ * @param {String} subjectString The string to process.
  * @param {String} prefix The prefix substring to remove from the original string.
- * @returns {String} The final string.
+ * @returns {String} Returns the result string.
  */
-function removePrefix(str, prefix) {
+function removePrefix(subjectString, prefix) {
     'use strict';
-    return str.indexOf(prefix) === 0 ? str.slice(prefix.length) : str;
+
+    if (typeof subjectString !== 'string' || typeof prefix !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    return subjectString.indexOf(prefix) === 0 ? subjectString.slice(prefix.length) : subjectString;
 }

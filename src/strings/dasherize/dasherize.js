@@ -1,16 +1,16 @@
 /**
  * Converts a camel cased string into a string delimited by dashes.
- * @param {String} str The string to dasherize.
+ * @param {String} subjectString The string to dasherize.
  * @return {String} The converted string.
  */
-function dasherize(str) {
+function dasherize(subjectString) {
     'use strict';
 
-    if (typeof str !== 'string') {
+    if (typeof subjectString !== 'string') {
         throw new TypeError('Expected a string');
     }
 
-    return str
+    return subjectString
         .replace(/[_\s]+/g, '-')
         .replace(/([A-Z])/g, '-$1')
         .replace(/-+/g, '-')

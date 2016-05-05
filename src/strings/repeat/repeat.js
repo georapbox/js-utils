@@ -1,28 +1,20 @@
 /**
- * Returns a string repeated 'count' times.
- * @param {string} string the string to process.
- * @param {number} count The times to repeat the string.
- * @returns {string} the final string.
+ * Repeat a string 'count' times.
+ * @param {String} subjectString the string to process.
+ * @param {Number} [count=0] Optional. The times to repeat the string. Defaults to 0.
+ * @returns {String} Returns the result string.
  */
-function repeat(string, count) {
+function repeat(subjectString, count) {
     'use strict';
 
-    if (string == null) { // jshint ignore: line
-        throw new TypeError('can\'t convert ' + string + ' to object');
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
     }
 
-    if (count < 0) {
-        throw new RangeError('repeat count must be non-negative');
-    }
-
-    if (count === Infinity) {
-        throw new RangeError('repeat count must be less than infinity');
-    }
-
-    if (count == null) { // jshint ignore: line
+    if (count == null || count < 0 || count === Infinity || count !== count) {
         count = 0;
     }
 
     count = count | 0; // Floor count.
-    return new Array(count + 1).join(string);
+    return new Array(count + 1).join(subjectString);
 }

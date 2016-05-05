@@ -1,14 +1,22 @@
 /**
  * Removes suffix from start of a string.
- * @param {String} str The original string.
+ * @param {String} subjectString The original string.
  * @param {String} suffix The suffix substring to remove from the original string.
- * @returns {String} The final string.
+ * @returns {String} Returns the result string.
  */
-function removeSuffix(str, suffix) {
+function removeSuffix(subjectString, suffix) {
     'use strict';
-    
-    var strLen = str.length,
-        suffixLen = suffix.length;
 
-    return str.indexOf(suffix, strLen - suffixLen) !== -1 ? str.slice(0, strLen - suffixLen) : str;
+    var strLen, suffixLen;
+
+    if (typeof subjectString !== 'string' || typeof suffix !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    strLen = subjectString.length;
+    suffixLen = suffix.length;
+
+    return subjectString.indexOf(suffix, strLen - suffixLen) !== -1 ?
+        subjectString.slice(0, strLen - suffixLen) :
+        subjectString;
 }

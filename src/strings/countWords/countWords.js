@@ -1,18 +1,18 @@
 /**
  * Counts the words of a string.
- * @param {String} str The string to process.
+ * @param {String} subjectString The string to process.
  * @return {Number} The number of words the string contains.
  */
-function countWords(str) {
+function countWords(subjectString) {
     'use strict';
 
     var matches;
 
-    if (typeof str !== 'string') {
+    if (typeof subjectString !== 'string') {
         throw new TypeError('Expected a string');
     }
 
-    matches = str.match(/\S+/g) ;
+    matches = subjectString.match(/\S+/g) ;
 
     return matches ? matches.length : 0;
 }

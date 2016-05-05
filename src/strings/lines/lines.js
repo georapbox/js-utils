@@ -1,9 +1,14 @@
 /**
  * Returns an array with the lines of a a string.
- * @param {String} str The string to process.
+ * @param {String} subjectString The string to process.
  * @return {Array} An array containing the lines of the string.
  */
-function lines(str) {
+function lines(subjectString) {
     'use strict';
-    return str.replace(/\r\n/g, '\n').split('\n');
+
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    return subjectString.replace(/\r\n/g, '\n').split('\n');
 }
