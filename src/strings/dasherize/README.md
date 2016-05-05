@@ -1,14 +1,14 @@
 ### [Strings](../) > dasherize
 
 ```js
-dasherize(string)
+dasherize(subjectString)
 ```
 
 Converts a camel cased string into a string delimited by dashes.
 
 #### Arguments
 
-- `str` _(string)_: The string to dasherize.
+- `subjectString` _(string)_: The string to dasherize.
 
 #### Returns
 

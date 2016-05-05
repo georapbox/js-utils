@@ -1,21 +1,29 @@
 ###[Strings](../) > removeSuffix
 
 ```js
-removeSuffix(str, suffix)
+removeSuffix(subjectString, suffix)
 ```
 
-> Removes substring from end of a string.
+Removes substring from end of a string.
 
-- <code>str</code>
+#### Arguments
 
-The initial string.
+- `subjectString` _(string)_: The string to process.
 
-- <code>suffix</code>
+- `suffix` _(string)_: The substring to remove from the original string.
 
-The substring to remove from the original string.
+#### Returns
 
-#### Example
+_(string)_: Returns the result string.
+
+#### Examples
 ```js
-removeSuffix('foobar', 'bar'); // 'foo'
-removeSuffix('foobar', 'foo'); // 'foobar'
+removeSuffix('foobar', 'bar');
+// -> 'foo'
+
+removeSuffix('foobar', 'foo');
+// -> 'foobar'
+
+removeSuffix('foobar', {});
+// -> TypeError
 ```

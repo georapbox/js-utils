@@ -1,17 +1,16 @@
 ### [Strings](../) > count
 
 ```js
-count(str, subStr [, caseInsensitive])
+count(subjectString, subString [, caseInsensitive])
 ```
 
 Counts the occurrences of substring in a string.
 
 #### Arguments
 
+- `subjectString` _(string)_: The initial string.
 
-- `str` _(string)_: The initial string.
-
-- `subStr` _(string)_: The string we want to count its occurrences in the initial string.
+- `subString` _(string)_: The string we want to count its occurrences in the initial string.
 
 - `[caseInsensitive]` _(boolean)_: Optional. Defaults to undefined (falsy). If true, the lookup is case insensitive.
 

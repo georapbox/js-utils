@@ -4,22 +4,29 @@
 randomString(n, chars)
 ```
 
-> Generates a random string of n characters, from the "chars" string.
+Generates a random string of n characters, from the `chars` string.
 
-- <code>n {number}</code>
+#### Arguments
 
-The length of the final random  string.
+- `n` _(number)_: The length of the final random  string.
 
-- <code>[chars] {string}</code>
+- `[chars]` _(string)_: The characters to use in order to generate the string. Defaults to 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.
 
-The characters to use in order to generate the string.
+#### Returns
 
-Default value: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.
+_(string)_: Returns the random string.
 
-#### Example
+#### Examples
 ```js
-randomString(10); // => "RvXYUH6Swm"
-randomString(10, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // => "SFUNKJHYDH"
-randomString(10, '0123456789'); // => "2394127333"
-randomString(); // => ""
+randomString(10);
+// -> "RvXYUH6Swm"
+
+randomString(10, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+// -> "SFUNKJHYDH"
+
+randomString(10, '0123456789');
+// -> "2394127333"
+
+randomString();
+// -> ""
 ```

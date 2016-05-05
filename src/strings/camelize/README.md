@@ -1,14 +1,14 @@
 ### [Strings](../) > camelize
 
 ```js
-camelize(str [, camelizeSpaces])
+camelize(subjectString [, camelizeSpaces])
 ```
 
 Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).
 
 #### Arguments
 
-- `string` _(string)_: The string to camelize.
+- `subjectString` _(string)_: The string to camelize.
 
 - `[camelizeSpaces]` _(boolean)_: Optional. Default is undefined (falsy). Indicates if spaces are camelized or not.
 

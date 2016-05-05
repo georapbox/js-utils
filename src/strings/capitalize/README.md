@@ -1,14 +1,14 @@
 ### [Strings](../) > capitalize
 
 ```js
-capitalize(str [, lowerCaseRest])
+capitalize(subjectString [, lowerCaseRest])
 ```
 
 Capitalizes the first character of a string.
 
 #### Arguments
 
-- `str` _(string)_: The string to capitalize its first character.
+- `subjectString` _(string)_: The string to capitalize its first character.
 
 - `[lowerCaseRest]` _(boolean)_: OPtional. Default is undefined (falsy). Indicates if the rest of the string will be converted to lower case.
 

@@ -4,24 +4,31 @@
 pad(subjectString, len [, chars=' '])
 ```
 
-> Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.
+Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.
 
-- `subjectString {String}`
+#### Arguments
 
-The string to process.
+- `subjectString` _(string)_: The string to process.
 
-- `len {Number}`
+- `len` _(number)_: The length of the padding.
 
-The length of the padding.
+- `[chars=' ']` _(string)_: Optional. The character(s) to use for padding. Default is space.
 
-- `[chars=' '] {String}`
+#### Returns
 
-The character(s) to use for padding. Default is space.
+_(string)_: Returns the result string.
 
-#### Example
+#### Examples
 ```js
-pad('Hello', 9); // => "  Hello  "
-pad('Hello', 9, '-'); // => "--Hello--"
-pad('Hello', 6, '-'); // => "-Hello"
-pad('Hello', 5, '-'); // => "Hello" (len is the same as str.length)
+pad('Hello', 9);
+// -> "  Hello  "
+
+pad('Hello', 9, '-');
+// -> "--Hello--"
+
+pad('Hello', 6, '-');
+// -> "-Hello"
+
+pad('Hello', 5, '-');
+// -> "Hello" (len is the same as str.length)
 ```

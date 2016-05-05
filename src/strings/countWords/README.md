@@ -1,14 +1,14 @@
 ### [Strings](../) > countWords
 
 ```js
-countWords(str)
+countWords(subjectString)
 ```
 
 Counts the number of words in a string.
 
 #### Arguments
 
-- `str` _(string)_: The string to process.
+- `subjectString` _(string)_: The string to process.
 
 #### Returns
 

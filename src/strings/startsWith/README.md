@@ -4,21 +4,21 @@
 startsWith(subjectString, searchString [, position=0])
 ```
 
-> Determines whether a string begins with the characters of another string, returning true or false as appropriate.
+Determines whether a string begins with the characters of another string, returning true or false as appropriate.
 
-- `subjectString {String}`
+#### Arguments
 
-The string to process.
+- `subjectString` _(string)_: The string to process.
 
-- `searchString {String}`
+- `searchString` _(string)_: The characters to be searched for at the start of the string.
 
-The characters to be searched for at the start of the string.
+- `[position=0]` _(number)_: The position in the original string at which to begin searching for `prefix`.
 
-- `[position=0] {Number}`
+#### Returns
 
-The position in the original string at which to begin searching for `prefix`.
+_(boolean)_: Returns true if `subjectString` starts with `searchString`, else false.
 
-#### Example
+#### Examples
 ```js
 var str = 'Lorem ipsum dolor sit amet';
 

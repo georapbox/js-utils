@@ -1,24 +1,47 @@
 ### [Strings](../) > repeat
 
 ```js
-repeat(string, count)
+repeat(subjectString, count)
 ```
 
-> Returns a string repeated <code>count</code> times.
+Repeat a string `count` times.
 
-- <code>string {string}</code>
+#### Arguments
 
-The string to process.
+- `subjectString` _(string)_: The string to process.
 
-- <code>count {number}</code>
+- `[count=0]` _(number)_: Optional. Defaults to 0. Times to repeat the string.
 
-Times to repeat the string.
+#### Returns
 
-#### Example
+_(string)_: Returns the result string.
+
+#### Examples
 ```js
-repeat('&nbsp;', 4); // => '&nbsp;&nbsp;&nbsp;&nbsp;'
-repeat('&nbsp;', 2.5); // => '&nbsp;&nbsp;'
-repeat('&nbsp;'); // => '' (same as repeat('&nbsp;', 0))
-repeat('&nbsp;', -2); // => RangeError
-repeat('&nbsp;', Infinity); // => RangeError
+repeat('&nbsp;', 4);
+// -> '&nbsp;&nbsp;&nbsp;&nbsp;'
+
+repeat('&nbsp;', 2.5);
+// -> '&nbsp;&nbsp;'
+
+repeat('&nbsp;', 0);
+// -> ''
+
+repeat('&nbsp;', null);
+// -> ''
+
+repeat('&nbsp;');
+// -> ''
+
+repeat('&nbsp;', -2);
+// -> ''
+
+repeat('&nbsp;', Infinity);
+// -> ''
+
+repeat('&nbsp;', -Infinity);
+// -> ''
+
+repeat('&nbsp;', NaN);
+// -> ''
 ```

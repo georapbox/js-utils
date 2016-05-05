@@ -1,21 +1,28 @@
 ### [Strings](../) > removePrefix
 
 ```js
-removePrefix(str, prefix)
+removePrefix(subjectString, prefix)
 ```
+Removes substring from start of a string.
 
-> Removes substring from start of a string.
+#### Arguments
 
-- <code>str {string}</code>
+- `subjectString` _(string)_: The string to process.
 
-The string to process.
+- `prefix` _(string)_: The substring to remove from the original string.
 
-- <code>prefix {string}</code>
+#### Returns
 
-The substring to remove from the original string.
+_(string)_: Returns the result string.
 
-#### Example
+#### Examples
 ```js
-removePrefix('foobar', 'foo'); // 'bar'
-removePrefix('foobar', 'bar'); // 'foobar'
+removePrefix('foobar', 'foo');
+// -> 'bar'
+
+removePrefix('foobar', 'bar');
+// -> 'foobar'
+
+removePrefix('foobar', {});
+// -> TypeError
 ```

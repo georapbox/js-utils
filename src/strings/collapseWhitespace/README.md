@@ -1,14 +1,14 @@
 ### [Strings](../) > collapseWhitespace
 
 ```js
-collapseWhitespace(str)
+collapseWhitespace(subjectString)
 ```
 
 Converts all adjacent whitespace characters to a single space.
 
 #### Arguments
 
-- `str` _(string)_: The initial string to process.
+- `subjectString` _(string)_: The initial string to process.
 
 #### Returns
 

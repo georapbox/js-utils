@@ -1,34 +1,41 @@
 ### [Strings](../) > replaceAll
 
 ```js
-replaceAll(str, subStr, replaceStr [, caseInsensitive])
+replaceAll(subjectString, subString, replaceString [, caseInsensitive])
 ```
 
-> Returns a new string with all occurrences of subStr replaced with replaceStr.
+Creates a new string with all occurrences of `subString` replaced with `replaceString`.
 
-- <code>str {string}</code>
+#### Arguments
 
-The string to process.
+- `subjectString` _(string)_: The string to process.
 
-- <code>subStr {string}</code>
+- `subString` _(string)_: The substring to replace.
 
-The substring to replace.
+- `replaceString` _(string)_: The substring to replace with.
 
-- <code>replaceStr {string}</code>
+- `[caseInsensitive]` _(boolean)_: If true, the lookup is case insensitive. Default is undefined (falsy).
 
-The substring to replace with.
+#### Returns
 
-- <code>[caseInsensitive] {boolean}</code>
+_(string)_: Returns the result string.
 
-If true, the lookup is case insensitive. Default is undefined (falsey).
-
-#### Example
+#### Examples
 ```js
 var str = 'Lorem ispum 5 dolor sit amet.';
 
-replaceAll(str, ' ', '_')); // 'Lorem_ispum_5_dolor_sit_amet'
-replaceAll(str, '', '-')); // 'L-o-r-e-m- -i-s-p-u-m- -5- -d-o-l-o-r- -s-i-t- -a-m-e-t-.'
-replaceAll(str, 5, 15)); // 'Lorem ispum 15 dolor sit amet.'
-replaceAll(str, 'Lorem', '***')); // '*** ispum 5 dolor sit amet.'
-replaceAll(str, 'LOREM', '_lorem_', true)); // '_lorem_ ispum 5 dolor sit amet.'
+replaceAll(str, ' ', '_'));
+// -> 'Lorem_ispum_5_dolor_sit_amet'
+
+replaceAll(str, '', '-'));
+// -> 'L-o-r-e-m- -i-s-p-u-m- -5- -d-o-l-o-r- -s-i-t- -a-m-e-t-.'
+
+replaceAll(str, '5', '15'));
+// -> 'Lorem ispum 15 dolor sit amet.'
+
+replaceAll(str, 'Lorem', '***'));
+// -> '*** ispum 5 dolor sit amet.'
+
+replaceAll(str, 'LOREM', '_lorem_', true));
+// -> '_lorem_ ispum 5 dolor sit amet.'
 ```
