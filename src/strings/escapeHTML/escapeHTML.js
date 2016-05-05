@@ -1,7 +1,7 @@
 /**
  * Escapes a HTML string.
- * @param {String} html The HTML string to escape.
- * @returns {String} Returns the escaped string.
+ * @param {String} subjectString The HTML string to escape.
+ * @return {String} Returns the escaped string.
  */
 function escapeHTML(subjectString) {
     'use strict';

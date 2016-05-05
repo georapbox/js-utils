@@ -5,7 +5,7 @@
  * If n is not of type number, returns the whole string intact.
  * @param {String} subjectString The initial string.
  * @param {Number} n The number of characters of the new string.
- * @returns {String} Returns the result string.
+ * @return {String} Returns the result string.
  */
 function subStr(subjectString, n) {
     'use strict';

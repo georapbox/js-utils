@@ -2,7 +2,7 @@
  * Creates a new string with all occurrences of [string1], [string2],... removed.
  * @param {String} subjectString The string to process.
  * @param {String} [...args] Optional. The substrings to remove from the original string.
- * @returns {String} Returns the result string.
+ * @return {String} Returns the result string.
  */
 function strip(subjectString /*...args*/) {
     'use strict';

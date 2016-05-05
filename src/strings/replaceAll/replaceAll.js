@@ -4,7 +4,7 @@
  * @param {String} subString The substring to replace.
  * @param {String} replaceString The substring to replace with.
  * @param {Boolean} [caseInsensitive] Optional. If true, the lookup is case insensitive.
- * @returns {String} Returns the result string.
+ * @return {String} Returns the result string.
  */
 function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
     'use strict';
