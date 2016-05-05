@@ -1,30 +1,30 @@
 ### [Strings](../) > truncate
 
 ```js
-truncate(string, characterCount [, delimiter])
+truncate(subjectString, characterCount [, delimiter])
 ```
 
-> Truncates a string based on character count.
+Truncates a string based on character count.
 
-- <code>string {string}</code>
+#### Arguments
 
-The string to truncate.
+- `subjectString` _(string)_: The string to truncate.
 
-- <code>characterCount {number}</code>
+- `characterCount` _(number)_: The number of characters the truncated string will contain. If ommitted or falsey, the default string is returned.
 
-The number of characters the truncated string will contain. If ommitted or falsey, the default string is returned.
+- `[delimiter]` _(string)_: Optional. Defaults to '...'. The delimiter to add at the end of the truncated string.
 
-- <code>[delimiter] {string}</code>
+#### Returns
 
-The delimiter to add at the end of the truncated string. Default value is "...".
+_(string)_: Returns the truncated string.
 
-#### Example
+#### Examples
 ```js
 var str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 
 truncate(str, 50);
-// => "Lorem ipsum dolor sit amet, consectetur adipisicin..."
+// -> 'Lorem ipsum dolor sit amet, consectetur adipisicin...'
 
 truncate(str, 30, '---');
-// => "Lorem ipsum dolor sit amet, co---"
+// -> 'Lorem ipsum dolor sit amet, co---'
 ```

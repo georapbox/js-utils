@@ -1,38 +1,37 @@
 ### [Strings](../) > subStrAfterChars
 
 ```js
-subStrAfterChars(str, chars [, last])
+subStrAfterChars(subjectString, characters [, last])
 ```
 
-> Returns a substring after a specific sequence of character(s).
+Returns a substring after a specific sequence of character(s).
 
-> By default looks for the first occurrence of this sequence.
-> If the character or sequence of characters not found, returns the initial string.
+By default looks for the first occurrence of this sequence.
+If the character or sequence of characters not found, returns the initial string.
 
-- <code>str {String}</code>
+#### Arguments
 
-The initial string to process.
+- `subjectString` _(string)_: The initial string to process.
 
-- <code>chars {String}</code>
+- `characters` _(string)_: One or more characters to use for the lookup.
 
-One or more characters to use for the lookup.
+- `[last]` _(boolean)_: If `true` or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified. Defaults to `undefined`.
 
-- <code>[last] {Boolean}</code>
+#### Returns
 
-If <code>true</code> or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified.
-Default value is <code>undefined</code>.
+_(string)_: Returns the result string.
 
-#### Example
+#### Examples
 ```js
 subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '_');
-// => 'IPSUM DOLOR_SIT AMET'
+// -> 'IPSUM DOLOR_SIT AMET'
 
 subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
-// => 'SIT AMET'
+// -> 'SIT AMET'
 
 subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
-// => 'AMET'
+// -> 'AMET'
 
 subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '?', true);
-// => 'LOREM_IPSUM DOLOR_SIT AMET'
+// -> 'LOREM_IPSUM DOLOR_SIT AMET'
 ```

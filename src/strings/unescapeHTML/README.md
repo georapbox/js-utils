@@ -1,17 +1,21 @@
 ### [Strings](../) > unescapeHTML
 
 ```js
-unescapeHTML(str)
+unescapeHTML(subjectString)
 ```
 
-> Unscapes a HTML string.
+Unscapes a HTML string.
 
-- <code>str {string}</code>
+#### Arguments
 
-The HTML string to unescape.
+- `subjectString` _(string)_: The HTML string to unescape.
+
+#### Returns
+
+_(string)_: Returns the result string.
 
 #### Example
 ```js
 unescapeHTML('&lt;p&gt;Hello World!&lt;/p&gt;');
-// => <p>Hello World!</p>
+// -> <p>Hello World!</p>
 ```
