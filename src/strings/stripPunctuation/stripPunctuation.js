@@ -1,9 +1,14 @@
 /**
  * Removes all of the punctuation from a string.
- * @param {String} str The string to strip the punctuation from.
- * @return {String} The stripped string.
+ * @param {String} subjectString The string to strip the punctuation from.
+ * @return {String} Returns the stripped string.
  */
-function stripPunctuation(str) {
+function stripPunctuation(subjectString) {
     'use strict';
-    return str.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
+
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    return subjectString.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
 }

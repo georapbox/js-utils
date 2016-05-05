@@ -1,9 +1,14 @@
 /**
  * Removes all HTML tags from a string.
- * @param   {String} string The string to strip.
- * @returns {String} The stripped string.
+ * @param {String} subjectString The string to strip.
+ * @returns {String} Returns the stripped string.
  */
-function stripHTML(string) {
+function stripHTML(subjectString) {
     'use strict';
-    return string.replace(/<[^>]+>/g, '');
+
+    if (typeof subjectString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    return subjectString.replace(/<[^>]+>/g, '');
 }

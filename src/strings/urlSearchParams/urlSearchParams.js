@@ -6,10 +6,15 @@
 function urlSearchParams(searchString) {
     'use strict';
 
-    var queryParams = [],
-        regex = /[?&]?([^=]+)=([^&]*)/g,
-        isValidQuery = typeof searchString === 'string',
-        tempObj, tokens;
+    var queryParams, regex, isValidQuery, tempObj, tokens;
+
+    if (typeof searchString !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+
+    queryParams = [];
+    regex = /[?&]?([^=]+)=([^&]*)/g;
+    isValidQuery = typeof searchString === 'string';
 
     /**
      * Get all search parameters or the value of the one specified.
@@ -20,7 +25,7 @@ function urlSearchParams(searchString) {
      *         specified is not found in the original search query string, an empty array is returned.
      */
     function get(param) {
-        return (typeof param !== 'string') ? queryParams :
+        return typeof param !== 'string' ? queryParams :
             queryParams.filter(function (item) {
                 return Object.keys(item)[0] === param;
             }).reduce(function (accum, current) {
@@ -53,7 +58,7 @@ function urlSearchParams(searchString) {
 
     searchString = isValidQuery ? searchString.split('+').join(' ') : '';
 
-    while (tokens = regex.exec(searchString)) { // @NOTE Assignment intended
+    while (tokens = regex.exec(searchString)) {
         tempObj = {};
         tempObj[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
         queryParams.push(tempObj);
