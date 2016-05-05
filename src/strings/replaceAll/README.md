@@ -25,7 +25,7 @@ _(string)_: Returns the result string.
 var str = 'Lorem ispum 5 dolor sit amet.';
 
 replaceAll(str, ' ', '_'));
-// -> 'Lorem_ispum_5_dolor_sit_amet'
+// -> 'Lorem_ispum_5_dolor_sit_amet.'
 
 replaceAll(str, '', '-'));
 // -> 'L-o-r-e-m- -i-s-p-u-m- -5- -d-o-l-o-r- -s-i-t- -a-m-e-t-.'

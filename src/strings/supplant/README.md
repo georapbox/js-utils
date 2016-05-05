@@ -13,7 +13,7 @@ and if the key has a string value or number value, it is substituted for the bra
 
 - `subjectString` _(string)_: The string to process.
 
-- `data` _(object)_: An object to use as our model.
+- `data` _(object)_: A plain object to use as our model.
 
 #### Returns
 

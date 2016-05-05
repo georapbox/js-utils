@@ -17,8 +17,11 @@ _(string)_: Returns the escaped string.
 #### Examples
 ```js
 escapeHTML('<script src="main.js"><\/script>');
-// -> &lt;script src=&#34;main.js&#34;&gt;&lt;/script&gt;
+// -> ''&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;''
 
 escapeHTML('Hello & <span>World</span>');
-// -> Hello &amp; &lt;span&gt;World&lt;/span&gt;
+// -> 'Hello &amp; &lt;span&gt;World&lt;/span&gt;'
+
+escapeHTML('<p data-id="1">lorem ipsum</p>');
+// -> '&lt;p data-id=&quot;1&quot;&gt;lorem ipsum&lt;/p&gt;'
 ```

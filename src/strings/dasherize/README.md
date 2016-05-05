@@ -17,8 +17,14 @@ _(string)_: Returns the result string.
 #### Examples
 ```js
 dasherize('backgroundColor');
-// -> "background-color"
+// -> 'background-color'
 
 dasherize('MozBackgroundImage');
-// -> "-moz-background-image"
+// -> '-moz-background-image'
+
+dasherize(['MozBackgroundImage']);
+// -> Throws TypeError
+
+dasherize('-moz-background-image');
+// -> '-moz-background-image'
 ```
