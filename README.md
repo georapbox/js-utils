@@ -45,7 +45,6 @@ A collection of standalone javascript utility functions.
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](src/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
-|[countWords](src/strings/countWords)|Counts words in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
 |[endsWith](src/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
@@ -72,6 +71,7 @@ A collection of standalone javascript utility functions.
 |[truncate](src/strings/truncate)|Truncates a string based on character count.|
 |[unescapeHTML](src/strings/unescapeHTML)|Unescapes a HTML string.|
 |[urlSearchParams](src/strings/urlSearchParams)|Factory to access the URL search parameters.|
+|[words](src/strings/words)|Splits string into an array of its words.|
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 
 
