@@ -40,7 +40,7 @@ A collection of standalone javascript utility functions.
 ## String
 |Name|Description|
 |--------|-----------|
-|[camelize](src/strings/camelize)|Converts a string into camel casing, removing "underscores", "dashes" or spaces (spaces is optional).|
+|[camelCase](src/strings/camelCase)|Converts a string to camel case, removing "underscores", "dashes" or spaces.|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](src/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
