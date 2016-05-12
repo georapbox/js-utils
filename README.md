@@ -57,6 +57,7 @@ A collection of standalone javascript utility functions.
 |[removeSuffix](src/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
 |[repeat](src/strings/repeat)|Returns a string repeated `count` times.|
 |[replaceAll](src/strings/replaceAll)|Returns a new string with all occurrences of subString replaced with replaceString.
+|[snakeCase](src/strings/snakeCase)|Converts string into string delimited by underscores.|
 |[startsWith](src/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[strip](src/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
 |[stripHTML](src/strings/stripHTML)|Returns a new string with all HTML tags removed.|
