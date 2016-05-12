@@ -9,7 +9,7 @@ A collection of standalone javascript utility functions.
 |Name|Description|
 |--------|-----------|
 |[chunk](src/arrays/chunk)|Creates an array of elements split into groups the length of size specified.|
-|[compact](src/arrays/compact)|Creates an array with all falsey values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.|
+|[compact](src/arrays/compact)|Creates an array with all falsy values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsy.|
 |[diff](src/arrays/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
 |[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
@@ -40,7 +40,7 @@ A collection of standalone javascript utility functions.
 ## String
 |Name|Description|
 |--------|-----------|
-|[camelCase](src/strings/camelCase)|Converts a string to camel case, removing "underscores", "dashes" or spaces.|
+|[camelCase](src/strings/camelCase)|Converts a string to camel case, removing any non alphanumeric characters.|
 |[capitalize](src/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](src/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](src/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
@@ -50,13 +50,13 @@ A collection of standalone javascript utility functions.
 |[endsWith](src/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
 |[lines](src/strings/lines)|Returns an array with the lines of a a string.|
-|[pad](src/strings/pad)|Pad <code>subjectString</code> on **both** sides to the given <code>len</code>, with optional <code>chars</code> defaulting to a space.|
-|[padLeft](src/strings/padLeft)|Pad <code>subjectString</code> on **left** side to the given <code>len</code>, with optional <code>chars</code> defaulting to a space.|
-|[padRight](src/strings/padRight)|Pad <code>subjectString</code> on **right** side to the given <code>len</code>, with optional <code>chars</code> defaulting to a space.|
-|[randomString](src/strings/randomString)|Generates a random string of <code>n</code> characters, from the <code>chars</code> string provided by the user.|
+|[pad](src/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
+|[padLeft](src/strings/padLeft)|Pad `subjectString` on **left** side to the given `len`, with optional `chars` defaulting to a space.|
+|[padRight](src/strings/padRight)|Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.|
+|[randomString](src/strings/randomString)|Generates a random string of `n` characters, from the `chars` string provided by the user.|
 |[removePrefix](src/strings/removePrefix)|Removes substring (prefix) from start of a string.|
 |[removeSuffix](src/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
-|[repeat](src/strings/repeat)|Returns a string repeated <code>count</code> times.|
+|[repeat](src/strings/repeat)|Returns a string repeated `count` times.|
 |[replaceAll](src/strings/replaceAll)|Returns a new string with all occurrences of subString replaced with replaceString.
 |[startsWith](src/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[strip](src/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
@@ -82,7 +82,7 @@ A collection of standalone javascript utility functions.
 |[inRange](src/numbers/inRange)|Checks if a number is between start and up to but not including, end.|
 |[max](src/numbers/max)|Returns the largest of zero or more numbers.|
 |[min](src/numbers/min)|Returns the smallest of zero or more numbers.|
-|[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal seperator and the thousands seperator.|
+|[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands seperator.|
 |[randomBetween](src/numbers/randomBetween)|Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.|
 
 
@@ -112,7 +112,7 @@ A collection of standalone javascript utility functions.
 
 
 ## is
-[is.api](src/is/is.api) - A minimal API for the ```is``` functions below that provides ```not```, ```all``` and ```any``` interfaces. <br>
+[is.api](src/is/is.api) - A minimal API for the `is` functions below that provides `not`, `all` and `any` interfaces.<br>
 <small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
 
 |Name|Description|
@@ -152,7 +152,7 @@ A collection of standalone javascript utility functions.
 ## DOM
 |Name|Description|
 |--------|-----------|
-|[preloadImages](src/dom/preloadImages)|Asynchronsouly load images to browser so that can be cached.|
+|[preloadImages](src/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
 |[isEventSupported](src/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
 |[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
 |[whichAnimationEnd](src/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
@@ -174,14 +174,16 @@ A collection of standalone javascript utility functions.
 
 
 ## Installation
-- To clone the repository, run: <code>git clone https://github.com/georapbox/jsEssentials.git</code>
-- To install dev dependancies, (from the root folder of the project) run: <code>$ npm install</code><br/>
+- To clone the repository, run: `git clone https://github.com/georapbox/jsEssentials.git`
+- To install dev dependancies, (from the root folder of the project) run: `$ npm install`<br>
 (Required to build the documentation, run the tests, etc)
 
+
 ## Build the documentation
-From the root folder of the project, run: <code>$ npm run docs</code>.
-This will create a <code>docs</code> folder to the root of the project, containing all <code>README</code> files converted to HTML documents.
+From the root folder of the project, run: `$ npm run docs`.
+This will create a `docs` folder to the root of the project, containing all `README` files converted to HTML documents.
+
 
 ## Run the tests
-From the root folder of the project, run: <code>$ npm run test</code>.
-Apart from the results in terminal, this will create a <code>tests-reporter</code> folder to the root of the project, that contains an HTML document with the tests results.
+From the root folder of the project, run: `$ npm run test`.
+Apart from the results in terminal, this will create a `tests-reporter` folder to the root of the project, that contains an HTML document with the tests results.
