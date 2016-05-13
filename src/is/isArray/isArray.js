@@ -5,5 +5,7 @@
  */
 function isArray(value) {
     'use strict';
-    return !!value && Object.prototype.toString.call(value) === '[object Array]';
+
+    return Array.isArray ? Array.isArray(value) :
+        Object.prototype.toString.call(value) === '[object Array]';
 }

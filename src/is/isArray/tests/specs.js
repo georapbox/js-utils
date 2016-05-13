@@ -4,12 +4,16 @@
     'use strict';
 
     describe('is/isArray', function () {
-        it('isArray([\'a\', \'b\', \'c\', \'d\']) should return true', function () {
+        it('checks if value is array', function () {
             expect(isArray(['a', 'b', 'c', 'd'])).toBe(true);
-        });
 
-        it('isArray({ a: \'a\', b: \'b\' }) should return false', function () {
-            expect(isArray({ a: 'a', b: 'b' })).toBe(false);
+            expect(isArray({a: 'a', b: 'b'})).toBe(false);
+
+            expect(isArray('abcdefg')).toBe(false);
+
+            expect(isArray(null)).toBe(false);
+
+            expect(isArray(undefined)).toBe(false);
         });
     });
 }());
