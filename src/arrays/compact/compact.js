@@ -1,6 +1,6 @@
 /**
  * https://lodash.com/docs#compact
- * Creates an array with all falsey values removed.
+ * Creates an array with all falsy values removed.
  * 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsey.
  * @param {Array} array The array to compact.
  * @returns {Array} Returns the new array of filtered values.
