@@ -6,6 +6,11 @@
  */
 function negate(func) {
     'use strict';
+
+    if (typeof func !== 'function') {
+        throw new TypeError('Expected a function');
+    }
+
     return function () {
         return !func.apply(this, arguments);
     };

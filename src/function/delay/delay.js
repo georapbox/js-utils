@@ -9,13 +9,13 @@
 function delay(func, wait /*, args...*/) {
     'use strict';
 
-    var slice = Array.prototype.slice,
-        args;
+    var slice, args;
 
     if (typeof func !== 'function') {
         throw new TypeError('Expected a function');
     }
 
+    slice = Array.prototype.slice;
     wait = wait || 0;
     args = slice.call(arguments, typeof wait === 'number' ? 2 : 1);
 

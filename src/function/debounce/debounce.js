@@ -3,15 +3,20 @@
  * be triggered. The function will be called after it stops being called for
  * 'n' milliseconds. If `immediate` is passed, trigger the function on the
  * leading edge, instead of the trailing.
- * @param {Function} callback The function to be executed.
- * @param {Number} [n=0] Optiona. Default value is 0. Time of delay in milliseconds. It is required if `immediate` is used.
+ * @param {Function} func The function to be executed.
+ * @param {Number} [n=0] Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used.
  * @param {Boolean} [immediate] If true or any truthy value, triggers the function on the leading edge.
  * @return {Function} Returns a new debounced function.
  */
-function debounce(callback, n, immediate) {
+function debounce(func, n, immediate) {
     'use strict';
 
     var timeout;
+
+    if (typeof func !== 'function') {
+        throw new TypeError('Expected a function');
+    }
+
     return function () {
         var context = this,
             args = arguments;
@@ -19,7 +24,7 @@ function debounce(callback, n, immediate) {
         var later = function () {
             timeout = null;
             if (!immediate) {
-                callback.apply(context, args);
+                func.apply(context, args);
             }
         };
 
@@ -28,7 +33,7 @@ function debounce(callback, n, immediate) {
         timeout = setTimeout(later, n || 0);
 
         if (callNow) {
-            callback.apply(context, args);
+            func.apply(context, args);
         }
     };
 }

@@ -1,17 +1,23 @@
 /**
  * Limits the number of times a function can be called in a given period.
- * @param {Function} callback The function to be executed.
+ * @param {Function} func The function to be executed.
  * @param {Number} [n=0] Optional. Default value is 0. Time of delay in milliseconds.
  * @return {Function} Returns the throttled function.
  */
-function throttle(callback, n) {
+function throttle(func, n) {
     'use strict';
 
-    var wait = false;
+    var wait;
+
+    if (typeof func !== 'function') {
+        throw new TypeError('Expected a function');
+    }
+
+    wait = false;
 
     return function () {
         if (!wait) {
-            callback.call();
+            func.call();
             wait = true;
             setTimeout(function () {
                 wait = false;

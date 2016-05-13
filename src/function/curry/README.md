@@ -1,13 +1,13 @@
 ### [Function](../) > curry
 
 ```js
-curry(fn [, n])
+curry(func [, n])
 ```
 Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.
 
 #### Arguments
 
-- `fn` _(function)_: The function to curry.
+- `func` _(function)_: The function to curry.
 
 - `[n]` _(number)_: Optional. The number of expected arguments in case that the function's arity cannot be automatically determined.
 

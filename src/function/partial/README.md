@@ -1,14 +1,14 @@
 ### [Function](../) > partial
 
 ```js
-partial(fn [, args...])
+partial(func [, args...])
 ```
 
 Creates a function that invokes `func` with `args` **prepended** to the arguments it receives.
 
 #### Arguments
 
-- `fn` _(function)_: The function to be invoked with the partially applied arguments.
+- `func` _(function)_: The function to be invoked with the partially applied arguments.
 
 - `[args...]` _(*)_: Optional. The arguments to be partially applied.
 

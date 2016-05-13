@@ -1,14 +1,14 @@
 ### [Function](../) > throttle
 
 ```js
-throttle(callback [, n=0])
+throttle(func [, n=0])
 ```
 
 Limits the number of times a function can be called in a given period.
 
 #### Arguments
 
-- `callback` _(function)_: The function to be executed.
+- `func` _(function)_: The function to be executed.
 
 - `[n=0]` _(number)_: Optional. Default value is 0. Time of delay in milliseconds.
 

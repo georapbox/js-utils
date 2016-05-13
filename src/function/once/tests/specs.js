@@ -11,6 +11,7 @@
             });
 
             expect(canOnlyFireOnce()).toEqual(1);
+
             expect(canOnlyFireOnce()).toEqual(1);
         });
     });
