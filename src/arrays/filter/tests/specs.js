@@ -6,18 +6,24 @@
     describe('Array/filter', function () {
         var arr = ['a', {a: 'b'}, 1, 'b', 2, {c: 'd'}, 'c'];
 
-        it('expects the return value to be "[{a: \'b\'}]"', function () {
-            var f = filter(arr, function (item) {
+        it('should filter arrays', function () {
+            var res_a = filter(arr, function (item) {
                 return item.a === 'b';
             });
-            expect(f).toEqual([{a: 'b'}]);
-        });
 
-        it('expects the return value to be an array', function () {
-            var f = filter(arr, function (item) {
+            var res_b = filter(arr, function (item) {
                 return item === 1;
             });
-            expect(Object.prototype.toString.call(f)).toBe('[object Array]');
+
+            expect(res_a).toEqual([{a: 'b'}]);
+
+            expect(res_b).toEqual([1]);
+
+            expect(function () {
+                return filter({}, function (item) {
+                    return item === 'foo';
+                });
+            }).toThrow();
         });
     });
 }());

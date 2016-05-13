@@ -6,7 +6,7 @@
     describe('Array/uniq', function () {
         var arr = ['a', 'a', 'b', true, '2', 2, false, true];
 
-        it('should contain only one occurence of "a"', function () {
+        it('removes duplicate primitive values from an array', function () {
             var uArr = uniq(arr),
                 count = 0;
 
@@ -17,6 +17,10 @@
             }
 
             expect(count).toEqual(1);
+
+            expect(function () {
+                return uniq({});
+            }).toThrow();
         });
     });
 }());

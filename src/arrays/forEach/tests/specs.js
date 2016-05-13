@@ -10,12 +10,16 @@
             forEach(arr, function (item, index) {
                 expect(item).toEqual(arr[index]);
             });
-        });
 
-        it('expects the items of the array to be of type "string"', function () {
-            forEach(arr, function (item) {
-                expect(typeof item).toBe('string');
-            });
+            expect(function () {
+                forEach({}, function (item, index) {
+                    expect(item).toEqual(arr[index]);
+                });
+            }).toThrow();
+
+            expect(function () {
+                forEach(arr);
+            }).toThrow();
         });
     });
 }());

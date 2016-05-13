@@ -8,10 +8,14 @@
 function shuffle(array) {
     'use strict';
 
-    var newArray = array.slice(0), // Ensure that original array stays intact.
-        currentIndex = newArray.length,
-        temporaryValue,
-        randomIndex;
+    var newArray, currentIndex, temporaryValue, randomIndex;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    newArray = array.slice(0); // Ensure that original array stays intact.
+    currentIndex = newArray.length;
 
     // While remaining elements to shuffle...
     while (currentIndex) {

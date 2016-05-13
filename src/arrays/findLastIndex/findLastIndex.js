@@ -7,7 +7,17 @@
 function findLastIndex(array, callback) {
     'use strict';
 
-    var length = array ? array.length : 0;
+    var length;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    if (typeof callback !== 'function') {
+        throw new TypeError('Expected a function');
+    }
+
+    length = array.length;
 
     while (length--) {
         if (callback(array[length], length, array)) {

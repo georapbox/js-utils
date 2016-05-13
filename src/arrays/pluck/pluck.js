@@ -7,10 +7,16 @@
 function pluck(array, key) {
     'use strict';
 
-    var arr = [],
-        index = -1,
-        len = array.length,
-        arrItem;
+    var arr, index, len, arrItem;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    arr = [];
+    index = -1;
+    len = array.length;
+    arrItem;
 
     while (++index < len) {
         arrItem = array[index];

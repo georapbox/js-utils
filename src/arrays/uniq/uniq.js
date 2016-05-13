@@ -8,9 +8,14 @@
 function uniq(array) {
     'use strict';
 
-    var newArr = [],
-        len = array.length,
-        i, j, found;
+    var newArr, len, i, j, found;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    newArr = [];
+    len = array.length;
 
     for (i = 0; i < len; i += 1) {
         found = undefined;

@@ -6,5 +6,10 @@
  */
 function reverse(array) {
     'use strict';
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
     return array.slice(0).reverse();
 }

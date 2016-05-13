@@ -12,10 +12,16 @@
 function compact(array) {
     'use strict';
 
-    var index = -1,
-        length = array ? array.length : 0,
-        resIndex = -1,
-        result = [];
+    var index, length, resIndex, result;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    index = -1;
+    length = array.length;
+    resIndex = -1;
+    result = [];
 
     while (++index < length) {
         var value = array[index];

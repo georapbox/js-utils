@@ -1,16 +1,16 @@
 ### [Arrays](../) > diff
 
 ```js
-diff(arrA [, arrB])
+diff(arrayA [, arrayB])
 ```
 
 Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.
 
 #### Arguments
 
-- `arrA` _(array)_: The array to process.
+- `arrayA` _(array)_: The array to process.
 
-- `[arrB]` _(array)_: Optional. Array of values to exclude from the original array.
+- `[arrayB]` _(array)_: Optional. Array of values to exclude from the original array.
 
 #### Returns
 

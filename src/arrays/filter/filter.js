@@ -8,12 +8,10 @@
 function filter(array, callback, thisArg) {
     'use strict';
 
-    var toString = Object.prototype.toString,
-        isArray = toString.call(array) === '[object Array]',
-        len, res;
+    var len, res;
 
-    if (array == null || !isArray) {
-        return [];
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
     }
 
     if (typeof callback !== 'function') {

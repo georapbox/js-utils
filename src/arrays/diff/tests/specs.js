@@ -7,14 +7,12 @@
         var a = [1, 2, 3, 4, {}],
             b = [5, 2, 10];
 
-        it('tracks all the arguments of its calls', function () {
-            spyOn(window, 'diff');
-            diff(a, b);
-            expect(window.diff).toHaveBeenCalledWith(a, b);
-        });
-
-        it('expects the result array to be "[1, 3, 4, {}]"', function () {
+        it('should diff arrays', function () {
             expect(diff(a, b)).toEqual([1, 3, 4, {}]);
+
+            expect(diff(b, a)).toEqual([5, 10]);
+
+            expect(diff(a)).toEqual([1, 2, 3, 4, {}]);
         });
     });
 }());

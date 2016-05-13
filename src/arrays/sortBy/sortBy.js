@@ -10,7 +10,13 @@
 function sortBy(array, field, ascending, primer) {
     'use strict';
 
-    var key = function (x) {
+    var key;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    key = function (x) {
         return primer ? primer(x[field]) : x[field];
     };
 

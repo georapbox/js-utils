@@ -7,11 +7,9 @@
 function forEach(array, callback, thisArg) {
     'use strict';
 
-    var toString = Object.prototype.toString,
-        isArray = toString.call(array) === '[object Array]',
-        i, len;
+    var index, len;
 
-    if (array == null || !isArray) {
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
         throw new TypeError('Expected an array');
     }
 
@@ -19,11 +17,11 @@ function forEach(array, callback, thisArg) {
         throw new TypeError('Expected a function');
     }
 
-    i = 0;
+    index = 0;
     len = array.length;
 
-    for (i; i < len; i++) {
-        if (callback.call(thisArg, array[i], i, array) === false) {
+    for (; index < len; index += 1) {
+        if (callback.call(thisArg, array[index], index, array) === false) {
             return;
         }
     }

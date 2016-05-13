@@ -11,7 +11,13 @@ function sort(array, ascending) {
     'use strict';
 
     // Remove any `null`, `undefined` or `NaN` values.
-    var filtered = array.filter(function (el) {
+    var filtered;
+
+    if (Object.prototype.toString.call(array) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    filtered = array.filter(function (el) {
         return el != null && el === el;
     });
 
