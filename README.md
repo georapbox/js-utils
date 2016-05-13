@@ -63,8 +63,8 @@ A collection of standalone javascript utility functions.
 |[stripHTML](src/strings/stripHTML)|Returns a new string with all HTML tags removed.|
 |[stripPunctuation](src/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|
 |[subStr](src/strings/subStr)|Returns a substring denoted by n (positive or negative) characters.|
-|[subStrAfterChars](src/strings/subStrAfterChars)|Returns a substring after a specific sequence of character(s).|
-|[subStrBeforeChars](src/strings/subStrBeforeChars)|Returns a substring before a specific sequence of character(s).|
+|[subStrAfter](src/strings/subStrAfter)|Returns a substring after a specific sequence of character(s).|
+|[subStrBefore](src/strings/subStrBefore)|Returns a substring before a specific sequence of character(s).|
 |[supplant](src/strings/supplant)|supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.|
 |[trim](src/strings/trim)|Removes whitespace from both ends of a string.|
 |[trimLeft](src/strings/trimLeft)|Removes whitespace from the left end of a string.|

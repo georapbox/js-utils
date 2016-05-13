@@ -1,15 +1,15 @@
-/*global subStrAfterChars*/
+/*global subStrAfter*/
 
 (function () {
     'use strict';
 
-    describe('String/subStrAfterChars', function () {
+    describe('String/subStrAfter', function () {
         it('With string "LOREM_IPSUM DOLOR_SIT AMET", The substring after the first occurence of "SIT ", should be "AMET"', function () {
-            expect(subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ')).toBe('AMET');
+            expect(subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ')).toBe('AMET');
         });
 
         it('With string "LOREM_IPSUM DOLOR_SIT AMET", the substring after the last occurence of "_" should be "SIT AMET"', function () {
-            expect(subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '_', true)).toBe('SIT AMET');
+            expect(subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true)).toBe('SIT AMET');
         });
     });
 }());

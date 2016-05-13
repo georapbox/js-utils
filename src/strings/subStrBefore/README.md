@@ -1,7 +1,7 @@
-### [Strings](../) > subStrBeforeChars
+### [Strings](../) > subStrBefore
 
 ```js
-subStrBeforeChars(subjectString, characters [, last])
+subStrBefore(subjectString, characters [, last])
 ```
 
 Returns a substring before a specific sequence of character(s).
@@ -17,23 +17,23 @@ If the character or sequence of characters not found, returns the initial string
 
 - `[last]` _(boolean)_: If `true` or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified. Defaults to `undefined` (falsy).
 
-**NOTE:** `subStrBeforeChars` makes use of `String.prototype.lastIndexOf`.
+**NOTE:** `subStrBefore` makes use of `String.prototype.lastIndexOf`.
 For legacy browsers (<=IE8) that do not support it, use an [HTML5 shim](https://github.com/es-shims/es5-shim).
 
 #### Examples
 ```js
-subStrBeforeChars('LOREM_IPSUM DOLOR_SIT AMET', '_');
+subStrBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
 // -> 'LOREM'
 
-subStrBeforeChars('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
+subStrBefore('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
 // -> 'LOREM_IPSUM DOLOR'
 
-subStrBeforeChars('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
+subStrBefore('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
 // -> 'LOREM_IPSUM DOLOR_'
 
-subStrBeforeChars('LOREM_IPSUM DOLOR_SIT AMET', '?', true);
+subStrBefore('LOREM_IPSUM DOLOR_SIT AMET', '?', true);
 // -> 'LOREM_IPSUM DOLOR_SIT AMET'
 
-subStrBeforeChars('LOREM_IPSUM DOLOR_SIT AMET');
+subStrBefore('LOREM_IPSUM DOLOR_SIT AMET');
 // -> Throws TypeError
 ```

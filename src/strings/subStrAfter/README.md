@@ -1,7 +1,7 @@
-### [Strings](../) > subStrAfterChars
+### [Strings](../) > subStrAfter
 
 ```js
-subStrAfterChars(subjectString, characters [, last])
+subStrAfter(subjectString, characters [, last])
 ```
 
 Returns a substring after a specific sequence of character(s).
@@ -23,15 +23,15 @@ _(string)_: Returns the result string.
 
 #### Examples
 ```js
-subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '_');
+subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
 // -> 'IPSUM DOLOR_SIT AMET'
 
-subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
+subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
 // -> 'SIT AMET'
 
-subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
+subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
 // -> 'AMET'
 
-subStrAfterChars('LOREM_IPSUM DOLOR_SIT AMET', '?', true);
+subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '?', true);
 // -> 'LOREM_IPSUM DOLOR_SIT AMET'
 ```
