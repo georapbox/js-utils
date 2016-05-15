@@ -1,8 +1,14 @@
 /**
  * Reverses an array (not in place).
  * The first array element becomes the last and the last becomes the first.
+ *
+ * @category Array
  * @param {Array} array The array to reverse.
- * @return {Array} A new array reversed.
+ * @return {Array} Returns a new array reversed.
+ * @example
+ *
+ * reverse([1, 2, 3]);
+ * // -> [3, 2, 1]
  */
 function reverse(array) {
     'use strict';

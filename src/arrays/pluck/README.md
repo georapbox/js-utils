@@ -1,44 +1,18 @@
-### [Arrays](../) > pluck
+<a name="pluck"></a>
 
-```js
-pluck(array, key)
-```
-
+## pluck(array, key) ⇒ <code>Array</code>
 Retrieves the value of a specified property from all elements in an array.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns the result array.  
+**Category**: Array  
 
-- `array` _(array)_: The array to iterate over.
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to iterate over. |
+| key | <code>String</code> | The name of the property to pluck. |
 
-- `key` _(string)_: The name of the property to pluck.
-
-#### Returns
-
-_(array)_: Returns the result array.
-
-#### Examples
+**Example**  
 ```js
-var books = [
-	{
-		title: 'Around the World in Eighty Days',
-		author: 'Jules Verne'
-	},
-	{
-		title: 'The Mist',
-		author: 'Stephen King'
-	},
-	{
-		title: 'Journey to the Center of the Earth',
-		author: 'Jules Verne'},
-	{
-		title: 'The Monster in the Closet',
-		author: 'Stephen King'
-	}
-];
-
-pluck(books, 'title');
-// -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
-
-pluck(books, 'author');
-// -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
+var books = [  {title: 'Around the World in Eighty Days', author: 'Jules Verne'},  {title: 'The Mist', author: 'Stephen King'},  {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},  {title: 'The Monster in the Closet', author: 'Stephen King'}];pluck(books, 'title');// -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]pluck(books, 'author');// -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
 ```

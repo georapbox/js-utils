@@ -1,66 +1,49 @@
-### [Arrays](../) > findIndex
+<a name="findIndex"></a>
 
-```js
-findIndex(array, callback)
-```
-
-Returns the index of the first element of a collection that passes the callback check.
+## findIndex(array, callback) ⇒ <code>Number</code>
+Returns the index of the first element that passes the callback check.
 If no element passes the callback check, returns -1.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Number</code> - Returns the index of the first element that matches the callback check.  
+**Category**: Array  
 
-- `array` _(array)_: The array to check.
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to check. |
+| callback | <code>function</code> | The function called per iteration. |
 
-- `callback` _(function)_: The function called per iteration.
-
-#### Returns
-
-_(number)_: Returns the index of the first element that matches the `callback` check.
-
-#### Examples
+**Example**  
 ```js
 var heroes = [
-    {
-        name: 'Bruce Wayne',
-        hero: 'Batman'
-    },
-    {
-        name: 'Clark Kent',
-        hero: 'Superman',
-        specialPowers: ['speed', 'flying', 'strength']
-    },
-    {
-        name: 'Peter Parker',
-        hero: 'Spiderman',
-        specialPowers: ['climbing']
-    }
+  {name: 'Bruce Wayne', hero: 'Batman'},
+  {name: 'Clark Kent', hero: 'Superman', specialPowers: ['speed', 'flying', 'strength']},
+  {name: 'Peter Parker', hero: 'Spiderman', specialPowers: ['climbing']}
 ];
-
 var characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-
 var numbers = [1, 2, 3];
 
 findIndex(characters, function (chr, index, array) {
-    return chr === 'E';
+  return chr === 'E';
 });
 // -> 4
 
 findIndex(heroes, function (hero, index, array) {
-    return hero.name === 'Clark Kent';
+  return hero.name === 'Clark Kent';
 });
 // -> 1
 
 findIndex(heroes, function (hero, index, array) {
-    if (hero.specialPowers) {
-        for (var i = 0; i < hero.specialPowers.length; i++) {
-            if (hero.specialPowers[i] === 'climbing') return true;
-        }
+  if (hero.specialPowers) {
+    for (var i = 0; i < hero.specialPowers.length; i++) {
+      if (hero.specialPowers[i] === 'climbing') return true;
     }
+  }
 });
 // -> 2
 
 findIndex(numbers, function (n) {
-    return n > 10;
+  return n > 10;
 });
 // -> -1
 ```

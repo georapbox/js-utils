@@ -1,44 +1,42 @@
-### [Arrays](../) > forEach
+<a name="forEach"></a>
 
-```js
-forEach(array, callback [, thisArg])
-```
+## forEach(array, callback, [thisArg])
+Executes a provided callback function once per array element.
+To break from the iteration at any time, have the callback return `false`.
 
-Executes a provided callback function once per array element. To break from the iteration at any time, have the callback return `false`.
+**Kind**: global function  
+**Category**: Array  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to iterate over. |
+| callback | <code>function</code> | Function to execute for each element. |
+| [thisArg] | <code>Object</code> | Value to use as `this` when executing callback. |
 
-- `array` _(array)_: The array to iterate over.
-
-- `callback` _(function)_: The callback function to execute per array element.
-
-- `[thisArg]` _(object)_: Optional. Value to use as `this` when executing callback.
-
-#### Examples
+**Example**  
 ```js
 var arr = ['a', 'b', 'c', 'd', 'e'];
 
 forEach(arr, function (item, index, obj) {
-    console.log(item);
+  console.log(item);
 });
 // -> a, b, c, d, e
 
 forEach(arr, function (item, index, obj) {
-    console.log(index);
+  console.log(index);
 });
 // -> 0, 1, 2, 3, 4
 
 forEach(arr, function (item, index, obj) {
-    console.log(item);
-    if (item === 'c') {
-        return false;
-    }
+  if (item === 'c') {
+    return false;
+  }
 });
 // -> a, b, c
 
 forEach(arr, function (item, index, obj) {
-    console.log(this);
-    return false;
+  console.log(this);
+  return false;
 }, arr);
-// =>  ["a", "b", "c", "d", "e"]
+// =>  ['a', 'b', 'c', 'd', 'e']
 ```

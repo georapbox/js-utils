@@ -1,22 +1,19 @@
-### [Arrays](../) > compact
+<a name="compact"></a>
 
-```js
-compact(array)
-```
-
+## compact(array) ⇒ <code>Array</code>
 Creates an array with all falsy values removed.
 `false`, `null`, `0`, `""`, `undefined`, and `NaN` are falsy.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns the new array of filtered values.  
+**Category**: Array  
 
-- `array` _(array)_: The array to compact.
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to compact. |
 
-#### Returns
-
-_(array)_: Returns the new array of filtered values.
-
-#### Example
+**Example**  
 ```js
 compact([0, 1, false, 2, '', 3, null]);
-// -> [1, 2, 3]
+// => [1, 2, 3]
 ```

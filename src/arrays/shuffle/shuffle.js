@@ -1,9 +1,14 @@
 /**
- * Randomize an array elements' order.
- * Using the Fisher-Yates (aka Knuth) Shuffle algorithm.
- * Nice explanation and visualization [http://bost.ocks.org/mike/shuffle/]
+ * Creates a new array with its elements' order randomized,
+ * using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+ *
+ * @category Array
  * @param {Array} array The array to shuffle.
- * @return {Array} A new array (copy of the original) with its elements randomised.
+ * @return {Array} Returns a new array with its elements randomised.
+ * @example
+ *
+ * shuffle(arr);
+ * // -> ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
  */
 function shuffle(array) {
     'use strict';

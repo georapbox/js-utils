@@ -1,34 +1,29 @@
-### [Arrays](../) > filter
+<a name="filter"></a>
 
-```js
-filter(array, callback [, thisArg])
-```
-
+## filter(array, callback, [thisArg]) ⇒ <code>Array</code>
 Creates a new array with all elements that pass the test implemented by the provided callback function.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns the result array.  
+**Category**: Array  
 
-- `array` _(array)_: The array to iterate over.
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to iterate over. |
+| callback | <code>function</code> | Function to test each element of the array. |
+| [thisArg] | <code>Object</code> | Optional. Value to use as `this` when executing callback. |
 
-- `callback` _(function)_: The callback function to test each element of the array.
-
-- `[thisArg]` _(object)_: Optional. Value to use as `this` when executing callback.
-
-#### Returns
-
-_(array)_: Returns the new filtered array.
-
-#### Examples
+**Example**  
 ```js
 var arr = ['a', {a: 'b'}, 1, 'b', 2, {c: 'd'}, 'c'];
 
 filter(arr, function (item, index, obj) {
-    return typeof item === 'string';
+  return typeof item === 'string';
 });
 // -> ['a', 'b', 'c']
 
 filter(arr, function (item, index, obj) {
-    return item.a === 'b' || item === 2;
+  return item.a === 'b' || item === 2;
 });
 // -> [{a: 'b'}, 2]
 ```

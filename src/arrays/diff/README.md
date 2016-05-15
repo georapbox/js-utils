@@ -1,29 +1,26 @@
-### [Arrays](../) > diff
+<a name="diff"></a>
 
-```js
-diff(arrayA [, arrayB])
-```
+## diff(arrayA, arrayB) ⇒ <code>Array</code>
+Returns an array with only the unique values from the first array,
+by excluding all values from the second array using strict equality for comparisons.
 
-Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.
+**Kind**: global function  
+**Returns**: <code>Array</code> - Array of values not included in the exclusion set.  
+**Category**: Array  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| arrayA | <code>Array</code> | The array to process. |
+| arrayB | <code>Array</code> | The values to exclude from `arrayA`. |
 
-- `arrayA` _(array)_: The array to process.
-
-- `[arrayB]` _(array)_: Optional. Array of values to exclude from the original array.
-
-#### Returns
-
-_(array)_: Returns the new array with values not included in the exclusion set.
-
-#### Examples
+**Example**  
 ```js
 var obj = {
     foo: 'bar'
 };
 
-var a = [1, 2, 3, 4, 5, obj],
-    b = [5, 2, 10, obj];
+var a = [1, 2, 3, 4, 5, obj];
+var b = [5, 2, 10, obj];
 
 diff(a, b);
 // -> [1, 3, 4]

@@ -12,7 +12,8 @@
   "scripts": {
     "test": "karma start",
     "docs": "grunt buildDocs",
-    "postinstall": "grunt postinstall"
+    "postinstall": "grunt postinstall",
+    "jsdoc2md": "jsdoc2md 'src/arrays/zip/zip.js' > 'src/arrays/zip/README.md'"
   },
   "devDependencies": {
     "chalk": "~1.1.3",
@@ -20,6 +21,7 @@
     "grunt-cli": "~1.2.0",
     "grunt-md2html": "~0.3.1",
     "jasmine-core": "~2.4.1",
+    "jsdoc-to-markdown": "~1.3.6",
     "karma": "~0.13.22",
     "karma-chrome-launcher": "~1.0.1",
     "karma-cli": "~1.0.0",

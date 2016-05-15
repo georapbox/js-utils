@@ -1,26 +1,21 @@
-### [Arrays](../) > sort
+<a name="sort"></a>
 
-```js
-sort(array [, ascending=true])
-```
-
-Sorts an array (not in place) of **primitive values** of the same type.
+## sort(array, [ascending]) ⇒ <code>Array</code>
+Sorts an array of primitive values of the same type.
 Any `null`, `undefined` or `NaN` values are removed from the result array.
 If array values are of different type, the result is not guaranteed to be correct.
 
-**NOTE:** For legacy browsers' support use `Array.prototype.map` and `Array.prototype.filter` polyfills.
+**Kind**: global function  
+**Returns**: <code>Array</code> - The new sorted array.  
+**Category**: Array  
+**Note:**: For legacy browsers use the `Array.prototype.map` and `Array.prototype.filter` polyfills.  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| array | <code>Array</code> |  | The array to sort. |
+| [ascending] | <code>Boolean</code> | <code>true</code> | Defines the sort order. Default is true (ascending). |
 
-- `array` _(array)_: The array to sort.
-
-- `[ascending=true]` _(boolean)_: Optional. Default value is `true` (ascending). The sorting order.
-
-#### Returns
-
-_(array)_: A new sorted array.
-
-#### Examples
+**Example**  
 ```js
 sort(['Delta', 'Omega', 'alpha', 'CHARLIE', 'lorem', 'bravo']);
 // -> ['alpha', 'bravo', 'CHARLIE', 'Delta', 'lorem', 'Omega']

@@ -1,9 +1,24 @@
 /**
  * Creates a new array with all elements that pass the test implemented by the provided callback function.
+ *
+ * @category Array
  * @param {Array} array The array to iterate over.
- * @callback {Function} callback Function to test each element of the array.
- * @param {Object} [thisArg] Value to use as `this` when executing callback.
- * @returns {Array} The result array.
+ * @param {function} callback Function to test each element of the array.
+ * @param {Object} [thisArg] Optional. Value to use as `this` when executing callback.
+ * @return {Array} Returns the result array.
+ * @example
+ *
+ * var arr = ['a', {a: 'b'}, 1, 'b', 2, {c: 'd'}, 'c'];
+ *
+ * filter(arr, function (item, index, obj) {
+ *   return typeof item === 'string';
+ * });
+ * // -> ['a', 'b', 'c']
+ *
+ * filter(arr, function (item, index, obj) {
+ *   return item.a === 'b' || item === 2;
+ * });
+ * // -> [{a: 'b'}, 2]
  */
 function filter(array, callback, thisArg) {
     'use strict';

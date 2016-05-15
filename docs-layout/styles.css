@@ -1,6 +1,6 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -160,30 +160,24 @@ body {
 .wikistyle table {
 	width: 100%;
 	margin: 1em 0;
-    border: 1px solid #ddd;
-    border-collapse: collapse;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
 }
 
 .wikistyle table tr:nth-child(2n) {
-    background: #F8F8F8;
+	background: #F8F8F8;
 }
 
 .wikistyle table th {
+	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	padding: .4em 1em;
-}
-
-.wikistyle table th:first-child {
-    border-right: 1px solid #ddd;
 }
 
 .wikistyle table td {
+	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	padding: .4em 1em;
-}
-
-.wikistyle table td:first-child {
-    border-right: 1px solid #ddd;
 }
 
 .wikistyle a code,
@@ -298,9 +292,9 @@ body {
 	font-family: 'fontello';
 	src: url('fonts/fontello.eot?22235462');
 	src: url('fonts/fontello.eot?22235462#iefix') format('embedded-opentype'),
-		url('fonts/fontello.woff?22235462') format('woff'),
-	   	url('fonts/fontello.ttf?22235462') format('truetype'),
-	   	url('fonts/fontello.svg?22235462#fontello') format('svg');
+	url('fonts/fontello.woff?22235462') format('woff'),
+	url('fonts/fontello.ttf?22235462') format('truetype'),
+	url('fonts/fontello.svg?22235462#fontello') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

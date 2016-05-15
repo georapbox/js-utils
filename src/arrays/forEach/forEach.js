@@ -1,8 +1,37 @@
 /**
  * Executes a provided callback function once per array element.
+ * To break from the iteration at any time, have the callback return `false`.
+ *
+ * @category Array
  * @param {Array} array The array to iterate over.
- * @callback {Function} callback Function to execute for each element.
+ * @param {Function} callback Function to execute for each element.
  * @param {Object} [thisArg] Value to use as `this` when executing callback.
+ * @example
+ *
+ * var arr = ['a', 'b', 'c', 'd', 'e'];
+ *
+ * forEach(arr, function (item, index, obj) {
+ *   console.log(item);
+ * });
+ * // -> a, b, c, d, e
+ *
+ * forEach(arr, function (item, index, obj) {
+ *   console.log(index);
+ * });
+ * // -> 0, 1, 2, 3, 4
+ *
+ * forEach(arr, function (item, index, obj) {
+ *   if (item === 'c') {
+ *     return false;
+ *   }
+ * });
+ * // -> a, b, c
+ *
+ * forEach(arr, function (item, index, obj) {
+ *   console.log(this);
+ *   return false;
+ * }, arr);
+ * // =>  ['a', 'b', 'c', 'd', 'e']
  */
 function forEach(array, callback, thisArg) {
     'use strict';

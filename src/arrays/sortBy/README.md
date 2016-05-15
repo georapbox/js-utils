@@ -1,52 +1,20 @@
-### [Arrays](../) > sortBy
+<a name="sortBy"></a>
 
+## sortBy(array, field, [ascending], [primer]) ⇒ <code>Array</code>
+Sorts an array of objects (not in place) by property.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns the new sorted array.  
+**Category**: Array  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| array | <code>Array</code> |  | The array to sort. |
+| field | <code>String</code> |  | The field to sort the array by. |
+| [ascending] | <code>Boolean</code> | <code>true</code> | Defines the sort order. Default is true (ascending).        This is not optional if `primer` is required. |
+| [primer] | <code>function</code> |  | Manipulates the field to sort by. |
+
+**Example**  
 ```js
-sortBy(array, field [, ascending=true] [, primer])
-```
-
-Sorts an array of **objects** (not in place) by a property.
-
-#### Arguments
-
-- `array` _(array)_: The array of objects to sort.
-
-- `field` _(string)_: The property to sort by.
-
-- `[ascending=true]` _(boolean)_: Optional. Default value is `true` (ascending). The sorting order. This is not optional if `primer` is required.
-
-- `[primer]` _(function)_: Optional. Manipulates the field to sort by.
-
-#### Returns
-
-_(array)_: A new sorted array.
-
-#### Examples
-```js
-var homes = [{
-    h_id: 8,
-    city: 'Dallas',
-    price: '162500'
-}, {
-    h_id: 4,
-    city: 'Bevery Hills',
-    price: '162500.5'
-}, {
-    h_id: 5,
-    city: 'new York',
-    price: '162500.1'
-}];
-
-sortBy(homes, 'h_id');
-// -> "[{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":8,"city":"Dallas","price":"162500"}]"
-
-sortBy(homes, 'h_id', false);
-// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"
-
-sortBy(homes, 'price', true);
-// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"
-
-sortBy(homes, 'price', true, function (field) {
-    return parseInt(field);
-});
-// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
+var homes = [  {h_id: 8, city: 'Dallas', price: '162500'},  {h_id: 4, city: 'Beverly Hills', price: '162500.5'},  {h_id: 5, city: 'new York', price: '162500.1'}];sortBy(homes, 'h_id');// -> "[{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":8,"city":"Dallas","price":"162500"}]"sortBy(homes, 'h_id', false);// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"sortBy(homes, 'price', true);// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"sortBy(homes, 'price', true, function (field) {  return parseInt(field);});// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
 ```

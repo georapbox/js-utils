@@ -1,9 +1,14 @@
 
 /**
  * Removes duplicate primitive values from an array.
- * Returns a new duplicates-free array.
- * @param {Array} arr The array to iterate over.
- * @returns {Array} The final duplicates-free array.
+ *
+ * @category Array
+ * @param {Array} array The array to process.
+ * @return {Array} Returns the result (duplicates-free) array.
+ * @example
+ *
+ * uniq(['a', 'a', 'b', true, '2', 2, false, true]);
+ * // -> ['a', 'b', true, '2', 2, false]
  */
 function uniq(array) {
     'use strict';

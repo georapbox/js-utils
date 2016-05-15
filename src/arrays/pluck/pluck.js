@@ -1,8 +1,24 @@
 /**
  * Retrieves the value of a specified property from all elements in an array.
+ *
+ * @category Array
  * @param {Array} array The array to iterate over.
  * @param {String} key The name of the property to pluck.
  * @returns {Array} Returns the result array.
+ * @example
+ *
+ * var books = [
+ *   {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
+ *   {title: 'The Mist', author: 'Stephen King'},
+ *   {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},
+ *   {title: 'The Monster in the Closet', author: 'Stephen King'}
+ * ];
+ *
+ * pluck(books, 'title');
+ * // -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
+ *
+ * pluck(books, 'author');
+ * // -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
  */
 function pluck(array, key) {
     'use strict';

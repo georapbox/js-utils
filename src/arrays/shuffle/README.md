@@ -1,25 +1,19 @@
-### [Arrays](../) > shuffle
+<a name="shuffle"></a>
 
+## shuffle(array) ⇒ <code>Array</code>
+Creates a new array with its elements' order randomized,
+using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns a new array with its elements randomised.  
+**Category**: Array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to shuffle. |
+
+**Example**  
 ```js
-shuffle(array)
-```
-
-Creates a new array with its elements' order randomeized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.
-
-#### Arguments
-
-- `array` _(array)_: The original array to shuffle.
-
-#### Returns
-
-_(array)_: A new shuffled array.
-
-#### Example
-```js
-var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-
-
-var shuffled = shuffle(arr);
-console.log(shuffled); // => [ 'b', 'f', 'h', 'e', 'd', 'c', 'g', 'a' ]
-console.log(arr);      // => ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+shuffle(arr);
+// -> ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
 ```

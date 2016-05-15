@@ -1,24 +1,19 @@
-### [Arrays](../) > reverse
+<a name="reverse"></a>
 
-```js
-reverse(array)
-```
-
+## reverse(array) ⇒ <code>Array</code>
 Reverses an array (not in place).
 The first array element becomes the last and the last becomes the first.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns a new array reversed.  
+**Category**: Array  
 
-- `array` _(array)_: The array to reverse.
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The array to reverse. |
 
-#### Returns
-
-_(array)_: The result, reversed array.
-
-#### Example
+**Example**  
 ```js
-var numbers = [1, 2, 3];
-
-var reversedNumbers = reverse(numbers);
+reverse([1, 2, 3]);
 // -> [3, 2, 1]
 ```
