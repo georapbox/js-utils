@@ -42,12 +42,10 @@
 
             expect(supplant(originalString)).toEqual(originalString);
 
-            expect(function () {
-                return supplant({}, data);
-            }).toThrow();
+            expect(supplant(originalString, 'John Doe')).toEqual(originalString);
 
             expect(function () {
-                return supplant(originalString, 'John Doe');
+                return supplant({}, data);
             }).toThrow();
         });
     });

@@ -1,8 +1,23 @@
 /**
  * Removes suffix from start of a string.
+ *
+ * @category String
  * @param {String} subjectString The original string.
- * @param {String} [suffix] Optional. The suffix substring to remove from the original string.
- * @returns {String} Returns the result string.
+ * @param {String} [suffix] The suffix substring to remove from the original string.
+ * @return {String} The result string.
+ * @example
+ *
+ * removeSuffix('foobar__', '__');
+ * // -> 'foo'
+ *
+ * removeSuffix('foobar__', '??');
+ * // -> 'foobar'
+ *
+ * removeSuffix('foobar__');
+ * // -> 'foobar'
+ *
+ * removeSuffix('foobar__', {});
+ * // -> TypeError
  */
 function removeSuffix(subjectString, suffix) {
     'use strict';

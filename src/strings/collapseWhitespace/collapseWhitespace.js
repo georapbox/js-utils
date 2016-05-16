@@ -1,7 +1,13 @@
 /**
  * Converts all adjacent whitespace characters to a single space.
+ *
+ * @category String
  * @param {String} subjectString The string to process.
  * @return {String} The final string with all adjacent whitespace converted to single space.
+ * @example
+ *
+ * collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
+ * // -> 'Lorem ispum dolor sit amet.'
  */
 function collapseWhitespace(subjectString) {
     'use strict';

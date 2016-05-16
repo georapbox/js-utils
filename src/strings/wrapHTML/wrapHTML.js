@@ -1,9 +1,24 @@
 /**
  * Wraps a string with a HTML tag with attributes if specified.
+ *
+ * @category String
  * @param {String} subjectString The string to wrap with the HTML tag.
  * @param {String} nodeName The HTML tag name that we want to wrap the string with.
- * @param {Object} [nodeAttributes] Optional. The desired attributes of the HTML element.
- * @return {String} Returns the wrapped string.
+ * @param {Object} [nodeAttributes] The desired attributes of the HTML element.
+ * @return {String} The wrapped string.
+ * @example
+ *
+ * var str = 'Lorem ipsum dolor sit amet.';
+ *
+ * var p = wrapHTML(str, 'p');
+ * // -> '<p>Lorem ipsum dolor sit amet.</p>'
+ *
+ * var div = wrapHTML(p, 'div', {
+ *   class: 'myClass',
+ *   id: 'myId',
+ *   dataType: 'myType' // Note that camelized keys are dasherized. Use string format to avoid this action.
+ * });
+ * // -> '<div class="myClass" id="myId" data-type="myType"><p>Lorem ipsum dolor sit amet.</p></div>'
  */
 function wrapHTML(subjectString, nodeName, nodeAttributes) {
     'use strict';

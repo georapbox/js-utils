@@ -1,7 +1,40 @@
 /**
  * Converts string into string delimited by underscores.
+ *
+ * @category String
  * @param {String} subjectString The string to convert.
- * @return {String} Returns the result string.
+ * @return {String} The result string.
+ * @example
+ *
+ * snakeCase('Foo Bar');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('fooBar');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('--FOO-BAR--');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('__FOO_BAR__');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('foo_bar');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('foo bar');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('foo???bar');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('foo!@#$%^&*()bar');
+ * // -> 'foo_bar'
+ *
+ * snakeCase('-f-o-o-b-a-r-');
+ * // -> f-o-o-b-a-r
+ *
+ * snakeCase(' f o o b a r ');
+ * // -> f-o-o-b-a-r
  */
 function snakeCase(subjectString) {
     'use strict';

@@ -2,10 +2,25 @@
  * Returns a substring after a specific sequence of character(s).
  * By default looks for the first occuerence of this sequence.
  * If the character or sequence of characters not found, returns the initial string.
+ *
+ * @category String
  * @param {String} subjectString The string to process.
  * @param {String} characters The seqquence of characters to use as delimiter.
- * @param {Boolean} [last] If "true" or any truthy value, will look for the last occurence of the characters specified.
- * @returns {String} Returns the result string.
+ * @param {Boolean} [last=false] If true or any truthy value, will look for the last occurence of the characters specified.
+ * @returns {String} The result string.
+ * @example
+ *
+ * subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
+ * // -> 'IPSUM DOLOR_SIT AMET'
+ *
+ * subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
+ * // -> 'SIT AMET'
+ *
+ * subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
+ * // -> 'AMET'
+ *
+ * subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '?', true);
+ * // -> 'LOREM_IPSUM DOLOR_SIT AMET'
  */
 function subStrAfter(subjectString, characters, last) {
     'use strict';

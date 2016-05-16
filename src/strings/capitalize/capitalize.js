@@ -1,8 +1,20 @@
 /**
  * Capitalizes the first character of a string.
+ *
+ * @category String
  * @param {String} subjectString The string to capitalize its first character.
- * @param {Boolean} [lowerCaseRest] Optional. If true will lowercase the rest of the string.
+ * @param {Boolean} [lowerCaseRest=false] If true will lowercase the rest of the string.
  * @returns {String} A new capitalized string.
+ * @example
+ *
+ * capitalize('hello');
+ * // -> 'Hello'
+ *
+ * capitalize('hElLo');
+ * // -< 'HElLo'
+ *
+ * capitalize('hElLo', true);
+ * // -> 'Hello'
  */
 function capitalize(subjectString, lowerCaseRest) {
     'use strict';

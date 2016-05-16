@@ -3,9 +3,39 @@
  * It scans through the string looking for expressions enclosed in {{ }} braces.
  * If an expression is found, use it as a key on the object,
  * and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
+ *
+ * @category String
  * @param {String} subjectString  The initial string to substitude its expressions.
- * @param {Object} data A plain object that acts as our model.
- * @return {String} Returns the result string.
+ * @param {Object} [data] A plain object that acts as our model. If `data` omitted, returns the original string.
+ * @return {String} The result string.
+ * @example
+ *
+ * var str = '' +
+ *   '<p>My name is {{person.fName}} {{person.lName}} and my job is {{person.position}}.</p>' +
+ *    '<p>' +
+ *      'My hobbies are:' +
+ *      '<ul>' +
+ *        '<li>{{hobbies.0}}</li>' +
+ *        '<li>{{hobbies.1}}</li>' +
+ *        '<li>{{hobbies.2}}</li>' +
+ *      '</ul>' +
+ *    '</p>';
+ *
+ * var data = {
+ *   person: {
+ *     fName: 'John',
+ *     lName: 'Doe',
+ *     position: 'Frontend Developer'
+ *   },
+ *   hobbies: ['coding', 'music', 'gaming']
+ * };
+ *
+ * supplant(str, data);
+ * // -> My name is John Doe and my job is Frontend Developer.
+ * // -> My hobbies are:
+ * // -> - coding
+ * // -> - music
+ * // -> - gaming
  */
 function supplant(subjectString, data) {
     'use strict';
@@ -14,12 +44,8 @@ function supplant(subjectString, data) {
         throw new TypeError('Expected a string');
     }
 
-    if (data == null) {
+    if (data == null || typeof data !== 'object') {
         return subjectString;
-    }
-
-    if (typeof data !== 'object') {
-        throw new TypeError('Expected a plain object');
     }
 
     return subjectString.replace(/{{([^{{}}]*)}}/g, function (a, b) {

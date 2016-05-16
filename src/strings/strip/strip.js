@@ -1,8 +1,25 @@
 /**
  * Creates a new string with all occurrences of [string1], [string2],... removed.
+ *
+ * @category String
  * @param {String} subjectString The string to process.
- * @param {String} [...args] Optional. The substrings to remove from the original string.
- * @return {String} Returns the result string.
+ * @param {String} [...args] The substrings to remove from the original string.
+ * @return {String} The result string.
+ * @example
+ *
+ * var str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';
+ *
+ * strip(str, '_');
+ * // -> 'Loremipsumdolorsitamet. Lorem+ipsum+dolor+sit+amet. 123456789'
+ *
+ * strip(str, '+');
+ * // -> 'Lorem_ipsum_dolor_sit_amet. Loremipsumdolorsitamet. 123456789'
+ *
+ * strip(str, '123');
+ * // -> 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 456789'
+ *
+ * strip(str, 'Lorem');
+ * // -> '_ipsum_dolor_sit_amet. +ipsum+dolor+sit+amet. 123456789'
  */
 function strip(subjectString /*...args*/) {
     'use strict';

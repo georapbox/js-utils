@@ -1,7 +1,9 @@
 /**
  * Factory function that returns methods that access the URL search parameters.
- * @param {String} searchString The URL search string.
- * @return {Object} A plain object of methods.
+ *
+ * @category String
+ * @param {String} searchString The URL search string. eg "?id=1&fname=Foo&lname=Bar"
+ * @return {Object} A plain object that holds methods to access the URL search parameters.
  */
 function urlSearchParams(searchString) {
     'use strict';

@@ -1,6 +1,28 @@
 /**
  * Converts a string to camel case, removing any non alphanumeric characters.
+ *
+ * @category String
  * @param {String} subjectString The string to convert.
+ * @return {String} The camel cased result string.
+ * @example
+ *
+ * camelCase('Foo Bar');
+ * // -> 'fooBar'
+ *
+ * camelCase('FOO BAR');
+ * // -> 'fooBar'
+ *
+ * camelCase('--foo-bar--');
+ * // -> 'fooBar'
+ *
+ * camelCase('__foo-bar__');
+ * // -> 'fooBar'
+ *
+ * camelCase('FOO?BAR'));
+ * // -> 'fooBar'
+ *
+ * camelCase('FOO!#$%^&?BAR'));
+ * // -> 'fooBar'
  */
 function camelCase(subjectString) {
     'use strict';

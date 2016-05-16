@@ -4,7 +4,7 @@
 dasherize(subjectString)
 ```
 
-Converts a camel cased string into a string delimited by dashes.
+Converts a camel cased or snake cased string into a string delimited by dashes.
 
 #### Arguments
 

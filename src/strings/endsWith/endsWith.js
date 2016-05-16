@@ -1,11 +1,24 @@
 /**
- * Determines whether a string ends with the characters of another string,
- * returning true or false as appropriate.
+ * Determines whether a string ends with the characters of another string.
+ *
+ * @category String
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the end of the original string.
- * @param {Number} [position=str.length] Optional. Search within this string as if this string were only this long;
+ * @param {Number} [position=str.length] Search within this string as if this string were only this long;
  *        defaults to the original string's actual length, clamped within the range established by this string's length.
- * @returns {Boolean} Returns true if `subjectString` ends with `searchString`, else false.
+ * @return {Boolean} True if `subjectString` ends with `searchString`, else false.
+ * @example
+ *
+ * var str = 'To be, or not to be, that is the question.';
+ *
+ * endsWith(str, 'question.');
+ * // -> true
+ *
+ * endsWith(str, 'to be');
+ * // -> false
+ *
+ * endsWith(str, 'to be', 19);
+ * // -> true
  */
 function endsWith(subjectString, searchString, position) {
     'use strict';

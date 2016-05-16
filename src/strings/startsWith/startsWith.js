@@ -1,10 +1,27 @@
 /**
- * Determines whether a string begins with the characters of another string,
- * returning true or false as appropriate.
+ * Determines whether a string begins with the characters of another string.
+ *
+ * @category String
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the start of the string.
- * @param {Number} [position=0] Optional. The position in the original string at which to begin searching for `prefix`.
- * @returns {Boolean} Returns true if `subjectString` starts with `searchString`, else false.
+ * @param {Number} [position=0] The position in the original string at which to begin searching for `prefix`.
+ * @return {Boolean} True if `subjectString` starts with `searchString`, else false.
+ *
+ * @example
+ *
+ * var str = 'Lorem ipsum dolor sit amet';
+ *
+ * startsWith(str, 'Lorem');
+ * // -> true
+ *
+ * startsWith(str, 'Lorem', 0);
+ * // -> true
+ *
+ * startsWith(str, 'ipsum');
+ * // -> false
+ *
+ * startsWith(str, 'orem', 1);
+ * // -> true
  */
 function startsWith(subjectString, searchString, position) {
     'use strict';

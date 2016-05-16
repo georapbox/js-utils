@@ -1,8 +1,23 @@
 /**
  * Removes prefix from start of a string.
+ *
+ * @category String
  * @param {String} subjectString The string to process.
- * @param {String} [prefix] Optional. The prefix substring to remove from the original string.
- * @returns {String} Returns the result string.
+ * @param {String} [prefix] The prefix substring to remove from the original string.
+ * @returns {String} The result string.
+ * @example
+ *
+ * removePrefix('__foo', '__');
+ * // -> 'foo'
+ *
+ * removePrefix('__foobar', '??');
+ * // -> 'foobar'
+ *
+ * removePrefix('__foobar');
+ * // -> 'foobar'
+ *
+ * removePrefix('__foobar', {});
+ * // -> TypeError
  */
 function removePrefix(subjectString, prefix) {
     'use strict';
