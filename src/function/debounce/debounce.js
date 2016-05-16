@@ -3,10 +3,19 @@
  * be triggered. The function will be called after it stops being called for
  * 'n' milliseconds. If `immediate` is passed, trigger the function on the
  * leading edge, instead of the trailing.
- * @param {Function} func The function to be executed.
+ *
+ * @category Function
+ * @param {function} func The function to be executed.
  * @param {Number} [n=0] Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used.
  * @param {Boolean} [immediate] If true or any truthy value, triggers the function on the leading edge.
- * @return {Function} Returns a new debounced function.
+ * @return {function} A new debounced function.
+ * @example
+ *
+ * var doSomething = debounce(function () {
+ *   // Do something...
+ * }, 250);
+ *
+ * window.addEventListener('resize', doSomething, false);
  */
 function debounce(func, n, immediate) {
     'use strict';

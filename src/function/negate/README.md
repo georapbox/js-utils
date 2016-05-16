@@ -1,24 +1,22 @@
-### [Function](../) > negate
+<a name="negate"></a>
 
-```js
-negate(func)
-```
-
+## negate(func) ⇒ <code>function</code>
 Creates a function that negates the result of the predicate `func`.
-The `func` predicate is invoked with the `this` binding and arguments of the created function.
+The `func` predicate is invoked with the this binding and arguments of the created function.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>function</code> - Returns the new function.  
+**Category**: Function  
 
-- `func` _(function)_: The predicate to negate.
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>function</code> | The predicate to negate. |
 
-#### Returns
-
-_(function)_: Returns a new negated function.
-
-#### Examples
+**Example**  
 ```js
+// Example 1
 var isString = function (val) {
-    return typeof val === 'string';
+  return typeof val === 'string';
 };
 
 var isNotString = negate(isString);
@@ -28,11 +26,10 @@ isString('lorem ipsum');
 
 isNotString('lorem ipsum');
 // -> false
-```
 
-```js
+// Example 2
 var isEven = function (n) {
-    return n % 2 === 0;
+  return n % 2 === 0;
 };
 
 var numbers = [1, 2, 3, 4, 5, 6];

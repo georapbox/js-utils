@@ -1,35 +1,31 @@
-### [Function](../) > compose
+<a name="compose"></a>
 
-```js
-compose([func1] [, funct2] [, func3] [, ...])
-```
-
+## compose() ⇒ <code>function</code>
 Chains together functions to create a new function following the mathematical model of function composition.
-
-In mathematics `f ∘ g` (pronounced "f composed with g") is the function that given `x`, returns `f(g(x))`.
+In mathematics f ∘ g (pronounced "f composed with g") is the function that given x, returns f(g(x)).
 Following the mathematical model `compose(f, g)(x)` should equal `f(g(x))`.
 Thus it is made clear that function passed as arguments should be read from right to left.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>function</code> - A new function as the result of the composition.  
+**Category**: Function  
 
-- `[func1] [, funct2] [, func3] [, ...]` _(function)_: One or more functions to compose.
+| Param | Type | Description |
+| --- | --- | --- |
+| [...args] | <code>function</code> | One or more functions to compose. |
 
-#### Returns
-
-_(function)_: Returns a new function as the result of the composition.
-
-#### Examples
+**Example**  
 ```js
 function capitalize(item) {
-    return item.toUpperCase();
+  return item.toUpperCase();
 }
 
 function head(item) {
-    return item[0];
+  return item[0];
 }
 
 function reverse(item) {
-    return item.split('').reverse().join('');
+  return item.split('').reverse().join('');
 }
 
 // Example 1: First reverse then capitalize

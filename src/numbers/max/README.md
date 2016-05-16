@@ -1,34 +1,18 @@
-### [Numbers](../) > max
+<a name="max"></a>
 
+## max() ⇒ <code>Number</code>
+Finds the largest of zero or more numbers.
+
+**Kind**: global function  
+**Returns**: <code>Number</code> - The largest number from the arguments provided.  
+**Category**: Number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [...args] | <code>Number</code> &#124; <code>Array</code> | A set of numbers as arguments, or an array of numbers as the only argument. |
+
+**Example**  
 ```js
-max([value1 [, value2, ...]]);
-```
-
-Find the largest of zero or more numbers.
-
-#### Argumets
-
-- `value1, value2, ...` _(number)_: A set of numbers.
-
-**or**
-
-```js
-max(numArray);
-```
-
-#### Arguments
-
-- `numArray` _(array)_: An array of numbers.
-
-#### Returns
-
-_(number)_: Returns the largest of zero or more numbers.
-
-#### Example
-```js
-max();
-// -> -Infinity
-
 max(5);
 // -> 5
 
@@ -49,4 +33,7 @@ max(0, true);
 
 max(false);
 // -> 0
+
+max();
+// -> -Infinity
 ```

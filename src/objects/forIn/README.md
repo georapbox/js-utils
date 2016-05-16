@@ -1,31 +1,32 @@
-### [Objects](../) > forIn
+<a name="forIn"></a>
 
-```js
-forIn(object [, callback])
-```
+## forIn(obj, [callback]) ⇒ <code>Object</code>
+Iterates over own and inherited enumerable properties of an object, executing the callback for each property.
+The callback is invoked with three arguments (value, key, object)
 
-Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
+**Kind**: global function  
+**Returns**: <code>Object</code> - The original object.  
+**Category**: Object  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | The object to iterate over. |
+| [callback] | <code>function</code> | The function called per iteration. |
 
-- `object` _(object)_: The object to iterate over.
-
-- `[callback]` _(function)_: Optional. The function called per iteration.
-
-#### Example
+**Example**  
 ```js
 function Shape() {
-	this.x = 0;
-	this.y = 0;
+  this.x = 0;
+  this.y = 0;
 }
 
 Shape.prototype.move = function(x, y) {
-	this.x += x;
-	this.y += y;
+  this.x += x;
+  this.y += y;
 };
 
 forIn(new Shape, function(value, key, obj) {
-	console.log(key);
-	// -> "x", "y", "move"
+  console.log(key);
+  // -> "x", "y", "move"
 });
 ```

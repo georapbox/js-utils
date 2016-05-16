@@ -1,34 +1,18 @@
-### [Numbers](../) > min
+<a name="min"></a>
 
+## min() ⇒ <code>Number</code>
+Finds the smallest of zero or more numbers.
+
+**Kind**: global function  
+**Returns**: <code>Number</code> - The smallest number from the arguments provided.  
+**Category**: Number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [...args] | <code>Number</code> &#124; <code>Array</code> | A set of numbers as arguments, or an array of numbers as the only argument. |
+
+**Example**  
 ```js
-min([value1 [, value2, ...]]);
-```
-
-Find the smallest of zero or more numbers.
-
-#### Arguments
-
-- `value1, value2, ...` _(number)_: A set of numbers.
-
-**or**
-
-```js
-min(numArray);
-```
-
-#### Arguments
-
-- `numArray` _(array)_: An array of numbers.
-
-#### Returns
-
-_(number)_: Returns the smallest of zero or more numbers.
-
-#### Examples
-```js
-min();
-// -> Infinity
-
 min(5);
 // -> 5
 
@@ -52,4 +36,7 @@ min(false);
 
 min(true);
 // -> 1
+
+min();
+// -> Infinity
 ```

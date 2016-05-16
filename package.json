@@ -13,7 +13,7 @@
     "test": "karma start",
     "docs": "grunt buildDocs",
     "postinstall": "grunt postinstall",
-    "jsdoc2md": "jsdoc2md 'src/arrays/zip/zip.js' > 'src/arrays/zip/README.md'"
+    "jsdoc2md": "jsdoc2md 'src/function/throttle/throttle.js' > 'API.md'"
   },
   "devDependencies": {
     "chalk": "~1.1.3",

@@ -1,9 +1,9 @@
-/*global container*/
+/*global Container*/
 
 (function () {
     'use strict';
 
-    describe('Object/container', function () {
+    describe('Object/Container', function () {
         function capitalize(item) {
             return item.toUpperCase();
         }
@@ -12,11 +12,11 @@
             return item[0];
         }
 
-        var res = container(['a', 'b', 'c']).map(head).map(capitalize);
+        var res = Container(['a', 'b', 'c']).map(head).map(capitalize);
 
         it('should wrap the value passed', function () {
-            expect(typeof container('Hello World')).toEqual('object');
-            expect(container('Hello World').val).toEqual('Hello World');
+            expect(typeof Container('Hello World')).toEqual('object');
+            expect(Container('Hello World').val).toEqual('Hello World');
         });
 
         it('should get first element from array and capitalize', function () {

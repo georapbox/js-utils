@@ -1,8 +1,18 @@
 /**
  * Limits the number of times a function can be called in a given period.
- * @param {Function} func The function to be executed.
+ *
+ * @category Function
+ * @param {function} func The function to be executed.
  * @param {Number} [n=0] Optional. Default value is 0. Time of delay in milliseconds.
- * @return {Function} Returns the throttled function.
+ * @return {function} The throttled function.
+ * @example
+ *
+ * // A method that should be called no more than 4 times per second.
+ * var doSomething = throttle(function () {
+ *   // Do something...
+ * }, 250);
+ *
+ * window.addEventListener('resize', doSomething, false);
  */
 function throttle(func, n) {
     'use strict';

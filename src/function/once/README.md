@@ -1,26 +1,22 @@
-### [Function](../) > once
+<a name="once"></a>
 
-```js
-once(func, [, thisArg])
-```
-
+## once(func, [thisArg]) ⇒ <code>function</code>
 Ensure a given functionality only runs once.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>function</code> - Returns the new restricted function.  
+**Category**: Function  
 
-- `func` _(function)_: The function to restrict.
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>function</code> | The function to restrict. |
+| [thisArg] | <code>Object</code> | Value to use as this when executing callback. |
 
-- `[thisArg]` _(object)_: Optional. Value to use as this when executing callback.
-
-#### Returns
-
-_(function)_: Returns the new restricted function.
-
-#### Examples
+**Example**  
 ```js
 var num = 0;
 var canOnlyFireOnce = once(function () {
-    return 'Number is now ' + (num += 1);
+  return 'Number is now ' + (num += 1);
 });
 
 canOnlyFireOnce();

@@ -1,25 +1,20 @@
-### [Numbers](../) > inRange
+<a name="inRange"></a>
 
-```js
-inRange(num, start, end);
-```
-
+## inRange(num, start, end) ⇒ <code>Boolean</code>
 Checks if a number is between start and up to but not including, end.
 If start is greater than end the params are swapped to support negative ranges.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if number is in the range, else false.  
+**Category**: Number  
 
-- `num` _(number)_: The number to check.
+| Param | Type | Description |
+| --- | --- | --- |
+| num | <code>Number</code> | The number to check. |
+| start | <code>Number</code> | The start of the range. |
+| end | <code>Number</code> | The end of the range. |
 
-- `start` _(number)_: The start of the range.
-
-- `end` _(number)_: The end of the range.
-
-#### Returns
-
-_(boolean)_: Returns true if number is in the range, else false.
-
-#### Examples
+**Example**  
 ```js
 inRange(3, 2, 4);
 // -> true

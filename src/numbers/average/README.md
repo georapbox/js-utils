@@ -1,30 +1,19 @@
-### [Numbers](../) > average
+<a name="average"></a>
 
-```js
-average([value1 [, value2, ...]]);
-```
-
+## average() ⇒ <code>Number</code>
 Calculates the average of a set of numbers.
+Accepts any number of numbers as parameters, or an array of numbers.
+Ommits any non number value.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Number</code> - The average number of the set of data provided.  
+**Category**: Number  
 
-- `value1, value2, ...` _(number)_: A set of numbers.
+| Param | Type | Description |
+| --- | --- | --- |
+| [...args] | <code>Number</code> &#124; <code>Array</code> | A set of numbers or an array of numbers. |
 
-**or**
-
-```js
-average(numArray);
-```
-
-#### Arguments
-
-- `numArray` _(array)_: An array of numbers.
-
-#### Returns
-
-_(number)_: Returns the average of numbers provided.
-
-#### Examples
+**Example**  
 ```js
 average();
 // -> 0

@@ -1,27 +1,25 @@
-### [Function](../) > debounce
+<a name="debounce"></a>
 
-```js
-debounce(func, [, n=0] [, immediate])
-```
+## debounce(func, [n], [immediate]) ⇒ <code>function</code>
+Returns a function, that, as long as it continues to be invoked, will not
+be triggered. The function will be called after it stops being called for
+'n' milliseconds. If `immediate` is passed, trigger the function on the
+leading edge, instead of the trailing.
 
-Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds. If `immediate` is passed, trigger the function on the leading edge, instead of the trailing.
+**Kind**: global function  
+**Returns**: <code>function</code> - A new debounced function.  
+**Category**: Function  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| func | <code>function</code> |  | The function to be executed. |
+| [n] | <code>Number</code> | <code>0</code> | Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used. |
+| [immediate] | <code>Boolean</code> |  | If true or any truthy value, triggers the function on the leading edge. |
 
-- `func` _(function)_: The function to be executed.
-
-- `[n=0]` _(number)_: Optional. Default value is 0. Time of delay in milliseconds. It is required if you need to use `immediate`.
-
-- `[immediate]` _(boolean)_: Optional. If true or any truthy value, triggers the function on the leading edge.
-
-#### Returns
-
-_(function)_: Returns a new debounced function.
-
-#### Example
+**Example**  
 ```js
 var doSomething = debounce(function () {
-    // Do something...
+  // Do something...
 }, 250);
 
 window.addEventListener('resize', doSomething, false);

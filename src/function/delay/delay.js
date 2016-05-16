@@ -1,10 +1,20 @@
 /**
  * Invokes `func` after `wait` milliseconds.
  * Any additional arguments are provided to `func` when it’s invoked.
- * @param {Function} func The function to delay.
+ *
+ * @category Function
+ * @param {function} func The function to delay.
  * @param {Number} [wait=0] The number of milliseconds to delay invokation.
  * @param {*} [args] The arguments to invoke `func` with.
  * @return {Number} Returns the timer's id.
+ * @example
+ *
+ * var say = function (a, b) {
+ *   console.log(a + ' ' + b);
+ * };
+ *
+ * var delayed = delay(say, 2000, 'hello', 'world');
+ * // -> Logs 'hello world' after two seconds.
  */
 function delay(func, wait /*, args...*/) {
     'use strict';

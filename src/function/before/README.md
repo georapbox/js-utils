@@ -1,24 +1,22 @@
-### [Function](../) > before
+<a name="before"></a>
 
-```js
-before(n, func)
-```
-
-Creates a function that invokes `func` while it’s called less than n times.
+## before(n, func) ⇒ <code>function</code>
+Creates a function that invokes `func` while it’s called less than `n` times.
 `func` is invoked with the this binding and arguments of the created function.
 
-- `n` _(number)_: The number of calls before `func` is no longer invoked. A positive integer is expected. If a negative number or 0, `func` is never invoked. If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
+**Kind**: global function  
+**Returns**: <code>function</code> - Returns the new restricted function.  
+**Category**: Function  
 
-- `func` _(function)_: The function to restrict.
+| Param | Type | Description |
+| --- | --- | --- |
+| n | <code>Number</code> | The number of calls before `func` is no longer invoked.        A positive integer is expected.        If a negative number or 0, `func` is never invoked.        If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked. |
+| func | <code>function</code> | The function to restrict. |
 
-#### Returns
-
-_(function)_: Returns the new restricted function.
-
-#### Example
+**Example**  
 ```js
 var doSomething = before(6, function () {
-    console.log('Do something...');
+  console.log('Do something...');
 });
 
 button.addEventListener('click', doSomething);

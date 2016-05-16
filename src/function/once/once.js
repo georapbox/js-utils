@@ -1,8 +1,22 @@
 /**
  * Ensure a given functionality only runs once.
- * @param {Function} func The function to restrict.
+ *
+ * @category Function
+ * @param {function} func The function to restrict.
  * @param {Object} [thisArg] Value to use as this when executing callback.
- * @return {Function} Returns the new restricted function.
+ * @return {function} Returns the new restricted function.
+ * @example
+ *
+ * var num = 0;
+ * var canOnlyFireOnce = once(function () {
+ *   return 'Number is now ' + (num += 1);
+ * });
+ *
+ * canOnlyFireOnce();
+ * // -> "Number is now 1"
+ *
+ * canOnlyFireOnce();
+ * // -> "Number is now 1"
  */
 function once(func, thisArg) {
     'use strict';

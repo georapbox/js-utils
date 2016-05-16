@@ -1,25 +1,23 @@
-### [Function](../) > partialRight
+<a name="partialRight"></a>
 
-```js
-partialRight(func [, args...])
-```
+## partialRight(func) ⇒ <code>function</code>
+Creates a function that invokes `func` with `args` appended to the arguments it receives.
+Returns a function `partialApplicator` that, when invoked, invokes the `fn` function with the
+originally-specified arguments, followed by all arguments passed to `partialApplicator`.
 
-Creates a function that invokes `func` with `args` **appended** to the arguments it receives.
+**Kind**: global function  
+**Returns**: <code>function</code> - partialApplicator A function that invokes the originally-specified function `fn`.  
+**Category**: Function  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>function</code> | The function to be invoked with the partially applied arguments. |
+| [args...] | <code>\*</code> | The arguments to be partially applied. |
 
-- `func` _(function)_: The function to be invoked with the partially applied arguments.
-
-- `[args...]` _(*)_: Optional. The arguments to be partially applied.
-
-#### Returns
-
-_(function)_: Returns a function that invokes the originally-specified function `fn`.
-
-#### Example
+**Example**  
 ```js
 var greet = function (greeting, name) {
-    return greeting + ' ' + name;
+  return greeting + ' ' + name;
 };
 
 var greetGeorge = partialRight(greet, 'George');

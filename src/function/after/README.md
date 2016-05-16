@@ -1,26 +1,22 @@
-### [Function](../) > after
+<a name="after"></a>
 
-```js
-after(n, func)
-```
-
+## after(n, func) ⇒ <code>function</code>
 Creates a function that invokes `func` once it's called `n` or more times.
 `func` is invoked with the this binding and arguments of the created function.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>function</code> - The new restricted function.  
+**Category**: Function  
 
-- `n` _(number)_: The number of calls before `func` is invoked. A positive integer is expected. If a negative number or 0, `func` is invoked immediately. If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
+| Param | Type | Description |
+| --- | --- | --- |
+| n | <code>Number</code> | The number of calls before `func` is invoked.        A positive integer is expected.        If a negative number or 0, `func` is invoked immediately.        If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked. |
+| func | <code>function</code> | The function to restrict. |
 
-- `func` _(function)_: The function to restrict.
-
-#### Returns
-
-_(function)_: Returns the new restricted function.
-
-#### Example
+**Example**  
 ```js
 var doSomething = after(4, function () {
-    console.log('Do something...');
+  console.log('Do something...');
 });
 
 button.addEventListener('click', doSomething);
