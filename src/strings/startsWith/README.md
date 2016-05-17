@@ -1,24 +1,19 @@
-### [Strings](../) > startsWith
+<a name="startsWith"></a>
 
-```js
-startsWith(subjectString, searchString [, position=0])
-```
+## startsWith(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
+Determines whether a string begins with the characters of another string.
 
-Determines whether a string begins with the characters of another string, returning true or false as appropriate.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if `subjectString` starts with `searchString`, else false.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| searchString | <code>String</code> |  | The characters to be searched for at the start of the string. |
+| [position] | <code>Number</code> | <code>0</code> | The position in the original string at which to begin searching for `prefix`. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `searchString` _(string)_: The characters to be searched for at the start of the string.
-
-- `[position=0]` _(number)_: The position in the original string at which to begin searching for `prefix`.
-
-#### Returns
-
-_(boolean)_: Returns true if `subjectString` starts with `searchString`, else false.
-
-#### Examples
+**Example**  
 ```js
 var str = 'Lorem ipsum dolor sit amet';
 

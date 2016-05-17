@@ -1,24 +1,19 @@
-### [Strings](../) > count
+<a name="count"></a>
 
-```js
-count(subjectString, subString [, caseInsensitive])
-```
-
+## count(subjectString, searchString, [caseInsensitive]) ⇒ <code>Number</code>
 Counts the occurrences of substring in a string.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Number</code> - The number of occurrences of search string in original string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The initial string.
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string. |
+| searchString | <code>String</code> |  | The string to search for. |
+| [caseInsensitive] | <code>Boolean</code> | <code>false</code> | If true, the lookup is case insensitive. |
 
-- `subString` _(string)_: The string we want to count its occurrences in the initial string.
-
-- `[caseInsensitive]` _(boolean)_: Optional. Defaults to undefined (falsy). If true, the lookup is case insensitive.
-
-#### Returns
-
-_(number)_: Returns the number of occurrences of substring in original string.
-
-#### Examples
+**Example**  
 ```js
 var str = 'Lorem ipsum dolor sit | amet, consectetur - adipisicing elit. Aperiam inventore neque doloremque dolor ibus impedit ipsam, incidunt. Doloremque eveniet sit, illo, et incidunt, maiores sequi accusantium impedit aperiam officiis aspernatur nobis.';
 

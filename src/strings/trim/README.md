@@ -1,24 +1,20 @@
-### [Strings](../) > trim
+<a name="trim"></a>
 
-```js
-trim(subjectString)
-```
-
+## trim(subjectString) ⇒ <code>String</code>
 Removes whitespace from both ends of a string.
-Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
+Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.)
+and all the line terminator characters (LF, CR, etc.).
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to be trimmed.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to trim. |
 
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Example
+**Example**  
 ```js
-var str = '    Lorem ipsum dolor si amet.    ';
-
-var trimmed = trim(str);
-// -> Lorem ipsum dolor si amet.
+trim('    Lorem ipsum dolor si amet.    ');
+// -> 'Lorem ipsum dolor si amet.'
 ```

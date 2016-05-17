@@ -1,24 +1,19 @@
-### [Strings](../) > pad
+<a name="pad"></a>
 
-```js
-pad(subjectString, len [, chars=' '])
-```
+## pad(subjectString, len, [chars]) ⇒ <code>String</code>
+Pad `subjectString` on both sides to the given `len`, with optional `chars` defaulting to a space.
 
-Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.
+**Kind**: global function  
+**Returns**: <code>String</code> - The result padded string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| len | <code>Number</code> |  | The length to pad the string. |
+| [chars] | <code>String</code> | <code>&#x27; &#x27;</code> | The character(s) to use for padding. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `len` _(number)_: The length of the padding.
-
-- `[chars=' ']` _(string)_: Optional. The character(s) to use for padding. Default is space.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 pad('Hello', 9);
 // -> "  Hello  "
@@ -27,8 +22,8 @@ pad('Hello', 9, '-');
 // -> "--Hello--"
 
 pad('Hello', 6, '-');
-// -> "-Hello"
+// -> '-Hello'
 
 pad('Hello', 5, '-');
-// -> "Hello" (len is the same as str.length)
+// -> 'Hello' (len is the same as str.length)
 ```

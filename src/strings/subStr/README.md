@@ -1,22 +1,18 @@
-### [Strings](../) > subStr
+<a name="subStr"></a>
 
-```js
-subStr(str, n)
-```
-
+## subStr(subjectString, [n]) ⇒ <code>String</code>
 Returns a substring denoted by n (positive or negative) characters.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to process.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to process. |
+| [n] | <code>Number</code> | The number of characters of the new string.        If `n >= 0`, returns a substring from the left end of the string.        If `n < 0`, returns a substring from the right end of the string.        If `n` is not of type number, returns the whole string intact. |
 
-- `n` _(number)_: The number of characters (positive or negative) the new string has. If n >= 0, returns a substring from the left end of the string. If n < 0, returns a substring from the right end of the string. If n is not of type number, returns the whole string intact.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 var str = 'Lorem ispum dolor sit amet.';
 

@@ -1,32 +1,28 @@
-### [Strings](../) > randomString
+<a name="randomString"></a>
 
-```js
-randomString(n, chars)
-```
+## randomString(n, [chars]) ⇒ <code>string</code>
+Generates a random string of n characters, using the "chars" specified.
 
-Generates a random string of n characters, from the `chars` string.
+**Kind**: global function  
+**Returns**: <code>string</code> - Returns the random string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| n | <code>number</code> |  | The length of the final random  string. |
+| [chars] | <code>string</code> | <code>&quot;&#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#x27;&quot;</code> | The characters to use in order to generate the string. |
 
-- `n` _(number)_: The length of the final random  string.
-
-- `[chars]` _(string)_: The characters to use in order to generate the string. Defaults to 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.
-
-#### Returns
-
-_(string)_: Returns the random string.
-
-#### Examples
+**Example**  
 ```js
 randomString(10);
-// -> "RvXYUH6Swm"
+// -> 'RvXYUH6Swm'
 
 randomString(10, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
-// -> "SFUNKJHYDH"
+// -> 'SFUNKJHYDH'
 
 randomString(10, '0123456789');
-// -> "2394127333"
+// -> '2394127333'
 
 randomString();
-// -> ""
+// -> ''
 ```

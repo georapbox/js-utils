@@ -1,22 +1,18 @@
-### [Strings](../) > repeat
+<a name="repeat"></a>
 
-```js
-repeat(subjectString, count)
-```
+## repeat(subjectString, [count]) ⇒ <code>String</code>
+Repeat a string 'count' times.
 
-Repeat a string `count` times.
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | the string to process. |
+| [count] | <code>Number</code> | <code>0</code> | The times to repeat the string. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `[count=0]` _(number)_: Optional. Defaults to 0. Times to repeat the string.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 repeat('&nbsp;', 4);
 // -> '&nbsp;&nbsp;&nbsp;&nbsp;'

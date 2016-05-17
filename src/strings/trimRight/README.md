@@ -1,22 +1,18 @@
-### [Strings](../) > trimRight
+<a name="trimRight"></a>
 
-```js
-trimRight(subjectString)
-```
-
+## trimRight(subjectString) ⇒ <code>String</code>
 Removes whitespace from the right end of a string.
-Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
 
-- `subjectString` _(string)_: The string to be trimmed.
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-#### Returns
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to right trim. |
 
-_(string)_: Returns the result string.
-
-#### Example
+**Example**  
 ```js
-var str = 'Lorem ipsum dolor si amet.    ';
-
-var trimmed = trimLeft(str);
-// -> Lorem ipsum dolor si amet.
+trimLeft('Lorem ipsum dolor si amet.    ');
+// -> 'Lorem ipsum dolor si amet.'
 ```

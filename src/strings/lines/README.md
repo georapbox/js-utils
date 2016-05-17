@@ -1,25 +1,22 @@
-### [Strings](../) > lines
+<a name="lines"></a>
 
-```js
-lines(subjectString)
-```
+## lines(subjectString) ⇒ <code>Array</code>
+Creates an array with the lines of a a string.
 
-Returns an array with the lines of a a string.
+**Kind**: global function  
+**Returns**: <code>Array</code> - An array or strings containing the lines of the string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to process. |
 
-- `subjectString` _(string)_: The string to process.
-
-#### Returns
-
-_(array)_: The result array.
-
-#### Examples
+**Example**  
 ```js
 var str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
 var str2 = `You can\'t make
-an omelet without
-breaking a few eggs.`;
+  an omelet without
+  breaking a few eggs.`;
 
 lines(str);
 // -> ['You can't make', 'an omelet without', 'breaking a few eggs.']

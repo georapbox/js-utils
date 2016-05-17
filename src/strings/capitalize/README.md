@@ -1,22 +1,18 @@
-### [Strings](../) > capitalize
+<a name="capitalize"></a>
 
-```js
-capitalize(subjectString [, lowerCaseRest])
-```
-
+## capitalize(subjectString, [lowerCaseRest]) ⇒ <code>String</code>
 Capitalizes the first character of a string.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - A new capitalized string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to capitalize its first character.
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to capitalize its first character. |
+| [lowerCaseRest] | <code>Boolean</code> | <code>false</code> | If true will lowercase the rest of the string. |
 
-- `[lowerCaseRest]` _(boolean)_: OPtional. Default is undefined (falsy). Indicates if the rest of the string will be converted to lower case.
-
-#### Returns
-
-_(string)_: Returns the capitalized string.
-
-#### Examples
+**Example**  
 ```js
 capitalize('hello');
 // -> 'Hello'

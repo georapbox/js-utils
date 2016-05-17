@@ -1,20 +1,17 @@
-### [Strings](../) > words
+<a name="words"></a>
 
-```js
-words(subjectString)
-```
-
+## words(subjectString) ⇒ <code>Array</code>
 Splits string into an array of its words.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Array</code> - The string's words.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to process.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to process. |
 
-#### Returns
-
-_(array)_: Returns the string's words.
-
-#### Examples
+**Example**  
 ```js
 words('Hello world!        \n This is a message     from outer\tspace.');
 // -> ['Hello', 'world!', 'This', 'is', 'a', 'message', 'from', 'outer', 'space.']

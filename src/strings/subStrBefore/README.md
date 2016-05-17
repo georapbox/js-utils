@@ -1,26 +1,22 @@
-### [Strings](../) > subStrBefore
+<a name="subStrBefore"></a>
 
-```js
-subStrBefore(subjectString, characters [, last])
-```
-
+## subStrBefore(subjectString, characters, [last]) ⇒ <code>string</code>
 Returns a substring before a specific sequence of character(s).
-
 By default looks for the first occurrence of this sequence.
 If the character or sequence of characters not found, returns the initial string.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>string</code> - The result string.  
+**Category**: String  
+**Note**: For legacy browsers' support use `String.prototype.lastIndexOf`  
 
-- `subjectString` _(string)_: The string to process.
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| characters | <code>String</code> |  | The seqquence of characters to use as delimiter. |
+| [last] | <code>Boolean</code> | <code>false</code> | If true or any truthy value, will look for the last occurence of the characters specified. |
 
-- `characters` _(string)_: One or more characters to use for the lookup.
-
-- `[last]` _(boolean)_: If `true` or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified. Defaults to `undefined` (falsy).
-
-**NOTE:** `subStrBefore` makes use of `String.prototype.lastIndexOf`.
-For legacy browsers (<=IE8) that do not support it, use an [HTML5 shim](https://github.com/es-shims/es5-shim).
-
-#### Examples
+**Example**  
 ```js
 subStrBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
 // -> 'LOREM'

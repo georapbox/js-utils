@@ -1,22 +1,18 @@
-### [Strings](../) > strip
+<a name="strip"></a>
 
-```js
-strip(subjectString, [string1], [string2], ...)
-```
+## strip(subjectString) ⇒ <code>String</code>
+Creates a new string with all occurrences of [string1], [string2],... removed.
 
-Creates a new string with all occurrences of [string1], [string2], ... removed.
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to process. |
+| [...args] | <code>String</code> | The substrings to remove from the original string. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `[string1], [string2], ...` _(string)_: The substrings to remove from the original string.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 var str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';
 

@@ -1,27 +1,21 @@
-### [Strings](../) > subStrAfter
+<a name="subStrAfter"></a>
 
-```js
-subStrAfter(subjectString, characters [, last])
-```
-
+## subStrAfter(subjectString, characters, [last]) ⇒ <code>String</code>
 Returns a substring after a specific sequence of character(s).
-
-By default looks for the first occurrence of this sequence.
+By default looks for the first occuerence of this sequence.
 If the character or sequence of characters not found, returns the initial string.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The initial string to process.
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| characters | <code>String</code> |  | The seqquence of characters to use as delimiter. |
+| [last] | <code>Boolean</code> | <code>false</code> | If true or any truthy value, will look for the last occurence of the characters specified. |
 
-- `characters` _(string)_: One or more characters to use for the lookup.
-
-- `[last]` _(boolean)_: If `true` or any truthy value, will lookup for the last occurrence of the character or sequence of characters specified. Defaults to `undefined`.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
 // -> 'IPSUM DOLOR_SIT AMET'

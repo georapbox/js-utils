@@ -1,20 +1,17 @@
-### [Strings](../) > snakeCase
+<a name="snakeCase"></a>
 
-```js
-snakeCase(subjectString)
-```
-
+## snakeCase(subjectString) ⇒ <code>String</code>
 Converts string into string delimited by underscores.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to process.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to convert. |
 
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 snakeCase('Foo Bar');
 // -> 'foo_bar'

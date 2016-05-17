@@ -1,20 +1,17 @@
-### [Strings](../) > unescapeHTML
+<a name="unescapeHTML"></a>
 
-```js
-unescapeHTML(subjectString)
-```
+## unescapeHTML(subjectString) ⇒ <code>String</code>
+Unescapes a HTML string.
 
-Unscapes a HTML string.
+**Kind**: global function  
+**Returns**: <code>String</code> - The unescaped string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The HTML string to unescape. |
 
-- `subjectString` _(string)_: The HTML string to unescape.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Example
+**Example**  
 ```js
 unescapeHTML('&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;');
 // -> '<script src="main.js"><\/script>'

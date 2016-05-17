@@ -1,24 +1,19 @@
-### [Strings](../) > endsWith
+<a name="endsWith"></a>
 
-```js
-endsWith(subjectString, searchString [, position=str.length])
-```
+## endsWith(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
+Determines whether a string ends with the characters of another string.
 
-Determines whether a string ends with the characters of another string, returning true or false as appropriate.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if `subjectString` ends with `searchString`, else false.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| searchString | <code>String</code> |  | The characters to be searched for at the end of the original string. |
+| [position] | <code>Number</code> | <code>subjectString.length</code> | Search within this string as if this string were only this long;        defaults to the original string's actual length, clamped within the range established by this string's length. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `searchString` _(string)_: The characters to be searched for at the end of the original string.
-
-- `[position=str.length]` _(number)_: Optional. Search within this string as if this string were only this long; defaults to the original string's actual length, clamped within the range established by this string's length.
-
-#### Returns
-
-_(boolean)_: Returns true if `subjectString` ends with `searchString`, else false.
-
-#### Examples
+**Example**  
 ```js
 var str = 'To be, or not to be, that is the question.';
 

@@ -1,24 +1,19 @@
-### [Strings](../) > truncate
+<a name="truncate"></a>
 
-```js
-truncate(subjectString, characterCount [, delimiter])
-```
-
+## truncate(string, [characterCount], [delimiter]) ⇒ <code>String</code>
 Truncates a string based on character count.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The truncated string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to truncate.
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| string | <code>String</code> |  | The string to truncate. |
+| [characterCount] | <code>Number</code> |  | The number of characters the truncated string contains.        If ommitted or falsy, the initial string is returned. |
+| [delimiter] | <code>String</code> | <code>&quot;&quot;</code> | The delimiter to add at the end of the truncated string. |
 
-- `characterCount` _(number)_: The number of characters the truncated string will contain. If ommitted or falsey, the default string is returned.
-
-- `[delimiter]` _(string)_: Optional. Defaults to empty string `''`. The delimiter to add at the end of the truncated string.
-
-#### Returns
-
-_(string)_: Returns the truncated string.
-
-#### Examples
+**Example**  
 ```js
 var str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 

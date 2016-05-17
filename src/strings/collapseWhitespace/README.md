@@ -1,20 +1,17 @@
-### [Strings](../) > collapseWhitespace
+<a name="collapseWhitespace"></a>
 
-```js
-collapseWhitespace(subjectString)
-```
-
+## collapseWhitespace(subjectString) ⇒ <code>String</code>
 Converts all adjacent whitespace characters to a single space.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The final string with all adjacent whitespace converted to single space.  
+**Category**: String  
 
-- `subjectString` _(string)_: The initial string to process.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to process. |
 
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Example
+**Example**  
 ```js
 collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
 // -> 'Lorem ispum dolor sit amet.'

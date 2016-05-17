@@ -1,20 +1,17 @@
-### [Strings](../) > dasherize
+<a name="dasherize"></a>
 
-```js
-dasherize(subjectString)
-```
-
+## dasherize(subjectString) ⇒ <code>String</code>
 Converts a camel cased or snake cased string into a string delimited by dashes.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The converted string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to dasherize.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to dasherize. |
 
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 dasherize('backgroundColor');
 // -> 'background-color'

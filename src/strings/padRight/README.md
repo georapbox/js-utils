@@ -1,24 +1,23 @@
-### [Strings](../) > padRight
+<a name="padRight"></a>
 
-```js
-pad(subjectString, len [, chars=' '])
-```
+## padRight(subjectString, len, [chars]) ⇒ <code>String</code>
+Pad `subjectString` on right side to the given `len`, with optional `chars` defaulting to a space.
 
-Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.
+**Kind**: global function  
+**Returns**: <code>String</code> - The result padded string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| len | <code>Number</code> |  | The length to pad the string. |
+| [chars] | <code>String</code> | <code>&#x27; &#x27;</code> | The character(s) to use for padding. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `len` _(number)_: The length of the padding.
-
-- `[chars=' ']` _(string)_: Optional. Defaults to space. The character(s) to use for padding.
-
-#### Examples
+**Example**  
 ```js
 padRight('Hello', 10);
-// -> "Hello     "
+// -> 'Hello     '
 
 padRight('Hello', 5, '-');
-// -> "Hello-----"
+// -> 'Hello-----'
 ```

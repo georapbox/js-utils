@@ -1,20 +1,17 @@
-### [Strings](../) > camelCase
+<a name="camelCase"></a>
 
-```js
-camelCase(subjectString)
-```
-
+## camelCase(subjectString) ⇒ <code>String</code>
 Converts a string to camel case, removing any non alphanumeric characters.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>String</code> - The camel cased result string.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to convert.
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to convert. |
 
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 camelCase('Foo Bar');
 // -> 'fooBar'

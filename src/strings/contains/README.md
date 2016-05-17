@@ -1,27 +1,20 @@
-### [Strings](../) > contains
+<a name="contains"></a>
 
-```js
-contains(subjectString, searchString [, position=0])
-```
-
+## contains(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
 Determines whether one string may be found within another string, returning true or false as appropriate.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if searchString is found within subjectString, else false.  
+**Category**: String  
 
-- `subjectString` _(string)_: The string to process.
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| subjectString | <code>String</code> |  | The string to process. |
+| searchString | <code>String</code> |  | A string to be searched for within the original string. |
+| [position] | <code>Number</code> | <code>0</code> | The position in the original string at which to begin searching for searchString; defaults to 0. |
 
-- `searchString` _(string)_: A string to be searched for within the original string.
-
-- `[position=0]` _(number)_: Optional. Defaults to 0. The position in the original string at which to begin searching for searchString.
-
-#### Returns
-
-_(boolean)_: Returns true if searchString is found within subjectString, else false.
-
-#### Examples
+**Example**  
 ```js
-var str = 'To be, or not to be, that is the question.';
-
 contains(str, 'To be');
 // -> true
 

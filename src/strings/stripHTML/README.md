@@ -1,20 +1,17 @@
-### [Strings](../) > stripHTML
+<a name="stripHTML"></a>
 
-```js
-stripHTML(subjectString)
-```
+## stripHTML(subjectString) ⇒ <code>String</code>
+Removes all HTML tags from a string.
 
-Creates a new string with all HTML tags removed.
+**Kind**: global function  
+**Returns**: <code>String</code> - The stripped string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to strip. |
 
-- `subjectString` _(string)_: The string to strip.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Example
+**Example**  
 ```js
 var str = '<p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit.<br/> <span class="mollitia">Mollitia</span> quos dicta, doloremque veritatis.</p>';
 

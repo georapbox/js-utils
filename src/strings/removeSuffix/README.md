@@ -1,22 +1,18 @@
-###[Strings](../) > removeSuffix
+<a name="removeSuffix"></a>
 
-```js
-removeSuffix(subjectString [, suffix])
-```
+## removeSuffix(subjectString, [suffix]) ⇒ <code>String</code>
+Removes suffix from start of a string.
 
-Removes substring from end of a string.
+**Kind**: global function  
+**Returns**: <code>String</code> - The result string.  
+**Category**: String  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The original string. |
+| [suffix] | <code>String</code> | The suffix substring to remove from the original string. |
 
-- `subjectString` _(string)_: The string to process.
-
-- `[suffix]` _(string)_: Optional. The substring to remove from the original string.
-
-#### Returns
-
-_(string)_: Returns the result string.
-
-#### Examples
+**Example**  
 ```js
 removeSuffix('foobar__', '__');
 // -> 'foo'
