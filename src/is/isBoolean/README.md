@@ -1,20 +1,17 @@
-### [is](../) > isBoolean
+<a name="isBoolean"></a>
 
-```js
-isBoolean(value)
-```
+## isBoolean(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a boolean value.
 
-Checks if `value` is a boolean value.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is a boolean value, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is boolean, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isBoolean(true);
 // -> true

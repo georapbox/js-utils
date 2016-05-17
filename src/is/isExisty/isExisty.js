@@ -1,10 +1,22 @@
 /**
  * Checks if 'value' is existy (Not null or undefined).
+ *
+ * @category Is
  * @param {*} value The value to check.
- * @return {Boolean} true|false Returns true if the 'value' is existy, else false.
+ * @return {Boolean} True if the 'value' is existy, else false.
+ * @example
+ *
+ * isExisty('Foo');
+ * // -> true
+ *
+ * isExisty(null);
+ * // -> false
+ *
+ * isExisty();
+ * // -> false
  */
 function isExisty(value) {
     'use strict';
-    // NOTE: Using non strict equality to check for both null and undefined.
+
     return value != null;
 }

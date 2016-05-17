@@ -1,20 +1,17 @@
-### [is](../) > isExisty
+<a name="isExisty"></a>
 
-```js
-isExisty(value)
-```
+## isExisty(value) ⇒ <code>Boolean</code>
+Checks if 'value' is existy (Not null or undefined).
 
-Checks if `value` is existy (Not null or undefined).
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is existy, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is existy, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isExisty('Foo');
 // -> true

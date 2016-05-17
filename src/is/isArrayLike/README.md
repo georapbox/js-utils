@@ -1,33 +1,27 @@
-### [is](../) > isArrayLike
+<a name="isArrayLike"></a>
 
-```js
-isArrayLike(value)
-```
-
-Checks if `value` is array-like.
+## isArrayLike(value) ⇒ <code>Boolean</code>
+Checks if value is array-like.
 A value is considered array-like if it’s not a function and has a `value.length` that’s an
 integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
-**NOTE:** If an object has a property named `length`, `isArrayLike` returns `true`.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if value is array-like, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is an array-like object, else `false`.
-
-#### Examples
+**Example**  
 ```js
 function noop() {}
 
 function dummy() {
-    return arguments;
+  return arguments;
 }
 
 var args = dummy();
-
 
 isArrayLike([1, 2, 3]));
 // -> true

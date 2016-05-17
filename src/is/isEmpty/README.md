@@ -1,23 +1,20 @@
-### [is](../) > isEmpty
+<a name="isEmpty"></a>
 
-```js
-isEmpty(value)
-```
+## isEmpty(value) ⇒ <code>Boolean</code>
+Checks if 'value' is empty.
+Arrays, strings, or arguments objects with a length of 0 and plain objects containing no
+own enumerable properties or inherited from prototypes properties are considered "empty".
 
-Checks if `value` is empty.
-Arrays, strings, or arguments objects with a length of 0 and plain objects containing no own enumerable or inherited from prototypes properties are considered "empty".
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if empty, else false.  
+**Category**: Is  
+**Note:**: Use with caution as DOM elements, primitive strings/numbers, host objects may not give consistent results across browsers.  
 
-**NOTE:** Use with caution as DOM elements, primitive strings/numbers, host objects may not give consistent results across browsers.
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The object ot check if is empty. |
 
-#### Arguments
-
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is considered empty, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isEmpty(['a', 'b', 'c', 'd']);
 // -> false
@@ -51,8 +48,8 @@ isEmpty(Object.create({foo: 'bar'}));
 
 var obj = {};
 Object.defineProperty(obj, 'hidden', {
-    value: null,
-    enumerable: false
+  value: null,
+  enumerable: false
 });
 isEmpty(obj);
 // -> true ('hidden' is non-enumerable)

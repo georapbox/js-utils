@@ -1,20 +1,17 @@
-### [is](../) > isElement
+<a name="isElement"></a>
 
-```js
-isElement(value)
-```
+## isElement(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a DOM element.
 
-Checks if `value` is a DOM element.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if 'value' is a DOM element, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is a DOM element, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isElement('Lorem ipusm dolr sit amet.');
 // -> false

@@ -1,20 +1,17 @@
-### [is](../) > isDate
+<a name="isDate"></a>
 
-```js
-isDate(value)
-```
+## isDate(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a date.
 
-Checks if `value` is a date.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if 'value' is a date, else returns false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is a date, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isDate(new Date());
 // -> true

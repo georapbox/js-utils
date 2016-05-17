@@ -13,7 +13,7 @@
     "test": "karma start",
     "docs": "grunt buildDocs",
     "postinstall": "grunt postinstall",
-    "jsdoc2md": "jsdoc2md 'src/strings/urlSearchParams/urlSearchParams.js' > 'src/strings/urlSearchParams/README.md'"
+    "jsdoc2md": "jsdoc2md 'src/is/isFalsy/isFalsy.js' > 'src/is/isFalsy/README.md'"
   },
   "devDependencies": {
     "chalk": "~1.1.3",

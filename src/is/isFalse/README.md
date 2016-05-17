@@ -1,20 +1,17 @@
-### [is](../) > isFalse
+<a name="isFalse"></a>
 
-```js
-isFalse(value)
-```
+## isFalse(value) ⇒ <code>Boolean</code>
+Checks if 'value' is false (strict equality).
 
-Checks if `value` is false (strict equality).
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is false, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is false, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isFalse(false);
 // -> true

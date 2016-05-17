@@ -112,8 +112,8 @@ A collection of standalone javascript utility functions.
 |[throttle](src/function/throttle)|Limits the number of times a function can be called in a given period.|
 
 
-## is
-[is.api](src/is/is.api) - A minimal API for the `is` functions below that provides `not`, `all` and `any` interfaces.<br>
+## Is
+[is](src/is/is) - A minimal API for the `Is` category functions below that provides `not`, `all` and `any` interfaces.<br>
 <small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
 
 |Name|Description|
@@ -126,7 +126,7 @@ A collection of standalone javascript utility functions.
 |[isElement](src/is/isElement)|Checks if `value` is a DOM element.|
 |[isEmail](src/is/isEmail)|Validates a string as email address.|
 |[isEmpty](src/is/isEmpty)|Checks if `value` is empty.|
-|[isEvenNum](src/is/isEvenNum)|Checks if a number is even.|
+|[isEven](src/is/isEven)|Checks if `value` is even.|
 |[isExisty](src/is/isExisty)|Checks if `value` is existy (Not null or undefined).|
 |[isFalse](src/is/isFalse)|Checks if `value` is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if `value` is falsy.|
@@ -140,7 +140,7 @@ A collection of standalone javascript utility functions.
 |[isNull](src/is/isNull)|Checks if `value` is null.|
 |[isNumber](src/is/isNumber)|Checks if `value` is a number.|
 |[isObject](src/is/isObject)|Checks if `value` is a plain object, i.e. is constructed by the built-in Object constructor and inherits directly from `Object.prototype` or `null`.|
-|[isOddNum](src/is/isOddNum)|Checks if a number is odd.|
+|[isOdd](src/is/isOdd)|Checks if `value` is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
 |[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
 |[isSafeInteger](src/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|

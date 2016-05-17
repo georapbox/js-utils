@@ -1,20 +1,17 @@
-### [is](../) > isEmail
+<a name="isEmail"></a>
 
-```js
-isEmail(value)
-```
-
+## isEmail(value) ⇒ <code>Boolean</code>
 Validates a string as email address.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if valid email, else false.  
+**Category**: Is  
 
-- `value` _(string)_: The value to check.
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>String</code> | The string to validate. |
 
-#### Returns
-
-_(boolean)_: Returns `true` if value is a valid email, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isEmail('me@example.com';
 // -> true
@@ -24,9 +21,6 @@ isEmail('a.nonymous@example.com';
 
 isEmail('name+tag@example.com';
 // -> true
-
-isEmail('name\@tag@example.com');
-// -> false
 
 isEmail('name@tag@example.com');
 // -> false

@@ -1,22 +1,17 @@
-### [is](../) > isArray
+<a name="isArray"></a>
 
-```js
-isArray(value)
-```
+## isArray(value) ⇒ <code>Boolean</code>
+Checks if 'value' is array.
 
-Checks if `value` is array.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if array, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check if is array. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is an array, else returns `false`.
-
-The value to check.
-
-#### Example
+**Example**  
 ```js
 isArray(['a', 'b', 'c', 'd']);
 // -> true
