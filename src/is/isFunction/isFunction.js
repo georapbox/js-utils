@@ -1,9 +1,22 @@
 /**
  * Checks if 'value' is a function.
+ *
+ * @category Is
  * @param {*} value The value to check.
- * @return {Boolean} true|false Returns true if 'value' is a function, else returns false.
+ * @return {Boolean} True if 'value' is a function, else returns false.
+ * @example
+ *
+ * isFunction(function test() {
+ *   return 'This is test function.';
+ * });
+ * // -> true
+ *
+ * isFunction('This is a test function.');
+ * // -> false
  */
 function isFunction(value) {
     'use strict';
-    return typeof value === 'function' && Object.prototype.toString.call(value) === '[object Function]';
+
+    return typeof value === 'function' &&
+        Object.prototype.toString.call(value) === '[object Function]';
 }

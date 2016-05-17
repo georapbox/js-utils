@@ -18,6 +18,7 @@ _(boolean)_: Returns `true` if value is a finite number, else returns `false`.
 ```js
 isFiniteNum(Infinity);
 // -> false
+
 isFiniteNum(NaN);
 // -> false
 

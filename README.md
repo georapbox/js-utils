@@ -130,7 +130,7 @@ A collection of standalone javascript utility functions.
 |[isExisty](src/is/isExisty)|Checks if `value` is existy (Not null or undefined).|
 |[isFalse](src/is/isFalse)|Checks if `value` is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if `value` is falsy.|
-|[isFiniteNum](src/is/isFiniteNum)|Checks if `value` is a finit number.|
+|[isFiniteNum](src/is/isFiniteNum)|Checks if `value` is a finite number.|
 |[isFunction](src/is/isFunction)|Checks if `value` is a function.|
 |[isHexadecimal](src/is/isHexadecimal)|Checks if `value` matches a hexadecimal regular expression.|
 |[isHexColor](src/is/isHexColor)|Checks if `value` matches a hexadecimal color regular expression.|
