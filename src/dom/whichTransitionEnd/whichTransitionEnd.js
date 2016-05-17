@@ -1,6 +1,8 @@
 /**
- * Detects the supported property name for the "transitionend" event.
- * @returns {string} The supported property name or undefined if not supported.
+ * Detects the supported property name for the `transitionend` event.
+ *
+ * @category DOM
+ * @return {string} The supported property name or `undefined` if not supported.
  */
 function whichTransitionEnd() {
     'use strict';
