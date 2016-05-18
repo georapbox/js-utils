@@ -1,11 +1,17 @@
-### [DOM](../) > whichTransitionEnd
+<a name="whichTransitionEnd"></a>
 
-```js
-whichTransitionEnd()
-```
-
+## whichTransitionEnd() ⇒ <code>string</code>
 Detects the supported property name for the `transitionend` event.
 
-#### Returns
+**Kind**: global function  
+**Returns**: <code>string</code> - The supported property name or `undefined` if not supported.  
+**Category**: DOM  
+**Example**  
+```js
+var transEnd = whichTransitionEnd();
+// -> eg 'transitionend'
 
-_(string)_: Returns the supported property name (eg transitionend, oAnimationEnd , webkitTransitionEnd) or `undefined` if not supported.
+element.addEventListener(transEnd, function () {
+  // Do soething...
+});
+```

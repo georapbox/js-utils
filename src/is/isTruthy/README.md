@@ -1,20 +1,17 @@
-### [is](../) > isTruthy
+<a name="isTruthy"></a>
 
-```js
-isTruthy(value)
-```
+## isTruthy(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a truthy one.
 
-Checks if `value` is truthy.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is truthy, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is truthy, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isTruthy(true);
 // -> true

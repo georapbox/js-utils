@@ -1,20 +1,17 @@
-### [is](../) > isRegexp
+<a name="isRegexp"></a>
 
-```js
-isRegexp(value)
-```
+## isRegexp(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a regular expression.
 
-Checks if `value` is a regular expression.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is a regular expression, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is regualr expression, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isRegexp(/^[0-9a-fA-F]+$/);
 // -> true

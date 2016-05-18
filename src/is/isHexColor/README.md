@@ -1,20 +1,17 @@
-### [is](../) > isHexColor
+<a name="isHexColor"></a>
 
-```js
-isHexColor(value)
-```
+## isHexColor(value) ⇒ <code>Boolean</code>
+Checks if 'value' matches a hexadecimal color regular expression.
 
-Checks if `value` matches a hex color eexpression.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if 'value' is a hexadecimal color regexp, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is a hex color expression, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isHexColor('#f5f5f5');
 // -> true

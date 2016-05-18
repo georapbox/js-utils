@@ -1,5 +1,5 @@
 /**
- * Asynchronsouly load images to browser so that can be cached.
+ * Load images to browser asynchronously so that can be cached.
  * Can be called as many times as we want and each time, it will just add more images to browser's cache.
  *
  * @category DOM

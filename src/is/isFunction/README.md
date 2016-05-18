@@ -1,23 +1,20 @@
-### [is](../) > isFunction
+<a name="isFunction"></a>
 
-```js
-isFunction(value)
-```
+## isFunction(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a function.
 
-Checks if `value` is a function.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if 'value' is a function, else returns false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is function, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isFunction(function test() {
-    return 'This is test function.';
+  return 'This is test function.';
 });
 // -> true
 

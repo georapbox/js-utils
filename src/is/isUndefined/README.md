@@ -1,20 +1,17 @@
-### [is](../) > isUndefined
+<a name="isUndefined"></a>
 
-```js
-isUndefined(value)
-```
+## isUndefined(value) ⇒ <code>Boolean</code>
+Checks if 'value' is undefined.
 
-Checks if `value` is `undefined`.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is undefined, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is undefined, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 var foo;
 

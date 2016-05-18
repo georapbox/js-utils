@@ -1,21 +1,18 @@
-### [is](../) > isInteger
+<a name="isInteger"></a>
 
-```js
-isInteger(value)
-```
+## isInteger(value) ⇒ <code>Boolean</code>
+Checks if 'value' is an integer number.
+If the value is NaN or infinite, return false.
 
-Checks if `value` is an integer.<br>
-If the target value is an integer, return true, otherwise return false. If the value is NaN or infinite, return false.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if value is integer, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is an integer number, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isInteger(1);
 // -> true

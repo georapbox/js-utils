@@ -1,20 +1,17 @@
-### [is](../) > isFiniteNum
+<a name="isFiniteNum"></a>
 
-```js
-isFiniteNum(value)
-```
+## isFiniteNum(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a finite number.
 
-Checks if `value` is a finite number.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if value is a finite number, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The 'value' to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is a finite number, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isFiniteNum(Infinity);
 // -> false

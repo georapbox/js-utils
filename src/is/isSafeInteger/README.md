@@ -1,20 +1,18 @@
-### [is](../) > isSafeInteger
+<a name="isSafeInteger"></a>
 
-```js
-isSafeInteger(value)
-```
+## isSafeInteger(value) ⇒ <code>Boolean</code>
+Checks if an integer number is in the safe range, i.e., it is correctly represented by JavaScript
+(where all numbers, including integer numbers, are technically floating point number).
 
-Checks if an integer number is in the safe range, i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if safe integer, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is safe integer, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isSafeInteger(3));
 // -> true

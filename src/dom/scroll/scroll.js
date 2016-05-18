@@ -53,23 +53,25 @@
      *
      * @function to
      * @param {Object} [options] User defined options, extending the default ones.
-     * @param {Number} [options.y] The point the scroll ends. Default 0.
+     * @param {Number} [options.y=0] The point the scroll ends.
      * @param {Number} [options.duration=400] The duration (milliseconds) of the scrolling animation.
      * @param {function} [options.easing=scroll.easing.linear] The animation's easing function.
-     *        Available easing methods:
-     *        - scroll.easing.linear
-     *        - scroll.easing.easeInQuad
-     *        - scroll.easing.easeOutQuad
-     *        - scroll.easing.easeInOutQuad
-     *        - scroll.easing.easeInCubic
-     *        - scroll.easing.easeOutCubic
-     *        - scroll.easing.easeInOutCubic
-     *        - scroll.easing.easeInQuart
-     *        - scroll.easing.easeOutQuart
-     *        - scroll.easing.easeInOutQuart
-     *        - scroll.easing.easeInQuint
-     *        - scroll.easing.easeOutQuint
-     *        - scroll.easing.easeInOutQuint
+     *        <br>Available easing methods:
+     *        <ul>
+     *        <li>scroll.easing.linear</li>
+     *        <li>scroll.easing.easeInQuad</li>
+     *        <li>scroll.easing.easeOutQuad</li>
+     *        <li>scroll.easing.easeInOutQuad</li>
+     *        <li>scroll.easing.easeInCubic</li>
+     *        <li>scroll.easing.easeOutCubic</li>
+     *        <li>scroll.easing.easeInOutCubic</li>
+     *        <li>scroll.easing.easeInQuart</li>
+     *        <li>scroll.easing.easeOutQuart</li>
+     *        <li>scroll.easing.easeInOutQuart</li>
+     *        <li>scroll.easing.easeInQuint</li>
+     *        <li>scroll.easing.easeOutQuint</li>
+     *        <li>scroll.easing.easeInOutQuint</li>
+     *        </ul>
      * @param {function} [callback] A callback function to be executed after animation is done.
      * @example
      *

@@ -1,22 +1,17 @@
-### [DOM](../) > isEventSupported
+<a name="module_isEventSupported"></a>
 
-```js
-isEventSupported(eventName [, element])
-```
-
+## isEventSupported ⇒ <code>Boolean</code>
 Checks if an event is supported in a browser environment.
 
-#### Arguments
+**Returns**: <code>Boolean</code> - True if event is supported, else false.  
+**Category**: DOM  
 
-- `eventName` _(string)_: The name of the event to check if is supported.
+| Param | Type | Description |
+| --- | --- | --- |
+| eventName | <code>String</code> | The event to check if is supported. |
+| [element] | <code>Object</code> | An HTML node to check if an event is supported on.        Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.        If omitted the results are cached and next calls with the same `eventName` will return the results from cache. |
 
-- `[element]` _(object)_: Optional. An HTML node to check if an event is supported on. Use it if you need to check for an event on a specific element. Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element. If omitted the results are cached and next calls with the same `eventName` will return the results from cache.
-
-#### Returns
-
-_(boolean)_: Returns true if event is supported, else false.
-
-#### Examples
+**Example**  
 ```js
 isEventSupported('submit');
 // -> true - Checks on a `form` element
@@ -35,5 +30,4 @@ isEventSupported('keyup');
 
 isEventSupported('keyup', document.createElement('input'));
 // -> true - Checks on an `input` element
-
 ```

@@ -1,56 +1,41 @@
-### [DOM](../) > scroll
+<a name="module_scroll"></a>
 
-```js
-scroll.to([options] [, callback])
-```
-
+## scroll
 Easing based scrolling to a specified y point inside page.
 
-#### Arguments
+**Category**: DOM  
+<a name="module_scroll..to"></a>
 
-- [options] _(object)_: Optional. A user defined options object.
-    - `[options.y]` _(number)_: The "y" point (in pixels) to scroll to inside page. Default is `0`.
-    - `[options.duration]` _(number)_: The duration (in milliseconds) the scroll takes to complete. Default is `400`.
-    - `[options.easing]` _(function)_: The easing method of the scrolling animation. Default is `scroll.easing.linear`.
+### scroll~to([options], [callback])
+Scrolls page to the y point with the specified duration and easing function.
 
-    Available easing methods:
-    - linear
-    - easeInQuad
-    - easeOutQuad
-    - easeInOutQuad
-    - easeInCubic
-    - easeOutCubic
-    - easeInOutCubic
-    - easeInQuart
-    - easeOutQuart
-    - easeInOutQuart
-    - easeInQuint
-    - easeOutQuint
-    - easeInOutQuint
+**Kind**: inner method of <code>[scroll](#module_scroll)</code>  
 
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>Object</code> |  | User defined options, extending the default ones. |
+| [options.y] | <code>Number</code> | <code>0</code> | The point the scroll ends. |
+| [options.duration] | <code>Number</code> | <code>400</code> | The duration (milliseconds) of the scrolling animation. |
+| [options.easing] | <code>function</code> | <code>scroll.easing.linear</code> | The animation's easing function.        <br>Available easing methods:        <ul>        <li>scroll.easing.linear</li>        <li>scroll.easing.easeInQuad</li>        <li>scroll.easing.easeOutQuad</li>        <li>scroll.easing.easeInOutQuad</li>        <li>scroll.easing.easeInCubic</li>        <li>scroll.easing.easeOutCubic</li>        <li>scroll.easing.easeInOutCubic</li>        <li>scroll.easing.easeInQuart</li>        <li>scroll.easing.easeOutQuart</li>        <li>scroll.easing.easeInOutQuart</li>        <li>scroll.easing.easeInQuint</li>        <li>scroll.easing.easeOutQuint</li>        <li>scroll.easing.easeInOutQuint</li>        </ul> |
+| [callback] | <code>function</code> |  | A callback function to be executed after animation is done. |
 
-- `[callback]` _(function)_: Optional A callback function to be executed after scroll is completed.
-
-### Examples
-
-#### Example 1 - Scroll page 500px from top.
+**Example**  
 ```js
+// Scroll page 500px from top
 scroll.to({
-    y: 500,
-    duration: 800,
-    easing: scroll.easing.easeInOutCubic
+  y: 500,
+  duration: 800,
+  easing: scroll.easing.easeInOutCubic
 }, function () {
-    console.log('Finished scrolling.');
+  console.log('Finished scrolling.');
 });
-```
 
-#### Example 2 - Scroll page to an element.
-```js
+// Scroll page to an element
 scroll.to({
-    y: document.getElementById('test').getBoundingClientRect().top + (document.documentElement.scrollTop || document.body.scrollTop),
-    duration: 600,
-    easing: scroll.easing.easeInOutCubic
+  y: document.getElementById('test').getBoundingClientRect().top + (document.documentElement.scrollTop || document.body.scrollTop),
+  duration: 600,
+  easing: scroll.easing.easeInOutCubic
 }, function (y) {
-    console.log('Scrolled down ' + y + ' pixels.');
+  console.log('Scrolled down ' + y + ' pixels.');
 });
 ```

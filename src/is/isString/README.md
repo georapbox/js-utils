@@ -1,20 +1,17 @@
-### [is](../) > isString
+<a name="isString"></a>
 
-```js
-isString(value)
-```
-
+## isString(value) ⇒ <code>Boolean</code>
 Checks if `value` is string.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if string, else false.  
+**Category**: Is  
 
-- `value` _(*)_: The value to check.
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | to check if is string. |
 
-#### Returns
-
-_(boolean)_: Returns `true` if value is string, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isString(['a', 'b', 'c', 'd']);
 // -> false

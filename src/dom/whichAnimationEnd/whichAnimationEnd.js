@@ -3,6 +3,14 @@
  *
  * @category DOM
  * @return {String} The supported property name or `undefined` if not supported.
+ * @example
+ *
+ * var animEnd = whichAnimationEnd();
+ * // -> eg 'animationend'
+ *
+ * element.addEventListener(animEnd, function () {
+ *   // Do soething...
+ * });
  */
 function whichAnimationEnd() {
     'use strict';

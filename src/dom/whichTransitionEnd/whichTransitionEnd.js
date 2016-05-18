@@ -3,6 +3,14 @@
  *
  * @category DOM
  * @return {string} The supported property name or `undefined` if not supported.
+ * @example
+ *
+ * var transEnd = whichTransitionEnd();
+ * // -> eg 'transitionend'
+ *
+ * element.addEventListener(transEnd, function () {
+ *   // Do soething...
+ * });
  */
 function whichTransitionEnd() {
     'use strict';

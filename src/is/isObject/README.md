@@ -1,20 +1,17 @@
-### [is](../) > isObject
+<a name="isObject"></a>
 
-```js
-isObject(value)
-```
+## isObject(value) ⇒ <code>Boolean</code>
+Checks if "value" is the language type of "Object".
 
-Checks if `value` is the language type of `Object`.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if "value" is an object, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is object, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isObject({});
 // -> true

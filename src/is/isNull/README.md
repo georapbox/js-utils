@@ -1,20 +1,17 @@
-### [is](../) > isNull
+<a name="isNull"></a>
 
-```js
-isNull(value)
-```
+## isNull(value) ⇒ <code>Boolean</code>
+Checks if 'value' is null.
 
-Checks if `value` is `null`.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if the 'value' is null, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is null, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isNull(null);
 // -> true

@@ -1,11 +1,17 @@
-### [DOM](../) > whichAnimationEnd
+<a name="whichAnimationEnd"></a>
 
-```js
-whichAnimationEnd()
-```
-
+## whichAnimationEnd() ⇒ <code>String</code>
 Detects the supported property name for the `animationend` event.
 
-#### Returns
+**Kind**: global function  
+**Returns**: <code>String</code> - The supported property name or `undefined` if not supported.  
+**Category**: DOM  
+**Example**  
+```js
+var animEnd = whichAnimationEnd();
+// -> eg 'animationend'
 
-_(string)_: Returns the supported property name (animationend, oAnimationEnd, webkitAnimationEnd) or `undefined` if not supported.
+element.addEventListener(animEnd, function () {
+  // Do soething...
+});
+```

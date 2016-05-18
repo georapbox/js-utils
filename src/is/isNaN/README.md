@@ -1,22 +1,18 @@
-### [is](../) > isNaN
+<a name="isNaN"></a>
 
-```js
-isNaN(value)
-```
+## isNaN(value) ⇒ <code>Boolean</code>
+Determines whether a value is NaN or not.
 
-Checks if `value` is `NaN` or not.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if NaN, else false.  
+**Category**: Is  
+**Note:**: `NaN` is number and it is also the only primitive value which does not equal to itself.  
 
-***NOTE:*** `NaN` is of type "number" and it is also the only primitive value which does not equal itself.
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check if NaN. |
 
-#### Arguments
-
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is `NaN`, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isNaN(5);
 // -> false
@@ -42,5 +38,4 @@ isNaN(b);
 
 var a = null, b = a + 5;
 isNaN(b);
-// -> false (null + 5 = 5)
 ```

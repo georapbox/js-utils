@@ -13,7 +13,7 @@
     "test": "karma start",
     "docs": "grunt buildDocs",
     "postinstall": "grunt postinstall",
-    "jsdoc2md": "jsdoc2md \"/src/is/isFiniteNum/isFiniteNum.js\" > \"src/is/isFiniteNum/README.md\""
+    "jsdoc2md": "jsdoc2md 'src/dom/isEventSupported/isEventSupported.js' > 'src/dom/isEventSupported/README.md'"
   },
   "devDependencies": {
     "chalk": "~1.1.3",

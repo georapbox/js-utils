@@ -1,20 +1,17 @@
-### [is](../) > isHexadecimal
+<a name="isHexadecimal"></a>
 
-```js
-isHexadecimal(value)
-```
+## isHexadecimal(value) ⇒ <code>Boolean</code>
+Checks if 'value' matches a hexadecimal regular expression.
 
-Checks if `value` matches a hexadecimal regular expression.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if 'value' is a hexadecimal, else false.  
+**Category**: Is  
 
-#### Arguments
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is a hexadecimal expression, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isHexadecimal('f5f5f5');
 // -> true

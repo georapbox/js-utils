@@ -1,25 +1,21 @@
-### [is](../) > isPlainObject
+<a name="isPlainObject"></a>
 
-```js
-isPlainObject(value)
-```
+## isPlainObject(value) ⇒ <code>Boolean</code>
+Checks if `value` is a plain object (created using "{}" or "new Object").
 
-Checks if `value` is a plain object (created using "{}" or "new Object")
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if "value" is a plain object, else false.  
+**Category**: Is  
+**Note**: Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.  
 
-**NOTE:** Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-#### Arguments
-
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is plain object, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 function Foo() {
-    this.a = 1;
+  this.a = 1;
 }
 
 isPlainObject({});

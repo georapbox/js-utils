@@ -1,22 +1,18 @@
-### [is](../) > isNumber
+<a name="isNumber"></a>
 
-```js
-isNumber(value)
-```
+## isNumber(value) ⇒ <code>Boolean</code>
+Checks if 'value' is a number.
 
-Checks if `value` is a number.
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - True if 'value' is a number, else false.  
+**Category**: Is  
+**Note:**: `NaN` is considered to be a number, as so will return true.  
 
-***NOTE:*** `NaN` is considered a number, as so will return `true`.
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | The value to check. |
 
-#### Arguments
-
-- `value` _(*)_: The value to check.
-
-#### Returns
-
-_(boolean)_: Returns `true` if value is number, else returns `false`.
-
-#### Examples
+**Example**  
 ```js
 isNumber(10);
 // -> true
