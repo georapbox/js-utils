@@ -12,8 +12,8 @@
   "scripts": {
     "test": "karma start",
     "docs": "grunt buildDocs",
-    "postinstall": "grunt postinstall",
-    "jsdoc2md": "jsdoc2md 'src/dom/isEventSupported/isEventSupported.js' > 'src/dom/isEventSupported/README.md'"
+    "jsdoc2md": "jsdoc2md",
+    "postinstall": "grunt postinstall"
   },
   "devDependencies": {
     "chalk": "~1.1.3",
