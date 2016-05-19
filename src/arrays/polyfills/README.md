@@ -1,4 +1,4 @@
-## [Arrays](../) > Array.from()
+## Array.from()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 
 ```js
@@ -16,7 +16,7 @@ The Array.from() method creates a new Array instance from an array-like or itera
 - `[thisArg]`: Optional. Value to use as this when executing mapFn.
 
 
-## [Arrays](../) > Array.prototype.every()
+## Array.prototype.every()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 
 
@@ -37,7 +37,7 @@ The **every()** method tests whether all elements in the array pass the test imp
 - `[thisArg]`: Optional. Value to use as this when executing callback.
 
 
-## [Arrays](../) > Array.prototype.filter()
+## Array.prototype.filter()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ```js
@@ -53,7 +53,7 @@ The **filter()** method creates a new array with all elements that pass the test
 - `[thisArg]`: Optional. Value to use as this when executing callback.
 
 
-## [Arrays](../) > Array.prototype.forEach()
+## Array.prototype.forEach()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ```js
@@ -73,7 +73,7 @@ The **forEach()** method executes a provided function once per array element.
 - `[thisArg]`: Optional. Value to use as this when executing callback.
 
 
-## [Arrays](../) > Array.prototype.indexOf()
+## Array.prototype.indexOf()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 ```js
@@ -89,7 +89,7 @@ The **indexOf()** method returns the first index at which a given element can be
 - `[fromIndex=0]`: Optional. The index to start the search at. If the index is greater than or equal to the array's length, -1 is returned, which means the array will not be searched. If the provided index value is a negative number, it is taken as the offset from the end of the array. Note: if the provided index is negative, the array is still searched from front to back. If the calculated index is less than 0, then the whole array will be searched. Default: 0 (Entire array is searched).
 
 
-## [Arrays](../) > Array.prototype.lastIndexOf()
+## Array.prototype.lastIndexOf()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 ```js
@@ -105,7 +105,7 @@ The **lastIndexOf()** method returns the last index at which a given element can
 - `[fromIndex=arr.length]`: Optional. The index at which to start searching backwards. Defaults to the array's length, i.e. the whole array will be searched. If the index is greater than or equal to the length of the array, the whole array will be searched. If negative, it is taken as the offset from the end of the array. Note that even when the index is negative, the array is still searched from back to front. If the calculated index is less than 0, -1 is returned, i.e. the array will not be searched.
 
 
-## [Arrays](../) > Array.prototype.map()
+## Array.prototype.map()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 ```js
@@ -125,7 +125,7 @@ The **map()** method creates a new array with the results of calling a provided 
 - `[thisArg]`: Optional. Value to use as this when executing callback.
 
 
-## [Arrays](../) > Array.prototype.some()
+## Array.prototype.some()
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 
 ```js
@@ -141,7 +141,7 @@ The **some()** method tests whether some element in the array passes the test im
 - `[thisArg]`: Optional. Value to use as this when executing callback.
 
 
-## [Arrays](../) > Array.prototype.reduce()
+## Array.prototype.reduce()
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 ```js
