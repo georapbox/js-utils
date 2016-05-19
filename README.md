@@ -18,6 +18,7 @@ A collection of standalone javascript utility functions.
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
 |[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
 |[reverse](src/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
+|[take](src/arrays/take)|Creates a slice of array with `n` items taken from the beginning.|
 |[sort](src/arrays/sort)|Sorts an **array of primitive values**.|
 |[sortBy](src/arrays/sortBy)|Sorts an **array of objects** by a property.|
 |[uniq](src/arrays/uniq)|Removes duplicate primitive values from an array.|
