@@ -9,9 +9,9 @@
 
             expect(take([1, 2, 3, 4, 5], null)).toEqual([1]);
 
-            expect(take([1, 2, 3, 4, 5], 3)).toEqual([1, 2, 3]);
+            expect(take([1, 2, 3, 4, 5], NaN)).toEqual([1]);
 
-            expect(take([1, 2, 3, 4, 5], '4')).toEqual([1, 2, 3, 4]);
+            expect(take([1, 2, 3, 4, 5], 3)).toEqual([1, 2, 3]);
 
             expect(take([1, 2, 3, 4, 5], 0)).toEqual([]);
 
@@ -21,14 +21,12 @@
 
             expect(take([1, 2, 3, 4, 5], Number.MAX_VALUE)).toEqual([1, 2, 3, 4, 5]);
 
-            expect(take([1, 2, 3, 4, 5], true)).toEqual([1]);
-
-            expect(take([1, 2, 3, 4, 5], false)).toEqual([]);
-
-            expect(take([1, 2, 3, 4, 5], 'hello world')).toEqual([]);
+            expect(function () {
+                return take({}, 2);
+            }).toThrow();
 
             expect(function () {
-                return take({});
+                return take([1, 2, 3, 4, 5], '2');
             }).toThrow();
         });
     });

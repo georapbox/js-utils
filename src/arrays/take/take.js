@@ -13,11 +13,11 @@
  * take([1, 2, 3, 4, 5], null);
  * // -> [1]
  *
+ * take([1, 2, 3, 4, 5], NaN);
+ * // -> [1]
+ *
  * take([1, 2, 3, 4, 5], 3);
  * // -> [1, 2, 3]
- *
- * take([1, 2, 3, 4, 5], '4');
- * // -> [1, 2, 3, 4]
  *
  * take([1, 2, 3, 4, 5], 0);
  * // -> []
@@ -31,17 +31,11 @@
  * take([1, 2, 3, 4, 5], Number.MAX_VALUE);
  * // -> [1, 2, 3, 4, 5]
  *
- * take([1, 2, 3, 4, 5], true);
- * // -> [1]
+ * take([1, 2, 3, 4, 5], '2');
+ * // -> Throws TypeError
  *
- * take([1, 2, 3, 4, 5], false);
- * // -> []
- *
- * take([1, 2, 3, 4, 5], 'hello world');
- * // -> []
- *
- * take({});
- * // Throws TypeError
+ * take({}, 2);
+ * // -> Throws TypeError
  */
 function take(array, n) {
     'use strict';
@@ -50,6 +44,10 @@ function take(array, n) {
 
     if (Object.prototype.toString.call(array) !== '[object Array]') {
         throw new TypeError('Expected an array');
+    }
+
+    if (typeof n !== 'number' && n != null) {
+        throw new TypeError('Expected a number');
     }
 
     MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
