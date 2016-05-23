@@ -20,6 +20,7 @@ A collection of standalone javascript utility functions.
 |[reverse](src/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
 |[take](src/arrays/take)|Creates a slice of array with `n` items taken from the beginning.|
 |[takeRight](src/arrays/takeRight)|Creates a slice of array with `n` items taken from the end.|
+|[takeRightWhile](src/arrays/takeRightWhile)|Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.|
 |[takeWhile](src/arrays/takeWhile)|Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.|
 |[sort](src/arrays/sort)|Sorts an **array of primitive values**.|
 |[sortBy](src/arrays/sortBy)|Sorts an **array of objects** by a property.|
