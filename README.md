@@ -13,6 +13,7 @@ A collection of standalone javascript utility functions.
 |[diff](src/arrays/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
 |[drop](src/arrays/drop)|Creates a slice of `array` with `n` elements dropped from the beginning.|
 |[dropRight](src/arrays/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
+|[dropRightWhile](src/arrays/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
 |[dropWhile](src/arrays/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
 |[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
