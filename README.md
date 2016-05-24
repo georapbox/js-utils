@@ -11,6 +11,8 @@ A collection of standalone javascript utility functions.
 |[chunk](src/arrays/chunk)|Creates an array of elements split into groups the length of size specified.|
 |[compact](src/arrays/compact)|Creates an array with all falsy values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsy.|
 |[diff](src/arrays/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
+|[drop](src/arrays/drop)|Creates a slice of `array` with `n` elements dropped from the beginning.|
+|[dropRight](src/arrays/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
 |[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
