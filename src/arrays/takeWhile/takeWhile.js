@@ -19,14 +19,6 @@
  *   return !book.read;
  * });
  * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}]
- *
- * takeWhile(books, function (book, index, books) {
- *   return book.read;
- * });
- * // -> []
- *
- * takeWhile(books);
- * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}, {title: 'JavaScript: The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
 function takeWhile(array, predicate) {
     'use strict';

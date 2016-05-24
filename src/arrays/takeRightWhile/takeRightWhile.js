@@ -19,14 +19,6 @@
  *   return !book.read;
  * });
  * // -> [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
- *
- * takeRightWhile(books, function (book, index, books) {
- *   return book.read;
- * });
- * // -> []
- *
- * takeRightWhile(books);
- * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: true}, {title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
  */
 function takeRightWhile(array, predicate) {
     'use strict';

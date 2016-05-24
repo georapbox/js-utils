@@ -19,14 +19,6 @@
  *   return !book.read;
  * });
  * // -> [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
- *
- * dropWhile(books, function (book, index, books) {
- *   return book.read;
- * });
- * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}, {title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
- *
- * dropWhile(books);
- * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}, {title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
 function dropWhile(array, predicate) {
     'use strict';
