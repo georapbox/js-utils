@@ -40,7 +40,7 @@
 function takeRight(array, n) {
     'use strict';
 
-    var length;
+    var MAX_SAFE_INTEGER, length;
 
     if (Object.prototype.toString.call(array) !== '[object Array]') {
         throw new TypeError('Expected an array');
@@ -50,8 +50,9 @@ function takeRight(array, n) {
         throw new TypeError('Expected a number');
     }
 
+    MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
     length = array.length;
-    n = n == null || n !== n ? 1 : Math.floor(n);
+    n = n > MAX_SAFE_INTEGER ? length : n == null || n !== n ? 1 : Math.floor(n);
     n = length - n;
 
     return array.slice(n < 0 ? 0 : n, length);
