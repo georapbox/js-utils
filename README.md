@@ -19,6 +19,7 @@ A collection of standalone javascript utility functions.
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
 |[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
+|[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
 |[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
 |[reverse](src/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
