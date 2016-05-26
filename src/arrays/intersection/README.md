@@ -8,7 +8,7 @@ The order of result values is determined by the order they occur in the first ar
 **Returns**: <code>Array</code> - The array of intersecting values.  
 **Category**: Array  
 **Note**: To support legacy browsers use `Array.prototype.reduce` and `Array.prototype.filter` polyfills.  
-**Note**: Internal usage of [Array > includes](src/arrays/includes) function.  
+**Note**: Internal usage of [Array > includes](../src/arrays/includes) function.  
 
 | Param | Type | Description |
 | --- | --- | --- |

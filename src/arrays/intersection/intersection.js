@@ -3,7 +3,7 @@
  * The order of result values is determined by the order they occur in the first array.
  *
  * @NOTE To support legacy browsers use `Array.prototype.reduce` and `Array.prototype.filter` polyfills.
- * @NOTE Internal usage of [Array > includes](src/arrays/includes) function.
+ * @NOTE Internal usage of [Array > includes](../src/arrays/includes) function.
  * @category Array
  * @param {Array} ...arrays The arrays to intersect.
  * @return {Array} The array of intersecting values.
