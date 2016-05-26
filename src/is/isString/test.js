@@ -4,12 +4,18 @@
     'use strict';
 
     describe('is/isString', function () {
-        it('isString(\'404\') should return true', function () {
-            expect(isString('404')).toEqual(true);
-        });
+        it('checks if a valud is string', function () {
+            expect(isString('404')).toBe(true);
 
-        it('isString(404) should return false', function () {
-            expect(isString(404)).toEqual(false);
+            expect(isString(404)).toBe(false);
+
+            expect(isString({})).toBe(false);
+
+            expect(isString(['a', 'b'])).toBe(false);
+
+            expect(isString(null)).toBe(false);
+
+            expect(isString(String('lorem ipsum'))).toBe(true);
         });
     });
 }());
