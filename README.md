@@ -115,6 +115,7 @@ A collection of standalone javascript utility functions.
 |[curry](src/function/curry)|Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.|
 |[debounce](src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[delay](src/function/delay)|Invokes a function after a number of milliseconds.|
+|[flip](src/function/flip)|Creates a function that invokes `func` with arguments reversed.|
 |[negate](src/function/negate)|Creates a function that negates the result of the predicate `func`.|
 |[once](src/function/once)|Ensure a given functionality only runs once.|
 |[partial](src/function/partial)|Creates a function that invokes `func` with `args` **prepended** to the arguments it receives.|
