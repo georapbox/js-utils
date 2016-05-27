@@ -10,7 +10,7 @@ Ensure a given functionality only runs once.
 | Param | Type | Description |
 | --- | --- | --- |
 | func | <code>function</code> | The function to restrict. |
-| [thisArg] | <code>Object</code> | Value to use as this when executing callback. |
+| [thisArg] | <code>Object</code> | Value to use as this when executing <code>func</code>. |
 
 **Example**  
 ```js

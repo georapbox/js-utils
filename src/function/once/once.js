@@ -3,7 +3,7 @@
  *
  * @category Function
  * @param {function} func The function to restrict.
- * @param {Object} [thisArg] Value to use as this when executing callback.
+ * @param {*} [thisArg] Value to use as this when executing `func`.
  * @return {function} Returns the new restricted function.
  * @example
  *
