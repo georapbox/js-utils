@@ -4,7 +4,7 @@
 Creates a function that invokes `func` with arguments reversed.
 
 **Kind**: global function  
-**Returns**: <code>function</code> - The new function with arguments reversed.
+**Returns**: <code>function</code> - The new function with arguments reversed.  
 **Category**: Function  
 
 | Param | Type | Description |
