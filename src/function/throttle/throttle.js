@@ -4,6 +4,7 @@
  * @category Function
  * @param {function} func The function to be executed.
  * @param {Number} [n=0] Optional. Default value is 0. Time of delay in milliseconds.
+ * @throws {TypeError} If `func` is not function.
  * @return {function} The throttled function.
  * @example
  *

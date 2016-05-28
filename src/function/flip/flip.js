@@ -4,6 +4,7 @@
  * @category Function
  * @param {function} func The function to flip arguments for.
  * @param {*} [thisArg] Value to use as `this` when executing `func`.
+ * @throws {TypeError} If `func` is not function.
  * @return {function} The new function with arguments reversed.
  * @example
  *

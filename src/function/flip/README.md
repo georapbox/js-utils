@@ -6,6 +6,9 @@ Creates a function that invokes `func` with arguments reversed.
 **Kind**: global function  
 **Returns**: <code>function</code> - The new function with arguments reversed.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Description |
 | --- | --- | --- |

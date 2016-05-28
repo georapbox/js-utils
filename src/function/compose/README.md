@@ -9,6 +9,9 @@ Thus it is made clear that function passed as arguments should be read from righ
 **Kind**: global function  
 **Returns**: <code>function</code> - A new function as the result of the composition.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If any of the arguments is not function.
 
 | Param | Type | Description |
 | --- | --- | --- |

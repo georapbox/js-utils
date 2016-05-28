@@ -7,6 +7,9 @@ Creates a function that invokes `func` while it’s called less than `n` times.
 **Kind**: global function  
 **Returns**: <code>function</code> - Returns the new restricted function.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Description |
 | --- | --- | --- |

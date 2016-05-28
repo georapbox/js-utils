@@ -8,6 +8,7 @@
  * @param {function} func The function to be executed.
  * @param {Number} [n=0] Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used.
  * @param {Boolean} [immediate] If true or any truthy value, triggers the function on the leading edge.
+ * @throws {TypeError} If `func` is not function.
  * @return {function} A new debounced function.
  * @example
  *

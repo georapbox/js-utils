@@ -9,6 +9,9 @@ leading edge, instead of the trailing.
 **Kind**: global function  
 **Returns**: <code>function</code> - A new debounced function.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

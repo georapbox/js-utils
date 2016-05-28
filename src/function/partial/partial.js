@@ -6,6 +6,7 @@
  * @category Function
  * @param {function} func The function to be invoked with the partially applied arguments.
  * @param {*} [args...] The arguments to be partially applied.
+ * @throws {TypeError} If `func` is not function.
  * @return {function} partialApplicator A function that invokes the originally-specified function `func`.
  * @example
  *

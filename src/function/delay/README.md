@@ -7,6 +7,9 @@ Any additional arguments are provided to `func` when it’s invoked.
 **Kind**: global function  
 **Returns**: <code>Number</code> - Returns the timer's id.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

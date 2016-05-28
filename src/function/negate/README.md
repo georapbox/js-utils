@@ -7,6 +7,9 @@ The `func` predicate is invoked with the this binding and arguments of the creat
 **Kind**: global function  
 **Returns**: <code>function</code> - Returns the new function.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Description |
 | --- | --- | --- |

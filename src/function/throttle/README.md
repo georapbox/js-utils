@@ -6,6 +6,9 @@ Limits the number of times a function can be called in a given period.
 **Kind**: global function  
 **Returns**: <code>function</code> - The throttled function.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

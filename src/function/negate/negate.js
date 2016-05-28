@@ -4,6 +4,7 @@
  *
  * @category Function
  * @param {function} func The predicate to negate.
+ * @throws {TypeError} If `func` is not function.
  * @return {function} Returns the new function.
  * @example
  *

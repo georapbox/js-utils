@@ -5,6 +5,7 @@
  * @category Function
  * @param {function} func The function to curry.
  * @param {Number} [n] The number of expected arguments in case that the function's arity cannot be automatically determined.
+ * @throws {TypeError} If `func` is not function.
  * @return {Function} A new, curried function.
  * @example
  *

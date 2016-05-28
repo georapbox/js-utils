@@ -7,6 +7,9 @@ be called as a chain of N functions each with a single argument.
 **Kind**: global function  
 **Returns**: <code>function</code> - A new, curried function.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Description |
 | --- | --- | --- |

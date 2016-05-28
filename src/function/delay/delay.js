@@ -6,6 +6,7 @@
  * @param {function} func The function to delay.
  * @param {Number} [wait=0] The number of milliseconds to delay invokation.
  * @param {*} [args] The arguments to invoke `func` with.
+ * @throws {TypeError} If `func` is not function.
  * @return {Number} Returns the timer's id.
  * @example
  *

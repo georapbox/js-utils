@@ -8,6 +8,7 @@
  *        If a negative number or 0, `func` is never invoked.
  *        If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked.
  * @param {function} func The function to restrict.
+ * @throws {TypeError} If `func` is not function.
  * @return {function} Returns the new restricted function.
  * @example
  *

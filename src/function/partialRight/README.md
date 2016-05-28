@@ -8,6 +8,9 @@ originally-specified arguments, followed by all arguments passed to `partialAppl
 **Kind**: global function  
 **Returns**: <code>function</code> - partialApplicator A function that invokes the originally-specified function `fn`.  
 **Category**: Function  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Description |
 | --- | --- | --- |
