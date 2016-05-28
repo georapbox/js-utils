@@ -6,6 +6,7 @@
  *
  * @category Function
  * @param {function} [...args] One or more functions to compose.
+ * @throws {TypeError} If any of the arguments is not function.
  * @return {function} A new function as the result of the composition.
  * @example
  *
@@ -40,7 +41,17 @@
 function compose(/*...args*/) {
     'use strict';
 
-    var funcs = arguments;
+    var funcs = arguments,
+        slice = Array.prototype.slice,
+        args = slice.call(arguments, 0),
+        argsLength = args.length;
+
+    while (argsLength--) {
+        if (typeof args[argsLength] !== 'function') {
+            throw new TypeError('Expected a function');
+        }
+    }
+
     return function () {
         var args = arguments, i;
         for (i = funcs.length; i--;) {
