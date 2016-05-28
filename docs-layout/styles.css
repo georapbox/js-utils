@@ -4,63 +4,63 @@
 }
 
 a {
-	color: #4183c4;
-	text-decoration: none;
+    color: #4183c4;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 p {
-	margin: 1em 0;
+    margin: 1em 0;
 }
 
 html,
 body {
-	height: 100%;
-	color: #333;
+    height: 100%;
+    color: #333;
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.3;
-	background-color: #fff;
-	overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background-color: #fff;
+    overflow-x: hidden;
 }
 
 #jsessentials {
-	margin-top: 0;
-	padding-top: 0;
-	border: none;
+    margin-top: 0;
+    padding-top: 0;
+    border: none;
 }
 
 .wrapper {
-	width: 100%;
-	background-color: #fff;
+    width: 100%;
+    background-color: #fff;
 }
 
 .footer {
-	clear: both;
-	padding: 40px 0 20px 0;
+    clear: both;
+    padding: 40px 0 20px 0;
 }
 
 .footer .site {
-	background-color: #fff;
+    background-color: #fff;
 }
 
 .footer pre {
-	color: #818b94;
-	line-height: 1.3;
-	overflow-x: auto;
+    color: #818b94;
+    line-height: 1.3;
+    overflow-x: auto;
 }
 
 .site {
-	margin: 0 auto;
-	max-width: 960px;
-	padding: 0 15px;
-	background-color: #fff;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 15px;
+    background-color: #fff;
 }
 
 .wikistyle h1,
@@ -69,251 +69,251 @@ body {
 .wikistyle h4,
 .wikistyle h5,
 .wikistyle h6 {
-	border: 0 ;
+    border: 0 ;
 }
 
 .wikistyle h1 {
-	font-size: 170%;
-	border-top: 1px solid #aaa;
-	padding-top: .5em;
-	margin-top: 1.5em;
+    font-size: 170%;
+    border-top: 1px solid #aaa;
+    padding-top: .5em;
+    margin-top: 1.5em;
 }
 
 .wikistyle h1:first-child {
-	margin-top: 0;
-	padding-top: .25em;
-	border-top: none;
+    margin-top: 0;
+    padding-top: .25em;
+    border-top: none;
 }
 
 .wikistyle h2 {
-	font-size: 150%;
-	margin-top: 1.5em;
-	border-top: 1px solid #e0e0e0;
-	padding-top: .5em;
+    font-size: 150%;
+    margin-top: 1.5em;
+    border-top: 1px solid #e0e0e0;
+    padding-top: .5em;
 }
 
 .wikistyle h3,
 .wikistyle h4 {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 
 .wikistyle hr {
-	border: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 .wikistyle p {
-	margin: 1em 0;
-	line-height: 1.5em;
+    margin: 1em 0;
+    line-height: 1.5em;
 }
 
 .wikistyle a.absent {
-	color: #a00;
+    color: #a00;
 }
 
 .wikistyle del {
-	color: #999;
+    color: #999;
 }
 
 .wikistyle ul,
 #wiki-form .content-body ul {
-	margin: 1em 0 1em 2em;
+    margin: 1em 0 1em 2em;
 }
 
 .wikistyle ol,
 #wiki-form .content-body ol {
-	margin: 1em 0 1em 2em;
+    margin: 1em 0 1em 2em;
 }
 
 .wikistyle ul li,
 #wiki-form .content-body ul li,
 .wikistyle ol li,
 #wiki-form .content-body ol li {
-	margin-top: .5em;
-	margin-bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 
 .wikistyle ul ul,
 .wikistyle ul ol,
 .wikistyle ol ol,
 .wikistyle ol ul {
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .wikistyle blockquote {
-	margin: 1em 0;
-	border-left: 5px solid #ddd;
-	padding-left: .6em;
-	color: #555;
+    margin: 1em 0;
+    border-left: 5px solid #ddd;
+    padding-left: .6em;
+    color: #555;
 }
 
 .wikistyle dt {
-	font-weight: bold;
-	margin-left: 1em;
+    font-weight: bold;
+    margin-left: 1em;
 }
 
 .wikistyle dd {
-	margin-left: 2em;
-	margin-bottom: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
 }
 
 .wikistyle table {
-	width: 100%;
-	margin: 1em 0;
-	border: 1px solid #ddd;
-	border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
 }
 
 .wikistyle table tr:nth-child(2n) {
-	background: #F8F8F8;
+    background: #F8F8F8;
 }
 
 .wikistyle table th {
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding: .4em 1em;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: .4em 1em;
 }
 
 .wikistyle table td {
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding: .4em 1em;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: .4em 1em;
 }
 
 .wikistyle a code,
 .wikistyle a:link code,
 .wikistyle a:visited code {
-	color: #4183c4;
+    color: #4183c4;
 }
 
 .wikistyle img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .wikistyle pre.console {
-	margin: 1em 0;
-	font-size: 12px;
-	background-color: black;
-	padding: .5em;
-	line-height: 1.5em;
-	color: white;
+    margin: 1em 0;
+    font-size: 12px;
+    background-color: black;
+    padding: .5em;
+    line-height: 1.5em;
+    color: white;
 }
 
 .wikistyle pre.console code {
-	padding: 0;
-	font-size: 12px;
-	background-color: black;
-	border: none;
-	color: white;
+    padding: 0;
+    font-size: 12px;
+    background-color: black;
+    border: none;
+    color: white;
 }
 
 .wikistyle pre.console span {
-	color: #888;
+    color: #888;
 }
 
 .wikistyle pre.console span.command {
-	color: yellow;
+    color: yellow;
 }
 
 .wikistyle .float-left {
-	float: left;
-	padding: .5em 1em .25em 0;
+    float: left;
+    padding: .5em 1em .25em 0;
 }
 
 .wikistyle .float-right {
-	float: right;
-	padding: .5em 0 .25em 1em;
+    float: right;
+    padding: .5em 0 .25em 1em;
 }
 
 .wikistyle .align-left {
-	display: block;
-	text-align: left;
+    display: block;
+    text-align: left;
 }
 
 .wikistyle .align-center {
-	display: block;
-	text-align: center;
+    display: block;
+    text-align: center;
 }
 
 .wikistyle .align-right {
-	display: block;
-	text-align: right;
+    display: block;
+    text-align: right;
 }
 
 .wikistyle pre {
-	margin: 1em 0;
-	font-size: 12px;
-	color: #444;
-	overflow: auto;
+    margin: 1em 0;
+    font-size: 12px;
+    color: #444;
+    overflow: auto;
 }
 
 .wikistyle pre::-webkit-scrollbar {
-	height: 8px;
-	width: 8px;
+    height: 8px;
+    width: 8px;
 }
 
 .wikistyle pre::-webkit-scrollbar-track-piece {
-	margin-bottom: 10px;
-	background-color: #e5e5e5;
-	border-bottom-left-radius: 4px 4px;
-	border-bottom-right-radius: 4px 4px;
-	border-top-left-radius: 4px 4px;
-	border-top-right-radius: 4px 4px;
+    margin-bottom: 10px;
+    background-color: #e5e5e5;
+    border-bottom-left-radius: 4px 4px;
+    border-bottom-right-radius: 4px 4px;
+    border-top-left-radius: 4px 4px;
+    border-top-right-radius: 4px 4px;
 }
 
 .wikistyle pre::-webkit-scrollbar-thumb:vertical {
-	height: 25px;
-	background-color: #ccc;
-	-webkit-border-radius: 4px;
-	-webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+    height: 25px;
+    background-color: #ccc;
+    -webkit-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 1);
 }
 
 .wikistyle pre::-webkit-scrollbar-thumb:horizontal {
-	width: 25px;
-	background-color: #ccc;
-	-webkit-border-radius: 4px;
+    width: 25px;
+    background-color: #ccc;
+    -webkit-border-radius: 4px;
 }
 
 .wikistyle pre code {
-	padding: 15px;
-	font-size: 14px;
-	border: none;
-	border-radius: 2px;
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
 }
 
 .wikistyle code {
-	font-size: 14px;
-	padding: 3px 5px;
-	border: 1px solid #dedede;
+    font-size: 14px;
+    padding: 3px 5px;
+    border: 1px solid #dedede;
 }
 
 /* Font icons */
 @font-face {
-	font-family: 'fontello';
-	src: url('fonts/fontello.eot?22235462');
-	src: url('fonts/fontello.eot?22235462#iefix') format('embedded-opentype'),
-	url('fonts/fontello.woff?22235462') format('woff'),
-	url('fonts/fontello.ttf?22235462') format('truetype'),
-	url('fonts/fontello.svg?22235462#fontello') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'fontello';
+    src: url('fonts/fontello.eot?22235462');
+    src: url('fonts/fontello.eot?22235462#iefix') format('embedded-opentype'),
+    url('fonts/fontello.woff?22235462') format('woff'),
+    url('fonts/fontello.ttf?22235462') format('truetype'),
+    url('fonts/fontello.svg?22235462#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-	font-family: "fontello";
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-	display: inline-block;
-	text-decoration: inherit;
-	width: 1em;
-	margin-right: .2em;
-	text-align: center;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1em;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-left-open:before { content: '\e800'; } /* '' */
