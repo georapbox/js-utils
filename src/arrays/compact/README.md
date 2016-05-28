@@ -7,6 +7,9 @@ Creates an array with all falsy values removed.
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns the new array of filtered values.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
 
 | Param | Type | Description |
 | --- | --- | --- |

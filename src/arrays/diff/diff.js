@@ -1,11 +1,13 @@
 /**
- * Returns an array with only the unique values from the first array,
+ * Creates an array with only the unique values from the first array,
  * by excluding all values from the second array using strict equality for comparisons.
  *
  * @category Array
  * @param {Array} arrayA The array to process.
  * @param {Array} arrayB The values to exclude from `arrayA`.
- * @returns {Array} Array of values not included in the exclusion set.
+ * @throws {TypeError} If `arrayA` is not array.
+ * @throws {TypeError} If `arrayB` is not array but not if `null` or `undefined`.
+ * @return {Array} Array of values not included in the exclusion set.
  * @example
  *
  * var obj = {
