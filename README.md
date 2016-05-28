@@ -56,8 +56,7 @@ A collection of standalone javascript utility functions.
 |[contains](src/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
 |[count](src/strings/count)|Counts the occurrences of substring in a string.|
 |[dasherize](src/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
-|[deburr](src/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to
-* basic latin letters and removing combining diacritical marks.|
+|[deburr](src/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
 |[endsWith](src/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
 |[lines](src/strings/lines)|Returns an array with the lines of a a string.|
