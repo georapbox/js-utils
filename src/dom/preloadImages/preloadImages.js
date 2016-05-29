@@ -5,6 +5,7 @@
  * @category DOM
  * @param {Array} images An array of strings that represent the path of the images to be cached.
  * @param {function} [callback] A function to be executed if all images are successfully loaded.
+ * @throws {TypeError} If `images` is not array.
  * @example
  *
  * preloadImages([
@@ -20,16 +21,9 @@
 function preloadImages(images, callback) {
     'use strict';
 
-    if (!preloadImages.list) {
-        preloadImages.list = [];
-    }
+    var list, i, len, img;
 
-    var list = preloadImages.list,
-        i = 0,
-        len = images.length,
-        img;
-
-    var onloadSuccess = function (image) {
+    function onloadSuccess(image) {
         var index;
         image.onload = function () {
             index = list.indexOf(this);
@@ -42,7 +36,19 @@ function preloadImages(images, callback) {
                 }
             }
         };
-    };
+    }
+
+    if (Object.prototype.toString.call(images) !== '[object Array]') {
+        throw new TypeError('Expected an array');
+    }
+
+    if (!preloadImages.list) {
+        preloadImages.list = [];
+    }
+
+    list = preloadImages.list;
+    i = 0;
+    len = images.length;
 
     for (i; i < len; i += 1) {
         img = new Image();

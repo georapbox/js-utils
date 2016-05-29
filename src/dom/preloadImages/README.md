@@ -6,6 +6,10 @@ Can be called as many times as we want and each time, it will just add more imag
 
 **Kind**: global function  
 **Category**: DOM  
+**Throws**:
+
+- <code>TypeError</code> If `images` is not array.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
