@@ -7,6 +7,10 @@ using the Fisher-Yates (aka Knuth) Shuffle algorithm.
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns a new array with its elements randomised.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

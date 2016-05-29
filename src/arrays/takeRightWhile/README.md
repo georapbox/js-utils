@@ -7,6 +7,11 @@ The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
 **Kind**: global function  
 **Returns**: <code>Array</code> - The slice of `array`.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If `predicate` is not function but not if is `null` or `undefined`.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

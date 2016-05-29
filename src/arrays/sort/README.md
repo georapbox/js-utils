@@ -8,6 +8,10 @@ If array values are of different type, the result is not guaranteed to be correc
 **Kind**: global function  
 **Returns**: <code>Array</code> - The new sorted array.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 **Note:**: For legacy browsers use the `Array.prototype.map` and `Array.prototype.filter` polyfills.  
 
 | Param | Type | Default | Description |

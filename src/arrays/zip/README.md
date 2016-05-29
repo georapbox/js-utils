@@ -7,6 +7,10 @@ the second of which contains the second elements of the given arrays, and so on.
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns the new array of grouped elements.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If any of the arguments is not array.
+
 **Note**: To support legacy browsers, use `Array.prototype.map` and `Array.prototype.reduce` polyfills.  
 
 | Param | Type | Description |

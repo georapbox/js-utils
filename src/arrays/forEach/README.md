@@ -6,12 +6,17 @@ To break from the iteration at any time, have the callback return `false`.
 
 **Kind**: global function  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If `callback` is not function.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The array to iterate over. |
 | callback | <code>function</code> | Function to execute for each element. |
-| [thisArg] | <code>Object</code> | Value to use as `this` when executing callback. |
+| [thisArg] | <code>\*</code> | Value to use as `this` when executing callback. |
 
 **Example**  
 ```js

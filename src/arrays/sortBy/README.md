@@ -6,12 +6,16 @@ Sorts an array of objects (not in place) by property.
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns the new sorted array.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | array | <code>Array</code> |  | The array to sort. |
 | field | <code>String</code> |  | The field to sort the array by. |
-| [ascending] | <code>Boolean</code> | <code>true</code> | Defines the sort order. Default is true (ascending).        This is not optional if `primer` is required. |
+| [ascending] | <code>Boolean</code> | <code>true</code> | Defines the sort order.        This is not optional if `primer` is required. |
 | [primer] | <code>function</code> |  | Manipulates the field to sort by. |
 
 **Example**  

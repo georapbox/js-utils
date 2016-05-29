@@ -6,6 +6,10 @@ Retrieves the value of a specified property from all elements in an array.
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns the result array.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

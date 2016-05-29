@@ -7,6 +7,11 @@ If no element passes the callback check, returns -1.
 **Kind**: global function  
 **Returns**: <code>Number</code> - Returns the index of the first element that matches the callback check.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If `callback` is not function.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -20,6 +25,7 @@ var heroes = [
   {name: 'Clark Kent', hero: 'Superman', specialPowers: ['speed', 'flying', 'strength']},
   {name: 'Peter Parker', hero: 'Spiderman', specialPowers: ['climbing']}
 ];
+
 var characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 var numbers = [1, 2, 3];
 

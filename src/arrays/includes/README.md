@@ -7,6 +7,10 @@ returning true or false as appropriate.
 **Kind**: global function  
 **Returns**: <code>Boolean</code> - True if array includes `searchElement`, else false.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

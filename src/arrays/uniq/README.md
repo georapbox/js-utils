@@ -6,6 +6,10 @@ Removes duplicate primitive values from an array.
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns the result (duplicates-free) array.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

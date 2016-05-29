@@ -7,6 +7,10 @@ The order of result values is determined by the order they occur in the first ar
 **Kind**: global function  
 **Returns**: <code>Array</code> - The array of intersecting values.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If any of the arguments is not array.
+
 **Note**: To support legacy browsers use `Array.prototype.reduce` and `Array.prototype.filter` polyfills.  
 **Note**: Internal usage of Array > `includes` function.  
 

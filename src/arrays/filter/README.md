@@ -6,12 +6,17 @@ Creates a new array with all elements that pass the test implemented by the prov
 **Kind**: global function  
 **Returns**: <code>Array</code> - Returns the result array.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If `callback` is not function.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The array to iterate over. |
 | callback | <code>function</code> | Function to test each element of the array. |
-| [thisArg] | <code>Object</code> | Optional. Value to use as `this` when executing callback. |
+| [thisArg] | <code>\*</code> | Value to use as `this` when executing callback. |
 
 **Example**  
 ```js
