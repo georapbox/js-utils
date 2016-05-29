@@ -4,7 +4,9 @@
     'use strict';
 
     describe('String/pad', function () {
-        it('pad("Hello", 9, "-") should return "--Hello--"', function () {
+        it('pads a string on both sides to the given length', function () {
+            expect(pad('Hello', 9, ' ')).toBe('  Hello  ');
+
             expect(pad('Hello', 9, '-')).toBe('--Hello--');
         });
     });
