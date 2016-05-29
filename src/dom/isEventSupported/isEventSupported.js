@@ -7,6 +7,7 @@
  * @param {Object} [element] An HTML node to check if an event is supported on.
  *        Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.
  *        If omitted the results are cached and next calls with the same `eventName` will return the results from cache.
+ * @throws {TypeError} If `eventName` is not string.
  * @return {Boolean} True if event is supported, else false.
  * @example
  *
@@ -54,6 +55,10 @@
     function isEventSupported(eventName, element) {
         var canCache = !element,
             isSupported;
+
+        if (typeof eventName !== 'string') {
+            throw new TypeError('Expected a string');
+        }
 
         // Return the cached result if exists.
         if (canCache && cache[eventName]) {

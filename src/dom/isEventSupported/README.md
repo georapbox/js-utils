@@ -5,6 +5,10 @@ Checks if an event is supported in a browser environment.
 
 **Returns**: <code>Boolean</code> - True if event is supported, else false.  
 **Category**: DOM  
+**Throws**:
+
+- <code>TypeError</code> If `eventName` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

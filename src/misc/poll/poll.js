@@ -8,6 +8,7 @@
  * @param {Number} [timeout] Optional. The time (milliseconds) to continue calling `func` until polling times out.
  *        If `undefined` or `null` polling never times out and will continue to call `func` for ever.
  * @param {function} [timeoutCallback] Optional. Function to be executed if poll times out.
+ * @throws {TypeError} If `func` is not function.
  * @example
  *
  * // Periodically check every 500 milliseconds if popup element is visible.
@@ -32,9 +33,13 @@
 function poll(func, interval, successCallback, timeout, timeoutCallback) {
     'use strict';
 
-    var endTime = typeof timeout === 'number' ?
-        new Date().getTime() + timeout : null;
+    var endTime;
 
+    if (typeof func !== 'function') {
+        throw new TypeError('Expected a function');
+    }
+
+    endTime= typeof timeout === 'number' ? new Date().getTime() + timeout : null;
     interval = interval || 100;
 
     (function p() {

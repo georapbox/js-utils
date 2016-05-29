@@ -5,6 +5,10 @@ Periodically check for application's status updates.
 
 **Kind**: global function  
 **Category**: Misc  
+**Throws**:
+
+- <code>TypeError</code> If `func` is not function.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
