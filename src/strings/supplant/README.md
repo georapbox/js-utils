@@ -9,6 +9,10 @@ and if the key has a string value or number value, it is substituted for the bra
 **Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

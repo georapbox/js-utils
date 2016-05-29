@@ -6,6 +6,10 @@ Removes all HTML tags from a string.
 **Kind**: global function  
 **Returns**: <code>String</code> - The stripped string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

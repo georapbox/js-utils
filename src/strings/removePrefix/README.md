@@ -6,6 +6,11 @@ Removes prefix from start of a string.
 **Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `prefix` is not string but not if is `null` or `undefined`.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

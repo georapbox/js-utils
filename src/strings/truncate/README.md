@@ -6,6 +6,11 @@ Truncates a string based on character count.
 **Kind**: global function  
 **Returns**: <code>String</code> - The truncated string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `characterCount` is not number.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

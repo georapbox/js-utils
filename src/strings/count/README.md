@@ -6,6 +6,11 @@ Counts the occurrences of substring in a string.
 **Kind**: global function  
 **Returns**: <code>Number</code> - The number of occurrences of search string in original string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `searchString` is not string.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

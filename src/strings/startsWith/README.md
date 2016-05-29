@@ -6,6 +6,10 @@ Determines whether a string begins with the characters of another string.
 **Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `subjectString` starts with `searchString`, else false.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

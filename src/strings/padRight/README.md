@@ -6,6 +6,11 @@ Pad `subjectString` on right side to the given `len`, with optional `chars` defa
 **Kind**: global function  
 **Returns**: <code>String</code> - The result padded string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `len` is not number.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

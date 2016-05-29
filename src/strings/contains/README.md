@@ -6,6 +6,10 @@ Determines whether one string may be found within another string, returning true
 **Kind**: global function  
 **Returns**: <code>Boolean</code> - True if searchString is found within subjectString, else false.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

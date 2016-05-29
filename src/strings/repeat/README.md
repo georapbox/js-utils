@@ -6,6 +6,10 @@ Repeat a string 'count' times.
 **Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

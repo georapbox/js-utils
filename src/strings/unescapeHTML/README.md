@@ -6,6 +6,10 @@ Unescapes a HTML string.
 **Kind**: global function  
 **Returns**: <code>String</code> - The unescaped string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

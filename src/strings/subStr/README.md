@@ -6,6 +6,10 @@ Returns a substring denoted by n (positive or negative) characters.
 **Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

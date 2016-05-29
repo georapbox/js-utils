@@ -6,6 +6,10 @@ Escapes a HTML string.
 **Kind**: global function  
 **Returns**: <code>String</code> - Returns the escaped string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

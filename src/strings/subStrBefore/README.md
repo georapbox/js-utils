@@ -8,6 +8,11 @@ If the character or sequence of characters not found, returns the initial string
 **Kind**: global function  
 **Returns**: <code>string</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `characters` is not string.
+
 **Note**: For legacy browsers' support use `String.prototype.lastIndexOf`  
 
 | Param | Type | Default | Description |

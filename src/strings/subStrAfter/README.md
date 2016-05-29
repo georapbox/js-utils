@@ -8,6 +8,11 @@ If the character or sequence of characters not found, returns the initial string
 **Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `characters` is not string.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

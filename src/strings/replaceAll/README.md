@@ -6,6 +6,12 @@ Creates a new string with all occurrences of `subString` replaced with `replaceS
 **Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `subString` is not string.
+- <code>TypeError</code> If `replaceString` is not string.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

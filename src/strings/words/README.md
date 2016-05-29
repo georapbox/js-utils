@@ -6,6 +6,10 @@ Splits string into an array of its words.
 **Kind**: global function  
 **Returns**: <code>Array</code> - The string's words.  
 **Category**: String  
+**Throws**:
+
+- <code>TypeError</code> If `subjectString` is not string.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
