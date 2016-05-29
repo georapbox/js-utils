@@ -36,7 +36,9 @@
 function min() {
     'use strict';
 
-    return arguments.length === 1 && arguments[0].constructor === Array ?
+    var toString = Object.prototype.toString;
+
+    return arguments.length === 1 && toString.call(arguments[0]) === '[object Array]' ?
         Math.min.apply(null, arguments[0]) :
         Math.min.apply(null, arguments);
 }

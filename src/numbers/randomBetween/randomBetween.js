@@ -14,7 +14,7 @@
  *
  * randomBetween(3, 8, true);
  * // -> Any floating-point number between 3 (inclusive) and 8 (exclusive). eg 6.362311312365572
- * 
+ *
  * randomBetween(3);
  * // -> NaN
  *
