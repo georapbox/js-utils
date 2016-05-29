@@ -4,7 +4,9 @@
  * @category Array
  * @param {Array} array The array to iterate over.
  * @param {function} callback Function to test each element of the array.
- * @param {Object} [thisArg] Optional. Value to use as `this` when executing callback.
+ * @param {*} [thisArg] Value to use as `this` when executing callback.
+ * @throws {TypeError} If `array` is not array.
+ * @throws {TypeError} If `callback` is not function.
  * @return {Array} Returns the result array.
  * @example
  *

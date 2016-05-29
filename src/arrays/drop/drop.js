@@ -4,6 +4,8 @@
  * @category Array
  * @param {Array} array The array to process.
  * @param {Number} [n=1] The number of elements to drop.
+ * @throws {TypeError} If `array` is not array.
+ * @throws {TypeError} If `n` is not number but not if is `null` or `undefined`.
  * @return {Array} The slice of the array.
  * @example
  *

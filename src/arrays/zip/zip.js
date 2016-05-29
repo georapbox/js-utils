@@ -3,8 +3,9 @@
  * the second of which contains the second elements of the given arrays, and so on.
  *
  * @category Array
- * @Note To support legacy browsers, use `Array.prototype.map` and `Array.prototype.reduce` polyfills.
+ * @NOTE To support legacy browsers, use `Array.prototype.map` and `Array.prototype.reduce` polyfills.
  * @param {Array} [args...] The arrays to process.
+ * @throws {TypeError} If any of the arguments is not array.
  * @return {Array} Returns the new array of grouped elements.
  * @example
  *
@@ -28,10 +29,19 @@ function zip(/*, args...*/) {
 
     var slice = Array.prototype.slice,
         args = slice.call(arguments),
-        // Find the longest of the arrays, to begin mapping from this one.
-        longest = args.reduce(function (a, b) {
-            return a.length > b.length ? a : b;
-        }, []);
+        argsLength = args.length,
+        longest;
+
+    while (argsLength--) {
+        if (Object.prototype.toString.call(args[argsLength]) !== '[object Array]') {
+            throw new TypeError('Expected an array');
+        }
+    }
+
+    // Find the longest of the arrays, to begin mapping from this one.
+    longest = args.reduce(function (a, b) {
+        return a.length > b.length ? a : b;
+    }, []);
 
     return longest.map(function (item, index) {
         return args.map(function (array) {

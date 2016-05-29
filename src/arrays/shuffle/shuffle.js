@@ -4,6 +4,7 @@
  *
  * @category Array
  * @param {Array} array The array to shuffle.
+ * @throws {TypeError} If `array` is not array.
  * @return {Array} Returns a new array with its elements randomised.
  * @example
  *

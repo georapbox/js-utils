@@ -5,6 +5,8 @@
  * @category Array
  * @param {Array} The array to process.
  * @param {function} predicate The function invoked per iteration.
+ * @throws {TypeError} If `array` is not array.
+ * @throws {TypeError} If `predicate` is not function but not if is `null` or `undefined`.
  * @return {Array} The slice of the array.
  * @example
  *

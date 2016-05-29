@@ -6,6 +6,7 @@
  * @NOTE Internal usage of Array > `includes` function.
  * @category Array
  * @param {Array} ...arrays The arrays to intersect.
+ * @throws {TypeError} If any of the arguments is not array.
  * @return {Array} The array of intersecting values.
  * @example
  *

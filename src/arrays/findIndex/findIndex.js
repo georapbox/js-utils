@@ -5,7 +5,9 @@
  * @category Array
  * @param {Array} array The array to check.
  * @param {function} callback The function called per iteration.
- * @returns {Number} Returns the index of the first element that matches the callback check.
+ * @throws {TypeError} If `array` is not array.
+ * @throws {TypeError} If `callback` is not function.
+ * @return {Number} Returns the index of the first element that matches the callback check.
  * @example
  *
  * var heroes = [

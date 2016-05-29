@@ -7,6 +7,7 @@
  * @param {*} searchElement The element to search for.
  * @param {Number} [fromIndex=0] The position in the array at which to begin searching for `searchElement`.
  *        A negative value searches from the index of `array.length + fromIndex` by ascending.
+ * @throws {TypeError} If `array` is not array.
  * @return {Boolean} True if array includes `searchElement`, else false.
  * @example
  *

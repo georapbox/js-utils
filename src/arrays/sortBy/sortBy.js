@@ -4,10 +4,11 @@
  * @category Array
  * @param {Array} array The array to sort.
  * @param {String} field The field to sort the array by.
- * @param {Boolean} [ascending=true] Defines the sort order. Default is true (ascending).
+ * @param {Boolean} [ascending=true] Defines the sort order.
  *        This is not optional if `primer` is required.
  * @param {function} [primer] Manipulates the field to sort by.
- * @returns {Array} Returns the new sorted array.
+ * @throws {TypeError} If `array` is not array.
+ * @return {Array} Returns the new sorted array.
  * @example
  *
  * var homes = [

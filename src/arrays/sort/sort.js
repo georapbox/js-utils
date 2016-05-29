@@ -7,6 +7,7 @@
  * @Note: For legacy browsers use the `Array.prototype.map` and `Array.prototype.filter` polyfills.
  * @param {Array} array The array to sort.
  * @param {Boolean} [ascending=true] Defines the sort order. Default is true (ascending).
+ * @throws {TypeError} If `array` is not array.
  * @return {Array} The new sorted array.
  * @example
  *

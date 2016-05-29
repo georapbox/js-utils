@@ -4,6 +4,7 @@
  *
  * @category Array
  * @param {Array} array The array to process.
+ * @throws {TypeError} If `array` is not array.
  * @return {Array} Returns the result (duplicates-free) array.
  * @example
  *
