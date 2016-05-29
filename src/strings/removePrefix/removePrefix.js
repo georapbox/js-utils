@@ -4,7 +4,9 @@
  * @category String
  * @param {String} subjectString The string to process.
  * @param {String} [prefix] The prefix substring to remove from the original string.
- * @returns {String} The result string.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `prefix` is not string but not if is `null` or `undefined`.
+ * @return {String} The result string.
  * @example
  *
  * removePrefix('__foo', '__');

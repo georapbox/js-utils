@@ -3,9 +3,9 @@
  *
  * @category String
  * @param {String} subjectString The string to right trim.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
- *
  *
  * trimLeft('Lorem ipsum dolor si amet.    ');
  * // -> 'Lorem ipsum dolor si amet.'

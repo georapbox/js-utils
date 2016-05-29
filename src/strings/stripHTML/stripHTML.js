@@ -3,6 +3,7 @@
  *
  * @category String
  * @param {String} subjectString The string to strip.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The stripped string.
  * @example
  *

@@ -8,6 +8,8 @@
  * @param {String} subjectString The string to process.
  * @param {String} characters The seqquence of characters to use as delimiter.
  * @param {Boolean} [last=false] If true or any truthy value, will look for the last occurence of the characters specified.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `characters` is not string.
  * @return {string} The result string.
  * @example
  *

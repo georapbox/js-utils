@@ -3,6 +3,7 @@
  *
  * @category String
  * @param {String} subjectString The string to process.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The final string with all adjacent whitespace converted to single space.
  * @example
  *

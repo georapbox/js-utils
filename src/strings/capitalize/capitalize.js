@@ -4,7 +4,8 @@
  * @category String
  * @param {String} subjectString The string to capitalize its first character.
  * @param {Boolean} [lowerCaseRest=false] If true will lowercase the rest of the string.
- * @returns {String} A new capitalized string.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @return {String} A new capitalized string.
  * @example
  *
  * capitalize('hello');

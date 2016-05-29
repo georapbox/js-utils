@@ -5,9 +5,9 @@
  *
  * @category String
  * @param {String} subjectString The string to trim.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
- *
  *
  * trim('    Lorem ipsum dolor si amet.    ');
  * // -> 'Lorem ipsum dolor si amet.'

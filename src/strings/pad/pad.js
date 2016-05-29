@@ -5,6 +5,8 @@
  * @param {String} subjectString The string to process.
  * @param {Number} len The length to pad the string.
  * @param {String} [chars=' '] The character(s) to use for padding.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `len` is not number.
  * @return {String} The result padded string.
  * @example
  *
@@ -27,6 +29,10 @@ function pad(subjectString, len, chars) {
 
     if (typeof subjectString !== 'string') {
         throw new TypeError('Expected a string');
+    }
+
+    if (typeof len !== 'number') {
+        throw new TypeError('Expected a number');
     }
 
     chars = chars || ' '; // Set default character.

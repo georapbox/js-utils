@@ -6,6 +6,7 @@
  * @param {String} searchString The characters to be searched for at the end of the original string.
  * @param {Number} [position=subjectString.length] Search within this string as if this string were only this long;
  *        defaults to the original string's actual length, clamped within the range established by this string's length.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {Boolean} True if `subjectString` ends with `searchString`, else false.
  * @example
  *

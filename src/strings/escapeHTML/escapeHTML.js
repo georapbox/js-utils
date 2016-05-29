@@ -3,6 +3,7 @@
  *
  * @category String
  * @param {String} subjectString The HTML string to escape.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} Returns the escaped string.
  * @example
  *

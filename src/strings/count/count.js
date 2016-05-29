@@ -5,6 +5,8 @@
  * @param {String} subjectString The string.
  * @param {String} searchString The string to search for.
  * @param {Boolean} [caseInsensitive=false] If true, the lookup is case insensitive.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `searchString` is not string.
  * @return {Number} The number of occurrences of search string in original string.
  * @example
  *

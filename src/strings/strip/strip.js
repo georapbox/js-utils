@@ -4,6 +4,7 @@
  * @category String
  * @param {String} subjectString The string to process.
  * @param {String} [...args] The substrings to remove from the original string.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
  *

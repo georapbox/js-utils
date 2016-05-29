@@ -5,6 +5,7 @@
  * @param {String} subjectString The string to process.
  * @param {String} searchString A string to be searched for within the original string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for searchString; defaults to 0.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {Boolean} True if searchString is found within subjectString, else false.
  * @example
  *

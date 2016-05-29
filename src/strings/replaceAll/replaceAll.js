@@ -6,6 +6,9 @@
  * @param {String} subString The substring to replace.
  * @param {String} replaceString The substring to replace with.
  * @param {Boolean} [caseInsensitive=false] If true, the lookup is case insensitive.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `subString` is not string.
+ * @throws {TypeError} If `replaceString` is not string.
  * @return {String} The result string.
  * @example
  *

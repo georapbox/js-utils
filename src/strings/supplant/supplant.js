@@ -7,6 +7,7 @@
  * @category String
  * @param {String} subjectString  The initial string to substitude its expressions.
  * @param {Object} [data] A plain object that acts as our model. If `data` omitted, returns the original string.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
  *

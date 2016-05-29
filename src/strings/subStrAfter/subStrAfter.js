@@ -7,7 +7,9 @@
  * @param {String} subjectString The string to process.
  * @param {String} characters The seqquence of characters to use as delimiter.
  * @param {Boolean} [last=false] If true or any truthy value, will look for the last occurence of the characters specified.
- * @returns {String} The result string.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `characters` is not string.
+ * @return {String} The result string.
  * @example
  *
  * subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');

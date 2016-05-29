@@ -3,6 +3,7 @@
  *
  * @category String
  * @param {String} subjectString The string to left trim.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
  *

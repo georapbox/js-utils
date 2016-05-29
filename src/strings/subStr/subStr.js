@@ -7,6 +7,7 @@
  *        If `n >= 0`, returns a substring from the left end of the string.
  *        If `n < 0`, returns a substring from the right end of the string.
  *        If `n` is not of type number, returns the whole string intact.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
  *

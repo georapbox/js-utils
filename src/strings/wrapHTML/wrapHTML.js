@@ -5,6 +5,8 @@
  * @param {String} subjectString The string to wrap with the HTML tag.
  * @param {String} nodeName The HTML tag name that we want to wrap the string with.
  * @param {Object} [nodeAttributes] The desired attributes of the HTML element.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `nodeName` is not string.
  * @return {String} The wrapped string.
  * @example
  *

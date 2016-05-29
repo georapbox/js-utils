@@ -6,6 +6,8 @@
  * @param {Number} [characterCount] The number of characters the truncated string contains.
  *        If ommitted or falsy, the initial string is returned.
  * @param {String} [delimiter=""] The delimiter to add at the end of the truncated string.
+ * @throws {TypeError} If `subjectString` is not string.
+ * @throws {TypeError} If `characterCount` is not number.
  * @return {String} The truncated string.
  * @example
  *

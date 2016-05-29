@@ -5,6 +5,7 @@
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the start of the string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for `prefix`.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {Boolean} True if `subjectString` starts with `searchString`, else false.
  *
  * @example

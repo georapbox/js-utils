@@ -4,6 +4,7 @@
  * @category String
  * @param {String} subjectString the string to process.
  * @param {Number} [count=0] The times to repeat the string.
+ * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.
  * @example
  *
