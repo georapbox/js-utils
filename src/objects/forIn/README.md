@@ -20,12 +20,12 @@ function Shape() {
   this.y = 0;
 }
 
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
 };
 
-forIn(new Shape, function(value, key, obj) {
+forIn(new Shape(), function (value, key, obj) {
   console.log(key);
   // -> "x", "y", "move"
 });
