@@ -19,6 +19,7 @@ A collection of standalone javascript utility functions.
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
 |[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
+|[fromPairs](src/arrays/fromPairs)|Creates an object composed from key-value pairs.|
 |[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
 |[intersection](src/arrays/intersection)|Creates an array of unique values that are included in all given arrays.|
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|

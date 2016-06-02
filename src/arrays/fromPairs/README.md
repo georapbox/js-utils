@@ -1,0 +1,22 @@
+<a name="fromPairs"></a>
+
+## fromPairs(array) ⇒ <code>Object</code>
+Creates an object composed from key-value pairs.
+
+**Kind**: global function  
+**Returns**: <code>Object</code> - The result object.  
+**Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array.&lt;Array&gt;</code> | The key-value pairs array. |
+
+**Example**  
+```js
+fromPairs([['Javascript', 10], ['PHP', 3], ['Java', 4]]);
+// -> { 'Javascript': 10, 'PHP': 3, 'Java': 4 }
+```
