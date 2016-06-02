@@ -5,9 +5,9 @@
  * @category Array
  * @param {Array} array The array to iterate over.
  * @param {Function} callback Function to execute for each element.
+ * @param {*} [thisArg] Value to use as `this` when executing callback.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `callback` is not function.
- * @param {*} [thisArg] Value to use as `this` when executing callback.
  * @example
  *
  * var arr = ['a', 'b', 'c', 'd', 'e'];
