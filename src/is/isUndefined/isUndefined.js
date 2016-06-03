@@ -23,5 +23,5 @@
 function isUndefined(value) {
     'use strict';
 
-    return value === void 0;
+    return value === undefined;
 }
