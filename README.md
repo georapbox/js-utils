@@ -19,6 +19,7 @@ A collection of standalone javascript utility functions.
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
 |[flatten](src/arrays/flatten)|Flattens array a single level deep.|
+|[flattenDeep](src/arrays/flattenDeep)|Flattens array recursively.|
 |[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
 |[fromPairs](src/arrays/fromPairs)|Creates an object composed from key-value pairs.|
 |[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
