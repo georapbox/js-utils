@@ -27,6 +27,6 @@ function dummy() {
   return arr;
 }
 
-flatten(dummy('a', 'b'));
+flattenDeep(dummy('a', 'b'));
 // -> [1, 2, 3, 4, 5, 'a', 'b', {foo: 'bar', length: 23}]
 ```
