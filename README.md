@@ -94,6 +94,7 @@ A collection of standalone javascript utility functions.
 |Name|Description|
 |--------|-----------|
 |[average](src/numbers/average)|Calculates the average of a set of numbers.|
+|[clamp](src/numbers/clamp)|Clamps number within the inclusive lower and upper bounds.|
 |[inRange](src/numbers/inRange)|Checks if a number is between start and up to but not including, end.|
 |[max](src/numbers/max)|Returns the largest of zero or more numbers.|
 |[min](src/numbers/min)|Returns the smallest of zero or more numbers.|
