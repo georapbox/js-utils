@@ -5,8 +5,11 @@
 
     describe('String/collapseWhitespace', function () {
         it('Converts all adjacent whitespace characters to a single space.', function () {
-            expect(collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  '))
-                .toEqual('Lorem ispum dolor sit amet.');
+            expect(collapseWhitespace('too   \n  much  \t whitespace'))
+                .toEqual('too much whitespace');
+
+            expect(collapseWhitespace('\n\t too   \n  much  \t whitespace    '))
+                .toEqual('too much whitespace');
         });
     });
 }());
