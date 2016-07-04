@@ -23,6 +23,6 @@ unescapeHTML('&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;');
 unescapeHTML('Hello &amp; &lt;span&gt;World&lt;/span&gt;');
 // -> 'Hello & <span>World</span>'
 
-unescapeHTML('&lt;p data-id=&quot;1&quot;&gt;lorem ipsum&lt;/p&gt;');
+unescapeHTML('&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;&#x2F;p&gt;');
 // -> '<p data-id="1">lorem ipsum</p>'
 ```
