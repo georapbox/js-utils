@@ -14,6 +14,8 @@
             expect(escapeHTML('<p data-id="1">lorem ipsum</p>'))
                 .toEqual('&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;&#x2F;p&gt;');
 
+            expect(escapeHTML('`hello world`')).toEqual('&#x60;hello world&#x60;');
+
             expect(function () {
                 return escapeHTML(['Hello & <span>World</span>']);
             }).toThrow();
