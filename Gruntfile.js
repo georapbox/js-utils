@@ -1,4 +1,5 @@
-/*global module*/
+/* jshint ignore: start */
+// jscs:disable
 var pkg = require('./package'),
     chalk = require('chalk');
 
@@ -31,7 +32,7 @@ module.exports = function (grunt) {
                 files: [{
                     src: 'README.md',
                     dest: 'docs/index.html'
-                },{
+                }, {
                     src: 'CHANGELOG.md',
                     dest: 'docs/CHANGELOG.html'
                 }]
@@ -61,7 +62,7 @@ module.exports = function (grunt) {
                     src: ['**/*.md'],
                     dest: 'docs/src/',
                     ext: '.html',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('README','index');
                     }
                 }]
@@ -104,3 +105,4 @@ module.exports = function (grunt) {
         console.log("Runs the tests and creates a tests-reporter folder to the root of the project, that contains an HTML document with the tests results.");
     });
 };
+/* jshint ignore: end */
