@@ -205,3 +205,15 @@ This will create a `docs` folder to the root of the project, containing all `REA
 ## Run the tests
 From the root folder of the project, run: `$ npm run test`.
 Apart from the results in terminal, this will create a `tests-reporter` folder to the root of the project, that contains an HTML document with the tests results.
+
+
+## Serve
+From the root folder of the project:
+
+- Start local server with default port (8080):
+
+  `$ npm run serve`
+
+- Start local server with a different port:
+
+  `$ npm run serve --jsEssentials:port=YOUR_PORT`
