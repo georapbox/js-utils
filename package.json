@@ -12,7 +12,7 @@
   "scripts": {
     "test": "karma start",
     "docs": "grunt buildDocs",
-    "jsdoc2md": "jsdoc2md",
+    "jsdoc2md": "jsdoc2md 'src/arrays/fill/fill.js' > 'src/arrays/fill/README.md'",
     "postinstall": "grunt postinstall"
   },
   "devDependencies": {

@@ -15,6 +15,7 @@ A collection of standalone javascript utility functions.
 |[dropRight](src/arrays/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
 |[dropRightWhile](src/arrays/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
 |[dropWhile](src/arrays/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
+|[fill](src/arrays/fill)|Fills elements of array with value from start up to end (not including end).|
 |[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
