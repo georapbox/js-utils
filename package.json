@@ -16,7 +16,7 @@
     "test": "karma start",
     "docs": "grunt buildDocs",
     "serve": "http-server -o -s -p $npm_package_config_port",
-    "jsdoc2md": "jsdoc2md 'src/arrays/fill/fill.js' > 'src/arrays/fill/README.md'",
+    "jsdoc2md": "jsdoc2md 'src/arrays/insert/insert.js' > 'src/arrays/insert/README.md'",
     "postinstall": "grunt postinstall"
   },
   "devDependencies": {

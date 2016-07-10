@@ -25,6 +25,7 @@ A collection of standalone javascript utility functions.
 |[fromPairs](src/arrays/fromPairs)|Creates an object composed from key-value pairs.|
 |[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
 |[intersection](src/arrays/intersection)|Creates an array of unique values that are included in all given arrays.|
+|[insert](src/arrays/insert)|Inserts elements to array at specific index.|
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
 |[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
 |[reverse](src/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
