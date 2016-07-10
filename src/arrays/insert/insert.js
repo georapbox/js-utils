@@ -7,6 +7,7 @@
  *        If greater than the length of the array, actual starting index will be set to the length of the array.
  *        If negative, will begin that many elements from the end.
  * @param {*} [element1 [, element2 [, ...]]] The elements to add to the array.
+ * @throws {TypeError} If `array` is not array.
  * @return {Array} A new array including the new elements.
  * @example
  *

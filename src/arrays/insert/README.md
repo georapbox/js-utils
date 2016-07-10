@@ -6,6 +6,10 @@ Inserts elements to array at specific index.
 **Kind**: global function  
 **Returns**: <code>Array</code> - A new array including the new elements.  
 **Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
