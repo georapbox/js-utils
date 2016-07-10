@@ -2,12 +2,11 @@
  * Fills elements of array with value from start up to end (not including end).
  *
  * @category Array
- * @NOTE This method mutates array.
  * @param {Array} array The array to fill.
  * @param {*} value The value to fill array with.
  * @param {Number} [start=0] The start position.
  * @param {Number} [end=array.length] The end position.
- * @return {Array} The mutated array.
+ * @return {Array} The new array.
  * @example
  *
  * fill(['a', 'b', 'c'], '*');
@@ -37,6 +36,7 @@ function fill(array, value, start, end) {
         throw new TypeError('Expected an array');
     }
 
+    array = array.slice(0);
     length = array.length;
 
     if (length === 0) {

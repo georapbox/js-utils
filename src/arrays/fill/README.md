@@ -4,9 +4,8 @@
 Fills elements of array with value from start up to end (not including end).
 
 **Kind**: global function  
-**Returns**: <code>Array</code> - The mutated array.  
+**Returns**: <code>Array</code> - The new array.  
 **Category**: Array  
-**Note**: This method mutates array.  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
