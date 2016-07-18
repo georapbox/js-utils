@@ -2,7 +2,7 @@
  * Checks if `value` is string.
  *
  * @category Is
- * @param {*} value to check if is string.
+ * @param {*} value The value to check if is string.
  * @return {Boolean} True if string, else false.
  * @example
  *

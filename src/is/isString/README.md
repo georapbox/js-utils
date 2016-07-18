@@ -9,7 +9,7 @@ Checks if `value` is string.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>\*</code> | to check if is string. |
+| value | <code>\*</code> | The value to check if is string. |
 
 **Example**  
 ```js
