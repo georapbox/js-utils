@@ -12,7 +12,7 @@ own enumerable properties or inherited from prototypes properties are considered
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>\*</code> | The object ot check if is empty. |
+| value | <code>\*</code> | The object to check if is empty. |
 
 **Example**  
 ```js

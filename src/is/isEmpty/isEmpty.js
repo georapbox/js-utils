@@ -5,7 +5,7 @@
  *
  * @category Is
  * @NOTE: Use with caution as DOM elements, primitive strings/numbers, host objects may not give consistent results across browsers.
- * @param {*} value The object ot check if is empty.
+ * @param {*} value The object to check if is empty.
  * @return {Boolean} True if empty, else false.
  * @example
  *
