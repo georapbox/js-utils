@@ -30,6 +30,7 @@
     "karma": "~0.13.22",
     "karma-chrome-launcher": "~1.0.1",
     "karma-cli": "~1.0.0",
+    "karma-es6-shim": "~1.0.0",
     "karma-firefox-launcher": "~1.0.0",
     "karma-htmlfile-reporter": "~0.2.2",
     "karma-ie-launcher": "~1.0.0",
