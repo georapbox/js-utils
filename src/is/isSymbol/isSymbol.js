@@ -1,6 +1,7 @@
 /**
  * Checks if value is classified as a Symbol primitive.
  *
+ * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if `value` is classified as a Symbol primitive, else false.
  * @example
