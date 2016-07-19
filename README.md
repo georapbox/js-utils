@@ -153,6 +153,7 @@ A collection of standalone javascript utility functions.
 |[isHexadecimal](src/is/isHexadecimal)|Checks if `value` matches a hexadecimal regular expression.|
 |[isHexColor](src/is/isHexColor)|Checks if `value` matches a hexadecimal color regular expression.|
 |[isInteger](src/is/isInteger)|Checks if `value` is an integer number.|
+|[isMap](src/is/isMap)|Checks if `value` is classified as a Map object.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNonExisty](src/is/isNonExisty)|Checks if `value` is non existy (null or undefined).|
 |[isNull](src/is/isNull)|Checks if `value` is null.|
@@ -167,6 +168,7 @@ A collection of standalone javascript utility functions.
 |[isTrue](src/is/isTrue)|Checks if `value` is true (strict equality).|
 |[isTruthy](src/is/isTruthy)|Checks if `value` is truthy.|
 |[isUndefined](src/is/isUndefined)|Checks if `value` is undefined.|
+|[isWeakMap](src/is/isWeakMap)|Checks if `value` is classified as a WeakMap object.|
 
 
 ## DOM
