@@ -163,12 +163,14 @@ A collection of standalone javascript utility functions.
 |[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
 |[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
 |[isSafeInteger](src/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
+|[isSet](src/is/isSet)|Checks if `value` is classified as a Set object.|
 |[isString](src/is/isString)|Checks if `value` is a string.|
 |[isSymbol](src/is/isSymbol)|Checks if `value` is classified as a Symbol primitive.|
 |[isTrue](src/is/isTrue)|Checks if `value` is true (strict equality).|
 |[isTruthy](src/is/isTruthy)|Checks if `value` is truthy.|
 |[isUndefined](src/is/isUndefined)|Checks if `value` is undefined.|
 |[isWeakMap](src/is/isWeakMap)|Checks if `value` is classified as a WeakMap object.|
+|[isWeakSet](src/is/isWeakSet)|Checks if `value` is classified as a WeakSet object.|
 
 
 ## DOM
