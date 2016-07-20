@@ -216,7 +216,7 @@ Apart from the results in terminal, this will create a `tests-reporter` folder t
 ## Serve
 From the root folder of the project:
 
-- Start local server with default port (8080):
+- Start local server with default port (3333):
 
   `$ npm run serve`
 
