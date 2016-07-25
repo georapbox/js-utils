@@ -14,7 +14,7 @@ it is not invoked for indexes which have been deleted or which have never been a
 **Throws**:
 
 - <code>TypeError</code> If `array` is not an array.
-- <code>TypeError</code> If `preficate` is not a function.
+- <code>TypeError</code> If `predicate` is not a function.
 
 
 | Param | Type | Description |

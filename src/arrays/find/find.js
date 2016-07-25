@@ -14,7 +14,7 @@
  * - `{Array}` array: The array find was called upon.
  * @param {Object} [thisArg] Object to use as `this` when executing predicate.
  * @throws {TypeError} If `array` is not an array.
- * @throws {TypeError} If `preficate` is not a function.
+ * @throws {TypeError} If `predicate` is not a function.
  * @return {*} A value in the array if an element passes the test, else, `undefined`.
  * @example
  *
