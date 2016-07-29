@@ -1,6 +1,6 @@
 <a name="preloadImages"></a>
 
-## preloadImages(images, [callback])
+## preloadImages(images, [successCallback], [errorCallback])
 Load images to browser asynchronously so that can be cached.
 Can be called as many times as we want and each time, it will just add more images to browser's cache.
 
@@ -14,7 +14,8 @@ Can be called as many times as we want and each time, it will just add more imag
 | Param | Type | Description |
 | --- | --- | --- |
 | images | <code>Array</code> | An array of strings that represent the path of the images to be cached. |
-| [callback] | <code>function</code> | A function to be executed if all images are successfully loaded. |
+| [successCallback] | <code>function</code> | A function to be executed if all images are successfully loaded. |
+| [errorCallback] | <code>function</code> | A function to be executed after any of the images could not be loaded. |
 
 **Example**  
 ```js
@@ -26,5 +27,8 @@ preloadImages([
   'http://www.magic4walls.com/wp-content/uploads/2013/12/fantasy-wallpaper-castle-wallpapers-array-wallwuzz-hd-wallpaper-4802.jpg'
 ], function (images) {
   console.log('All ' + images.length + ' images have been successfully loaded.');
+}, function (error, image) {
+  console.error(error);
+  console.log(image);
 });
 ```

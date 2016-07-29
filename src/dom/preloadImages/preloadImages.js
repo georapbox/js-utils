@@ -4,7 +4,8 @@
  *
  * @category DOM
  * @param {Array} images An array of strings that represent the path of the images to be cached.
- * @param {function} [callback] A function to be executed if all images are successfully loaded.
+ * @param {function} [successCallback] A function to be executed if all images are successfully loaded.
+ * @param {function} [errorCallback] A function to be executed after any of the images could not be loaded.
  * @throws {TypeError} If `images` is not array.
  * @example
  *
@@ -16,25 +17,35 @@
  *   'http://www.magic4walls.com/wp-content/uploads/2013/12/fantasy-wallpaper-castle-wallpapers-array-wallwuzz-hd-wallpaper-4802.jpg'
  * ], function (images) {
  *   console.log('All ' + images.length + ' images have been successfully loaded.');
+ * }, function (error, image) {
+ *   console.error(error);
+ *   console.log(image);
  * });
  */
-function preloadImages(images, callback) {
+function preloadImages(images, successCallback, errorCallback) {
     'use strict';
 
     var list, i, len, img;
 
     function onloadSuccess(image) {
         var index;
-        image.onload = function () {
+
+        image.onload = function imagesLoadSuccess() {
             index = list.indexOf(this);
+
             if (index !== -1) {
                 // remove image from the array once it's loaded
                 // for memory consumption reasons
                 list.splice(index, 1);
+
                 if (list.length === 0) {
-                    callback && callback(images);
+                    successCallback && successCallback(images);
                 }
             }
+        };
+
+        image.onerror = function imageLoadError(error) {
+            errorCallback && errorCallback(error, image);
         };
     }
 
