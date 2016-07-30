@@ -9,23 +9,25 @@
  * @throws {TypeError} If `images` is not array.
  * @example
  *
- * preloadImages([
- *   'http://eskipaper.com/images/fantasy-wallpapers-1.jpg',
- *   'http://eskipaper.com/images/fantasy-wallpapers-2.',
- *   'http://7-themes.com/data_images/out/32/6878038-fantasy-wallpaper.jpg',
- *   'http://www.pageresource.com/wallpapers/wallpaper/fantasy-wallpaper-wallpapers.jpg',
- *   'http://www.magic4walls.com/wp-content/uploads/2013/12/fantasy-wallpaper-castle-wallpapers-array-wallwuzz-hd-wallpaper-4802.jpg'
- * ], function success(data) {
+ * var images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
+ *
+ * function success(data) {
  *   console.log(data.currentImage.src + ' -> loaded');
- * }, function fail(data) {
+ * }
+ *
+ * function fail(data) {
  *   console.error(data.error);
  *   console.log(data.currentImage.src + ' -> failed');
- * }, function always(data) {
+ * }
+ *
+ * function always(data) {
  *   // Do something if all images are loaded successfully.
  *   if (data.remainingImages.length === 0) {
  *     console.log('All ' + data.imagesPaths.length + ' were successfully loaded.');
  *   }
- * });
+ * }
+ *
+ * preloadImages(images, success, fail, always);
  */
 function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
     'use strict';
