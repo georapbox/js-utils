@@ -1,8 +1,7 @@
 <a name="preloadImages"></a>
 
-## preloadImages(images, [successCallback], [errorCallback])
+## preloadImages(images, [successCallback], [errorCallback], [alwaysCallback])
 Load images to browser asynchronously so that can be cached.
-Can be called as many times as we want and each time, it will just add more images to browser's cache.
 
 **Kind**: global function  
 **Category**: DOM  
@@ -14,8 +13,9 @@ Can be called as many times as we want and each time, it will just add more imag
 | Param | Type | Description |
 | --- | --- | --- |
 | images | <code>Array</code> | An array of strings that represent the path of the images to be cached. |
-| [successCallback] | <code>function</code> | A function to be executed if all images are successfully loaded. |
-| [errorCallback] | <code>function</code> | A function to be executed after any of the images could not be loaded. |
+| [successCallback] | <code>function</code> | A function to be executed after an image is successfully loaded. |
+| [errorCallback] | <code>function</code> | A function to be executed after an image is not loaded. |
+| [alwaysCallback] | <code>function</code> | A function to be always executed regardless an image is loaded or failed to load. |
 
 **Example**  
 ```js
@@ -25,10 +25,15 @@ preloadImages([
   'http://7-themes.com/data_images/out/32/6878038-fantasy-wallpaper.jpg',
   'http://www.pageresource.com/wallpapers/wallpaper/fantasy-wallpaper-wallpapers.jpg',
   'http://www.magic4walls.com/wp-content/uploads/2013/12/fantasy-wallpaper-castle-wallpapers-array-wallwuzz-hd-wallpaper-4802.jpg'
-], function (images) {
-  console.log('All ' + images.length + ' images have been successfully loaded.');
-}, function (error, image) {
-  console.error(error);
-  console.log(image);
+], function success(data) {
+  console.log(data.currentImage.src + ' -> loaded');
+}, function fail(data) {
+  console.error(data.error);
+  console.log(data.currentImage.src + ' -> failed');
+}, function always(data) {
+  // Do something if all images are loaded successfully.
+  if (data.remainingImages.length === 0) {
+    console.log('All ' + data.imagesPaths.length + ' were successfully loaded.');
+  }
 });
 ```
