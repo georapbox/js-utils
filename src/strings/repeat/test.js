@@ -5,23 +5,33 @@
 
     describe('String/repeat', function () {
         it('should repeat a string n times', function () {
-            expect(repeat('&nbsp;', 3)).toBe('&nbsp;&nbsp;&nbsp;');
+            expect(repeat('a', 3)).toBe('aaa');
 
-            expect(repeat('&nbsp;', 3.8)).toBe('&nbsp;&nbsp;&nbsp;');
+            expect(repeat('a', 3.8)).toBe('aaa');
 
-            expect(repeat('&nbsp;', 0)).toBe('');
+            expect(repeat('a', 0)).toBe('');
 
-            expect(repeat('&nbsp;', -2)).toBe('');
+            expect(repeat('a')).toBe('');
 
-            expect(repeat('&nbsp;')).toBe('');
+            expect(repeat('a', null)).toBe('');
 
-            expect(repeat('&nbsp;', null)).toBe('');
+            expect(repeat('a', NaN)).toBe('');
 
-            expect(repeat('&nbsp;', Infinity)).toBe('');
+            expect(function () {
+                return repeat('a', Infinity);
+            }).toThrow();
 
-            expect(repeat('&nbsp;', -Infinity)).toBe('');
+            expect(function () {
+                return repeat('a', -Infinity);
+            }).toThrow();
 
-            expect(repeat('&nbsp;', NaN)).toBe('');
+            expect(function () {
+                return repeat('a', -2);
+            }).toThrow();
+
+            expect(function () {
+                return repeat('a', 1/0);
+            }).toThrow();
         });
     });
 }());

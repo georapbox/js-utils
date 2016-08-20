@@ -1,47 +1,52 @@
 <a name="repeat"></a>
 
 ## repeat(subjectString, [count]) ⇒ <code>String</code>
-Repeat a string 'count' times.
+Constructs and returns a new string which contains the specified number
+of copies of the string on which it was called, concatenated together.
 
 **Kind**: global function  
-**Returns**: <code>String</code> - The result string.  
+**Returns**: <code>String</code> - A new string containing the specified number of copies of the given string.  
 **Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.
+- <code>RangeError</code> If `count` is a negative number or overflows maximum string size.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| subjectString | <code>String</code> |  | the string to process. |
-| [count] | <code>Number</code> | <code>0</code> | The times to repeat the string. |
+| subjectString | <code>String</code> |  | The string to process. |
+| [count] | <code>Number</code> | <code>0</code> | An integer indicating the number of times to repeat the string. |
 
 **Example**  
 ```js
-repeat('&nbsp;', 4);
-// -> '&nbsp;&nbsp;&nbsp;&nbsp;'
+repeat('a', 4);
+// -> 'aaaa'
 
-repeat('&nbsp;', 2.5);
-// -> '&nbsp;&nbsp;'
+repeat('a', 2.5);
+// -> 'aa' (count will be converted to integer)
 
-repeat('&nbsp;', 0);
+repeat('a', 0);
 // -> ''
 
-repeat('&nbsp;', null);
+repeat('a', null);
 // -> ''
 
-repeat('&nbsp;');
+repeat('a');
 // -> ''
 
-repeat('&nbsp;', -2);
+repeat('a', NaN);
 // -> ''
 
-repeat('&nbsp;', Infinity);
-// -> ''
+repeat('a', Infinity);
+// -> Throws RangeError
 
-repeat('&nbsp;', -Infinity);
-// -> ''
+repeat('a', -Infinity);
+// -> Throws RangeError
 
-repeat('&nbsp;', NaN);
-// -> ''
+repeat('a', -2);
+// -> Throws RangeError
+
+repeat('a', 1/0);
+// -> Throws RangeError
 ```

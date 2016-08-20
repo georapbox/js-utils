@@ -72,7 +72,7 @@ A collection of standalone javascript utility functions.
 |[randomString](src/strings/randomString)|Generates a random string of `n` characters, from the `chars` string provided by the user.|
 |[removePrefix](src/strings/removePrefix)|Removes substring (prefix) from start of a string.|
 |[removeSuffix](src/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
-|[repeat](src/strings/repeat)|Returns a string repeated `count` times.|
+|[repeat](src/strings/repeat)|Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.|
 |[replaceAll](src/strings/replaceAll)|Returns a new string with all occurrences of subString replaced with replaceString.
 |[snakeCase](src/strings/snakeCase)|Converts string into string delimited by underscores.|
 |[startsWith](src/strings/startsWith)|Returns true if string begins with substring (prefix).|
