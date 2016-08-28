@@ -3,7 +3,7 @@
  * Accepts any number of numbers as parameters, or an array of numbers.
  * Ommits any non number value.
  *
- * @category Number
+ * @category Math
  * @param {Number|Array} [...args] A set of numbers or an array of numbers.
  * @return {Number} The average number of the set of data provided.
  * @example

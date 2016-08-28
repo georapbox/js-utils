@@ -7,7 +7,7 @@ Ommits any non number value.
 
 **Kind**: global function  
 **Returns**: <code>Number</code> - The average number of the set of data provided.  
-**Category**: Number  
+**Category**: Math  
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,7 +1,7 @@
 /**
  * Finds the smallest of zero or more numbers.
  *
- * @category Number
+ * @category Math
  * @param {Number|Array} [...args] A set of numbers as arguments, or an array of numbers as the only argument.
  * @return {Number} The smallest number from the arguments provided.
  * @example
