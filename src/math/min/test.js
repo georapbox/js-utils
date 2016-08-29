@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('Number/min', function () {
+    describe('Math/min', function () {
         it('finds the smallest of zero or more numbers', function () {
             expect(min(5)).toEqual(5);
 

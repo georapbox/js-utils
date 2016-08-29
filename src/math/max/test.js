@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    describe('Number/max', function () {
+    describe('Math/max', function () {
         it('finds the largest of zero or more numbers', function () {
             expect(max(5)).toEqual(5);
 
