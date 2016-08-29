@@ -109,6 +109,7 @@ A collection of standalone javascript utility functions.
 |[degreesToRadians](src/math/degreesToRadians)|Converts degrees to radians.|
 |[max](src/math/max)|Returns the largest of zero or more numbers.|
 |[min](src/math/min)|Returns the smallest of zero or more numbers.|
+|[radiansToDegrees](src/math/radiansToDegrees)|Converts radians to degrees.|
 
 
 ## Object
