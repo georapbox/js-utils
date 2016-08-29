@@ -106,6 +106,7 @@ A collection of standalone javascript utility functions.
 |Name|Description|
 |--------|-----------|
 |[average](src/math/average)|Calculates the average of a set of numbers.|
+|[degreesToRadians](src/math/degreesToRadians)|Converts degrees to radians.|
 |[max](src/math/max)|Returns the largest of zero or more numbers.|
 |[min](src/math/min)|Returns the smallest of zero or more numbers.|
 
