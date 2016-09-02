@@ -184,6 +184,7 @@ A collection of standalone javascript utility functions.
 ## DOM
 |Name|Description|
 |--------|-----------|
+|[captureMousePosition](src/dom/captureMousePosition)|Captures the mouse position on a specific HTML element.|
 |[preloadImages](src/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
 |[isEventSupported](src/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
 |[scroll](src/dom/scroll)|Easing based scrolling to a specified y point inside page.|
