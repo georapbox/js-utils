@@ -32,7 +32,7 @@ function extend() {
 
     for (var i = 1, l = arguments.length; i < l; i++) {
         for (var key in arguments[i]) {
-            if (arguments[i].hasOwnProperty(key)) {
+            if ({}.hasOwnProperty.call(arguments[i], key)) {
                 if (
                     arguments[i][key] && arguments[i][key].constructor &&
                     arguments[i][key].constructor === Object
