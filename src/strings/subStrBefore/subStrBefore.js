@@ -31,13 +31,12 @@
 function subStrBefore(subjectString, characters, last) {
     'use strict';
 
-    var args, index;
+    var index;
 
     if (typeof subjectString !== 'string' || typeof characters !== 'string') {
         throw new TypeError('Expected a string');
     }
 
-    args = [].slice.apply(arguments);
     index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
 
     return !!~index && index !== 0 ? subjectString.substr(0, index) : subjectString;
