@@ -1,0 +1,297 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true,
+    "amd": true,
+    "commonjs": true
+  },
+  "globals": {
+    "Promise": false
+  },
+  "rules": {
+    /* Possible Errors */
+
+    // disallow assignment operators in conditional expressions
+    "no-cond-assign": "error",
+
+    // disallow the use of console
+    "no-console": "warn",
+
+    // disallow constant expressions in conditions
+    "no-constant-condition": "error",
+
+    // disallow the use of debugger
+    "no-debugger": "error",
+
+    // disallow duplicate arguments in function definitions
+    "no-dupe-args": "error",
+
+    // disallow duplicate keys in object literals
+    "no-dupe-keys": "error",
+
+    // disallow duplicate case labels
+    "no-duplicate-case": "error",
+
+    // disallow empty character classes in regular expressions
+    "no-empty-character-class": "error",
+
+    // disallow empty block statements
+    "no-empty": ["warn", {"allowEmptyCatch": true}],
+
+    // disallow reassigning exceptions in catch clauses
+    "no-ex-assign": "error",
+
+    // disallow unnecessary boolean casts
+    "no-extra-boolean-cast": "error",
+
+    // disallow unnecessary parentheses
+    "no-extra-parens": "error",
+
+    // disallow unnecessary semicolons
+    "no-extra-semi": "error",
+
+    // disallow reassigning function declarations
+    "no-func-assign": "error",
+
+    // disallow function or var declarations in nested blocks
+    "no-inner-declarations": ["error", "both"],
+
+    // disallow invalid regular expression strings in RegExp constructors
+    "no-invalid-regexp": "error",
+
+    // disallow irregular whitespace outside of strings and comments
+    "no-irregular-whitespace": ["error", {"skipStrings": true, "skipComments": true, "skipRegExps": true, "skipTemplates": true}],
+
+    // disallow negating the left operand in in expressions
+    "no-negated-in-lhs": "error",
+
+    // disallow calling global object properties as functions
+    "no-obj-calls": "error",
+
+    // disallow use of Object.prototypes builtins directly
+    "no-prototype-builtins": "error",
+
+    //disallow multiple spaces in regular expression literals
+    "no-regex-spaces": "error",
+
+    // disallow sparse arrays
+    "no-sparse-arrays": "warn",
+
+    // disallow confusing multiline expressions
+    "no-unexpected-multiline": "warn",
+
+    // disallow unreachable code after return, throw, continue, and break statements
+    "no-unreachable": "error",
+
+    // disallow control flow statements in finally blocks
+    "no-unsafe-finally": "warn",
+
+    // require calls to isNaN() when checking for NaN
+    "use-isnan": "error",
+
+    // enforce valid JSDoc comments
+    "valid-jsdoc": "warn",
+
+    // enforce comparing typeof expressions against valid strings
+    "valid-typeof": "error",
+
+    /* Best Practices */
+
+    // Enforces getter/setter pairs in objects
+    "accessor-pairs": "warn",
+
+    // Enforces return statements in callbacks of array’s methods
+    "array-callback-return": "warn",
+
+    // enforce the use of variables within the scope they are defined
+    "block-scoped-var": "warn",
+
+    // enforce consistent brace style for all control statements
+    "curly": "warn",
+
+    // require default cases in switch statements
+    "default-case": "warn",
+
+    // enforce consistent newlines before and after dots
+    "dot-notation": "warn",
+
+    // require the use of === and !==
+    "eqeqeq": ["error", "allow-null"],
+
+    // require for-in loops to include an if statement
+    "guard-for-in": "warn",
+
+    // disallow the use of alert, confirm, and prompt
+    "no-alert": "warn",
+
+    // disallow the use of arguments.caller or arguments.callee
+    "no-caller": "error",
+
+    // disallow the use of eval()
+    "no-eval": "error",
+
+    // disallow extending native types
+    "no-extend-native": "warn",
+
+    // disallow unnecessary calls to .bind()
+    "no-extra-bind": "warn",
+
+    // disallow leading or trailing decimal points in numeric literals
+    "no-floating-decimal": "error",
+
+    // disallow var and named function declarations in the global scope
+    "no-implicit-globals": "warn",
+
+    // disallow the use of eval()-like methods
+    "no-implied-eval": "error",
+
+    // disallow unnecessary nested blocks
+    "no-lone-blocks": "warn",
+
+    // disallow function declarations and expressions inside loop statements
+    "no-loop-func": "warn",
+
+    // disallow multiple spaces
+    "no-multi-spaces": "warn",
+
+    // disallow var redeclaration
+    "no-redeclare": ["error", {"builtinGlobals": true}],
+
+    // disallow comma operators
+    "no-sequences": "warn",
+
+    // require var declarations be placed at the top of their containing scope
+    "vars-on-top": "warn",
+
+    // require parentheses around immediate function invocations
+    "wrap-iife": "warn",
+
+    // require or disallow “Yoda” conditions
+    "yoda": "warn",
+
+    /* Strict Mode */
+    "strict": ["warn", "function"],
+
+    /* Variables */
+
+    // disallow deleting variables
+    "no-delete-var": "error",
+
+    // disallow specified global variables
+    "no-restricted-globals": "error",
+
+    // disallow unused variables
+    "no-unused-vars": "warn",
+
+    // disallow the use of variables before they are defined
+    "no-use-before-define": "error",
+
+    // Disallow Use of undefined Variable
+    "no-undef": "error",
+
+    // disallow initializing variables to undefined
+    "no-undef-init": "warn",
+
+    // disallow var declarations from shadowing variables in the outer scope
+    "no-shadow": ["error", {"hoist": "functions"}],
+
+    /* Stylistic Issues */
+
+    // enforce consistent spacing inside array brackets
+    "array-bracket-spacing": ["warn", "never"],
+
+    // enforce consistent spacing inside single-line blocks
+    "block-spacing": ["warn", "never"],
+
+    // enforce consistent brace style for blocks
+    "brace-style": ["warn", "1tbs", {"allowSingleLine": true}],
+
+    // require or disallow trailing commas,
+    "comma-dangle": "warn",
+
+    // enforce consistent spacing before and after commas
+    "comma-spacing": ["warn", {"before": false, "after": true}],
+
+    // enforce consistent comma style
+    "comma-style": ["warn", "last"],
+
+    // enforce consistent spacing inside computed property brackets
+    "computed-property-spacing": ["warn", "never"],
+
+    // enforce consistent naming when capturing the current execution context
+    "consistent-this": ["warn", "that"],
+
+    // enforce at least one newline at the end of files
+    "eol-last": "warn",
+
+    // disallow specified identifiers
+    "id-blacklist": ["warn"],
+
+    // enforce consistent indentation
+    "indent": ["warn", 2, {"SwitchCase": 1}],
+
+    // enforce consistent spacing between keys and values in object literal properties
+    "key-spacing": ["warn", {"afterColon": true}],
+
+    // enforce consistent spacing before and after keywords
+    "keyword-spacing": "warn",
+
+    // enforce a maximum line length
+    "max-len": ["warn", 100, 2, {"ignoreComments": true, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
+
+    // enforce a maximum number of parameters in function definitions
+    "max-params": ["warn", 6],
+
+    // require constructor function names to begin with a capital letter
+    "new-cap": "warn",
+
+    // require parentheses when invoking a constructor with no arguments
+    "new-parens": "warn",
+
+    // disallow mixed spaces and tabs for indentation
+    "no-mixed-spaces-and-tabs": "warn",
+
+    // disallow multiple empty lines
+    "no-multiple-empty-lines": ["warn", {"max": 1, "maxBOF": 0, "maxEOF": 1}],
+
+    // disallow spacing between function identifiers and their applications
+    "no-spaced-func": "warn",
+
+    // disallow trailing whitespace at the end of lines
+    "no-trailing-spaces": "warn",
+
+    // disallow ternary operators when simpler alternatives exist
+    "no-unneeded-ternary": "warn",
+
+    // disallow whitespace before properties
+    "no-whitespace-before-property": "warn",
+
+    // enforce consistent spacing inside braces
+    "object-curly-spacing": ["warn", "never"],
+
+    // enforce the consistent use of either backticks, double, or single quotes
+    "quotes": ["warn", "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+
+    // enforce consistent spacing before and after semicolons
+    "semi-spacing": ["warn", {"before": false, "after": true}],
+
+    // require or disallow semicolons instead of ASI
+    "semi": "warn",
+
+    // enforce consistent spacing before blocks
+    "space-before-blocks": "warn",
+
+    // enforce consistent spacing before function definition opening parenthesis
+    "space-before-function-paren": ["warn", {"anonymous": "always", "named": "never"}],
+
+    // enforce consistent spacing inside parentheses
+    "space-in-parens": ["warn", "never"],
+
+    // require spacing around operators
+    "space-infix-ops": "warn",
+
+    // enforce consistent spacing after the // or /* in a comment
+    "spaced-comment": ["warn", "always"]
+  }
+}
