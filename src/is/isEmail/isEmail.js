@@ -36,5 +36,5 @@ function isEmail(value) {
     return false;
   }
 
-  return value.match(regex);
+  return value.match(regex) !== null;
 }
