@@ -12,11 +12,11 @@
  * // -> [3, 2, 1]
  */
 function reverse(array) {
-    'use strict';
+  'use strict';
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    return array.slice(0).reverse();
+  return array.slice(0).reverse();
 }

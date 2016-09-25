@@ -17,26 +17,26 @@
  * // -> '&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;&#x2F;p&gt;'
  */
 function escapeHTML(subjectString) {
-    'use strict';
+  'use strict';
 
-    var entityMap;
+  var entityMap;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    entityMap = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;',
-        '/': '&#x2F;',
-        '`': '&#x60;',
-        '=': '&#x3D;'
-    };
+  entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+  };
 
-    return subjectString.replace(/[&<>"'`=\/]/g, function fromEntityMap(tag) {
-        return entityMap[tag] || tag;
-    });
+  return subjectString.replace(/[&<>"'`=\/]/g, function fromEntityMap(tag) {
+    return entityMap[tag] || tag;
+  });
 }

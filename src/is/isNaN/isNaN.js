@@ -33,13 +33,13 @@
  * isNaN(b);
  */
 function isNaN(value) {
-    'use strict';
+  'use strict';
 
-    if (Number.isNaN) {
-        return Number.isNaN(value);
-    }
+  if (Number.isNaN) {
+    return Number.isNaN(value);
+  }
 
-    // NaN is of type "number" and it is also the only
-    // primitive value which does not equal itself.
-    return value !== value;
+  // NaN is of type "number" and it is also the only
+  // primitive value which does not equal itself.
+  return value !== value;
 }

@@ -30,30 +30,30 @@
  * // -> [321, 100, 99, 9, 6, 4, 2, -2, -10]
  */
 function sort(array, ascending) {
-    'use strict';
+  'use strict';
 
-    // Remove any `null`, `undefined` or `NaN` values.
-    var filtered;
+  // Remove any `null`, `undefined` or `NaN` values.
+  var filtered;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  filtered = array.filter(function (el) {
+    return el != null && el === el;
+  });
+
+  return filtered.map(function (el, idx) {
+    return {
+      index: idx,
+      value: typeof el === 'string' ? el.toLowerCase() : el
+    };
+  }).sort(function (a, b) {
+    if (ascending == null) {
+      ascending = true;
     }
-
-    filtered = array.filter(function (el) {
-        return el != null && el === el;
-    });
-
-    return filtered.map(function (el, idx) {
-        return {
-            index: idx,
-            value: typeof el === 'string' ? el.toLowerCase() : el
-        };
-    }).sort(function (a, b) {
-        if (ascending == null) {
-            ascending = true;
-        }
-        return (a.value < b.value ? -1 : a.value > b.value ? 1 : 0) * [-1, 1][+!!ascending];
-    }).map(function (el) {
-        return filtered[el.index];
-    });
+    return (a.value < b.value ? -1 : a.value > b.value ? 1 : 0) * [-1, 1][+!!ascending];
+  }).map(function (el) {
+    return filtered[el.index];
+  });
 }

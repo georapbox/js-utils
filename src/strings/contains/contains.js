@@ -25,31 +25,31 @@
  * // -> false
  */
 function contains(subjectString, searchString, position) {
-    'use strict';
+  'use strict';
 
-    var subjectLength,
-        searchLength;
+  var subjectLength,
+    searchLength;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (String.prototype.includes) {
-        return subjectString.includes(searchString, position);
-    }
+  if (String.prototype.includes) {
+    return subjectString.includes(searchString, position);
+  }
 
-    if (searchString == null) {
-        return false;
-    }
+  if (searchString == null) {
+    return false;
+  }
 
-    subjectString = subjectString.toString();
-    searchString = searchString.toString();
+  subjectString = subjectString.toString();
+  searchString = searchString.toString();
 
-    position = parseInt(position, 10) || 0;
-    subjectLength = subjectString.length;
-    searchLength = searchString.length;
+  position = parseInt(position, 10) || 0;
+  subjectLength = subjectString.length;
+  searchLength = searchString.length;
 
-    return position + searchLength <= subjectLength ?
-        subjectString.indexOf(searchString, position) !== -1 :
-        false;
+  return position + searchLength <= subjectLength ?
+    subjectString.indexOf(searchString, position) !== -1 :
+    false;
 }

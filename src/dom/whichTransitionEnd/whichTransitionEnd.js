@@ -2,7 +2,7 @@
  * Detects the supported property name for the `transitionend` event.
  *
  * @category DOM
- * @return {string} The supported property name or `undefined` if not supported.
+ * @return {String} The supported property name or `undefined` if not supported.
  * @example
  *
  * var transEnd = whichTransitionEnd();
@@ -13,23 +13,23 @@
  * });
  */
 function whichTransitionEnd() {
-    'use strict';
+  'use strict';
 
-    var key,
-        el = document.createElement('div'),
-        transitions = {
-            'transition': 'transitionend',
-            'OTransition': 'oTransitionEnd',
-            'MozTransition': 'transitionend',
-            'WebkitTransition': 'webkitTransitionEnd'
-        };
+  var key,
+    el = document.createElement('div'),
+    transitions = {
+      'transition': 'transitionend',
+      'OTransition': 'oTransitionEnd',
+      'MozTransition': 'transitionend',
+      'WebkitTransition': 'webkitTransitionEnd'
+    };
 
-    for (key in transitions) {
-        if (transitions.hasOwnProperty(key)) {
-            if (el.style[key] !== undefined) {
-                el = null;
-                return transitions[key];
-            }
-        }
+  for (key in transitions) {
+    if ({}.hasOwnProperty.call(transitions, key)) {
+      if (el.style[key] !== undefined) {
+        el = null;
+        return transitions[key];
+      }
     }
+  }
 }

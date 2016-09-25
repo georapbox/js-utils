@@ -19,8 +19,8 @@
  * // -> false
  */
 function isArray(value) {
-    'use strict';
+  'use strict';
 
-    return Array.isArray ? Array.isArray(value) :
-        Object.prototype.toString.call(value) === '[object Array]';
+  return Array.isArray ? Array.isArray(value) :
+    Object.prototype.toString.call(value) === '[object Array]';
 }

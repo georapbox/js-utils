@@ -13,7 +13,7 @@
  * // -> false
  */
 function isRegexp(value) {
-    'use strict';
+  'use strict';
 
-    return Object.prototype.toString.call(value) === '[object RegExp]';
+  return Object.prototype.toString.call(value) === '[object RegExp]';
 }

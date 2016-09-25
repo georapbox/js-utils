@@ -21,18 +21,18 @@
  * // -> ''
  */
 function randomString(n, chars) {
-    'use strict';
+  'use strict';
 
-    var result = '',
-        index;
+  var result = '',
+    index;
 
-    // Default values, if arguments omitted.
-    n = n || 0;
-    chars = chars || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  // Default values, if arguments omitted.
+  n = n || 0;
+  chars = chars || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-    for (index = n; index > 0; --index) {
-        result += chars[Math.round(Math.random() * (chars.length - 1))];
-    }
+  for (index = n; index > 0; --index) {
+    result += chars[Math.round(Math.random() * (chars.length - 1))];
+  }
 
-    return result;
+  return result;
 }

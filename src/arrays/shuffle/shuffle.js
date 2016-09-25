@@ -12,27 +12,27 @@
  * // -> ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
  */
 function shuffle(array) {
-    'use strict';
+  'use strict';
 
-    var newArray, currentIndex, temporaryValue, randomIndex;
+  var newArray, currentIndex, temporaryValue, randomIndex;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    newArray = array.slice(0); // Ensure that original array stays intact.
-    currentIndex = newArray.length;
+  newArray = array.slice(0); // Ensure that original array stays intact.
+  currentIndex = newArray.length;
 
-    // While remaining elements to shuffle...
-    while (currentIndex) {
-        // Pick a remaining element...
-        randomIndex = (Math.random() * currentIndex--) | 0;
+  // While remaining elements to shuffle...
+  while (currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.random() * currentIndex-- | 0;
 
-        // And swap it with the current element.
-        temporaryValue = newArray[currentIndex];
-        newArray[currentIndex] = newArray[randomIndex];
-        newArray[randomIndex] = temporaryValue;
-    }
+    // And swap it with the current element.
+    temporaryValue = newArray[currentIndex];
+    newArray[currentIndex] = newArray[randomIndex];
+    newArray[randomIndex] = temporaryValue;
+  }
 
-    return newArray;
+  return newArray;
 }

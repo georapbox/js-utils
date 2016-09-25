@@ -1,14 +1,14 @@
-/*global whichAnimationEnd*/
+/* global whichAnimationEnd */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('dom/whichAnimationEnd', function () {
-        it('returns the animation end event name', function () {
-            var values = ['animationend', 'oAnimationEnd', 'webkitAnimationEnd', undefined];
-            var exists = values.indexOf(whichAnimationEnd()) !== -1;
+  describe('dom/whichAnimationEnd', function () {
+    it('returns the animation end event name', function () {
+      var values = ['animationend', 'oAnimationEnd', 'webkitAnimationEnd', undefined];
+      var exists = values.indexOf(whichAnimationEnd()) !== -1;
 
-            expect(exists).toBe(true);
-        });
+      expect(exists).toBe(true);
     });
+  });
 }());

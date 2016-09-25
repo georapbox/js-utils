@@ -5,7 +5,7 @@
  * Thus it is made clear that function passed as arguments should be read from right to left.
  *
  * @category Function
- * @param {function} [...args] One or more functions to compose.
+ * @param {function} [args...] One or more functions to compose.
  * @throws {TypeError} If any of the arguments is not function.
  * @return {function} A new function as the result of the composition.
  * @example
@@ -38,25 +38,25 @@
  * reverseHeadAndCapitalize('hello');
  * // -> "O"
  */
-function compose(/*...args*/) {
-    'use strict';
+function compose(/* args... */) {
+  'use strict';
 
-    var funcs = arguments,
-        slice = Array.prototype.slice,
-        args = slice.call(arguments, 0),
-        argsLength = args.length;
+  var funcs = arguments,
+    slice = Array.prototype.slice,
+    initialArguments = slice.call(arguments, 0),
+    argsLength = initialArguments.length;
 
-    while (argsLength--) {
-        if (typeof args[argsLength] !== 'function') {
-            throw new TypeError('Expected a function');
-        }
+  while (argsLength--) {
+    if (typeof initialArguments[argsLength] !== 'function') {
+      throw new TypeError('Expected a function');
     }
+  }
 
-    return function () {
-        var args = arguments, i;
-        for (i = funcs.length; i--;) {
-            args = [funcs[i].apply(this, args)];
-        }
-        return args[0];
-    };
+  return function () {
+    var args = arguments, i;
+    for (i = funcs.length; i--;) {
+      args = [funcs[i].apply(this, args)];
+    }
+    return args[0];
+  };
 }

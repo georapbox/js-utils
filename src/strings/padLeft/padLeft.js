@@ -17,27 +17,27 @@
  * // -> '-----Hello'
  */
 function padLeft(subjectString, len, chars) {
-    'use strict';
+  'use strict';
 
-    var left;
+  var left;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (typeof len !== 'number') {
-        throw new TypeError('Expected a number');
-    }
+  if (typeof len !== 'number') {
+    throw new TypeError('Expected a number');
+  }
 
-    chars = chars || ' '; // Set default character.
+  chars = chars || ' '; // Set default character.
 
-    if (subjectString.length >= len) {
-        return subjectString;
-    }
+  if (subjectString.length >= len) {
+    return subjectString;
+  }
 
-    left = [];
-    left.length = len - subjectString.length + 1;
-    left = left.join(chars);
+  left = [];
+  left.length = len - subjectString.length + 1;
+  left = left.join(chars);
 
-    return left + subjectString;
+  return left + subjectString;
 }

@@ -24,55 +24,55 @@
  * // -> [1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]
  */
 function flatten(array) {
-    'use strict';
+  'use strict';
 
-    var index, length, value, result;
+  var index, length, value, result;
 
-    function isArray(value) {
-        var toString = Object.prototype.toString,
-            arrayTag = '[object Array]';
+  function isArray(val) {
+    var toString = Object.prototype.toString,
+      arrayTag = '[object Array]';
 
-        return toString.call(value) === arrayTag;
+    return toString.call(val) === arrayTag;
+  }
+
+  function isArguments(val) {
+    var toString = Object.prototype.toString,
+      argsTag = '[object Arguments]';
+
+    // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
+    return hasOwnProperty.call(val, 'callee') &&
+      (!propertyIsEnumerable.call(val, 'callee') || toString.call(val) === argsTag);
+  }
+
+  function arrayPush(arr, values) {
+    var idx = -1,
+      len = values.length,
+      offset = arr.length;
+
+    while (++idx < len) {
+      arr[offset + idx] = values[idx];
     }
 
-    function isArguments(value) {
-        var toString = Object.prototype.toString,
-            argsTag = '[object Arguments]';
+    return array;
+  }
 
-        // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
-        return hasOwnProperty.call(value, 'callee') &&
-            (!propertyIsEnumerable.call(value, 'callee') || toString.call(value) === argsTag);
+  if (!isArray(array)) {
+    throw new TypeError('Expected an array');
+  }
+
+  index = -1;
+  length = array.length;
+  result = [];
+
+  while (++index < length) {
+    value = array[index];
+
+    if (isArray(value) || isArguments(value)) {
+      arrayPush(result, value);
+    } else {
+      result[result.length] = value;
     }
+  }
 
-    function arrayPush(array, values) {
-        var index = -1,
-            length = values.length,
-            offset = array.length;
-
-        while (++index < length) {
-            array[offset + index] = values[index];
-        }
-
-        return array;
-    }
-
-    if (!isArray(array)) {
-        throw new TypeError('Expected an array');
-    }
-
-    index = -1;
-    length = array.length;
-    result = [];
-
-    while (++index < length) {
-        value = array[index];
-
-        if (isArray(value) || isArguments(value)) {
-            arrayPush(result, value);
-        } else {
-            result[result.length] = value;
-        }
-    }
-
-    return result;
+  return result;
 }

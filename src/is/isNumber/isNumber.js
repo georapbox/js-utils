@@ -35,8 +35,8 @@
  * // -> true
  */
 function isNumber(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'number' ||
-        Object.prototype.toString.call(value) === '[object Number]';
+  return typeof value === 'number' ||
+    Object.prototype.toString.call(value) === '[object Number]';
 }

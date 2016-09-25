@@ -22,26 +22,26 @@
  * // -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
  */
 function pluck(array, key) {
-    'use strict';
+  'use strict';
 
-    var arr, index, len, arrItem;
+  var arr, index, len, arrItem;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  arr = [];
+  index = -1;
+  len = array.length;
+  arrItem;
+
+  while (++index < len) {
+    arrItem = array[index];
+
+    if ({}.hasOwnProperty.call(arrItem, key)) {
+      arr[arr.length] = arrItem[key];
     }
+  }
 
-    arr = [];
-    index = -1;
-    len = array.length;
-    arrItem;
-
-    while (++index < len) {
-        arrItem = array[index];
-
-        if (arrItem.hasOwnProperty(key)) {
-            arr[arr.length] = arrItem[key];
-        }
-    }
-
-    return arr;
+  return arr;
 }

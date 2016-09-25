@@ -23,36 +23,36 @@
  * // -> '<div class="myClass" id="myId" data-type="myType"><p>Lorem ipsum dolor sit amet.</p></div>'
  */
 function wrapHTML(subjectString, nodeName, nodeAttributes) {
-    'use strict';
+  'use strict';
 
-    var elementName, elementAttributes,
-        dasherizedProp, prop, wrapped;
+  var elementName, elementAttributes,
+    dasherizedProp, prop, wrapped;
 
-    if (typeof subjectString !== 'string' || typeof nodeName !== 'string') {
-        throw new TypeError('Expected a string');
+  if (typeof subjectString !== 'string' || typeof nodeName !== 'string') {
+    throw new TypeError('Expected a string');
+  }
+
+  elementName = nodeName.replace(/[</>]/g, '');
+  elementAttributes = '';
+  wrapped = '';
+
+  if (typeof nodeAttributes === 'object') {
+    for (prop in nodeAttributes) {
+      if ({}.hasOwnProperty.call(nodeAttributes, prop)) {
+        dasherizedProp = prop
+          .replace(/[_\s]+/g, '-')
+          .replace(/([A-Z])/g, '-$1')
+          .replace(/-+/g, '-')
+          .toLowerCase();
+
+        elementAttributes += ' ' + dasherizedProp + '="' + nodeAttributes[prop] + '"';
+      }
     }
+  }
 
-    elementName = nodeName.replace(/[</>]/g, '');
-    elementAttributes = '';
-    wrapped = '';
+  wrapped = wrapped.concat(
+    '<', elementName, elementAttributes, '>', subjectString, '</', elementName, '>'
+  );
 
-    if (typeof nodeAttributes === 'object') {
-        for (prop in nodeAttributes) {
-            if (nodeAttributes.hasOwnProperty(prop)) {
-                dasherizedProp = prop
-                    .replace(/[_\s]+/g, '-')
-                    .replace(/([A-Z])/g, '-$1')
-                    .replace(/-+/g, '-')
-                    .toLowerCase();
-
-                elementAttributes += ' ' + dasherizedProp + '="' + nodeAttributes[prop] + '"';
-            }
-        }
-    }
-
-    wrapped = wrapped.concat(
-        '<', elementName, elementAttributes, '>', subjectString, '</', elementName, '>'
-    );
-
-    return wrapped;
+  return wrapped;
 }

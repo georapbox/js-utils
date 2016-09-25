@@ -17,20 +17,20 @@
  * // -> '<p data-id="1">lorem ipsum</p>'
  */
 function unescapeHTML(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&#x3D;/g, '=')
-        .replace(/&quot;/g, '"')
-        .replace(/&#034;/g, '"')
-        .replace(/&#039;/g, "'")
-        .replace(/&#x60;/g, '`')
-        .replace(/&#x2F;/g, '/');
+  return subjectString
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#x3D;/g, '=')
+    .replace(/&quot;/g, '"')
+    .replace(/&#034;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&#x60;/g, '`')
+    .replace(/&#x2F;/g, '/');
 }

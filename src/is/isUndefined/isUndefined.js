@@ -21,7 +21,7 @@
  * // -> true
  */
 function isUndefined(value) {
-    'use strict';
+  'use strict';
 
-    return value === undefined;
+  return typeof value === 'undefined';
 }

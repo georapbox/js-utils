@@ -16,23 +16,23 @@
  * window.addEventListener('resize', doSomething, false);
  */
 function throttle(func, n) {
-    'use strict';
+  'use strict';
 
-    var wait;
+  var wait;
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  wait = false;
+
+  return function () {
+    if (!wait) {
+      func.call();
+      wait = true;
+      setTimeout(function () {
+        wait = false;
+      }, n || 0);
     }
-
-    wait = false;
-
-    return function () {
-        if (!wait) {
-            func.call();
-            wait = true;
-            setTimeout(function () {
-                wait = false;
-            }, n || 0);
-        }
-    };
+  };
 }

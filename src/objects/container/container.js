@@ -17,65 +17,65 @@
  * // -> {val: ['a', 'b', 'c']}
  */
 (function (name, context, definition) {
-    'use strict';
-    if (typeof define === 'function' && define.amd) {
-        define(definition);
-    } else if (typeof module !== 'undefined' && module.exports) {
-        module.exports = definition();
-    } else {
-        context[name] = definition();
-    }
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    define(definition);
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = definition();
+  } else {
+    context[name] = definition();
+  }
 }('Container', this, function () {
-    'use strict';
+  'use strict';
 
-    function ContainerType(val) {
-        this.val = val;
-    }
+  function ContainerType(val) {
+    this.val = val;
+  }
 
-    function container(x) {
-        return new ContainerType(x);
-    }
+  function container(x) {
+    return new ContainerType(x);
+  }
 
-    /**
-     * Grabs the value from the container and pass it to the function `func`.
-     * When mapping is done the value goes back to the container.
-     *
-     * @function map
-     * @param {function} func The function to use for mapping.
-     * @return {Object} The container object.
-     * @example
-     *
-     * var
-     *   getFirst = function (item) {
-     *     return item[0];
-     *   },
-     *   capitalize = function (item) {
-     *     return item.toUpperCase();
-     *   },
-     *   reverse = function (arr) {
-     *     return arr.reverse();
-     *   };
-     *
-     * var c = container(['a', 'b', 'c']),    // -> {val: ['a', 'b', 'c']}
-     *   reversed = c.map(reverse),           // -> {val: ['c', 'b', 'a']}
-     *   first = reversed.map(getFirst),      // -> {val: 'c'}
-     *   capital = first.map(capitalize),     // -> {val: 'C'}
-     *   match = capital.map(function (val) {
-     *     return val.match(/cat/gi);
-     *   });                                  // -> {val: null}
-     *
-     * // The above could be also written like this:
-     * container(['a', 'b', 'c'])
-     *   .map(reverse)
-     *   .map(getFirst)
-     *   .map(capitalize)
-     *   .map(function (val) {
-     *     return val.match(/cat/gi);
-     *   });
-     */
-    ContainerType.prototype.map = function (func) {
-        return this.val ? container(func(this.val)) : container(null);
-    };
+  /**
+   * Grabs the value from the container and pass it to the function `func`.
+   * When mapping is done the value goes back to the container.
+   *
+   * @function map
+   * @param {function} func The function to use for mapping.
+   * @return {Object} The container object.
+   * @example
+   *
+   * var
+   *   getFirst = function (item) {
+   *     return item[0];
+   *   },
+   *   capitalize = function (item) {
+   *     return item.toUpperCase();
+   *   },
+   *   reverse = function (arr) {
+   *     return arr.reverse();
+   *   };
+   *
+   * var c = container(['a', 'b', 'c']),    // -> {val: ['a', 'b', 'c']}
+   *   reversed = c.map(reverse),           // -> {val: ['c', 'b', 'a']}
+   *   first = reversed.map(getFirst),      // -> {val: 'c'}
+   *   capital = first.map(capitalize),     // -> {val: 'C'}
+   *   match = capital.map(function (val) {
+   *     return val.match(/cat/gi);
+   *   });                                  // -> {val: null}
+   *
+   * // The above could be also written like this:
+   * container(['a', 'b', 'c'])
+   *   .map(reverse)
+   *   .map(getFirst)
+   *   .map(capitalize)
+   *   .map(function (val) {
+   *     return val.match(/cat/gi);
+   *   });
+   */
+  ContainerType.prototype.map = function (func) {
+    return this.val ? container(func(this.val)) : container(null);
+  };
 
-    return container;
+  return container;
 }));

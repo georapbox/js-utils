@@ -13,13 +13,13 @@
  * // -> 'Lorem ipsum dolor si amet.'
  */
 function trim(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return String.prototype.trim ?
-        subjectString.trim() :
-        subjectString.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  return String.prototype.trim ?
+    subjectString.trim() :
+    subjectString.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
 }

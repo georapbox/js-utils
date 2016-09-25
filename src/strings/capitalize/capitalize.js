@@ -18,18 +18,18 @@
  * // -> 'Hello'
  */
 function capitalize(subjectString, lowerCaseRest) {
-    'use strict';
+  'use strict';
 
-    var firstChar, restStr;
+  var firstChar, restStr;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    firstChar = subjectString.substr(0, 1).toUpperCase();
-    restStr = lowerCaseRest === true ?
-        subjectString.substring(1).toLocaleLowerCase() :
-        subjectString.substring(1);
+  firstChar = subjectString.substr(0, 1).toUpperCase();
+  restStr = lowerCaseRest === true ?
+    subjectString.substring(1).toLocaleLowerCase() :
+    subjectString.substring(1);
 
-    return firstChar + restStr;
+  return firstChar + restStr;
 }

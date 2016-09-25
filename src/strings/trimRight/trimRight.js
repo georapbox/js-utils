@@ -11,11 +11,11 @@
  * // -> 'Lorem ipsum dolor si amet.'
  */
 function trimRight(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.replace(/\s+$/, '');
+  return subjectString.replace(/\s+$/, '');
 }

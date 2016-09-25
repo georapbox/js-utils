@@ -2,7 +2,7 @@
  * Truncates a string based on character count.
  *
  * @category String
- * @param {String} string The string to truncate.
+ * @param {String} subjectString The string to truncate.
  * @param {Number} [characterCount] The number of characters the truncated string contains.
  *        If ommitted or falsy, the initial string is returned.
  * @param {String} [delimiter=""] The delimiter to add at the end of the truncated string.
@@ -44,33 +44,30 @@
  * // Throws TypeError
  */
 function truncate(subjectString, characterCount, delimiter) {
-    'use strict';
+  'use strict';
 
-    var regex, truncated;
+  var regex, truncated;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (typeof characterCount !== 'number') {
-        throw new TypeError('Expected a number');
-    }
+  if (typeof characterCount !== 'number') {
+    throw new TypeError('Expected a number');
+  }
 
-    characterCount = Math.floor(characterCount);
+  characterCount = Math.floor(characterCount);
 
-    if (
-        characterCount > subjectString.length ||
-        characterCount < 0 ||
-        characterCount !== characterCount
-    ) {
-        return subjectString;
-    }
+  if (characterCount > subjectString.length ||
+      characterCount < 0 || characterCount !== characterCount) {
+    return subjectString;
+  }
 
-    regex = new RegExp('^.{0,' + characterCount + '}[\S]*', 'g');
-    truncated = subjectString.match(regex);
-    delimiter = delimiter || '';
-    truncated = truncated[0].replace(/\s$/, '');
-    truncated = truncated + delimiter;
+  regex = new RegExp('^.{0,' + characterCount + '}[\S]*', 'g');
+  truncated = subjectString.match(regex);
+  delimiter = delimiter || '';
+  truncated = truncated[0].replace(/\s$/, '');
+  truncated = truncated + delimiter;
 
-    return truncated;
+  return truncated;
 }

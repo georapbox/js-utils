@@ -24,11 +24,13 @@
  * });
  */
 function forIn(obj, callback) {
-    'use strict';
+  'use strict';
 
-    for (var key in obj) {
-        callback && callback(obj[key], key, obj);
-    }
+  var key;
 
-    return obj;
+  for (key in obj) {
+    callback && callback(obj[key], key, obj);
+  }
+
+  return obj;
 }

@@ -24,28 +24,28 @@
  *
  */
 function dropRightWhile(array, predicate) {
-    'use strict';
+  'use strict';
 
-    var index, length;
+  var index, length;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    if (predicate == null) {
-        return array;
-    }
+  if (predicate == null) {
+    return array;
+  }
 
-    if (typeof predicate !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof predicate !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    length = array.length;
-    index = length;
+  length = array.length;
+  index = length;
 
-    while (--index < length && index >= 0 && predicate(array[index], index, array)) {
-        continue;
-    }
+  while (--index < length && index >= 0 && predicate(array[index], index, array)) {
+    continue;
+  }
 
-    return array.slice(0, index + 1);
+  return array.slice(0, index + 1);
 }

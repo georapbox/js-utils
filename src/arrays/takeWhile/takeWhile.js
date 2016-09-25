@@ -23,28 +23,28 @@
  * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}]
  */
 function takeWhile(array, predicate) {
-    'use strict';
+  'use strict';
 
-    var index, length;
+  var index, length;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    if (predicate == null) {
-        return array;
-    }
+  if (predicate == null) {
+    return array;
+  }
 
-    if (typeof predicate !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof predicate !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    index = -1;
-    length = array.length;
+  index = -1;
+  length = array.length;
 
-    while (++index < length && predicate(array[index], index, array)) {
-        continue;
-    }
+  while (++index < length && predicate(array[index], index, array)) {
+    continue;
+  }
 
-    return array.slice(0, index);
+  return array.slice(0, index);
 }

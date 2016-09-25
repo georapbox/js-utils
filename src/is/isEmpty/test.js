@@ -1,33 +1,34 @@
-/*global isEmpty*/
+/* global isEmpty */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('is/isEmpty', function () {
-        it('checks if a value is empty', function () {
-            expect(isEmpty([])).toBe(true);
+  describe('is/isEmpty', function () {
+    it('checks if a value is empty', function () {
+      var obj = {};
 
-            expect(isEmpty('')).toBe(true);
+      expect(isEmpty([])).toBe(true);
 
-            expect(isEmpty({})).toBe(true);
+      expect(isEmpty('')).toBe(true);
 
-            expect(isEmpty(['a', 'b'])).toBe(false);
+      expect(isEmpty({})).toBe(true);
 
-            expect(isEmpty('Lorem ipsum dolor sit amet')).toBe(false);
+      expect(isEmpty(['a', 'b'])).toBe(false);
 
-            expect(isEmpty({a: 'a', b: 'b'})).toBe(false);
+      expect(isEmpty('Lorem ipsum dolor sit amet')).toBe(false);
 
-            var obj = {};
-            Object.defineProperty(obj, 'hidden', {
-                value: null,
-                enumerable: false
-            });
+      expect(isEmpty({a: 'a', b: 'b'})).toBe(false);
 
-            // non enumerable property
-            expect(isEmpty(obj)).toBe(true);
+      Object.defineProperty(obj, 'hidden', {
+        value: null,
+        enumerable: false
+      });
 
-            // properties inherited from prototypes
-            expect(isEmpty(Object.create({foo: 'bar'}))).toBe(false);
-        });
+      // non enumerable property
+      expect(isEmpty(obj)).toBe(true);
+
+      // properties inherited from prototypes
+      expect(isEmpty(Object.create({foo: 'bar'}))).toBe(false);
     });
+  });
 }());

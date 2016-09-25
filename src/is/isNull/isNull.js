@@ -19,7 +19,7 @@
  * // -> false
  */
 function isNull(value) {
-    'use strict';
+  'use strict';
 
-    return value === null;
+  return value === null;
 }

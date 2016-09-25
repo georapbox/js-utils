@@ -41,64 +41,64 @@
  * // -> Throws RangeError
  */
 function repeat(subjectString, count) {
-    'use strict';
+  'use strict';
 
-    var str, repeat;
-    var errors = {
-        stringTE: 'first parameter must be a string',
-        numberTE: 'repeat count must be a number',
-        negativeRE: 'repeat count must be non-negative',
-        maximumRE: 'repeat count must be less than infinity and not overflow maximum string size'
-    };
+  var str, repeated;
+  var errors = {
+    stringTE: 'first parameter must be a string',
+    numberTE: 'repeat count must be a number',
+    negativeRE: 'repeat count must be non-negative',
+    maximumRE: 'repeat count must be less than infinity and not overflow maximum string size'
+  };
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError(errors.stringTE);
+  if (typeof subjectString !== 'string') {
+    throw new TypeError(errors.stringTE);
+  }
+
+  str = '' + subjectString;
+
+  count = +count;
+
+  if (count !== count) {
+    count = 0;
+  }
+
+  if (count < 0) {
+    throw new RangeError(errors.negativeRE);
+  }
+
+  if (count === Infinity) {
+    throw new RangeError(errors.maximumRE);
+  }
+
+  count = Math.floor(count);
+
+  if (str.length === 0 || count === 0) {
+    return '';
+  }
+
+  // Ensuring count is a 31-bit integer allows us to heavily optimize the
+  // main part. But anyway, most current (August 2014) browsers can't handle
+  // strings 1 << 28 chars or longer, so:
+  if (str.length * count >= 1 << 28) {
+    throw new RangeError(errors.maximumRE);
+  }
+
+  repeated = '';
+
+  for (;;) {
+    if ((count & 1) === 1) {
+      repeated += str;
     }
 
-    str = '' + subjectString;
+    count >>>= 1;
 
-    count = +count;
-
-    if (count !== count) {
-        count = 0;
+    if (count === 0) {
+      break;
     }
 
-    if (count < 0) {
-        throw new RangeError(errors.negativeRE);
-    }
+    str += str;
+  }
 
-    if (count === Infinity) {
-        throw new RangeError(errors.maximumRE);
-    }
-
-    count = Math.floor(count);
-
-    if (str.length === 0 || count === 0) {
-        return '';
-    }
-
-    // Ensuring count is a 31-bit integer allows us to heavily optimize the
-    // main part. But anyway, most current (August 2014) browsers can't handle
-    // strings 1 << 28 chars or longer, so:
-    if (str.length * count >= 1 << 28) {
-        throw new RangeError(errors.maximumRE);
-    }
-
-    repeat = '';
-
-    for (;;) {
-        if ((count & 1) === 1) {
-            repeat += str;
-        }
-
-        count >>>= 1;
-
-        if (count === 0) {
-            break;
-        }
-
-        str += str;
-    }
-
-    return repeat;
+  return repeated;
 }

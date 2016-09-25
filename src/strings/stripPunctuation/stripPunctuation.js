@@ -13,11 +13,11 @@
  * // -> You cant make an omelet without breaking a few eggs
  */
 function stripPunctuation(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
+  return subjectString.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
 }

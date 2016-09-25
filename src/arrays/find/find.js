@@ -46,31 +46,31 @@
  * // -> undefined
  */
 function find(array, predicate, thisArg) {
-    'use strict';
+  'use strict';
 
-    var index, element, length;
+  var index, element, length;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('"' + array + '" is not an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('"' + array + '" is not an array');
+  }
+
+  if (typeof predicate !== 'function') {
+    throw new TypeError('"' + predicate + '" is not a function');
+  }
+
+  if (Array.prototype.find) {
+    return array.find(predicate, thisArg);
+  }
+
+  length = array.length >>> 0;
+
+  for (index = 0; index < length; index += 1) {
+    element = array[index];
+
+    if (predicate.call(thisArg, element, index, array)) {
+      return element;
     }
+  }
 
-    if (typeof predicate !== 'function') {
-        throw new TypeError('"' + predicate + '" is not a function');
-    }
-
-    if (Array.prototype.find) {
-        return array.find(predicate, thisArg);
-    }
-
-    length = array.length >>> 0;
-
-    for (index = 0; index < length; index += 1) {
-        element = array[index];
-
-        if (predicate.call(thisArg, element, index, array)) {
-            return element;
-        }
-    }
-
-    return undefined;
+  return undefined;
 }

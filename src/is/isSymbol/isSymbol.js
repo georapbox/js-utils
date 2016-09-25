@@ -22,8 +22,8 @@
  * // -> false
  */
 function isSymbol(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'symbol' ||
-        Object.prototype.toString.call(value) === '[object Symbol]';
+  return typeof value === 'symbol' ||
+      Object.prototype.toString.call(value) === '[object Symbol]';
 }

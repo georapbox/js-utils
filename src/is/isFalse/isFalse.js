@@ -16,6 +16,7 @@
  * // -> false
  */
 function isFalse(value) {
-    'use strict';
-    return value === false;
+  'use strict';
+
+  return value === false;
 }

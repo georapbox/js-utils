@@ -15,7 +15,7 @@ The predicate is invoked with three arguments: (`value`, `index`, `array`).
 
 | Param | Type | Description |
 | --- | --- | --- |
-| The | <code>Array</code> | array to process. |
+| array | <code>Array</code> | The array to process. |
 | predicate | <code>function</code> | The function invoked per iteration. |
 
 **Example**  

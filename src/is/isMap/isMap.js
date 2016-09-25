@@ -19,8 +19,8 @@
  * // -> false
  */
 function isMap(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'object' &&
-        Object.prototype.toString.call(value) === '[object Map]';
+  return typeof value === 'object' &&
+      Object.prototype.toString.call(value) === '[object Map]';
 }

@@ -27,30 +27,28 @@
  * // -> [1, 2, 3, 4, 5, obj]
  */
 function diff(arrayA, arrayB) {
-    'use strict';
+  'use strict';
 
-    var toString = Object.prototype.toString,
-        len, arr;
+  var toString = Object.prototype.toString,
+    len, arr;
 
-    if (
-        toString.call(arrayA) !== '[object Array]' ||
-        arrayB != null && toString.call(arrayB) !== '[object Array]'
-    ) {
-        throw new TypeError('Expected an array');
+  if (toString.call(arrayA) !== '[object Array]' ||
+      arrayB != null && toString.call(arrayB) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  len = arrayA.length;
+  arr = [];
+
+  if (!arrayB) {
+    return arrayA;
+  }
+
+  while (len--) {
+    if (arrayB.indexOf(arrayA[len]) === -1) {
+      arr.unshift(arrayA[len]);
     }
+  }
 
-    len = arrayA.length;
-    arr = [];
-
-    if (!arrayB) {
-        return arrayA;
-    }
-
-    while (len--) {
-        if (arrayB.indexOf(arrayA[len]) === -1) {
-            arr.unshift(arrayA[len]);
-        }
-    }
-
-    return arr;
+  return arr;
 }

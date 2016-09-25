@@ -13,8 +13,8 @@
  * // -> false
  */
 function isWeakSet(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'object' &&
-        Object.prototype.toString.call(value) === '[object WeakSet]';
+  return typeof value === 'object' &&
+    Object.prototype.toString.call(value) === '[object WeakSet]';
 }

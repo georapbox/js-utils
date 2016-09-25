@@ -16,7 +16,7 @@
  * // -> true
  */
 function isElement(value) {
-    'use strict';
+  'use strict';
 
-    return !!value && value.nodeType === 1 && value instanceof Element === true;
+  return !!value && value.nodeType === 1 && value instanceof Element === true;
 }

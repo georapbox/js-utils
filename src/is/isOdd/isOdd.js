@@ -28,11 +28,11 @@
  * // -> false
  */
 function isOdd(value) {
-    'use strict';
+  'use strict';
 
-    if (typeof value === 'object') {
-        return false;
-    }
+  if (typeof value === 'object') {
+    return false;
+  }
 
-    return value % 2 === 1 ? true : false;
+  return value % 2 === 1;
 }

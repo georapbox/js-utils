@@ -13,7 +13,7 @@
  * // -> false
  */
 function isDate(value) {
-    'use strict';
+  'use strict';
 
-    return Object.prototype.toString.call(value) === '[object Date]';
+  return Object.prototype.toString.call(value) === '[object Date]';
 }

@@ -43,25 +43,25 @@
  * // -> -1
  */
 function findLastIndex(array, callback) {
-    'use strict';
+  'use strict';
 
-    var length;
+  var length;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  if (typeof callback !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  length = array.length;
+
+  while (length--) {
+    if (callback(array[length], length, array)) {
+      return length;
     }
+  }
 
-    if (typeof callback !== 'function') {
-        throw new TypeError('Expected a function');
-    }
-
-    length = array.length;
-
-    while (length--) {
-        if (callback(array[length], length, array)) {
-            return length;
-        }
-    }
-
-    return -1;
+  return -1;
 }

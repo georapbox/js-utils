@@ -27,13 +27,13 @@
  * // -> 1
  */
 function flip(func, thisArg) {
-    'use strict';
+  'use strict';
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    return function flipped() {
-        return func.apply(thisArg, Array.prototype.slice.call(arguments, 0).reverse());
-    };
+  return function flipped() {
+    return func.apply(thisArg, Array.prototype.slice.call(arguments, 0).reverse());
+  };
 }

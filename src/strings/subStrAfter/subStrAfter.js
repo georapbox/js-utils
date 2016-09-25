@@ -25,22 +25,22 @@
  * // -> 'LOREM_IPSUM DOLOR_SIT AMET'
  */
 function subStrAfter(subjectString, characters, last) {
-    'use strict';
+  'use strict';
 
-    var arr, len, result;
+  var arr, len, result;
 
-    if (typeof subjectString !== 'string' || typeof characters !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string' || typeof characters !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (!last) {
-        return subjectString.substr(subjectString.indexOf(characters) + characters.length);
-    }
+  if (!last) {
+    return subjectString.substr(subjectString.indexOf(characters) + characters.length);
+  }
 
-    arr = subjectString.split(characters);
-    len = arr.length;
-    result = arr[len - 1];
-    arr = len = null;
+  arr = subjectString.split(characters);
+  len = arr.length;
+  result = arr[len - 1];
+  arr = len = null;
 
-    return result;
+  return result;
 }

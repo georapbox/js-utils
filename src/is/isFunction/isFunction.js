@@ -15,8 +15,8 @@
  * // -> false
  */
 function isFunction(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'function' &&
-        Object.prototype.toString.call(value) === '[object Function]';
+  return typeof value === 'function' &&
+    Object.prototype.toString.call(value) === '[object Function]';
 }

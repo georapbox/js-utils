@@ -1,13 +1,13 @@
-/*global padRight*/
+/* global padRight */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('String/padRight', function () {
-        it('pads a string on the right side to the given length', function () {
-            expect(padRight('Hello', 10, ' ')).toBe('Hello     ');
-            
-            expect(padRight('Hello', 10, '-')).toBe('Hello-----');
-        });
+  describe('String/padRight', function () {
+    it('pads a string on the right side to the given length', function () {
+      expect(padRight('Hello', 10, ' ')).toBe('Hello     ');
+
+      expect(padRight('Hello', 10, '-')).toBe('Hello-----');
     });
+  });
 }());

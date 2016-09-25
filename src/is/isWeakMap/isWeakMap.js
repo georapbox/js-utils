@@ -23,8 +23,8 @@
  * // -> false
  */
 function isWeakMap(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'object' &&
-        Object.prototype.toString.call(value) === '[object WeakMap]';
+  return typeof value === 'object' &&
+    Object.prototype.toString.call(value) === '[object WeakMap]';
 }

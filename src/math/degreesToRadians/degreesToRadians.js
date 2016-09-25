@@ -23,11 +23,11 @@
  * // -> 6.283185307179586 (2π)
  */
 function degreesToRadians(degrees) {
-    'use strict';
+  'use strict';
 
-    if (typeof degrees !== 'number') {
-        throw new TypeError('"degrees" must be a number');
-    }
+  if (typeof degrees !== 'number') {
+    throw new TypeError('"degrees" must be a number');
+  }
 
-    return degrees * Math.PI / 180;
+  return degrees * Math.PI / 180;
 }

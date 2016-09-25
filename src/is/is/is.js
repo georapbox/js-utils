@@ -45,174 +45,177 @@
  * // -> false
  */
 (function (name, context, definition) {
-    'use strict';
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = definition();
-    } else if (typeof define === 'function' && define.amd) {
-        define(definition);
-    } else {
-        context[name] = definition();
-    }
+  'use strict';
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = definition();
+  } else if (typeof define === 'function' && define.amd) {
+    define(definition);
+  } else {
+    context[name] = definition();
+  }
 }('is', this, function () {
-    'use strict';
+  'use strict';
 
-    var isAPI,                              // Holds the API methods
-        interfaces = ['not', 'all', 'any']; // API interfaces
+  var isAPI,                              // Holds the API methods
+    interfaces = ['not', 'all', 'any']; // API interfaces
 
-    // HELPERS
-    /* -------------------------------------------------------------------------- */
+  // HELPERS
+  /* -------------------------------------------------------------------------- */
 
-    var ARRAY = '[object Array]',
-        FUNCTION = '[object Function]';
+  var ARRAY = '[object Array]',
+    FUNCTION = '[object Function]';
 
-    var toString = Object.prototype.toString,
-        arraySlice = Array.prototype.slice,
-        hasOwnProperty = Object.prototype.hasOwnProperty;
+  var toString = Object.prototype.toString,
+    arraySlice = Array.prototype.slice,
+    hasOwnProperty = Object.prototype.hasOwnProperty;
 
-    function isFunction(value) {
-        return typeof value === 'function' && toString.call(value) === FUNCTION;
+  function isFunction(value) {
+    return typeof value === 'function' && toString.call(value) === FUNCTION;
+  }
+
+  function isArray(value) {
+    return !!value && toString.call(value) === ARRAY;
+  }
+
+  function isPlainObject(value) {
+    return !!value && typeof value === 'object' && value.constructor === Object;
+  }
+
+  function arrayIndexOf(array, value) {
+    var i = 0,
+      len = array.length;
+
+    for (i; i < len; i += 1) {
+      if (array[i] === value) {
+        return i;
+      }
     }
+    return -1;
+  }
 
-    function isArray(value) {
-        return !!value && toString.call(value) === ARRAY;
-    }
+  // INTERFACE FUNCTIONS
+  /* -------------------------------------------------------------------------- */
 
-    function isPlainObject(value) {
-        return !!value && typeof value === 'object' && value.constructor === Object;
-    }
-
-    function arrayIndexOf(array, value) {
-        var i = 0,
-            len = array.length;
-
-        for (i; i < len; i += 1) {
-            if (array[i] === value) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    // INTERFACE FUNCTIONS
-    /* -------------------------------------------------------------------------- */
-
-    /**
-     * Calls the predicate function and reverses the sense of the predicate result.
-     * @function not
-     */
-    function not(func) {
-        return function () {
-            return !func.apply(null, arraySlice.call(arguments));
-        };
-    }
-
-    /**
-     * Calls the predicate function per parameter and returns true if all pass.
-     * @function all
-     */
-    function all(func) {
-        return function () {
-            var parameters = arraySlice.call(arguments),
-                length = parameters.length;
-
-            if (length === 1 && isArray(parameters[0])) {
-                parameters = parameters[0];
-                length = parameters.length;
-            }
-
-            for (var i = 0; i < length; i += 1) {
-                if (!func.call(null, parameters[i])) {
-                    return false;
-                }
-            }
-
-            return true;
-        };
-    }
-
-    /**
-     * Calls the predicate function per parameter and returns true if any pass.
-     * @function any
-     */
-    function any(func) {
-        return function () {
-            var parameters = arraySlice.call(arguments),
-                length = parameters.length;
-
-            if (length === 1 && isArray(parameters[0])) {
-                parameters = parameters[0];
-                length = parameters.length;
-            }
-
-            for (var i = 0; i < length; i += 1) {
-                if (func.call(null, parameters[i])) {
-                    return true;
-                }
-            }
-
-            return false;
-        };
-    }
-
-    /**
-     * Use this method to include any functions to be used with the API.
-     * @function extend
-     * @NOTE Use only functions that return a boolean for the API to work properly.
-     */
-    function extendApiMethods(options) {
-        if (!isPlainObject(options)) {
-            throw new Error('Expected a plain object as parameter.');
-        }
-        var prop;
-        for (prop in options) {
-            if (hasOwnProperty.call(options, prop)) {
-                if (
-                    isFunction(options[prop]) &&
-                    arrayIndexOf(interfaces, prop) === -1 &&
-                    prop !== 'extend'
-                ) {
-                    isAPI[prop] = options[prop];
-                }
-            }
-        }
-        applyInterfaces(interfaces);
-    }
-
-    // API
-    /* -------------------------------------------------------------------------- */
-
-    isAPI = {
-        'not': not,
-        'all': all,
-        'any': any,
-        'extend': extendApiMethods
+  /**
+   * Calls the predicate function and reverses the sense of the predicate result.
+   * @function not
+   */
+  function not(func) {
+    return function () {
+      return !func.apply(null, arraySlice.call(arguments));
     };
+  }
 
-    function makeInterface(interfaces, method) {
-        var i = 0,
-            len = interfaces.length;
+  /**
+   * Calls the predicate function per parameter and returns true if all pass.
+   * @function all
+   */
+  function all(func) {
+    return function () {
+      var parameters = arraySlice.call(arguments),
+        length = parameters.length,
+        index;
 
-        for (i; i < len; i += 1) {
-            switch (interfaces[i]) {
-                case 'not': isAPI.not[method] = isAPI.not(isAPI[method]); break;
-                case 'all': isAPI.all[method] = isAPI.all(isAPI[method]); break;
-                case 'any': isAPI.any[method] = isAPI.any(isAPI[method]); break;
-            }
+      if (length === 1 && isArray(parameters[0])) {
+        parameters = parameters[0];
+        length = parameters.length;
+      }
+
+      for (index = 0; index < length; index += 1) {
+        if (!func.call(null, parameters[index])) {
+          return false;
         }
+      }
+
+      return true;
+    };
+  }
+
+  /**
+   * Calls the predicate function per parameter and returns true if any pass.
+   * @function any
+   */
+  function any(func) {
+    return function () {
+      var parameters = arraySlice.call(arguments),
+        length = parameters.length,
+        index;
+
+      if (length === 1 && isArray(parameters[0])) {
+        parameters = parameters[0];
+        length = parameters.length;
+      }
+
+      for (index = 0; index < length; index += 1) {
+        if (func.call(null, parameters[index])) {
+          return true;
+        }
+      }
+
+      return false;
+    };
+  }
+
+  function applyInterfaces(interfaces) {
+    var prop;
+
+    for (prop in isAPI) {
+      if (hasOwnProperty.call(isAPI, prop)) {
+        if (isFunction(isAPI[prop])) {
+          makeInterface(interfaces, prop);
+        }
+      }
+    }
+  }
+
+  /**
+   * Use this method to include any functions to be used with the API.
+   * @function extend
+   * @NOTE Use only functions that return a boolean for the API to work properly.
+   */
+  function extendApiMethods(options) {
+    var prop;
+
+    if (!isPlainObject(options)) {
+      throw new Error('Expected a plain object as parameter.');
     }
 
-    function applyInterfaces(interfaces) {
-        var prop;
-        for (prop in isAPI) {
-            if (hasOwnProperty.call(isAPI, prop)) {
-                if (isFunction(isAPI[prop])) {
-                    makeInterface(interfaces, prop);
-                }
-            }
+    for (prop in options) {
+      if (hasOwnProperty.call(options, prop)) {
+        if (isFunction(options[prop]) && arrayIndexOf(interfaces, prop) === -1 && prop !== 'extend') {
+          isAPI[prop] = options[prop];
         }
+      }
     }
 
     applyInterfaces(interfaces);
+  }
 
-    return isAPI;
+  // API
+  /* -------------------------------------------------------------------------- */
+
+  isAPI = {
+    'not': not,
+    'all': all,
+    'any': any,
+    'extend': extendApiMethods
+  };
+
+  function makeInterface(interfaces, method) {
+    var i = 0,
+      len = interfaces.length;
+
+    for (i; i < len; i += 1) {
+      switch (interfaces[i]) {
+        case 'not': isAPI.not[method] = isAPI.not(isAPI[method]); break;
+        case 'all': isAPI.all[method] = isAPI.all(isAPI[method]); break;
+        case 'any': isAPI.any[method] = isAPI.any(isAPI[method]); break;
+        default: break;
+      }
+    }
+  }
+
+  applyInterfaces(interfaces);
+
+  return isAPI;
 }));

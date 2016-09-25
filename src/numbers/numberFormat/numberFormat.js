@@ -21,19 +21,21 @@
  * // -> '123.456.789,123'
  */
 function numberFormat(nNumber, nDecimals, sDecimalSeperator, sThousandSeperator) {
-    'use strict';
+  'use strict';
 
-    if (nNumber !== nNumber || nNumber == null) {
-        return nNumber || '';
-    }
+  var parts, integerPart, fractionalPart;
 
-    nNumber = typeof nNumber === 'string' ? parseFloat(nNumber) : nNumber;
-    nNumber = nNumber.toFixed(~~nDecimals);
-    sThousandSeperator = typeof sThousandSeperator === 'string' ? sThousandSeperator : ',';
+  if (nNumber !== nNumber || nNumber == null) {
+    return nNumber || '';
+  }
 
-    var parts = nNumber.split('.'),
-        integerPart = parts[0],
-        fractionalPart = parts[1] ? (sDecimalSeperator || '.') + parts[1] : '';
+  nNumber = typeof nNumber === 'string' ? parseFloat(nNumber) : nNumber;
+  nNumber = nNumber.toFixed(~~nDecimals);
+  sThousandSeperator = typeof sThousandSeperator === 'string' ? sThousandSeperator : ',';
 
-    return integerPart.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + sThousandSeperator) + fractionalPart;
+  parts = nNumber.split('.');
+  integerPart = parts[0];
+  fractionalPart = parts[1] ? (sDecimalSeperator || '.') + parts[1] : '';
+
+  return integerPart.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + sThousandSeperator) + fractionalPart;
 }

@@ -20,17 +20,17 @@
  * // -> logs "Do something..." after button is clicked at least 4 times.
  */
 function after(n, func) {
-    'use strict';
+  'use strict';
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  n = parseInt(n, 10);
+
+  return function () {
+    if (--n < 1) {
+      return func.apply(this, arguments);
     }
-
-    n = parseInt(n, 10);
-
-    return function () {
-        if (--n < 1) {
-            return func.apply(this, arguments);
-        }
-    };
+  };
 }

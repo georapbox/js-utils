@@ -15,31 +15,31 @@
  * }, false);
  */
 function captureMousePosition(element) {
-    'use strict';
+  'use strict';
 
-    var position = {x: 0, y: 0};
+  var position = {x: 0, y: 0};
 
-    if (!element || element.nodeType !== 1 || element instanceof Element !== true) {
-        throw new TypeError('"element" must be a DOM element');
+  if (!element || element.nodeType !== 1 || element instanceof Element !== true) {
+    throw new TypeError('"element" must be a DOM element');
+  }
+
+  element.addEventListener('mousemove', function (event) {
+    var x, y;
+
+    if (event.pageX || event.pageY) {
+      x = event.pageX;
+      y = event.pageY;
+    } else {
+      x = event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+      y = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
 
-    element.addEventListener('mousemove', function (event) {
-        var x, y;
+    x -= element.offsetLeft;
+    y -= element.offsetTop;
 
-        if (event.pageX || event.pageY) {
-            x = event.pageX;
-            y = event.pageY;
-        } else {
-            x = event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-            y = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-        }
+    position.x = x;
+    position.y = y;
+  }, false);
 
-        x -= element.offsetLeft;
-        y -= element.offsetTop;
-
-        position.x = x;
-        position.y = y;
-    }, false);
-
-    return position;
+  return position;
 }

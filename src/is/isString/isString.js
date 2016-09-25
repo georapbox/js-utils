@@ -19,7 +19,7 @@
  * // -> false
  */
 function isString(value) {
-    'use strict';
+  'use strict';
 
-    return !!value && Object.prototype.toString.call(value) === '[object String]';
+  return !!value && Object.prototype.toString.call(value) === '[object String]';
 }

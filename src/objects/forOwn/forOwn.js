@@ -24,13 +24,15 @@
  * });
  */
 function forOwn(obj, callback) {
-    'use strict';
+  'use strict';
 
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            callback && callback(obj[key], key, obj);
-        }
+  var key;
+
+  for (key in obj) {
+    if ({}.hasOwnProperty.call(obj, key)) {
+      callback && callback(obj[key], key, obj);
     }
+  }
 
-    return obj;
+  return obj;
 }

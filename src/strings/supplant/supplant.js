@@ -39,36 +39,36 @@
  * // -> - gaming
  */
 function supplant(subjectString, data) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
+
+  if (data == null || typeof data !== 'object') {
+    return subjectString;
+  }
+
+  return subjectString.replace(/{{([^{{}}]*)}}/g, function (a, b) {
+    var p = b.split(/\./), // Split the variable into its dot notation parts.
+      c = data,          // The c variable becomes our cursor that will traverse the object.
+      i = 0,
+      l = p.length;
+
+    // Loop over the steps in the dot notation path.
+    for (i; i < l; i += 1) {
+      // If the key doesn't exist in the object do not process.
+      // Mirrors how the function worked for bad values.
+      if (c[p[i]] == null) {
+        return a;
+      }
+
+      // Move the cursor up to the next step.
+      c = c[p[i]];
     }
 
-    if (data == null || typeof data !== 'object') {
-        return subjectString;
-    }
-
-    return subjectString.replace(/{{([^{{}}]*)}}/g, function (a, b) {
-        var p = b.split(/\./), // Split the variable into its dot notation parts.
-            c = data,          // The c variable becomes our cursor that will traverse the object.
-            i = 0,
-            l = p.length;
-
-        // Loop over the steps in the dot notation path.
-        for (i; i < l; i += 1) {
-            // If the key doesn't exist in the object do not process.
-            // Mirrors how the function worked for bad values.
-            if (c[p[i]] == null) {
-                return a;
-            }
-
-            // Move the cursor up to the next step.
-            c = c[p[i]];
-        }
-
-        // If the data is a string or number return it,
-        // otherwise do not process, return the value it was, i.e. {x}
-        return typeof c === 'string' || typeof c === 'number' ? c : a;
-    });
+    // If the data is a string or number return it,
+    // otherwise do not process, return the value it was, i.e. {x}
+    return typeof c === 'string' || typeof c === 'number' ? c : a;
+  });
 }

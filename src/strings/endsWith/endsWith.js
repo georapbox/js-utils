@@ -22,32 +22,32 @@
  * // -> true
  */
 function endsWith(subjectString, searchString, position) {
-    'use strict';
+  'use strict';
 
-    var lastIndex;
+  var lastIndex;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (String.prototype.endsWith) {
-        return subjectString ? subjectString.endsWith(searchString, position) : false;
-    }
+  if (String.prototype.endsWith) {
+    return subjectString ? subjectString.endsWith(searchString, position) : false;
+  }
 
-    if (searchString == null) {
-        return false;
-    }
+  if (searchString == null) {
+    return false;
+  }
 
-    subjectString = subjectString.toString();
-    searchString = searchString.toString();
+  subjectString = subjectString.toString();
+  searchString = searchString.toString();
 
-    if (typeof position !== 'number' || !isFinite(position) ||
-        Math.floor(position) !== position || position > subjectString.length) {
-        position = subjectString.length;
-    }
+  if (typeof position !== 'number' || !isFinite(position) ||
+    Math.floor(position) !== position || position > subjectString.length) {
+    position = subjectString.length;
+  }
 
-    position -= searchString.length;
-    lastIndex = subjectString.indexOf(searchString, position);
+  position -= searchString.length;
+  lastIndex = subjectString.indexOf(searchString, position);
 
-    return lastIndex !== -1 && lastIndex === position;
+  return lastIndex !== -1 && lastIndex === position;
 }

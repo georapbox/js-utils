@@ -20,25 +20,25 @@
  * // -> logs "Do something..." up to 5 times.
  */
 function before(n, func) {
-    'use strict';
+  'use strict';
 
-    var result;
+  var result;
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  n = parseInt(n, 10);
+
+  return function () {
+    if (--n > 0) {
+      result = func.apply(this, arguments);
     }
 
-    n = parseInt(n, 10);
+    if (n <= 1) {
+      func = undefined;
+    }
 
-    return function () {
-        if (--n > 0) {
-            result = func.apply(this, arguments);
-        }
-
-        if (n <= 1) {
-            func = undefined;
-        }
-
-        return result;
-    };
+    return result;
+  };
 }

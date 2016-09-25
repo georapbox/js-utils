@@ -20,11 +20,11 @@
  * // -> Throws TypeError.
  */
 function words(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.match(/\S+/g) || [];
+  return subjectString.match(/\S+/g) || [];
 }

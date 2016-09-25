@@ -3,7 +3,7 @@
  * The predicate is invoked with three arguments: (`value`, `index`, `array`).
  *
  * @category Array
- * @param {Array} The array to process.
+ * @param {Array} array The array to process.
  * @param {function} predicate The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `predicate` is not function but not if is `null` or `undefined`.
@@ -23,28 +23,28 @@
  * // -> [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
 function dropWhile(array, predicate) {
-    'use strict';
+  'use strict';
 
-    var index, length;
+  var index, length;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    if (predicate == null) {
-        return array;
-    }
+  if (predicate == null) {
+    return array;
+  }
 
-    if (typeof predicate !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof predicate !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    index = -1;
-    length = array.length;
+  index = -1;
+  length = array.length;
 
-    while (++index < length && predicate(array[index], index, array)) {
-        continue;
-    }
+  while (++index < length && predicate(array[index], index, array)) {
+    continue;
+  }
 
-    return array.slice(index, length);
+  return array.slice(index, length);
 }

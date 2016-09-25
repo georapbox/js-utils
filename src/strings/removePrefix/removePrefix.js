@@ -22,11 +22,11 @@
  * // -> TypeError
  */
 function removePrefix(subjectString, prefix) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string' || typeof prefix !== 'string' && prefix != null) {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string' || typeof prefix !== 'string' && prefix != null) {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.indexOf(prefix) === 0 ? subjectString.slice(prefix.length) : subjectString;
+  return subjectString.indexOf(prefix) === 0 ? subjectString.slice(prefix.length) : subjectString;
 }

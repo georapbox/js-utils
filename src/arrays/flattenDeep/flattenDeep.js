@@ -21,41 +21,41 @@
  * // -> [1, 2, 3, 4, 5, 'a', 'b', {foo: 'bar', length: 23}]
  */
 function flattenDeep(array) {
-    'use strict';
+  'use strict';
 
-    var toString = Object.prototype.toString,
-        arrayTag = '[object Array]',
-        copy, result, tail;
+  var toString = Object.prototype.toString,
+    arrayTag = '[object Array]',
+    copy, result, tail;
 
-    function isArguments(value) {
-        var argsTag = '[object Arguments]';
+  function isArguments(value) {
+    var argsTag = '[object Arguments]';
 
-        // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
-        return hasOwnProperty.call(value, 'callee') &&
-            (!propertyIsEnumerable.call(value, 'callee') || toString.call(value) === argsTag);
+    // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
+    return hasOwnProperty.call(value, 'callee') &&
+      (!propertyIsEnumerable.call(value, 'callee') || toString.call(value) === argsTag);
+  }
+
+  if (toString.call(array) !== arrayTag) {
+    throw new TypeError('Expected an array');
+  }
+
+  if (array.length === 0) {
+    return array;
+  }
+
+  result = [];
+  copy = array.slice();
+  tail = copy.pop();
+
+  do {
+    if (toString.call(tail) === arrayTag || isArguments(tail)) {
+      copy.push.apply(copy, tail);
+    } else {
+      result.push(tail);
     }
+  } while (copy.length && (tail = copy.pop()) !== undefined);
 
-    if (toString.call(array) !== arrayTag) {
-        throw new TypeError('Expected an array');
-    }
+  result.reverse();
 
-    if (array.length === 0) {
-        return array;
-    }
-
-    result = [];
-    copy = array.slice();
-    tail = copy.pop();
-
-    do {
-        if (toString.call(tail) === arrayTag || isArguments(tail)) {
-            copy.push.apply(copy, tail);
-        } else {
-            result.push(tail);
-        }
-    } while (copy.length && (tail = copy.pop()) !== undefined);
-
-    result.reverse();
-
-    return result;
+  return result;
 }

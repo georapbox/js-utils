@@ -12,26 +12,26 @@
  * // => [1, 2, 3]
  */
 function compact(array) {
-    'use strict';
+  'use strict';
 
-    var index, length, resIndex, result;
+  var index, length, resIndex, result, value;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  index = -1;
+  length = array.length;
+  resIndex = -1;
+  result = [];
+
+  while (++index < length) {
+    value = array[index];
+
+    if (value) {
+      result[++resIndex] = value;
     }
+  }
 
-    index = -1;
-    length = array.length;
-    resIndex = -1;
-    result = [];
-
-    while (++index < length) {
-        var value = array[index];
-
-        if (value) {
-            result[++resIndex] = value;
-        }
-    }
-
-    return result;
+  return result;
 }

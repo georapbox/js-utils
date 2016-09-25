@@ -19,11 +19,11 @@
  * // -> ['You can't make', 'an omelet without', 'breaking a few eggs.']
  */
 function lines(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.replace(/\r\n/g, '\n').split('\n');
+  return subjectString.replace(/\r\n/g, '\n').split('\n');
 }

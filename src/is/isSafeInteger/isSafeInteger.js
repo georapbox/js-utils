@@ -35,12 +35,12 @@
  * // -> true
  */
 function isSafeInteger(value) {
-    'use strict';
+  'use strict';
 
-    if (Number.isSafeInteger) {
-        return Number.isSafeInteger(value);
-    }
+  if (Number.isSafeInteger) {
+    return Number.isSafeInteger(value);
+  }
 
-    return typeof value === 'number' && Math.round(value) === value &&
-        -(Math.pow(2, 53) - 1) <= value && value <= Math.pow(2, 53) - 1;
+  return typeof value === 'number' && Math.round(value) === value &&
+    -(Math.pow(2, 53) - 1) <= value && value <= Math.pow(2, 53) - 1;
 }

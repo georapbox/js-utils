@@ -13,23 +13,23 @@
  * });
  */
 function whichAnimationEnd() {
-    'use strict';
+  'use strict';
 
-    var key,
-        el = document.createElement('div'),
-        animations = {
-            'animation': 'animationend',
-            'OAnimation': 'oAnimationEnd',
-            'MozAnimation': 'animationend',
-            'WebkitAnimation': 'webkitAnimationEnd'
-        };
+  var key,
+    el = document.createElement('div'),
+    animations = {
+      'animation': 'animationend',
+      'OAnimation': 'oAnimationEnd',
+      'MozAnimation': 'animationend',
+      'WebkitAnimation': 'webkitAnimationEnd'
+    };
 
-    for (key in animations) {
-        if (animations.hasOwnProperty(key)) {
-            if (el.style[key] !== undefined) {
-                el = null;
-                return animations[key];
-            }
-        }
+  for (key in animations) {
+    if ({}.hasOwnProperty.call(animations, key)) {
+      if (el.style[key] !== undefined) {
+        el = null;
+        return animations[key];
+      }
     }
+  }
 }

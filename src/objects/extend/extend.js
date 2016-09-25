@@ -28,22 +28,23 @@
  * // -> {apple: 0, banana: {weight: 52, price: 200}, cherry: 97, durian: 100}
  */
 function extend() {
-    'use strict';
+  'use strict';
 
-    for (var i = 1, l = arguments.length; i < l; i++) {
-        for (var key in arguments[i]) {
-            if ({}.hasOwnProperty.call(arguments[i], key)) {
-                if (
-                    arguments[i][key] && arguments[i][key].constructor &&
-                    arguments[i][key].constructor === Object
-                ) {
-                    arguments[0][key] = arguments[0][key] || {};
-                    extend(arguments[0][key], arguments[i][key]);
-                } else {
-                    arguments[0][key] = arguments[i][key];
-                }
-            }
+  var i, l, key;
+
+  for (i = 1, l = arguments.length; i < l; i++) {
+    for (key in arguments[i]) {
+      if ({}.hasOwnProperty.call(arguments[i], key)) {
+        if (arguments[i][key] && arguments[i][key].constructor &&
+            arguments[i][key].constructor === Object) {
+          arguments[0][key] = arguments[0][key] || {};
+          extend(arguments[0][key], arguments[i][key]);
+        } else {
+          arguments[0][key] = arguments[i][key];
         }
+      }
     }
-    return arguments[0];
+  }
+
+  return arguments[0];
 }

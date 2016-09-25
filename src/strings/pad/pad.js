@@ -23,31 +23,31 @@
  * // -> 'Hello' (len is the same as str.length)
  */
 function pad(subjectString, len, chars) {
-    'use strict';
+  'use strict';
 
-    var left, right;
+  var left, right;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (typeof len !== 'number') {
-        throw new TypeError('Expected a number');
-    }
+  if (typeof len !== 'number') {
+    throw new TypeError('Expected a number');
+  }
 
-    chars = chars || ' '; // Set default character.
+  chars = chars || ' '; // Set default character.
 
-    if (subjectString.length >= len) {
-        return subjectString;
-    }
+  if (subjectString.length >= len) {
+    return subjectString;
+  }
 
-    len = len - subjectString.length;
-    left = [];
-    right = [];
-    left.length = Math.ceil(len / 2) + 1;
-    right.length = Math.floor(len / 2) + 1;
-    left = left.join(chars);
-    right = right.join(chars);
+  len = len - subjectString.length;
+  left = [];
+  right = [];
+  left.length = Math.ceil(len / 2) + 1;
+  right.length = Math.floor(len / 2) + 1;
+  left = left.join(chars);
+  right = right.join(chars);
 
-    return left + subjectString + right;
+  return left + subjectString + right;
 }

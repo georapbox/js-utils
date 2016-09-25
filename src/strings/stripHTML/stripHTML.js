@@ -13,11 +13,11 @@
  * // -> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quos dicta, doloremque veritatis.'
  */
 function stripHTML(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.replace(/<[^>]+>/g, '');
+  return subjectString.replace(/<[^>]+>/g, '');
 }

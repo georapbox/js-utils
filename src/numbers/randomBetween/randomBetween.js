@@ -25,13 +25,13 @@
  * // -> NaN
  */
 function randomBetween(min, max, floatPoint) {
-    'use strict';
+  'use strict';
 
-    var isFloatPoint = floatPoint === true,
-        rInt;
+  var isFloatPoint = floatPoint === true,
+    rInt;
 
-    min = isFloatPoint ? parseFloat(min) : parseInt(min, 10);
-    max = isFloatPoint ? parseFloat(max) : parseInt(max, 10);
-    rInt = Math.random() * (max - min);
-    return isFloatPoint ? rInt + min : Math.floor(rInt) + min;
+  min = isFloatPoint ? parseFloat(min) : parseInt(min, 10);
+  max = isFloatPoint ? parseFloat(max) : parseInt(max, 10);
+  rInt = Math.random() * (max - min);
+  return isFloatPoint ? rInt + min : Math.floor(rInt) + min;
 }

@@ -11,23 +11,23 @@
  * // -> { 'Javascript': 10, 'PHP': 3, 'Java': 4 }
  */
 function fromPairs(array) {
-    'use strict';
+  'use strict';
 
-    var index, length, result, pair;
+  var index, length, result, pair;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    index = 0;
-    length = array.length;
-    result = {};
+  index = 0;
+  length = array.length;
+  result = {};
 
-    while (index < length) {
-        pair = array[index];
-        result[pair[0]] = pair[1];
-        index += 1;
-    }
+  while (index < length) {
+    pair = array[index];
+    result[pair[0]] = pair[1];
+    index += 1;
+  }
 
-    return result;
+  return result;
 }

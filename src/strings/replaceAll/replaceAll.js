@@ -30,22 +30,22 @@
  * // -> '_lorem_ ispum 5 dolor sit amet.'
  */
 function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
-    'use strict';
+  'use strict';
 
-    var isString = function (val) {
-        return typeof val === 'string';
-    };
+  var isString = function (val) {
+    return typeof val === 'string';
+  };
 
-    if (!isString(subjectString) || !isString(subString) || !isString(replaceString)) {
-        throw new TypeError('Expected a string');
-    }
+  if (!isString(subjectString) || !isString(subString) || !isString(replaceString)) {
+    throw new TypeError('Expected a string');
+  }
 
-    // Case insensitive lookup.
-    if (caseInsensitive === true) {
-        subString = subString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        return subjectString.replace(new RegExp(subString, 'gi'), replaceString);
-    }
+  // Case insensitive lookup.
+  if (caseInsensitive === true) {
+    subString = subString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return subjectString.replace(new RegExp(subString, 'gi'), replaceString);
+  }
 
-    // Case sensitive lookup.
-    return subjectString.split(subString).join(replaceString);
+  // Case sensitive lookup.
+  return subjectString.split(subString).join(replaceString);
 }

@@ -40,22 +40,22 @@
  * // -> Throws TypeError
  */
 function take(array, n) {
-    'use strict';
+  'use strict';
 
-    var MAX_SAFE_INTEGER;
+  var MAX_SAFE_INTEGER;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    if (typeof n !== 'number' && n != null) {
-        throw new TypeError('Expected a number');
-    }
+  if (typeof n !== 'number' && n != null) {
+    throw new TypeError('Expected a number');
+  }
 
-    MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+  MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
 
-    n = n > MAX_SAFE_INTEGER ? array.length :
-        n == null || n !== n ? 1 : Math.floor(n);
+  n = n > MAX_SAFE_INTEGER ? array.length :
+    n == null || n !== n ? 1 : Math.floor(n);
 
-    return array.slice(0, n < 0 ? 0 : n);
+  return array.slice(0, n < 0 ? 0 : n);
 }

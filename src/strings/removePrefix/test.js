@@ -1,19 +1,19 @@
-/*global removePrefix*/
+/* global removePrefix */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('String/removePrefix', function () {
-        it('removes a specific prefix from string', function () {
-            expect(removePrefix('Hello world!', 'Hello ')).toEqual('world!');
+  describe('String/removePrefix', function () {
+    it('removes a specific prefix from string', function () {
+      expect(removePrefix('Hello world!', 'Hello ')).toEqual('world!');
 
-            expect(removePrefix('Hello world!', 'world')).toEqual('Hello world!');
+      expect(removePrefix('Hello world!', 'world')).toEqual('Hello world!');
 
-            expect(removePrefix('__foobar')).toEqual('__foobar');
+      expect(removePrefix('__foobar')).toEqual('__foobar');
 
-            expect(function () {
-                return removePrefix('Hello world!', {});
-            }).toThrow();
-        });
+      expect(function () {
+        return removePrefix('Hello world!', {});
+      }).toThrow();
     });
+  });
 }());

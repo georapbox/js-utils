@@ -17,27 +17,27 @@
  * // -> 'Hello-----'
  */
 function padRight(subjectString, len, chars) {
-    'use strict';
+  'use strict';
 
-    var right;
+  var right;
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (typeof len !== 'number') {
-        throw new TypeError('Expected a number');
-    }
+  if (typeof len !== 'number') {
+    throw new TypeError('Expected a number');
+  }
 
-    chars = chars || ' '; // Set default character.
+  chars = chars || ' '; // Set default character.
 
-    if (subjectString.length >= len) {
-        return subjectString;
-    }
+  if (subjectString.length >= len) {
+    return subjectString;
+  }
 
-    right = [];
-    right.length = len - subjectString.length + 1;
-    right = right.join(chars);
+  right = [];
+  right.length = len - subjectString.length + 1;
+  right = right.join(chars);
 
-    return subjectString + right;
+  return subjectString + right;
 }

@@ -14,7 +14,7 @@ Creates a new string with all occurrences of [string1], [string2],... removed.
 | Param | Type | Description |
 | --- | --- | --- |
 | subjectString | <code>String</code> | The string to process. |
-| [...args] | <code>String</code> | The substrings to remove from the original string. |
+| [args...] | <code>String</code> | The substrings to remove from the original string. |
 
 **Example**  
 ```js

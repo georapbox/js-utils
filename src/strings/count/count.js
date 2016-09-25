@@ -31,39 +31,39 @@
  * // -> Throws TypeError
  */
 function count(subjectString, searchString, caseInsensitive) {
-    'use strict';
+  'use strict';
 
-    var n, pos, step;
+  var n, pos, step;
 
-    if (typeof subjectString !== 'string' || typeof searchString !== 'string') {
-        throw new TypeError('Expected a string');
+  if (typeof subjectString !== 'string' || typeof searchString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
+
+  if (searchString.length <= 0) {
+    return subjectString.length + 1;
+  }
+
+  // Case insensitive lookup.
+  if (caseInsensitive === true) {
+    searchString = searchString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return (subjectString.match(new RegExp(searchString, 'gi')) || []).length;
+  }
+
+  // Case sensitive lookup.
+  n = 0;
+  pos = 0;
+  step = searchString.length;
+
+  while (true) {
+    pos = subjectString.indexOf(searchString, pos);
+
+    if (pos >= 0) {
+      n += 1;
+      pos += step;
+    } else {
+      break;
     }
+  }
 
-    if (searchString.length <= 0) {
-        return subjectString.length + 1;
-    }
-
-    // Case insensitive lookup.
-    if (caseInsensitive === true) {
-        searchString = searchString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        return (subjectString.match(new RegExp(searchString, 'gi')) || []).length;
-    }
-
-    // Case sensitive lookup.
-    n = 0;
-    pos = 0;
-    step = searchString.length;
-
-    while (true) {
-        pos = subjectString.indexOf(searchString, pos);
-
-        if (pos >= 0) {
-            n += 1;
-            pos += step;
-        } else {
-            break;
-        }
-    }
-
-    return n;
+  return n;
 }

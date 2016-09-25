@@ -1,15 +1,15 @@
-/*global isNull*/
+/* global isNull */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('is/isNull', function () {
-        it('checks if a valud is null', function () {
-            expect(isNull(null)).toBe(true);
+  describe('is/isNull', function () {
+    it('checks if a valud is null', function () {
+      expect(isNull(null)).toBe(true);
 
-            expect(isNull(100)).toBe(false);
+      expect(isNull(100)).toBe(false);
 
-            expect(isNull()).toBe(false);
-        });
+      expect(isNull()).toBe(false);
     });
+  });
 }());

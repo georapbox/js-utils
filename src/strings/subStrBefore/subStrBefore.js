@@ -29,15 +29,15 @@
  * // -> Throws TypeError
  */
 function subStrBefore(subjectString, characters, last) {
-    'use strict';
+  'use strict';
 
-    var index;
+  var index;
 
-    if (typeof subjectString !== 'string' || typeof characters !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string' || typeof characters !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
+  index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
 
-    return !!~index && index !== 0 ? subjectString.substr(0, index) : subjectString;
+  return !!~index && index !== 0 ? subjectString.substr(0, index) : subjectString;
 }

@@ -38,19 +38,20 @@
  * addOne(9, 1, 4);
  * // -> 15
  */
-function partial(func /*, args...*/) {
-    'use strict';
-    var slice, args_a;
+function partial(func /* ,args... */) {
+  'use strict';
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  var slice, args_a;
 
-    slice = Array.prototype.slice;
-    args_a = slice.call(arguments, 1);
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    return function partialApplicator() {
-        var args_b = slice.call(arguments, 0);
-        return func.apply(undefined, args_a.concat(args_b));
-    };
+  slice = Array.prototype.slice;
+  args_a = slice.call(arguments, 1);
+
+  return function partialApplicator() {
+    var args_b = slice.call(arguments, 0);
+    return func.apply(undefined, args_a.concat(args_b));
+  };
 }

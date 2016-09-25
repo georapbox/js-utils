@@ -31,13 +31,13 @@
  * // -> false
  */
 function isFiniteNum(value) {
-    'use strict';
+  'use strict';
 
-    if (Number.isFinite) {
-        return Number.isFinite(value);
-    }
+  if (Number.isFinite) {
+    return Number.isFinite(value);
+  }
 
-    return value != null && typeof value === 'number' &&
-        value !== Infinity && value !== -Infinity &&
-        value === value;
+  return value != null && typeof value === 'number' &&
+    value !== Infinity && value !== -Infinity &&
+    value === value;
 }

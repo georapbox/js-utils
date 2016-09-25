@@ -29,11 +29,11 @@
  * // -> 0
  */
 function normalize(value, min, max) {
-    'use strict';
+  'use strict';
 
-    if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
-        throw new TypeError('"normalize" expects numbers as arguments');
-    }
+  if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
+    throw new TypeError('"normalize" expects numbers as arguments');
+  }
 
-    return (value - min) / (max - min);
+  return (value - min) / (max - min);
 }

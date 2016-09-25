@@ -19,31 +19,31 @@
  * window.addEventListener('resize', doSomething, false);
  */
 function debounce(func, n, immediate) {
-    'use strict';
+  'use strict';
 
-    var timeout;
+  var timeout;
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    return function () {
-        var context = this,
-            args = arguments;
+  return function () {
+    var that = this,
+      args = arguments;
 
-        var later = function () {
-            timeout = null;
-            if (!immediate) {
-                func.apply(context, args);
-            }
-        };
-
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, n || 0);
-
-        if (callNow) {
-            func.apply(context, args);
-        }
+    var later = function () {
+      timeout = null;
+      if (!immediate) {
+        func.apply(that, args);
+      }
     };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, n || 0);
+
+    if (callNow) {
+      func.apply(that, args);
+    }
+  };
 }

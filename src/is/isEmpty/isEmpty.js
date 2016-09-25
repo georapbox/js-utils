@@ -48,13 +48,13 @@
  * // -> true ('hidden' is non-enumerable)
  */
 function isEmpty(value) {
-    'use strict';
+  'use strict';
 
-    var prop;
+  var prop;
 
-    for (prop in value) {
-        return false;
-    }
+  for (prop in value) {
+    return false;
+  }
 
-    return true;
+  return true;
 }

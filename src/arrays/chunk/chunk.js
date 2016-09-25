@@ -43,34 +43,34 @@
  * // -> []
  */
 function chunk(array, size) {
-    'use strict';
+  'use strict';
 
-    var MAX_INTEGER, length, result, index, resIndex;
+  var MAX_INTEGER, length, result, index, resIndex;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    MAX_INTEGER = Number.MAX_VALUE || 1.7976931348623157e+308;
+  MAX_INTEGER = Number.MAX_VALUE || 1.7976931348623157e+308;
 
-    size = size === Infinity || size === -Infinity ?
-        (size < 0 ? -1 : 1) * MAX_INTEGER :
-        parseInt(size, 10) || 0;
+  size = size === Infinity || size === -Infinity ?
+    (size < 0 ? -1 : 1) * MAX_INTEGER :
+    parseInt(size, 10) || 0;
 
-    length = array ? array.length : 0;
+  length = array ? array.length : 0;
 
-    if (!length || size < 1) {
-        return [];
-    }
+  if (!length || size < 1) {
+    return [];
+  }
 
-    index = 0;
-    resIndex = 0;
-    result = [Math.ceil(length / size)];
+  index = 0;
+  resIndex = 0;
+  result = [Math.ceil(length / size)];
 
-    while (index < length) {
-        result[resIndex] = array.slice(index, index += size);
-        resIndex += 1;
-    }
+  while (index < length) {
+    result[resIndex] = array.slice(index, index += size);
+    resIndex += 1;
+  }
 
-    return result;
+  return result;
 }

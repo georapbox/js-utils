@@ -44,11 +44,11 @@
  * // -> true
  */
 function isArrayLikeObject(value) {
-    'use strict';
+  'use strict';
 
-    var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1,
-        len = !!value && value.length;
+  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1,
+    len = !!value && value.length;
 
-    return value != null && typeof value !== 'function' && typeof value === 'object' &&
-        typeof len === 'number' && len > -1 && len % 1 === 0 && len <= MAX_SAFE_INTEGER;
+  return value != null && typeof value !== 'function' && typeof value === 'object' &&
+    typeof len === 'number' && len > -1 && len % 1 === 0 && len <= MAX_SAFE_INTEGER;
 }

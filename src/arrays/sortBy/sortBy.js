@@ -32,26 +32,26 @@
  * // -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
  */
 function sortBy(array, field, ascending, primer) {
-    'use strict';
+  'use strict';
 
-    var key;
+  var key;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  key = function (x) {
+    return primer ? primer(x[field]) : x[field];
+  };
+
+  return array.slice().sort(function (a, b) {
+    var A = key(a),
+      B = key(b);
+
+    if (typeof ascending !== 'boolean') {
+      ascending = true;
     }
 
-    key = function (x) {
-        return primer ? primer(x[field]) : x[field];
-    };
-
-    return array.slice().sort(function (a, b) {
-        var A = key(a),
-            B = key(b);
-
-        if (typeof ascending !== 'boolean') {
-            ascending = true;
-        }
-
-        return (A < B ? -1 : A > B ? 1 : 0) * [-1, 1][+!!ascending];
-    });
+    return (A < B ? -1 : A > B ? 1 : 0) * [-1, 1][+!!ascending];
+  });
 }

@@ -34,24 +34,24 @@
  * insert(arr);
  * // -> [1, 2, 3, ['x', 'y']]
  */
-function insert(array, start /*[element1 [, element2 [, ...]]]*/) {
-    'use strict';
+function insert(array, start /* [element1 [, element2 [, ...]]] */) {
+  'use strict';
 
-    var elements, i, len;
+  var elements, i, len;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    array = array.slice(0);
-    elements = Array.prototype.slice.call(arguments, 2);
-    start = start || 0;
-    i = 0;
-    len = elements.length;
+  array = array.slice(0);
+  elements = Array.prototype.slice.call(arguments, 2);
+  start = start || 0;
+  i = 0;
+  len = elements.length;
 
-    for (; i < len; i += 1) {
-        array.splice(start++, 0, elements[i]);
-    }
+  for (; i < len; i += 1) {
+    array.splice(start++, 0, elements[i]);
+  }
 
-    return array;
+  return array;
 }

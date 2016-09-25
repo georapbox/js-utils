@@ -22,6 +22,7 @@
  * // -> false
  */
 function isHexadecimal(value) {
-    'use strict';
-    return /^[0-9a-fA-F]+$/.test(value);
+  'use strict';
+
+  return /^[0-9a-fA-F]+$/.test(value);
 }

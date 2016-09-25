@@ -41,14 +41,14 @@
  * // -> false
  */
 function isInteger(value) {
-    'use strict';
+  'use strict';
 
-    if (Number.isInteger) {
-        return Number.isInteger(value);
-    }
+  if (Number.isInteger) {
+    return Number.isInteger(value);
+  }
 
-    return (Object.prototype.toString.call(value) === '[object Number]' ||
-        typeof value === 'number') &&
-        value !== Infinity && value !== -Infinity &&
-        Math.floor(value) === value;
+  return (Object.prototype.toString.call(value) === '[object Number]' ||
+    typeof value === 'number') &&
+    value !== Infinity && value !== -Infinity &&
+    Math.floor(value) === value;
 }

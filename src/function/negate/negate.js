@@ -35,13 +35,13 @@
  * // -> [1, 3, 5]
  */
 function negate(func) {
-    'use strict';
+  'use strict';
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    return function () {
-        return !func.apply(this, arguments);
-    };
+  return function () {
+    return !func.apply(this, arguments);
+  };
 }

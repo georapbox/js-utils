@@ -2,7 +2,7 @@
  * Finds the largest of zero or more numbers.
  *
  * @category Math
- * @param {Number|Array} [...args] A set of numbers as arguments, or an array of numbers as the only argument.
+ * @param {Number|Array} [args...] A set of numbers as arguments, or an array of numbers as the only argument.
  * @return {Number} The largest number from the arguments provided.
  * @example
  *
@@ -31,11 +31,11 @@
  * // -> -Infinity
  */
 function max() {
-    'use strict';
+  'use strict';
 
-    var toString = Object.prototype.toString;
+  var toString = Object.prototype.toString;
 
-    return arguments.length === 1 && toString.call(arguments[0]) === '[object Array]' ?
-        Math.max.apply(null, arguments[0]) :
-        Math.max.apply(null, arguments);
+  return arguments.length === 1 && toString.call(arguments[0]) === '[object Array]' ?
+    Math.max.apply(null, arguments[0]) :
+    Math.max.apply(null, arguments);
 }

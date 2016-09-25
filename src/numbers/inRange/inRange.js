@@ -34,6 +34,7 @@
  * // -> false (all arguments must be of type "number")
  */
 function inRange(num, start, end) {
-    'use strict';
-    return num >= Math.min(start, end) && num < Math.max(start, end);
+  'use strict';
+
+  return num >= Math.min(start, end) && num < Math.max(start, end);
 }

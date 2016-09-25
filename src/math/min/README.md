@@ -9,7 +9,7 @@ Finds the smallest of zero or more numbers.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [...args] | <code>Number</code> &#124; <code>Array</code> | A set of numbers as arguments, or an array of numbers as the only argument. |
+| [args...] | <code>Number</code> &#124; <code>Array</code> | A set of numbers as arguments, or an array of numbers as the only argument. |
 
 **Example**  
 ```js

@@ -29,17 +29,17 @@
  * // -> 'Lorem ispum dolor sit amet.'
  */
 function subStr(subjectString, n) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (typeof n === 'number') {
-        return n >= 0 ?
-            subjectString.substr(0, n) :
-            subjectString.substr(subjectString.length + n, -n);
-    }
+  if (typeof n === 'number') {
+    return n >= 0 ?
+    subjectString.substr(0, n) :
+    subjectString.substr(subjectString.length + n, -n);
+  }
 
-    return subjectString;
+  return subjectString;
 }

@@ -28,6 +28,7 @@
  * // -> false
  */
 function isObject(value) {
-    'use strict';
-    return !!value && typeof value === 'function' || typeof value === 'object';
+  'use strict';
+
+  return !!value && typeof value === 'function' || typeof value === 'object';
 }

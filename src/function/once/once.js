@@ -19,23 +19,23 @@
  * // -> "Number is now 1"
  */
 function once(func, thisArg) {
-    'use strict';
+  'use strict';
 
-    var result;
+  var result;
 
-    function noop() {
-        return;
+  function noop() {
+    return;
+  }
+
+  if (typeof func !== 'function') {
+    return noop;
+  }
+
+  return function executeOnce() {
+    if (func) {
+      result = func.apply(thisArg || this, arguments);
+      func = null;
     }
-
-    if (typeof func !== 'function') {
-        return noop;
-    }
-
-    return function executeOnce() {
-        if (func) {
-            result = func.apply(thisArg || this, arguments);
-            func = null;
-        }
-        return result;
-    };
+    return result;
+  };
 }

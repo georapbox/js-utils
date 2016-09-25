@@ -19,8 +19,8 @@
  * // -> false
  */
 function isBoolean(value) {
-    'use strict';
+  'use strict';
 
-    return value === true || value === false ||
-        Object.prototype.toString.call(value) === '[object Boolean]';
+  return value === true || value === false ||
+      Object.prototype.toString.call(value) === '[object Boolean]';
 }

@@ -25,23 +25,23 @@
  * // -> true
  */
 function startsWith(subjectString, searchString, position) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    if (searchString == null) {
-        return false;
-    }
+  if (searchString == null) {
+    return false;
+  }
 
-    if (String.prototype.startsWith) {
-        return subjectString.startsWith(searchString, position);
-    }
+  if (String.prototype.startsWith) {
+    return subjectString.startsWith(searchString, position);
+  }
 
-    subjectString = subjectString.toString();
-    searchString = searchString.toString();
-    position = position || 0;
+  subjectString = subjectString.toString();
+  searchString = searchString.toString();
+  position = position || 0;
 
-    return subjectString.substr(position, searchString.length) === searchString;
+  return subjectString.substr(position, searchString.length) === searchString;
 }

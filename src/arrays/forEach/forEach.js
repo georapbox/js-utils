@@ -8,6 +8,7 @@
  * @param {*} [thisArg] Value to use as `this` when executing callback.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `callback` is not function.
+ * @return {undefined}
  * @example
  *
  * var arr = ['a', 'b', 'c', 'd', 'e'];
@@ -36,24 +37,24 @@
  * // =>  ['a', 'b', 'c', 'd', 'e']
  */
 function forEach(array, callback, thisArg) {
-    'use strict';
+  'use strict';
 
-    var index, len;
+  var index, len;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  if (typeof callback !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  index = 0;
+  len = array.length;
+
+  for (; index < len; index += 1) {
+    if (callback.call(thisArg, array[index], index, array) === false) {
+      return;
     }
-
-    if (typeof callback !== 'function') {
-        throw new TypeError('Expected a function');
-    }
-
-    index = 0;
-    len = array.length;
-
-    for (; index < len; index += 1) {
-        if (callback.call(thisArg, array[index], index, array) === false) {
-            return;
-        }
-    }
+  }
 }

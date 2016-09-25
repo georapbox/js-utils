@@ -48,24 +48,24 @@
  * // -> false
  */
 function isPlainObject(value) {
-    'use strict';
+  'use strict';
 
-    var hasOwn = {}.hasOwnProperty;
+  var hasOwn = {}.hasOwnProperty;
 
-    // Not plain objects:
-    // - null or undefined
-    // - Any object or value whose internal [[Class]] property is not "[object Object]"
-    // - DOM nodes
-    // - window
-    if (value == null || typeof value !== 'object' || value.nodeType || value === value.window) {
-        return false;
-    }
+  // Not plain objects:
+  // - null or undefined
+  // - Any object or value whose internal [[Class]] property is not "[object Object]"
+  // - DOM nodes
+  // - window
+  if (value == null || typeof value !== 'object' || value.nodeType || value === value.window) {
+    return false;
+  }
 
-    if (value.constructor && !hasOwn.call(value.constructor.prototype, 'isPrototypeOf')) {
-        return false;
-    }
+  if (value.constructor && !hasOwn.call(value.constructor.prototype, 'isPrototypeOf')) {
+    return false;
+  }
 
-    // If the function hasn't returned already, we're confident that
-    // `value` is a plain object, created by {} or constructed with new Object.
-    return true;
+  // If the function hasn't returned already, we're confident that
+  // `value` is a plain object, created by {} or constructed with new Object.
+  return true;
 }

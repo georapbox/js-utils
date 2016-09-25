@@ -44,26 +44,26 @@
  * // -> -1
  */
 function findIndex(array, callback) {
-    'use strict';
+  'use strict';
 
-    var index, length;
+  var index, length;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
+  if (typeof callback !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  index = -1;
+  length = array.length;
+
+  while (++index < length) {
+    if (callback(array[index], index, array) === true) {
+      return index;
     }
+  }
 
-    if (typeof callback !== 'function') {
-        throw new TypeError('Expected a function');
-    }
-
-    index = -1;
-    length = array.length;
-
-    while (++index < length) {
-        if (callback(array[index], index, array) === true) {
-            return index;
-        }
-    }
-
-    return -1;
+  return -1;
 }

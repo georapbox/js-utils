@@ -18,20 +18,20 @@
  * greetGeorge('Hello');
  * // -> "Hello George";
  */
-function partialRight(func /*, args...*/) {
-    'use strict';
+function partialRight(func /* , args... */) {
+  'use strict';
 
-    var slice, args_a;
+  var slice, args_a;
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    slice = Array.prototype.slice;
-    args_a = slice.call(arguments, 1);
+  slice = Array.prototype.slice;
+  args_a = slice.call(arguments, 1);
 
-    return function partialApplicator() {
-        var args_b = slice.call(arguments);
-        return func.apply(undefined, args_b.concat(args_a));
-    };
+  return function partialApplicator() {
+    var args_b = slice.call(arguments);
+    return func.apply(undefined, args_b.concat(args_a));
+  };
 }

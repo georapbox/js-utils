@@ -30,60 +30,61 @@
  * // -> true - Checks on an `input` element
  */
 (function (name, context, definition) {
-    'use strict';
-    if (typeof define === 'function' && define.amd) {
-        define(definition);
-    } else if (typeof module !== 'undefined' && module.exports) {
-        module.exports = definition();
-    } else {
-        context[name] = definition();
-    }
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    define(definition);
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = definition();
+  } else {
+    context[name] = definition();
+  }
 }('isEventSupported', this, function () {
-    'use strict';
+  'use strict';
 
-    var TAGNAMES = {
-        select: 'input',
-        change: 'input',
-        submit: 'form',
-        reset: 'form',
-        error: 'img',
-        load: 'img',
-        abort: 'img'
+  var TAGNAMES = {
+      select: 'input',
+      change: 'input',
+      submit: 'form',
+      reset: 'form',
+      error: 'img',
+      load: 'img',
+      abort: 'img'
     },
     cache = {};
 
-    function isEventSupported(eventName, element) {
-        var canCache = !element,
-            isSupported;
+  function isEventSupported(eventName, element) {
+    var canCache = !element,
+      isSupported;
 
-        if (typeof eventName !== 'string') {
-            throw new TypeError('Expected a string');
-        }
-
-        // Return the cached result if exists.
-        if (canCache && cache[eventName]) {
-            return cache[eventName];
-        }
-
-        element = element || document.createElement(TAGNAMES[eventName] || 'div');
-        eventName = 'on' + eventName;
-        isSupported = eventName in element;
-
-        // Old Gecko based browsers create methods on an element when an attribute
-        // with the name corresponding to a “known” event is set on that element.
-        if (!isSupported) {
-            // If it has no `setAttribute` (i.e. doesn't implement Node interface), try a generic element like `div`.
-            if (!element.setAttribute) {
-                element = document.createElement('div');
-            }
-
-            element.setAttribute(eventName, 'return;');
-            isSupported = typeof element[eventName] === 'function';
-        }
-
-        element = null;
-        return canCache ? (cache[eventName] = isSupported) : isSupported;
+    if (typeof eventName !== 'string') {
+      throw new TypeError('Expected a string');
     }
 
-    return isEventSupported;
+    // Return the cached result if exists.
+    if (canCache && cache[eventName]) {
+      return cache[eventName];
+    }
+
+    element = element || document.createElement(TAGNAMES[eventName] || 'div');
+    eventName = 'on' + eventName;
+    isSupported = eventName in element;
+
+    // Old Gecko based browsers create methods on an element when an attribute
+    // with the name corresponding to a “known” event is set on that element.
+    if (!isSupported) {
+      // If it has no `setAttribute` (i.e. doesn't implement Node interface), try a generic element like `div`.
+      if (!element.setAttribute) {
+        element = document.createElement('div');
+      }
+
+      element.setAttribute(eventName, 'return;');
+      isSupported = typeof element[eventName] === 'function';
+    }
+
+    element = null;
+
+    return canCache ? (cache[eventName] = isSupported) : isSupported;
+  }
+
+  return isEventSupported;
 }));

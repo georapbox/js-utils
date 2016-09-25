@@ -31,7 +31,7 @@
  * // -> false
  */
 function isHexColor(value) {
-    'use strict';
+  'use strict';
 
-    return /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
+  return /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
 }

@@ -39,49 +39,46 @@
  * // -> true
  */
 function includes(array, searchElement, fromIndex) {
-    'use strict';
+  'use strict';
 
-    var arrayLength, currentIndex, currentElement;
+  var arrayLength, currentIndex, currentElement;
 
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-        throw new TypeError('Expected an array');
-    }
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
 
-    arrayLength = array.length;
+  arrayLength = array.length;
 
-    if (arrayLength === 0) {
-        return false;
-    }
-
-    if (Array.prototype.includes) {
-        return array.includes(searchElement, fromIndex);
-    }
-
-    fromIndex = parseInt(fromIndex, 10) || 0;
-
-    if (fromIndex >= 0) {
-        currentIndex = fromIndex;
-    } else {
-        currentIndex = arrayLength + fromIndex;
-
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        }
-    }
-
-    while (currentIndex < arrayLength) {
-        currentElement = array[currentIndex];
-
-        if (
-            searchElement === currentElement ||
-            searchElement !== searchElement && // NaN !== NaN
-            currentElement !== currentElement  // NaN !== NaN
-        ) {
-            return true;
-        }
-
-        currentIndex += 1;
-    }
-
+  if (arrayLength === 0) {
     return false;
+  }
+
+  if (Array.prototype.includes) {
+    return array.includes(searchElement, fromIndex);
+  }
+
+  fromIndex = parseInt(fromIndex, 10) || 0;
+
+  if (fromIndex >= 0) {
+    currentIndex = fromIndex;
+  } else {
+    currentIndex = arrayLength + fromIndex;
+
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+  }
+
+  while (currentIndex < arrayLength) {
+    currentElement = array[currentIndex];
+
+    if (searchElement === currentElement ||
+        searchElement !== searchElement && currentElement !== currentElement) {
+      return true;
+    }
+
+    currentIndex += 1;
+  }
+
+  return false;
 }

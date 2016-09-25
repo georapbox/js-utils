@@ -23,11 +23,11 @@
  * // -> 360
  */
 function radiansToDegrees(radians) {
-    'use strict';
+  'use strict';
 
-    if (typeof radians !== 'number') {
-        throw new TypeError('"radians" must be a number');
-    }
+  if (typeof radians !== 'number') {
+    throw new TypeError('"radians" must be a number');
+  }
 
-    return radians * 180 / Math.PI;
+  return radians * 180 / Math.PI;
 }

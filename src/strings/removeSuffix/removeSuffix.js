@@ -22,17 +22,17 @@
  * // -> TypeError
  */
 function removeSuffix(subjectString, suffix) {
-    'use strict';
+  'use strict';
 
-    var strLen, suffixLen;
+  var strLen, suffixLen;
 
-    if (typeof subjectString !== 'string' || typeof suffix !== 'string' && suffix != null) {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string' || typeof suffix !== 'string' && suffix != null) {
+    throw new TypeError('Expected a string');
+  }
 
-    strLen = subjectString.length;
-    suffixLen = suffix ? suffix.length : 0;
+  strLen = subjectString.length;
+  suffixLen = suffix ? suffix.length : 0;
 
-    return subjectString.indexOf(suffix, strLen - suffixLen) !== -1 ?
-        subjectString.slice(0, strLen - suffixLen) : subjectString;
+  return subjectString.indexOf(suffix, strLen - suffixLen) !== -1 ?
+    subjectString.slice(0, strLen - suffixLen) : subjectString;
 }

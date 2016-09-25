@@ -1,17 +1,17 @@
-/*global partial*/
+/* global partial */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('Function/partial', function () {
-        var greet = function (greeting, name) {
-            return greeting + ' ' + name;
-        };
+  describe('Function/partial', function () {
+    var greet = function (greeting, name) {
+      return greeting + ' ' + name;
+    };
 
-        var sayHelloTo = partial(greet, 'Hello');
+    var sayHelloTo = partial(greet, 'Hello');
 
-        it('partially applied arguments are prepended to the arguments', function () {
-            expect(sayHelloTo('George')).toEqual('Hello George');
-        });
+    it('partially applied arguments are prepended to the arguments', function () {
+      expect(sayHelloTo('George')).toEqual('Hello George');
     });
+  });
 }());

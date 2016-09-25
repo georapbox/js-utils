@@ -11,11 +11,11 @@
  * // -> 'Lorem ispum dolor sit amet.'
  */
 function collapseWhitespace(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString.replace(/[\s\xa0]+/g, ' ').replace(/^\s+|\s+$/g, '');
+  return subjectString.replace(/[\s\xa0]+/g, ' ').replace(/^\s+|\s+$/g, '');
 }

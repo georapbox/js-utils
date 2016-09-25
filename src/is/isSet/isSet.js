@@ -13,8 +13,8 @@
  * // -> false
  */
 function isSet(value) {
-    'use strict';
+  'use strict';
 
-    return typeof value === 'object' &&
-        Object.prototype.toString.call(value) === '[object Set]';
+  return typeof value === 'object' &&
+    Object.prototype.toString.call(value) === '[object Set]';
 }

@@ -14,7 +14,7 @@ Truncates a string based on character count.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| string | <code>String</code> |  | The string to truncate. |
+| subjectString | <code>String</code> |  | The string to truncate. |
 | [characterCount] | <code>Number</code> |  | The number of characters the truncated string contains.        If ommitted or falsy, the initial string is returned. |
 | [delimiter] | <code>String</code> | <code>&quot;&quot;</code> | The delimiter to add at the end of the truncated string. |
 

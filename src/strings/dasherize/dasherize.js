@@ -20,15 +20,15 @@
  * // -> '-moz-background-image'
  */
 function dasherize(subjectString) {
-    'use strict';
+  'use strict';
 
-    if (typeof subjectString !== 'string') {
-        throw new TypeError('Expected a string');
-    }
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string');
+  }
 
-    return subjectString
-        .replace(/[_\s]+/g, '-')
-        .replace(/([A-Z])/g, '-$1')
-        .replace(/-+/g, '-')
-        .toLowerCase();
+  return subjectString
+    .replace(/[_\s]+/g, '-')
+    .replace(/([A-Z])/g, '-$1')
+    .replace(/-+/g, '-')
+    .toLowerCase();
 }

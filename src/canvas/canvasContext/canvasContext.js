@@ -27,88 +27,92 @@
  *   .strokeStyle();
  */
 (function (name, context, definition) {
-    'use strict';
-    if (typeof define === 'function' && define.amd) {
-        define(definition);
-    } else if (typeof module !== 'undefined' && module.exports) {
-        module.exports = definition();
-    } else {
-        context[name] = definition();
-    }
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    define(definition);
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = definition();
+  } else {
+    context[name] = definition();
+  }
 }('CanvasContext', this, function () {
-    'use strict';
+  'use strict';
 
-    /**
-     * A class that provides jQuery-style chained access to 2D context methods and properties.
-     * @param {Object|String} canvas The HTML5 canvas element or a string representing the id of a canvas element.
-     */
-    function CanvasContext(canvas) {
-        if (typeof canvas === 'string') {
-            canvas = document.getElementById(canvas);
-        }
+  var proto;
 
-        if (!(this instanceof CanvasContext)) {
-            return new CanvasContext(canvas);
-        }
-
-        this.context = canvas.getContext('2d');
-
-        if (!CanvasContext.prototype.arc) {
-            CanvasContext.setup.call(this, this.context);
-        }
+  /**
+   * A class that provides jQuery-style chained access to 2D context methods and properties.
+   * @param {Object|String} canvas The HTML5 canvas element or a string representing the id of a canvas element.
+   * @return {CanvasContext|undefined} Instance of CanvasContext or undefined.
+   */
+  function CanvasContext(canvas) {
+    if (typeof canvas === 'string') {
+      canvas = document.getElementById(canvas);
     }
 
-    var proto = CanvasContext.prototype;
+    if (!(this instanceof CanvasContext)) {
+      return new CanvasContext(canvas);
+    }
 
-    /**
-     * Creates the chainable methods and properties
-     * for each canvas method or property accordingly.
-     * @this {CanvasContext}
-     */
-    CanvasContext.setup = function () {
-        var methods = [
-            'arc', 'arcTo', 'beginPath', 'bezierCurveTo', 'clearRect', 'clip',
-            'closePath', 'drawImage', 'fill', 'fillRect', 'fillText', 'lineTo', 'moveTo',
-            'quadraticCurveTo', 'rect', 'restore', 'rotate', 'save', 'scale', 'setTransform',
-            'stroke', 'strokeRect', 'strokeText', 'transform', 'translate'
-        ];
+    this.context = canvas.getContext('2d');
 
-        var getterMethods = [
-            'createPattern', 'drawFocusRing', 'isPointInPath', 'measureText', // drawFocusRing not currently supported
-            // The following might instead be wrapped to be able to chain their child objects
-            'createImageData', 'createLinearGradient',
-            'createRadialGradient', 'getImageData', 'putImageData'
-        ];
+    if (!CanvasContext.prototype.arc) {
+      CanvasContext.setup.call(this, this.context);
+    }
+  }
 
-        var props = [
-            'canvas', 'fillStyle', 'font', 'globalAlpha', 'globalCompositeOperation',
-            'lineCap', 'lineJoin', 'lineWidth', 'miterLimit', 'shadowOffsetX', 'shadowOffsetY',
-            'shadowBlur', 'shadowColor', 'strokeStyle', 'textAlign', 'textBaseline'
-        ];
+  proto = CanvasContext.prototype;
 
-        methods.forEach(function (method) {
-            proto[method] = function () {
-                this.context[method].apply(this.context, arguments);
-                return this;
-            };
-        });
+  /**
+   * Creates the chainable methods and properties
+   * for each canvas method or property accordingly.
+   * @this {CanvasContext}
+   * @return {undefined}
+   */
+  CanvasContext.setup = function () {
+    var methods = [
+      'arc', 'arcTo', 'beginPath', 'bezierCurveTo', 'clearRect', 'clip',
+      'closePath', 'drawImage', 'fill', 'fillRect', 'fillText', 'lineTo', 'moveTo',
+      'quadraticCurveTo', 'rect', 'restore', 'rotate', 'save', 'scale', 'setTransform',
+      'stroke', 'strokeRect', 'strokeText', 'transform', 'translate'
+    ];
 
-        getterMethods.forEach(function (method) {
-            proto[method] = function () {
-                return this.context[method].apply(this.context, arguments);
-            };
-        });
+    var getterMethods = [
+      'createPattern', 'drawFocusRing', 'isPointInPath', 'measureText', // drawFocusRing not currently supported
+      // The following might instead be wrapped to be able to chain their child objects
+      'createImageData', 'createLinearGradient',
+      'createRadialGradient', 'getImageData', 'putImageData'
+    ];
 
-        props.forEach(function (prop) {
-            proto[prop] = function (value) {
-                if (value === undefined) {
-                    return this.context[prop];
-                }
-                this.context[prop] = value;
-                return this;
-            };
-        });
-    };
+    var props = [
+      'canvas', 'fillStyle', 'font', 'globalAlpha', 'globalCompositeOperation',
+      'lineCap', 'lineJoin', 'lineWidth', 'miterLimit', 'shadowOffsetX', 'shadowOffsetY',
+      'shadowBlur', 'shadowColor', 'strokeStyle', 'textAlign', 'textBaseline'
+    ];
 
-    return CanvasContext;
+    methods.forEach(function (method) {
+      proto[method] = function () {
+        this.context[method].apply(this.context, arguments);
+        return this;
+      };
+    });
+
+    getterMethods.forEach(function (method) {
+      proto[method] = function () {
+        return this.context[method].apply(this.context, arguments);
+      };
+    });
+
+    props.forEach(function (prop) {
+      proto[prop] = function (value) {
+        if (value === undefined) {
+          return this.context[prop];
+        }
+        this.context[prop] = value;
+        return this;
+      };
+    });
+  };
+
+  return CanvasContext;
 }));

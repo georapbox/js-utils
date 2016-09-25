@@ -1,15 +1,15 @@
-/*global isExisty*/
+/* global isExisty */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    describe('is/isExisty', function () {
-        it('checks if a value is existy', function () {
-            expect(isExisty()).toBe(false);
+  describe('is/isExisty', function () {
+    it('checks if a value is existy', function () {
+      expect(isExisty()).toBe(false);
 
-            expect(isExisty('Foo')).toBe(true);
+      expect(isExisty('Foo')).toBe(true);
 
-            expect(isExisty(null)).toBe(false);
-        });
+      expect(isExisty(null)).toBe(false);
     });
+  });
 }());

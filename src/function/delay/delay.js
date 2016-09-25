@@ -17,20 +17,20 @@
  * var delayed = delay(say, 2000, 'hello', 'world');
  * // -> Logs 'hello world' after two seconds.
  */
-function delay(func, wait /*, args...*/) {
-    'use strict';
+function delay(func, wait /* ,args... */) {
+  'use strict';
 
-    var slice, args;
+  var slice, args;
 
-    if (typeof func !== 'function') {
-        throw new TypeError('Expected a function');
-    }
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
 
-    slice = Array.prototype.slice;
-    wait = wait || 0;
-    args = slice.call(arguments, typeof wait === 'number' ? 2 : 1);
+  slice = Array.prototype.slice;
+  wait = wait || 0;
+  args = slice.call(arguments, typeof wait === 'number' ? 2 : 1);
 
-    return setTimeout(function () {
-        func.apply(undefined, args);
-    }, wait);
+  return setTimeout(function () {
+    func.apply(undefined, args);
+  }, wait);
 }
