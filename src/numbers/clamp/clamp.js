@@ -33,30 +33,30 @@ function clamp(number, lower, upper) {
   'use strict';
 
   if (typeof number !== 'number' ||
-      typeof lower !== 'number' && lower !== undefined ||
-      typeof upper !== 'number' && upper !== undefined) {
+      typeof lower !== 'number' && typeof lower !== 'undefined' ||
+      typeof upper !== 'number' && typeof upper !== 'undefined') {
     throw new TypeError('Expected a number');
   }
 
-  if (upper === undefined) {
+  if (typeof upper === 'undefined') {
     upper = lower;
-    lower = undefined;
+    lower = void 0;
   }
 
-  if (upper !== undefined) {
+  if (typeof upper !== 'undefined') {
     upper = upper === upper ? upper : 0;
   }
 
-  if (lower !== undefined) {
+  if (typeof lower !== 'undefined') {
     lower = lower === lower ? lower : 0;
   }
 
   if (number === number) {
-    if (upper !== undefined) {
+    if (typeof upper !== 'undefined') {
       number = number <= upper ? number : upper;
     }
 
-    if (lower !== undefined) {
+    if (typeof lower !== 'undefined') {
       number = number >= lower ? number : lower;
     }
   }

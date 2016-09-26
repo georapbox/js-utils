@@ -105,7 +105,7 @@
 
     props.forEach(function (prop) {
       proto[prop] = function (value) {
-        if (value === undefined) {
+        if (typeof value === 'undefined') {
           return this.context[prop];
         }
         this.context[prop] = value;

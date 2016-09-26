@@ -17,7 +17,8 @@
     "docs": "grunt buildDocs",
     "serve": "http-server -o -s -p $npm_package_config_port",
     "jsdoc2md": "jsdoc2md",
-    "postinstall": "grunt postinstall"
+    "postinstall": "grunt postinstall",
+    "lint": "eslint src/**/*.js"
   },
   "devDependencies": {
     "chalk": "~1.1.3",

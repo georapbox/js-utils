@@ -36,7 +36,7 @@ function before(n, func) {
     }
 
     if (n <= 1) {
-      func = undefined;
+      func = void 0;
     }
 
     return result;

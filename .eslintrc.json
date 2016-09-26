@@ -193,6 +193,9 @@
     // disallow initializing variables to undefined
     "no-undef-init": "warn",
 
+    // disallow the use of undefined as an identifier
+    "no-undefined": "warn",
+
     // disallow var declarations from shadowing variables in the outer scope
     "no-shadow": ["error", {"hoist": "functions"}],
 
