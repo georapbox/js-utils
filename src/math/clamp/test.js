@@ -3,19 +3,17 @@
 (function () {
   'use strict';
 
-  describe('Number/clamp', function () {
+  describe('Math/clamp', function () {
     it('clamps number within the inclusive lower and upper bounds', function () {
       expect(clamp(10, -5, 5)).toEqual(5);
 
       expect(clamp(-10, -5, 5)).toEqual(-5);
 
-      expect(clamp(10, -5)).toEqual(-5);
+      expect(clamp(-15, 0, 100)).toEqual(0);
 
-      expect(clamp(10, 5)).toEqual(5);
+      expect(clamp(120, 0, 100)).toEqual(100);
 
-      expect(clamp(3, 4, 5)).toEqual(4);
-
-      expect(clamp(10, NaN, NaN)).toEqual(0);
+      expect(clamp(10, NaN, NaN)).toEqual(NaN);
 
       expect(function () {
         return clamp(10, '-5', '5');
