@@ -6,6 +6,7 @@ it to a numerical value that the normalized value points to.
 
 **Kind**: global function  
 **Returns**: <code>Number</code> - The value that the normalized value points to.  
+**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If any of the arguments passed is not a number.
