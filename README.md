@@ -107,6 +107,7 @@ A collection of standalone javascript utility functions.
 |--------|-----------|
 |[average](src/math/average)|Calculates the average of a set of numbers.|
 |[degreesToRadians](src/math/degreesToRadians)|Converts degrees to radians.|
+|[lerp](src/math/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
 |[normalize](src/math/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
 |[max](src/math/max)|Returns the largest of zero or more numbers.|
 |[min](src/math/min)|Returns the smallest of zero or more numbers.|
