@@ -15,6 +15,8 @@
 
       expect(clamp(10, NaN, NaN)).toEqual(NaN);
 
+      expect(clamp(120, 100, 0)).toEqual(100);
+
       expect(function () {
         return clamp(10, '-5', '5');
       }).toThrow();
