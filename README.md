@@ -96,7 +96,6 @@ A collection of standalone javascript utility functions.
 ## Number
 |Name|Description|
 |--------|-----------|
-|[inRange](src/numbers/inRange)|Checks if a number is between start and up to but not including, end.|
 |[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands seperator.|
 |[randomBetween](src/numbers/randomBetween)|Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.|
 
@@ -107,6 +106,7 @@ A collection of standalone javascript utility functions.
 |[average](src/math/average)|Calculates the average of a set of numbers.|
 |[clamp](src/math/clamp)|Clamps number within the inclusive lower and upper bounds.|
 |[degreesToRadians](src/math/degreesToRadians)|Converts degrees to radians.|
+|[inRange](src/math/inRange)|Checks if a number is between `min` and `max` including.|
 |[lerp](src/math/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
 |[normalize](src/math/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
 |[max](src/math/max)|Returns the largest of zero or more numbers.|
