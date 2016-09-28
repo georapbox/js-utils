@@ -2,7 +2,7 @@
 
 ## inRange(value, min, max) ⇒ <code>Boolean</code>
 Checks if a number is between `min` and 'max' values including.
-If `min` is greater than `max` the parameters are swapped to support negative ranges.
+If `min` is greater than `max` the parameters are swapped to support inverted ranges.
 
 **Kind**: global function  
 **Returns**: <code>Boolean</code> - True if number is in the range; otherwise false.  

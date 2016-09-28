@@ -1,8 +1,8 @@
 <a name="clamp"></a>
 
 ## clamp(value, min, max) ⇒ <code>Number</code>
-Clamps number within the inclusive `min` and `max` bounds,
-making sure it does not go beyond them on either side.
+Clamps number within the inclusive `min` and `max` bounds, making sure it does not go beyond them on either side.
+If `min` is greater than `max` the parameters are swapped to support inverted ranges.
 
 **Kind**: global function  
 **Returns**: <code>Number</code> - The clamped number.  

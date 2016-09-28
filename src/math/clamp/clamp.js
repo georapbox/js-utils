@@ -1,6 +1,7 @@
 /**
  * Clamps number within the inclusive `min` and `max` bounds,
  * making sure it does not go beyond them on either side.
+ * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
  *
  * @category Math
  * @param {Number} value The number to clamp.
