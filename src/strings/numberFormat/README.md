@@ -1,20 +1,20 @@
 <a name="numberFormat"></a>
 
-## numberFormat(nNumber, [nDecimals], [sDecimalSeperator], [sThousandSeperator]) ⇒ <code>String</code>
+## numberFormat(nNumber, [nDecimals], [sDecimalSeparator], [sThousandSeparator]) ⇒ <code>String</code>
 Formats a number based on the number of decimal points,
-the decimal seperator and the thousands seperator.
+the decimal separator and the thousands separator.
 If a string is provided as the first argument, will try to convert it.
 
 **Kind**: global function  
 **Returns**: <code>String</code> - The formatted number as a string.  
-**Category**: Number  
+**Category**: String  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | nNumber | <code>Number</code> |  | The number to format. |
 | [nDecimals] | <code>Number</code> | <code>0</code> | The number of decimal points the formatted number will have. |
-| [sDecimalSeperator] | <code>String</code> | <code>&#x27;.&#x27;</code> | The decimal seperator character(s). |
-| [sThousandSeperator] | <code>String</code> | <code>&#x27;,&#x27;</code> | The thousands seperator character(s). |
+| [sDecimalSeparator] | <code>String</code> | <code>&#x27;.&#x27;</code> | The decimal separator character(s). |
+| [sThousandSeparator] | <code>String</code> | <code>&#x27;,&#x27;</code> | The thousands separator character(s). |
 
 **Example**  
 ```js
