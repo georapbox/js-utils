@@ -66,6 +66,7 @@ A collection of standalone javascript utility functions.
 |[endsWith](src/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](src/strings/escapeHTML)|Escapes a HTML string.|
 |[lines](src/strings/lines)|Returns an array with the lines of a a string.|
+|[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
 |[pad](src/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
 |[padLeft](src/strings/padLeft)|Pad `subjectString` on **left** side to the given `len`, with optional `chars` defaulting to a space.|
 |[padRight](src/strings/padRight)|Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.|
@@ -91,27 +92,6 @@ A collection of standalone javascript utility functions.
 |[urlSearchParams](src/strings/urlSearchParams)|Factory to access the URL search parameters.|
 |[words](src/strings/words)|Splits string into an array of its words.|
 |[wrapHTML](src/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
-
-
-## Number
-|Name|Description|
-|--------|-----------|
-|[numberFormat](src/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands seperator.|
-|[randomBetween](src/numbers/randomBetween)|Returns a pseudo-random number (integer or floating-point) between a min (inclusive) and a max (exclusive) value.|
-
-
-## Math
-|Name|Description|
-|--------|-----------|
-|[average](src/math/average)|Calculates the average of a set of numbers.|
-|[clamp](src/math/clamp)|Clamps number within the inclusive lower and upper bounds.|
-|[degreesToRadians](src/math/degreesToRadians)|Converts degrees to radians.|
-|[inRange](src/math/inRange)|Checks if a number is between `min` and `max` including.|
-|[lerp](src/math/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
-|[normalize](src/math/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
-|[max](src/math/max)|Returns the largest of zero or more numbers.|
-|[min](src/math/min)|Returns the smallest of zero or more numbers.|
-|[radiansToDegrees](src/math/radiansToDegrees)|Converts radians to degrees.|
 
 
 ## Object
@@ -181,6 +161,22 @@ A collection of standalone javascript utility functions.
 |[isUndefined](src/is/isUndefined)|Checks if `value` is undefined.|
 |[isWeakMap](src/is/isWeakMap)|Checks if `value` is classified as a WeakMap object.|
 |[isWeakSet](src/is/isWeakSet)|Checks if `value` is classified as a WeakSet object.|
+
+
+## Math
+|Name|Description|
+|--------|-----------|
+|[average](src/math/average)|Calculates the average of a set of numbers.|
+|[clamp](src/math/clamp)|Clamps number within the inclusive lower and upper bounds.|
+|[degreesToRadians](src/math/degreesToRadians)|Converts degrees to radians.|
+|[inRange](src/math/inRange)|Checks if a number is between `min` and `max` including.|
+|[lerp](src/math/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
+|[normalize](src/math/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
+|[max](src/math/max)|Returns the largest of zero or more numbers.|
+|[min](src/math/min)|Returns the smallest of zero or more numbers.|
+|[radiansToDegrees](src/math/radiansToDegrees)|Converts radians to degrees.|
+|[randomInt](src/math/randomInt)|Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.|
+|[randomRange](src/math/randomRange)|Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.|
 
 
 ## DOM
