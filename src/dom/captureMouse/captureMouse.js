@@ -6,7 +6,7 @@
  * @param {function} [callback] A callback function to be executed on mouse move taking the `position` object as argument.
  * @throws {TypeError} If `element` is not a DOM element.
  * @throws {TypeError} If `callback` is defined but is not a function.
- * @return {Object} An object representing the position (x, y) of mouse.
+ * @return {Object} An object containing the position object (x, y) of mouse and an unbind method.
  * @example
  *
  * var element = document.getElementById('some_element');
