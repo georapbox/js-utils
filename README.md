@@ -177,6 +177,7 @@ A collection of standalone javascript utility functions.
 |[radiansToDegrees](src/math/radiansToDegrees)|Converts radians to degrees.|
 |[randomInt](src/math/randomInt)|Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.|
 |[randomRange](src/math/randomRange)|Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.|
+|[roundToPlaces](src/math/roundToPlaces)|Rounds a number to a number of desired places.|
 
 
 ## DOM
