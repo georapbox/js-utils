@@ -175,6 +175,7 @@ A collection of standalone javascript utility functions.
 |[max](src/math/max)|Returns the largest of zero or more numbers.|
 |[min](src/math/min)|Returns the smallest of zero or more numbers.|
 |[radiansToDegrees](src/math/radiansToDegrees)|Converts radians to degrees.|
+|[randomDist](src/math/randomDist)|Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.|
 |[randomInt](src/math/randomInt)|Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.|
 |[randomRange](src/math/randomRange)|Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.|
 |[roundToNearest](src/math/roundToNearest)|Rounds a number to the nearest multiple of a value provided.|
