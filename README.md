@@ -204,6 +204,7 @@ A collection of standalone javascript utility functions.
 ## Misc
 |Name|Description|
 |--------|-----------|
+|[colorToRGB](src/misc/colorToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
 |[cookie](src/misc/cookie)|Create, read and delete cookies.|
 |[poll](src/misc/poll)|Periodically check for application's status updates.|
 
