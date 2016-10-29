@@ -206,6 +206,7 @@ A collection of standalone javascript utility functions.
 |--------|-----------|
 |[colorToRGB](src/misc/colorToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
 |[cookie](src/misc/cookie)|Create, read and delete cookies.|
+|[parseColor](src/misc/parseColor)|Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.|
 |[poll](src/misc/poll)|Periodically check for application's status updates.|
 
 
