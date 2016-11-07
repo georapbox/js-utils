@@ -34,10 +34,10 @@ isPlainObject(Object.create(null));
 // -> true
 
 isPlainObject(Object.create({}));
-// -> true
+// -> false
 
 isPlainObject(Object.create({foo: 'bar'}));
-// -> true
+// -> false
 
 isPlainObject([1, 2, 3]);
 // -> false

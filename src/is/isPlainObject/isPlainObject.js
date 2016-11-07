@@ -4,7 +4,7 @@
  * @category Is
  * @NOTE Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
  * @param {*} value The value to check.
- * @return {Boolean} True if "value" is a plain object, else false.
+ * @return {Boolean} True if `value` is a plain object, else false.
  * @example
  *
  * function Foo() {
@@ -27,10 +27,10 @@
  * // -> true
  *
  * isPlainObject(Object.create({}));
- * // -> true
+ * // -> false
  *
  * isPlainObject(Object.create({foo: 'bar'}));
- * // -> true
+ * // -> false
  *
  * isPlainObject([1, 2, 3]);
  * // -> false
@@ -47,25 +47,28 @@
  * isPlainObject('lorem ipsum');
  * // -> false
  */
+
 function isPlainObject(value) {
   'use strict';
 
-  var hasOwn = {}.hasOwnProperty;
+  var hasOwn = {}.hasOwnProperty,
+    toString = {}.toString,
+    proto, ctor;
 
-  // Not plain objects:
-  // - null or undefined
-  // - Any object or value whose internal [[Class]] property is not "[object Object]"
-  // - DOM nodes
-  // - window
-  if (value == null || typeof value !== 'object' || value.nodeType || value === value.window) {
+  // Detect obvious negatives.
+  // Use toString to catch host objects.
+  if (!value || toString.call(value) !== '[object Object]') {
     return false;
   }
 
-  if (value.constructor && !hasOwn.call(value.constructor.prototype, 'isPrototypeOf')) {
-    return false;
+  proto = Object.getPrototypeOf(value);
+
+  // Objects with no prototype (e.g., `Object.create(null)`) are plain.
+  if (!proto) {
+    return true;
   }
 
-  // If the function hasn't returned already, we're confident that
-  // `value` is a plain object, created by {} or constructed with new Object.
-  return true;
+  // Objects with prototype are plain if they were constructed by a global Object function.
+  ctor = hasOwn.call(proto, 'constructor') && proto.constructor;
+  return typeof ctor === 'function' && hasOwn.toString.call(ctor) === hasOwn.toString.call(Object);
 }
