@@ -13,288 +13,288 @@
     /* Possible Errors */
 
     // disallow assignment operators in conditional expressions
-    "no-cond-assign": "error",
+    "no-cond-assign": 2,
 
     // disallow the use of console
-    "no-console": "warn",
+    "no-console": 1,
 
     // disallow constant expressions in conditions
-    "no-constant-condition": "error",
+    "no-constant-condition": 2,
 
     // disallow the use of debugger
-    "no-debugger": "error",
+    "no-debugger": 2,
 
     // disallow duplicate arguments in function definitions
-    "no-dupe-args": "error",
+    "no-dupe-args": 2,
 
     // disallow duplicate keys in object literals
-    "no-dupe-keys": "error",
+    "no-dupe-keys": 2,
 
     // disallow duplicate case labels
-    "no-duplicate-case": "error",
+    "no-duplicate-case": 2,
 
     // disallow empty character classes in regular expressions
-    "no-empty-character-class": "error",
+    "no-empty-character-class": 2,
 
     // disallow empty block statements
-    "no-empty": ["warn", {"allowEmptyCatch": true}],
+    "no-empty": [1, {"allowEmptyCatch": true}],
 
     // disallow reassigning exceptions in catch clauses
-    "no-ex-assign": "error",
+    "no-ex-assign": 2,
 
     // disallow unnecessary boolean casts
-    "no-extra-boolean-cast": "error",
+    "no-extra-boolean-cast": 2,
 
     // disallow unnecessary parentheses
-    "no-extra-parens": "error",
+    "no-extra-parens": 2,
 
     // disallow unnecessary semicolons
-    "no-extra-semi": "error",
+    "no-extra-semi": 2,
 
     // disallow reassigning function declarations
-    "no-func-assign": "error",
+    "no-func-assign": 2,
 
     // disallow function or var declarations in nested blocks
-    "no-inner-declarations": ["error", "both"],
+    "no-inner-declarations": [2, "both"],
 
     // disallow invalid regular expression strings in RegExp constructors
-    "no-invalid-regexp": "error",
+    "no-invalid-regexp": 2,
 
     // disallow irregular whitespace outside of strings and comments
-    "no-irregular-whitespace": ["error", {"skipStrings": true, "skipComments": true, "skipRegExps": true, "skipTemplates": true}],
+    "no-irregular-whitespace": [2, {"skipStrings": true, "skipComments": true, "skipRegExps": true, "skipTemplates": true}],
 
     // disallow negating the left operand in in expressions
-    "no-negated-in-lhs": "error",
+    "no-negated-in-lhs": 2,
 
     // disallow calling global object properties as functions
-    "no-obj-calls": "error",
+    "no-obj-calls": 2,
 
     // disallow use of Object.prototypes builtins directly
-    "no-prototype-builtins": "error",
+    "no-prototype-builtins": 2,
 
     //disallow multiple spaces in regular expression literals
-    "no-regex-spaces": "error",
+    "no-regex-spaces": 2,
 
     // disallow sparse arrays
-    "no-sparse-arrays": "warn",
+    "no-sparse-arrays": 1,
 
     // disallow confusing multiline expressions
-    "no-unexpected-multiline": "warn",
+    "no-unexpected-multiline": 1,
 
     // disallow unreachable code after return, throw, continue, and break statements
-    "no-unreachable": "error",
+    "no-unreachable": 2,
 
     // disallow control flow statements in finally blocks
-    "no-unsafe-finally": "warn",
+    "no-unsafe-finally": 1,
 
     // require calls to isNaN() when checking for NaN
-    "use-isnan": "error",
+    "use-isnan": 2,
 
     // enforce valid JSDoc comments
-    "valid-jsdoc": "warn",
+    "valid-jsdoc": 1,
 
     // enforce comparing typeof expressions against valid strings
-    "valid-typeof": "error",
+    "valid-typeof": 2,
 
     /* Best Practices */
 
     // Enforces getter/setter pairs in objects
-    "accessor-pairs": "warn",
+    "accessor-pairs": 1,
 
     // Enforces return statements in callbacks of array’s methods
-    "array-callback-return": "warn",
+    "array-callback-return": 1,
 
     // enforce the use of variables within the scope they are defined
-    "block-scoped-var": "warn",
+    "block-scoped-var": 1,
 
     // enforce consistent brace style for all control statements
-    "curly": "warn",
+    "curly": 1,
 
     // require default cases in switch statements
-    "default-case": "warn",
+    "default-case": 1,
 
     // enforce consistent newlines before and after dots
-    "dot-notation": "warn",
+    "dot-notation": 1,
 
     // require the use of === and !==
-    "eqeqeq": ["error", "allow-null"],
+    "eqeqeq": [2, "allow-null"],
 
     // require for-in loops to include an if statement
-    "guard-for-in": "warn",
+    "guard-for-in": 1,
 
     // disallow the use of alert, confirm, and prompt
-    "no-alert": "warn",
+    "no-alert": 1,
 
     // disallow the use of arguments.caller or arguments.callee
-    "no-caller": "error",
+    "no-caller": 2,
 
     // disallow the use of eval()
-    "no-eval": "error",
+    "no-eval": 2,
 
     // disallow extending native types
-    "no-extend-native": "warn",
+    "no-extend-native": 1,
 
     // disallow unnecessary calls to .bind()
-    "no-extra-bind": "warn",
+    "no-extra-bind": 1,
 
     // disallow leading or trailing decimal points in numeric literals
-    "no-floating-decimal": "error",
+    "no-floating-decimal": 2,
 
     // disallow var and named function declarations in the global scope
-    "no-implicit-globals": "warn",
+    "no-implicit-globals": 1,
 
     // disallow the use of eval()-like methods
-    "no-implied-eval": "error",
+    "no-implied-eval": 2,
 
     // disallow unnecessary nested blocks
-    "no-lone-blocks": "warn",
+    "no-lone-blocks": 1,
 
     // disallow function declarations and expressions inside loop statements
-    "no-loop-func": "warn",
+    "no-loop-func": 1,
 
     // disallow multiple spaces
-    "no-multi-spaces": "warn",
+    "no-multi-spaces": 1,
 
     // disallow var redeclaration
-    "no-redeclare": ["error", {"builtinGlobals": true}],
+    "no-redeclare": [2, {"builtinGlobals": true}],
 
     // disallow comma operators
-    "no-sequences": "warn",
+    "no-sequences": 1,
 
     // require var declarations be placed at the top of their containing scope
-    "vars-on-top": "warn",
+    "vars-on-top": 1,
 
     // require parentheses around immediate function invocations
-    "wrap-iife": "warn",
+    "wrap-iife": 1,
 
     // require or disallow “Yoda” conditions
-    "yoda": "warn",
+    "yoda": 1,
 
     /* Strict Mode */
-    "strict": ["warn", "function"],
+    "strict": [1, "function"],
 
     /* Variables */
 
     // disallow deleting variables
-    "no-delete-var": "error",
+    "no-delete-var": 2,
 
     // disallow specified global variables
-    "no-restricted-globals": "error",
+    "no-restricted-globals": 2,
 
     // disallow unused variables
-    "no-unused-vars": "warn",
+    "no-unused-vars": 1,
 
     // disallow the use of variables before they are defined
-    "no-use-before-define": "error",
+    "no-use-before-define": 2,
 
     // Disallow Use of undefined Variable
-    "no-undef": "error",
+    "no-undef": 2,
 
     // disallow initializing variables to undefined
-    "no-undef-init": "warn",
+    "no-undef-init": 1,
 
     // disallow the use of undefined as an identifier
-    "no-undefined": "warn",
+    "no-undefined": 1,
 
     // disallow var declarations from shadowing variables in the outer scope
-    "no-shadow": ["error", {"hoist": "functions"}],
+    "no-shadow": [2, {"hoist": "functions"}],
 
     /* Stylistic Issues */
 
     // enforce consistent spacing inside array brackets
-    "array-bracket-spacing": ["warn", "never"],
+    "array-bracket-spacing": [1, "never"],
 
     // enforce consistent spacing inside single-line blocks
-    "block-spacing": ["warn", "never"],
+    "block-spacing": [1, "never"],
 
     // enforce consistent brace style for blocks
-    "brace-style": ["warn", "1tbs", {"allowSingleLine": true}],
+    "brace-style": [1, "1tbs", {"allowSingleLine": true}],
 
     // require or disallow trailing commas,
-    "comma-dangle": "warn",
+    "comma-dangle": 1,
 
     // enforce consistent spacing before and after commas
-    "comma-spacing": ["warn", {"before": false, "after": true}],
+    "comma-spacing": [1, {"before": false, "after": true}],
 
     // enforce consistent comma style
-    "comma-style": ["warn", "last"],
+    "comma-style": [1, "last"],
 
     // enforce consistent spacing inside computed property brackets
-    "computed-property-spacing": ["warn", "never"],
+    "computed-property-spacing": [1, "never"],
 
     // enforce consistent naming when capturing the current execution context
-    "consistent-this": ["warn", "that"],
+    "consistent-this": [1, "that"],
 
     // enforce at least one newline at the end of files
-    "eol-last": "warn",
+    "eol-last": 1,
 
     // disallow specified identifiers
-    "id-blacklist": ["warn"],
+    "id-blacklist": [1],
 
     // enforce consistent indentation
-    "indent": ["warn", 2, {"SwitchCase": 1}],
+    "indent": [1, 2, {"SwitchCase": 1}],
 
     // enforce consistent spacing between keys and values in object literal properties
-    "key-spacing": ["warn", {"afterColon": true}],
+    "key-spacing": [1, {"afterColon": true}],
 
     // enforce consistent spacing before and after keywords
-    "keyword-spacing": "warn",
+    "keyword-spacing": 1,
 
     // enforce a maximum line length
-    "max-len": ["warn", 100, 2, {"ignoreComments": true, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
+    "max-len": [1, 100, 2, {"ignoreComments": true, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
 
     // enforce a maximum number of parameters in function definitions
-    "max-params": ["warn", 6],
+    "max-params": [1, 6],
 
     // require constructor function names to begin with a capital letter
-    "new-cap": "warn",
+    "new-cap": 1,
 
     // require parentheses when invoking a constructor with no arguments
-    "new-parens": "warn",
+    "new-parens": 1,
 
     // disallow mixed spaces and tabs for indentation
-    "no-mixed-spaces-and-tabs": "warn",
+    "no-mixed-spaces-and-tabs": 1,
 
     // disallow multiple empty lines
-    "no-multiple-empty-lines": ["warn", {"max": 1, "maxBOF": 0, "maxEOF": 1}],
+    "no-multiple-empty-lines": [1, {"max": 1, "maxBOF": 0, "maxEOF": 1}],
 
     // disallow spacing between function identifiers and their applications
-    "no-spaced-func": "warn",
+    "no-spaced-func": 1,
 
     // disallow trailing whitespace at the end of lines
-    "no-trailing-spaces": "warn",
+    "no-trailing-spaces": 1,
 
     // disallow ternary operators when simpler alternatives exist
-    "no-unneeded-ternary": "warn",
+    "no-unneeded-ternary": 1,
 
     // disallow whitespace before properties
-    "no-whitespace-before-property": "warn",
+    "no-whitespace-before-property": 1,
 
     // enforce consistent spacing inside braces
-    "object-curly-spacing": ["warn", "never"],
+    "object-curly-spacing": [1, "never"],
 
     // enforce the consistent use of either backticks, double, or single quotes
-    "quotes": ["warn", "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+    "quotes": [1, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
 
     // enforce consistent spacing before and after semicolons
-    "semi-spacing": ["warn", {"before": false, "after": true}],
+    "semi-spacing": [1, {"before": false, "after": true}],
 
     // require or disallow semicolons instead of ASI
-    "semi": "warn",
+    "semi": 1,
 
     // enforce consistent spacing before blocks
-    "space-before-blocks": "warn",
+    "space-before-blocks": 1,
 
     // enforce consistent spacing before function definition opening parenthesis
-    "space-before-function-paren": ["warn", {"anonymous": "always", "named": "never"}],
+    "space-before-function-paren": [1, {"anonymous": "always", "named": "never"}],
 
     // enforce consistent spacing inside parentheses
-    "space-in-parens": ["warn", "never"],
+    "space-in-parens": [1, "never"],
 
     // require spacing around operators
-    "space-infix-ops": "warn",
+    "space-infix-ops": 1,
 
     // enforce consistent spacing after the // or /* in a comment
-    "spaced-comment": ["warn", "always"]
+    "spaced-comment": [1, "always"]
   }
 }
