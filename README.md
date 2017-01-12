@@ -30,6 +30,7 @@ A collection of standalone javascript utility functions.
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
 |[shuffle](src/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
 |[reverse](src/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
+|[tail](src/arrays/tail)|Gets all but the first element of array.|
 |[take](src/arrays/take)|Creates a slice of array with `n` items taken from the beginning.|
 |[takeRight](src/arrays/takeRight)|Creates a slice of array with `n` items taken from the end.|
 |[takeRightWhile](src/arrays/takeRightWhile)|Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.|
