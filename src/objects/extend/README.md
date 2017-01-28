@@ -67,7 +67,6 @@ extend(true, object1, object2);
 // -> {"apple": 0, "banana": {"weight": 52, "price": 200}, "cherry": 97, "durian": 100}
 
 // EXAMPLE 3
-// Merge defaults and options, without modifying the defaults.
 var defaults = {validate: false, limit: 5, name: "foo"};
 var options = {validate: true, name: "bar"};
 
