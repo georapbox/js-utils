@@ -78,7 +78,20 @@
   }
 
   function isPlainObject(value) {
-    return !!value && typeof value === 'object' && value.constructor === Object;
+    var proto, ctor;
+
+    if (!value || toString.call(value) !== '[object Object]') {
+      return false;
+    }
+
+    proto = Object.getPrototypeOf(value);
+
+    if (!proto) {
+      return true;
+    }
+
+    ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+    return typeof ctor === 'function' && hasOwnProperty.toString.call(ctor) === hasOwnProperty.toString.call(Object);
   }
 
   function arrayIndexOf(array, value) {
