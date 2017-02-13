@@ -2,7 +2,7 @@
 
 ## curry(func, [n]) ⇒ <code>function</code>
 Transforms a function of N arguments in such a way that it can
-be called as a chain of N functions each with a single argument.
+be called as a chain of N functions each with a single argument (arity: 1).
 
 **Kind**: global function  
 **Returns**: <code>function</code> - A new, curried function.  
