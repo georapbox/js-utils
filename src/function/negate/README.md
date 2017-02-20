@@ -14,6 +14,7 @@ The `func` predicate is invoked with the this binding and arguments of the creat
 | Param | Type | Description |
 | --- | --- | --- |
 | func | <code>function</code> | The predicate to negate. |
+| [thisArg] | <code>\*</code> | Value to use as <code>this</code> when executing <code>func</code>. |
 
 **Example**  
 ```js

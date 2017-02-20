@@ -4,6 +4,7 @@
  *
  * @category Function
  * @param {function} func The predicate to negate.
+ * @param {*} [thisArg] Value to use as `this` when executing `func`.
  * @throws {TypeError} If `func` is not function.
  * @return {function} Returns the new function.
  * @example
@@ -34,7 +35,7 @@
  * var odds = numbers.filter(negate(isEven));
  * // -> [1, 3, 5]
  */
-function negate(func) {
+function negate(func, thisArg) {
   'use strict';
 
   if (typeof func !== 'function') {
@@ -42,6 +43,6 @@ function negate(func) {
   }
 
   return function () {
-    return !func.apply(this, arguments);
+    return !func.apply(thisArg, arguments);
   };
 }
