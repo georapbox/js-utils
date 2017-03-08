@@ -59,5 +59,31 @@
 
       expect(settings).toEqual({validate: true, limit: 5, name: 'bar'});
     });
+
+    it('Recursively merge array values', function () {
+      var o1 = {
+        name: 'John',
+        items: [
+          {a: 'aaa'},
+          {b: 'bbb'}
+        ]
+      };
+
+      var o2 = {
+        name: 'George',
+        items: [
+          {c: 'ccc'}
+        ]
+      };
+
+      var res = extend(true, {}, o1, o2);
+
+      expect(res.items.length).toBe(2);
+
+      expect(res.items).toEqual([
+        {a: 'aaa', c: 'ccc'},
+        {b: 'bbb'}
+      ]);
+    });
   });
 }());
