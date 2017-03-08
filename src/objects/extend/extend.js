@@ -73,6 +73,7 @@
  */
 (function (name, context, definition) {
   'use strict';
+
   if (typeof define === 'function' && define.amd) {
     define(definition);
   } else if (typeof module !== 'undefined' && module.exports) {
@@ -83,32 +84,37 @@
 }('extend', this, function () {
   'use strict';
 
-  function type(obj) {
-    var checker = {},
-      types = 'Boolean Number String Function Array Date RegExp Object'.split(' '),
-      index;
+  var toString = Object.prototype.toString,
+    hasOwnProp = Object.prototype.hasOwnProperty,
+    OBJECT_TAG = '[object Object]',
+    ARRAY_TAG = '[object Array]';
 
-    for (index in types) {
-      checker['[object ' + types[index] + ']'] = types[index].toLowerCase();
-    }
-
-    return obj == null
-      ? String(obj)
-      : checker[Object.prototype.toString.call(obj)] || 'object';
+  function isUndefined(value) {
+    return typeof value === 'undefined';
   }
 
-  function isFunction(obj) {
-    return type(obj) === 'function';
+  function isBoolean(value) {
+    return typeof value === 'boolean';
+  }
+
+  function isFunction(value) {
+    return typeof value === 'function';
+  }
+
+  function isArray(value) {
+    return toString.call(value) === ARRAY_TAG;
+  }
+
+  function isObject(value) {
+    return typeof value === 'object';
   }
 
   function isPlainObject(value) {
-    var hasOwn = {}.hasOwnProperty,
-      toString = {}.toString,
-      proto, ctor;
+    var proto, ctor;
 
     // Detect obvious negatives.
     // Use toString to catch host objects.
-    if (!value || toString.call(value) !== '[object Object]') {
+    if (!value || toString.call(value) !== OBJECT_TAG) {
       return false;
     }
 
@@ -120,12 +126,8 @@
     }
 
     // Objects with prototype are plain if they were constructed by a global Object function.
-    ctor = hasOwn.call(proto, 'constructor') && proto.constructor;
-    return typeof ctor === 'function' && hasOwn.toString.call(ctor) === hasOwn.toString.call(Object);
-  }
-
-  function isArray(obj) {
-    return type(obj) === 'array';
+    ctor = hasOwnProp.call(proto, 'constructor') && proto.constructor;
+    return isFunction(ctor) && hasOwnProp.toString.call(ctor) === hasOwnProp.toString.call(Object);
   }
 
   return function extend() {
@@ -136,7 +138,7 @@
       deep = false;
 
     // Handle a deep copy situation
-    if (typeof target === 'boolean') {
+    if (isBoolean(target)) {
       deep = target;
       target = arguments[1] || {};
       // skip the boolean and the target
@@ -144,7 +146,7 @@
     }
 
     // Handle case when target is a string or something (possible in deep copy)
-    if (typeof target !== 'object' && !isFunction(target)) {
+    if (!isObject(target) && !isFunction(target)) {
       target = {};
     }
 
@@ -174,7 +176,7 @@
             target[name] = extend(deep, clone, copy);
 
           // Don't bring in undefined values
-          } else if (typeof copy !== 'undefined') {
+          } else if (!isUndefined(copy)) {
             target[name] = copy;
           }
         }
