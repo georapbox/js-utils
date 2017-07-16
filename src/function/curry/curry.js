@@ -53,25 +53,21 @@
 function curry(func, n) {
   'use strict';
 
-  var slice, initialArguments, argumentsLength;
-
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function');
   }
 
-  slice = Array.prototype.slice;
-  initialArguments = slice.call(arguments, 2);
-  argumentsLength = typeof n !== 'number' ? func.length : n;
+  return function curried() {
+    var slice = Array.prototype.slice;
+    var argumentsLength = typeof n !== 'number' ? func.length : n;
+    var args = slice.call(arguments);
 
-  function curried(args) {
     if (args.length >= argumentsLength) {
-      return func.apply(null, args);
+      return func.apply(this, args);
     }
 
     return function () {
-      return curried(args.concat(slice.call(arguments)));
+      return curried.apply(this, args.concat(slice.call(arguments)));
     };
-  }
-
-  return curried(initialArguments);
+  };
 }
