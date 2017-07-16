@@ -1,6 +1,6 @@
 <a name="curry"></a>
 
-## curry(func, [n]) ⇒ <code>function</code>
+## curry(func, [arity=func.lenght]) ⇒ <code>function</code>
 Transforms a function of N arguments in such a way that it can
 be called as a chain of N functions each with a single argument (arity: 1).
 
@@ -14,7 +14,7 @@ be called as a chain of N functions each with a single argument (arity: 1).
 | Param | Type | Description |
 | --- | --- | --- |
 | func | <code>function</code> | The function to curry. |
-| [n] | <code>Number</code> | The number of expected arguments in case that the function's arity cannot be automatically determined. |
+| [arity=func.lenght] | <code>Number</code> | The arity of `func`. |
 
 **Example**  
 ```js

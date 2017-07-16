@@ -4,7 +4,7 @@
  *
  * @category Function
  * @param {function} func The function to curry.
- * @param {Number} [n] The number of expected arguments in case that the function's arity cannot be automatically determined.
+ * @param {Number} [arity=func.lenght] the arity of `func`.
  * @throws {TypeError} If `func` is not function.
  * @return {Function} A new, curried function.
  * @example
@@ -50,7 +50,7 @@
  * b(5);
  * // -> 35
  */
-function curry(func, n) {
+function curry(func, arity) {
   'use strict';
 
   if (typeof func !== 'function') {
@@ -59,10 +59,10 @@ function curry(func, n) {
 
   return function curried() {
     var slice = Array.prototype.slice;
-    var arity, args;
+    var args;
 
-    n = n && Math.floor(Number(n));
-    arity = typeof n !== 'number' ? func.length : n;
+    arity = arity && Math.floor(Number(arity));
+    arity = typeof arity !== 'number' ? func.length : arity;
     args = slice.call(arguments);
 
     if (args.length >= arity) {
