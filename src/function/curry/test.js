@@ -5,12 +5,12 @@
 
   describe('Function/curry', function () {
     var sum = function (a, b, c) {
-        return a + b + c;
-      },
-      curriedSum = curry(sum, 3),
-      sumTwo = curriedSum(2),
-      sumThree = sumTwo(3),
-      finalSum = sumThree(5);
+      return a + b + c;
+    };
+    var curriedSum = curry(sum, 3);
+    var sumTwo = curriedSum(2);
+    var sumThree = sumTwo(3);
+    var finalSum = sumThree(5);
 
     it('should return a curried function until all expected arguments are satisfied', function () {
       expect(typeof sumTwo).toBe('function');
@@ -27,6 +27,15 @@
 
       expect(milesToKm.call({dps: 0}, 35)).toBe('57');
       expect(milesToKm.call({dps: 2}, 35)).toBe('56.70');
+    });
+
+    it('ensures that user specified float point arity is correctly converted', function () {
+      var add = function (a, b) {
+        return a + b;
+      };
+      var curriedAdd = curry(add, '2.6');
+
+      expect(curriedAdd(2)(5)).toBe(7);
     });
 
     it('should throw error if supply more arguments than expected', function () {

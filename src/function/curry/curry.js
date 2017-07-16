@@ -59,10 +59,13 @@ function curry(func, n) {
 
   return function curried() {
     var slice = Array.prototype.slice;
-    var argumentsLength = typeof n !== 'number' ? func.length : n;
-    var args = slice.call(arguments);
+    var arity, args;
 
-    if (args.length >= argumentsLength) {
+    n = n && Math.floor(Number(n));
+    arity = typeof n !== 'number' ? func.length : n;
+    args = slice.call(arguments);
+
+    if (args.length >= arity) {
       return func.apply(this, args);
     }
 
