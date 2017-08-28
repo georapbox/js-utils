@@ -210,6 +210,7 @@ A collection of standalone javascript utility functions.
 |[cookie](src/misc/cookie)|Create, read and delete cookies.|
 |[parseColor](src/misc/parseColor)|Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.|
 |[poll](src/misc/poll)|Periodically check for application's status updates.|
+|[Timer](src/misc/Timer)|Simple class to create and manage timers.|
 
 
 ## Installation
