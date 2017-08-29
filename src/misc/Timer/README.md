@@ -9,9 +9,9 @@ Simple class to create and manage timers.
 * [Timer](#Timer)
     * [new Timer([duration], [callback])](#new_Timer_new)
     * [.time()](#Timer+time) ⇒ <code>Object</code>
-    * [.start(shouldReset)](#Timer+start) ⇒ <code>[Timer](#Timer)</code>
+    * [.start([shouldReset])](#Timer+start) ⇒ <code>[Timer](#Timer)</code>
     * [.stop()](#Timer+stop) ⇒ <code>[Timer](#Timer)</code>
-    * [.reset(shouldStop)](#Timer+reset) ⇒ <code>[Timer](#Timer)</code>
+    * [.reset([shouldStop])](#Timer+reset) ⇒ <code>[Timer](#Timer)</code>
 
 <a name="new_Timer_new"></a>
 
@@ -35,7 +35,7 @@ If no duration is specified during initialization, the remaining time will alway
 **this**: <code>{Timer}</code>  
 <a name="Timer+start"></a>
 
-### timer.start(shouldReset) ⇒ <code>[Timer](#Timer)</code>
+### timer.start([shouldReset]) ⇒ <code>[Timer](#Timer)</code>
 Start the timer.
 If the timer instance has been already started, the timer will just resume.
 
@@ -45,7 +45,7 @@ If the timer instance has been already started, the timer will just resume.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| shouldReset | <code>Boolean</code> | If set to true, the timer will reset to initial specified duration. |
+| [shouldReset] | <code>Boolean</code> | If set to true, the timer will reset to initial specified duration. |
 
 <a name="Timer+stop"></a>
 
@@ -57,7 +57,7 @@ Stop/Pause the timer.
 **this**: <code>{Timer}</code>  
 <a name="Timer+reset"></a>
 
-### timer.reset(shouldStop) ⇒ <code>[Timer](#Timer)</code>
+### timer.reset([shouldStop]) ⇒ <code>[Timer](#Timer)</code>
 Resets the timer to initial specified duration.
 
 **Kind**: instance method of <code>[Timer](#Timer)</code>  
@@ -66,4 +66,4 @@ Resets the timer to initial specified duration.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| shouldStop | <code>Boolean</code> | If set to true, the timer will be forced to stop; otherwise will reset and continue running. |
+| [shouldStop] | <code>Boolean</code> | If set to true, the timer will be forced to stop; otherwise will reset and continue running. |

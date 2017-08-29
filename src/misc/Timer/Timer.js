@@ -69,7 +69,7 @@
    *
    * @memberof Timer
    * @this {Timer}
-   * @param {Boolean} shouldReset If set to true, the timer will reset to initial specified duration.
+   * @param {Boolean} [shouldReset] If set to true, the timer will reset to initial specified duration.
    * @return {Timer} The Timer instance.
    */
   Timer.prototype.start = function (shouldReset) {
@@ -102,7 +102,7 @@
    *
    * @memberof Timer
    * @this {Timer}
-   * @param {Boolean} shouldStop If set to true, the timer will be forced to stop; otherwise will reset and continue running.
+   * @param {Boolean} [shouldStop] If set to true, the timer will be forced to stop; otherwise will reset and continue running.
    * @return {Timer} The Timer instance.
    */
   Timer.prototype.reset = function (shouldStop) {
