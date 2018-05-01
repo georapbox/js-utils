@@ -202,7 +202,7 @@
         window[vendors[x] + 'CancelRequestAnimationFrame'];
     }
 
-    if (window.requestAnimationFrame) {
+    if (!window.requestAnimationFrame) {
       window.requestAnimationFrame = function (callback) {
         var currTime = new Date().getTime(),
           timeToCall = Math.max(0, 16 - (currTime - lastTime)),
