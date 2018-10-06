@@ -41,19 +41,6 @@ A collection of standalone javascript utility functions.
 |[zip](src/arrays/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 
 
-|[Polyfills](src/arrays/polyfills) - Collection of array polyfills.|Description|
-|------------------------------------------------------------------|-----------|
-|[Array.from()](src/arrays/polyfills#arrayfrom)|The Array.from() method creates a new Array instance from an array-like or iterable object.|
-|[Array.prototype.every()](src/arrays/polyfills#arrayprototypeevery)|Tests whether all elements in the array pass the test implemented by the provided function.|
-|[Array.prototype.filter()](src/arrays/polyfills#arrayprototypefilter)|Creates a new array with all elements that pass the test implemented by the provided function.|
-|[Array.prototype.forEach()](src/arrays/polyfills#arrayprototypeforeach)|Executes a provided function once per array element.|
-|[Array.prototype.indexOf()](src/arrays/polyfills#arrayprototypeindexof)|Returns the first index at which a given element can be found in the array, or -1 if it is not present.|
-|[Array.prototype.lastIndexOf()](src/arrays/polyfills#arrayprototypelastindexof)|Returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.|
-|[Array.prototype.map()](src/arrays/polyfills#arrayprototypemap)|Creates a new array with the results of calling a provided function on every element in this array.|
-|[Array.prototype.some()](src/arrays/polyfills#arrayprototypesome)|Tests whether some element in the array passes the test implemented by the provided function.|
-|[Array.prototype.reduce()](src/arrays/polyfills#arrayprototypereduce)|Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.|
-
-
 ## String
 |Name|Description|
 |--------|-----------|
