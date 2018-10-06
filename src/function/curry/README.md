@@ -1,6 +1,6 @@
 <a name="curry"></a>
 
-## curry(func, [arity=func.lenght]) ⇒ <code>function</code>
+## curry(func, [arity]) ⇒ <code>function</code>
 Transforms a function of N arguments in such a way that it can
 be called as a chain of N functions each with a single argument (arity: 1).
 
@@ -11,25 +11,28 @@ be called as a chain of N functions each with a single argument (arity: 1).
 
 - <code>TypeError</code> If `func` is not function.
 
-| Param | Type | Description |
-| --- | --- | --- |
-| func | <code>function</code> | The function to curry. |
-| [arity=func.lenght] | <code>Number</code> | The arity of `func`. |
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| func | <code>function</code> |  | The function to curry. |
+| [arity] | <code>Number</code> | <code>func.lenght</code> | The arity of `func`. Useful in cases that arity cannot be determined by `func.length`. As of ES2015 when a function has a rest parameter or at least one parameter with default value, the `func.length` is not properly calculated. |
 
 **Example**  
 ```js
 // Example 1
-var babyAnimals = function (a1, a2) {
-  return 'I love ' + a1 + ' and ' + a2 + '.';
+var animalPairs = function (a1, a2) {
+  return a1 + ' and ' + a2;
 };
 
-var babyKoalas = curry(babyAnimals, 'koalas');
+var curriedAnimalPairs = curry(animalPairs);
 
-babyKoalas('elephants');
-// -> "I love koalas and elephants."
+var koalas = curriedAnimalPairs('Koalas');
 
-babyKoalas('lions');
-// ->  "I love koalas and lions."
+koalas('Pandas');
+// -> "Koalas and Pandas"
+
+koalas('Elephants');
+// ->  "Koalas and Elephants"
 
 // Example 2
 var sequence = function (start, end) {

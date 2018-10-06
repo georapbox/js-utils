@@ -4,23 +4,28 @@
  *
  * @category Function
  * @param {function} func The function to curry.
- * @param {Number} [arity=func.lenght] the arity of `func`.
+ * @param {Number} [arity=func.lenght] The arity of `func`.
+ * Useful in cases that arity cannot be determined by `func.length`.
+ * As of ES2015 when a function has a rest parameter or at least one
+ * parameter with default value, the `func.length` is not properly calculated.
  * @throws {TypeError} If `func` is not function.
  * @return {Function} A new, curried function.
  * @example
  *
  * // Example 1
- * var babyAnimals = function (a1, a2) {
- *   return 'I love ' + a1 + ' and ' + a2 + '.';
+ * var animalPairs = function (a1, a2) {
+ *   return a1 + ' and ' + a2;
  * };
  *
- * var babyKoalas = curry(babyAnimals, 'koalas');
+ * var curriedAnimalPairs = curry(animalPairs);
  *
- * babyKoalas('elephants');
- * // -> "I love koalas and elephants."
+ * var koalas = curriedAnimalPairs('Koalas');
  *
- * babyKoalas('lions');
- * // ->  "I love koalas and lions."
+ * koalas('Pandas');
+ * // -> "Koalas and Pandas"
+ *
+ * koalas('Elephants');
+ * // ->  "Koalas and Elephants"
  *
  * // Example 2
  * var sequence = function (start, end) {
