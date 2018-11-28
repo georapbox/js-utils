@@ -42,6 +42,7 @@ A collection of standalone javascript utility functions.
 
 
 ## String
+
 |Name|Description|
 |--------|-----------|
 |[camelCase](src/strings/camelCase)|Converts a string to camel case, removing any non alphanumeric characters.|
@@ -83,6 +84,7 @@ A collection of standalone javascript utility functions.
 
 
 ## Object
+
 |Name|Description|
 |--------|-----------|
 |[extend](src/objects/extend)|Merge the contents of two or more objects together into the first object.|
@@ -93,6 +95,7 @@ A collection of standalone javascript utility functions.
 
 
 ## Function
+
 |Name|Description|
 |--------|-----------|
 |[after](src/function/after)|Creates a function that invokes `func` once it's called `n` or more times.|
@@ -110,6 +113,7 @@ A collection of standalone javascript utility functions.
 
 
 ## Is
+
 [is](src/is/is) - A minimal API for the `Is` category functions below that provides `not`, `all` and `any` interfaces.<br>
 <small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
 
@@ -153,6 +157,7 @@ A collection of standalone javascript utility functions.
 
 
 ## Math
+
 |Name|Description|
 |--------|-----------|
 |[average](src/math/average)|Calculates the average of a set of numbers.|
@@ -172,6 +177,7 @@ A collection of standalone javascript utility functions.
 
 
 ## DOM
+
 |Name|Description|
 |--------|-----------|
 |[captureMouse](src/dom/captureMouse)|Captures the mouse position on a specific HTML element.|
@@ -184,6 +190,7 @@ A collection of standalone javascript utility functions.
 
 
 ## HTML5 Canvas
+
 |Name|Description|
 |--------|-----------|
 |[CanvasContext](src/canvas/canvasContext)|A class that provides jQuery-style chained access to 2D context methods and properties.|
@@ -191,6 +198,7 @@ A collection of standalone javascript utility functions.
 
 
 ## Misc
+
 |Name|Description|
 |--------|-----------|
 |[colorToRGB](src/misc/colorToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
@@ -199,30 +207,16 @@ A collection of standalone javascript utility functions.
 |[poll](src/misc/poll)|Periodically check for application's status updates.|
 |[Timer](src/misc/Timer)|Simple class to create and manage timers.|
 
-
 ## Installation
+
 - To clone the repository, run: `git clone https://github.com/georapbox/jsEssentials.git`
-- To install dev dependancies, (from the root folder of the project) run: `$ npm install`<br>
-(Required to build the documentation, run the tests, etc)
-
-
-## Build the documentation
-From the root folder of the project, run: `$ npm run docs`.
-This will create a `docs` folder to the root of the project, containing all `README` files converted to HTML documents.
-
+- To install dev dependancies, (from the root folder of the project) run: `$ npm install`
 
 ## Run the tests
+
 From the root folder of the project, run: `$ npm run test`.
 Apart from the results in terminal, this will create a `tests-reporter` folder to the root of the project, that contains an HTML document with the tests results.
 
+## License
 
-## Serve
-From the root folder of the project:
-
-- Start local server with default port (3333):
-
-  `$ npm run serve`
-
-- Start local server with a different port:
-
-  `$ npm run serve --jsEssentials:port=YOUR_PORT`
+[The MIT License (MIT)](https://georapbox.mit-license.org/@2015)

@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-    - 5.7.1
+  - 10.14.0
 branches:
   only:
     - master
 before_script:
-    - npm install
+  - npm install
 script:
-    - npm run test
+  - npm run test
