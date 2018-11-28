@@ -114,9 +114,6 @@ A collection of standalone javascript utility functions.
 
 ## Is
 
-[is](src/is/is) - A minimal API for the `Is` category functions below that provides `not`, `all` and `any` interfaces.<br>
-<small>(Inspired by the [is.js](https://github.com/arasatasaygin/is.js) library)</small>
-
 |Name|Description|
 |--------|-----------|
 |[isArray](src/is/isArray)|Checks if `value` is an array.|
