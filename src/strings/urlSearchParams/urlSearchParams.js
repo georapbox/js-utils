@@ -92,7 +92,7 @@ function urlSearchParams(searchString) {
 
   searchString = isValidQuery ? searchString.split('+').join(' ') : '';
 
-  while (tokens = regex.exec(searchString)) {
+  while (tokens = regex.exec(searchString)) { // eslint-disable-line no-cond-assign
     tempObj = {};
     tempObj[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
     queryParams.push(tempObj);
