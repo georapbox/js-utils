@@ -47,28 +47,25 @@
  * isPlainObject('lorem ipsum');
  * // -> false
  */
-
 function isPlainObject(value) {
   'use strict';
 
-  var hasOwn = {}.hasOwnProperty,
-    toString = {}.toString,
-    proto, ctor;
+  var toString = Object.prototype.toString;
+  var proto;
 
-  // Detect obvious negatives.
-  // Use toString to catch host objects.
-  if (!value || toString.call(value) !== '[object Object]') {
+  if (typeof value !== 'object' || value === null || toString.call(value) !== '[object Object]') {
     return false;
   }
 
-  proto = Object.getPrototypeOf(value);
-
-  // Objects with no prototype (e.g., `Object.create(null)`) are plain.
-  if (!proto) {
+  if (Object.getPrototypeOf(value) === null) {
     return true;
   }
 
-  // Objects with prototype are plain if they were constructed by a global Object function.
-  ctor = hasOwn.call(proto, 'constructor') && proto.constructor;
-  return typeof ctor === 'function' && hasOwn.toString.call(ctor) === hasOwn.toString.call(Object);
+  proto = value;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(value) === proto;
 }
