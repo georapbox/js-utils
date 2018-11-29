@@ -138,7 +138,7 @@ A collection of standalone javascript utility functions.
 |[isNonExisty](src/is/isNonExisty)|Checks if `value` is non existy (null or undefined).|
 |[isNull](src/is/isNull)|Checks if `value` is null.|
 |[isNumber](src/is/isNumber)|Checks if `value` is a number.|
-|[isObject](src/is/isObject)|Checks if `value` is a plain object, i.e. is constructed by the built-in Object constructor and inherits directly from `Object.prototype` or `null`.|
+|[isObject](src/is/isObject)|Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
 |[isOdd](src/is/isOdd)|Checks if `value` is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
 |[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
