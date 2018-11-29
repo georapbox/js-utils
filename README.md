@@ -139,6 +139,7 @@ A collection of standalone javascript utility functions.
 |[isNull](src/is/isNull)|Checks if `value` is null.|
 |[isNumber](src/is/isNumber)|Checks if `value` is a number.|
 |[isObject](src/is/isObject)|Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
+|[isObjectLike](src/is/isObjectLike)|Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
 |[isOdd](src/is/isOdd)|Checks if `value` is odd.|
 |[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
 |[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
