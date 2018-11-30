@@ -4,7 +4,7 @@
   'use strict';
 
   describe('is/isString', function () {
-    it('checks if a valud is string', function () {
+    it('checks if a value is string', function () {
       expect(isString('404')).toBe(true);
 
       expect(isString(404)).toBe(false);

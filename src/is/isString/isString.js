@@ -21,5 +21,5 @@
 function isString(value) {
   'use strict';
 
-  return !!value && Object.prototype.toString.call(value) === '[object String]';
+  return value != null && Object.prototype.toString.call(value) === '[object String]';
 }
