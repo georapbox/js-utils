@@ -22,14 +22,17 @@ isEmail('a.nonymous@example.com';
 isEmail('name+tag@example.com';
 // -> true
 
+isEmail('name\@tag@example.com');
+// -> true
+
 isEmail('name@tag@example.com');
-// -> false
+// -> true
 
 isEmail('spaces are allowed@example.com');
-// -> false
+// -> true
 
 isEmail("!#$%&'+-/=.?^`{|}~@[1.0.0.127]");
-// -> false
+// -> true
 
 isEmail("!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]");
 // -> false

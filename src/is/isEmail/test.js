@@ -11,16 +11,15 @@
 
       expect(isEmail('name+tag@example.com')).toBe(true);
 
-      expect(isEmail('name\@tag@example.com')).toBe(false);
+      expect(isEmail('name\@tag@example.com')).toBe(true);
 
-      expect(isEmail('name@tag@example.com')).toBe(false);
+      expect(isEmail('name@tag@example.com')).toBe(true);
 
-      expect(isEmail('spaces are allowed@example.com')).toBe(false);
+      expect(isEmail('spaces are allowed@example.com')).toBe(true);
 
-      expect(isEmail("!#$%&'+-/=.?^`{|}~@[1.0.0.127]")).toBe(false);
+      expect(isEmail("!#$%&'+-/=.?^`{|}~@[1.0.0.127]")).toBe(true);
 
-      expect(isEmail("!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]"))
-        .toBe(false);
+      expect(isEmail("!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]")).toBe(false);
     });
   });
 }());
