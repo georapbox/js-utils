@@ -141,7 +141,7 @@ A collection of standalone javascript utility functions.
 |[isObject](src/is/isObject)|Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
 |[isObjectLike](src/is/isObjectLike)|Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
 |[isOdd](src/is/isOdd)|Checks if `value` is odd.|
-|[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using "{}" or "new Object")|
+|[isPlainObject](src/is/isPlainObject)|Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).|
 |[isRegexp](src/is/isRegexp)|Checks if `value` is a regular expression.|
 |[isSafeInteger](src/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
 |[isSet](src/is/isSet)|Checks if `value` is classified as a Set object.|

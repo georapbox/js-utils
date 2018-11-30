@@ -1,7 +1,7 @@
 <a name="isPlainObject"></a>
 
 ## isPlainObject(value) ⇒ <code>Boolean</code>
-Checks if `value` is a plain object (created using "{}" or "new Object").
+Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).
 
 **Kind**: global function  
 **Returns**: <code>Boolean</code> - True if "value" is a plain object, else false.  
