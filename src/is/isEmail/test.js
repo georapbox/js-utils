@@ -3,7 +3,7 @@
 (function () {
   'use strict';
 
-  describe('is/isemail', function () {
+  describe('is/isEmail', function () {
     it('should validate various strings as emails', function () {
       expect(isEmail('me@example.com')).toBe(true);
 
