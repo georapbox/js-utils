@@ -5,9 +5,15 @@
 
   describe('is/isFunction', function () {
     it('checks if a value is function', function () {
-      expect(isFunction(function test() {})).toEqual(true);
+      function noop() {}
 
-      expect(isFunction({foo: 'bar'})).toEqual(false);
+      expect(isFunction(noop)).toBe(true);
+
+      expect(isFunction({foo: 'bar'})).toBe(false);
+
+      expect(isFunction([1, 2, 3])).toBe(false);
+
+      expect(isFunction(noop())).toBe(false);
     });
   });
 }());
