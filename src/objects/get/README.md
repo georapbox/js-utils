@@ -1,6 +1,6 @@
 <a name="get"></a>
 
-## get(object, path, defaultValue) ⇒ <code>\*</code>
+## get(object, path, [defaultValue]) ⇒ <code>\*</code>
 
 Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.
 
