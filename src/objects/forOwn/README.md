@@ -1,31 +1,33 @@
-### [Objects](../) > forOwn
+<a name="forOwn"></a>
 
-```js
-forOwn(object [, callback])
-```
+## forOwn(obj, [callback]) ⇒ <code>Object</code>
 
-Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)
+Iterates over own enumerable properties of an object, executing the callback for each property.
+The callback is invoked with three arguments (value, key, object)he callback for each property.
 
-#### Arguments
+**Kind**: global function  
+**Returns**: <code>Object</code> - The original object.  
+**Category**: Object
 
-- `object` _(object)_: The object to iterate over.
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | The object to iterate over. |
+| [callback] | <code>function</code> | The function called per iteration. |
 
-- `[callback]` _(function)_: The function called per iteration.
-
-#### Example
+**Example**
 ```js
 function Shape() {
-	this.x = 0;
-	this.y = 0;
+  this.x = 0;
+  this.y = 0;
 }
 
 Shape.prototype.move = function (x, y) {
-	this.x += x;
-	this.y += y;
+  this.x += x;
+  this.y += y;
 };
 
 forOwn(new Shape(), function (value, key, obj) {
-	console.log(key);
-	// -> "x", "y"
+  console.log(key);
+   // -> "x", "y"
 });
 ```
