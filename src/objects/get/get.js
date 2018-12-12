@@ -3,7 +3,7 @@
  *
  * @category Object
  * @param {Object} object The object to query.
- * @param {String} path The path of the property to get.
+ * @param {String|Array} path The path of the property to get.
  * @param {*} [defaultValue] The value returned for `undefined` resolved values.
  * @returns {*} Returns the resolved value.
  * @example
@@ -13,6 +13,9 @@
  * get(object, 'a.0.b.c');
  * // -> 3
  *
+ * get(object, ['a', '0', 'b', 'c']);
+ * // -> 3
+ *
  * get(object, 'a.b.c');
  * // -> undefined
  *
@@ -20,22 +23,35 @@
  * // -> 'DEFAULT'
  */
 function get(object, path, defaultValue) {
-  'use strinct';
+  var result, index, pathLength, key, sKey;
+  var toString = Object.prototype.toString;
+  var isSymbol = function (val) {
+    // https://stackoverflow.com/questions/46479169/check-if-value-is-a-symbol-in-javascript
+    return typeof val === 'symbol' || typeof val === 'object' && toString.call(val) === '[object Symbol]';
+  }
 
-  var result, index, length;
+  if (typeof path === 'string') {
+    path = path.split('.');
+  }
 
-  if (typeof path !== 'string' || object == null || typeof object !== 'object') {
+  if (toString.call(path) !== '[object Array]' || object == null || typeof object !== 'object') {
     result = defaultValue;
   } else {
-    path = path.split('.');
     index = 0;
-    length = path.length;
+    pathLength = path.length;
 
-    while (object != null && index < length) {
-      object = object[path[index++]];
+    while (object != null && index < pathLength) {
+      key = path[index++];
+
+      if (typeof key !== 'string' && !isSymbol(key)) {
+        sKey = key + '';
+        key = sKey === '0' && 1 / key === -Infinity ? '-0' : sKey;
+      }
+
+      object = object[key];
     }
 
-    result = index && index === length ? object : defaultValue;
+    result = index && index === pathLength ? object : defaultValue;
   }
 
   return result;

@@ -11,7 +11,7 @@ Gets the `value` at path of `object`. If the resolved value is `undefined`, the 
 | Param | Type | Description |
 | --- | --- | --- |
 | object | <code>Object</code> | The object to query. |
-| path | <code>String</code> | The path of the property to get. |
+| path | <code>String|Array</code> | The path of the property to get. |
 | [defaultValue] | <code>\*</code> | The value returned for `undefined` resolved values. |
 
 **Example**
@@ -19,6 +19,9 @@ Gets the `value` at path of `object`. If the resolved value is `undefined`, the 
 var object = { 'a': [{ 'b': { 'c': 3 } }] };
 
 get(object, 'a.0.b.c');
+// -> 3
+
+get(object, ['a', '0', 'b', 'c']);
 // -> 3
 
 get(object, 'a.b.c');
