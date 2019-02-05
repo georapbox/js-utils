@@ -24,6 +24,7 @@ A collection of standalone javascript utility functions.
 |[flattenDeep](src/arrays/flattenDeep)|Flattens array recursively.|
 |[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
 |[fromPairs](src/arrays/fromPairs)|Creates an object composed from key-value pairs.|
+|[groupBy](src/arrays/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
 |[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
 |[intersection](src/arrays/intersection)|Creates an array of unique values that are included in all given arrays.|
 |[insert](src/arrays/insert)|Inserts elements to array at specific index.|
