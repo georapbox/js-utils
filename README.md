@@ -127,7 +127,6 @@ A collection of standalone javascript utility functions.
 |[isEmail](src/is/isEmail)|Validates a string as email address.|
 |[isEmpty](src/is/isEmpty)|Checks if `value` is empty.|
 |[isEven](src/is/isEven)|Checks if `value` is even.|
-|[isExisty](src/is/isExisty)|Checks if `value` is existy (Not null or undefined).|
 |[isFalse](src/is/isFalse)|Checks if `value` is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if `value` is falsy.|
 |[isFiniteNum](src/is/isFiniteNum)|Checks if `value` is a finite number.|
@@ -137,8 +136,8 @@ A collection of standalone javascript utility functions.
 |[isInteger](src/is/isInteger)|Checks if `value` is an integer number.|
 |[isMap](src/is/isMap)|Checks if `value` is classified as a Map object.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
-|[isNonExisty](src/is/isNonExisty)|Checks if `value` is non existy (null or undefined).|
 |[isNull](src/is/isNull)|Checks if `value` is null.|
+|[isNullOrUndefined](src/is/isNullOrUndefined)|Checks if `value` is `null` or `undefined`.|
 |[isNumber](src/is/isNumber)|Checks if `value` is a number.|
 |[isObject](src/is/isObject)|Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
 |[isObjectLike](src/is/isObjectLike)|Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
