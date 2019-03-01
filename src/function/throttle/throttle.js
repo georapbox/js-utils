@@ -3,8 +3,7 @@
  *
  * @category Function
  * @param {function} func The function to be executed.
- * @param {Number} [n=0] Optional. Default value is 0. Time of delay in milliseconds.
- * @throws {TypeError} If `func` is not function.
+ * @param {Number} [limit=0] Optional. Default value is 0. Time of delay in milliseconds.
  * @return {function} The throttled function.
  * @example
  *
@@ -15,24 +14,26 @@
  *
  * window.addEventListener('resize', doSomething, false);
  */
-function throttle(func, n) {
+function throttle(func, limit) {
   'use strict';
 
-  var wait;
-
-  if (typeof func !== 'function') {
-    throw new TypeError('Expected a function');
-  }
-
-  wait = false;
+  var lastFunc, lastRan;
 
   return function () {
-    if (!wait) {
-      func.call();
-      wait = true;
-      setTimeout(function () {
-        wait = false;
-      }, n || 0);
+    var context = this;
+    var args = arguments;
+
+    if (!lastRan) {
+      func.apply(context, args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function () {
+        if ((Date.now() - lastRan) >= limit) {
+          func.apply(context, args);
+          lastRan = Date.now();
+        }
+      }, (limit - (Date.now() - lastRan)) || 0);
     }
   };
 }

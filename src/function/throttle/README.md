@@ -6,14 +6,11 @@ Limits the number of times a function can be called in a given period.
 **Kind**: global function  
 **Returns**: <code>function</code> - The throttled function.  
 **Category**: Function  
-**Throws**:
-
-- <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | func | <code>function</code> |  | The function to be executed. |
-| [n] | <code>Number</code> | <code>0</code> | Optional. Default value is 0. Time of delay in milliseconds. |
+| [limit] | <code>Number</code> | <code>0</code> | Optional. Default value is 0. Time of delay in milliseconds. |
 
 **Example**  
 ```js
