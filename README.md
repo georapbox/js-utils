@@ -93,6 +93,7 @@ A collection of standalone javascript utility functions.
 |[forIn](src/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[forOwn](src/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[get](src/objects/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
+|[omit](src/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[schemaValidate](src/objects/schemaValidate)|Validates a plain object against a provided schema object.|
 
 
