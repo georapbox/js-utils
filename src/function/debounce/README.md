@@ -16,14 +16,14 @@ leading edge, instead of the trailing.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | func | <code>function</code> |  | The function to be executed. |
-| [n] | <code>Number</code> | <code>0</code> | Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used. |
+| [wait] | <code>Number</code> | <code>0</code> | Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used. |
 | [immediate] | <code>Boolean</code> |  | If true or any truthy value, triggers the function on the leading edge. |
 
 **Example**  
 ```js
-var doSomething = debounce(function () {
-  // Do something...
+var debouncedHandler = debounce(function () {
+  // Do your thing here...
 }, 250);
 
-window.addEventListener('resize', doSomething, false);
+window.addEventListener('resize', debouncedHandler, false);
 ```

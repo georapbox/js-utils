@@ -6,44 +6,39 @@
  *
  * @category Function
  * @param {function} func The function to be executed.
- * @param {Number} [n=0] Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used.
+ * @param {Number} [wait=0] Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used.
  * @param {Boolean} [immediate] If true or any truthy value, triggers the function on the leading edge.
  * @throws {TypeError} If `func` is not function.
  * @return {function} A new debounced function.
  * @example
  *
- * var doSomething = debounce(function () {
- *   // Do something...
+ * var debouncedHandler = debounce(function () {
+ *   // Do your thing here...
  * }, 250);
  *
- * window.addEventListener('resize', doSomething, false);
+ * window.addEventListener('resize', debouncedHandler, false);
  */
-function debounce(func, n, immediate) {
+function debounce(func, wait, immediate) {
   'use strict';
 
-  var timeout;
+  var timerId = null;
 
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function');
   }
 
-  return function () {
-    var that = this,
-      args = arguments;
+  return function debounced() {
+    var context = this;
+    var args = arguments;
+    clearTimeout(timerId);
 
-    var later = function () {
-      timeout = null;
-      if (!immediate) {
-        func.apply(that, args);
-      }
-    };
-
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, n || 0);
-
-    if (callNow) {
-      func.apply(that, args);
+    if (immediate && !timerId) {
+      func.apply(context, args);
     }
+
+    timerId = setTimeout(function () {
+      timerId = null;
+      if (!immediate) func.apply(context, args);
+    }, wait);
   };
 }
