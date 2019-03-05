@@ -3,23 +3,28 @@
  *
  * @category Function
  * @param {function} func The function to be executed.
- * @param {Number} [limit=0] Optional. Default value is 0. Time of delay in milliseconds.
+ * @param {Number} [wait=0] Optional. Default value is 0. Time of delay in milliseconds.
  * @return {function} The throttled function.
+ * @throws {TypeError} If `func` is not function.
  * @example
  *
  * // A method that should be called no more than 4 times per second.
- * var doSomething = throttle(function () {
- *   // Do something...
+ * var throttledHandler = throttle(function () {
+ *   // Do your thing here...
  * }, 250);
  *
- * window.addEventListener('resize', doSomething, false);
+ * window.addEventListener('resize', throttledHandler, false);
  */
-function throttle(func, limit) {
+function throttle(func, wait) {
   'use strict';
 
-  var lastFunc, lastRan;
+  var timerId, lastRan;
 
-  return function () {
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+
+  return function throttled() {
     var context = this;
     var args = arguments;
 
@@ -27,13 +32,13 @@ function throttle(func, limit) {
       func.apply(context, args);
       lastRan = Date.now();
     } else {
-      clearTimeout(lastFunc);
-      lastFunc = setTimeout(function () {
-        if ((Date.now() - lastRan) >= limit) {
+      clearTimeout(timerId);
+      timerId = setTimeout(function () {
+        if ((Date.now() - lastRan) >= wait) {
           func.apply(context, args);
           lastRan = Date.now();
         }
-      }, (limit - (Date.now() - lastRan)) || 0);
+      }, (wait - (Date.now() - lastRan)) || 0);
     }
   };
 }
