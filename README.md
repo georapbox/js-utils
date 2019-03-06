@@ -127,7 +127,6 @@ A collection of standalone javascript utility functions.
 |[isDate](src/is/isDate)|Checks if `value` is a date.|
 |[isElement](src/is/isElement)|Checks if `value` is a DOM element.|
 |[isEmail](src/is/isEmail)|Validates a string as email address.|
-|[isEmpty](src/is/isEmpty)|Checks if `value` is empty.|
 |[isEven](src/is/isEven)|Checks if `value` is even.|
 |[isFalse](src/is/isFalse)|Checks if `value` is false (strict equality).|
 |[isFalsy](src/is/isFalsy)|Checks if `value` is falsy.|
