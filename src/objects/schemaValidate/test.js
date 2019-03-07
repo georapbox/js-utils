@@ -1,97 +1,93 @@
 /* global schemaValidate */
 
-(function () {
-  'use strict';
+describe('Object/schemaValidate', function () {
+  var schema = {
+    name: function (value) {
+      // Name should be a string (required).
+      return typeof value === 'string';
+    },
+    age: function (value) {
+      // Age should be a number, not NaN and greater that 18 (required).
+      return !Number.isNaN(value) && typeof value === 'number' && value >= 18;
+    },
+    phone: function (value) {
+      // Phone should be a string of specific format (required).
+      return /^(\+?\d{1,2}-)?\d{3}-\d{3}-\d{4}$/.test(value);
+    },
+    // Hobbies should be an array (optional).
+    hobbies: function (value) {
+      return !value || {}.toString.call(value) === '[object Array]';
+    },
+    emails: function (value) {
+      // Emails should be an array of at least one item (required).
+      return {}.toString.call(value) === '[object Array]' && value.length > 0;
+    }
+  };
 
-  describe('Object/schemaValidate', function () {
-    var schema = {
-      name: function (value) {
-        // Name should be a string (required).
-        return typeof value === 'string';
-      },
-      age: function (value) {
-        // Age should be a number, not NaN and greater that 18 (required).
-        return !Number.isNaN(value) && typeof value === 'number' && value >= 18;
-      },
-      phone: function (value) {
-        // Phone should be a string of specific format (required).
-        return /^(\+?\d{1,2}-)?\d{3}-\d{3}-\d{4}$/.test(value);
-      },
-      // Hobbies should be an array (optional).
-      hobbies: function (value) {
-        return !value || {}.toString.call(value) === '[object Array]';
-      },
-      emails: function (value) {
-        // Emails should be an array of at least one item (required).
-        return {}.toString.call(value) === '[object Array]' && value.length > 0;
-      }
+  it('Object should be validated against provided schema', function () {
+    var user = {
+      name: 'John Doe',
+      age: 30,
+      phone: '123-456-7890',
+      emails: ['john_doe@gmail.com'],
+      hobbies: []
     };
 
-    it('Object should be validated against provided schema', function () {
-      var user = {
-        name: 'John Doe',
-        age: 30,
-        phone: '123-456-7890',
-        emails: ['john_doe@gmail.com'],
-        hobbies: []
-      };
-
-      expect(schemaValidate(user, schema).valid).toBe(true);
-    });
-
-    it('"age" property should be a number; thus object is invalid if string is provided', function () {
-      var user = {
-        name: 'John Doe',
-        age: '30',
-        phone: '123-456-7890',
-        emails: ['john_doe@gmail.com'],
-        hobbies: []
-      };
-      var res = schemaValidate(user, schema);
-
-      expect(res.valid).toBe(false);
-      expect(res.invalidProperties[0]).toBe('age');
-    });
-
-    it('"emails" property should be an array of at least one item; thus object is invalid if empty array is provided', function () {
-      var user = {
-        name: 'John Doe',
-        age: 30,
-        phone: '123-456-7890',
-        emails: [],
-        hobbies: []
-      };
-      var res = schemaValidate(user, schema);
-
-      expect(res.valid).toBe(false);
-      expect(res.invalidProperties[0]).toBe('emails');
-    });
-
-    it('"hobbies" property should be an optional array; thus object is valid if not provided', function () {
-      var user = {
-        name: 'John Doe',
-        age: 30,
-        phone: '123-456-7890',
-        emails: ['john_doe@gmail.com']
-      };
-      var res = schemaValidate(user, schema);
-
-      expect(res.valid).toBe(true);
-      expect(res.invalidProperties.length).toEqual(0);
-    });
-
-    it('"phone" property should be astring of format "123-456-7890"; thus object is invalid if "1234567890" is provided', function () {
-      var user = {
-        name: 'John Doe',
-        age: 30,
-        phone: '1234567890',
-        emails: ['john_doe@gmail.com'],
-        hobbies: []
-      };
-      var res = schemaValidate(user, schema);
-
-      expect(res.valid).toBe(false);
-      expect(res.invalidProperties[0]).toBe('phone');
-    });
+    expect(schemaValidate(user, schema).valid).toBe(true);
   });
-}());
+
+  it('"age" property should be a number; thus object is invalid if string is provided', function () {
+    var user = {
+      name: 'John Doe',
+      age: '30',
+      phone: '123-456-7890',
+      emails: ['john_doe@gmail.com'],
+      hobbies: []
+    };
+    var res = schemaValidate(user, schema);
+
+    expect(res.valid).toBe(false);
+    expect(res.invalidProperties[0]).toBe('age');
+  });
+
+  it('"emails" property should be an array of at least one item; thus object is invalid if empty array is provided', function () {
+    var user = {
+      name: 'John Doe',
+      age: 30,
+      phone: '123-456-7890',
+      emails: [],
+      hobbies: []
+    };
+    var res = schemaValidate(user, schema);
+
+    expect(res.valid).toBe(false);
+    expect(res.invalidProperties[0]).toBe('emails');
+  });
+
+  it('"hobbies" property should be an optional array; thus object is valid if not provided', function () {
+    var user = {
+      name: 'John Doe',
+      age: 30,
+      phone: '123-456-7890',
+      emails: ['john_doe@gmail.com']
+    };
+    var res = schemaValidate(user, schema);
+
+    expect(res.valid).toBe(true);
+    expect(res.invalidProperties.length).toEqual(0);
+  });
+
+  it('"phone" property should be astring of format "123-456-7890"; thus object is invalid if "1234567890" is provided', function () {
+    var user = {
+      name: 'John Doe',
+      age: 30,
+      phone: '1234567890',
+      emails: ['john_doe@gmail.com'],
+      hobbies: []
+    };
+    var res = schemaValidate(user, schema);
+
+    expect(res.valid).toBe(false);
+    expect(res.invalidProperties[0]).toBe('phone');
+  });
+});
