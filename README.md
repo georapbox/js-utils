@@ -61,7 +61,7 @@ A collection of standalone javascript utility functions.
 |[pad](src/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
 |[padLeft](src/strings/padLeft)|Pad `subjectString` on **left** side to the given `len`, with optional `chars` defaulting to a space.|
 |[padRight](src/strings/padRight)|Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.|
-|[randomString](src/strings/randomString)|Generates a random string of `n` characters, from the `chars` string provided by the user.|
+|[randomString](src/strings/randomString)|Generates a random string of specific `length` allowing a set of characters specified by `chars`.|
 |[removePrefix](src/strings/removePrefix)|Removes substring (prefix) from start of a string.|
 |[removeSuffix](src/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
 |[repeat](src/strings/repeat)|Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.|

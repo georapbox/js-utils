@@ -1,37 +1,56 @@
 /**
- * Generates a random string of n characters, using the "chars" specified.
+ * Generates a random string of specific `length` allowing a set of characters specified by `chars`.
  *
  * @category String
- * @param {number} n The length of the final random  string.
- * @param {string} [chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789']
- *        The characters to use in order to generate the string.
- * @return {string} Returns the random string.
+ * @param {Number} length The number of characters of the generated string.
+ * @param {String} [chars='#aA!'] Type of characters to be allowed in the generated string.
+ *                                Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters.
+ * @returns {String} The random generated string.
  * @example
  *
- * randomString(10);
- * // -> 'RvXYUH6Swm'
+ * randomString(8, '#aA!');
+ * // -> '@+[cd{tX'
  *
- * randomString(10, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
- * // -> 'SFUNKJHYDH'
+ * randomString(8, '#aA');
+ * // -> 'jeEmsT8z'
  *
- * randomString(10, '0123456789');
- * // -> '2394127333'
+ * randomString(8, '#a');
+ * // -> 'toae8z3z'
  *
- * randomString();
- * // -> ''
+ * randomString(8, '#');
+ * // -> '63263257'
+ *
+ * randomString(16);
+ * // -> 'g*EY;#5PlO2V!!'
+ *
+ * randomString(16, 'aA');
+ * // -> 'YGOSgnoUIHaUvEcp'
  */
-function randomString(n, chars) {
-  'use strict';
+function randomString(length, chars) {
+  var mask = '';
+  var result = '';
+  var i = length;
 
-  var result = '',
-    index;
+  chars = chars || '#aA!';
 
-  // Default values, if arguments omitted.
-  n = n || 0;
-  chars = chars || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  if (chars.indexOf('a') > -1) {
+    mask += 'abcdefghijklmnopqrstuvwxyz';
+  }
 
-  for (index = n; index > 0; --index) {
-    result += chars[Math.round(Math.random() * (chars.length - 1))];
+  if (chars.indexOf('A') > -1) {
+    mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  }
+
+  if (chars.indexOf('#') > -1) {
+    mask += '0123456789';
+  }
+
+  if (chars.indexOf('!') > -1) {
+    mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
+  }
+
+  for (i; i > 0; --i) {
+    result += mask[Math.floor(Math.random() * mask.length)];
   }
 
   return result;
