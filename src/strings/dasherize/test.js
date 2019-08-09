@@ -1,5 +1,3 @@
-/* global dasherize */
-
 describe('String/dasherize', function () {
   it('should dasherize a string', function () {
     expect(dasherize('backgroundColor')).toEqual('background-color');

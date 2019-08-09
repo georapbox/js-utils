@@ -1,5 +1,3 @@
-/* global delay */
-
 describe('Function/delay', function () {
   it('should delay invokation for 500 milliseconds', function (done) {
     var say = function (a, b) {

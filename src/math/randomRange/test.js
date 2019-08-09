@@ -1,5 +1,3 @@
-/* global randomRange */
-
 describe('Math/randomRange', function () {
   it('returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.', function () {
     var r0 = randomRange(0, 2);

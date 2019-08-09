@@ -1,5 +1,3 @@
-/* global forOwn */
-
 describe('Object/forOwn', function () {
   it('iterates over own enumerable properties of an object', function () {
     var props = [];

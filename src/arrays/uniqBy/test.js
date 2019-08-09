@@ -1,5 +1,3 @@
-/* global uniqBy */
-
 describe('Array/uniqBy', function () {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
     var arr1 = [

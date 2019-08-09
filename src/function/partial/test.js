@@ -1,5 +1,3 @@
-/* global partial */
-
 describe('Function/partial', function () {
   var greet = function (greeting, name) {
     return greeting + ' ' + name;

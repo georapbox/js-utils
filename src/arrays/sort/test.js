@@ -1,5 +1,3 @@
-/* global sort */
-
 describe('Array/sort', function () {
   var numbers = [1, 2, 3, 10, 4, 9],
     drinks = ['martini', 'coffee', 'wine', 'tequila'];

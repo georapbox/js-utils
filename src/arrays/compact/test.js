@@ -1,5 +1,3 @@
-/* global compact */
-
 describe('Array/compact', function () {
   var arr = [0, 1, false, 2, '', 3, null];
   var ca = compact(arr);

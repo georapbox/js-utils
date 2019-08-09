@@ -1,5 +1,3 @@
-/* global partialRight */
-
 describe('Function/partialRight', function () {
   var greet = function (greeting, name) {
     return greeting + ' ' + name;

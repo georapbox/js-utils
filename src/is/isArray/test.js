@@ -1,5 +1,3 @@
-/* global isArray */
-
 describe('is/isArray', function () {
   it('checks if value is array', function () {
     expect(isArray(['a', 'b', 'c', 'd'])).toBe(true);

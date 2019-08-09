@@ -1,5 +1,3 @@
-/* global intersection */
-
 describe('Array/intersection', function () {
   it('creates an array of unique values that are included in all given arrays.', function () {
     var arrA = [NaN, 3, 8, 'foo', 'bar'];

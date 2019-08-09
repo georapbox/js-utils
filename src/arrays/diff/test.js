@@ -1,5 +1,3 @@
-/* global diff */
-
 describe('Array/diff', function () {
   var a = [1, 2, 3, 4, {}],
     b = [5, 2, 10];

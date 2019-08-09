@@ -1,5 +1,3 @@
-/* global take */
-
 describe('Array/take', function () {
   it('creates a slice of array with n items taken from the beginning', function () {
     expect(take([1, 2, 3, 4, 5])).toEqual([1]);

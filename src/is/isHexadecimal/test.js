@@ -1,5 +1,3 @@
-/* global isHexadecimal */
-
 describe('is/isHexadecimal', function () {
   it('checks if a value is hexadecimal', function () {
     expect(isHexadecimal('f5f5f5')).toBe(true);

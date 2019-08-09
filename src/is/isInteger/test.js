@@ -1,5 +1,3 @@
-/* global isInteger */
-
 describe('is/isInteger', function () {
   it('checks if a value is integer', function () {
     expect(isInteger(0.1)).toBe(false);

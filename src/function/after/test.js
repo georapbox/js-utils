@@ -1,5 +1,3 @@
-/* global after */
-
 describe('Function/after', function () {
   it('should invoke a function after it\'s been called 6 times', function () {
     var count = 0,

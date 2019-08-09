@@ -1,5 +1,3 @@
-/* global insert */
-
 describe('Array/insert', function () {
   it('inserts elements to array at specific index', function () {
     var arr = [1, 2, 3, ['x', 'y']];

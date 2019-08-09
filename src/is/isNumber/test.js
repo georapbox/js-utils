@@ -1,5 +1,3 @@
-/* global isNumber */
-
 describe('is/isNumber', function () {
   it('checks if a valud is number', function () {
     expect(isNumber(404)).toBe(true);

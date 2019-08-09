@@ -1,5 +1,3 @@
-/* global dropWhile */
-
 describe('Array/dropWhile', function () {
   it('creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy', function () {
     var books = [{

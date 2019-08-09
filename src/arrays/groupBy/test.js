@@ -1,5 +1,3 @@
-/* global groupBy */
-
 describe('Array/groupBy', function () {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
     var arr1 = ['one', 'two', 'three', 'four', 'five'];

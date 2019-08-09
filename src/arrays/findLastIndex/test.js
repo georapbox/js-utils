@@ -1,5 +1,3 @@
-/* global findLastIndex */
-
 describe('Array/findLastIndex', function () {
   var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'],
     numbers = [1, 2, 3, 4];

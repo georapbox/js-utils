@@ -1,5 +1,3 @@
-/* global isUndefined */
-
 describe('is/isUndefined', function () {
   var foo;
 

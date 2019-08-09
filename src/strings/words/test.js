@@ -1,5 +1,3 @@
-/* global words */
-
 describe('String/words', function () {
   it('should count words in a subject string', function () {
     expect(function () {

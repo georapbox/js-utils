@@ -1,5 +1,3 @@
-/* global whichTransitionEnd */
-
 describe('dom/whichTransitionEnd', function () {
   it('returns the transition end event name', function () {
     var values = ['transitionend', 'oTransitionEnd', 'webkitTransitionEnd', undefined];

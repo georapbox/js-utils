@@ -63,7 +63,7 @@ function truncate(subjectString, characterCount, delimiter) {
     return subjectString;
   }
 
-  regex = new RegExp('^.{0,' + characterCount + '}[\S]*', 'g');
+  regex = new RegExp('^.{0,' + characterCount + '}[S]*', 'g');
   truncated = subjectString.match(regex);
   delimiter = delimiter || '';
   truncated = truncated[0].replace(/\s$/, '');

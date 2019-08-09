@@ -1,5 +1,3 @@
-/* global chunk */
-
 describe('Array/chunk', function () {
   it('creates an array of elements split into groups the length of size specified', function () {
     expect(chunk([1, 2, 3, 4], 2)).toEqual([

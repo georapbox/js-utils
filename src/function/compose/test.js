@@ -1,5 +1,3 @@
-/* global compose */
-
 describe('Function/compose', function () {
   function capitalize(item) {
     return item.toUpperCase();

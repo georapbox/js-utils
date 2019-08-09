@@ -1,5 +1,3 @@
-/* global deburr */
-
 describe('String/deburr', function () {
   it('deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks', function () {
     var str = 'Maître Corbeau, sur un arbre perché,' +

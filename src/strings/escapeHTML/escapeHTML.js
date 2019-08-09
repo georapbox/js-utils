@@ -36,7 +36,7 @@ function escapeHTML(subjectString) {
     '=': '&#x3D;'
   };
 
-  return subjectString.replace(/[&<>"'`=\/]/g, function fromEntityMap(tag) {
+  return subjectString.replace(/[&<>"'`=/]/g, function fromEntityMap(tag) {
     return entityMap[tag] || tag;
   });
 }

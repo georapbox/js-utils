@@ -1,5 +1,3 @@
-/* global once */
-
 describe('Function/once', function () {
   it('should execute a function only one time', function () {
     var num = 0;

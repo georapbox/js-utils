@@ -1,5 +1,3 @@
-/* global subStr */
-
 describe('String/subStr', function () {
   it('should return a substring denoted by n (positive or negative) characters', function () {
     var str = 'Lorem ispum dolor sit amet.';

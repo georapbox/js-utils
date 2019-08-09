@@ -1,5 +1,3 @@
-/* global reverse */
-
 describe('Array/reverse', function () {
   it('returns a new reversed array', function () {
     var numbers = [1, 2, 3],

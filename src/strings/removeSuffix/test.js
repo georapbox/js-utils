@@ -1,5 +1,3 @@
-/* global removeSuffix */
-
 describe('String/removeSuffix', function () {
   it('removes a specific suffix from string', function () {
     expect(removeSuffix('Hello world!', 'world!')).toEqual('Hello ');

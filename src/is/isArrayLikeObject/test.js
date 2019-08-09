@@ -1,5 +1,3 @@
-/* global isArrayLikeObject */
-
 describe('is/isArrayLikeObject', function () {
   function noop() {}
 

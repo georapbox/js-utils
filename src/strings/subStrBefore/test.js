@@ -1,5 +1,3 @@
-/* global subStrBefore */
-
 describe('String/subStrBefore', function () {
   it('should return a substring before a specific sequence of character(s)', function () {
     var str = 'LOREM_IPSUM DOLOR_SIT AMET';

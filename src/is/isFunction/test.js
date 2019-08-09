@@ -1,5 +1,3 @@
-/* global isFunction */
-
 describe('is/isFunction', function () {
   it('checks if a value is function', function () {
     function noop() {}

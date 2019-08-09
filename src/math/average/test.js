@@ -1,5 +1,3 @@
-/* global average */
-
 describe('Math/average', function () {
   it('calculates the average of a set of numbers', function () {
     expect(average()).toEqual(0);

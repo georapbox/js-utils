@@ -1,5 +1,3 @@
-/* global isNull */
-
 describe('is/isNull', function () {
   it('checks if a valud is null', function () {
     expect(isNull(null)).toBe(true);

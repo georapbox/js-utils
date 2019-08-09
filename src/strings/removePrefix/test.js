@@ -1,5 +1,3 @@
-/* global removePrefix */
-
 describe('String/removePrefix', function () {
   it('removes a specific prefix from string', function () {
     expect(removePrefix('Hello world!', 'Hello ')).toEqual('world!');

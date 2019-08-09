@@ -1,5 +1,3 @@
-/* global randomInt */
-
 describe('Math/randomInt', function () {
   it('returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.', function () {
     var r0 = randomInt(0, 2);

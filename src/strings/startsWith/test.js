@@ -1,5 +1,3 @@
-/* global startsWith */
-
 describe('String/startsWith', function () {
   it('"Hello world!" starts with "Hello" is true', function () {
     expect(startsWith('Hello world', 'Hello')).toBe(true);

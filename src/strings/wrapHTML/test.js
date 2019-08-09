@@ -1,5 +1,3 @@
-/* global wrapHTML */
-
 describe('String/wrapHTML', function () {
   it('should wrap a string with a HTML tag with attributes if specified', function () {
     var str = 'Lorem ipsum dolor sit amet.';

@@ -1,5 +1,3 @@
-/* global curry */
-
 describe('Function/curry', function () {
   var sum = function (a, b, c) {
     return a + b + c;

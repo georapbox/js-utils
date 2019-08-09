@@ -1,5 +1,3 @@
-/* global isString */
-
 describe('is/isString', function () {
   it('checks if a value is string', function () {
     expect(isString('404')).toBe(true);

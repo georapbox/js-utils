@@ -1,5 +1,3 @@
-/* global roundToPlaces */
-
 describe('Math/roundToPlaces', function () {
   it('rounds a number to a number of desired places', function () {
     var PI = Math.PI;

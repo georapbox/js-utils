@@ -1,5 +1,3 @@
-/* global negate */
-
 describe('Function/negate', function () {
   it('should negate the result of the predicate function', function () {
     var isEven = function (n) {

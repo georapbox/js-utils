@@ -1,5 +1,3 @@
-/* global whichAnimationEnd */
-
 describe('dom/whichAnimationEnd', function () {
   it('returns the animation end event name', function () {
     var values = ['animationend', 'oAnimationEnd', 'webkitAnimationEnd', undefined];

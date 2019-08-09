@@ -1,5 +1,3 @@
-/* global shuffle */
-
 describe('Array/shuffle', function () {
   it('shuffles an array', function () {
     var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];

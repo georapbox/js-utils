@@ -1,5 +1,3 @@
-/* global inRange */
-
 describe('Math/inRange', function () {
   it('should test if number is in range', function () {
     expect(inRange(3, 2, 4)).toBe(true);

@@ -1,5 +1,3 @@
-/* global isObjectLike */
-
 describe('is/isObject', function () {
   it('checks if a value is object-like', function () {
     expect(isObjectLike({})).toBe(true);

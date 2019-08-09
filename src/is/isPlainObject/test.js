@@ -1,5 +1,3 @@
-/* global isPlainObject */
-
 describe('is/isPlainObject', function () {
   function Foo() {
     this.foo = 'bar';

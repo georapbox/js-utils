@@ -1,5 +1,3 @@
-/* global takeWhile */
-
 describe('Array/takeWhile', function () {
   it('creates a slice of array with elements taken from the beginning, until predicate returns falsy', function () {
     var books = [

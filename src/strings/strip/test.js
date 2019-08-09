@@ -1,5 +1,3 @@
-/* global strip */
-
 describe('String/strip', function () {
   it('should strip a string from all occurrences of a given substring', function () {
     var str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';

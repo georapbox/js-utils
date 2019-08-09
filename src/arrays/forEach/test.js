@@ -1,5 +1,3 @@
-/* global forEach */
-
 describe('Array/forEach', function () {
   var arr = ['a', 'b', 'c'];
 

@@ -1,5 +1,3 @@
-/* global takeRightWhile */
-
 describe('Array/takeRightWhile', function () {
   it('creates a slice of array with n items taken from the end', function () {
     var books = [

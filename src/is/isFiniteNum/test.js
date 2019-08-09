@@ -1,5 +1,3 @@
-/* global isFiniteNum */
-
 describe('is/isFiniteNum', function () {
   it('checks if a value is finite', function () {
     expect(isFiniteNum(Infinity)).toBe(false);

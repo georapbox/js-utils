@@ -1,5 +1,3 @@
-/* global extend */
-
 describe('Object/extend', function () {
   it('Merge two objects, modifying the first.', function () {
     var object1 = {

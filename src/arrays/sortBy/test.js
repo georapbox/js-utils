@@ -1,5 +1,3 @@
-/* global sortBy */
-
 describe('Array/sortBy', function () {
   var people = [
     {name: 'Elena', age: '2'},

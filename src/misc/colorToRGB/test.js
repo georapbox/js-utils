@@ -1,5 +1,3 @@
-/* global colorToRGB */
-
 describe('misc/colorToRGB', function () {
   it('converts a color to RGB(A) format', function () {
     expect(colorToRGB(0xFF0000)).toEqual('rgb(255, 0, 0)');

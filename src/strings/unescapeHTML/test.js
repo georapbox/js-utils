@@ -1,5 +1,3 @@
-/* global unescapeHTML */
-
 describe('String/unescapeHTML', function () {
   it('should unescape a HTML string', function () {
     expect(unescapeHTML('&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;'))

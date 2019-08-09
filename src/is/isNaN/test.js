@@ -1,5 +1,3 @@
-/* global isNaN */
-
 describe('is/isNaN', function () {
   it('check if value is NaN', function () {
     expect(isNaN(NaN)).toBe(true);

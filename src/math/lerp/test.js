@@ -1,5 +1,3 @@
-/* global lerp */
-
 describe('Math/lerp', function () {
   it('converts a normalized value to the value that the normalized value points to', function () {
     expect(lerp(0.75, 0, 365)).toEqual(273.75);

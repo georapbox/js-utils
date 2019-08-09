@@ -1,5 +1,3 @@
-/* global Container */
-
 describe('Object/Container', function () {
   var res;
 

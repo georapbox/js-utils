@@ -1,5 +1,3 @@
-/* global flip */
-
 describe('Function/flip', function () {
   it('creates a function that invokes provided function with arguments reversed.', function () {
     var argsToArray = function () {

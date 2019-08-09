@@ -1,5 +1,3 @@
-/* global numberFormat */
-
 describe('String/numberFormat', function () {
   it('formats a number based on the number of decimal points, the decimal separator and the thousands separator', function () {
     expect(numberFormat(123456789.12345)).toEqual('123,456,789');

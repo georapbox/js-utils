@@ -1,5 +1,3 @@
-/* global isHexColor */
-
 describe('is/isHexColor', function () {
   it('checks if a value matches a hexadecimal color regular expression', function () {
     expect(isHexColor('#f5f5f5')).toBe(true);

@@ -1,5 +1,3 @@
-/* global lines */
-
 describe('String/lines', function () {
   var str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
 

@@ -1,5 +1,3 @@
-/* global drop */
-
 describe('Array/drop', function () {
   it('creates a slice of array with n elements dropped from the beginning', function () {
     var arr = [1, 2, 3, 4, 5];

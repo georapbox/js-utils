@@ -1,5 +1,3 @@
-/* global randomString */
-
 describe('String/randomString', function () {
   it('generates a random string of n characters', function () {
     expect(randomString().length).toEqual(0);

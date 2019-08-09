@@ -1,5 +1,3 @@
-/* global includes */
-
 describe('Array/includes', function () {
   it('determines whether an array includes a certain element', function () {
     var obj;

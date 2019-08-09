@@ -1,5 +1,3 @@
-/* global urlSearchParams */
-
 describe('String/urlSearchParams', function () {
   it('accesses parameters of a URL search string', function () {
     var search = '?id=1&fname=Foo&lname=Bar';

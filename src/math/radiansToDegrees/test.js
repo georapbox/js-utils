@@ -1,5 +1,3 @@
-/* global radiansToDegrees */
-
 describe('Math/radiansToDegrees', function () {
   it('converts radians to degrees', function () {
     expect(radiansToDegrees(0)).toEqual(0);
