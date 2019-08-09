@@ -30,7 +30,7 @@ function unescapeHTML(subjectString) {
     .replace(/&#x3D;/g, '=')
     .replace(/&quot;/g, '"')
     .replace(/&#034;/g, '"')
-    .replace(/&#039;/g, "'")
+    .replace(/&#039;/g, "'") // eslint-disable-line quotes
     .replace(/&#x60;/g, '`')
     .replace(/&#x2F;/g, '/');
 }

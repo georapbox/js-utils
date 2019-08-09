@@ -29,7 +29,7 @@
  * // -> [{ v: 1.6 }, { v: 2.1 }]
  */
 function uniqBy(array, iteratee) {
-  var cb = typeof iteratee === "function" ? iteratee : function (o) {
+  var cb = typeof iteratee === 'function' ? iteratee : function (o) {
     return o[iteratee];
   };
 

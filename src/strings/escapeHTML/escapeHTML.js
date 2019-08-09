@@ -30,7 +30,7 @@ function escapeHTML(subjectString) {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#39;',
+    "'": '&#39;', // eslint-disable-line quotes
     '/': '&#x2F;',
     '`': '&#x60;',
     '=': '&#x3D;'

@@ -36,9 +36,7 @@ function subStr(subjectString, n) {
   }
 
   if (typeof n === 'number') {
-    return n >= 0 ?
-    subjectString.substr(0, n) :
-    subjectString.substr(subjectString.length + n, -n);
+    return n >= 0 ? subjectString.substr(0, n) : subjectString.substr(subjectString.length + n, -n);
   }
 
   return subjectString;
