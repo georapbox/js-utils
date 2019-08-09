@@ -16,7 +16,6 @@ module.exports = function (config) {
       'karma-es6-shim',
       'karma-htmlfile-reporter',
       'karma-jasmine',
-      'karma-phantomjs-launcher',
       'karma-firefox-launcher',
       'karma-chrome-launcher',
       'karma-ie-launcher',
@@ -68,7 +67,6 @@ module.exports = function (config) {
       'Firefox',
       'ChromeHeadless',
       'Safari'
-      // 'PhantomJS',
       // 'IE7',
       // 'IE8',
       // 'IE9',
