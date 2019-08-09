@@ -19,7 +19,8 @@ module.exports = function (config) {
       'karma-phantomjs-launcher',
       'karma-firefox-launcher',
       'karma-chrome-launcher',
-      'karma-ie-launcher'
+      'karma-ie-launcher',
+      'karma-safari-launcher'
     ],
 
     // list of files / patterns to load in the browser
@@ -64,9 +65,10 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-      'PhantomJS'
-      // 'Firefox',
-      // 'Chrome'
+      'Firefox',
+      'ChromeHeadless',
+      'Safari'
+      // 'PhantomJS',
       // 'IE7',
       // 'IE8',
       // 'IE9',
@@ -95,6 +97,6 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: false
   });
 };

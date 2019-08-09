@@ -28,6 +28,7 @@
     "karma-ie-launcher": "~1.0.0",
     "karma-jasmine": "~2.0.1",
     "karma-phantomjs-launcher": "~1.0.0",
+    "karma-safari-launcher": "~1.0.0",
     "phantomjs-prebuilt": "~2.1.12"
   }
 }
