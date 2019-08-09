@@ -12,6 +12,9 @@
   "extends": "eslint:recommended",
   "rules": {
     "no-unused-vars": 0,
-    "no-constant-condition": ["error", { "checkLoops": false }]
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "indent": ["warn", 2, { "SwitchCase": 1, "ignoredNodes": ["TemplateLiteral"] }],
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "quotes": ["warn", "single", { "allowTemplateLiterals": true }]
   }
 }
