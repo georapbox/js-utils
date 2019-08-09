@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/georapbox/jsEssentials.svg?branch=master)](https://travis-ci.org/georapbox/jsEssentials) [![Dependencies](https://david-dm.org/georapbox/jsEssentials.svg?theme=shields.io)](https://david-dm.org/georapbox/jsEssentials) [![devDependency Status](https://david-dm.org/georapbox/jsEssentials/dev-status.svg)](https://david-dm.org/georapbox/jsEssentials#info=devDependencies)
+[![Dependencies](https://david-dm.org/georapbox/jsEssentials.svg?theme=shields.io)](https://david-dm.org/georapbox/jsEssentials) 
+[![devDependency Status](https://david-dm.org/georapbox/jsEssentials/dev-status.svg)](https://david-dm.org/georapbox/jsEssentials#info=devDependencies)
 
 # jsEssentials
 
