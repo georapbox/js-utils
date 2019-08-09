@@ -29,17 +29,19 @@
  * // -> [{ v: 1.6 }, { v: 2.1 }]
  */
 function uniqBy(array, iteratee) {
-  var cb = typeof iteratee === 'function' ? iteratee : function (o) {
+  var cb = typeof iteratee === "function" ? iteratee : function (o) {
     return o[iteratee];
   };
 
-  return array.map(function (item) {
-    return cb(item) || item;
-  }).map(function (e, i, final) {
-    return final.indexOf(e) === i && i;
-  }).filter(function (e) {
-    return array[e];
-  }).map(function (e) {
-    return array[e];
-  });
+  return array.reduce(function (acc, current) {
+    var found = acc.find(function (item) {
+      return cb(item) === cb(current);
+    });
+
+    if (!found) {
+      return acc.concat([current]);
+    } else {
+      return acc;
+    }
+  }, []);
 }
