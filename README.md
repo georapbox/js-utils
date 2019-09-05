@@ -1,7 +1,7 @@
-[![Dependencies](https://david-dm.org/georapbox/jsEssentials.svg?theme=shields.io)](https://david-dm.org/georapbox/jsEssentials) 
-[![devDependency Status](https://david-dm.org/georapbox/jsEssentials/dev-status.svg)](https://david-dm.org/georapbox/jsEssentials#info=devDependencies)
+[![Dependencies](https://david-dm.org/georapbox/js-utils.svg?theme=shields.io)](https://david-dm.org/georapbox/js-utils) 
+[![devDependency Status](https://david-dm.org/georapbox/js-utils/dev-status.svg)](https://david-dm.org/georapbox/js-utils#info=devDependencies)
 
-# jsEssentials
+# js-utils
 
 A collection of standalone javascript utility functions.
 
@@ -210,7 +210,7 @@ A collection of standalone javascript utility functions.
 
 ## Installation
 
-- To clone the repository, run: `git clone https://github.com/georapbox/jsEssentials.git`
+- To clone the repository, run: `git clone https://github.com/georapbox/js-utils.git`
 - To install dev dependancies, (from the root folder of the project) run: `$ npm install`
 
 ## Run the tests

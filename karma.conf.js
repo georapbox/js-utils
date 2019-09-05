@@ -43,7 +43,7 @@ module.exports = function (config) {
     ],
 
     htmlReporter: {
-      pageTitle: 'jsEssentials',
+      pageTitle: 'js-utils',
       subPageTitle: 'Unit Test Results',
       outputFile: 'tests-reporter/index.html'
     },

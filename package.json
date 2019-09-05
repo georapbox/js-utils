@@ -1,12 +1,12 @@
 {
-  "name": "jsEssentials",
+  "name": "js-utils",
   "version": "1.0.0",
   "description": "A collection of standalone javascript utility functions.",
   "author": "George Raptis <georapbox@gmail.com>",
-  "homepage": "https://github.com/georapbox/jsEssentials",
+  "homepage": "https://github.com/georapbox/js-utils",
   "repository": {
     "type": "git",
-    "url": "git@github.com:georapbox/jsEssentials.git"
+    "url": "git@github.com:georapbox/js-utils.git"
   },
   "config": {
     "port": "3333"
@@ -17,13 +17,13 @@
     "lint": "eslint src/**/*.js"
   },
   "devDependencies": {
-    "eslint": "~6.1.0",
+    "eslint": "~6.3.0",
     "jasmine-core": "~3.4.0",
-    "karma": "~4.2.0",
-    "karma-chrome-launcher": "~3.0.0",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
     "karma-cli": "~2.0.0",
     "karma-es6-shim": "~1.0.0",
-    "karma-firefox-launcher": "~1.1.0",
+    "karma-firefox-launcher": "~1.2.0",
     "karma-htmlfile-reporter": "~0.3.8",
     "karma-ie-launcher": "~1.0.0",
     "karma-jasmine": "~2.0.1",
