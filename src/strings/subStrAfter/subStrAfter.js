@@ -27,7 +27,7 @@
 function subStrAfter(subjectString, characters, last) {
   'use strict';
 
-  var arr, len, result;
+  var arr, len;
 
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
     throw new TypeError('Expected a string');
@@ -39,8 +39,5 @@ function subStrAfter(subjectString, characters, last) {
 
   arr = subjectString.split(characters);
   len = arr.length;
-  result = arr[len - 1];
-  arr = len = null;
-
-  return result;
+  return arr[len - 1];
 }
