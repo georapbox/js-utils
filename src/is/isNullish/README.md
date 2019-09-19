@@ -1,6 +1,6 @@
-<a name="isNullOrUndefined"></a>
+<a name="isNullish"></a>
 
-## isNullOrUndefined(value) ⇒ <code>Boolean</code>
+## isNullish(value) ⇒ <code>Boolean</code>
 Checks if `value` is `null` or `undefined`.
 
 **Kind**: global function  
@@ -15,15 +15,15 @@ Checks if `value` is `null` or `undefined`.
 ```js
 var foo;
 
-isNullOrUndefined(foo);
+isNullish(foo);
 // -> true
 
-isNullOrUndefined(null);
+isNullish(null);
 // -> true
 
-isNullOrUndefined({foo: 'bar'});
+isNullish({foo: 'bar'});
 // -> false
 
-isNullOrUndefined();
+isNullish();
 // -> true
 ```

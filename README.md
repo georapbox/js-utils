@@ -139,7 +139,7 @@ A collection of standalone javascript utility functions.
 |[isMap](src/is/isMap)|Checks if `value` is classified as a Map object.|
 |[isNaN](src/is/isNaN)|Determines whether a value is NaN or not.|
 |[isNull](src/is/isNull)|Checks if `value` is null.|
-|[isNullOrUndefined](src/is/isNullOrUndefined)|Checks if `value` is `null` or `undefined`.|
+|[isNullish](src/is/isNullish)|Checks if `value` is `null` or `undefined`.|
 |[isNumber](src/is/isNumber)|Checks if `value` is a number.|
 |[isObject](src/is/isObject)|Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
 |[isObjectLike](src/is/isObjectLike)|Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|

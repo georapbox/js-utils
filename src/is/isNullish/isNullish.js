@@ -8,19 +8,19 @@
  *
  * var foo;
  *
- * isNullOrUndefined(foo);
+ * isNullish(foo);
  * // -> true
  *
- * isNullOrUndefined(null);
+ * isNullish(null);
  * // -> true
  *
- * isNullOrUndefined({foo: 'bar'});
+ * isNullish({foo: 'bar'});
  * // -> false
  *
- * isNullOrUndefined();
+ * isNullish();
  * // -> true
  */
-function isNullOrUndefined(value) {
+function isNullish(value) {
   'use strict';
 
   return value == null;
