@@ -1,5 +1,5 @@
 describe('is/isNumber', function () {
-  it('checks if a valud is number', function () {
+  it('checks if a value is number', function () {
     expect(isNumber(404)).toBe(true);
 
     expect(isNumber(new Date().getTime())).toBe(true);
