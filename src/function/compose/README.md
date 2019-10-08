@@ -15,7 +15,7 @@ Thus it is made clear that function passed as arguments should be read from righ
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [...args] | <code>function</code> | One or more functions to compose. |
+| [...funcs] | <code>function</code> | One or more functions to compose. |
 
 **Example**  
 ```js
@@ -47,3 +47,7 @@ var reverseHeadAndCapitalize = compose(capitalize, reverseAndHead);
 reverseHeadAndCapitalize('hello');
 // -> "O"
 ```
+
+#### Babel
+
+https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=GYVwdgxgLglg9mABBOBbADnAzgUwBQB0RokWAlIgN4BQiiMwieJEWBANjmAOZQAWiALzDEABgo06dAE44oIaUgCG07kIB8iFdwDctRAF9q-hkxZtOPfkJEBGCfplyFScwG1RAXT10j-2fKKiOYEsgAmIBD4eEoANIgARhSCmoRE2uQaWngJaQQZZIV6RkA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=es2015&prettier=false&targets=&version=7.6.2&externalPlugins=
