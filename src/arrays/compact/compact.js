@@ -4,7 +4,6 @@
  *
  * @category Array
  * @param {Array} array The array to compact.
- * @throws {TypeError} If `array` is not array.
  * @return {Array} Returns the new array of filtered values.
  * @example
  *
@@ -12,26 +11,5 @@
  * // => [1, 2, 3]
  */
 function compact(array) {
-  'use strict';
-
-  var index, length, resIndex, result, value;
-
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
-  }
-
-  index = -1;
-  length = array.length;
-  resIndex = -1;
-  result = [];
-
-  while (++index < length) {
-    value = array[index];
-
-    if (value) {
-      result[++resIndex] = value;
-    }
-  }
-
-  return result;
+  return array.filter(Boolean);
 }
