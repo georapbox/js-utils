@@ -21,5 +21,17 @@ describe('Function/compose', function () {
     convert = compose(capitalize, head, reverse);
     converted = convert('hello');
     expect(converted).toEqual('O');
+
+    convert = compose(capitalize, reverse, head);
+    converted = convert('hello');
+    expect(converted).toEqual('H');
+
+    convert = compose(capitalize);
+    converted = convert('hello');
+    expect(converted).toEqual('HELLO');
+
+    convert = compose();
+    converted = convert('hello');
+    expect(converted).toEqual('hello');
   });
 });

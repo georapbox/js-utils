@@ -38,14 +38,6 @@
  * reverseHeadAndCapitalize('hello');
  * // -> "O"
  */
-function compose(...funcs) {
-  if (funcs.length === 0) {
-    return arg => arg;
-  }
-
-  if (funcs.length === 1) {
-    return funcs[0];
-  }
-
-  return funcs.reduce((a, b) => (...args) => a(b(...args)));
+function compose(...fns) {
+  return x => fns.reduceRight((y, f) => f(y), x);
 }
