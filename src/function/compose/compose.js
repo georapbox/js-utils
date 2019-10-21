@@ -5,7 +5,7 @@
  * Thus it is made clear that function passed as arguments should be read from right to left.
  *
  * @category Function
- * @param {function} [funcs...] One or more functions to compose.
+ * @param {function} [fns...] One or more functions to compose.
  * @throws {TypeError} If any of the arguments is not function.
  * @return {function} A new function as the result of the composition.
  * @example

@@ -15,7 +15,7 @@ Thus it is made clear that function passed as arguments should be read from righ
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [...funcs] | <code>function</code> | One or more functions to compose. |
+| [...fns] | <code>function</code> | One or more functions to compose. |
 
 **Example**  
 ```js
