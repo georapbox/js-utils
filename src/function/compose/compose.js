@@ -6,7 +6,6 @@
  *
  * @category Function
  * @param {function} [fns...] One or more functions to compose.
- * @throws {TypeError} If any of the arguments is not function.
  * @return {function} A new function as the result of the composition.
  * @example
  *
@@ -27,12 +26,12 @@
  * convert('hello');
  * // -> "OLLEH"
  *
- * // Example 2:  First reverse, then get the first character and finally capitalize
+ * // Example 2: First reverse, then get the first character and finally capitalize
  * var convert = compose(capitalize, head, reverse);
  * convert('hello');
  * // -> "O"
  *
- * // Example 3:  Same as above but combining compositions
+ * // Example 3: Same as above but combining compositions
  * var reverseAndHead = compose(head, reverse);
  * var reverseHeadAndCapitalize = compose(capitalize, reverseAndHead);
  * reverseHeadAndCapitalize('hello');
