@@ -44,7 +44,3 @@ var reverseHeadAndCapitalize = compose(capitalize, reverseAndHead);
 reverseHeadAndCapitalize('hello');
 // -> "O"
 ```
-
-#### Babel
-
-https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=GYVwdgxgLglg9mABBOBbADnAzgUwBQB0RwYWAlIgN4BQiiATjlCPUgB6IC8AfIiVgUYATEBBwAlGAHMAFlDx4AngBo-FHnyVlVbMgG5qAXyA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=es2015&prettier=false&targets=&version=7.6.4&externalPlugins=
