@@ -37,6 +37,19 @@
  * reverseHeadAndCapitalize('hello');
  * // -> "O"
  */
-function compose(...fns) {
-  return x => fns.reduceRight((y, f) => f(y), x);
+function compose(/* ...fns */) {
+  'use strict';
+
+  var fns = arguments;
+
+  return function () {
+    var args = arguments;
+    var i;
+
+    for (i = fns.length; i--;) {
+      args = [fns[i].apply(this, args)];
+    }
+
+    return args[0];
+  };
 }
