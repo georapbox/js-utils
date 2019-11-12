@@ -13,11 +13,11 @@ leading edge, instead of the trailing.
 
 - <code>TypeError</code> If `func` is not function.
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| func | <code>function</code> |  | The function to be executed. |
-| [wait] | <code>Number</code> | <code>0</code> | Optional. Defaults to 0. Time of delay in milliseconds. It is required if `immediate` is used. |
-| [immediate] | <code>Boolean</code> |  | If true or any truthy value, triggers the function on the leading edge. |
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>function</code> | The function to be executed. |
+| [wait] | <code>Number</code> | Time of delay in milliseconds. It is required if `immediate` is used. |
+| [immediate] | <code>Boolean</code> | If true or any truthy value, triggers the function on the leading edge. |
 
 **Example**  
 ```js
