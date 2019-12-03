@@ -4,58 +4,56 @@
  * Ommits any non number value.
  *
  * @category Math
- * @param {Number|Array} [args...] A set of numbers or an array of numbers.
+ * @param {Number|Array} [...args] A set of numbers or an array of numbers.
  * @return {Number} The average number of the set of data provided.
  * @example
  *
- * average();
- * // -> 0
+ * average(5, 10, 50, -45, 6, 7); // => 5.5
+ * average([5, 10, 50, -45, 6, 7]); // => 5.5
  *
- * average(7);
- * // -> 7
+ * average(2, 4, 0, -0); // => 1.5
+ * average([2, 4, 0, -0]); // =>
  *
- * average([7]);
- * // -> 7
+ * average(7); // => 7
+ * average([7]); // => 7
  *
- * average(2, 4);
- * // -> 3
+ * average(0, -0); // => 0
+ * average([0, -0]); // => 0
  *
- * average([2, 4]);
- * // -> 3
+ * average(); // => 0
+ * average([]); // => 0
  *
- * average(5, 10, 50, -45, 6, 7);
- * // -> 5.5
+ * average(Infinity, -Infinity, 0, -0, null, NaN, undefined, false, true, 'foo'); // => 0
+ * average([Infinity, -Infinity, 0, -0, null, NaN, undefined, false, true, 'foo']); // => 0
  *
- * average([5, 10, 50, -45, 6, 7]);
- * // -> 5.5
- *
- * average(5, 4, null, true, '12', Infinity);
- * // -> 4.5 (Omits any non number value)
+ * average(5, 4, null, true, '12', Infinity); // => 0
+ * average([5, 4, null, true, '12', Infinity]); // => 0
  */
-function average(/* args... */) {
+function average(/* ...args */) {
   'use strict';
 
-  var sum = 0,
-    count = 0,
-    argsLen = arguments.length,
-    toString = Object.prototype.toString,
-    len, args, argItem;
+  var sum = 0;
+  var count = 0;
+  var toString = Object.prototype.toString;
+  var len = arguments.length;
+  var args = new Array(len);
+  var index = 0;
+  var arg;
 
-  // Check if arguments is a set of numbers or an array of numbers.
-  if (argsLen > 1 || argsLen === 1 && typeof arguments[0] === 'number') {
-    args = arguments;
-    len = argsLen;
-  } else if (argsLen === 1 && toString.call(arguments[0]) === '[object Array]') {
-    args = arguments[0];
+  for (; index < len; index += 1) {
+    args[index] = arguments[index];
+  }
+
+  if (len === 1 && toString.call(args[0]) === '[object Array]') {
+    args = args[0];
     len = args.length;
   }
 
   while (len--) {
-    argItem = args[len];
+    arg = args[len];
 
-    // Ommit any non number value.
-    if (isFinite(argItem) && typeof argItem === 'number') {
-      sum += argItem;
+    if (isFinite(arg) && typeof arg === 'number') { // equivalent of Number.isFinite
+      sum += arg;
       count += 1;
     }
   }
