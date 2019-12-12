@@ -105,15 +105,10 @@ A collection of standalone javascript utility functions.
 |--------|-----------|
 |[after](src/function/after)|Creates a function that invokes `func` once it's called `n` or more times.|
 |[before](src/function/before)|Creates a function that invokes `func` while it’s called less than `n` times.|
-|[compose](src/function/compose)|Chains together functions to create a new function following the mathematical model of function composition.|
-|[curry](src/function/curry)|Transforms a function of N arguments in such a way that it can be called as a chain of N functions each with a single argument.|
 |[debounce](src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[delay](src/function/delay)|Invokes a function after a number of milliseconds.|
-|[flip](src/function/flip)|Creates a function that invokes `func` with arguments reversed.|
 |[negate](src/function/negate)|Creates a function that negates the result of the predicate `func`.|
 |[once](src/function/once)|Ensure a given functionality only runs once.|
-|[partial](src/function/partial)|Creates a function that invokes `func` with `args` **prepended** to the arguments it receives.|
-|[partialRight](src/function/partialRight)|Creates a function that invokes `func` with `args` **appended** to the arguments it receives.|
 |[throttle](src/function/throttle)|Limits the number of times a function can be called in a given period.|
 
 
