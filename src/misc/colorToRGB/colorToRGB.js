@@ -7,40 +7,40 @@
  * @return {String} The converted value in RGB(A) format.
  * @example
  *
- * colorToRGB(0xFF0000);
+ * hexToRGB(0xFF0000);
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB('0xFF0000');
+ * hexToRGB('0xFF0000');
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB('#ff0000');
+ * hexToRGB('#ff0000');
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB(16711680);
+ * hexToRGB(16711680);
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB('16711680');
+ * hexToRGB('16711680');
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB('#ff0000', 0.5);
+ * hexToRGB('#ff0000', 0.5);
  * // -> 'rgba(255, 0, 0, 0.5)'
  *
- * colorToRGB('#ff0000', '0.5');
+ * hexToRGB('#ff0000', '0.5');
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB('#ff0000', null);
+ * hexToRGB('#ff0000', null);
  * // -> 'rgb(255, 0, 0)'
  *
- * colorToRGB();
+ * hexToRGB();
  * // -> 'rgb(0, 0, 0)'
  *
- * colorToRGB(null);
+ * hexToRGB(null);
  * // -> 'rgb(0, 0, 0)'
  *
- * colorToRGB('Hello world');
+ * hexToRGB('Hello world');
  * // -> 'rgb(0, 0, 0)'
  */
-function colorToRGB(color, alpha) {
+function hexToRGB(color, alpha) {
   'use strict';
 
   var r, g, b, a;

@@ -1,6 +1,6 @@
-<a name="colorToRGB"></a>
+<a name="hexToRGB"></a>
 
-## colorToRGB(color, [alpha]) ⇒ <code>String</code>
+## hexToRGB(color, [alpha]) ⇒ <code>String</code>
 Converts a color value (number or hexadecimal string) to RGB(A) format.
 
 **Kind**: global function  
@@ -14,36 +14,36 @@ Converts a color value (number or hexadecimal string) to RGB(A) format.
 
 **Example**  
 ```js
-colorToRGB(0xFF0000);
+hexToRGB(0xFF0000);
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB('0xFF0000');
+hexToRGB('0xFF0000');
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB('#ff0000');
+hexToRGB('#ff0000');
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB(16711680);
+hexToRGB(16711680);
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB('16711680');
+hexToRGB('16711680');
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB('#ff0000', 0.5);
+hexToRGB('#ff0000', 0.5);
 // -> 'rgba(255, 0, 0, 0.5)'
 
-colorToRGB('#ff0000', '0.5');
+hexToRGB('#ff0000', '0.5');
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB('#ff0000', null);
+hexToRGB('#ff0000', null);
 // -> 'rgb(255, 0, 0)'
 
-colorToRGB();
+hexToRGB();
 // -> 'rgb(0, 0, 0)'
 
-colorToRGB(null);
+hexToRGB(null);
 // -> 'rgb(0, 0, 0)'
 
-colorToRGB('Hello world');
+hexToRGB('Hello world');
 // -> 'rgb(0, 0, 0)'
 ```
