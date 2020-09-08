@@ -67,31 +67,8 @@ module.exports = function (config) {
       'FirefoxHeadless',
       'ChromeHeadless'
       // 'Safari'
-      // 'IE7',
-      // 'IE8',
-      // 'IE9',
-      // 'IE10',
       // 'IE'
     ],
-
-    customLaunchers: {
-      IE10: {
-        base: 'IE',
-        'x-ua-compatible': 'IE=EmulateIE10'
-      },
-      IE9: {
-        base: 'IE',
-        'x-ua-compatible': 'IE=EmulateIE9'
-      },
-      IE8: {
-        base: 'IE',
-        'x-ua-compatible': 'IE=EmulateIE8'
-      },
-      IE7: {
-        base: 'IE',
-        'x-ua-compatible': 'IE=EmulateIE7'
-      }
-    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
