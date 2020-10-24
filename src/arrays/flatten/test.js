@@ -14,6 +14,6 @@ describe('Array/flatten', function () {
     }
 
     expect(flatten(dummy('a', 'b')))
-    .toEqual([1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]);
+      .toEqual([1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]);
   });
 });

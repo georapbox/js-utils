@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /**
  * Periodically check for application's status updates.

@@ -5,16 +5,16 @@ describe('String/replaceAll', function () {
     var str = 'Lorem ispum 5 dolor sit amet.';
 
     expect(replaceAll(str, ' ', '_'))
-    .toEqual('Lorem_ispum_5_dolor_sit_amet.');
+      .toEqual('Lorem_ispum_5_dolor_sit_amet.');
 
     expect(replaceAll(str, '', '-'))
-    .toEqual('L-o-r-e-m- -i-s-p-u-m- -5- -d-o-l-o-r- -s-i-t- -a-m-e-t-.');
+      .toEqual('L-o-r-e-m- -i-s-p-u-m- -5- -d-o-l-o-r- -s-i-t- -a-m-e-t-.');
 
     expect(replaceAll(str, 'Lorem', '***'))
-    .toEqual('*** ispum 5 dolor sit amet.');
+      .toEqual('*** ispum 5 dolor sit amet.');
 
     expect(replaceAll(str, 'LOREM', '_lorem_', true))
-    .toEqual('_lorem_ ispum 5 dolor sit amet.');
+      .toEqual('_lorem_ ispum 5 dolor sit amet.');
 
     expect(function () {
       return replaceAll(str, {}, '*');

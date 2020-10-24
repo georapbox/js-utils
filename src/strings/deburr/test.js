@@ -8,6 +8,6 @@ describe('String/deburr', function () {
     'Lui tint à peu près ce langage.';
 
     expect(deburr(str))
-    .toEqual('Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.');
+      .toEqual('Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.');
   });
 });

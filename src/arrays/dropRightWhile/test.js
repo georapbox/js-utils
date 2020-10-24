@@ -24,14 +24,12 @@ describe('Array/dropRightWhile', function () {
     expect(dropRightWhile(books, function (book) {
       return !book.read;
     })).toEqual([{
-        title: 'Javascript Design Patterns',
-        read: false
-      },
-      {
-        title: 'Programming Javascript Applications',
-        read: true
-      }
-    ]);
+      title: 'Javascript Design Patterns',
+      read: false
+    }, {
+      title: 'Programming Javascript Applications',
+      read: true
+    }]);
 
     expect(dropRightWhile(books, function (book) {
       return book.read;
