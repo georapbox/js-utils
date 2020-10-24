@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if an event is supported in a browser environment.
  *
@@ -29,32 +31,21 @@
  * isEventSupported('keyup', document.createElement('input'));
  * // -> true - Checks on an `input` element
  */
-(function (name, context, definition) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    define(definition);
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = definition();
-  } else {
-    context[name] = definition();
-  }
-}('isEventSupported', this, function () {
-  'use strict';
-
+module.exports = (function () {
   var TAGNAMES = {
-      select: 'input',
-      change: 'input',
-      submit: 'form',
-      reset: 'form',
-      error: 'img',
-      load: 'img',
-      abort: 'img'
-    },
-    cache = {};
+    select: 'input',
+    change: 'input',
+    submit: 'form',
+    reset: 'form',
+    error: 'img',
+    load: 'img',
+    abort: 'img'
+  };
+  var cache = {};
 
   function isEventSupported(eventName, element) {
-    var canCache = !element,
-      isSupported;
+    var canCache = !element;
+    var isSupported;
 
     if (typeof eventName !== 'string') {
       throw new TypeError('Expected a string');
@@ -87,4 +78,4 @@
   }
 
   return isEventSupported;
-}));
+}());

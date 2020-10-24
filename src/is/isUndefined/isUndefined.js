@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is undefined.
  *
@@ -21,7 +23,7 @@
  * // -> true
  */
 function isUndefined(value) {
-  'use strict';
-
   return typeof value === 'undefined';
 }
+
+module.exports = isUndefined;

@@ -1,3 +1,5 @@
+var groupBy = require('./groupBy');
+
 describe('Array/groupBy', function () {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
     var arr1 = ['one', 'two', 'three', 'four', 'five'];
@@ -46,5 +48,9 @@ describe('Array/groupBy', function () {
     })).toEqual(exp2);
 
     expect(groupBy(arr3, Math.floor)).toEqual(exp3);
+
+    expect(function () {
+      return groupBy({}, '2');
+    }).toThrow();
   });
 });

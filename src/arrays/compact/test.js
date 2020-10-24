@@ -1,3 +1,5 @@
+var compact = require('./compact');
+
 describe('Array/compact', function () {
   var arr = [0, 1, false, 2, '', 3, null];
   var ca = compact(arr);
@@ -7,5 +9,9 @@ describe('Array/compact', function () {
     for (i = 0, l = ca.length; i < l; i++) {
       expect(ca[i]).toBeTruthy();
     }
+
+    expect(function () {
+      return compact({}, '2');
+    }).toThrow();
   });
 });

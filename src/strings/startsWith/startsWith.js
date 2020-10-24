@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Determines whether a string begins with the characters of another string.
  *
@@ -25,8 +27,6 @@
  * // -> true
  */
 function startsWith(subjectString, searchString, position) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -45,3 +45,5 @@ function startsWith(subjectString, searchString, position) {
 
   return subjectString.substr(position, searchString.length) === searchString;
 }
+
+module.exports = startsWith;

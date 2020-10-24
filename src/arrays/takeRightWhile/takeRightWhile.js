@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.
  * The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
@@ -23,8 +25,6 @@
  * // -> [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
  */
 function takeRightWhile(array, predicate) {
-  'use strict';
-
   var index, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -48,3 +48,5 @@ function takeRightWhile(array, predicate) {
 
   return array.slice(index + 1, length);
 }
+
+module.exports = takeRightWhile;

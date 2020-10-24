@@ -1,3 +1,5 @@
+var uniqBy = require('./uniqBy');
+
 describe('Array/uniqBy', function () {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
     var arr1 = [
@@ -47,5 +49,9 @@ describe('Array/uniqBy', function () {
       { x: '1', y: '0', z: '2' },
       { x: '2', y: '1', z: '0' }
     ]);
+
+    expect(function () {
+      return uniqBy({}, 'name');
+    }).toThrow();
   });
 });

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if value is classified as a Set object.
  *
@@ -13,8 +15,7 @@
  * // -> false
  */
 function isSet(value) {
-  'use strict';
-
-  return typeof value === 'object' &&
-    Object.prototype.toString.call(value) === '[object Set]';
+  return typeof value === 'object' && Object.prototype.toString.call(value) === '[object Set]';
 }
+
+module.exports = isSet;

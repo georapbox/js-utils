@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if `value` is `null` or `undefined`.
  *
@@ -21,7 +23,7 @@
  * // -> true
  */
 function isNullish(value) {
-  'use strict';
-
   return value == null;
 }
+
+module.exports = isNullish;

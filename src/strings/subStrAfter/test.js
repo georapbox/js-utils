@@ -1,3 +1,5 @@
+var subStrAfter = require('./subStrAfter');
+
 describe('String/subStrAfter', function () {
   it('With string "LOREM_IPSUM DOLOR_SIT AMET", The substring after the first occurence of "SIT ", should be "AMET"', function () {
     expect(subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ')).toBe('AMET');

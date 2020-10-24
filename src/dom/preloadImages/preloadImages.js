@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Load images to browser asynchronously so that can be cached.
  *
@@ -31,8 +33,6 @@
  * preloadImages(images, success, fail, always);
  */
 function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
-  'use strict';
-
   var list, i, len, img;
 
   function onloadSuccess(image) {

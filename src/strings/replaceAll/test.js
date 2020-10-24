@@ -1,3 +1,5 @@
+var replaceAll = require('./replaceAll');
+
 describe('String/replaceAll', function () {
   it('should replace all occurrences of a string with a given substring', function () {
     var str = 'Lorem ispum 5 dolor sit amet.';

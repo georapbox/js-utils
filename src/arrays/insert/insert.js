@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Inserts elements to array at specific index.
  *
@@ -35,8 +37,6 @@
  * // -> [1, 2, 3, ['x', 'y']]
  */
 function insert(array, start /* [element1 [, element2 [, ...]]] */) {
-  'use strict';
-
   var elements, i, len;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -55,3 +55,5 @@ function insert(array, start /* [element1 [, element2 [, ...]]] */) {
 
   return array;
 }
+
+module.exports = insert;

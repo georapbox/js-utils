@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Takes a normalized value within a range of values and converts
  * it to a numerical value that the normalized value points to.
@@ -26,11 +28,11 @@
  * // -> -250
  */
 function lerp(norm, min, max) {
-  'use strict';
-
   if (typeof norm !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('"lerp" expects numbers as arguments');
   }
 
   return (max - min) * norm + min;
 }
+
+module.exports = lerp;

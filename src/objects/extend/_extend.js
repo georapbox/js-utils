@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Deep merge the contents of two or more objects together into the first object.
  *
@@ -23,11 +25,9 @@
  * // -> settings -- {"validate": true, "limit": 5, "name": "bar"}
  */
 function _extend() {
-  'use strict';
-
-  var i = 1,
-    len = arguments.length,
-    key, arg, val;
+  var i = 1;
+  var len = arguments.length;
+  var key, arg, val;
 
   for (; i < len; i += 1) {
     arg = arguments[i];

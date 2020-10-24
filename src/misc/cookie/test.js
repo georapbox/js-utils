@@ -1,3 +1,5 @@
+var cookie = require('./cookie');
+
 describe('misc/cookie', function () {
   it('should create a new cookie with name "my-cookie" and value "test1", read it and finally remove it', function () {
     cookie.create('my-cookie', 'test1');

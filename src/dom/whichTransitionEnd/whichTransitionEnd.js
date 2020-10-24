@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Detects the supported property name for the `transitionend` event.
  *
@@ -13,19 +15,17 @@
  * });
  */
 function whichTransitionEnd() {
-  'use strict';
-
-  var key,
-    el = document.createElement('div'),
-    transitions = {
-      'transition': 'transitionend',
-      'OTransition': 'oTransitionEnd',
-      'MozTransition': 'transitionend',
-      'WebkitTransition': 'webkitTransitionEnd'
-    };
+  var key;
+  var el = document.createElement('div');
+  var transitions = {
+    'transition': 'transitionend',
+    'OTransition': 'oTransitionEnd',
+    'MozTransition': 'transitionend',
+    'WebkitTransition': 'webkitTransitionEnd'
+  };
 
   for (key in transitions) {
-    if ({}.hasOwnProperty.call(transitions, key)) {
+    if (Object.prototype.hasOwnProperty.call(transitions, key)) {
       if (el.style[key] !== undefined) {
         el = null;
         return transitions[key];
@@ -33,3 +33,5 @@ function whichTransitionEnd() {
     }
   }
 }
+
+module.exports = whichTransitionEnd;

@@ -5,7 +5,10 @@ Creates an object composed of keys generated from the results of running each el
 The order of grouped values is determined by the order they occur in the `array`.
 
 **Kind**: global function  
-**Category**: Array
+**Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
 
 | Param | Type | Description |
 | --- | --- | --- |

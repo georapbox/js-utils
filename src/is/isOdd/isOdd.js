@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if value is odd.
  *
@@ -28,11 +30,11 @@
  * // -> false
  */
 function isOdd(value) {
-  'use strict';
-
   if (typeof value === 'object') {
     return false;
   }
 
   return value % 2 === 1;
 }
+
+module.exports = isOdd;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Converts a color value (number or hexadecimal string) to RGB(A) format.
  *
@@ -41,8 +43,6 @@
  * // -> 'rgb(0, 0, 0)'
  */
 function hexToRGB(color, alpha) {
-  'use strict';
-
   var r, g, b, a;
 
   if (typeof color === 'string' && color[0] === '#') {
@@ -62,3 +62,5 @@ function hexToRGB(color, alpha) {
     return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + a + ')';
   }
 }
+
+module.exports = hexToRGB;

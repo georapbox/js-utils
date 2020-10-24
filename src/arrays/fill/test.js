@@ -1,3 +1,5 @@
+var fill = require('./fill');
+
 describe('Array/fill', function () {
   it('fills elements of array with value from start up to end (not including end)', function () {
     expect(fill(['a', 'b', 'c'], '*')).toEqual(['*', '*', '*']);

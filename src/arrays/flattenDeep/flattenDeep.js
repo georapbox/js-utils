@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Flattens array recursively.
  *
@@ -21,18 +23,17 @@
  * // -> [1, 2, 3, 4, 5, 'a', 'b', {foo: 'bar', length: 23}]
  */
 function flattenDeep(array) {
-  'use strict';
-
-  var toString = Object.prototype.toString,
-    arrayTag = '[object Array]',
-    copy, result, tail;
+  var toString = Object.prototype.toString;
+  var arrayTag = '[object Array]';
+  var copy, result, tail;
 
   function isArguments(value) {
+    var hasOwnProperty = Object.prototype.hasOwnProperty;
     var argsTag = '[object Arguments]';
 
     // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
-    return hasOwnProperty.call(value, 'callee') &&
-      (!propertyIsEnumerable.call(value, 'callee') || toString.call(value) === argsTag);
+    return hasOwnProperty.call(value, 'callee')
+      && (!propertyIsEnumerable.call(value, 'callee') || toString.call(value) === argsTag);
   }
 
   if (toString.call(array) !== arrayTag) {
@@ -59,3 +60,5 @@ function flattenDeep(array) {
 
   return result;
 }
+
+module.exports = flattenDeep;

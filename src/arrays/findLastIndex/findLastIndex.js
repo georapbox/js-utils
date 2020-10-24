@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns the index of the last element of a collection that passes the callback check.
  *
@@ -43,8 +45,6 @@
  * // -> -1
  */
 function findLastIndex(array, callback) {
-  'use strict';
-
   var length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -65,3 +65,5 @@ function findLastIndex(array, callback) {
 
   return -1;
 }
+
+module.exports = findLastIndex;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Retrieves the value of a specified property from all elements in an array.
  *
@@ -22,8 +24,6 @@
  * // -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
  */
 function pluck(array, key) {
-  'use strict';
-
   var arr, index, len, arrItem;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -38,10 +38,12 @@ function pluck(array, key) {
   while (++index < len) {
     arrItem = array[index];
 
-    if ({}.hasOwnProperty.call(arrItem, key)) {
+    if (Object.prototype.hasOwnProperty.call(arrItem, key)) {
       arr[arr.length] = arrItem[key];
     }
   }
 
   return arr;
 }
+
+module.exports = pluck;

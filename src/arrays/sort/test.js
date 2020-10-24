@@ -1,6 +1,8 @@
+var sort = require('./sort');
+
 describe('Array/sort', function () {
-  var numbers = [1, 2, 3, 10, 4, 9],
-    drinks = ['martini', 'coffee', 'wine', 'tequila'];
+  var numbers = [1, 2, 3, 10, 4, 9];
+  var drinks = ['martini', 'coffee', 'wine', 'tequila'];
 
   it('sorts an array', function () {
     expect(sort(numbers)).toEqual([1, 2, 3, 4, 9, 10]);

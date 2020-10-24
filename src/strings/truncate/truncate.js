@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Truncates a string based on character count.
  *
@@ -44,8 +46,6 @@
  * // Throws TypeError
  */
 function truncate(subjectString, characterCount, delimiter) {
-  'use strict';
-
   var regex, truncated;
 
   if (typeof subjectString !== 'string') {
@@ -58,8 +58,11 @@ function truncate(subjectString, characterCount, delimiter) {
 
   characterCount = Math.floor(characterCount);
 
-  if (characterCount > subjectString.length ||
-      characterCount < 0 || characterCount !== characterCount) {
+  if (
+    characterCount > subjectString.length
+    || characterCount < 0
+    || characterCount !== characterCount
+  ) {
     return subjectString;
   }
 
@@ -71,3 +74,5 @@ function truncate(subjectString, characterCount, delimiter) {
 
   return truncated;
 }
+
+module.exports = truncate;

@@ -1,3 +1,5 @@
+var capitalize = require('./capitalize');
+
 describe('String/capitalize', function () {
   it('should capitalize the first character of a string', function () {
     expect(capitalize('hello')).toEqual('Hello');

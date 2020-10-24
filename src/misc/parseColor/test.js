@@ -1,3 +1,5 @@
+var parseColor = require('./parseColor');
+
 describe('misc/parseColor', function () {
   it('Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.', function () {
     expect(parseColor('#ff0000', true)).toEqual(16711680);

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a function that negates the result of the predicate `func`.
  * The `func` predicate is invoked with the this binding and arguments of the created function.
@@ -36,8 +38,6 @@
  * // -> [1, 3, 5]
  */
 function negate(func, thisArg) {
-  'use strict';
-
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function');
   }
@@ -46,3 +46,5 @@ function negate(func, thisArg) {
     return !func.apply(thisArg, arguments);
   };
 }
+
+module.exports = negate;

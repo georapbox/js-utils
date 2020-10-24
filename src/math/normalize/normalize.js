@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Takes a value within a range of values and converts that value
  * to a number from 0 to 1 that indicates where it lies in that range.
@@ -29,11 +31,11 @@
  * // -> 0
  */
 function normalize(value, min, max) {
-  'use strict';
-
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('"normalize" expects numbers as arguments');
   }
 
   return (value - min) / (max - min);
 }
+
+module.exports = normalize;

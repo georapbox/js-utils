@@ -1,4 +1,4 @@
-/*global filter*/
+var filter = require('./filter');
 
 describe('Array/filter', function () {
   var arr = ['a', {a: 'b'}, 1, 'b', 2, {c: 'd'}, 'c'];

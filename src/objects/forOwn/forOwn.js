@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Iterates over own enumerable properties of an object, executing the callback for each property.
  * The callback is invoked with three arguments (value, key, object)
@@ -24,15 +26,15 @@
  * });
  */
 function forOwn(obj, callback) {
-  'use strict';
-
   var key;
 
   for (key in obj) {
-    if ({}.hasOwnProperty.call(obj, key)) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
       callback && callback(obj[key], key, obj);
     }
   }
 
   return obj;
 }
+
+module.exports = forOwn;

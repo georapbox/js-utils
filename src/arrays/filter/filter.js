@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a new array with all elements that pass the test implemented by the provided callback function.
  *
@@ -23,8 +25,6 @@
  * // -> [{a: 'b'}, 2]
  */
 function filter(array, callback, thisArg) {
-  'use strict';
-
   var len, res;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -46,3 +46,5 @@ function filter(array, callback, thisArg) {
 
   return res;
 }
+
+module.exports = filter;

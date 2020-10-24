@@ -1,3 +1,5 @@
+var supplant = require('./supplant');
+
 describe('String/supplant', function () {
   it('should do variable substitution on a string', function () {
     var originalString = '' +

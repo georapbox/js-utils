@@ -1,3 +1,5 @@
+var find = require('./find');
+
 describe('Array/find', function () {
   it('returns a value in the array, if an element in the array satisfies the provided testing function', function () {
     var fruits = [

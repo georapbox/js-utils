@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Sorts an array of objects (not in place) by property.
  *
@@ -32,8 +34,6 @@
  * // -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
  */
 function sortBy(array, field, ascending, primer) {
-  'use strict';
-
   var key;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -55,3 +55,5 @@ function sortBy(array, field, ascending, primer) {
     return (A < B ? -1 : A > B ? 1 : 0) * [-1, 1][+!!ascending];
   });
 }
+
+module.exports = sortBy;

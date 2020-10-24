@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Flattens array a single level deep.
  *
@@ -24,24 +26,20 @@
  * // -> [1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]
  */
 function flatten(array) {
-  'use strict';
-
   var index, length, value, result;
 
   function isArray(val) {
-    var toString = Object.prototype.toString,
-      arrayTag = '[object Array]';
-
-    return toString.call(val) === arrayTag;
+    return Object.prototype.toString.call(val) === '[object Array]';
   }
 
   function isArguments(val) {
-    var toString = Object.prototype.toString,
-      argsTag = '[object Arguments]';
+    var toString = Object.prototype.toString;
+    var hasOwnProperty = Object.prototype.hasOwnProperty;
+    var argsTag = '[object Arguments]';
 
     // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
-    return hasOwnProperty.call(val, 'callee') &&
-      (!propertyIsEnumerable.call(val, 'callee') || toString.call(val) === argsTag);
+    return hasOwnProperty.call(val, 'callee')
+      && (!propertyIsEnumerable.call(val, 'callee') || toString.call(val) === argsTag);
   }
 
   function arrayPush(arr, values) {
@@ -76,3 +74,5 @@ function flatten(array) {
 
   return result;
 }
+
+module.exports = flatten;

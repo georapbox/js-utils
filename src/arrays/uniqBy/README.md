@@ -7,7 +7,10 @@ The `iteratee` is invoked with one argument (each element in the array).
 
 **Kind**: global function  
 **Returns**: <code>Array</code> - The duplicate free array.  
-**Category**: Array
+**Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If any of the arguments is not array.
 
 | Param | Type | Description |
 | --- | --- | --- |

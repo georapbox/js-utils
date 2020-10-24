@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.
  * The predicate is invoked with three arguments: (`value`, `index`, `array`).
@@ -23,8 +25,6 @@
  * // -> [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
 function dropWhile(array, predicate) {
-  'use strict';
-
   var index, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -48,3 +48,5 @@ function dropWhile(array, predicate) {
 
   return array.slice(index, length);
 }
+
+module.exports = dropWhile;

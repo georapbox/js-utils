@@ -1,3 +1,5 @@
+var isArrayLike = require('./isArrayLike');
+
 describe('is/isArrayLike', function () {
   function noop() {}
 

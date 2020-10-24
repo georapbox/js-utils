@@ -1,3 +1,5 @@
+var camelCase = require('./camelCase');
+
 describe('String/camelCase', function () {
   it('should convert a string to camel case', function () {
     expect(camelCase('Foo Bar')).toEqual('fooBar');

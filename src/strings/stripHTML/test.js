@@ -1,3 +1,5 @@
+var stripHTML = require('./stripHTML');
+
 describe('String/stripHTML', function () {
   it('should remove all HTML tags from a string', function () {
     var str = '<p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit.<br/> <span class="mollitia">Mollitia</span> quos dicta, doloremque veritatis.</p>';

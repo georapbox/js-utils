@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a new array with its elements' order randomized,
  * using the Fisher-Yates (aka Knuth) Shuffle algorithm.
@@ -12,8 +14,6 @@
  * // -> ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
  */
 function shuffle(array) {
-  'use strict';
-
   var newArray, currentIndex, temporaryValue, randomIndex;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -36,3 +36,5 @@ function shuffle(array) {
 
   return newArray;
 }
+
+module.exports = shuffle;

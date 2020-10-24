@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is true (strict equality).
  *
@@ -16,7 +18,7 @@
  * // -> false
  */
 function isTrue(value) {
-  'use strict';
-
   return value === true;
 }
+
+module.exports = isTrue;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if value is classified as a WeakSet object.
  *
@@ -13,8 +15,7 @@
  * // -> false
  */
 function isWeakSet(value) {
-  'use strict';
-
-  return typeof value === 'object' &&
-    Object.prototype.toString.call(value) === '[object WeakSet]';
+  return typeof value === 'object' && Object.prototype.toString.call(value) === '[object WeakSet]';
 }
+
+module.exports = isWeakSet;

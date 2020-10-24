@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Wraps a string with a HTML tag with attributes if specified.
  *
@@ -23,10 +25,7 @@
  * // -> '<div class="myClass" id="myId" data-type="myType"><p>Lorem ipsum dolor sit amet.</p></div>'
  */
 function wrapHTML(subjectString, nodeName, nodeAttributes) {
-  'use strict';
-
-  var elementName, elementAttributes,
-    dasherizedProp, prop, wrapped;
+  var elementName, elementAttributes, dasherizedProp, prop, wrapped;
 
   if (typeof subjectString !== 'string' || typeof nodeName !== 'string') {
     throw new TypeError('Expected a string');
@@ -38,7 +37,7 @@ function wrapHTML(subjectString, nodeName, nodeAttributes) {
 
   if (typeof nodeAttributes === 'object') {
     for (prop in nodeAttributes) {
-      if ({}.hasOwnProperty.call(nodeAttributes, prop)) {
+      if (Object.prototype.hasOwnProperty.call(nodeAttributes, prop)) {
         dasherizedProp = prop
           .replace(/[_\s]+/g, '-')
           .replace(/([A-Z])/g, '-$1')
@@ -56,3 +55,5 @@ function wrapHTML(subjectString, nodeName, nodeAttributes) {
 
   return wrapped;
 }
+
+module.exports = wrapHTML;

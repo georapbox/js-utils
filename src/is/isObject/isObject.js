@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
  *
@@ -28,8 +30,7 @@
  * // -> false
  */
 function isObject(value) {
-  'use strinct';
-
-  var type = typeof value;
-  return value != null && (type === 'object' || type === 'function');
+  return value != null && (typeof value === 'object' || typeof value === 'function');
 }
+
+module.exports = isObject;

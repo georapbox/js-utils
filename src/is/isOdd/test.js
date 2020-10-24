@@ -1,3 +1,5 @@
+var isOdd = require('./isOdd');
+
 describe('is/isOdd', function () {
   it('checks if a value is odd', function () {
     expect(isOdd(3)).toBe(true);

@@ -1,6 +1,8 @@
+var diff = require('./diff');
+
 describe('Array/diff', function () {
-  var a = [1, 2, 3, 4, {}],
-    b = [5, 2, 10];
+  var a = [1, 2, 3, 4, {}];
+  var b = [5, 2, 10];
 
   it('diffs two arrays', function () {
     expect(diff(a, b)).toEqual([1, 3, 4, {}]);

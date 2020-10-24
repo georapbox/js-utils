@@ -1,3 +1,5 @@
+var flattenDeep = require('./flattenDeep');
+
 describe('Array/flattenDeep', function () {
   it('flattens an array recursively', function () {
     expect(flattenDeep([1, [2, [3, [4]], 5], [6]])).toEqual([1, 2, 3, 4, 5, 6]);

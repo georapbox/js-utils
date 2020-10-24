@@ -1,3 +1,5 @@
+var escapeHTML = require('./escapeHTML');
+
 describe('String/escapeHTML', function () {
   it('should escape a HTML string', function () {
     expect(escapeHTML('<script src="main.js"><\/script>'))

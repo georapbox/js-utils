@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Counts the occurrences of substring in a string.
  *
@@ -31,8 +33,6 @@
  * // -> Throws TypeError
  */
 function count(subjectString, searchString, caseInsensitive) {
-  'use strict';
-
   var n, pos, step;
 
   if (typeof subjectString !== 'string' || typeof searchString !== 'string') {
@@ -67,3 +67,5 @@ function count(subjectString, searchString, caseInsensitive) {
 
   return n;
 }
+
+module.exports = count;

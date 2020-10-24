@@ -1,3 +1,5 @@
+var degreesToRadians = require('./degreesToRadians');
+
 describe('Math/degreesToRadians', function () {
   it('converts degrees to radians', function () {
     expect(degreesToRadians(0)).toEqual(0);

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Iterates over own and inherited enumerable properties of an object, executing the callback for each property.
  * The callback is invoked with three arguments (value, key, object)
@@ -24,8 +26,6 @@
  * });
  */
 function forIn(obj, callback) {
-  'use strict';
-
   var key;
 
   for (key in obj) {
@@ -34,3 +34,5 @@ function forIn(obj, callback) {
 
   return obj;
 }
+
+module.exports = forIn;

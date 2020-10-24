@@ -1,3 +1,6 @@
+
+'use strict';
+
 /**
  * Returns the index of the first element that passes the callback check.
  * If no element passes the callback check, returns -1.
@@ -44,8 +47,6 @@
  * // -> -1
  */
 function findIndex(array, callback) {
-  'use strict';
-
   var index, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -67,3 +68,5 @@ function findIndex(array, callback) {
 
   return -1;
 }
+
+module.exports = findIndex;

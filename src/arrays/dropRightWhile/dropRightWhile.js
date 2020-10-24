@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.
  * The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
@@ -24,8 +26,6 @@
  *
  */
 function dropRightWhile(array, predicate) {
-  'use strict';
-
   var index, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -49,3 +49,5 @@ function dropRightWhile(array, predicate) {
 
   return array.slice(0, index + 1);
 }
+
+module.exports = dropRightWhile;

@@ -1,3 +1,5 @@
+var omit = require('./omit');
+
 describe('Object/omit', function () {
   it('Creates an object composed of the own enumerable property paths of object that are not omitted', function () {
     var obj1 = {

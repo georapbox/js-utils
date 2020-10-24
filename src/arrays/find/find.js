@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a value in the array, if an element in the array satisfies the provided testing function.
  * Executes the callback function once for each element present in the array until it finds one
@@ -46,8 +48,6 @@
  * // -> undefined
  */
 function find(array, predicate, thisArg) {
-  'use strict';
-
   var index, element, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -74,3 +74,5 @@ function find(array, predicate, thisArg) {
 
   return undefined;
 }
+
+module.exports = find;

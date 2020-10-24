@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' matches a hexadecimal regular expression.
  *
@@ -22,7 +24,7 @@
  * // -> false
  */
 function isHexadecimal(value) {
-  'use strict';
-
   return /^[0-9a-fA-F]+$/.test(value);
 }
+
+module.exports = isHexadecimal;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Rounds a number to the nearest multiple of a value provided.
  *
@@ -24,8 +26,6 @@
  * // -> 113 (NaN is converted to 1)
  */
 function roundToNearest(value, nearest) {
-  'use strict';
-
   if (typeof value !== 'number' || typeof nearest !== 'number') {
     throw new TypeError('all arguments of "roundToNearest" must be numbers');
   }
@@ -34,3 +34,5 @@ function roundToNearest(value, nearest) {
 
   return Math.round(value / nearest) * nearest;
 }
+
+module.exports = roundToNearest;

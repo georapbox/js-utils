@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.
  * The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
@@ -23,8 +25,6 @@
  * // -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}]
  */
 function takeWhile(array, predicate) {
-  'use strict';
-
   var index, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -48,3 +48,5 @@ function takeWhile(array, predicate) {
 
   return array.slice(0, index);
 }
+
+module.exports = takeWhile;

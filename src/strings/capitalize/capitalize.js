@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Capitalizes the first character of a string.
  *
@@ -18,8 +20,6 @@
  * // -> 'Hello'
  */
 function capitalize(subjectString, lowerCaseRest) {
-  'use strict';
-
   var firstChar, restStr;
 
   if (typeof subjectString !== 'string') {
@@ -27,9 +27,12 @@ function capitalize(subjectString, lowerCaseRest) {
   }
 
   firstChar = subjectString.substr(0, 1).toUpperCase();
-  restStr = lowerCaseRest === true ?
-    subjectString.substring(1).toLocaleLowerCase() :
-    subjectString.substring(1);
+
+  restStr = lowerCaseRest === true
+    ? subjectString.substring(1).toLocaleLowerCase()
+    : subjectString.substring(1);
 
   return firstChar + restStr;
 }
+
+module.exports = capitalize;

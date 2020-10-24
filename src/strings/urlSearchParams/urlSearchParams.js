@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Factory function that returns methods that access the URL search parameters.
  *
@@ -11,8 +13,6 @@
  * // -> {get: get(), keys: keys(), values: values()}
  */
 function urlSearchParams(searchString) {
-  'use strict';
-
   var queryParams, regex, isValidQuery, tempObj, tokens;
 
   if (typeof searchString !== 'string') {
@@ -106,3 +106,5 @@ function urlSearchParams(searchString) {
     values: values
   };
 }
+
+module.exports = urlSearchParams;

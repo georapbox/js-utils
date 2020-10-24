@@ -1,3 +1,5 @@
+var takeRight = require('./takeRight');
+
 describe('Array/takeRight', function () {
   it('creates a slice of array with n items taken from the end', function () {
     expect(takeRight([1, 2, 3, 4, 5])).toEqual([5]);

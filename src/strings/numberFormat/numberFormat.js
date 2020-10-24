@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Formats a number based on the number of decimal points,
  * the decimal separator and the thousands separator.
@@ -21,8 +23,6 @@
  * // -> '123.456.789,123'
  */
 function numberFormat(nNumber, nDecimals, sDecimalSeparator, sThousandSeparator) {
-  'use strict';
-
   var parts, integerPart, fractionalPart;
 
   if (nNumber !== nNumber || nNumber == null) {
@@ -39,3 +39,5 @@ function numberFormat(nNumber, nDecimals, sDecimalSeparator, sThousandSeparator)
 
   return integerPart.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + sThousandSeparator) + fractionalPart;
 }
+
+module.exports = numberFormat;

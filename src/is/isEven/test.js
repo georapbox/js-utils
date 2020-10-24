@@ -1,3 +1,5 @@
+var isEven = require('./isEven');
+
 describe('is/isEven', function () {
   it('checks if value is even', function () {
     expect(isEven(2)).toBe(true);

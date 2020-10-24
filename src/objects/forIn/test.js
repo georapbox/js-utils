@@ -1,3 +1,5 @@
+var forIn = require('./forIn');
+
 describe('Object/forIn', function () {
   it('iterates over own and inherited enumerable properties of an object', function () {
     var props = [];

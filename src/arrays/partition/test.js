@@ -1,3 +1,5 @@
+var partition = require('./partition');
+
 describe('Array/partition', function () {
   it('creates an array of elements split into two groups', function () {
     var users = [{

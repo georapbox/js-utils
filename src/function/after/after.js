@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a function that invokes `func` once it's called `n` or more times.
  * `func` is invoked with the this binding and arguments of the created function.
@@ -20,8 +22,6 @@
  * // -> logs "Do something..." after button is clicked at least 4 times.
  */
 function after(n, func) {
-  'use strict';
-
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function');
   }
@@ -34,3 +34,5 @@ function after(n, func) {
     }
   };
 }
+
+module.exports = after;

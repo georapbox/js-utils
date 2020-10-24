@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Limits the number of times a function can be called in a given period.
  *
@@ -16,8 +18,6 @@
  * window.addEventListener('resize', throttledHandler, false);
  */
 function throttle(func, wait) {
-  'use strict';
-
   var timerId, lastRan;
 
   if (typeof func !== 'function') {

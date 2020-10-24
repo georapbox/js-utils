@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Determines whether a string ends with the characters of another string.
  *
@@ -22,8 +24,6 @@
  * // -> true
  */
 function endsWith(subjectString, searchString, position) {
-  'use strict';
-
   var lastIndex;
 
   if (typeof subjectString !== 'string') {
@@ -51,3 +51,5 @@ function endsWith(subjectString, searchString, position) {
 
   return lastIndex !== -1 && lastIndex === position;
 }
+
+module.exports = endsWith;

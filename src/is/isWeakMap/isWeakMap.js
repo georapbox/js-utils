@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if `value` is classified as a WeakMap object.
  *
@@ -23,8 +25,7 @@
  * // -> false
  */
 function isWeakMap(value) {
-  'use strict';
-
-  return typeof value === 'object' &&
-    Object.prototype.toString.call(value) === '[object WeakMap]';
+  return typeof value === 'object' && Object.prototype.toString.call(value) === '[object WeakMap]';
 }
+
+module.exports = isWeakMap;

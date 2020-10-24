@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Generates a random string of specific `length` allowing a set of characters specified by `chars`.
  *
@@ -55,3 +57,5 @@ function randomString(length, chars) {
 
   return result;
 }
+
+module.exports = randomString;

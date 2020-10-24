@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Reverses an array (not in place).
  * The first array element becomes the last and the last becomes the first.
@@ -12,11 +14,11 @@
  * // -> [3, 2, 1]
  */
 function reverse(array) {
-  'use strict';
-
   if (Object.prototype.toString.call(array) !== '[object Array]') {
     throw new TypeError('Expected an array');
   }
 
   return array.slice(0).reverse();
 }
+
+module.exports = reverse;

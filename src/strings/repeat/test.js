@@ -1,3 +1,5 @@
+var repeat = require('./repeat');
+
 describe('String/repeat', function () {
   it('should repeat a string n times', function () {
     expect(repeat('a', 3)).toBe('aaa');

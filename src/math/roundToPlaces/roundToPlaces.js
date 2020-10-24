@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Rounds a number to a number of desired places.
  * Feed with negative place values to round to powers of 10.
@@ -40,8 +42,6 @@
  * // -> 123457000
  */
 function roundToPlaces(value, places) {
-  'use strict';
-
   var mult;
 
   if (typeof value !== 'number' || typeof places !== 'number') {
@@ -52,3 +52,5 @@ function roundToPlaces(value, places) {
 
   return Math.round(value * mult) / mult;
 }
+
+module.exports = roundToPlaces;

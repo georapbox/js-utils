@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Calculates the average of a set of numbers.
  * Accepts any number of numbers as parameters, or an array of numbers.
@@ -30,8 +32,6 @@
  * average([5, 4, null, true, '12', Infinity]); // => 0
  */
 function average(/* ...args */) {
-  'use strict';
-
   var sum = 0;
   var count = 0;
   var toString = Object.prototype.toString;
@@ -60,3 +60,5 @@ function average(/* ...args */) {
 
   return count > 0 ? sum / count : 0;
 }
+
+module.exports = average;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Acts as a wrapper/container around the `value` passed in.
  *
@@ -16,18 +18,7 @@
  * container(['a', 'b', 'c']);
  * // -> {val: ['a', 'b', 'c']}
  */
-(function (name, context, definition) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    define(definition);
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = definition();
-  } else {
-    context[name] = definition();
-  }
-}('Container', this, function () {
-  'use strict';
-
+module.exports = (function () {
   function ContainerType(val) {
     this.val = val;
   }
@@ -78,4 +69,4 @@
   };
 
   return container;
-}));
+}());

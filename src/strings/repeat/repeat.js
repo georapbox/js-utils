@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Constructs and returns a new string which contains the specified number
  * of copies of the string on which it was called, concatenated together.
@@ -41,8 +43,6 @@
  * // -> Throws RangeError
  */
 function repeat(subjectString, count) {
-  'use strict';
-
   var str, repeated;
   var errors = {
     stringTE: 'first parameter must be a string',
@@ -102,3 +102,5 @@ function repeat(subjectString, count) {
 
   return repeated;
 }
+
+module.exports = repeat;

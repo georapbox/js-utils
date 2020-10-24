@@ -1,3 +1,5 @@
+var uniq = require('./uniq');
+
 describe('Array/uniq', function () {
   var arr = ['a', 'a', 'b', true, '2', 2, false, true];
 

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if value is classified as a Map object.
  *
@@ -19,8 +21,7 @@
  * // -> false
  */
 function isMap(value) {
-  'use strict';
-
-  return typeof value === 'object' &&
-      Object.prototype.toString.call(value) === '[object Map]';
+  return typeof value === 'object' && Object.prototype.toString.call(value) === '[object Map]';
 }
+
+module.exports = isMap;

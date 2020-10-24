@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Easing based scrolling to a specified y point inside page.
  *
@@ -5,7 +7,6 @@
  * @category DOM
  */
 (function (name, context, definition) {
-  'use strict';
   if (typeof define === 'function' && define.amd) {
     define(definition);
   } else if (typeof module !== 'undefined' && module.exports) {
@@ -14,8 +15,6 @@
     context[name] = definition();
   }
 }('scroll', this, function () { // Change first argument ('scroll') if you need to export with different name.
-  'use strict';
-
   /**
    * Merges (deep copy) the contents of two or more objects together into the first object.
    *
@@ -29,7 +28,7 @@
   function extend() {
     for (var i = 1, l = arguments.length; i < l; i++) {
       for (var key in arguments[i]) {
-        if ({}.hasOwnProperty.call(arguments[i], key)) {
+        if (Object.prototype.hasOwnProperty.call(arguments[i], key)) {
           if (arguments[i][key] && arguments[i][key].constructor &&
               arguments[i][key].constructor === Object) {
             arguments[0][key] = arguments[0][key] || {};

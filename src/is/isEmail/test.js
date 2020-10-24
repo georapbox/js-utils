@@ -1,3 +1,5 @@
+var isEmail = require('./isEmail');
+
 describe('is/isEmail', function () {
   it('should validate various strings as emails', function () {
     expect(isEmail('me@example.com')).toBe(true);

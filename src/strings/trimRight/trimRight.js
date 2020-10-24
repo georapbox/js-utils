@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Removes whitespace from the right end of a string.
  *
@@ -11,11 +13,11 @@
  * // -> 'Lorem ipsum dolor si amet.'
  */
 function trimRight(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
 
   return subjectString.replace(/\s+$/, '');
 }
+
+module.exports = trimRight;

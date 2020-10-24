@@ -2,18 +2,7 @@
  * @module cookie
  * @category Misc
  */
-(function (name, context, definition) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    define(definition);
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = definition();
-  } else {
-    context[name] = definition();
-  }
-}('cookie', this, function () {
-  'use strict';
-
+module.exports = (function () {
   /**
    * Creates a new cookie.
    *
@@ -137,4 +126,4 @@
     read: readCookie,
     remove: removeCookie
   };
-}));
+}());

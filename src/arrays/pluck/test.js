@@ -1,3 +1,5 @@
+var pluck = require('./pluck');
+
 describe('Array/pluck', function () {
   var books = [
     {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
