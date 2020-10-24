@@ -209,10 +209,11 @@ A collection of standalone javascript utility functions.
 - To clone the repository, run: `git clone https://github.com/georapbox/js-utils.git`
 - To install dev dependancies, (from the root folder of the project) run: `$ npm install`
 
-## Run the tests
+## Testing
 
-From the root folder of the project, run: `$ npm run test`.
-Apart from the results in terminal, this will create a `tests-reporter` folder to the root of the project, that contains an HTML document with the tests results.
+```sh
+$ npm run test
+```
 
 ## License
 
