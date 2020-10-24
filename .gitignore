@@ -5,3 +5,4 @@ docs/
 tests-reporter/
 dist/
 demo.html
+coverage/
