@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Converts a color number value to a hexadecimal formatted string,
  * or a hexadecimal formatted string to a number.
@@ -35,8 +37,6 @@
  *
  */
 function parseColor(color, toNumber) {
-  'use strict';
-
   if (typeof color !== 'number' && typeof color !== 'string') {
     throw new TypeError('"parseColor" expects a number or string for color');
   }
@@ -59,3 +59,5 @@ function parseColor(color, toNumber) {
     return color;
   }
 }
+
+module.exports = parseColor;

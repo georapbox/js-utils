@@ -1,11 +1,11 @@
-/*global zip*/
+var zip = require('./zip');
 
 describe('Array/zip', function () {
   it('creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on', function () {
-    var arr1 = [1, 2, 3],
-      arr2 = [11, 22],
-      arr3 = [111],
-      zipped = zip(arr1, arr2, arr3);
+    var arr1 = [1, 2, 3];
+    var arr2 = [11, 22];
+    var arr3 = [111];
+    var zipped = zip(arr1, arr2, arr3);
 
     expect(zipped.length).toEqual(3);
 

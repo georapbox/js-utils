@@ -1,3 +1,5 @@
+var schemaValidate = require('./schemaValidate');
+
 describe('Object/schemaValidate', function () {
   var schema = {
     name: function (value) {

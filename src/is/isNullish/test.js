@@ -1,3 +1,5 @@
+var isNullish = require('./isNullish');
+
 describe('is/isNullish', function () {
   var foo;
 

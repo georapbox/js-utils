@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Sorts an array of primitive values of the same type.
  * Any `null`, `undefined` or `NaN` values are removed from the result array.
@@ -30,8 +32,6 @@
  * // -> [321, 100, 99, 9, 6, 4, 2, -2, -10]
  */
 function sort(array, ascending) {
-  'use strict';
-
   // Remove any `null`, `undefined` or `NaN` values.
   var filtered;
 
@@ -57,3 +57,5 @@ function sort(array, ascending) {
     return filtered[el.index];
   });
 }
+
+module.exports = sort;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if a value is even.
  *
@@ -28,11 +30,11 @@
  * // -> false
  */
 function isEven(value) {
-  'use strict';
-
   if (typeof value === 'object') {
     return false;
   }
 
   return value % 2 === 0;
 }
+
+module.exports = isEven;

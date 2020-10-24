@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if `value` is string.
  *
@@ -19,7 +21,8 @@
  * // -> false
  */
 function isString(value) {
-  'use strict';
-
-  return value != null && (typeof value === 'string' || Object.prototype.toString.call(value) === '[object String]');
+  return value != null
+    && (typeof value === 'string' || Object.prototype.toString.call(value) === '[object String]');
 }
+
+module.exports = isString;

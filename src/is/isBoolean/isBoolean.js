@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is a boolean value.
  *
@@ -19,8 +21,9 @@
  * // -> false
  */
 function isBoolean(value) {
-  'use strict';
-
-  return value === true || value === false ||
-    Object.prototype.toString.call(value) === '[object Boolean]';
+  return value === true
+    || value === false
+    || Object.prototype.toString.call(value) === '[object Boolean]';
 }
+
+module.exports = isBoolean;

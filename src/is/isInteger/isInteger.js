@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is an integer number.
  * If the value is NaN or infinite, return false.
@@ -41,14 +43,13 @@
  * // -> false
  */
 function isInteger(value) {
-  'use strict';
-
   if (Number.isInteger) {
     return Number.isInteger(value);
   }
 
-  return (Object.prototype.toString.call(value) === '[object Number]' ||
-    typeof value === 'number') &&
-    value !== Infinity && value !== -Infinity &&
-    Math.floor(value) === value;
+  return (Object.prototype.toString.call(value) === '[object Number]' || typeof value === 'number')
+    && value !== Infinity && value !== -Infinity
+    && Math.floor(value) === value;
 }
+
+module.exports = isInteger;

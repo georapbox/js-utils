@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Converts a camel cased or snake cased string into a string delimited by dashes.
  *
@@ -20,8 +22,6 @@
  * // -> '-moz-background-image'
  */
 function dasherize(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -32,3 +32,5 @@ function dasherize(subjectString) {
     .replace(/-+/g, '-')
     .toLowerCase();
 }
+
+module.exports = dasherize;

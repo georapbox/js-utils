@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an array of elements split into groups the length of `size`.
  * If array can’t be split evenly, the final chunk will be the remaining elements.
@@ -43,8 +45,6 @@
  * // -> []
  */
 function chunk(array, size) {
-  'use strict';
-
   var MAX_INTEGER, length, result, index, resIndex;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -74,3 +74,5 @@ function chunk(array, size) {
 
   return result;
 }
+
+module.exports = chunk;

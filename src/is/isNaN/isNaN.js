@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Determines whether a value is NaN or not.
  *
@@ -33,8 +35,6 @@
  * isNaN(b);
  */
 function isNaN(value) {
-  'use strict';
-
   if (Number.isNaN) {
     return Number.isNaN(value);
   }
@@ -43,3 +43,5 @@ function isNaN(value) {
   // primitive value which does not equal itself.
   return value !== value;
 }
+
+module.exports = isNaN;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a substring before a specific sequence of character(s).
  * By default looks for the first occurrence of this sequence.
@@ -29,8 +31,6 @@
  * // -> Throws TypeError
  */
 function subStrBefore(subjectString, characters, last) {
-  'use strict';
-
   var index;
 
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
@@ -41,3 +41,5 @@ function subStrBefore(subjectString, characters, last) {
 
   return !!~index && index !== 0 ? subjectString.substr(0, index) : subjectString;
 }
+
+module.exports = subStrBefore;

@@ -1,3 +1,5 @@
+var max = require('./max');
+
 describe('Math/max', function () {
   it('finds the largest of zero or more numbers', function () {
     expect(max(5)).toEqual(5);

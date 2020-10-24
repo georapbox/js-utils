@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Clamps number within the inclusive `min` and `max` bounds,
  * making sure it does not go beyond them on either side.
@@ -33,11 +35,11 @@
  * // -> 100
  */
 function clamp(value, min, max) {
-  'use strict';
-
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('all arguments of "clamp" must be numbers');
   }
 
   return Math.min(Math.max(value, Math.min(min, max)), Math.max(min, max));
 }
+
+module.exports = clamp;

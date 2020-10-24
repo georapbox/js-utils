@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Removes all of the punctuation from a string.
  *
@@ -13,11 +15,11 @@
  * // -> You cant make an omelet without breaking a few eggs
  */
 function stripPunctuation(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
 
   return subjectString.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
 }
+
+module.exports = stripPunctuation;

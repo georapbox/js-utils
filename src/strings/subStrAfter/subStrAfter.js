@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a substring after a specific sequence of character(s).
  * By default looks for the first occuerence of this sequence.
@@ -25,8 +27,6 @@
  * // -> 'LOREM_IPSUM DOLOR_SIT AMET'
  */
 function subStrAfter(subjectString, characters, last) {
-  'use strict';
-
   var arr, len;
 
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
@@ -41,3 +41,5 @@ function subStrAfter(subjectString, characters, last) {
   len = arr.length;
   return arr[len - 1];
 }
+
+module.exports = subStrAfter;

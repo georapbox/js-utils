@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a function, that, as long as it continues to be invoked, will not
  * be triggered. The function will be called after it stops being called for
@@ -19,8 +21,6 @@
  * window.addEventListener('resize', debouncedHandler, false);
  */
 function debounce(func, wait, immediate) {
-  'use strict';
-
   var timerId = null;
 
   if (typeof func !== 'function') {

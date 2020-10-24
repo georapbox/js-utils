@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a substring denoted by n (positive or negative) characters.
  *
@@ -29,8 +31,6 @@
  * // -> 'Lorem ispum dolor sit amet.'
  */
 function subStr(subjectString, n) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -41,3 +41,5 @@ function subStr(subjectString, n) {
 
   return subjectString;
 }
+
+module.exports = subStr;

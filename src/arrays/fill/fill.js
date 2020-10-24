@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Fills elements of array with value from start up to end (not including end).
  *
@@ -28,8 +30,6 @@
  * // -> [undefined, undefined, undefined]
  */
 function fill(array, value, start, end) {
-  'use strict';
-
   var length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -65,3 +65,5 @@ function fill(array, value, start, end) {
 
   return array;
 }
+
+module.exports = fill;

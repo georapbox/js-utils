@@ -1,4 +1,4 @@
-/*global contains*/
+var contains = require('./contains');
 
 describe('String/contains', function () {
   it('String should contain the specified search string', function () {

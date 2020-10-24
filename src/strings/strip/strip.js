@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a new string with all occurrences of [string1], [string2],... removed.
  *
@@ -23,8 +25,6 @@
  * // -> '_ipsum_dolor_sit_amet. +ipsum+dolor+sit+amet. 123456789'
  */
 function strip(subjectString /* args... */) {
-  'use strict';
-
   var index, len;
 
   if (typeof subjectString !== 'string') {
@@ -40,3 +40,5 @@ function strip(subjectString /* args... */) {
 
   return subjectString;
 }
+
+module.exports = strip;

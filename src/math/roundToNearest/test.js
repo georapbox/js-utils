@@ -1,3 +1,5 @@
+var roundToNearest = require('./roundToNearest');
+
 describe('Math/roundToNearest', function () {
   it('rounds a number to the nearest multiple of a value provided', function () {
 

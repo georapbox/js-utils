@@ -1,3 +1,5 @@
+var poll = require('./poll');
+
 describe('misc/poll', function () {
   it('periodically check for status updates and stop if done', function (done) {
     var num = 0;

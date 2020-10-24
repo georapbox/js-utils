@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).
  *
@@ -48,8 +50,6 @@
  * // -> false
  */
 function isPlainObject(value) {
-  'use strict';
-
   var toString = Object.prototype.toString;
   var proto;
 
@@ -69,3 +69,5 @@ function isPlainObject(value) {
 
   return Object.getPrototypeOf(value) === proto;
 }
+
+module.exports = isPlainObject;

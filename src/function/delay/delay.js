@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Invokes `func` after `wait` milliseconds.
  * Any additional arguments are provided to `func` when it’s invoked.
@@ -18,8 +20,6 @@
  * // -> Logs 'hello world' after two seconds.
  */
 function delay(func, wait /* ,args... */) {
-  'use strict';
-
   var slice, args;
 
   if (typeof func !== 'function') {
@@ -34,3 +34,5 @@ function delay(func, wait /* ,args... */) {
     func.apply(undefined, args);
   }, wait);
 }
+
+module.exports = delay;

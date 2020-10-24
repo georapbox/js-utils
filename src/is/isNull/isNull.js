@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is null.
  *
@@ -19,7 +21,7 @@
  * // -> false
  */
 function isNull(value) {
-  'use strict';
-
   return value === null;
 }
+
+module.exports = isNull;

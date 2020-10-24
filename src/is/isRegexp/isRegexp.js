@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is a regular expression.
  *
@@ -13,7 +15,7 @@
  * // -> false
  */
 function isRegexp(value) {
-  'use strict';
-
   return Object.prototype.toString.call(value) === '[object RegExp]';
 }
+
+module.exports = isRegexp;

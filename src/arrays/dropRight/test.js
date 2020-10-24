@@ -1,3 +1,5 @@
+var dropRight = require('./dropRight');
+
 describe('Array/dropRight', function () {
   it('creates a slice of array with n elements dropped from the end', function () {
     var arr = [1, 2, 3, 4, 5];

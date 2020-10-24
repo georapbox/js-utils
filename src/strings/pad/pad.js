@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Pad `subjectString` on both sides to the given `len`, with optional `chars` defaulting to a space.
  *
@@ -23,8 +25,6 @@
  * // -> 'Hello' (len is the same as str.length)
  */
 function pad(subjectString, len, chars) {
-  'use strict';
-
   var left, right;
 
   if (typeof subjectString !== 'string') {
@@ -51,3 +51,5 @@ function pad(subjectString, len, chars) {
 
   return left + subjectString + right;
 }
+
+module.exports = pad;

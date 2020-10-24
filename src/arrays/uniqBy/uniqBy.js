@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.
  * The `iteratee` is invoked with one argument (each element in the array).
@@ -5,6 +7,7 @@
  * @category Array
  * @param {Array} array The initial array to inspect.
  * @param {Function|String} iteratee The iteratee invoked per element.
+ * @throws {TypeError} If `array` is not array.
  * @returns {Array} The duplicate free array.
  * @example
  *
@@ -29,6 +32,10 @@
  * // -> [{ v: 1.6 }, { v: 2.1 }]
  */
 function uniqBy(array, iteratee) {
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
   var cb = typeof iteratee === 'function' ? iteratee : function (o) {
     return o[iteratee];
   };
@@ -45,3 +52,5 @@ function uniqBy(array, iteratee) {
     }
   }, []);
 }
+
+module.exports = uniqBy;

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Deburrs a string by converting latin-1 supplementary letters to
  * basic latin letters and removing combining diacritical marks.
@@ -22,10 +24,7 @@
  * // -> 'deja vu'
  */
 function deburr(subjectString) {
-  'use strict';
-
-  var reLatin1, deburredLetters,
-    rsCombo, reComboMark;
+  var reLatin1, deburredLetters, rsCombo, reComboMark;
 
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
@@ -66,3 +65,5 @@ function deburr(subjectString) {
     return deburredLetters[letter];
   }).replace(reComboMark, '');
 }
+
+module.exports = deburr;

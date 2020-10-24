@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Periodically check for application's status updates.
  *
@@ -32,8 +34,6 @@
  * }, 1000);
  */
 function poll(func, interval, successCallback, timeout, timeoutCallback) {
-  'use strict';
-
   var endTime;
 
   if (typeof func !== 'function') {
@@ -55,3 +55,5 @@ function poll(func, interval, successCallback, timeout, timeoutCallback) {
     }
   }());
 }
+
+module.exports = poll;

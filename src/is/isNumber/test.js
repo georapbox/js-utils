@@ -1,3 +1,5 @@
+var isNumber = require('./isNumber');
+
 describe('is/isNumber', function () {
   it('checks if a value is number', function () {
     expect(isNumber(404)).toBe(true);

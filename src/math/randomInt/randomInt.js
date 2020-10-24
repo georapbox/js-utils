@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.
  * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
@@ -13,8 +15,6 @@
  * // -> Any integer number between 3 (inclusive) and 8 (inclusive). eg 6
  */
 function randomInt(min, max) {
-  'use strict';
-
   if (typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('all arguments of "randomInt" must be numbers');
   }
@@ -23,3 +23,5 @@ function randomInt(min, max) {
     Math.min(min, max) + Math.random() * (Math.max(min, max) - Math.min(min, max) + 1)
   );
 }
+
+module.exports = randomInt;

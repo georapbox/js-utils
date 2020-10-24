@@ -1,3 +1,5 @@
+var findIndex = require('./findIndex');
+
 describe('Array/findIndex', function () {
   var arr = ['a', 'b', 'c', 'd', 'e'];
 

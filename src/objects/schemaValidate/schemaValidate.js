@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Validates a plain object against a provided schema object.
  *
@@ -55,8 +57,6 @@
  * // -> {valid: true, invalidProperties: []}
  */
 function schemaValidate(object, schema) {
-  'use strict';
-
   var errorsArray = Object
     .keys(schema || {})
     .map(function (property) {
@@ -87,3 +87,5 @@ function schemaValidate(object, schema) {
     invalidProperties: errorsArray
   };
 }
+
+module.exports = schemaValidate;

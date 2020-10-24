@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Pad `subjectString` on right side to the given `len`, with optional `chars` defaulting to a space.
  *
@@ -17,8 +19,6 @@
  * // -> 'Hello-----'
  */
 function padRight(subjectString, len, chars) {
-  'use strict';
-
   var right;
 
   if (typeof subjectString !== 'string') {
@@ -41,3 +41,5 @@ function padRight(subjectString, len, chars) {
 
   return subjectString + right;
 }
+
+module.exports = padRight;

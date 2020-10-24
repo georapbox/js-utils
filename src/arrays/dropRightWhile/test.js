@@ -1,6 +1,9 @@
+var dropRightWhile = require('./dropRightWhile');
+
 describe('Array/dropRightWhile', function () {
   it('creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy', function () {
-    var books = [{
+    var books = [
+      {
         title: 'Javascript Design Patterns',
         read: false
       },
@@ -21,14 +24,12 @@ describe('Array/dropRightWhile', function () {
     expect(dropRightWhile(books, function (book) {
       return !book.read;
     })).toEqual([{
-        title: 'Javascript Design Patterns',
-        read: false
-      },
-      {
-        title: 'Programming Javascript Applications',
-        read: true
-      }
-    ]);
+      title: 'Javascript Design Patterns',
+      read: false
+    }, {
+      title: 'Programming Javascript Applications',
+      read: true
+    }]);
 
     expect(dropRightWhile(books, function (book) {
       return book.read;

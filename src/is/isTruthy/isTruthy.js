@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is a truthy one.
  *
@@ -31,11 +33,11 @@
  * // -> false
  */
 function isTruthy(value) {
-  'use strict';
-
-  return value != null && // value is existy
-    value !== false &&  // obviously :)
-    value === value &&  // check if is not NaN (NaN is falsy)
-    value !== '' &&     // empty string is falsy
-    value !== 0;        // 0 is the only falsy number
+  return value != null // value is existy
+    && value !== false // obviously :)
+    && value === value // check if is not NaN (NaN is falsy)
+    && value !== '' // empty string is falsy
+    && value !== 0; // 0 is the only falsy number
 }
+
+module.exports = isTruthy;

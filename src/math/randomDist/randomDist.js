@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Returns a weighted random number (that tends to the center)
  * of a range of numbers based on the number of the iterations set.
@@ -17,8 +19,6 @@
  * // -> 59.116191772363024
  */
 function randomDist(min, max, iterations) {
-  'use strict';
-
   var total, i;
 
   if (typeof min !== 'number' || typeof max !== 'number' ||
@@ -37,3 +37,5 @@ function randomDist(min, max, iterations) {
 
   return total / iterations;
 }
+
+module.exports = randomDist;

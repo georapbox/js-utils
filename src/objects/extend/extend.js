@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Merge the contents of two or more objects together into the first object.
  *
@@ -71,23 +73,11 @@
  * // -> options -- {"validate": true, "name": "bar"}
  * // -> settings -- {"validate": true, "limit": 5, "name": "bar"}
  */
-(function (name, context, definition) {
-  'use strict';
-
-  if (typeof define === 'function' && define.amd) {
-    define(definition);
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = definition();
-  } else {
-    context[name] = definition(name, context);
-  }
-}('extend', this, function () {
-  'use strict';
-
-  var toString = Object.prototype.toString,
-    hasOwnProp = Object.prototype.hasOwnProperty,
-    OBJECT_TAG = '[object Object]',
-    ARRAY_TAG = '[object Array]';
+module.exports = (function () {
+  var toString = Object.prototype.toString;
+  var hasOwnProp = Object.prototype.hasOwnProperty;
+  var OBJECT_TAG = '[object Object]';
+  var ARRAY_TAG = '[object Array]';
 
   function isUndefined(value) {
     return typeof value === 'undefined';
@@ -175,7 +165,7 @@
             // Never move original objects, clone them
             target[name] = extend(deep, clone, copy);
 
-          // Don't bring in undefined values
+            // Don't bring in undefined values
           } else if (!isUndefined(copy)) {
             target[name] = copy;
           }
@@ -186,4 +176,4 @@
     // Return the modified object
     return target;
   };
-}));
+}());

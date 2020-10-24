@@ -1,3 +1,5 @@
+var Container = require('./container');
+
 describe('Object/Container', function () {
   var res;
 

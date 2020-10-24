@@ -1,3 +1,5 @@
+var isUndefined = require('./isUndefined');
+
 describe('is/isUndefined', function () {
   var foo;
 

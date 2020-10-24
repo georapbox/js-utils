@@ -1,3 +1,5 @@
+var before = require('./before');
+
 describe('Function/before', function () {
   it('should invoke a function up to 5 times', function () {
     var count = 0,

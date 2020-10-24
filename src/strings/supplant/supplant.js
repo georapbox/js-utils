@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Does variable substitution on a string.
  * It scans through the string looking for expressions enclosed in {{ }} braces.
@@ -39,8 +41,6 @@
  * // -> - gaming
  */
 function supplant(subjectString, data) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -50,10 +50,10 @@ function supplant(subjectString, data) {
   }
 
   return subjectString.replace(/{{([^{{}}]*)}}/g, function (a, b) {
-    var p = b.split(/\./), // Split the variable into its dot notation parts.
-      c = data,          // The c variable becomes our cursor that will traverse the object.
-      i = 0,
-      l = p.length;
+    var p = b.split(/\./); // Split the variable into its dot notation parts.
+    var c = data; // The c variable becomes our cursor that will traverse the object.
+    var i = 0;
+    var l = p.length;
 
     // Loop over the steps in the dot notation path.
     for (i; i < l; i += 1) {
@@ -72,3 +72,5 @@ function supplant(subjectString, data) {
     return typeof c === 'string' || typeof c === 'number' ? c : a;
   });
 }
+
+module.exports = supplant;

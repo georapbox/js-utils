@@ -1,3 +1,5 @@
+var partition = require('./partition');
+
 describe('Array/partition', function () {
   it('creates an array of elements split into two groups', function () {
     var users = [{
@@ -23,7 +25,7 @@ describe('Array/partition', function () {
     expect(nonPositive).toEqual([-4, -2]);
 
     var partitionedUsers = partition(users, function (element) {
-      return element.isAdmin
+      return element.isAdmin;
     });
     var admins = partitionedUsers[0];
     var nonAdmins = partitionedUsers[1];

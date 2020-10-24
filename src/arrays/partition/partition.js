@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an array of elements split into two groups (arrays), the first of which contains the elements that the `predicate` returns truthy for,
  * the second of which contains the elements that the `predicate` returns falsy for.
@@ -38,7 +40,7 @@ function partition(array, predicate) {
   var part2 = [];
   var index, value;
 
-  if (!Array.isArray(array)) {
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
     array = [];
   }
 
@@ -55,3 +57,5 @@ function partition(array, predicate) {
 
   return [part1, part2];
 }
+
+module.exports = partition;

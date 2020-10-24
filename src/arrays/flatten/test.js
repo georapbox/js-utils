@@ -1,3 +1,5 @@
+var flatten = require('./flatten');
+
 describe('Array/flatten', function () {
   it('flattens an array a single level deep', function () {
     expect(flatten([1, [2, [3, [4]], 5], [10]])).toEqual([1, 2, [3, [4]], 5, 10]);
@@ -12,6 +14,6 @@ describe('Array/flatten', function () {
     }
 
     expect(flatten(dummy('a', 'b')))
-    .toEqual([1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]);
+      .toEqual([1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]);
   });
 });

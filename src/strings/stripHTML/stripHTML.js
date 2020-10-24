@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Removes all HTML tags from a string.
  *
@@ -13,11 +15,11 @@
  * // -> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quos dicta, doloremque veritatis.'
  */
 function stripHTML(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
 
   return subjectString.replace(/<[^>]+>/g, '');
 }
+
+module.exports = stripHTML;

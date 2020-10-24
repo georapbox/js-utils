@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Converts degrees to radians.
  *
@@ -23,11 +25,11 @@
  * // -> 6.283185307179586 (2π)
  */
 function degreesToRadians(degrees) {
-  'use strict';
-
   if (typeof degrees !== 'number') {
     throw new TypeError('"degrees" must be a number');
   }
 
   return degrees * Math.PI / 180;
 }
+
+module.exports = degreesToRadians;

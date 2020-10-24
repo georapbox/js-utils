@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` with `n` items taken from the beginning.
  *
@@ -40,8 +42,6 @@
  * // -> Throws TypeError
  */
 function take(array, n) {
-  'use strict';
-
   var MAX_SAFE_INTEGER;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -59,3 +59,5 @@ function take(array, n) {
 
   return array.slice(0, n < 0 ? 0 : n);
 }
+
+module.exports = take;

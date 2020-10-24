@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Removes duplicate primitive values from an array.
  *
@@ -11,8 +13,6 @@
  * // -> ['a', 'b', true, '2', 2, false]
  */
 function uniq(array) {
-  'use strict';
-
   var duplicates, len, i, j, found;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -39,3 +39,5 @@ function uniq(array) {
 
   return duplicates;
 }
+
+module.exports = uniq;

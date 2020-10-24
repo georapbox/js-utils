@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an array of unique values that are included in all given arrays.
  * The order of result values is determined by the order they occur in the first array.
@@ -21,14 +23,12 @@
  * // -> [NaN, 3]
  */
 function intersection(/* arrays */) {
-  'use strict';
-
-  var arrayProto = Array.prototype,
-    objectProto = Object.prototype,
-    toString = objectProto.toString,
-    slice = arrayProto.slice,
-    args = slice.call(arguments, 0),
-    argsLength = args.length;
+  var arrayProto = Array.prototype;
+  var objectProto = Object.prototype;
+  var toString = objectProto.toString;
+  var slice = arrayProto.slice;
+  var args = slice.call(arguments, 0);
+  var argsLength = args.length;
 
   function includes(array, searchElement, fromIndex) {
     var arrayLength, currentIndex, currentElement;
@@ -85,3 +85,5 @@ function intersection(/* arrays */) {
     });
   });
 }
+
+module.exports = intersection;

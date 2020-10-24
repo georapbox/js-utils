@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is a DOM element.
  *
@@ -16,7 +18,7 @@
  * // -> true
  */
 function isElement(value) {
-  'use strict';
-
   return !!value && value.nodeType === 1 && value instanceof Element === true;
 }
+
+module.exports = isElement;

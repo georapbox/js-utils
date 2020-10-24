@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Unescapes a HTML string.
  *
@@ -17,8 +19,6 @@
  * // -> '<p data-id="1">lorem ipsum</p>'
  */
 function unescapeHTML(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -34,3 +34,5 @@ function unescapeHTML(subjectString) {
     .replace(/&#x60;/g, '`')
     .replace(/&#x2F;/g, '/');
 }
+
+module.exports = unescapeHTML;

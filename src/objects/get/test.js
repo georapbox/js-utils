@@ -1,11 +1,15 @@
+var get = require('./get');
+
 describe('Object/get', function () {
   it('Gets the value at path of object. If the resolved value is undefined, the "defaultValue" is returned in its place.', function () {
     var object = {
-      'a': [{
+      'a': [
+        {
           'b': {
             'c': 3
           }
-      }]
+        }
+      ]
     };
 
     expect(get(object, 'a[0].b.c')).toBe(3);

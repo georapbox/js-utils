@@ -1,3 +1,5 @@
+var snakeCase = require('./snakeCase');
+
 describe('String/snakeCase', function () {
   it('should convert string into string delimited by underscores', function () {
     expect(snakeCase('Foo Bar')).toEqual('foo_bar');

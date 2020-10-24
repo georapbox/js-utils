@@ -1,3 +1,5 @@
+var isSafeInteger = require('./isSafeInteger');
+
 describe('is/isSafeInteger', function () {
   it('check if integer number is in the safe range', function () {
     expect(isSafeInteger(3)).toBe(true);

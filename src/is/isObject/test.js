@@ -1,3 +1,5 @@
+var isObject = require('./isObject');
+
 describe('is/isObject', function () {
   it('checks if a value is object', function () {
     expect(isObject({})).toBe(true);

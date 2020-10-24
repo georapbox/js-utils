@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Detects the supported property name for the `animationend` event.
  *
@@ -13,19 +15,17 @@
  * });
  */
 function whichAnimationEnd() {
-  'use strict';
-
-  var key,
-    el = document.createElement('div'),
-    animations = {
-      'animation': 'animationend',
-      'OAnimation': 'oAnimationEnd',
-      'MozAnimation': 'animationend',
-      'WebkitAnimation': 'webkitAnimationEnd'
-    };
+  var key;
+  var el = document.createElement('div');
+  var animations = {
+    'animation': 'animationend',
+    'OAnimation': 'oAnimationEnd',
+    'MozAnimation': 'animationend',
+    'WebkitAnimation': 'webkitAnimationEnd'
+  };
 
   for (key in animations) {
-    if ({}.hasOwnProperty.call(animations, key)) {
+    if (Object.prototype.hasOwnProperty.call(animations, key)) {
       if (el.style[key] !== undefined) {
         el = null;
         return animations[key];
@@ -33,3 +33,5 @@ function whichAnimationEnd() {
     }
   }
 }
+
+module.exports = whichAnimationEnd;

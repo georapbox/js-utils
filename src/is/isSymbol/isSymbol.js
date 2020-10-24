@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if value is classified as a Symbol primitive.
  *
@@ -22,8 +24,7 @@
  * // -> false
  */
 function isSymbol(value) {
-  'use strict';
-
-  return typeof value === 'symbol' ||
-      Object.prototype.toString.call(value) === '[object Symbol]';
+  return typeof value === 'symbol' || Object.prototype.toString.call(value) === '[object Symbol]';
 }
+
+module.exports = isSymbol;

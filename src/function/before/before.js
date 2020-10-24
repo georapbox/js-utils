@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a function that invokes `func` while it’s called less than `n` times.
  * `func` is invoked with the this binding and arguments of the created function.
@@ -20,8 +22,6 @@
  * // -> logs "Do something..." up to 5 times.
  */
 function before(n, func) {
-  'use strict';
-
   var result;
 
   if (typeof func !== 'function') {
@@ -42,3 +42,5 @@ function before(n, func) {
     return result;
   };
 }
+
+module.exports = before;

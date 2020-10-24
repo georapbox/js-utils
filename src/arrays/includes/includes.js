@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Determines whether an array includes a certain element,
  * returning true or false as appropriate.
@@ -39,8 +41,6 @@
  * // -> true
  */
 function includes(array, searchElement, fromIndex) {
-  'use strict';
-
   var arrayLength, currentIndex, currentElement;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -82,3 +82,5 @@ function includes(array, searchElement, fromIndex) {
 
   return false;
 }
+
+module.exports = includes;

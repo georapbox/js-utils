@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an array with the lines of a a string.
  *
@@ -19,11 +21,11 @@
  * // -> ['You can't make', 'an omelet without', 'breaking a few eggs.']
  */
 function lines(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
 
   return subjectString.replace(/\r\n/g, '\n').split('\n');
 }
+
+module.exports = lines;

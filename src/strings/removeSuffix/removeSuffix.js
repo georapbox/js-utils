@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Removes suffix from start of a string.
  *
@@ -22,8 +24,6 @@
  * // -> TypeError
  */
 function removeSuffix(subjectString, suffix) {
-  'use strict';
-
   var strLen, suffixLen;
 
   if (typeof subjectString !== 'string' || typeof suffix !== 'string' && suffix != null) {
@@ -33,6 +33,9 @@ function removeSuffix(subjectString, suffix) {
   strLen = subjectString.length;
   suffixLen = suffix ? suffix.length : 0;
 
-  return subjectString.indexOf(suffix, strLen - suffixLen) !== -1 ?
-    subjectString.slice(0, strLen - suffixLen) : subjectString;
+  return subjectString.indexOf(suffix, strLen - suffixLen) !== -1
+    ? subjectString.slice(0, strLen - suffixLen)
+    : subjectString;
 }
+
+module.exports = removeSuffix;

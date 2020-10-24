@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Captures the touch position on a specific HTML element.
  *
@@ -33,8 +35,6 @@
  * touch.unbind(5000); // Unbind after 5 seconds.
  */
 function captureTouch(element, callback) {
-  'use strict';
-
   var position, state, onTouchStart, onTouchEnd, onTouchMove;
 
   if (!element || element.nodeType !== 1 || element instanceof Element !== true) {

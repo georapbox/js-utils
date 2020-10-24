@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if 'value' is a date.
  *
@@ -13,7 +15,7 @@
  * // -> false
  */
 function isDate(value) {
-  'use strict';
-
   return Object.prototype.toString.call(value) === '[object Date]';
 }
+
+module.exports = isDate;

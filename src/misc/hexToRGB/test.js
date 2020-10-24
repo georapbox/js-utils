@@ -1,3 +1,5 @@
+var hexToRGB = require('./hexToRGB');
+
 describe('misc/hexToRGB', function () {
   it('converts a color to RGB(A) format', function () {
     expect(hexToRGB(0xFF0000)).toEqual('rgb(255, 0, 0)');

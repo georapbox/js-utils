@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Splits string into an array of its words.
  *
@@ -20,11 +22,11 @@
  * // -> Throws TypeError.
  */
 function words(subjectString) {
-  'use strict';
-
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
   }
 
   return subjectString.match(/\S+/g) || [];
 }
+
+module.exports = words;

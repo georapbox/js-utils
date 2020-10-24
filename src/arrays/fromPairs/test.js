@@ -1,3 +1,5 @@
+var fromPairs = require('./fromPairs');
+
 describe('Array/fromPairs', function () {
   it('creates an object composed from key-value pairs', function () {
     var pairs = [

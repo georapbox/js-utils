@@ -1,3 +1,5 @@
+var isEventSupported = require('./isEventSupported');
+
 describe('dom/isEventSupported', function () {
   it('checks if event is supported by browser', function () {
     expect(isEventSupported('submit')).toBe(true);

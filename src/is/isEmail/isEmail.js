@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Validates a string as email address.
  *
@@ -44,3 +46,5 @@ function isEmail(value) {
 
   return emailRegex.test(value);
 }
+
+module.exports = isEmail;

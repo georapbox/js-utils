@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.
  * The order of grouped values is determined by the order they occur in the `array`.
@@ -5,6 +7,7 @@
  * @category Array
  * @param {Array} array The array to iterate over.
  * @param {String|Function} iteratee The iteratee to transform keys. It is invoked with one argument, the array item.
+ * @throws {TypeError} If `array` is not array.
  * @returns {Object}
  * @example
  *
@@ -25,6 +28,10 @@
  * // -> { 'John': [{'name': 'John'}, {'name': 'John'}], 'George': [{'name': 'George'}, {'name': 'George'}], 'Helen': [{'name': 'Helen'}, {'name': 'Helen'}], 'Alex': [{'name': 'Alex'}] }
  */
 function groupBy(array, iteratee) {
+  if (Object.prototype.toString.call(array) !== '[object Array]') {
+    throw new TypeError('Expected an array');
+  }
+
   return array.reduce(function arrayAggregator(accumulator, item) {
     var isFunction = Object.prototype.toString.call(iteratee) === '[object Function]';
     var group = isFunction ? iteratee(item) : item[iteratee];
@@ -33,3 +40,5 @@ function groupBy(array, iteratee) {
     return accumulator;
   }, {});
 }
+
+module.exports = groupBy;

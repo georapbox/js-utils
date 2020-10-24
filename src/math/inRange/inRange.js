@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Checks if a number is between `min` and 'max' values including.
  * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
@@ -38,11 +40,11 @@
  * // -> Throws TypeError (all arguments must be of type "number")
  */
 function inRange(value, min, max) {
-  'use strict';
-
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('all arguments of "inRange" must be numbers');
   }
 
   return value >= Math.min(min, max) && value <= Math.max(min, max);
 }
+
+module.exports = inRange;

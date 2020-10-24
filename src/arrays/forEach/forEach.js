@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Executes a provided callback function once per array element.
  * To break from the iteration at any time, have the callback return `false`.
@@ -37,8 +39,6 @@
  * // =>  ['a', 'b', 'c', 'd', 'e']
  */
 function forEach(array, callback, thisArg) {
-  'use strict';
-
   var index, len;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -58,3 +58,5 @@ function forEach(array, callback, thisArg) {
     }
   }
 }
+
+module.exports = forEach;

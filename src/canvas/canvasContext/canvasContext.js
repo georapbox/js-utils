@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * A class that provides jQuery-style chained access to 2D context methods and properties.
  *
@@ -27,7 +29,6 @@
  *   .strokeStyle();
  */
 (function (name, context, definition) {
-  'use strict';
   if (typeof define === 'function' && define.amd) {
     define(definition);
   } else if (typeof module !== 'undefined' && module.exports) {
@@ -36,8 +37,6 @@
     context[name] = definition();
   }
 }('CanvasContext', this, function () {
-  'use strict';
-
   var proto;
 
   /**

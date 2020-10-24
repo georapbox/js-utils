@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an array of grouped elements, the first of which contains the first elements of the given arrays,
  * the second of which contains the second elements of the given arrays, and so on.
@@ -25,12 +27,10 @@
  * // -> []
  */
 function zip(/* , args... */) {
-  'use strict';
-
-  var slice = Array.prototype.slice,
-    args = slice.call(arguments),
-    argsLength = args.length,
-    longest;
+  var slice = Array.prototype.slice;
+  var args = slice.call(arguments);
+  var argsLength = args.length;
+  var longest;
 
   while (argsLength--) {
     if (Object.prototype.toString.call(args[argsLength]) !== '[object Array]') {
@@ -49,3 +49,5 @@ function zip(/* , args... */) {
     });
   });
 }
+
+module.exports = zip;

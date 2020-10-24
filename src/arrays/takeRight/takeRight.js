@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` with `n` items taken from the end.
  *
@@ -40,8 +42,6 @@
  * // -> Throws TypeError
  */
 function takeRight(array, n) {
-  'use strict';
-
   var MAX_SAFE_INTEGER, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -59,3 +59,5 @@ function takeRight(array, n) {
 
   return array.slice(n < 0 ? 0 : n, length);
 }
+
+module.exports = takeRight;

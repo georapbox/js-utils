@@ -1,4 +1,6 @@
-describe('is/isObject', function () {
+var isObjectLike = require('./isObjectLike');
+
+describe('is/isObjectLike', function () {
   it('checks if a value is object-like', function () {
     expect(isObjectLike({})).toBe(true);
 

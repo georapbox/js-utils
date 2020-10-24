@@ -1,3 +1,5 @@
+var forEach = require('./forEach');
+
 describe('Array/forEach', function () {
   var arr = ['a', 'b', 'c'];
 

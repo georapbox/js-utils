@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Escapes a HTML string.
  *
@@ -17,8 +19,6 @@
  * // -> '&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;&#x2F;p&gt;'
  */
 function escapeHTML(subjectString) {
-  'use strict';
-
   var entityMap;
 
   if (typeof subjectString !== 'string') {
@@ -40,3 +40,5 @@ function escapeHTML(subjectString) {
     return entityMap[tag] || tag;
   });
 }
+
+module.exports = escapeHTML;

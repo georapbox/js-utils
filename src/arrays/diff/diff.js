@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an array with only the unique values from the first array,
  * by excluding all values from the second array using strict equality for comparisons.
@@ -27,10 +29,8 @@
  * // -> [1, 2, 3, 4, 5, obj]
  */
 function diff(arrayA, arrayB) {
-  'use strict';
-
-  var toString = Object.prototype.toString,
-    len, arr;
+  var toString = Object.prototype.toString;
+  var len, arr;
 
   if (toString.call(arrayA) !== '[object Array]' ||
       arrayB != null && toString.call(arrayB) !== '[object Array]') {
@@ -52,3 +52,5 @@ function diff(arrayA, arrayB) {
 
   return arr;
 }
+
+module.exports = diff;

@@ -1,3 +1,5 @@
+var isPlainObject = require('./isPlainObject');
+
 describe('is/isPlainObject', function () {
   function Foo() {
     this.foo = 'bar';

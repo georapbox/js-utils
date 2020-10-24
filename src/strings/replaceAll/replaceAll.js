@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a new string with all occurrences of `subString` replaced with `replaceString`.
  *
@@ -30,8 +32,6 @@
  * // -> '_lorem_ ispum 5 dolor sit amet.'
  */
 function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
-  'use strict';
-
   var isString = function (val) {
     return typeof val === 'string';
   };
@@ -49,3 +49,5 @@ function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
   // Case sensitive lookup.
   return subjectString.split(subString).join(replaceString);
 }
+
+module.exports = replaceAll;

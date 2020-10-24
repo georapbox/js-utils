@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates a slice of `array` with `n` elements dropped from the beginning.
  *
@@ -40,8 +42,6 @@
  * // -> Throws TypeError
  */
 function drop(array, n) {
-  'use strict';
-
   var MAX_SAFE_INTEGER, length;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -60,3 +60,5 @@ function drop(array, n) {
 
   return array.slice(n < 0 ? 0 : n, length);
 }
+
+module.exports = drop;

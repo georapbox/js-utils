@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Ensure a given functionality only runs once.
  *
@@ -19,8 +21,6 @@
  * // -> "Number is now 1"
  */
 function once(func, thisArg) {
-  'use strict';
-
   var result;
 
   function noop() {
@@ -39,3 +39,5 @@ function once(func, thisArg) {
     return result;
   };
 }
+
+module.exports = once;

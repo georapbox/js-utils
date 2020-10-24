@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Determines whether one string may be found within another string, returning true or false as appropriate.
  *
@@ -25,10 +27,7 @@
  * // -> false
  */
 function contains(subjectString, searchString, position) {
-  'use strict';
-
-  var subjectLength,
-    searchLength;
+  var subjectLength, searchLength;
 
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string');
@@ -49,7 +48,9 @@ function contains(subjectString, searchString, position) {
   subjectLength = subjectString.length;
   searchLength = searchString.length;
 
-  return position + searchLength <= subjectLength ?
-    subjectString.indexOf(searchString, position) !== -1 :
-    false;
+  return position + searchLength <= subjectLength
+    ? subjectString.indexOf(searchString, position) !== -1
+    : false;
 }
+
+module.exports = contains;

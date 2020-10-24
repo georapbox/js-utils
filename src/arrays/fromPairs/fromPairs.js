@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an object composed from key-value pairs.
  *
@@ -11,8 +13,6 @@
  * // -> { 'Javascript': 10, 'PHP': 3, 'Java': 4 }
  */
 function fromPairs(array) {
-  'use strict';
-
   var index, length, result, pair;
 
   if (Object.prototype.toString.call(array) !== '[object Array]') {
@@ -31,3 +31,5 @@ function fromPairs(array) {
 
   return result;
 }
+
+module.exports = fromPairs;

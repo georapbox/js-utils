@@ -1,3 +1,5 @@
+var clamp = require('./clamp');
+
 describe('Math/clamp', function () {
   it('clamps number within the inclusive lower and upper bounds', function () {
     expect(clamp(10, -5, 5)).toEqual(5);

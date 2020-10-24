@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.
  *
@@ -29,7 +31,9 @@
  * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
  */
 function omit(obj, props) {
-  var isPropsArray = Array.isArray ? Array.isArray(props) : Object.prototype.toString.call(props) === '[object Array]';
+  var isPropsArray = Array.isArray
+    ? Array.isArray(props)
+    : Object.prototype.toString.call(props) === '[object Array]';
 
   if (!isPropsArray || props.length === 0) {
     props = [];
@@ -42,3 +46,5 @@ function omit(obj, props) {
     return accum;
   }, {});
 }
+
+module.exports = omit;

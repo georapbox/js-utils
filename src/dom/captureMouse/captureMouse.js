@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Captures the mouse position on a specific HTML element.
  *
@@ -33,8 +35,6 @@
  * mouse.unbind(5000); // Unbind after 5 seconds.
  */
 function captureMouse(element, callback) {
-  'use strict';
-
   var position, onMouseMove;
 
   if (!element || element.nodeType !== 1 || element instanceof Element !== true) {
