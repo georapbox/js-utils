@@ -41,8 +41,10 @@ function endsWith(subjectString, searchString, position) {
   subjectString = subjectString.toString();
   searchString = searchString.toString();
 
-  if (typeof position !== 'number' || !isFinite(position) ||
-    Math.floor(position) !== position || position > subjectString.length) {
+  if (
+    typeof position !== 'number' || !isFinite(position)
+    || Math.floor(position) !== position || position > subjectString.length
+  ) {
     position = subjectString.length;
   }
 

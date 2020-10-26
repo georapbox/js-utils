@@ -55,8 +55,9 @@ function drop(array, n) {
   MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   length = array.length;
 
-  n = n > MAX_SAFE_INTEGER ? length :
-    n == null || n !== n ? 1 : Math.floor(n);
+  n = n > MAX_SAFE_INTEGER
+    ? length
+    : n == null || n !== n ? 1 : Math.floor(n);
 
   return array.slice(n < 0 ? 0 : n, length);
 }

@@ -49,8 +49,9 @@ function urlSearchParams(searchString) {
    * // -> []
    */
   function get(param) {
-    return typeof param !== 'string' ? queryParams :
-      queryParams.filter(function (item) {
+    return typeof param !== 'string'
+      ? queryParams
+      : queryParams.filter(function (item) {
         return Object.keys(item)[0] === param;
       }).reduce(function (accum, current) {
         accum.push(current[param]);

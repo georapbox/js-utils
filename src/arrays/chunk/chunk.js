@@ -53,9 +53,9 @@ function chunk(array, size) {
 
   MAX_INTEGER = Number.MAX_VALUE || 1.7976931348623157e+308;
 
-  size = size === Infinity || size === -Infinity ?
-    (size < 0 ? -1 : 1) * MAX_INTEGER :
-    parseInt(size, 10) || 0;
+  size = size === Infinity || size === -Infinity
+    ? (size < 0 ? -1 : 1) * MAX_INTEGER
+    : parseInt(size, 10) || 0;
 
   length = array ? array.length : 0;
 

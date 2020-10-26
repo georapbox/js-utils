@@ -54,8 +54,9 @@ function take(array, n) {
 
   MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
 
-  n = n > MAX_SAFE_INTEGER ? array.length :
-    n == null || n !== n ? 1 : Math.floor(n);
+  n = n > MAX_SAFE_INTEGER
+    ? array.length
+    : n == null || n !== n ? 1 : Math.floor(n);
 
   return array.slice(0, n < 0 ? 0 : n);
 }

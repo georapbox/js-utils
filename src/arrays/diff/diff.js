@@ -32,8 +32,10 @@ function diff(arrayA, arrayB) {
   var toString = Object.prototype.toString;
   var len, arr;
 
-  if (toString.call(arrayA) !== '[object Array]' ||
-      arrayB != null && toString.call(arrayB) !== '[object Array]') {
+  if (
+    toString.call(arrayA) !== '[object Array]'
+    || arrayB != null && toString.call(arrayB) !== '[object Array]'
+  ) {
     throw new TypeError('Expected an array');
   }
 

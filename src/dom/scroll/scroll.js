@@ -29,8 +29,10 @@
     for (var i = 1, l = arguments.length; i < l; i++) {
       for (var key in arguments[i]) {
         if (Object.prototype.hasOwnProperty.call(arguments[i], key)) {
-          if (arguments[i][key] && arguments[i][key].constructor &&
-              arguments[i][key].constructor === Object) {
+          if (
+            arguments[i][key] && arguments[i][key].constructor
+            && arguments[i][key].constructor === Object
+          ) {
             arguments[0][key] = arguments[0][key] || {};
             extend(arguments[0][key], arguments[i][key]);
           } else {
@@ -197,8 +199,8 @@
 
     for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
       window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-      window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||
-        window[vendors[x] + 'CancelRequestAnimationFrame'];
+      window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
+        || window[vendors[x] + 'CancelRequestAnimationFrame'];
     }
 
     if (!window.requestAnimationFrame) {

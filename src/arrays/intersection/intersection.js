@@ -62,8 +62,10 @@ function intersection(/* arrays */) {
     while (currentIndex < arrayLength) {
       currentElement = array[currentIndex];
 
-      if (searchElement === currentElement ||
-          searchElement !== searchElement && currentElement !== currentElement) {
+      if (
+        searchElement === currentElement
+        || searchElement !== searchElement && currentElement !== currentElement
+      ) {
         return true;
       }
 

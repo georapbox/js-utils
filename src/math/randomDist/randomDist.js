@@ -21,8 +21,10 @@
 function randomDist(min, max, iterations) {
   var total, i;
 
-  if (typeof min !== 'number' || typeof max !== 'number' ||
-      typeof iterations !== 'number' && iterations != null) {
+  if (
+    typeof min !== 'number' || typeof max !== 'number'
+    || typeof iterations !== 'number' && iterations != null
+  ) {
     throw new TypeError('all arguments of "randomDist" must be numbers');
   }
 
