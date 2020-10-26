@@ -107,7 +107,6 @@ A collection of standalone javascript utility functions.
 |[after](src/function/after)|Creates a function that invokes `func` once it's called `n` or more times.|
 |[before](src/function/before)|Creates a function that invokes `func` while it’s called less than `n` times.|
 |[debounce](src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
-|[delay](src/function/delay)|Invokes a function after a number of milliseconds.|
 |[negate](src/function/negate)|Creates a function that negates the result of the predicate `func`.|
 |[once](src/function/once)|Ensure a given functionality only runs once.|
 |[throttle](src/function/throttle)|Limits the number of times a function can be called in a given period.|
@@ -200,7 +199,6 @@ A collection of standalone javascript utility functions.
 |[cookie](src/misc/cookie)|Create, read and delete cookies.|
 |[hexToRGB](src/misc/hexToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
 |[parseColor](src/misc/parseColor)|Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.|
-|[poll](src/misc/poll)|Periodically check for application's status updates.|
 
 ## Installation
 
