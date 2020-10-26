@@ -12,7 +12,7 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    "no-unused-vars": 0,
+    "no-unused-vars": ["warn"],
     "no-constant-condition": ["error", { "checkLoops": false }],
     "indent": ["warn", 2, { "SwitchCase": 1, "ignoredNodes": ["TemplateLiteral"] }],
     "eqeqeq": ["error", "always", { "null": "ignore" }],

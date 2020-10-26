@@ -48,3 +48,5 @@ function _extend() {
 
   return arguments[0];
 }
+
+module.exports = _extend;

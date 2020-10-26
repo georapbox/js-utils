@@ -84,3 +84,5 @@ function captureMouse(element, callback) {
     }
   };
 }
+
+module.exports = captureMouse;

@@ -92,3 +92,5 @@ function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
     img.src = images[i];
   }
 }
+
+module.exports = preloadImages;

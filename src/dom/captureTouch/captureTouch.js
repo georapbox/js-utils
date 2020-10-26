@@ -102,3 +102,5 @@ function captureTouch(element, callback) {
     }
   };
 }
+
+module.exports = captureTouch;

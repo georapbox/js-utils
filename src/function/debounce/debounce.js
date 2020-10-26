@@ -42,3 +42,5 @@ function debounce(func, wait, immediate) {
     }, wait);
   };
 }
+
+module.exports = debounce;

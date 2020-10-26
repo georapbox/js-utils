@@ -31,3 +31,5 @@ function convertImageToBase64(url) {
     return canvas.toDataURL();
   });
 }
+
+module.exports = convertImageToBase64;
