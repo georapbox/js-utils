@@ -190,7 +190,6 @@ A collection of standalone javascript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[CanvasContext](src/canvas/canvasContext)|A class that provides jQuery-style chained access to 2D context methods and properties.|
 |[convertImageToBase64](src/canvas/convertImageToBase64)|Converts an image's content to Data URI scheme.|
 
 
@@ -202,7 +201,6 @@ A collection of standalone javascript utility functions.
 |[hexToRGB](src/misc/hexToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
 |[parseColor](src/misc/parseColor)|Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.|
 |[poll](src/misc/poll)|Periodically check for application's status updates.|
-|[Timer](src/misc/Timer)|Simple class to create and manage timers.|
 
 ## Installation
 
