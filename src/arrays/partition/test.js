@@ -43,9 +43,13 @@ describe('Array/partition', function () {
       isAdmin: false
     }]);
 
-    expect(partition([], element => element.isAdmin)).toEqual([[], []]);
+    expect(partition([], function (element) {
+      return element.isAdmin;
+    })).toEqual([[], []]);
 
-    expect(partition(null, element => element.isAdmin)).toEqual([[], []]);
+    expect(partition(null, function (element) {
+      return element.isAdmin;
+    })).toEqual([[], []]);
 
     expect(partition(null, 1)).toEqual([[], []]);
 

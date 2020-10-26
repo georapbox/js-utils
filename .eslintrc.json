@@ -2,10 +2,9 @@
   "env": {
     "browser": true,
     "node": true,
-    "jasmine": true,
+    "jest": true,
     "amd": true,
-    "commonjs": true,
-    "es6": true
+    "commonjs": true
   },
   "globals": {
     "Promise": false
