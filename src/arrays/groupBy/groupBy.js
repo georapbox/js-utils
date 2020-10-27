@@ -33,8 +33,7 @@ function groupBy(array, iteratee) {
   }
 
   return array.reduce(function arrayAggregator(accumulator, item) {
-    var isFunction = Object.prototype.toString.call(iteratee) === '[object Function]';
-    var group = isFunction ? iteratee(item) : item[iteratee];
+    var group = typeof iteratee === 'function' ? iteratee(item) : item[iteratee];
     accumulator[group] = accumulator[group] || [];
     accumulator[group].push(item);
     return accumulator;
