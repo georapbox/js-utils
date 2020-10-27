@@ -1,7 +1,7 @@
 var find = require('./find');
 
 describe('Array/find', function () {
-  it('returns a value in the array, if an element in the array satisfies the provided testing function', function () {
+  function runTests() {
     var fruits = [
       {name: 'apples', quantity: 2},
       {name: 'bananas', quantity: 0},
@@ -42,5 +42,16 @@ describe('Array/find', function () {
     expect(function () {
       return find(fruits);
     }).toThrow();
+  }
+
+  it('returns a value in the array, if an element in the array satisfies the provided testing function (Array.prototype.find is supported)', function () {
+    runTests();
+  });
+
+  it('returns a value in the array, if an element in the array satisfies the provided testing function (Array.prototype.find is not supported)', function () {
+    var nativeCode = Array.prototype.find;
+    Array.prototype.find = null;
+    runTests();
+    Array.prototype.find = nativeCode;
   });
 });

@@ -7,5 +7,9 @@ describe('String/collapseWhitespace', function () {
 
     expect(collapseWhitespace('\n\t too   \n  much  \t whitespace    '))
       .toEqual('too much whitespace');
+
+    expect(function () {
+      return collapseWhitespace(null);
+    }).toThrow();
   });
 });

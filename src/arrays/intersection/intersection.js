@@ -4,7 +4,7 @@
  * Creates an array of unique values that are included in all given arrays.
  * The order of result values is determined by the order they occur in the first array.
  *
- * @NOTE To support legacy browsers use `Array.prototype.reduce` and `Array.prototype.filter` polyfills.
+ * @NOTE To support legacy browsers use `Array.prototype.reduce`, `Array.prototype.filter` and `Array.prototype.includes` polyfills.
  * @NOTE Internal usage of Array > `includes` function.
  * @category Array
  * @param {Array} arrays The arrays to intersect.
@@ -30,51 +30,6 @@ function intersection(/* arrays */) {
   var args = slice.call(arguments, 0);
   var argsLength = args.length;
 
-  function includes(array, searchElement, fromIndex) {
-    var arrayLength, currentIndex, currentElement;
-
-    if (Object.prototype.toString.call(array) !== '[object Array]') {
-      throw new TypeError('Expected an array');
-    }
-
-    arrayLength = array.length;
-
-    if (arrayLength === 0) {
-      return false;
-    }
-
-    if (Array.prototype.includes) {
-      return array.includes(searchElement, fromIndex);
-    }
-
-    fromIndex = parseInt(fromIndex, 10) || 0;
-
-    if (fromIndex >= 0) {
-      currentIndex = fromIndex;
-    } else {
-      currentIndex = arrayLength + fromIndex;
-
-      if (currentIndex < 0) {
-        currentIndex = 0;
-      }
-    }
-
-    while (currentIndex < arrayLength) {
-      currentElement = array[currentIndex];
-
-      if (
-        searchElement === currentElement
-        || searchElement !== searchElement && currentElement !== currentElement
-      ) {
-        return true;
-      }
-
-      currentIndex += 1;
-    }
-
-    return false;
-  }
-
   while (argsLength--) {
     if (toString.call(args[argsLength]) !== '[object Array]') {
       throw new TypeError('Expected an array');
@@ -83,7 +38,7 @@ function intersection(/* arrays */) {
 
   return args.reduce(function (accum, current) {
     return accum.filter(function (item) {
-      return includes(current, item);
+      return current.includes(item);
     });
   });
 }

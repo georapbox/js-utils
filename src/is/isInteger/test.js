@@ -1,7 +1,7 @@
 var isInteger = require('./isInteger');
 
 describe('is/isInteger', function () {
-  it('checks if a value is integer', function () {
+  function runTests() {
     expect(isInteger(0.1)).toBe(false);
 
     expect(isInteger(1)).toBe(true);
@@ -21,5 +21,16 @@ describe('is/isInteger', function () {
     expect(isInteger(9007199254740992)).toBe(true);
 
     expect(isInteger(-9007199254740992)).toBe(true);
+  }
+
+  it('checks if a value is integer (Number.isInteger is supported)', function () {
+    runTests();
+  });
+
+  it('checks if a value is integer (Number.isInteger is not supported)', function () {
+    var nativeCode = Number.isInteger;
+    Number.isInteger = null;
+    runTests();
+    Number.isInteger = nativeCode;
   });
 });

@@ -11,5 +11,17 @@ describe('Math/lerp', function () {
     expect(lerp(1, 100, 500)).toEqual(500);
 
     expect(lerp(-0.5, 0, 500)).toEqual(-250);
+
+    expect(function () {
+      return lerp(null, 0, 365);
+    }).toThrow();
+
+    expect(function () {
+      return lerp(0.75, null, 365);
+    }).toThrow();
+
+    expect(function () {
+      return lerp(0.75, 0, null);
+    }).toThrow();
   });
 });

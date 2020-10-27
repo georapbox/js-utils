@@ -4,7 +4,8 @@
     "node": true,
     "jest": true,
     "amd": true,
-    "commonjs": true
+    "commonjs": true,
+    "es6": true
   },
   "globals": {
     "Promise": false

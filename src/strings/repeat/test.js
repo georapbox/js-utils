@@ -29,5 +29,9 @@ describe('String/repeat', function () {
     expect(function () {
       return repeat('a', 1/0);
     }).toThrow();
+
+    expect(function () {
+      return repeat(null, 0);
+    }).toThrow();
   });
 });
