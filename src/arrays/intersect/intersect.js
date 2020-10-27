@@ -16,13 +16,13 @@
  * var arrB = [2, 7, 'foo', NaN, 3];
  * var arrC = [1, 2, 3, NaN];
  *
- * intersection(arrA, arrB);
+ * intersect(arrA, arrB);
  * // -> [NaN, 3, 'foo']
  *
- * intersection(arrA, arrB, arrC);
+ * intersect(arrA, arrB, arrC);
  * // -> [NaN, 3]
  */
-function intersection(/* arrays */) {
+function intersect(/* arrays */) {
   var arrayProto = Array.prototype;
   var objectProto = Object.prototype;
   var toString = objectProto.toString;
@@ -43,4 +43,4 @@ function intersection(/* arrays */) {
   });
 }
 
-module.exports = intersection;
+module.exports = intersect;

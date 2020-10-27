@@ -1,6 +1,6 @@
-<a name="intersection"></a>
+<a name="intersect"></a>
 
-## intersection() ⇒ <code>Array</code>
+## intersect() ⇒ <code>Array</code>
 Creates an array of unique values that are included in all given arrays.
 The order of result values is determined by the order they occur in the first array.
 
@@ -24,9 +24,9 @@ var arrA = [NaN, 3, 8, 'foo', 'bar'];
 var arrB = [2, 7, 'foo', NaN, 3];
 var arrC = [1, 2, 3, NaN];
 
-intersection(arrA, arrB);
+intersect(arrA, arrB);
 // -> [NaN, 3, 'foo']
 
-intersection(arrA, arrB, arrC);
+intersect(arrA, arrB, arrC);
 // -> [NaN, 3]
 ```
