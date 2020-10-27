@@ -29,8 +29,12 @@
 function subStrAfter(subjectString, characters, last) {
   var arr, len;
 
-  if (typeof subjectString !== 'string' || typeof characters !== 'string') {
-    throw new TypeError('Expected a string');
+  if (typeof subjectString !== 'string') {
+    throw new TypeError('Expected a string as first argument');
+  }
+
+  if (typeof characters !== 'string') {
+    throw new TypeError('Expected a string as second argument');
   }
 
   if (!last) {

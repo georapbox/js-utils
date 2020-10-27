@@ -29,7 +29,7 @@ A collection of standalone javascript utility functions.
 |[fromPairs](src/arrays/fromPairs)|Creates an object composed from key-value pairs.|
 |[groupBy](src/arrays/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
 |[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
-|[intersection](src/arrays/intersection)|Creates an array of unique values that are included in all given arrays.|
+|[intersect](src/arrays/intersect)|Creates an array of unique values that are included in all given arrays.|
 |[insert](src/arrays/insert)|Inserts elements to array at specific index.|
 |[partition](src/arrays/partition)|Creates an array of elements split into two groups (arrays) depending on the result of a predicated function invoked for each iteration.|
 |[pluck](src/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|

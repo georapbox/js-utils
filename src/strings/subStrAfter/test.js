@@ -1,11 +1,17 @@
 var subStrAfter = require('./subStrAfter');
 
 describe('String/subStrAfter', function () {
-  it('With string "LOREM_IPSUM DOLOR_SIT AMET", The substring after the first occurence of "SIT ", should be "AMET"', function () {
+  it('returns a substring after a specific sequence of character(s)', function () {
     expect(subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ')).toBe('AMET');
-  });
 
-  it('With string "LOREM_IPSUM DOLOR_SIT AMET", the substring after the last occurence of "_" should be "SIT AMET"', function () {
     expect(subStrAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true)).toBe('SIT AMET');
+
+    expect(function () {
+      return subStrAfter(null, 'hello');
+    }).toThrow();
+
+    expect(function () {
+      return subStrAfter('hello', null);
+    }).toThrow();
   });
 });

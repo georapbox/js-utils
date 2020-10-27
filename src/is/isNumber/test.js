@@ -9,5 +9,15 @@ describe('is/isNumber', function () {
     expect(isNumber(NaN)).toBe(true);
 
     expect(isNumber('302')).toBe(false);
+
+    expect(isNumber(null)).toBe(false);
+
+    expect(isNumber(void 0)).toBe(false);
+
+    expect(isNumber({})).toBe(false);
+
+    expect(isNumber([])).toBe(false);
+
+    expect(isNumber(Symbol(1))).toBe(false);
   });
 });

@@ -45,5 +45,29 @@ describe('String/stripPunctuation', function () {
     expect(stripPunctuation(str).indexOf('?')).toEqual(-1);
 
     expect(stripPunctuation(str).indexOf('"')).toEqual(-1);
+
+    expect(function () {
+      return stripPunctuation(void 0);
+    }).toThrow();
+
+    expect(function () {
+      return stripPunctuation(null);
+    }).toThrow();
+
+    expect(function () {
+      return stripPunctuation(123);
+    }).toThrow();
+
+    expect(function () {
+      return stripPunctuation({});
+    }).toThrow();
+
+    expect(function () {
+      return stripPunctuation([]);
+    }).toThrow();
+
+    expect(function () {
+      return stripPunctuation(Symbol('foo'));
+    }).toThrow();
   });
 });

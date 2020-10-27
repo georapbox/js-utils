@@ -31,7 +31,7 @@ function endsWith(subjectString, searchString, position) {
   }
 
   if (String.prototype.endsWith) {
-    return subjectString ? subjectString.endsWith(searchString, position) : false;
+    return subjectString.endsWith(searchString, position);
   }
 
   if (searchString == null) {

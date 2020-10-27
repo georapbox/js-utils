@@ -13,5 +13,17 @@ describe('Math/normalize', function () {
     expect(normalize(33, -5, 33)).toEqual(1);
 
     expect(normalize(-5, -5, 33)).toEqual(0);
+
+    expect(function () {
+      return normalize(null, 0, 33);
+    }).toThrow();
+
+    expect(function () {
+      return normalize(23, null, 33);
+    }).toThrow();
+
+    expect(function () {
+      return normalize(23, 0, null);
+    }).toThrow();
   });
 });

@@ -10,5 +10,7 @@ describe('Function/once', function () {
     expect(canOnlyFireOnce()).toEqual(1);
 
     expect(canOnlyFireOnce()).toEqual(1);
+
+    expect(once(null)()).toBeUndefined();
   });
 });

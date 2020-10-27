@@ -30,7 +30,7 @@
  * // -> false
  */
 function isOdd(value) {
-  if (typeof value === 'object') {
+  if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }
 
