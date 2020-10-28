@@ -11,9 +11,6 @@ The order of result values is determined by the order they occur in the first ar
 
 - <code>TypeError</code> If any of the arguments is not array.
 
-**Note**: To support legacy browsers use `Array.prototype.reduce`, `Array.prototype.filter` and `Array.prototype.includes` polyfills.  
-**Note**: Internal usage of Array > `includes` function.  
-
 | Param | Type | Description |
 | --- | --- | --- |
 | ...arrays | <code>Array</code> | The arrays to intersect. |
