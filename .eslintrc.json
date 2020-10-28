@@ -18,6 +18,7 @@
     "eqeqeq": ["error", "always", { "null": "ignore" }],
     "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
     "semi": ["warn", "always"],
-    "operator-linebreak": ["warn", "before"]
+    "operator-linebreak": ["warn", "before"],
+    "no-use-before-define": ["error", { "functions": false }]
   }
 }
