@@ -5,7 +5,6 @@ Calculates the average of a set of numbers.
 Accepts any number of numbers as parameters, or an array of numbers.
 Ommits any non number value.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The average number of the set of data provided.  
 **Category**: Math  
 

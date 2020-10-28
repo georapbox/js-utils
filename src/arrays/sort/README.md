@@ -5,7 +5,6 @@ Sorts an array of primitive values of the same type.
 Any `null`, `undefined` or `NaN` values are removed from the result array.
 If array values are of different type, the result is not guaranteed to be correct.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The new sorted array.  
 **Category**: Array  
 **Throws**:

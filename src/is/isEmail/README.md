@@ -3,7 +3,6 @@
 ## isEmail(value) ⇒ <code>Boolean</code>
 Validates a string as email address.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if valid email, else false.  
 **Category**: Is  
 

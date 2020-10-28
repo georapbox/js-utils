@@ -4,7 +4,6 @@
 Constructs and returns a new string which contains the specified number
 of copies of the string on which it was called, concatenated together.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - A new string containing the specified number of copies of the given string.  
 **Category**: String  
 **Throws**:

@@ -4,7 +4,6 @@
 Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.
 The predicate is invoked with three arguments: (`value`, `index`, `array`).
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The slice of the array.  
 **Category**: Array  
 **Throws**:

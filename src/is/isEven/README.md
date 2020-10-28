@@ -3,7 +3,6 @@
 ## isEven(value) ⇒ <code>Boolean</code>
 Checks if a value is even.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if number is even, else false.  
 **Category**: Is  
 

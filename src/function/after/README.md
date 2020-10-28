@@ -4,7 +4,6 @@
 Creates a function that invokes `func` once it's called `n` or more times.
 `func` is invoked with the this binding and arguments of the created function.
 
-**Kind**: global function  
 **Returns**: <code>function</code> - The new restricted function.  
 **Category**: Function  
 **Throws**:

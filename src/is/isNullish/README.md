@@ -3,7 +3,6 @@
 ## isNullish(value) ⇒ <code>Boolean</code>
 Checks if `value` is `null` or `undefined`.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - `true` if the `value` is `null` or `undefined`; otherwise `false`.  
 **Category**: Is  
 

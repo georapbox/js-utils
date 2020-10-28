@@ -3,7 +3,6 @@
 ## isFalse(value) ⇒ <code>Boolean</code>
 Checks if 'value' is false (strict equality).
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if the 'value' is false, else false.  
 **Category**: Is  
 

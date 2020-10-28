@@ -3,7 +3,6 @@
 ## sortBy(array, field, [ascending], [primer]) ⇒ <code>Array</code>
 Sorts an array of objects (not in place) by property.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - Returns the new sorted array.  
 **Category**: Array  
 **Throws**:
@@ -20,5 +19,23 @@ Sorts an array of objects (not in place) by property.
 
 **Example**  
 ```js
-var homes = [  {h_id: 8, city: 'Dallas', price: '162500'},  {h_id: 4, city: 'Beverly Hills', price: '162500.5'},  {h_id: 5, city: 'new York', price: '162500.1'}];sortBy(homes, 'h_id');// -> "[{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":8,"city":"Dallas","price":"162500"}]"sortBy(homes, 'h_id', false);// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"sortBy(homes, 'price', true);// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"sortBy(homes, 'price', true, function (field) {  return parseInt(field);});// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
+var homes = [
+  {h_id: 8, city: 'Dallas', price: '162500'},
+  {h_id: 4, city: 'Beverly Hills', price: '162500.5'},
+  {h_id: 5, city: 'new York', price: '162500.1'}
+];
+
+sortBy(homes, 'h_id');
+// -> "[{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":8,"city":"Dallas","price":"162500"}]"
+
+sortBy(homes, 'h_id', false);
+// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"
+
+sortBy(homes, 'price', true);
+// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":5,"city":"new York","price":"162500.1"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"}]"
+
+sortBy(homes, 'price', true, function (field) {
+  return parseInt(field);
+});
+// -> "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
 ```

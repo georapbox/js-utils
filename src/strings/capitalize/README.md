@@ -3,7 +3,6 @@
 ## capitalize(subjectString, [lowerCaseRest]) ⇒ <code>String</code>
 Capitalizes the first character of a string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - A new capitalized string.  
 **Category**: String  
 **Throws**:

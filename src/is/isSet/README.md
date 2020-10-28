@@ -3,7 +3,6 @@
 ## isSet(value) ⇒ <code>Boolean</code>
 Checks if value is classified as a Set object.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `value` is classified as a Set object, else false.  
 **Category**: Is  
 

@@ -3,7 +3,6 @@
 ## isNumber(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a number.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if 'value' is a number, else false.  
 **Category**: Is  
 **Note:**: `NaN` is considered to be a number, as so will return true.  

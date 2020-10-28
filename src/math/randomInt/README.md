@@ -4,7 +4,6 @@
 Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.
 If `min` is greater than `max` the parameters are swapped to support inverted ranges.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The pseudo-random integer number.  
 **Category**: Math  
 **Throws**:

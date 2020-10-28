@@ -3,7 +3,6 @@
 ## startsWith(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
 Determines whether a string begins with the characters of another string.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `subjectString` starts with `searchString`, else false.  
 **Category**: String  
 **Throws**:

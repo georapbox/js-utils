@@ -3,7 +3,6 @@
 ## snakeCase(subjectString) ⇒ <code>String</code>
 Converts string into string delimited by underscores.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

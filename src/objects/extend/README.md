@@ -22,7 +22,6 @@ Date or RegExp, are not re-constructed and will appear as plain Objects in the r
 On a deep extend, Object and Array are extended, but object wrappers on primitive types such as
 String, Boolean, and Number are not. Deep-extending a cyclical data structure will result in an error.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - The merged object.  
 **Category**: Object  
 

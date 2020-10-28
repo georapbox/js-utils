@@ -3,7 +3,6 @@
 ## dasherize(subjectString) ⇒ <code>String</code>
 Converts a camel cased or snake cased string into a string delimited by dashes.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The converted string.  
 **Category**: String  
 **Throws**:

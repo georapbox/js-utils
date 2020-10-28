@@ -3,7 +3,6 @@
 ## schemaValidate(object, [schema]) ⇒ <code>Object</code>
 Validates a plain object against a provided schema object.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - An object holding a boolean to indicate if object is valid and an array with invalid properties if any.  
 **Category**: Object  
 **Throws**:

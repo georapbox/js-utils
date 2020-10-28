@@ -5,7 +5,6 @@ Creates an array of elements split into two groups (arrays), the first of which 
 the second of which contains the elements that the `predicate` returns falsy for.
 The predicate is invoked with three arguments: (value, index, collection).
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - Returns the array of grouped elements.  
 **Category**: Array
 

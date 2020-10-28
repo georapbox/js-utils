@@ -3,7 +3,6 @@
 ## truncate(string, [characterCount], [delimiter]) ⇒ <code>String</code>
 Truncates a string based on character count.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The truncated string.  
 **Category**: String  
 **Throws**:

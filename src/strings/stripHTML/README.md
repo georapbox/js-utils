@@ -3,7 +3,6 @@
 ## stripHTML(subjectString) ⇒ <code>String</code>
 Removes all HTML tags from a string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The stripped string.  
 **Category**: String  
 **Throws**:

@@ -4,7 +4,6 @@
 Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.
 The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The slice of `array`.  
 **Category**: Array  
 **Throws**:

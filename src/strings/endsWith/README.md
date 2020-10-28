@@ -3,7 +3,6 @@
 ## endsWith(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
 Determines whether a string ends with the characters of another string.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `subjectString` ends with `searchString`, else false.  
 **Category**: String  
 **Throws**:

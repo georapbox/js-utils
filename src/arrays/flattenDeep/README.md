@@ -3,7 +3,6 @@
 ## flattenDeep(array) ⇒ <code>Array</code>
 Flattens array recursively.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The new flattened array.  
 **Category**: Array  
 **Throws**:

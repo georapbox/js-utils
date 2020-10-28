@@ -4,7 +4,6 @@
 Iterates over own and inherited enumerable properties of an object, executing the callback for each property.
 The callback is invoked with three arguments (value, key, object)
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - The original object.  
 **Category**: Object  
 

@@ -3,7 +3,6 @@
 ## captureTouch(element, [callback]) ⇒ <code>Object</code>
 Captures the touch position on a specific HTML element.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - An object containing the position object (x, y) of touch and an unbind method.  
 **Category**: DOM  
 **Throws**:

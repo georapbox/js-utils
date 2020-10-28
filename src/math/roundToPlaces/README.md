@@ -4,7 +4,6 @@
 Rounds a number to a number of desired places.
 Feed with negative place values to round to powers of 10.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The rounded number.  
 **Category**: Math  
 **Throws**:

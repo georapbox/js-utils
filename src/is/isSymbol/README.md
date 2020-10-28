@@ -3,7 +3,6 @@
 ## isSymbol(value) ⇒ <code>Boolean</code>
 Checks if value is classified as a Symbol primitive.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `value` is classified as a Symbol primitive, else false.  
 **Category**: Is  
 

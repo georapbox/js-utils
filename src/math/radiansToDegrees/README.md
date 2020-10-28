@@ -3,7 +3,6 @@
 ## radiansToDegrees(radians) ⇒ <code>Number</code>
 Converts radians to degrees.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The result in degrees, after conversion.  
 **Category**: Math  
 **Throws**:

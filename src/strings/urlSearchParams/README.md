@@ -3,7 +3,6 @@
 ## urlSearchParams(searchString) ⇒ <code>Object</code>
 Factory function that returns methods that access the URL search parameters.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - A plain object that holds methods to access the URL search parameters.  
 **Category**: String  
 **Throws**:

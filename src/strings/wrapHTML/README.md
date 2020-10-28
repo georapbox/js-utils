@@ -3,7 +3,6 @@
 ## wrapHTML(subjectString, nodeName, [nodeAttributes]) ⇒ <code>String</code>
 Wraps a string with a HTML tag with attributes if specified.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The wrapped string.  
 **Category**: String  
 **Throws**:

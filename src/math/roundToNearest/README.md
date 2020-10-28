@@ -3,7 +3,6 @@
 ## roundToNearest(value, nearest) ⇒ <code>Number</code>
 Rounds a number to the nearest multiple of a value provided.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The rounded number.  
 **Category**: Math  
 **Throws**:

@@ -3,7 +3,6 @@
 ## isHexColor(value) ⇒ <code>Boolean</code>
 Checks if 'value' matches a hexadecimal color regular expression.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if 'value' is a hexadecimal color regexp, else false.  
 **Category**: Is  
 

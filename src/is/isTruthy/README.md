@@ -3,7 +3,6 @@
 ## isTruthy(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a truthy one.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if the 'value' is truthy, else false.  
 **Category**: Is  
 

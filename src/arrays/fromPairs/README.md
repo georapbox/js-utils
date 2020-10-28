@@ -3,7 +3,6 @@
 ## fromPairs(array) ⇒ <code>Object</code>
 Creates an object composed from key-value pairs.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - The result object.  
 **Category**: Array  
 **Throws**:

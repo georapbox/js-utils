@@ -4,7 +4,6 @@
 Converts a color number value to a hexadecimal formatted string,
 or a hexadecimal formatted string to a number.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> &#124; <code>String</code> - The converted color value.  
 **Category**: Misc  
 **Throws**:

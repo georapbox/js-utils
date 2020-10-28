@@ -3,7 +3,6 @@
 ## isBoolean(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a boolean value.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if the 'value' is a boolean value, else false.  
 **Category**: Is  
 

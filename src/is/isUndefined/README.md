@@ -3,7 +3,6 @@
 ## isUndefined(value) ⇒ <code>Boolean</code>
 Checks if 'value' is undefined.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if the 'value' is undefined, else false.  
 **Category**: Is  
 

@@ -3,7 +3,6 @@
 ## isHexadecimal(value) ⇒ <code>Boolean</code>
 Checks if 'value' matches a hexadecimal regular expression.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if 'value' is a hexadecimal, else false.  
 **Category**: Is  
 

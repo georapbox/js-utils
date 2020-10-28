@@ -4,7 +4,6 @@
 
 Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - Returns the new object.  
 **Category**: Object
 

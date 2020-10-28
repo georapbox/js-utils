@@ -3,7 +3,6 @@
 ## convertImageToBase64(url) ⇒ <code>Object</code>
 Converts an image's content to Data URI scheme.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - A promise that when resolved, returns the Base64 string.  
 **Category**: HTML5 Canvas  
 

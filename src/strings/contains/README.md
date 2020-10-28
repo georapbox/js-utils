@@ -3,7 +3,6 @@
 ## contains(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
 Determines whether one string may be found within another string, returning true or false as appropriate.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if searchString is found within subjectString, else false.  
 **Category**: String  
 **Throws**:

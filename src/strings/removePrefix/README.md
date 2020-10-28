@@ -3,7 +3,6 @@
 ## removePrefix(subjectString, [prefix]) ⇒ <code>String</code>
 Removes prefix from start of a string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

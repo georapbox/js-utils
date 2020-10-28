@@ -3,7 +3,6 @@
 ## lines(subjectString) ⇒ <code>Array</code>
 Creates an array with the lines of a a string.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - An array or strings containing the lines of the string.  
 **Category**: String  
 **Throws**:

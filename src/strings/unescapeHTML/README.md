@@ -3,7 +3,6 @@
 ## unescapeHTML(subjectString) ⇒ <code>String</code>
 Unescapes a HTML string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The unescaped string.  
 **Category**: String  
 **Throws**:

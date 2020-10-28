@@ -3,7 +3,6 @@
 ## replaceAll(subjectString, subString, replaceString, [caseInsensitive]) ⇒ <code>String</code>
 Creates a new string with all occurrences of `subString` replaced with `replaceString`.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

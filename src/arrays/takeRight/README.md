@@ -3,7 +3,6 @@
 ## takeRight(array, [n]) ⇒ <code>Array</code>
 Creates a slice of `array` with `n` items taken from the end.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The slice of the array.  
 **Category**: Array  
 **Throws**:

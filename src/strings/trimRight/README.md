@@ -3,7 +3,6 @@
 ## trimRight(subjectString) ⇒ <code>String</code>
 Removes whitespace from the right end of a string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

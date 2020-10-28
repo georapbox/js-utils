@@ -4,7 +4,6 @@
 Checks if an integer number is in the safe range, i.e., it is correctly represented by JavaScript
 (where all numbers, including integer numbers, are technically floating point number).
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if safe integer, else false.  
 **Category**: Is  
 

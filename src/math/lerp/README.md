@@ -4,7 +4,6 @@
 Takes a normalized value within a range of values and converts
 it to a numerical value that the normalized value points to.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The value that the normalized value points to.  
 **Category**: Math  
 **Throws**:

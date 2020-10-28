@@ -3,7 +3,6 @@
 ## hexToRGB(color, [alpha]) ⇒ <code>String</code>
 Converts a color value (number or hexadecimal string) to RGB(A) format.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The converted value in RGB(A) format.  
 **Category**: Misc  
 

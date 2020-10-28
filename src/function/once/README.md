@@ -3,7 +3,6 @@
 ## once(func, [thisArg]) ⇒ <code>function</code>
 Ensure a given functionality only runs once.
 
-**Kind**: global function  
 **Returns**: <code>function</code> - Returns the new restricted function.  
 **Category**: Function  
 

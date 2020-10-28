@@ -3,7 +3,6 @@
 ## whichAnimationEnd() ⇒ <code>String</code>
 Detects the supported property name for the `animationend` event.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The supported property name or `undefined` if not supported.  
 **Category**: DOM  
 **Example**  

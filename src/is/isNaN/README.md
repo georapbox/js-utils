@@ -3,7 +3,6 @@
 ## isNaN(value) ⇒ <code>Boolean</code>
 Determines whether a value is NaN or not.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if NaN, else false.  
 **Category**: Is  
 **Note:**: `NaN` is number and it is also the only primitive value which does not equal to itself.  

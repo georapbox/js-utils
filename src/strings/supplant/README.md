@@ -6,7 +6,6 @@ It scans through the string looking for expressions enclosed in {{ }} braces.
 If an expression is found, use it as a key on the object,
 and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

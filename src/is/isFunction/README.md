@@ -3,7 +3,6 @@
 ## isFunction(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a function.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if 'value' is a function, else returns false.  
 **Category**: Is  
 

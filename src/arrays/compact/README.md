@@ -4,7 +4,6 @@
 Creates an array with all falsy values removed.
 `false`, `null`, `0`, `""`, `undefined`, and `NaN` are falsy.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - Returns the new array of filtered values.  
 **Category**: Array  
 **Throws**:

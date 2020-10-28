@@ -3,7 +3,6 @@
 ## isElement(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a DOM element.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if 'value' is a DOM element, else false.  
 **Category**: Is  
 

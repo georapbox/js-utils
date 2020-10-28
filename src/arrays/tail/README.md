@@ -3,7 +3,6 @@
 ## tail(array) ⇒ <code>Array</code>
 Gets all but the first element of array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The new tailed array.  
 **Category**: Array  
 **Throws**:

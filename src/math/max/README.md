@@ -3,7 +3,6 @@
 ## max() ⇒ <code>Number</code>
 Finds the largest of zero or more numbers.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The largest number from the arguments provided.  
 **Category**: Math  
 

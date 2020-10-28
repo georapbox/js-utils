@@ -4,7 +4,6 @@
 Creates a function that negates the result of the predicate `func`.
 The `func` predicate is invoked with the this binding and arguments of the created function.
 
-**Kind**: global function  
 **Returns**: <code>function</code> - Returns the new function.  
 **Category**: Function  
 **Throws**:

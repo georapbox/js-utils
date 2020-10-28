@@ -3,7 +3,6 @@
 ## isOdd(value) ⇒ <code>Boolean</code>
 Checks if value is odd.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if value is odd, else false.  
 **Category**: Is  
 

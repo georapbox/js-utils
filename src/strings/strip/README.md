@@ -3,7 +3,6 @@
 ## strip(subjectString) ⇒ <code>String</code>
 Creates a new string with all occurrences of [string1], [string2],... removed.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

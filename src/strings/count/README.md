@@ -3,7 +3,6 @@
 ## count(subjectString, searchString, [caseInsensitive]) ⇒ <code>Number</code>
 Counts the occurrences of substring in a string.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The number of occurrences of search string in original string.  
 **Category**: String  
 **Throws**:

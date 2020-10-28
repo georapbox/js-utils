@@ -4,7 +4,6 @@
 Executes a provided callback function once per array element.
 To break from the iteration at any time, have the callback return `false`.
 
-**Kind**: global function  
 **Category**: Array  
 **Throws**:
 

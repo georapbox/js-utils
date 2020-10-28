@@ -5,7 +5,6 @@ Returns a substring before a specific sequence of character(s).
 By default looks for the first occurrence of this sequence.
 If the character or sequence of characters not found, returns the initial string.
 
-**Kind**: global function  
 **Returns**: <code>string</code> - The result string.  
 **Category**: String  
 **Throws**:

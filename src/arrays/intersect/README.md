@@ -4,7 +4,6 @@
 Creates an array of unique values that are included in all given arrays.
 The order of result values is determined by the order they occur in the first array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The array of intersecting values.  
 **Category**: Array  
 **Throws**:

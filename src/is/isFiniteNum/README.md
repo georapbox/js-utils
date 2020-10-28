@@ -3,7 +3,6 @@
 ## isFiniteNum(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a finite number.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if value is a finite number, else false.  
 **Category**: Is  
 

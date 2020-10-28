@@ -3,7 +3,6 @@
 ## filter(array, callback, [thisArg]) ⇒ <code>Array</code>
 Creates a new array with all elements that pass the test implemented by the provided callback function.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - Returns the result array.  
 **Category**: Array  
 **Throws**:

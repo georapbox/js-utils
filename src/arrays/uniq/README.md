@@ -3,7 +3,6 @@
 ## uniq(array) ⇒ <code>Array</code>
 Removes duplicate primitive values from an array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - Returns the result (duplicates-free) array.  
 **Category**: Array  
 **Throws**:
@@ -17,5 +16,6 @@ Removes duplicate primitive values from an array.
 
 **Example**  
 ```js
-uniq(['a', 'a', 'b', true, '2', 2, false, true]);// -> ['a', 'b', true, '2', 2, false]
+uniq(['a', 'a', 'b', true, '2', 2, false, true]);
+// -> ['a', 'b', true, '2', 2, false]
 ```

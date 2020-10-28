@@ -3,7 +3,6 @@
 ## stripPunctuation(subjectString) ⇒ <code>String</code>
 Removes all of the punctuation from a string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The stripped string.  
 **Category**: String  
 **Throws**:

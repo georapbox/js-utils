@@ -3,7 +3,6 @@
 ## isObjectLike(value) ⇒ <code>Boolean</code>
 Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - Returns `true` if `value` is object-like, else `false`.  
 **Category**: Is
 

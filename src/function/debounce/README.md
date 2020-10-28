@@ -6,7 +6,6 @@ be triggered. The function will be called after it stops being called for
 'n' milliseconds. If `immediate` is passed, trigger the function on the
 leading edge, instead of the trailing.
 
-**Kind**: global function  
 **Returns**: <code>function</code> - A new debounced function.  
 **Category**: Function  
 **Throws**:

@@ -3,7 +3,6 @@
 ## words(subjectString) ⇒ <code>Array</code>
 Splits string into an array of its words.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The string's words.  
 **Category**: String  
 **Throws**:

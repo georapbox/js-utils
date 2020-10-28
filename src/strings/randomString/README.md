@@ -3,7 +3,6 @@
 ## randomString(length, [chars]) ⇒ <code>string</code>
 Generates a random string of specific `length` allowing a set of characters specified by `chars`.
 
-**Kind**: global function  
 **Returns**: <code>string</code> - Returns the random generated string.  
 **Category**: String  
 

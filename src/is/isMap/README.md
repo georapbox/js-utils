@@ -3,7 +3,6 @@
 ## isMap(value) ⇒ <code>Boolean</code>
 Checks if value is classified as a Map object.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `value` is classified as a Map object, else false.  
 **Category**: Is  
 

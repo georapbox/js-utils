@@ -3,7 +3,6 @@
 ## pluck(array, key) ⇒ <code>Array</code>
 Retrieves the value of a specified property from all elements in an array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - Returns the result array.  
 **Category**: Array  
 **Throws**:
@@ -18,5 +17,16 @@ Retrieves the value of a specified property from all elements in an array.
 
 **Example**  
 ```js
-var books = [  {title: 'Around the World in Eighty Days', author: 'Jules Verne'},  {title: 'The Mist', author: 'Stephen King'},  {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},  {title: 'The Monster in the Closet', author: 'Stephen King'}];pluck(books, 'title');// -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]pluck(books, 'author');// -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
+var books = [
+  {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
+  {title: 'The Mist', author: 'Stephen King'},
+  {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},
+  {title: 'The Monster in the Closet', author: 'Stephen King'}
+];
+
+pluck(books, 'title');
+// -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
+
+pluck(books, 'author');
+// -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
 ```

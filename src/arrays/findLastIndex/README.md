@@ -3,7 +3,6 @@
 ## findLastIndex(array, callback) ⇒ <code>Number</code>
 Returns the index of the last element of a collection that passes the callback check.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - Returns the index of the last element that matches the callback check.  
 **Category**: Array  
 **Throws**:

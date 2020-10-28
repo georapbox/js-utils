@@ -5,7 +5,6 @@
 Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.
 The `iteratee` is invoked with one argument (each element in the array).
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The duplicate free array.  
 **Category**: Array  
 **Throws**:

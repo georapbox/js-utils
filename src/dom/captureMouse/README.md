@@ -3,7 +3,6 @@
 ## captureMouse(element, [callback]) ⇒ <code>Object</code>
 Captures the mouse position on a specific HTML element.
 
-**Kind**: global function  
 **Returns**: <code>Object</code> - An object containing the position object (x, y) of mouse and an unbind method.  
 **Category**: DOM  
 **Throws**:

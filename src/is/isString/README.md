@@ -3,7 +3,6 @@
 ## isString(value) ⇒ <code>Boolean</code>
 Checks if `value` is string.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if string, else false.  
 **Category**: Is  
 

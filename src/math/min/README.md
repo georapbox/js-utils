@@ -3,7 +3,6 @@
 ## min() ⇒ <code>Number</code>
 Finds the smallest of zero or more numbers.
 
-**Kind**: global function  
 **Returns**: <code>Number</code> - The smallest number from the arguments provided.  
 **Category**: Math  
 

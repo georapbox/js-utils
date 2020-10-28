@@ -3,7 +3,6 @@
 ## insert(array, [start]) ⇒ <code>Array</code>
 Inserts elements to array at specific index.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array including the new elements.  
 **Category**: Array  
 **Throws**:

@@ -3,7 +3,6 @@
 ## isArray(value) ⇒ <code>Boolean</code>
 Checks if 'value' is array.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if array, else false.  
 **Category**: Is  
 

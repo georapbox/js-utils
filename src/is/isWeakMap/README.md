@@ -3,7 +3,6 @@
 ## isWeakMap(value) ⇒ <code>Boolean</code>
 Checks if `value` is classified as a WeakMap object.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if `value` is classified as a WeakMap object, else false.  
 **Category**: Is  
 

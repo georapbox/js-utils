@@ -3,7 +3,6 @@
 ## removeSuffix(subjectString, [suffix]) ⇒ <code>String</code>
 Removes suffix from start of a string.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

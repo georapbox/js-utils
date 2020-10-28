@@ -5,7 +5,6 @@ Formats a number based on the number of decimal points,
 the decimal separator and the thousands separator.
 If a string is provided as the first argument, will try to convert it.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The formatted number as a string.  
 **Category**: String  
 

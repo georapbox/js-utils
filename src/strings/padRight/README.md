@@ -3,7 +3,6 @@
 ## padRight(subjectString, len, [chars]) ⇒ <code>String</code>
 Pad `subjectString` on right side to the given `len`, with optional `chars` defaulting to a space.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result padded string.  
 **Category**: String  
 **Throws**:

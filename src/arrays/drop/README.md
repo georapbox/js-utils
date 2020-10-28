@@ -3,7 +3,6 @@
 ## drop(array, [n]) ⇒ <code>Array</code>
 Creates a slice of `array` with `n` elements dropped from the beginning.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The slice of the array.  
 **Category**: Array  
 **Throws**:

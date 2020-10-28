@@ -3,7 +3,6 @@
 ## camelCase(subjectString) ⇒ <code>String</code>
 Converts a string to camel case, removing any non alphanumeric characters.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The camel cased result string.  
 **Category**: String  
 **Throws**:

@@ -3,7 +3,6 @@
 ## isFalsy(value) ⇒ <code>Boolean</code>
 Checks if 'value' is a falsy one.
 
-**Kind**: global function  
 **Returns**: <code>Boolean</code> - True if the 'value' is falsy, else false.  
 **Category**: Is  
 

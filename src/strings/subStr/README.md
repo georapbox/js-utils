@@ -3,7 +3,6 @@
 ## subStr(subjectString, [n]) ⇒ <code>String</code>
 Returns a substring denoted by n (positive or negative) characters.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The result string.  
 **Category**: String  
 **Throws**:

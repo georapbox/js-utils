@@ -3,7 +3,6 @@
 ## collapseWhitespace(subjectString) ⇒ <code>String</code>
 Converts all adjacent whitespace characters to a single space.
 
-**Kind**: global function  
 **Returns**: <code>String</code> - The final string with all adjacent whitespace converted to single space.  
 **Category**: String  
 **Throws**:
