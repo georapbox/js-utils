@@ -74,7 +74,7 @@ function includes(array, searchElement, fromIndex) {
 
     if (
       searchElement === currentElement
-      || searchElement !== searchElement && currentElement !== currentElement
+      || (searchElement !== searchElement && currentElement !== currentElement) // Check for NaN values
     ) {
       return true;
     }
