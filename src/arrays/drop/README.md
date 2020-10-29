@@ -8,7 +8,7 @@ Creates a slice of `array` with `n` elements dropped from the beginning.
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `n` is not number but not if is `null` or `undefined`.
+- <code>TypeError</code> If `n` is not number but not if is `undefined`.
 
 
 | Param | Type | Default | Description |

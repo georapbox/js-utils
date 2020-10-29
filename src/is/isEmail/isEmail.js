@@ -34,7 +34,7 @@
  */
 function isEmail(value) {
   if (typeof value !== 'string') {
-    throw new TypeError('Expected a string to validate; instead got ' + typeof value);
+    throw new TypeError('Expected a string for first argument');
   }
 
   /**

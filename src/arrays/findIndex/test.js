@@ -17,5 +17,9 @@ describe('Array/findIndex', function () {
         return chr === 'b';
       });
     }).toThrow();
+
+    expect(function () {
+      return findIndex(arr);
+    }).toThrow();
   });
 });

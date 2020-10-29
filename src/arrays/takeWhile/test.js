@@ -32,5 +32,9 @@ describe('Array/takeWhile', function () {
         read: false
       });
     }).toThrow();
+
+    expect(function () {
+      return takeWhile(books, null);
+    }).toThrow();
   });
 });

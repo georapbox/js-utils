@@ -16,7 +16,7 @@ function urlSearchParams(searchString) {
   var queryParams, regex, isValidQuery, tempObj, tokens;
 
   if (typeof searchString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   queryParams = [];

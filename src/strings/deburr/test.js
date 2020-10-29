@@ -9,5 +9,9 @@ describe('String/deburr', function () {
 
     expect(deburr(str))
       .toEqual('Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.');
+
+    expect(function () {
+      return deburr();
+    }).toThrow();
   });
 });

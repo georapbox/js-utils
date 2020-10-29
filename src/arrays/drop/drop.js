@@ -7,7 +7,7 @@
  * @param {Array} array The array to process.
  * @param {Number} [n=1] The number of elements to drop.
  * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `n` is not number but not if is `null` or `undefined`.
+ * @throws {TypeError} If `n` is not number but not if is `undefined`.
  * @return {Array} The slice of the array.
  * @example
  *
@@ -48,7 +48,7 @@ function drop(array, n) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  if (typeof n !== 'number' && n != null) {
+  if (typeof n !== 'number' && typeof n !== 'undefined') {
     throw new TypeError('Expected a number for second argument');
   }
 

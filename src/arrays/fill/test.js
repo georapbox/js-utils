@@ -14,6 +14,10 @@ describe('Array/fill', function () {
 
     expect(fill(['a', 'b', 'c'])).toEqual([undefined, undefined, undefined]);
 
+    expect(fill([])).toEqual([]);
+
+    expect(fill([1, 2, 3, 4, 5], '*', 3, 2)).toEqual([1, 2, 3, 4, 5]);
+
     expect(function () {
       return fill({
         foo: 'bar'

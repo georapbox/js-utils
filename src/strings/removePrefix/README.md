@@ -8,7 +8,7 @@ Removes prefix from start of a string.
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.
-- <code>TypeError</code> If `prefix` is not string but not if is `null` or `undefined`.
+- <code>TypeError</code> If `prefix` is not string but not if is `undefined`.
 
 
 | Param | Type | Description |

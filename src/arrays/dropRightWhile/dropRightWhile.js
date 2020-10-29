@@ -8,7 +8,7 @@
  * @param {Array} array The array to process.
  * @param {function} [predicate] The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `predicate` is not function but not if is `null` or `undefined`.
+ * @throws {TypeError} If `predicate` is not function but not if is `undefined`.
  * @return {Array} The slice of `array`.
  * @example
  *
@@ -32,7 +32,7 @@ function dropRightWhile(array, predicate) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  if (predicate == null) {
+  if (typeof predicate === 'undefined') {
     return array;
   }
 

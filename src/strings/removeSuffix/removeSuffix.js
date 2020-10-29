@@ -7,7 +7,7 @@
  * @param {String} subjectString The original string.
  * @param {String} [suffix] The suffix substring to remove from the original string.
  * @throws {TypeError} If `subjectString` is not string.
- * @throws {TypeError} If `suffix` is not string but not if is  `null` or `undefined`.
+ * @throws {TypeError} If `suffix` is not string but not if is `undefined`.
  * @return {String} The result string.
  * @example
  *
@@ -26,7 +26,7 @@
 function removeSuffix(subjectString, suffix) {
   var strLen, suffixLen;
 
-  if (typeof subjectString !== 'string' || typeof suffix !== 'string' && suffix != null) {
+  if (typeof subjectString !== 'string' || typeof suffix !== 'string' && typeof suffix !== 'undefined') {
     throw new TypeError('Expected a string');
   }
 

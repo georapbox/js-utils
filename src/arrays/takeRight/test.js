@@ -4,8 +4,6 @@ describe('Array/takeRight', function () {
   it('creates a slice of array with n items taken from the end', function () {
     expect(takeRight([1, 2, 3, 4, 5])).toEqual([5]);
 
-    expect(takeRight([1, 2, 3, 4, 5], null)).toEqual([5]);
-
     expect(takeRight([1, 2, 3, 4, 5], NaN)).toEqual([5]);
 
     expect(takeRight([1, 2, 3, 4, 5], 3)).toEqual([3, 4, 5]);
@@ -24,6 +22,10 @@ describe('Array/takeRight', function () {
 
     expect(function () {
       return takeRight([1, 2, 3, 4, 5], '2');
+    }).toThrow();
+
+    expect(function () {
+      takeRight([1, 2, 3, 4, 5], null);
     }).toThrow();
   });
 });

@@ -11,6 +11,11 @@ describe('Function/negate', function () {
     var odds = numbers.filter(negate(isEven));
 
     expect(evens).toEqual([2, 4, 6]);
+
     expect(odds).toEqual([1, 3, 5]);
+
+    expect(function () {
+      return negate();
+    }).toThrow();
   });
 });

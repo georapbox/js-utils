@@ -9,7 +9,7 @@ The predicate is invoked with three arguments: (`value`, `index`, `array`).
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `predicate` is not function but not if is `null` or `undefined`.
+- <code>TypeError</code> If `predicate` is not function but not if is `undefined`.
 
 
 | Param | Type | Description |

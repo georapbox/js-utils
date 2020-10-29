@@ -8,7 +8,7 @@ Creates a slice of `array` with `n` items taken from the beginning.
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `n` is not number but not if is `null` or `undefined`.
+- <code>TypeError</code> If `n` is not number but not if is `undefined`.
 
 
 | Param | Type | Default | Description |
@@ -19,9 +19,6 @@ Creates a slice of `array` with `n` items taken from the beginning.
 **Example**  
 ```js
 take([1, 2, 3, 4, 5]);
-// -> [1]
-
-take([1, 2, 3, 4, 5], null);
 // -> [1]
 
 take([1, 2, 3, 4, 5], NaN);

@@ -6,7 +6,7 @@ describe('Array/dropRight', function () {
 
     expect(dropRight(arr)).toEqual([1, 2, 3, 4]);
 
-    expect(dropRight(arr, null)).toEqual([1, 2, 3, 4]);
+    expect(dropRight(arr)).toEqual([1, 2, 3, 4]);
 
     expect(dropRight(arr, NaN)).toEqual([1, 2, 3, 4]);
 
@@ -24,6 +24,10 @@ describe('Array/dropRight', function () {
 
     expect(function () {
       return dropRight(arr, '2');
+    }).toThrow();
+
+    expect(function () {
+      return dropRight(arr, null);
     }).toThrow();
 
     expect(function () {

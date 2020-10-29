@@ -7,14 +7,11 @@
  * @param {Array} array The array to process.
  * @param {Number} [n=1] The number of items to take.
  * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `n` is not number but not if is `null` or `undefined`.
+ * @throws {TypeError} If `n` is not number but not if is `undefined`.
  * @return {Array} The slice of the array.
  * @example
  *
  * takeRight([1, 2, 3, 4, 5]);
- * // -> [5]
- *
- * takeRight([1, 2, 3, 4, 5], null);
  * // -> [5]
  *
  * takeRight([1, 2, 3, 4, 5], NaN);
@@ -48,7 +45,7 @@ function takeRight(array, n) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  if (typeof n !== 'number' && n != null) {
+  if (typeof n !== 'number' && typeof n !== 'undefined') {
     throw new TypeError('Expected a number for second argument');
   }
 

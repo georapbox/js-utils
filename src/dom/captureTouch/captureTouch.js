@@ -41,7 +41,7 @@ function captureTouch(element, callback) {
     throw new TypeError('"element" must be a DOM element');
   }
 
-  if (callback != null && typeof callback !== 'function') {
+  if (typeof callback !== 'undefined' && typeof callback !== 'function') {
     throw new TypeError('"callback" must be a function');
   }
 

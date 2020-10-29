@@ -4,8 +4,6 @@ describe('Array/take', function () {
   it('creates a slice of array with n items taken from the beginning', function () {
     expect(take([1, 2, 3, 4, 5])).toEqual([1]);
 
-    expect(take([1, 2, 3, 4, 5], null)).toEqual([1]);
-
     expect(take([1, 2, 3, 4, 5], NaN)).toEqual([1]);
 
     expect(take([1, 2, 3, 4, 5], 3)).toEqual([1, 2, 3]);
@@ -24,6 +22,10 @@ describe('Array/take', function () {
 
     expect(function () {
       return take([1, 2, 3, 4, 5], '2');
+    }).toThrow();
+
+    expect(function () {
+      return take([1, 2, 3, 4, 5], null);
     }).toThrow();
   });
 });

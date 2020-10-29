@@ -30,14 +30,14 @@
  * // -> [undefined, undefined, undefined]
  */
 function fill(array, value, start, end) {
-  var length;
+  var result, length;
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  array = array.slice(0);
-  length = array.length;
+  result = array.slice(0);
+  length = result.length;
 
   if (length === 0) {
     return [];
@@ -49,7 +49,7 @@ function fill(array, value, start, end) {
     start = -start > length ? 0 : length + start;
   }
 
-  end = end === undefined || end > length ? length : parseInt(end, 10);
+  end = typeof end === 'undefined' || end > length ? length : parseInt(end, 10);
 
   if (end < 0) {
     end += length;

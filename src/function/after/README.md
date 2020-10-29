@@ -8,6 +8,7 @@ Creates a function that invokes `func` once it's called `n` or more times.
 **Category**: Function  
 **Throws**:
 
+- <code>TypeError</code> If `n` is not number.
 - <code>TypeError</code> If `func` is not function.
 
 | Param | Type | Description |

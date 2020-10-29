@@ -27,7 +27,7 @@ function deburr(subjectString) {
   var reLatin1, deburredLetters, rsCombo, reComboMark;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   // Used to match latin-1 supplementary letters (excluding mathematical operators).

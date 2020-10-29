@@ -6,7 +6,7 @@ describe('Array/drop', function () {
 
     expect(drop(arr)).toEqual([2, 3, 4, 5]);
 
-    expect(drop(arr, null)).toEqual([2, 3, 4, 5]);
+    expect(drop(arr)).toEqual([2, 3, 4, 5]);
 
     expect(drop(arr, NaN)).toEqual([2, 3, 4, 5]);
 
@@ -24,6 +24,10 @@ describe('Array/drop', function () {
 
     expect(function () {
       return drop(arr, '2');
+    }).toThrow();
+
+    expect(function () {
+      return drop(arr, null);
     }).toThrow();
 
     expect(function () {

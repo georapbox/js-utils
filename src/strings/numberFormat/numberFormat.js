@@ -25,11 +25,14 @@
 function numberFormat(nNumber, nDecimals, sDecimalSeparator, sThousandSeparator) {
   var parts, integerPart, fractionalPart;
 
-  if (nNumber !== nNumber || nNumber == null) {
-    return nNumber || '';
+  if (typeof nNumber !== 'number') {
+    throw new TypeError('Expected a number for first argument');
   }
 
-  nNumber = typeof nNumber === 'string' ? parseFloat(nNumber) : nNumber;
+  if (nNumber !== nNumber) { // Check for NaN
+    return '';
+  }
+
   nNumber = nNumber.toFixed(~~nDecimals);
   sThousandSeparator = typeof sThousandSeparator === 'string' ? sThousandSeparator : ',';
 

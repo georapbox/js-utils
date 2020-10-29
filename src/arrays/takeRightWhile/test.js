@@ -24,7 +24,7 @@ describe('Array/takeRightWhile', function () {
 
     expect(read).toEqual([]);
 
-    expect(takeRightWhile(books).length).toEqual(books.length);
+    expect(takeRightWhile(books)).toHaveLength(books.length);
 
     expect(function () {
       return takeRightWhile({
@@ -37,5 +37,9 @@ describe('Array/takeRightWhile', function () {
     expect(takeRightWhile(books, function (book) {
       return !book.read;
     })).toEqual([]);
+
+    expect(function () {
+      return takeRightWhile(books, null);
+    }).toThrow();
   });
 });

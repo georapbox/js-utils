@@ -39,7 +39,7 @@
  */
 function negate(func, thisArg) {
   if (typeof func !== 'function') {
-    throw new TypeError('Expected a function');
+    throw new TypeError('Expected a function for first argument');
   }
 
   return function () {

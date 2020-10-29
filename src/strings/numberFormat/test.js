@@ -9,5 +9,11 @@ describe('String/numberFormat', function () {
     expect(numberFormat(123456789.12345, 3, ',', '.')).toEqual('123.456.789,123');
 
     expect(numberFormat(123456, 0, ',', '.')).toEqual('123.456');
+
+    expect(numberFormat(NaN)).toBe('');
+
+    expect(function () {
+      return numberFormat(null);
+    }).toThrow();
   });
 });

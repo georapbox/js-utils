@@ -16,21 +16,15 @@ describe('Function/before', function () {
     }
 
     expect(result).toEqual(5);
-  });
 
-  it('function is never invoked', function () {
-    var count = 0,
-      x = 0,
-      result;
+    expect(function () {
+      return before('five', function () {
+        return count += 1;
+      });
+    }).toThrow();
 
-    var doSomething = before('six', function () {
-      return count += 1;
-    });
-
-    for (x = 0; x < 10; x += 1) {
-      result = doSomething();
-    }
-
-    expect(result).toBeUndefined();
+    expect(function () {
+      return before(5);
+    }).toThrow();
   });
 });
