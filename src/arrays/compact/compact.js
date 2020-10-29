@@ -14,7 +14,7 @@
  * // => [1, 2, 3]
  */
 function compact(array) {
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
+  if (!Array.isArray(array)) {
     throw new TypeError('Expected an array');
   }
 

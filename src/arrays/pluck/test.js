@@ -9,7 +9,7 @@ describe('Array/pluck', function () {
   ];
 
   it('plucks the array', function () {
-    expect(Object.prototype.toString.call(pluck(books, 'author'))).toBe('[object Array]');
+    expect(Array.isArray(pluck(books, 'author'))).toBe(true);
 
     expect(pluck(books, 'author').length).toBe(4);
 

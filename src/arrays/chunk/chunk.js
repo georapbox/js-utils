@@ -47,8 +47,8 @@
 function chunk(array, size) {
   var MAX_INTEGER, length, result, index, resIndex;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   MAX_INTEGER = Number.MAX_VALUE || 1.7976931348623157e+308;

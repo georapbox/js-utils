@@ -35,8 +35,8 @@ function sort(array, ascending) {
   // Remove any `null`, `undefined` or `NaN` values.
   var filtered;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   filtered = array.filter(function (el) {

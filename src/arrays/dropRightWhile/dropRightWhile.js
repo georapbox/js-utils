@@ -28,8 +28,8 @@
 function dropRightWhile(array, predicate) {
   var index, length;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   if (predicate == null) {
@@ -37,7 +37,7 @@ function dropRightWhile(array, predicate) {
   }
 
   if (typeof predicate !== 'function') {
-    throw new TypeError('Expected a function');
+    throw new TypeError('Expected a function for second argument');
   }
 
   length = array.length;

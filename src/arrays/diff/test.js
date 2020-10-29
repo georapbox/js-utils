@@ -9,6 +9,12 @@ describe('Array/diff', function () {
 
     expect(diff(b, a)).toEqual([5, 10]);
 
-    expect(diff(a)).toEqual([1, 2, 3, 4, {}]);
+    expect(function () {
+      return diff(a);
+    }).toThrow();
+
+    expect(function () {
+      return diff(null, b);
+    }).toThrow();
   });
 });

@@ -26,11 +26,11 @@
  *   },
  *   // Hobbies should be an array (optional).
  *   hobbies: function (value) {
- *     return !value || {}.toString.call(value) === '[object Array]';
+ *     return !value || Array.isArray(value);
  *   },
  *   emails: function (value) {
  *     // Emails should be an array of at least one item (required).
- *     return {}.toString.call(value) === '[object Array]' && value.length > 0;
+ *     return Array.isArray(value) && value.length > 0;
  *   }
  * };
  *

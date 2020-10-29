@@ -23,8 +23,6 @@
  * // -> [1, 2, 3, 4, 5, 'a', 'b', {foo: 'bar', length: 23}]
  */
 function flattenDeep(array) {
-  var toString = Object.prototype.toString;
-  var arrayTag = '[object Array]';
   var copy, result, tail;
 
   function isArguments(value) {
@@ -33,11 +31,11 @@ function flattenDeep(array) {
 
     // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
     return hasOwnProperty.call(value, 'callee')
-      && (!propertyIsEnumerable.call(value, 'callee') || toString.call(value) === argsTag);
+      && (!propertyIsEnumerable.call(value, 'callee') || Object.prototype.toString.call(value) === argsTag);
   }
 
-  if (toString.call(array) !== arrayTag) {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   if (array.length === 0) {
@@ -49,7 +47,7 @@ function flattenDeep(array) {
   tail = copy.pop();
 
   do {
-    if (toString.call(tail) === arrayTag || isArguments(tail)) {
+    if (Array.isArray(tail) || isArguments(tail)) {
       copy.push.apply(copy, tail);
     } else {
       result.push(tail);

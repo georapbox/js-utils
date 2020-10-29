@@ -36,8 +36,8 @@
 function sortBy(array, field, ascending, primer) {
   var key;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   key = function (x) {

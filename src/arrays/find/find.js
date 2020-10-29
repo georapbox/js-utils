@@ -50,12 +50,12 @@
 function find(array, predicate, thisArg) {
   var index, element, length;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('"' + array + '" is not an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an an array for first argument');
   }
 
   if (typeof predicate !== 'function') {
-    throw new TypeError('"' + predicate + '" is not a function');
+    throw new TypeError('Expected a function for second argument');
   }
 
   if (Array.prototype.find) {

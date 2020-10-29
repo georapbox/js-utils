@@ -76,8 +76,8 @@ function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
     };
   }
 
-  if (Object.prototype.toString.call(images) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(images)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   list = [];

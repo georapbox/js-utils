@@ -14,8 +14,8 @@
  * // -> [3, 2, 1]
  */
 function reverse(array) {
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   return array.slice(0).reverse();

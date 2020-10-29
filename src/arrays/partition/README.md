@@ -6,7 +6,10 @@ the second of which contains the elements that the `predicate` returns falsy for
 The predicate is invoked with three arguments: (value, index, collection).
 
 **Returns**: <code>Array</code> - Returns the array of grouped elements.  
-**Category**: Array
+**Category**: Array  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not array.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

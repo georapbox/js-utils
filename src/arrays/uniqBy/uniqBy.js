@@ -32,8 +32,8 @@
  * // -> [{ v: 1.6 }, { v: 2.1 }]
  */
 function uniqBy(array, iteratee) {
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for second argument');
   }
 
   var cb = typeof iteratee === 'function' ? iteratee : function (o) {

@@ -44,12 +44,12 @@
 function dropRight(array, n) {
   var MAX_SAFE_INTEGER, length;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   if (typeof n !== 'number' && n != null) {
-    throw new TypeError('Expected a number');
+    throw new TypeError('Expected a number for second argument');
   }
 
   MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;

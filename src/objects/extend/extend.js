@@ -77,7 +77,6 @@ module.exports = (function () {
   var toString = Object.prototype.toString;
   var hasOwnProp = Object.prototype.hasOwnProperty;
   var OBJECT_TAG = '[object Object]';
-  var ARRAY_TAG = '[object Array]';
 
   function isUndefined(value) {
     return typeof value === 'undefined';
@@ -89,10 +88,6 @@ module.exports = (function () {
 
   function isFunction(value) {
     return typeof value === 'function';
-  }
-
-  function isArray(value) {
-    return toString.call(value) === ARRAY_TAG;
   }
 
   function isObject(value) {
@@ -154,10 +149,10 @@ module.exports = (function () {
           }
 
           // Recurse if we're merging plain objects or arrays
-          if (deep && copy && (isPlainObject(copy) || (copyIsArray = isArray(copy)))) {
+          if (deep && copy && (isPlainObject(copy) || (copyIsArray = Array.isArray(copy)))) {
             if (copyIsArray) {
               copyIsArray = false;
-              clone = src && isArray(src) ? src : [];
+              clone = src && Array.isArray(src) ? src : [];
             } else {
               clone = src && isPlainObject(src) ? src : {};
             }

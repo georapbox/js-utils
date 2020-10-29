@@ -28,10 +28,6 @@
 function flatten(array) {
   var index, length, value, result;
 
-  function isArray(val) {
-    return Object.prototype.toString.call(val) === '[object Array]';
-  }
-
   function isArguments(val) {
     var toString = Object.prototype.toString;
     var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -54,8 +50,8 @@ function flatten(array) {
     return array;
   }
 
-  if (!isArray(array)) {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   index = -1;
@@ -65,7 +61,7 @@ function flatten(array) {
   while (++index < length) {
     value = array[index];
 
-    if (isArray(value) || isArguments(value)) {
+    if (Array.isArray(value) || isArguments(value)) {
       arrayPush(result, value);
     } else {
       result[result.length] = value;

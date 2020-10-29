@@ -27,14 +27,13 @@
  * // -> []
  */
 function zip(/* , args... */) {
-  var slice = Array.prototype.slice;
-  var args = slice.call(arguments);
+  var args = Array.prototype.slice.call(arguments);
   var argsLength = args.length;
   var longest;
 
   while (argsLength--) {
-    if (Object.prototype.toString.call(args[argsLength]) !== '[object Array]') {
-      throw new TypeError('Expected an array');
+    if (!Array.isArray(args[argsLength])) {
+      throw new TypeError('Expected all arguments passed to be arrays');
     }
   }
 

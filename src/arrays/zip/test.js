@@ -7,27 +7,27 @@ describe('Array/zip', function () {
     var arr3 = [111];
     var zipped = zip(arr1, arr2, arr3);
 
-    expect(zipped.length).toEqual(3);
+    expect(zipped.length).toBe(3);
 
-    expect(zipped[0].length).toEqual(3);
-    expect(zipped[0][0]).toEqual(1);
-    expect(zipped[0][1]).toEqual(11);
-    expect(zipped[0][2]).toEqual(111);
+    expect(zipped[0].length).toBe(3);
+    expect(zipped[0][0]).toBe(1);
+    expect(zipped[0][1]).toBe(11);
+    expect(zipped[0][2]).toBe(111);
 
-    expect(zipped[1].length).toEqual(3);
-    expect(zipped[1][0]).toEqual(2);
-    expect(zipped[1][1]).toEqual(22);
-    expect(zipped[1][2]).toEqual(undefined);
+    expect(zipped[1].length).toBe(3);
+    expect(zipped[1][0]).toBe(2);
+    expect(zipped[1][1]).toBe(22);
+    expect(zipped[1][2]).toBe(undefined);
 
-    expect(zipped[2].length).toEqual(3);
-    expect(zipped[2][0]).toEqual(3);
-    expect(zipped[2][1]).toEqual(undefined);
-    expect(zipped[2][2]).toEqual(undefined);
+    expect(zipped[2].length).toBe(3);
+    expect(zipped[2][0]).toBe(3);
+    expect(zipped[2][1]).toBe(undefined);
+    expect(zipped[2][2]).toBe(undefined);
   });
 
   it('should return an empty array if no arguments passed', function () {
     var zipped = zip();
-    expect({}.toString.call(zipped) === '[object Array]');
-    expect(zipped.length).toEqual(0);
+    expect(Array.isArray(zipped)).toBe(true);
+    expect(zipped.length).toBe(0);
   });
 });

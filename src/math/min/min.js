@@ -36,7 +36,7 @@
  * // -> Infinity
  */
 function min() {
-  return arguments.length === 1 && Object.prototype.toString.call(arguments[0]) === '[object Array]'
+  return arguments.length === 1 && Array.isArray(arguments[0])
     ? Math.min.apply(null, arguments[0])
     : Math.min.apply(null, arguments);
 }

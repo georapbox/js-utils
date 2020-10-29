@@ -43,8 +43,8 @@
 function includes(array, searchElement, fromIndex) {
   var arrayLength, currentIndex, currentElement;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   arrayLength = array.length;

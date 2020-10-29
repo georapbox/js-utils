@@ -27,12 +27,12 @@
 function filter(array, callback, thisArg) {
   var len, res;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   if (typeof callback !== 'function') {
-    throw new TypeError('Expected a function');
+    throw new TypeError('Expected a function for second argument');
   }
 
   len = array.length;

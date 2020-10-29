@@ -34,7 +34,6 @@
 function average(/* ...args */) {
   var sum = 0;
   var count = 0;
-  var toString = Object.prototype.toString;
   var len = arguments.length;
   var args = new Array(len);
   var index = 0;
@@ -44,7 +43,7 @@ function average(/* ...args */) {
     args[index] = arguments[index];
   }
 
-  if (len === 1 && toString.call(args[0]) === '[object Array]') {
+  if (len === 1 && Array.isArray(args[0])) {
     args = args[0];
     len = args.length;
   }

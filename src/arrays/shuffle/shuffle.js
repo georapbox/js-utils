@@ -16,8 +16,8 @@
 function shuffle(array) {
   var newArray, currentIndex, temporaryValue, randomIndex;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   newArray = array.slice(0); // Ensure that original array stays intact.

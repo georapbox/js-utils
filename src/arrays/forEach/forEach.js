@@ -41,12 +41,12 @@
 function forEach(array, callback, thisArg) {
   var index, len;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   if (typeof callback !== 'function') {
-    throw new TypeError('Expected a function');
+    throw new TypeError('Expected a function for second argument');
   }
 
   index = 0;

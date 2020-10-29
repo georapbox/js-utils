@@ -32,8 +32,8 @@
 function fill(array, value, start, end) {
   var length;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   array = array.slice(0);

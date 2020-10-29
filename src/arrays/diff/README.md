@@ -8,8 +8,7 @@ by excluding all values from the second array using strict equality for comparis
 **Category**: Array  
 **Throws**:
 
-- <code>TypeError</code> If `arrayA` is not array.
-- <code>TypeError</code> If `arrayB` is not array but not if `null` or `undefined`.
+- <code>TypeError</code> If any of the arguments passed are not arrays.
 
 
 | Param | Type | Description |
@@ -20,7 +19,7 @@ by excluding all values from the second array using strict equality for comparis
 **Example**  
 ```js
 var obj = {
-    foo: 'bar'
+  foo: 'bar'
 };
 
 var a = [1, 2, 3, 4, 5, obj];

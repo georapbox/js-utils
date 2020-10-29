@@ -7,13 +7,12 @@
  * @category Array
  * @param {Array} arrayA The array to process.
  * @param {Array} arrayB The values to exclude from `arrayA`.
- * @throws {TypeError} If `arrayA` is not array.
- * @throws {TypeError} If `arrayB` is not array but not if `null` or `undefined`.
+ * @throws {TypeError} If any of the arguments passed are not arrays.
  * @return {Array} Array of values not included in the exclusion set.
  * @example
  *
  * var obj = {
- *     foo: 'bar'
+ *   foo: 'bar'
  * };
  *
  * var a = [1, 2, 3, 4, 5, obj];
@@ -29,14 +28,10 @@
  * // -> [1, 2, 3, 4, 5, obj]
  */
 function diff(arrayA, arrayB) {
-  var toString = Object.prototype.toString;
   var len, arr;
 
-  if (
-    toString.call(arrayA) !== '[object Array]'
-    || arrayB != null && toString.call(arrayB) !== '[object Array]'
-  ) {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(arrayA) || !Array.isArray(arrayB)) {
+    throw new TypeError('Expected both arguments to be arrays');
   }
 
   len = arrayA.length;

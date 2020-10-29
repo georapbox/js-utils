@@ -8,6 +8,7 @@
  * @category Array
  * @param {Array} array The array to iterate over.
  * @param {Function} [predicate=Identity] The function invoked per iteration.
+ * @throws {TypeError} If `array` is not array.
  * @returns {Array} Returns the array of grouped elements.
  * @example
  *
@@ -40,8 +41,8 @@ function partition(array, predicate) {
   var part2 = [];
   var index, value;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    array = [];
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   if (typeof predicate !== 'function') {

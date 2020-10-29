@@ -26,8 +26,8 @@
 function pluck(array, key) {
   var arr, index, len, arrItem;
 
-  if (Object.prototype.toString.call(array) !== '[object Array]') {
-    throw new TypeError('Expected an array');
+  if (!Array.isArray(array)) {
+    throw new TypeError('Expected an array for first argument');
   }
 
   arr = [];
