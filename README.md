@@ -19,13 +19,11 @@ A collection of standalone javascript utility functions.
 |[dropRightWhile](src/arrays/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
 |[dropWhile](src/arrays/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
 |[fill](src/arrays/fill)|Fills elements of array with value from start up to end (not including end).|
-|[filter](src/arrays/filter)|Creates a new array with all elements that pass the test implemented by the provided callback function.|
 |[find](src/arrays/find)|Returns a value in the array, if an element in the array satisfies the provided testing function.|
 |[findIndex](src/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](src/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
 |[flatten](src/arrays/flatten)|Flattens array a single level deep.|
 |[flattenDeep](src/arrays/flattenDeep)|Flattens array recursively.|
-|[forEach](src/arrays/forEach)|Executes a provided callback function once per array element.|
 |[fromPairs](src/arrays/fromPairs)|Creates an object composed from key-value pairs.|
 |[groupBy](src/arrays/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
 |[includes](src/arrays/includes)|Determines whether an array includes a certain element.|
