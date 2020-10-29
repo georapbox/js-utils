@@ -23,9 +23,6 @@
  *
  * diff(a, []);
  * // -> [1, 2, 3, 4, 5, obj]
- *
- * diff(a);
- * // -> [1, 2, 3, 4, 5, obj]
  */
 function diff(arrayA, arrayB) {
   var len, arr;
@@ -36,10 +33,6 @@ function diff(arrayA, arrayB) {
 
   len = arrayA.length;
   arr = [];
-
-  if (!arrayB) {
-    return arrayA;
-  }
 
   while (len--) {
     if (arrayB.indexOf(arrayA[len]) === -1) {
