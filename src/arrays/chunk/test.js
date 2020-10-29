@@ -41,5 +41,12 @@ describe('Array/chunk', function () {
     ]);
 
     expect(chunk([1, 2, 3, 4], 'test')).toEqual([]);
+
+    expect(function () {
+      return chunk({
+        a: 'a',
+        b: 'b'
+      }, 2);
+    }).toThrow();
   });
 });
