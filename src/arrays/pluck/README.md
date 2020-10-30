@@ -13,7 +13,7 @@ Retrieves the value of a specified property from all elements in an array.
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The array to iterate over. |
-| key | <code>String</code> | The name of the property to pluck. |
+| [key] | <code>String</code> | The name of the property to pluck. |
 
 **Example**  
 ```js

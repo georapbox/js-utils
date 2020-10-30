@@ -17,8 +17,10 @@ describe('Array/pluck', function () {
 
     expect(pluck(books, 'author').indexOf('Stephen King')).toBeGreaterThan(-1);
 
+    expect(pluck(books)).toHaveLength(0);
+
     expect(function () {
       return pluck({}, 'author');
-    }).toThrow();
+    }).toThrow('Expected an array for first argument');
   });
 });

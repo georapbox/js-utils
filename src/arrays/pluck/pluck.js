@@ -5,7 +5,7 @@
  *
  * @category Array
  * @param {Array} array The array to iterate over.
- * @param {String} key The name of the property to pluck.
+ * @param {String} [key] The name of the property to pluck.
  * @throws {TypeError} If `array` is not array.
  * @returns {Array} Returns the result array.
  * @example
