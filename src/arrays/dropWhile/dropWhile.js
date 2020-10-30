@@ -31,10 +31,6 @@ function dropWhile(array, predicate) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  if (typeof predicate === 'undefined') {
-    return array;
-  }
-
   if (typeof predicate !== 'function') {
     throw new TypeError('Expected a function for second argument');
   }
