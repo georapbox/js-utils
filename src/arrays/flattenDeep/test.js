@@ -11,7 +11,12 @@ describe('Array/flattenDeep', function () {
       return arr;
     }
 
-    expect(flattenDeep(dummy('a', 'b')))
-      .toEqual([1, 2, 3, 4, 5, 'a', 'b', {foo: 'bar', length: 23}]);
+    expect(flattenDeep(dummy('a', 'b'))).toEqual([1, 2, 3, 4, 5, 'a', 'b', {foo: 'bar', length: 23}]);
+
+    expect(flattenDeep([])).toEqual([]);
+
+    expect(function () {
+      return flattenDeep(null);
+    }).toThrow('Expected an array for first argument');
   });
 });

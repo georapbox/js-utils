@@ -15,5 +15,9 @@ describe('dom/isEventSupported', function () {
     expect(isEventSupported('keyup', document.createElement('input'))).toBe(true);
 
     expect(isEventSupported('something')).toBe(false);
+
+    expect(function () {
+      return isEventSupported({});
+    }).toThrow('Expected a string for first argument');
   });
 });

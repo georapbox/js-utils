@@ -48,7 +48,7 @@ module.exports = (function () {
     var isSupported;
 
     if (typeof eventName !== 'string') {
-      throw new TypeError('Expected a string');
+      throw new TypeError('Expected a string for first argument');
     }
 
     // Return the cached result if exists.

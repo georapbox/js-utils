@@ -13,7 +13,10 @@ describe('Array/flatten', function () {
       return arr;
     }
 
-    expect(flatten(dummy('a', 'b')))
-      .toEqual([1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]);
+    expect(flatten(dummy('a', 'b'))).toEqual([1, 2, [3, [4]], 5, 'a', 'b', {foo: 'bar', length: 23}]);
+
+    expect(function () {
+      return flatten(null);
+    }).toThrow('Expected an array for first argument');
   });
 });

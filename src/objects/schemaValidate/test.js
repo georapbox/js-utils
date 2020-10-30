@@ -90,4 +90,13 @@ describe('Object/schemaValidate', function () {
     expect(res.valid).toBe(false);
     expect(res.invalidProperties[0]).toBe('phone');
   });
+
+  it('throws if schema\'s property is not function', function () {
+    var user = { name: 'John Doe' };
+    var schema = { name: null };
+
+    expect(function () {
+      return schemaValidate(user, schema);
+    }).toThrow('Schema validators must be functions');
+  });
 });

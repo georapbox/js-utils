@@ -28,7 +28,7 @@ function wrapHTML(subjectString, nodeName, nodeAttributes) {
   var elementName, elementAttributes, dasherizedProp, prop, wrapped;
 
   if (typeof subjectString !== 'string' || typeof nodeName !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first and second argument');
   }
 
   elementName = nodeName.replace(/[</>]/g, '');

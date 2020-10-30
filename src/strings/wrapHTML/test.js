@@ -15,5 +15,13 @@ describe('String/wrapHTML', function () {
     expect(p).toEqual('<p>Lorem ipsum dolor sit amet.</p>');
 
     expect(div).toEqual('<div class="myClass" id="myId" data-type="myType"><p>Lorem ipsum dolor sit amet.</p></div>');
+
+    expect(function () {
+      return wrapHTML(null, 'p');
+    }).toThrow('Expected a string for first and second argument');
+
+    expect(function () {
+      return wrapHTML(str);
+    }).toThrow('Expected a string for first and second argument');
   });
 });
