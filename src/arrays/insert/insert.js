@@ -5,7 +5,7 @@
  *
  * @category Array
  * @param {Array} array The array to insert elements to.
- * @param {Number} [start=0] The index to insert elements.
+ * @param {Number} start The index to insert elements.
  *        If greater than the length of the array, actual starting index will be set to the length of the array.
  *        If negative, will begin that many elements from the end.
  * @param {*} [element1 [, element2 [, ...]]] The elements to add to the array.
@@ -32,28 +32,28 @@
  *
  * insert(arr, 2, undefined);
  * // -> [1, 2, undefined, 3, ['x', 'y']]
- *
- * insert(arr);
- * // -> [1, 2, 3, ['x', 'y']]
  */
 function insert(array, start /* [element1 [, element2 [, ...]]] */) {
-  var elements, i, len;
+  var resultArray, elements, i, len;
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  array = array.slice(0);
+  if (typeof start !== 'number') {
+    throw new TypeError('Expected a number for second argument');
+  }
+
+  resultArray = array.slice(0);
   elements = Array.prototype.slice.call(arguments, 2);
-  start = start || 0;
   i = 0;
   len = elements.length;
 
   for (; i < len; i += 1) {
-    array.splice(start++, 0, elements[i]);
+    resultArray.splice(start++, 0, elements[i]);
   }
 
-  return array;
+  return resultArray;
 }
 
 module.exports = insert;

@@ -16,10 +16,12 @@ describe('Array/insert', function () {
 
     expect(insert(arr, 2, undefined)).toEqual([1, 2, undefined, 3, ['x', 'y']]);
 
-    expect(insert(arr)).toEqual([1, 2, 3, ['x', 'y']]);
-
     expect(function () {
       return insert({foo: 'bar'}, 0, 'e');
-    }).toThrow();
+    }).toThrow('Expected an array for first argument');
+
+    expect(function () {
+      return insert(arr);
+    }).toThrow('Expected a number for second argument');
   });
 });
