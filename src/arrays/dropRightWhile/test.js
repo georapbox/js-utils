@@ -35,16 +35,14 @@ describe('Array/dropRightWhile', function () {
       return book.read;
     }).length).toEqual(4);
 
-    expect(dropRightWhile(books)).toHaveLength(4);
-
     expect(function () {
       dropRightWhile(null, function (book) {
         return !book.read;
       });
-    }).toThrow();
+    }).toThrow('Expected an array for first argument');
 
     expect(function () {
       dropRightWhile(books, null);
-    }).toThrow();
+    }).toThrow('Expected a function for second argument');
   });
 });
