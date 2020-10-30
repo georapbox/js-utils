@@ -6,7 +6,7 @@
  *
  * @category Array
  * @param {Array} array The array to process.
- * @param {function} [predicate] The function invoked per iteration.
+ * @param {function} predicate The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `predicate` is not function but not if is `undefined`.
  * @return {Array} The slice of `array`.
@@ -29,10 +29,6 @@ function takeRightWhile(array, predicate) {
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
-  }
-
-  if (typeof predicate === 'undefined') {
-    return array;
   }
 
   if (typeof predicate !== 'function') {

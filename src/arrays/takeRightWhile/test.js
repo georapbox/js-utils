@@ -24,14 +24,12 @@ describe('Array/takeRightWhile', function () {
 
     expect(read).toEqual([]);
 
-    expect(takeRightWhile(books)).toHaveLength(books.length);
-
     expect(function () {
       return takeRightWhile({
         title: 'Javascript Design Patterns',
         read: false
       });
-    }).toThrow();
+    }).toThrow('Expected an array for first argument');
 
     books[3].read = true;
     expect(takeRightWhile(books, function (book) {
@@ -40,6 +38,6 @@ describe('Array/takeRightWhile', function () {
 
     expect(function () {
       return takeRightWhile(books, null);
-    }).toThrow();
+    }).toThrow('Expected a function for second argument');
   });
 });
