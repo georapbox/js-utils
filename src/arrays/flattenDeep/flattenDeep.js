@@ -39,11 +39,11 @@ function flattenDeep(array) {
   }
 
   if (array.length === 0) {
-    return array;
+    return [];
   }
 
   result = [];
-  copy = array.slice();
+  copy = array.slice(0);
   tail = copy.pop();
 
   do {
