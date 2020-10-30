@@ -30,14 +30,14 @@
  * // -> [undefined, undefined, undefined]
  */
 function fill(array, value, start, end) {
-  var result, length;
+  var resultArray, length;
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  result = array.slice(0);
-  length = result.length;
+  resultArray = array.slice(0);
+  length = resultArray.length;
 
   if (length === 0) {
     return [];
@@ -60,10 +60,10 @@ function fill(array, value, start, end) {
   }
 
   while (start < end) {
-    array[start++] = value;
+    resultArray[start++] = value;
   }
 
-  return array;
+  return resultArray;
 }
 
 module.exports = fill;
