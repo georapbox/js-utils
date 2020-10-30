@@ -24,17 +24,15 @@ describe('Array/takeWhile', function () {
 
     expect(firstRead).toEqual([]);
 
-    expect(takeWhile(books).length).toEqual(books.length);
-
     expect(function () {
       return takeWhile({
         title: 'Javascript Design Patterns',
         read: false
       });
-    }).toThrow();
+    }).toThrow('Expected an array for first argument');
 
     expect(function () {
       return takeWhile(books, null);
-    }).toThrow();
+    }).toThrow('Expected a function for second argument');
   });
 });
