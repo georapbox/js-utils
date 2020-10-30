@@ -39,9 +39,9 @@ function flatten(array) {
   }
 
   function arrayPush(arr, values) {
-    var idx = -1,
-      len = values.length,
-      offset = arr.length;
+    var idx = -1;
+    var len = values.length;
+    var offset = arr.length;
 
     while (++idx < len) {
       arr[offset + idx] = values[idx];
