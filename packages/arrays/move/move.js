@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Move an array element to a different position.
  *
