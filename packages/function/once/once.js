@@ -23,12 +23,8 @@
 function once(func, thisArg) {
   var result;
 
-  function noop() {
-    return;
-  }
-
   if (typeof func !== 'function') {
-    return noop;
+    throw new TypeError('Expected a function for first argument');
   }
 
   return function executeOnce() {

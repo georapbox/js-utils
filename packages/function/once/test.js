@@ -7,10 +7,12 @@ describe('Function/once', function () {
       return num += 1;
     });
 
-    expect(canOnlyFireOnce()).toEqual(1);
+    expect(canOnlyFireOnce()).toBe(1);
 
-    expect(canOnlyFireOnce()).toEqual(1);
+    expect(canOnlyFireOnce()).toBe(1);
 
-    expect(once(null)()).toBeUndefined();
+    expect(function () {
+      once(null)();
+    }).toThrow('Expected a function for first argument');
   });
 });
