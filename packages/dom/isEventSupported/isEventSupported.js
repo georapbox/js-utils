@@ -5,10 +5,10 @@
  *
  * @module isEventSupported
  * @category DOM
- * @param {String} eventName The event to check if is supported.
- * @param {Object} [element] An HTML node to check if an event is supported on.
- *        Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.
- *        If omitted the results are cached and next calls with the same `eventName` will return the results from cache.
+ * @param {String} eventName The event name (without the `on` prefix) to check if is supported, eg `click`, `mouseover`, etc.
+ * @param {HTMLElement} [element] An HTML node to check if an event is supported on.
+ * Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.
+ * If omitted the results are cached and next calls with the same `eventName` will return the results from cache.
  * @throws {TypeError} If `eventName` is not string.
  * @return {Boolean} True if event is supported, else false.
  * @example
@@ -51,13 +51,14 @@ module.exports = (function () {
       throw new TypeError('Expected a string for first argument');
     }
 
+    eventName = 'on' + eventName;
+
     // Return the cached result if exists.
     if (canCache && cache[eventName]) {
       return cache[eventName];
     }
 
     element = element || document.createElement(TAGNAMES[eventName] || 'div');
-    eventName = 'on' + eventName;
     isSupported = eventName in element;
 
     // Old Gecko based browsers create methods on an element when an attribute
