@@ -16,7 +16,7 @@
  */
 function stripHTML(subjectString) {
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString.replace(/<[^>]+>/g, '');

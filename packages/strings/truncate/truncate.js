@@ -49,11 +49,11 @@ function truncate(subjectString, characterCount, delimiter) {
   var regex, truncated;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (typeof characterCount !== 'number') {
-    throw new TypeError('Expected a number');
+    throw new TypeError('Expected a number for second argument');
   }
 
   characterCount = Math.floor(characterCount);

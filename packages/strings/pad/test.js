@@ -12,10 +12,10 @@ describe('String/pad', function () {
 
     expect(function () {
       return pad(123456, 3);
-    }).toThrow();
+    }).toThrow('Expected a string for first argument');
 
     expect(function () {
       return pad('Hello', '9');
-    }).toThrow();
+    }).toThrow('Expected a number for second argument');
   });
 });

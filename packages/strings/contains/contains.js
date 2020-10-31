@@ -30,7 +30,7 @@ function contains(subjectString, searchString, position) {
   var subjectLength, searchLength;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (String.prototype.includes) {

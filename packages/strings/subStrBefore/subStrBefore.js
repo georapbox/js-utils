@@ -34,7 +34,7 @@ function subStrBefore(subjectString, characters, last) {
   var index;
 
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first and second argument');
   }
 
   index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);

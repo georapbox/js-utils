@@ -20,7 +20,7 @@
  */
 function unescapeHTML(subjectString) {
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString

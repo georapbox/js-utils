@@ -36,7 +36,7 @@ function count(subjectString, searchString, caseInsensitive) {
   var n, pos, step;
 
   if (typeof subjectString !== 'string' || typeof searchString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first and second argument');
   }
 
   if (searchString.length <= 0) {

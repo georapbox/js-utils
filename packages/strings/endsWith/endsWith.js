@@ -27,7 +27,7 @@ function endsWith(subjectString, searchString, position) {
   var lastIndex;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (String.prototype.endsWith) {

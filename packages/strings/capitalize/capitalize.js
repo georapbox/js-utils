@@ -23,7 +23,7 @@ function capitalize(subjectString, lowerCaseRest) {
   var firstChar, restStr;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   firstChar = subjectString.substr(0, 1).toUpperCase();

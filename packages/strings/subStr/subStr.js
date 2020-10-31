@@ -32,7 +32,7 @@
  */
 function subStr(subjectString, n) {
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (typeof n === 'number') {

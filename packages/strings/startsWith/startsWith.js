@@ -28,7 +28,7 @@
  */
 function startsWith(subjectString, searchString, position) {
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (searchString == null) {

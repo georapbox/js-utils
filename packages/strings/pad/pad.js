@@ -28,11 +28,11 @@ function pad(subjectString, len, chars) {
   var left, right;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (typeof len !== 'number') {
-    throw new TypeError('Expected a number');
+    throw new TypeError('Expected a number for second argument');
   }
 
   chars = chars || ' '; // Set default character.

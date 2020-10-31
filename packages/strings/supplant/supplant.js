@@ -42,7 +42,7 @@
  */
 function supplant(subjectString, data) {
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   if (data == null || typeof data !== 'object') {

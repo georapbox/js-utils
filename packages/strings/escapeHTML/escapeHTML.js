@@ -22,7 +22,7 @@ function escapeHTML(subjectString) {
   var entityMap;
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first argument');
   }
 
   entityMap = {

@@ -32,12 +32,12 @@
  * // -> '_lorem_ ispum 5 dolor sit amet.'
  */
 function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
-  var isString = function (val) {
-    return typeof val === 'string';
-  };
-
-  if (!isString(subjectString) || !isString(subString) || !isString(replaceString)) {
-    throw new TypeError('Expected a string');
+  if (
+    typeof subjectString !== 'string'
+    || typeof subString !== 'string'
+    || typeof replaceString !== 'string'
+  ) {
+    throw new TypeError('Expected a string for the first three arguments');
   }
 
   // Case insensitive lookup.

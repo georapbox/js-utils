@@ -27,7 +27,7 @@ function removeSuffix(subjectString, suffix) {
   var strLen, suffixLen;
 
   if (typeof subjectString !== 'string' || typeof suffix !== 'string' && typeof suffix !== 'undefined') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string for first and second argument argument');
   }
 
   strLen = subjectString.length;
