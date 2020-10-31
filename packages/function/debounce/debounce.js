@@ -24,7 +24,7 @@ function debounce(func, wait, immediate) {
   var timerId = null;
 
   if (typeof func !== 'function') {
-    throw new TypeError('Expected a function');
+    throw new TypeError('Expected a function for first argument');
   }
 
   return function debounced() {
