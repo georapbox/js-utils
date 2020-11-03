@@ -11,7 +11,7 @@ Removes all spaces from a string; optionally removes any escape sequences such a
 
 
 | Param | Type | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | subjectString | <code>String</code> | The initial string to process. |
 | [squashEscapeSequences] | <code>Boolean</code> | The characters to be searched for at the start of the string. |
 
