@@ -21,7 +21,7 @@ function throttle(func, wait) {
   var timerId, lastRan;
 
   if (typeof func !== 'function') {
-    throw new TypeError('Expected a function');
+    throw new TypeError('Expected a function for first argument');
   }
 
   return function throttled() {
