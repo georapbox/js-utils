@@ -70,6 +70,7 @@ A collection of standalone javascript utility functions.
 |[repeat](https://github.com/georapbox/js-utils/tree/master/packages/strings/repeat)|Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.|
 |[replaceAll](https://github.com/georapbox/js-utils/tree/master/packages/strings/replaceAll)|Returns a new string with all occurrences of subString replaced with replaceString.
 |[snakeCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/snakeCase)|Converts string into string delimited by underscores.|
+|[squash](https://github.com/georapbox/js-utils/tree/master/packages/strings/squash)|Removes all spaces from a string; optionally removes any escape sequences such as \t, \n, \f, \r and \v.|
 |[startsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[strip](https://github.com/georapbox/js-utils/tree/master/packages/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
 |[stripHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripHTML)|Returns a new string with all HTML tags removed.|
