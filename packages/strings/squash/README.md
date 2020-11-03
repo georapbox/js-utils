@@ -4,6 +4,7 @@
 Removes all spaces from a string; optionally removes any escape sequences such as \t, \n, \f, \r and \v.
 
 **Returns**: <code>String</code> - The result string with all spaces removed.  
+**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

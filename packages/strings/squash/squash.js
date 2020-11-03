@@ -1,6 +1,7 @@
 /**
  * Removes all spaces from a string; optionally removes any escape sequences such as \t, \n, \f, \r and \v.
  *
+ * @category String
  * @param {String} subjectString The initial string to process.
  * @param {Boolean} [squashEscapeSequences] If set to a truthy value any escape sequences will be removed as well.
  * @throws {TypeError} If `subjectString` is not string.
