@@ -77,7 +77,7 @@ module.exports = (function () {
   function getCookie(name) {
     var matches;
 
-    if (typeof name !== 'string' && typeof name !== 'undefined') {
+    if (typeof name !== 'string') {
       throw new TypeError('Expected a string for first argument');
     }
 
