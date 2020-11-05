@@ -180,6 +180,7 @@ A collection of standalone javascript utility functions.
 |--------|-----------|
 |[captureMouse](https://github.com/georapbox/js-utils/tree/master/packages/dom/captureMouse)|Captures the mouse position on a specific HTML element.|
 |[captureTouch](https://github.com/georapbox/js-utils/tree/master/packages/dom/captureTouch)|Captures the touch position on a specific HTML element.|
+|[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
 |[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
 |[isEventSupported](https://github.com/georapbox/js-utils/tree/master/packages/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
 |[scroll](https://github.com/georapbox/js-utils/tree/master/packages/dom/scroll)|Easing based scrolling to a specified y point inside page.|
@@ -198,7 +199,6 @@ A collection of standalone javascript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[cookie](https://github.com/georapbox/js-utils/tree/master/packages/misc/cookie)|Create, read and delete cookies.|
 |[hexToRGB](https://github.com/georapbox/js-utils/tree/master/packages/misc/hexToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
 |[parseColor](https://github.com/georapbox/js-utils/tree/master/packages/misc/parseColor)|Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.|
 
