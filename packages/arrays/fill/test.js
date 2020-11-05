@@ -1,7 +1,7 @@
 var fill = require('./fill');
 
 describe('Array/fill', function () {
-  it('fills elements of array with value from start up to end (not including end)', function () {
+  function runTests() {
     expect(fill(['a', 'b', 'c'], '*')).toEqual(['*', '*', '*']);
 
     expect(fill(['a', 'b', 'c'], '*', 0, 2)).toEqual(['*', '*', 'c']);
@@ -18,10 +18,27 @@ describe('Array/fill', function () {
 
     expect(fill([1, 2, 3, 4, 5], '*', 3, 2)).toEqual([1, 2, 3, 4, 5]);
 
+    expect(fill([1, 2, 3], 4, NaN, NaN)).toEqual([1, 2, 3]);
+
+    expect(fill([1, 2, 3], 4, NaN, 2)).toEqual([4, 4, 3]);
+
+    expect(fill([1, 2, 3], 4, 0, NaN)).toEqual([1, 2, 3]);
+
     expect(function () {
       return fill({
         foo: 'bar'
       }, '*');
     }).toThrow();
+  }
+
+  it('fills elements of array with value from start up to end (not including end) (Array.prototype.fill is supported)', function () {
+    runTests();
+  });
+
+  it('fills elements of array with value from start up to end (not including end) (Array.prototype.fill is not supported)', function () {
+    var nativeCode = Array.prototype.fill;
+    Array.prototype.fill = null;
+    runTests();
+    Array.prototype.fill = nativeCode;
   });
 });

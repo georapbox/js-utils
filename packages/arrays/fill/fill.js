@@ -36,6 +36,10 @@ function fill(array, value, start, end) {
     throw new TypeError('Expected an array for first argument');
   }
 
+  if (Array.prototype.fill) {
+    return array.fill(value, start, end);
+  }
+
   resultArray = array.slice(0);
   length = resultArray.length;
 
