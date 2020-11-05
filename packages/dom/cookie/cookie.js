@@ -81,10 +81,6 @@ module.exports = (function () {
       throw new TypeError('Expected a string for first argument');
     }
 
-    if (typeof name === 'undefined') {
-      return document.cookie;
-    }
-
     matches = document.cookie.match(
       new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + '=([^;]*)')
     );
@@ -95,16 +91,16 @@ module.exports = (function () {
   /**
    * Deletes a cookie by its name.
    *
-   * @function delete
+   * @function remove
    * @param {String} name The name of the cookie to delete.
    * @throws {TypeError} If `name` is not string.
    * @returns {void}
    * @example
    *
-   * cookie.delete('foo');
+   * cookie.remove('foo');
    * // -> undefined
    */
-  function deleteCookie(name) {
+  function removeCookie(name) {
     if (typeof name !== 'string') {
       throw new TypeError('Expected a string for first argument');
     }
@@ -117,6 +113,6 @@ module.exports = (function () {
   return {
     set: setCookie,
     get: getCookie,
-    delete: deleteCookie
+    remove: removeCookie
   };
 }());
