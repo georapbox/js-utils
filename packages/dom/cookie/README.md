@@ -6,7 +6,7 @@
 * [cookie](#module_cookie)
     * [~set(name, value, [options], [options[&#x27;max-age&#x27;]])](#module_cookie..set) ⇒ <code>void</code>
     * [~get([name])](#module_cookie..get) ⇒ <code>String</code>
-    * [~delete(name)](#module_cookie..delete) ⇒ <code>void</code>
+    * [~remove(name)](#module_cookie..remove) ⇒ <code>void</code>
 
 <a name="module_cookie..set"></a>
 
@@ -57,7 +57,7 @@ Get a cookie by its name.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [name] | <code>String</code> | The name of the cookie to get. If not provided the whole cookie string is returned. |
+| [name] | <code>String</code> | The name of the cookie to get. |
 
 **Example**
 ```js
@@ -67,9 +67,9 @@ cookie.get('foo');
 cookie.get('cookie-that-does-not-exist');
 // -> ''
 ```
-<a name="module_cookie..delete"></a>
+<a name="module_cookie..remove"></a>
 
-### cookie~delete(name) ⇒ <code>void</code>
+### cookie~remove(name) ⇒ <code>void</code>
 Deletes a cookie by its name.
 
 **Kind**: inner method of [<code>cookie</code>](#module_cookie)  
@@ -84,6 +84,6 @@ Deletes a cookie by its name.
 
 **Example**
 ```js
-cookie.delete('foo');
+cookie.remove('foo');
 // -> undefined
 ```
