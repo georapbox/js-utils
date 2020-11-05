@@ -63,7 +63,7 @@ module.exports = (function () {
    * Get a cookie by its name.
    *
    * @function get
-   * @param {String} [name] The name of the cookie to get. If not provided the whole cookie string is returned.
+   * @param {String} [name] The name of the cookie to get.
    * @throws {TypeError} If `name` is not string.
    * @returns {String} Returns the value of the cookie if exists; otherwise an empty string.
    * @example
