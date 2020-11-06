@@ -17,7 +17,9 @@ function trimRight(subjectString) {
     throw new TypeError('Expected a string for first argument');
   }
 
-  return subjectString.replace(/\s+$/, '');
+  return String.prototype.trimEnd
+    ? subjectString.trimEnd()
+    : subjectString.replace(/\s+$/, '');
 }
 
 module.exports = trimRight;
