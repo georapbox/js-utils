@@ -1,27 +1,38 @@
 var trimLeft = require('./trimLeft');
 
 describe('String/trimLeft', function () {
-  it('trims string from left end', function () {
-    expect(trimLeft('    Hey').length).toEqual(3);
+  function runTests() {
+    expect(trimLeft('  Hello')).toBe('Hello');
+
+    expect(trimLeft('\t  Hello')).toBe('Hello');
+
+    expect(trimLeft('\n  Hello')).toBe('Hello');
+
+    expect(trimLeft('\v  Hello')).toBe('Hello');
+
+    expect(trimLeft('\r  Hello')).toBe('Hello');
+
+    expect(trimLeft('\t\n\v\r  Hello')).toBe('Hello');
+
+    expect(trimLeft('\t\n\v\r  Hello  \t\n\v\r')).toBe('Hello  \t\n\v\r');
 
     expect(function () {
       return trimLeft(null);
-    }).toThrow();
+    }).toThrow('Expected a string for first argument');
 
     expect(function () {
       return trimLeft(123);
-    }).toThrow();
+    }).toThrow('Expected a string for first argument');
+  }
 
-    expect(function () {
-      return trimLeft({});
-    }).toThrow();
+  it('trims string from left end (String.prototype.trimStart is supported)', function () {
+    runTests();
+  });
 
-    expect(function () {
-      return trimLeft([]);
-    }).toThrow();
-
-    expect(function () {
-      return trimLeft(void 0);
-    }).toThrow();
+  it('trims string from left end (String.prototype.trimStart is not supported)', function () {
+    var nativeCode = String.prototype.trimStart;
+    String.prototype.trimStart = null;
+    runTests();
+    String.prototype.trimStart = nativeCode;
   });
 });

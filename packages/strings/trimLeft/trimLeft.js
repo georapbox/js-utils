@@ -17,7 +17,9 @@ function trimLeft(subjectString) {
     throw new TypeError('Expected a string for first argument');
   }
 
-  return subjectString.replace(/^\s+/, '');
+  return String.prototype.trimStart
+    ? subjectString.trimStart()
+    : subjectString.replace(/^\s+/, '');
 }
 
 module.exports = trimLeft;
