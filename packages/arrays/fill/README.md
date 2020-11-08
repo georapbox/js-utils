@@ -4,6 +4,9 @@
 Fills elements of array with value from start up to end (not including end).
 
 **Returns**: <code>Array</code> - The new array.  
+**Throws**:
+
+- <code>TypeError</code> If `array` is not an array.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

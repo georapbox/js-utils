@@ -7,7 +7,8 @@
  * @param {*} value The value to fill array with.
  * @param {Number} [start=0] The start position.
  * @param {Number} [end=array.length] The end position.
- * @return {Array} The new array.
+ * @throws {TypeError} If `array` is not an array.
+ * @returns {Array} The new array.
  * @example
  *
  * fill(['a', 'b', 'c'], '*');
