@@ -3,7 +3,6 @@
 /**
  * Determines whether a string begins with the characters of another string.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the start of the string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for `prefix`.

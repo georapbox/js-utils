@@ -3,7 +3,6 @@
 /**
  * Determines whether one string may be found within another string, returning true or false as appropriate.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {String} searchString A string to be searched for within the original string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for searchString; defaults to 0.

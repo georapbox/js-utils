@@ -4,7 +4,6 @@
 Checks if 'value' is a truthy one.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is truthy, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

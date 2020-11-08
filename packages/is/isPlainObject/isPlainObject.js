@@ -3,7 +3,6 @@
 /**
  * Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).
  *
- * @category Is
  * @NOTE Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
  * @param {*} value The value to check.
  * @return {Boolean} True if `value` is a plain object, else false.

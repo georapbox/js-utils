@@ -5,7 +5,6 @@ Creates a function that invokes `func` once it's called `n` or more times.
 `func` is invoked with the this binding and arguments of the created function.
 
 **Returns**: <code>function</code> - The new restricted function.  
-**Category**: Function  
 **Throws**:
 
 - <code>TypeError</code> If `n` is not number.

@@ -3,7 +3,6 @@
 /**
  * Unescapes a HTML string.
  *
- * @category String
  * @param {String} subjectString The HTML string to unescape.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The unescaped string.

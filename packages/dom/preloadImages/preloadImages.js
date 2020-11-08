@@ -3,7 +3,6 @@
 /**
  * Load images to browser asynchronously so that can be cached.
  *
- * @category DOM
  * @param {Array} images An array of strings that represent the path of the images to be cached.
  * @param {function} [successCallback] A function to be executed after an image is successfully loaded.
  * @param {function} [errorCallback] A function to be executed after an image is not loaded.

@@ -3,7 +3,6 @@
 /**
  * Captures the mouse position on a specific HTML element.
  *
- * @category DOM
  * @param {HTMLElement} element The HTML element to capture mouse position on.
  * @param {function} [callback] A callback function to be executed on mouse move taking the `position` object as argument.
  * @throws {TypeError} If `element` is not a DOM element.

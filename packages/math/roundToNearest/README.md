@@ -4,7 +4,6 @@
 Rounds a number to the nearest multiple of a value provided.
 
 **Returns**: <code>Number</code> - The rounded number.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.

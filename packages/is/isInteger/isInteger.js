@@ -4,7 +4,6 @@
  * Checks if 'value' is an integer number.
  * If the value is NaN or infinite, return false.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if value is integer, else false.
  * @example

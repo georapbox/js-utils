@@ -4,7 +4,6 @@
 Checks if 'value' is undefined.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is undefined, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

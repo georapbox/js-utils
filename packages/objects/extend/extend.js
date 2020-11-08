@@ -22,7 +22,6 @@
  * On a deep extend, Object and Array are extended, but object wrappers on primitive types such as
  * String, Boolean, and Number are not. Deep-extending a cyclical data structure will result in an error.
  *
- * @category Object
  * @function extend
  * @param {Boolean} [deep=false] If true, the merge becomes recursive (aka. deep copy).
  * @param {Object} target An object that will receive the new properties if additional objects are passed.

@@ -6,7 +6,6 @@ By default looks for the first occuerence of this sequence.
 If the character or sequence of characters not found, returns the initial string.
 
 **Returns**: <code>String</code> - The result string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

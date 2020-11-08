@@ -9,7 +9,6 @@ the value of that element, otherwise, `find` returns `undefined`.
 it is not invoked for indexes which have been deleted or which have never been assigned values.
 
 **Returns**: <code>\*</code> - A value in the array if an element passes the test, else, `undefined`.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not an array.

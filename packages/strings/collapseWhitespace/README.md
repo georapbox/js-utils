@@ -4,7 +4,6 @@
 Converts all adjacent whitespace characters to a single space.
 
 **Returns**: <code>String</code> - The final string with all adjacent whitespace converted to single space.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

@@ -4,7 +4,6 @@
  * Creates a new array with its elements' order randomized,
  * using the Fisher-Yates (aka Knuth) Shuffle algorithm.
  *
- * @category Array
  * @param {Array} array The array to shuffle.
  * @throws {TypeError} If `array` is not array.
  * @return {Array} Returns a new array with its elements randomised.

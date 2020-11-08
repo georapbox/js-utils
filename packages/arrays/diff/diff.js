@@ -4,7 +4,6 @@
  * Creates an array with only the unique values from the first array,
  * by excluding all values from the second array using strict equality for comparisons.
  *
- * @category Array
  * @param {Array} arrayA The array to process.
  * @param {Array} arrayB The values to exclude from `arrayA`.
  * @throws {TypeError} If any of the arguments passed are not arrays.

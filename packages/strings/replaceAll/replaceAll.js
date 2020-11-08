@@ -3,7 +3,6 @@
 /**
  * Creates a new string with all occurrences of `subString` replaced with `replaceString`.
  *
- * @category String
  * @param {String} subjectString The initial string.
  * @param {String} subString The substring to replace.
  * @param {String} replaceString The substring to replace with.

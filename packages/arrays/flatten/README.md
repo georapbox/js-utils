@@ -4,7 +4,6 @@
 Flattens array a single level deep.
 
 **Returns**: <code>Array</code> - The new flattened array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

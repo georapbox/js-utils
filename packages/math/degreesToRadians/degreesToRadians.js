@@ -3,7 +3,6 @@
 /**
  * Converts degrees to radians.
  *
- * @category Math
  * @param {Number} degrees A number representing the degrees to convert.
  * @throws {TypeError} If `degrees` is not a number.
  * @return {Number} The result in radiands, after conversion.

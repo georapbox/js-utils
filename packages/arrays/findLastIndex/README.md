@@ -4,7 +4,6 @@
 Returns the index of the last element of a collection that passes the callback check.
 
 **Returns**: <code>Number</code> - Returns the index of the last element that matches the callback check.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

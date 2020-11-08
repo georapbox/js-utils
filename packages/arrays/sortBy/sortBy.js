@@ -3,7 +3,6 @@
 /**
  * Sorts an array of objects (not in place) by property.
  *
- * @category Array
  * @param {Array} array The array to sort.
  * @param {String} field The field to sort the array by.
  * @param {Boolean} [ascending=true] Defines the sort order.

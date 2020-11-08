@@ -3,7 +3,6 @@
 /**
  * Factory function that returns methods that access the URL search parameters.
  *
- * @category String
  * @param {String} searchString The URL search string. eg "?id=1&fname=Foo&lname=Bar"
  * @throws {TypeError} If `searchString` is not string.
  * @return {Object} A plain object that holds methods to access the URL search parameters.

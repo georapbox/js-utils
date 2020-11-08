@@ -5,7 +5,6 @@ Checks if a number is between `min` and 'max' values including.
 If `min` is greater than `max` the parameters are swapped to support inverted ranges.
 
 **Returns**: <code>Boolean</code> - True if number is in the range; otherwise false.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.

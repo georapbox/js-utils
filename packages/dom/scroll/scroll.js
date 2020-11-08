@@ -4,7 +4,6 @@
  * Easing based scrolling to a specified y point inside page.
  *
  * @module scroll
- * @category DOM
  */
 (function (name, context, definition) {
   if (typeof define === 'function' && define.amd) {

@@ -4,7 +4,6 @@
 Fills elements of array with value from start up to end (not including end).
 
 **Returns**: <code>Array</code> - The new array.  
-**Category**: Array  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

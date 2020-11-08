@@ -4,7 +4,6 @@
 Captures the mouse position on a specific HTML element.
 
 **Returns**: <code>Object</code> - An object containing the position object (x, y) of mouse and an unbind method.  
-**Category**: DOM  
 **Throws**:
 
 - <code>TypeError</code> If `element` is not a DOM element.

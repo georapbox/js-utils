@@ -6,7 +6,6 @@ Whitespace in this context is all the whitespace characters (space, tab, no-brea
 and all the line terminator characters (LF, CR, etc.).
 
 **Returns**: <code>String</code> - The result string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

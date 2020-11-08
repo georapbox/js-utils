@@ -4,7 +4,6 @@
  * Checks if a number is between `min` and 'max' values including.
  * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
  *
- * @category Math
  * @param {Number} value The number to check.
  * @param {Number} min The minimum value of the range.
  * @param {Number} max The maximum value of the range.

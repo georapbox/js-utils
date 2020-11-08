@@ -4,7 +4,6 @@
 Factory function that returns methods that access the URL search parameters.
 
 **Returns**: <code>Object</code> - A plain object that holds methods to access the URL search parameters.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `searchString` is not string.

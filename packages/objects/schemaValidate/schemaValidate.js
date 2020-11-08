@@ -3,7 +3,6 @@
 /**
  * Validates a plain object against a provided schema object.
  *
- * @category Object
  * @NOTE To support legacy browsers, use `Array.prototype.map`, `Array.prototype.reduce` and `Object.keys()` polyfills.
  * @param {Object} object The object to validate.
  * @param {Object.<Function>} [schema] A plain object with validator functions. If `undefined` validation always passes.

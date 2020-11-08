@@ -3,7 +3,6 @@
 ## scroll
 Easing based scrolling to a specified y point inside page.
 
-**Category**: DOM  
 <a name="module_scroll..to"></a>
 
 ### scroll~to([options], [callback])

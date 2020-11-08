@@ -3,7 +3,6 @@
 /**
  * Converts string into string delimited by underscores.
  *
- * @category String
  * @param {String} subjectString The string to convert.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.

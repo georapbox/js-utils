@@ -5,7 +5,6 @@ Converts a color number value to a hexadecimal formatted string,
 or a hexadecimal formatted string to a number.
 
 **Returns**: <code>Number</code> &#124; <code>String</code> - The converted color value.  
-**Category**: Misc  
 **Throws**:
 
 - <code>TypeError</code> If `color` is not number or string.

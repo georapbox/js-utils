@@ -4,7 +4,6 @@
 Checks if `value` is `null` or `undefined`.
 
 **Returns**: <code>Boolean</code> - `true` if the `value` is `null` or `undefined`; otherwise `false`.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

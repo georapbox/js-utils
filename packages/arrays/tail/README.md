@@ -4,7 +4,6 @@
 Gets all but the first element of array.
 
 **Returns**: <code>Array</code> - The new tailed array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

@@ -6,7 +6,6 @@
  *
  * @source https://lodash.com/docs#deburr
  *
- * @category String
  * @param {String} subjectString The string to deburr.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The deburred string.

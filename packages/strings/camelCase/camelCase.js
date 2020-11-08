@@ -3,7 +3,6 @@
 /**
  * Converts a string to camel case, removing any non alphanumeric characters.
  *
- * @category String
  * @param {String} subjectString The string to convert.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The camel cased result string.

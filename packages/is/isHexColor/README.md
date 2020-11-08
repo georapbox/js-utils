@@ -4,7 +4,6 @@
 Checks if 'value' matches a hexadecimal color regular expression.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a hexadecimal color regexp, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

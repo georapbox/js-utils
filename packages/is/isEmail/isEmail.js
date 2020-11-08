@@ -3,7 +3,6 @@
 /**
  * Validates a string as email address.
  *
- * @category Is
  * @param {String} value The string to validate.
  * @return {Boolean} True if valid email, else false.
  * @example

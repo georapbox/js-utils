@@ -4,7 +4,6 @@
 Validates a string as email address.
 
 **Returns**: <code>Boolean</code> - True if valid email, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

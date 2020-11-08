@@ -3,7 +3,6 @@
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".
  *
- * @category Is
  * @param {*} value The value to check.
  * @returns {Boolean} Returns `true` if `value` is object-like, else `false`.
  * @example

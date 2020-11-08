@@ -3,7 +3,6 @@
 /**
  * Fills elements of array with value from start up to end (not including end).
  *
- * @category Array
  * @param {Array} array The array to fill.
  * @param {*} value The value to fill array with.
  * @param {Number} [start=0] The start position.

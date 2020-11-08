@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' is a function.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if 'value' is a function, else returns false.
  * @example

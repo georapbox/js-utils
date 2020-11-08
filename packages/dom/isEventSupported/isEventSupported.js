@@ -4,7 +4,6 @@
  * Checks if an event is supported in a browser environment.
  *
  * @module isEventSupported
- * @category DOM
  * @param {String} eventName The event name (without the `on` prefix) to check if is supported, eg `click`, `mouseover`, etc.
  * @param {HTMLElement} [element] An HTML node to check if an event is supported on.
  * Some events are supported on specific elements, eg `online` is supported on `window` but not on a `div` element.

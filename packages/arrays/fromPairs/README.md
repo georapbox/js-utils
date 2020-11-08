@@ -3,8 +3,7 @@
 ## fromPairs(array) ⇒ <code>Object</code>
 Creates an object composed from key-value pairs.
 
-**Returns**: <code>Object</code> - The result object.  
-**Category**: Array  
+**Returns**: <code>Object</code> - Returns the result object.  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

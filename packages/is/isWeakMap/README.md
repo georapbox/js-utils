@@ -4,7 +4,6 @@
 Checks if `value` is classified as a WeakMap object.
 
 **Returns**: <code>Boolean</code> - True if `value` is classified as a WeakMap object, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

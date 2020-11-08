@@ -3,7 +3,6 @@
 /**
  * Flattens array a single level deep.
  *
- * @category Array
  * @param {Array} array The array to flatten.
  * @throws {TypeError} If `array` is not array.
  * @return {Array} The new flattened array.

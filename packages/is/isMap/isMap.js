@@ -3,7 +3,6 @@
 /**
  * Checks if value is classified as a Map object.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if `value` is classified as a Map object, else false.
  * @example

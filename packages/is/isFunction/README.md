@@ -4,7 +4,6 @@
 Checks if 'value' is a function.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a function, else returns false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

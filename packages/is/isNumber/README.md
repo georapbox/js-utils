@@ -4,7 +4,6 @@
 Checks if 'value' is a number.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a number, else false.  
-**Category**: Is  
 **Note:**: `NaN` is considered to be a number, as so will return true.  
 
 | Param | Type | Description |

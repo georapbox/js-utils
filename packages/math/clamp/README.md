@@ -5,7 +5,6 @@ Clamps number within the inclusive `min` and `max` bounds, making sure it does n
 If `min` is greater than `max` the parameters are swapped to support inverted ranges.
 
 **Returns**: <code>Number</code> - The clamped number.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.

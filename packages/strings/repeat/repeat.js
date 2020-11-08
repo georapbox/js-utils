@@ -4,7 +4,6 @@
  * Constructs and returns a new string which contains the specified number
  * of copies of the string on which it was called, concatenated together.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {Number} [count=0] An integer indicating the number of times to repeat the string.
  * @throws {TypeError} If `subjectString` is not string.

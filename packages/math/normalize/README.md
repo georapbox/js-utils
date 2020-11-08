@@ -5,7 +5,6 @@ Takes a value within a range of values and converts that value
 to a number from 0 to 1 that indicates where it lies in that range.
 
 **Returns**: <code>Number</code> - The normalized value.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If any of the arguments passed is not a number.

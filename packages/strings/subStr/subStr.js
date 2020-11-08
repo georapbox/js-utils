@@ -3,7 +3,6 @@
 /**
  * Returns a substring denoted by n (positive or negative) characters.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {Number} [n] The number of characters of the new string.
  *        If `n >= 0`, returns a substring from the left end of the string.

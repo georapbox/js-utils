@@ -4,7 +4,6 @@
 Truncates a string based on character count.
 
 **Returns**: <code>String</code> - The truncated string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

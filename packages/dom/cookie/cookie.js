@@ -1,6 +1,5 @@
 /**
  * @module cookie
- * @category DOM
  */
 module.exports = (function () {
   /**

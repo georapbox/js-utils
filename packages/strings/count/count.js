@@ -3,7 +3,6 @@
 /**
  * Counts the occurrences of substring in a string.
  *
- * @category String
  * @param {String} subjectString The string.
  * @param {String} searchString The string to search for.
  * @param {Boolean} [caseInsensitive=false] If true, the lookup is case insensitive.

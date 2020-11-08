@@ -4,7 +4,6 @@
 Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).
 
 **Returns**: <code>Boolean</code> - True if "value" is a plain object, else false.  
-**Category**: Is  
 **Note**: Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.  
 
 | Param | Type | Description |

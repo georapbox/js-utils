@@ -5,7 +5,6 @@ Returns a pseudo-random integer number between a min (inclusive) and a max (incl
 If `min` is greater than `max` the parameters are swapped to support inverted ranges.
 
 **Returns**: <code>Number</code> - The pseudo-random integer number.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.

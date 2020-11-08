@@ -4,7 +4,7 @@
 Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.
 The order of grouped values is determined by the order they occur in the `array`.
 
-**Category**: Array  
+**Returns**: <code>Object</code> - Returns the composed aggregate object.  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

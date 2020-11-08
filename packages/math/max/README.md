@@ -4,7 +4,6 @@
 Finds the largest of zero or more numbers.
 
 **Returns**: <code>Number</code> - The largest number from the arguments provided.  
-**Category**: Math  
 
 | Param | Type | Description |
 | --- | --- | --- |

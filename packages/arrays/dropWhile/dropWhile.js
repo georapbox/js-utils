@@ -4,7 +4,6 @@
  * Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.
  * The predicate is invoked with three arguments: (`value`, `index`, `array`).
  *
- * @category Array
  * @param {Array} array The array to process.
  * @param {function} predicate The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.

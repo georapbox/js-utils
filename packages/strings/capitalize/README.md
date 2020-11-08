@@ -4,7 +4,6 @@
 Capitalizes the first character of a string.
 
 **Returns**: <code>String</code> - A new capitalized string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

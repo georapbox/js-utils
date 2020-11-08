@@ -3,7 +3,6 @@
 /**
  * Gets all but the first element of array.
  *
- * @category Array
  * @param {Array} array The array to process.
  * @throws {TypeError} If `array` is not array.
  * @return {Array} The new tailed array.

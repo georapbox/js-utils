@@ -4,7 +4,6 @@
 Validates a plain object against a provided schema object.
 
 **Returns**: <code>Object</code> - An object holding a boolean to indicate if object is valid and an array with invalid properties if any.  
-**Category**: Object  
 **Throws**:
 
 - <code>TypeError</code> If any of the schema validators are not function.

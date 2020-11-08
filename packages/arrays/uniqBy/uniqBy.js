@@ -4,7 +4,6 @@
  * Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.
  * The `iteratee` is invoked with one argument (each element in the array).
  *
- * @category Array
  * @param {Array} array The initial array to inspect.
  * @param {Function|String} iteratee The iteratee invoked per element.
  * @throws {TypeError} If `array` is not array.

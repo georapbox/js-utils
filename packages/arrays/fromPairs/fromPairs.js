@@ -3,10 +3,9 @@
 /**
  * Creates an object composed from key-value pairs.
  *
- * @category Array
  * @param {Array.<Array>} array The key-value pairs array.
  * @throws {TypeError} If `array` is not array.
- * @return {Object} The result object.
+ * @returns {Object} Returns the result object.
  * @example
  *
  * fromPairs([['Javascript', 10], ['PHP', 3], ['Java', 4]]);

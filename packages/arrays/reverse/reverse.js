@@ -4,7 +4,6 @@
  * Reverses an array (not in place).
  * The first array element becomes the last and the last becomes the first.
  *
- * @category Array
  * @param {Array} array The array to reverse.
  * @throws {TypeError} If `array` is not array.
  * @return {Array} Returns a new array reversed.

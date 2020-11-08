@@ -4,7 +4,6 @@
  * Converts a color number value to a hexadecimal formatted string,
  * or a hexadecimal formatted string to a number.
  *
- * @category Misc
  * @param {Number|String} color The color value to convert.
  * @param {Boolean} [toNumber] If set to true, a numeric color value is returned.
  * @throws {TypeError} If `color` is not number or string.

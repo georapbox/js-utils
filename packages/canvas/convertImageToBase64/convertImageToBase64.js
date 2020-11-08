@@ -3,7 +3,6 @@
 /**
  * Converts an image's content to Data URI scheme.
  *
- * @category HTML5 Canvas
  * @param {String} url The path of the image to be converted.
  * @return {Object} A promise that when resolved, returns the Base64 string.
  * @example

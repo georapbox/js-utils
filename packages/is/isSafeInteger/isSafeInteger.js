@@ -4,7 +4,6 @@
  * Checks if an integer number is in the safe range, i.e., it is correctly represented by JavaScript
  * (where all numbers, including integer numbers, are technically floating point number).
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if safe integer, else false.
  * @example

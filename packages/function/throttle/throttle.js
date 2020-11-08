@@ -3,7 +3,6 @@
 /**
  * Limits the number of times a function can be called in a given period.
  *
- * @category Function
  * @param {function} func The function to be executed.
  * @param {Number} [wait=0] Optional. Default value is 0. Time of delay in milliseconds.
  * @return {function} The throttled function.

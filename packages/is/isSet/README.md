@@ -4,7 +4,6 @@
 Checks if value is classified as a Set object.
 
 **Returns**: <code>Boolean</code> - True if `value` is classified as a Set object, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

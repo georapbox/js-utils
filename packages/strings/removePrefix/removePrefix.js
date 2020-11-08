@@ -3,7 +3,6 @@
 /**
  * Removes prefix from start of a string.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {String} [prefix] The prefix substring to remove from the original string.
  * @throws {TypeError} If `subjectString` is not string.

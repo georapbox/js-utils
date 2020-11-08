@@ -4,7 +4,6 @@
 Checks if 'value' is a falsy one.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is falsy, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

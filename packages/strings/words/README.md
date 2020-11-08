@@ -4,7 +4,6 @@
 Splits string into an array of its words.
 
 **Returns**: <code>Array</code> - The string's words.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

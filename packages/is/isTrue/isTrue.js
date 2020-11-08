@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' is true (strict equality).
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if the 'value' is true, else false.
  * @example

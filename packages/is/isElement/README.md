@@ -4,7 +4,6 @@
 Checks if 'value' is a DOM element.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a DOM element, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

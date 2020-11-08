@@ -4,7 +4,6 @@
 Removes whitespace from the left end of a string.
 
 **Returns**: <code>String</code> - The result string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

@@ -3,7 +3,6 @@
 /**
  * Checks if value is classified as a WeakSet object.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if `value` is classified as a WeakSet object, else false.
  * @example

@@ -6,7 +6,6 @@ Any `null`, `undefined` or `NaN` values are removed from the result array.
 If array values are of different type, the result is not guaranteed to be correct.
 
 **Returns**: <code>Array</code> - The new sorted array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

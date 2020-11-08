@@ -5,7 +5,6 @@ Creates a slice of `array` excluding elements dropped from the beginning, until 
 The predicate is invoked with three arguments: (`value`, `index`, `array`).
 
 **Returns**: <code>Array</code> - The slice of the array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

@@ -5,7 +5,6 @@ Returns the index of the first element that passes the callback check.
 If no element passes the callback check, returns -1.
 
 **Returns**: <code>Number</code> - Returns the index of the first element that matches the callback check.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

@@ -3,7 +3,6 @@
 /**
  * Generates a random string of specific `length` allowing a set of characters specified by `chars`.
  *
- * @category String
  * @param {Number} length The number of characters of the generated string.
  * @param {String} [chars='#aA!'] Type of characters to be allowed in the generated string.
  *                                Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters.

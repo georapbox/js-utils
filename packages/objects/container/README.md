@@ -4,7 +4,6 @@
 Acts as a wrapper/container around the `value` passed in.
 
 **Returns**: <code>Object</code> - The wrapper object containing the value.  
-**Category**: Object  
 
 | Param | Type | Description |
 | --- | --- | --- |

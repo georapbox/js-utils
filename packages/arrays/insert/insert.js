@@ -3,7 +3,6 @@
 /**
  * Inserts elements to array at specific index.
  *
- * @category Array
  * @param {Array} array The array to insert elements to.
  * @param {Number} start The index to insert elements.
  *        If greater than the length of the array, actual starting index will be set to the length of the array.

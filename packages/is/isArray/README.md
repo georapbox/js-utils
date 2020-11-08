@@ -4,7 +4,6 @@
 Checks if 'value' is array.
 
 **Returns**: <code>Boolean</code> - True if array, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

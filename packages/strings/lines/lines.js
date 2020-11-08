@@ -3,7 +3,6 @@
 /**
  * Creates an array with the lines of a a string.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {Array} An array or strings containing the lines of the string.

@@ -4,7 +4,6 @@
 Returns a substring denoted by n (positive or negative) characters.
 
 **Returns**: <code>String</code> - The result string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

@@ -5,7 +5,6 @@
  * Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.)
  * and all the line terminator characters (LF, CR, etc.).
  *
- * @category String
  * @param {String} subjectString The string to trim.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.

@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' matches a hexadecimal regular expression.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if 'value' is a hexadecimal, else false.
  * @example

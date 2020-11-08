@@ -3,7 +3,6 @@
 /**
  * Flattens array recursively.
  *
- * @category Array
  * @param {Array} array the array to flatten.
  * @throws {TypeError} If `array` is not array.
  * @return {Array} the new flattened array.

@@ -3,7 +3,6 @@
 /**
  * Returns the index of the last element of a collection that passes the callback check.
  *
- * @category Array
  * @param {Array} array The array to check.
  * @param {function} callback The function called per iteration.
  * @throws {TypeError} If `array` is not array.

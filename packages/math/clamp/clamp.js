@@ -5,7 +5,6 @@
  * making sure it does not go beyond them on either side.
  * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
  *
- * @category Math
  * @param {Number} value The number to clamp.
  * @param {Number} min The lower bound.
  * @param {Number} max The upper bound.

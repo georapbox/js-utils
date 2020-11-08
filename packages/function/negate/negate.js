@@ -4,7 +4,6 @@
  * Creates a function that negates the result of the predicate `func`.
  * The `func` predicate is invoked with the this binding and arguments of the created function.
  *
- * @category Function
  * @param {function} func The predicate to negate.
  * @param {*} [thisArg] Value to use as `this` when executing `func`.
  * @throws {TypeError} If `func` is not function.

@@ -4,7 +4,6 @@
 Checks if 'value' is null.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is null, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

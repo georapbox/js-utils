@@ -23,7 +23,6 @@ On a deep extend, Object and Array are extended, but object wrappers on primitiv
 String, Boolean, and Number are not. Deep-extending a cyclical data structure will result in an error.
 
 **Returns**: <code>Object</code> - The merged object.  
-**Category**: Object  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

@@ -4,7 +4,6 @@
 Ensure a given functionality only runs once.
 
 **Returns**: <code>function</code> - Returns the new restricted function.  
-**Category**: Function  
 
 | Param | Type | Description |
 | --- | --- | --- |

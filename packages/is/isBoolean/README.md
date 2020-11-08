@@ -4,7 +4,6 @@
 Checks if 'value' is a boolean value.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is a boolean value, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

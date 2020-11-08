@@ -4,7 +4,6 @@
 Creates an array with the lines of a a string.
 
 **Returns**: <code>Array</code> - An array or strings containing the lines of the string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

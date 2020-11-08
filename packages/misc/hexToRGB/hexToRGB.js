@@ -3,7 +3,6 @@
 /**
  * Converts a color value (number or hexadecimal string) to RGB(A) format.
  *
- * @category Misc
  * @param {Number|String} color The color value to convert.
  * @param {Number} [alpha=1] Indicates an alpha value, which is a decimal number between 0 and 1.
  * @return {String} The converted value in RGB(A) format.

@@ -4,7 +4,6 @@
 Checks if 'value' is a regular expression.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is a regular expression, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

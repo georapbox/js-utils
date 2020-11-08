@@ -5,7 +5,6 @@ Reverses an array (not in place).
 The first array element becomes the last and the last becomes the first.
 
 **Returns**: <code>Array</code> - Returns a new array reversed.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

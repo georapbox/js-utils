@@ -4,7 +4,6 @@
 Checks if `value` is string.
 
 **Returns**: <code>Boolean</code> - True if string, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

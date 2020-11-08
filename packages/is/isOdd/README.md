@@ -4,7 +4,6 @@
 Checks if value is odd.
 
 **Returns**: <code>Boolean</code> - True if value is odd, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

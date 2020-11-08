@@ -4,7 +4,6 @@
  * Takes a normalized value within a range of values and converts
  * it to a numerical value that the normalized value points to.
  *
- * @category Math
  * @param {Number} norm The normalized value to convert.
  * @param {Number} min The minimum value of the range of values.
  * @param {Number} max The maximum value of the range of values.

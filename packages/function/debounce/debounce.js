@@ -6,7 +6,6 @@
  * 'n' milliseconds. If `immediate` is passed, trigger the function on the
  * leading edge, instead of the trailing.
  *
- * @category Function
  * @param {function} func The function to be executed.
  * @param {Number} [wait] Time of delay in milliseconds. It is required if `immediate` is used.
  * @param {Boolean} [immediate] If true or any truthy value, triggers the function on the leading edge.

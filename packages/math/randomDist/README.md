@@ -5,7 +5,6 @@ Returns a weighted random number (that tends to the center)
 of a range of numbers based on the number of the iterations set.
 
 **Returns**: <code>Number</code> - The weighted random number.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.

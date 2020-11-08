@@ -3,7 +3,6 @@
 /**
  * Splits string into an array of its words.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {Array} The string's words.

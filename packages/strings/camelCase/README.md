@@ -4,7 +4,6 @@
 Converts a string to camel case, removing any non alphanumeric characters.
 
 **Returns**: <code>String</code> - The camel cased result string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

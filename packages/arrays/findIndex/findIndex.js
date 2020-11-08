@@ -5,7 +5,6 @@
  * Returns the index of the first element that passes the callback check.
  * If no element passes the callback check, returns -1.
  *
- * @category Array
  * @param {Array} array The array to check.
  * @param {function} callback The function called per iteration.
  * @throws {TypeError} If `array` is not array.

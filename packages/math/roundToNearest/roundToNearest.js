@@ -3,7 +3,6 @@
 /**
  * Rounds a number to the nearest multiple of a value provided.
  *
- * @category Math
  * @param {Number} value The number to be rounded.
  * @param {Number} nearest=1 The value to be used in order to find the nearest multiple of.
  * @throws {TypeError} If one or more of the arguments passed is not a number.

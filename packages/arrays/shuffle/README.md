@@ -5,7 +5,6 @@ Creates a new array with its elements' order randomized,
 using the Fisher-Yates (aka Knuth) Shuffle algorithm.
 
 **Returns**: <code>Array</code> - Returns a new array with its elements randomised.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

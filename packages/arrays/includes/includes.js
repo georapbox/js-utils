@@ -4,7 +4,6 @@
  * Determines whether an array includes a certain element,
  * returning true or false as appropriate.
  *
- * @category Array
  * @param {Array} array The array to search.
  * @param {*} searchElement The element to search for.
  * @param {Number} [fromIndex=0] The position in the array at which to begin searching for `searchElement`.

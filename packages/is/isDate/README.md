@@ -4,7 +4,6 @@
 Checks if 'value' is a date.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a date, else returns false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

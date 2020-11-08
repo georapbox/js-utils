@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' is array.
  *
- * @category Is
  * @param {*} value The value to check if is array.
  * @return {Boolean} True if array, else false.
  * @example

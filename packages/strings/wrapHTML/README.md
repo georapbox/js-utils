@@ -4,7 +4,6 @@
 Wraps a string with a HTML tag with attributes if specified.
 
 **Returns**: <code>String</code> - The wrapped string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

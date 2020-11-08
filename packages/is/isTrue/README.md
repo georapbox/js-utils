@@ -4,7 +4,6 @@
 Checks if 'value' is true (strict equality).
 
 **Returns**: <code>Boolean</code> - True if the 'value' is true, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

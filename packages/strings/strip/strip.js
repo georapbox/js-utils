@@ -3,7 +3,6 @@
 /**
  * Creates a new string with all occurrences of [string1], [string2],... removed.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {String} [args...] The substrings to remove from the original string.
  * @throws {TypeError} If `subjectString` is not string.

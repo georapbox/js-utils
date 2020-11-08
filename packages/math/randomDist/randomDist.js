@@ -4,7 +4,6 @@
  * Returns a weighted random number (that tends to the center)
  * of a range of numbers based on the number of the iterations set.
  *
- * @category Math
  * @param {Number} min The minimum value of the range.
  * @param {Number} max The maximum value of the range.
  * @param {Number} [iterations=2] The number of the iterations.

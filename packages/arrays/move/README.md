@@ -4,7 +4,6 @@
 Move an array element to a different position.
 
 **Returns**: <code>Array</code> - The new array with the element moved to a new position.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

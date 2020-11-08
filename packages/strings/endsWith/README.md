@@ -4,7 +4,6 @@
 Determines whether a string ends with the characters of another string.
 
 **Returns**: <code>Boolean</code> - True if `subjectString` ends with `searchString`, else false.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

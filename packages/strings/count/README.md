@@ -4,7 +4,6 @@
 Counts the occurrences of substring in a string.
 
 **Returns**: <code>Number</code> - The number of occurrences of search string in original string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

@@ -4,7 +4,6 @@
 Removes all of the punctuation from a string.
 
 **Returns**: <code>String</code> - The stripped string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

@@ -5,7 +5,6 @@ Rounds a number to a number of desired places.
 Feed with negative place values to round to powers of 10.
 
 **Returns**: <code>Number</code> - The rounded number.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.

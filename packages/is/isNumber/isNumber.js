@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' is a number.
  *
- * @category Is
  * @NOTE: `NaN` is considered to be a number, as so will return true.
  * @param {*} value The value to check.
  * @return {Boolean} True if 'value' is a number, else false.

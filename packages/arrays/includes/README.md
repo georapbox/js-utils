@@ -5,7 +5,6 @@ Determines whether an array includes a certain element,
 returning true or false as appropriate.
 
 **Returns**: <code>Boolean</code> - True if array includes `searchElement`, else false.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

@@ -4,7 +4,6 @@
 Converts degrees to radians.
 
 **Returns**: <code>Number</code> - The result in radiands, after conversion.  
-**Category**: Math  
 **Throws**:
 
 - <code>TypeError</code> If `degrees` is not a number.

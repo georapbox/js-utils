@@ -4,7 +4,6 @@
 Creates a new string with all occurrences of `subString` replaced with `replaceString`.
 
 **Returns**: <code>String</code> - The result string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

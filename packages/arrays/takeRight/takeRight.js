@@ -3,7 +3,6 @@
 /**
  * Creates a slice of `array` with `n` items taken from the end.
  *
- * @category Array
  * @param {Array} array The array to process.
  * @param {Number} [n=1] The number of items to take.
  * @throws {TypeError} If `array` is not array.

@@ -4,7 +4,6 @@
 Detects the supported property name for the `transitionend` event.
 
 **Returns**: <code>string</code> - The supported property name or `undefined` if not supported.  
-**Category**: DOM  
 **Example**  
 ```js
 var transEnd = whichTransitionEnd();

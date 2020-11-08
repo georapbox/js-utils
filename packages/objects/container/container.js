@@ -4,7 +4,6 @@
  * Acts as a wrapper/container around the `value` passed in.
  *
  * @module Container
- * @category Object
  * @param {*} value The value to wrap.
  * @return {Object} The wrapper object containing the value.
  * @example

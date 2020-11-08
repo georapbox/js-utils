@@ -5,7 +5,6 @@ Creates an array of grouped elements, the first of which contains the first elem
 the second of which contains the second elements of the given arrays, and so on.
 
 **Returns**: <code>Array</code> - Returns the new array of grouped elements.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If any of the arguments is not array.

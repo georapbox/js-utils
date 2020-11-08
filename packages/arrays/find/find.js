@@ -8,7 +8,6 @@
  * `predicate` is invoked only for indexes of the array which have assigned values;
  * it is not invoked for indexes which have been deleted or which have never been assigned values.
  *
- * @category Array
  * @param {Array} array The array to process.
  * @param {function} predicate Function to execute on each value in the array, taking three arguments:
  * - `{*}` element: The current element being processed in the array.

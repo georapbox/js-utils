@@ -3,7 +3,6 @@
 /**
  * Removes whitespace from the right end of a string.
  *
- * @category String
  * @param {String} subjectString The string to right trim.
  * @throws {TypeError} If `subjectString` is not string.
  * @return {String} The result string.

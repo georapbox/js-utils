@@ -5,7 +5,6 @@
  * the second of which contains the elements that the `predicate` returns falsy for.
  * The predicate is invoked with three arguments: (value, index, collection).
  *
- * @category Array
  * @param {Array} array The array to iterate over.
  * @param {Function} [predicate=Identity] The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.

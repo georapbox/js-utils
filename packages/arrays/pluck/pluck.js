@@ -3,7 +3,6 @@
 /**
  * Retrieves the value of a specified property from all elements in an array.
  *
- * @category Array
  * @param {Array} array The array to iterate over.
  * @param {String} [key] The name of the property to pluck.
  * @throws {TypeError} If `array` is not array.

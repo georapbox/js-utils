@@ -4,7 +4,6 @@
 Converts a camel cased or snake cased string into a string delimited by dashes.
 
 **Returns**: <code>String</code> - The converted string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

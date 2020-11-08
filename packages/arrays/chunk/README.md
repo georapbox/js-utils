@@ -5,7 +5,6 @@ Creates an array of elements split into groups the length of `size`.
 If array can’t be split evenly, the final chunk will be the remaining elements.
 
 **Returns**: <code>Array</code> - The new array containing chunks. If `size` is lower than 1, an empty array is returned.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

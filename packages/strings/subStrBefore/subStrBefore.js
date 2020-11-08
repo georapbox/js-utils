@@ -5,7 +5,6 @@
  * By default looks for the first occurrence of this sequence.
  * If the character or sequence of characters not found, returns the initial string.
  *
- * @category String
  * @NOTE For legacy browsers' support use `String.prototype.lastIndexOf`
  * @param {String} subjectString The string to process.
  * @param {String} characters The seqquence of characters to use as delimiter.

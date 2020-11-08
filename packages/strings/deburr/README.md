@@ -5,7 +5,6 @@ Deburrs a string by converting latin-1 supplementary letters to
 basic latin letters and removing combining diacritical marks.
 
 **Returns**: <code>String</code> - The deburred string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

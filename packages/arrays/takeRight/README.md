@@ -4,7 +4,6 @@
 Creates a slice of `array` with `n` items taken from the end.
 
 **Returns**: <code>Array</code> - The slice of the array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

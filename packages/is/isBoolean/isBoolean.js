@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' is a boolean value.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if the 'value' is a boolean value, else false.
  * @example

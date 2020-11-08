@@ -6,7 +6,6 @@
  * If an expression is found, use it as a key on the object,
  * and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.
  *
- * @category String
  * @param {String} subjectString  The initial string to substitude its expressions.
  * @param {Object} [data] A plain object that acts as our model. If `data` omitted, returns the original string.
  * @throws {TypeError} If `subjectString` is not string.

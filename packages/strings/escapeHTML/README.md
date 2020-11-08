@@ -4,7 +4,6 @@
 Escapes a HTML string.
 
 **Returns**: <code>String</code> - Returns the escaped string.  
-**Category**: String  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.

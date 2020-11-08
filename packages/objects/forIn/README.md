@@ -5,7 +5,6 @@ Iterates over own and inherited enumerable properties of an object, executing th
 The callback is invoked with three arguments (value, key, object)
 
 **Returns**: <code>Object</code> - The original object.  
-**Category**: Object  
 
 | Param | Type | Description |
 | --- | --- | --- |

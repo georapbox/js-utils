@@ -3,7 +3,6 @@
 /**
  * Checks if value is odd.
  *
- * @category Is
  * @param {Number} value The value to check.
  * @return {Boolean} True if value is odd, else false.
  * @example

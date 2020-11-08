@@ -4,7 +4,6 @@
 Converts a color value (number or hexadecimal string) to RGB(A) format.
 
 **Returns**: <code>String</code> - The converted value in RGB(A) format.  
-**Category**: Misc  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

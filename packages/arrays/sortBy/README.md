@@ -4,7 +4,6 @@
 Sorts an array of objects (not in place) by property.
 
 **Returns**: <code>Array</code> - Returns the new sorted array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

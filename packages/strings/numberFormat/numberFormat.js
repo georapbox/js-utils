@@ -5,7 +5,6 @@
  * the decimal separator and the thousands separator.
  * If a string is provided as the first argument, will try to convert it.
  *
- * @category String
  * @param {Number} nNumber The number to format.
  * @param {Number} [nDecimals=0] The number of decimal points the formatted number will have.
  * @param {String} [sDecimalSeparator='.'] The decimal separator character(s).

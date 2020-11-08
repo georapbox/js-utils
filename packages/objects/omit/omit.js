@@ -3,7 +3,6 @@
 /**
  * Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.
  *
- * @category Object
  * @param {Object} obj The source object.
  * @param {Array} props The property paths to omit.
  * @returns {Object} Returns the new object.

@@ -3,7 +3,6 @@
 /**
  * Creates a slice of `array` with `n` elements dropped from the end.
  *
- * @category Array
  * @param {Array} array The array to process.
  * @param {Number} [n=1] The number of elements to drop.
  * @throws {TypeError} If `array` is not array.

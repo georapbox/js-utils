@@ -4,7 +4,6 @@
 Retrieves the value of a specified property from all elements in an array.
 
 **Returns**: <code>Array</code> - Returns the result array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

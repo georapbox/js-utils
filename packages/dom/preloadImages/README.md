@@ -3,7 +3,6 @@
 ## preloadImages(images, [successCallback], [errorCallback], [alwaysCallback])
 Load images to browser asynchronously so that can be cached.
 
-**Category**: DOM  
 **Throws**:
 
 - <code>TypeError</code> If `images` is not array.

@@ -5,7 +5,6 @@
  * By default looks for the first occuerence of this sequence.
  * If the character or sequence of characters not found, returns the initial string.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {String} characters The seqquence of characters to use as delimiter.
  * @param {Boolean} [last=false] If true or any truthy value, will look for the last occurence of the characters specified.

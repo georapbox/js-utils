@@ -3,7 +3,6 @@
 /**
  * Detects the supported property name for the `transitionend` event.
  *
- * @category DOM
  * @return {String} The supported property name or `undefined` if not supported.
  * @example
  *

@@ -3,7 +3,6 @@
 /**
  * Finds the largest of zero or more numbers.
  *
- * @category Math
  * @param {Number|Array} [args...] A set of numbers as arguments, or an array of numbers as the only argument.
  * @return {Number} The largest number from the arguments provided.
  * @example

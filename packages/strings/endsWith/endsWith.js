@@ -3,7 +3,6 @@
 /**
  * Determines whether a string ends with the characters of another string.
  *
- * @category String
  * @param {String} subjectString The string to process.
  * @param {String} searchString The characters to be searched for at the end of the original string.
  * @param {Number} [position=subjectString.length] Search within this string as if this string were only this long;

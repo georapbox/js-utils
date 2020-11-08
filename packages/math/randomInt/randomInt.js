@@ -4,7 +4,6 @@
  * Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.
  * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
  *
- * @category Math
  * @param {Number} min The minimum value of the range.
  * @param {Number} max The maximum value of the range.
  * @throws {TypeError} If one or more of the arguments passed is not a number.

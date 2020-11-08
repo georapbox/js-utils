@@ -4,7 +4,6 @@
 Checks if value is classified as a WeakSet object.
 
 **Returns**: <code>Boolean</code> - True if `value` is classified as a WeakSet object, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -3,7 +3,6 @@
 /**
  * Ensure a given functionality only runs once.
  *
- * @category Function
  * @param {function} func The function to restrict.
  * @param {*} [thisArg] Value to use as this when executing `func`.
  * @return {function} Returns the new restricted function.

@@ -3,7 +3,6 @@
 /**
  * Capitalizes the first character of a string.
  *
- * @category String
  * @param {String} subjectString The string to capitalize its first character.
  * @param {Boolean} [lowerCaseRest=false] If true will lowercase the rest of the string.
  * @throws {TypeError} If `subjectString` is not string.

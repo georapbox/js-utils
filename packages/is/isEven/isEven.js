@@ -3,7 +3,6 @@
 /**
  * Checks if a value is even.
  *
- * @category Is
  * @param {Number} value The value to check.
  * @return {Boolean} True if number is even, else false.
  * @example

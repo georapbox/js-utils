@@ -5,7 +5,6 @@ Checks if 'value' is an integer number.
 If the value is NaN or infinite, return false.
 
 **Returns**: <code>Boolean</code> - True if value is integer, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

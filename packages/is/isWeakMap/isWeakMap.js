@@ -3,7 +3,6 @@
 /**
  * Checks if `value` is classified as a WeakMap object.
  *
- * @category Is
  * @param {value} value The value to check.
  * @return {Boolean} True if `value` is classified as a WeakMap object, else false.
  * @example

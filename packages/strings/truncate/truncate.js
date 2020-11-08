@@ -3,7 +3,6 @@
 /**
  * Truncates a string based on character count.
  *
- * @category String
  * @param {String} subjectString The string to truncate.
  * @param {Number} [characterCount] The number of characters the truncated string contains.
  *        If ommitted or falsy, the initial string is returned.

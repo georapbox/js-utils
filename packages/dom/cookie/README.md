@@ -1,7 +1,6 @@
 <a name="module_cookie"></a>
 
 ## cookie
-**Category**: DOM
 
 * [cookie](#module_cookie)
     * [~set(name, value, [options], [options[&#x27;max-age&#x27;]])](#module_cookie..set) ⇒ <code>void</code>

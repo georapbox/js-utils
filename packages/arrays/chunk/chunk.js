@@ -4,7 +4,6 @@
  * Creates an array of elements split into groups the length of `size`.
  * If array can’t be split evenly, the final chunk will be the remaining elements.
  *
- * @category Array
  * @param {Array} array The array to process.
  * @param {Number} [size=0] The length of each chunk. If a float number, it is converted to integer using `parseInt`.
  * @throws {TypeError} If `array` is not array.

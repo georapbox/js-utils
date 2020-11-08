@@ -4,7 +4,6 @@
 Checks if a value is even.
 
 **Returns**: <code>Boolean</code> - True if number is even, else false.  
-**Category**: Is  
 
 | Param | Type | Description |
 | --- | --- | --- |

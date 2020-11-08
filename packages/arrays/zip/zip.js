@@ -4,7 +4,6 @@
  * Creates an array of grouped elements, the first of which contains the first elements of the given arrays,
  * the second of which contains the second elements of the given arrays, and so on.
  *
- * @category Array
  * @NOTE To support legacy browsers, use `Array.prototype.map` and `Array.prototype.reduce` polyfills.
  * @param {Array} [args...] The arrays to process.
  * @throws {TypeError} If any of the arguments is not array.

@@ -3,7 +3,6 @@
 /**
  * Checks if 'value' is a truthy one.
  *
- * @category Is
  * @param {*} value The value to check.
  * @return {Boolean} True if the 'value' is truthy, else false.
  * @example

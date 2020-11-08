@@ -4,7 +4,6 @@
 Determines whether a value is NaN or not.
 
 **Returns**: <code>Boolean</code> - True if NaN, else false.  
-**Category**: Is  
 **Note:**: `NaN` is number and it is also the only primitive value which does not equal to itself.  
 
 | Param | Type | Description |

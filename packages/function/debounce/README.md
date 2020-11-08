@@ -7,7 +7,6 @@ be triggered. The function will be called after it stops being called for
 leading edge, instead of the trailing.
 
 **Returns**: <code>function</code> - A new debounced function.  
-**Category**: Function  
 **Throws**:
 
 - <code>TypeError</code> If `func` is not function.

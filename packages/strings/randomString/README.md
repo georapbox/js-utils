@@ -4,7 +4,6 @@
 Generates a random string of specific `length` allowing a set of characters specified by `chars`.
 
 **Returns**: <code>string</code> - Returns the random generated string.  
-**Category**: String  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

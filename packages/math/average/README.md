@@ -6,7 +6,6 @@ Accepts any number of numbers as parameters, or an array of numbers.
 Ommits any non number value.
 
 **Returns**: <code>Number</code> - The average number of the set of data provided.  
-**Category**: Math  
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -4,7 +4,6 @@
 Removes duplicate primitive values from an array.
 
 **Returns**: <code>Array</code> - Returns the result (duplicates-free) array.  
-**Category**: Array  
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.

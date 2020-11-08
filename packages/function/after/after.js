@@ -4,7 +4,6 @@
  * Creates a function that invokes `func` once it's called `n` or more times.
  * `func` is invoked with the this binding and arguments of the created function.
  *
- * @category Function
  * @param {Number} n The number of calls before `func` is invoked.
  *        A positive integer is expected.
  *        If a negative number or 0, `func` is invoked immediately.
