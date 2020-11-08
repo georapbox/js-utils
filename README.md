@@ -125,6 +125,7 @@ A collection of standalone javascript utility functions.
 |[isDate](https://github.com/georapbox/js-utils/tree/master/packages/is/isDate)|Checks if `value` is a date.|
 |[isElement](https://github.com/georapbox/js-utils/tree/master/packages/is/isElement)|Checks if `value` is a DOM element.|
 |[isEmail](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmail)|Validates a string as email address.|
+|[isEmpty](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmpty)|Checks if `value` is an empty object, collection, map, or set.|
 |[isEven](https://github.com/georapbox/js-utils/tree/master/packages/is/isEven)|Checks if `value` is even.|
 |[isFalse](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalse)|Checks if `value` is false (strict equality).|
 |[isFalsy](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalsy)|Checks if `value` is falsy.|
