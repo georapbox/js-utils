@@ -49,7 +49,7 @@
  * isEmpty(class MyClass {}); // -> true
  *
  * isEmpty(/s+/g); // -> true
- * isEmpty(new RegExp(/s+/g)); // -> true
+ * isEmpty(new RegExp('s+', 'g')); // -> true
  *
  * isEmpty(null); // -> true
  * isEmpty(undefined); // -> true

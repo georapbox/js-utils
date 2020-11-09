@@ -51,7 +51,7 @@ describe('is/isEmpty', function () {
     })).toBe(true);
 
     expect(isEmpty(/s+/g)).toBe(true);
-    expect(isEmpty(new RegExp(/s+/g))).toBe(true);
+    expect(isEmpty(new RegExp('s+', 'g'))).toBe(true);
 
     expect(isEmpty(null)).toBe(true);
     expect(isEmpty(undefined)).toBe(true);
