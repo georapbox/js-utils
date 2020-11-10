@@ -32,6 +32,20 @@ describe('Array/sortBy', function () {
       {name: 'George', age: '33'}
     ]);
 
+    expect(sortBy(people, 'nonExistentProperty')).toEqual([
+      {name: 'Elena', age: '2'},
+      {name: 'George', age: '33'},
+      {name: 'Vasiliki', age: '32'},
+      {name: 'Vaggelis', age: '30'}
+    ]);
+
+    expect(sortBy(people, 'nonExistentProperty', false)).toEqual([
+      {name: 'Elena', age: '2'},
+      {name: 'George', age: '33'},
+      {name: 'Vasiliki', age: '32'},
+      {name: 'Vaggelis', age: '30'}
+    ]);
+
     expect(function () {
       return sortBy({}, 'age');
     }).toThrow();
