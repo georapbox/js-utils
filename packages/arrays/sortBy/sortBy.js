@@ -44,8 +44,8 @@ function sortBy(array, field, ascending, primer) {
   };
 
   return array.slice().sort(function (a, b) {
-    var A = key(a),
-      B = key(b);
+    var A = key(a);
+    var B = key(b);
 
     if (typeof ascending !== 'boolean') {
       ascending = true;
