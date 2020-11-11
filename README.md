@@ -22,6 +22,7 @@ A collection of standalone javascript utility functions.
 |[find](https://github.com/georapbox/js-utils/tree/master/packages/arrays/find)|Returns a value in the array, if an element in the array satisfies the provided testing function.|
 |[findIndex](https://github.com/georapbox/js-utils/tree/master/packages/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
 |[findLastIndex](https://github.com/georapbox/js-utils/tree/master/packages/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
+|[flat](https://github.com/georapbox/js-utils/tree/master/packages/arrays/flat)|Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.|
 |[flatten](https://github.com/georapbox/js-utils/tree/master/packages/arrays/flatten)|Flattens array a single level deep.|
 |[flattenDeep](https://github.com/georapbox/js-utils/tree/master/packages/arrays/flattenDeep)|Flattens array recursively.|
 |[fromPairs](https://github.com/georapbox/js-utils/tree/master/packages/arrays/fromPairs)|Creates an object composed from key-value pairs.|
