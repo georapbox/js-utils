@@ -23,14 +23,14 @@
  * get(object, 'a.b.c', 'DEFAULT');
  * // -> 'DEFAULT'
  */
-function get(obj, path, defaultValue) {
+function get(object, path, defaultValue) {
   var result = String.prototype.split.call(path, /[,[\].]+?/)
     .filter(Boolean)
     .reduce(function (res, key) {
       return res != null ? res[key]: res;
-    }, obj);
+    }, object);
 
-  return result === void 0 || result === obj ? defaultValue : result;
+  return result === void 0 || result === object ? defaultValue : result;
 }
 
 module.exports = get;
