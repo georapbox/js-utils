@@ -98,6 +98,7 @@ A collection of standalone javascript utility functions.
 |[forOwn](https://github.com/georapbox/js-utils/tree/master/packages/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[get](https://github.com/georapbox/js-utils/tree/master/packages/objects/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
 |[omit](https://github.com/georapbox/js-utils/tree/master/packages/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
+|[pick](https://github.com/georapbox/js-utils/tree/master/packages/objects/pick)|Creates an object composed of the picked object properties.|
 |[schemaValidate](https://github.com/georapbox/js-utils/tree/master/packages/objects/schemaValidate)|Validates a plain object against a provided schema object.|
 
 
