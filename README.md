@@ -110,6 +110,7 @@ A collection of standalone javascript utility functions.
 |[before](https://github.com/georapbox/js-utils/tree/master/packages/function/before)|Creates a function that invokes `func` while it’s called less than `n` times.|
 |[curry](https://github.com/georapbox/js-utils/tree/master/packages/function/curry)|Returns a curried equivalent of the provided function.|
 |[debounce](https://github.com/georapbox/js-utils/tree/master/packages/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
+|[flip](https://github.com/georapbox/js-utils/tree/master/packages/function/flip)|Creates a function that invokes the original function with its parameters reversed.|
 |[negate](https://github.com/georapbox/js-utils/tree/master/packages/function/negate)|Creates a function that negates the result of the predicate `func`.|
 |[once](https://github.com/georapbox/js-utils/tree/master/packages/function/once)|Ensure a given functionality only runs once.|
 |[throttle](https://github.com/georapbox/js-utils/tree/master/packages/function/throttle)|Limits the number of times a function can be called in a given period.|
