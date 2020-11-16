@@ -1,6 +1,6 @@
 var pipe = require('./pipe.js');
 
-describe('pipe', () => {
+describe('Function/pipe', function () {
   function capitalize(a) {
     return a.toUpperCase();
   }
@@ -21,7 +21,7 @@ describe('pipe', () => {
     return x * 2;
   }
 
-  it('should perform left-to-right function composition', () => {
+  it('should perform left-to-right function composition', function () {
     expect(pipe()(1)).toBe(1);
 
     expect(pipe()(1, 2, 3)).toBe(1);

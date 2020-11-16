@@ -39,12 +39,12 @@ function curry(func, arity) {
     throw new TypeError('Expected a number for second argument');
   }
 
-  return function curried() {
+  return function curried(/* ...args_a */) {
     for (var _len = arguments.length, args_a = new Array(_len), _key = 0; _key < _len; _key++) {
       args_a[_key] = arguments[_key];
     }
 
-    return args_a.length >= (arity || func.length) ? func.apply(void 0, args_a) : function () {
+    return args_a.length >= (arity || func.length) ? func.apply(void 0, args_a) : function (/* ...args_b */) {
       for (var _len2 = arguments.length, args_b = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
         args_b[_key2] = arguments[_key2];
       }
