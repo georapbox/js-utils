@@ -115,6 +115,7 @@ A collection of standalone javascript utility functions.
 |[negate](https://github.com/georapbox/js-utils/tree/master/packages/function/negate)|Creates a function that negates the result of the predicate `func`.|
 |[once](https://github.com/georapbox/js-utils/tree/master/packages/function/once)|Ensure a given functionality only runs once.|
 |[partial](https://github.com/georapbox/js-utils/tree/master/packages/function/partial)|Creates a new function that invokes the provided function with partials prepended to the arguments it receives.|
+|[partialRight](https://github.com/georapbox/js-utils/tree/master/packages/function/partialRight)|Creates a new function that invokes the provided function with partials appended to the arguments it receives.|
 |[pipe](https://github.com/georapbox/js-utils/tree/master/packages/function/pipe)|Performs left-to-right function composition.|
 |[throttle](https://github.com/georapbox/js-utils/tree/master/packages/function/throttle)|Limits the number of times a function can be called in a given period.|
 
