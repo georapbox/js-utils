@@ -23,7 +23,7 @@ var object = Object.create({
   foo: 'bar'
 });
 
-Object.defineProperties(o1, {
+Object.defineProperties(object, {
   a: { value: 1 },
   b: { value: 2 },
   c: { value: 3 }
