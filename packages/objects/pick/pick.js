@@ -59,7 +59,9 @@ function pick(object, paths, pickOwnKeys) {
 
   for (var i = 0; i < paths.length; i += 1) {
     var key = paths[i];
-    var meetsCriteria = pickOwnKeys ? Object.prototype.hasOwnProperty.call(object, key) : true;
+    var meetsCriteria = pickOwnKeys
+      ? Object.prototype.hasOwnProperty.call(object, key)
+      : key in object;
 
     if (meetsCriteria) {
       result[key] = object[key];
