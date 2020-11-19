@@ -99,6 +99,7 @@ A collection of standalone javascript utility functions.
 |[get](https://github.com/georapbox/js-utils/tree/master/packages/objects/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
 |[omit](https://github.com/georapbox/js-utils/tree/master/packages/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[pick](https://github.com/georapbox/js-utils/tree/master/packages/objects/pick)|Creates an object composed of the picked object properties.|
+|[pickBy](https://github.com/georapbox/js-utils/tree/master/packages/objects/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
 |[schemaValidate](https://github.com/georapbox/js-utils/tree/master/packages/objects/schemaValidate)|Validates a plain object against a provided schema object.|
 
 
