@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.com/georapbox/js-utils.svg?branch=master)](https://travis-ci.com/georapbox/js-utils)
 [![Coverage Status](https://coveralls.io/repos/github/georapbox/js-utils/badge.svg?branch=master)](https://coveralls.io/github/georapbox/js-utils?branch=master)
 [![GitHub](https://img.shields.io/github/license/georapbox/js-utils)](https://github.com/georapbox/js-utils/blob/master/LICENSE)
-[![Dependencies](https://david-dm.org/georapbox/js-utils.svg?theme=shields.io)](https://david-dm.org/georapbox/js-utils)
-[![devDependency Status](https://david-dm.org/georapbox/js-utils/dev-status.svg)](https://david-dm.org/georapbox/js-utils?type=dev)
 
 # js-utils
 
