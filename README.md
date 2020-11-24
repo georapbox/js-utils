@@ -149,6 +149,7 @@ A collection of standalone javascript utility functions.
 |[isObjectLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isObjectLike)|Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
 |[isOdd](https://github.com/georapbox/js-utils/tree/master/packages/is/isOdd)|Checks if `value` is odd.|
 |[isPlainObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isPlainObject)|Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).|
+|[isPrimitive](https://github.com/georapbox/js-utils/tree/master/packages/is/isPrimitive)|Checks if `value` is a primitive data type.|
 |[isRegexp](https://github.com/georapbox/js-utils/tree/master/packages/is/isRegexp)|Checks if `value` is a regular expression.|
 |[isSafeInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
 |[isSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isSet)|Checks if `value` is classified as a Set object.|
