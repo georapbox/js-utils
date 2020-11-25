@@ -118,6 +118,7 @@ A collection of standalone javascript utility functions.
 |[partialRight](https://github.com/georapbox/js-utils/tree/master/packages/function/partialRight)|Creates a new function that invokes the provided function with partials appended to the arguments it receives.|
 |[pipe](https://github.com/georapbox/js-utils/tree/master/packages/function/pipe)|Performs left-to-right function composition.|
 |[throttle](https://github.com/georapbox/js-utils/tree/master/packages/function/throttle)|Limits the number of times a function can be called in a given period.|
+|[unary](https://github.com/georapbox/js-utils/tree/master/packages/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
 
 
 ## Is
