@@ -53,10 +53,10 @@ A collection of standalone javascript utility functions.
 |[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](https://github.com/georapbox/js-utils/tree/master/packages/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
 |[count](https://github.com/georapbox/js-utils/tree/master/packages/strings/count)|Counts the occurrences of substring in a string.|
-|[dasherize](https://github.com/georapbox/js-utils/tree/master/packages/strings/dasherize)|Converts a camel cased string into a string delimited by dashes.|
 |[deburr](https://github.com/georapbox/js-utils/tree/master/packages/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
 |[endsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Escapes a HTML string.|
+|[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/kebabCase)|Converts a string to [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
 |[lines](https://github.com/georapbox/js-utils/tree/master/packages/strings/lines)|Returns an array with the lines of a a string.|
 |[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
 |[pad](https://github.com/georapbox/js-utils/tree/master/packages/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
