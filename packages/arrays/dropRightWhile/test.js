@@ -33,7 +33,7 @@ describe('Array/dropRightWhile', function () {
 
     expect(dropRightWhile(books, function (book) {
       return book.read;
-    }).length).toEqual(4);
+    })).toHaveLength(4);
 
     expect(function () {
       dropRightWhile(null, function (book) {

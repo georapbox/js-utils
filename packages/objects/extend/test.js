@@ -75,7 +75,7 @@ describe('Object/extend', function () {
 
     var res = extend(true, {}, o1, o2);
 
-    expect(res.items.length).toBe(2);
+    expect(res.items).toHaveLength(2);
 
     expect(res.items).toEqual([
       {a: 'aaa', c: 'ccc'},

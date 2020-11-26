@@ -22,7 +22,7 @@ describe('Function/curry', () => {
     var addTwo = addOne(2);
     var res = addTwo(3);
 
-    expect(add.length).toBe(0);
+    expect(add).toHaveLength(0);
     expect(res).toBe(6);
   });
 

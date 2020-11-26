@@ -11,7 +11,7 @@ describe('Array/pluck', function () {
   it('plucks the array', function () {
     expect(Array.isArray(pluck(books, 'author'))).toBe(true);
 
-    expect(pluck(books, 'author').length).toBe(4);
+    expect(pluck(books, 'author')).toHaveLength(4);
 
     expect(pluck(books, 'author').indexOf('Jules Verne')).toBeGreaterThan(-1);
 

@@ -74,7 +74,7 @@ describe('Object/schemaValidate', function () {
     var res = schemaValidate(user, schema);
 
     expect(res.valid).toBe(true);
-    expect(res.invalidProperties.length).toEqual(0);
+    expect(res.invalidProperties).toHaveLength(0);
   });
 
   it('"phone" property should be astring of format "123-456-7890"; thus object is invalid if "1234567890" is provided', function () {
