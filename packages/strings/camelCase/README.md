@@ -1,12 +1,13 @@
 <a name="camelCase"></a>
 
 ## camelCase(subjectString) ⇒ <code>String</code>
-Converts a string to camel case, removing any non alphanumeric characters.
+Converts a string to [camelCase](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+Combines words by capitalizing all words following the first word and removing spaces.
 
-**Returns**: <code>String</code> - The camel cased result string.  
+**Returns**: <code>String</code> - Returns the camel cased string.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> Throws if `subjectString` is not string.
 
 
 | Param | Type | Description |
@@ -15,21 +16,33 @@ Converts a string to camel case, removing any non alphanumeric characters.
 
 **Example**  
 ```js
-camelCase('Foo Bar');
-// -> 'fooBar'
+camelCase('the quick brown fox jumps over the lazy dog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
 
-camelCase('FOO BAR');
-// -> 'fooBar'
+camelCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
 
-camelCase('--foo-bar--');
-// -> 'fooBar'
+camelCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
 
-camelCase('__foo-bar__');
-// -> 'fooBar'
+camelCase('thequickbrownfoxjumpsoverthelazydog');
+// -> 'thequickbrownfoxjumpsoverthelazydog'
 
-camelCase('FOO?BAR'));
-// -> 'fooBar'
+camelCase('theQuickBrownFoxJumpsOverTheLazyDog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
 
-camelCase('FOO!#$%^&?BAR'));
-// -> 'fooBar'
+camelCase('TheQuickBrownFoxJumpsOverTheLazyDog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+
+camelCase('The Quick Brown Fox Jumps Over The Lazy Dog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+
+camelCase('theQUICKBrownFoxJumpsOverTheLazyDog');
+// -> 'theQUICKBrownFoxJumpsOverTheLazyDog'
+
+camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+
+camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
+// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
 ```

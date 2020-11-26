@@ -1,47 +1,59 @@
 'use strict';
 
 /**
- * Converts a string to camel case, removing any non alphanumeric characters.
+ * Converts a string to [camelCase](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+ * Combines words by capitalizing all words following the first word and removing spaces.
  *
  * @param {String} subjectString The string to convert.
- * @throws {TypeError} If `subjectString` is not string.
- * @return {String} The camel cased result string.
+ * @throws {TypeError} Throws if `subjectString` is not string.
+ * @return {String} Returns the camel cased string.
  * @example
  *
- * camelCase('Foo Bar');
- * // -> 'fooBar'
+ * camelCase('the quick brown fox jumps over the lazy dog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
- * camelCase('FOO BAR');
- * // -> 'fooBar'
+ * camelCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
- * camelCase('--foo-bar--');
- * // -> 'fooBar'
+ * camelCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
- * camelCase('__foo-bar__');
- * // -> 'fooBar'
+ * camelCase('thequickbrownfoxjumpsoverthelazydog');
+ * // -> 'thequickbrownfoxjumpsoverthelazydog'
  *
- * camelCase('FOO?BAR'));
- * // -> 'fooBar'
+ * camelCase('theQuickBrownFoxJumpsOverTheLazyDog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
- * camelCase('FOO!#$%^&?BAR'));
- * // -> 'fooBar'
+ * camelCase('TheQuickBrownFoxJumpsOverTheLazyDog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ *
+ * camelCase('The Quick Brown Fox Jumps Over The Lazy Dog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ *
+ * camelCase('theQUICKBrownFoxJumpsOverTheLazyDog');
+ * // -> 'theQUICKBrownFoxJumpsOverTheLazyDog'
+ *
+ * camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ *
+ * camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
+ * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
  */
 function camelCase(subjectString) {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
-  return subjectString
-    .toLowerCase() // Lower case string.
-    .replace(/[-_]+/g, ' ') // Replace any `-` or `_` characters with a space.
-    .replace(/[^\w\s]/g, ' ') // Replace any non alphanumeric characters with a space.
-    .replace(/\s(.)/g, function ($1) {
-      return $1.toUpperCase();
-    }) // Uppercase the first character in each group immediately following a space.
-    .replace(/\s/g, '') // Remove all spaces.
-    .replace(/^(.)/, function ($1) {
-      return $1.toLowerCase();
-    }); // Lowercase the first character of the string.
+  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/; // http://stackoverflow.com/a/25575009
+  var words = subjectString.split(wordSeparatorRegexp);
+
+  return words.filter(Boolean).reduce(function (accum, word, index) {
+    var firstChar = word.substr(0, 1);
+    var restChars = word.substr(1);
+    var tempStr = index === 0 ? firstChar.toLowerCase() + restChars : firstChar.toUpperCase() + restChars;
+
+    return accum + tempStr;
+  }, '');
 }
 
 module.exports = camelCase;
