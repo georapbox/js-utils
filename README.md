@@ -48,7 +48,7 @@ A collection of standalone javascript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[camelCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/camelCase)|Converts a string to [camelCase](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
+|[camelCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/camelCase)|Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
 |[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](https://github.com/georapbox/js-utils/tree/master/packages/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
@@ -56,7 +56,7 @@ A collection of standalone javascript utility functions.
 |[deburr](https://github.com/georapbox/js-utils/tree/master/packages/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
 |[endsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Escapes a HTML string.|
-|[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/kebabCase)|Converts a string to [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
+|[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
 |[lines](https://github.com/georapbox/js-utils/tree/master/packages/strings/lines)|Returns an array with the lines of a a string.|
 |[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
 |[pad](https://github.com/georapbox/js-utils/tree/master/packages/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
@@ -68,7 +68,7 @@ A collection of standalone javascript utility functions.
 |[removeSuffix](https://github.com/georapbox/js-utils/tree/master/packages/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
 |[repeat](https://github.com/georapbox/js-utils/tree/master/packages/strings/repeat)|Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.|
 |[replaceAll](https://github.com/georapbox/js-utils/tree/master/packages/strings/replaceAll)|Returns a new string with all occurrences of subString replaced with replaceString.
-|[snakeCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/snakeCase)|Converts a string to [snake_case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
+|[snakeCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/snakeCase)|Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
 |[squash](https://github.com/georapbox/js-utils/tree/master/packages/strings/squash)|Removes all spaces from a string; optionally removes any escape sequences such as \t, \n, \f, \r and \v.|
 |[startsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[strip](https://github.com/georapbox/js-utils/tree/master/packages/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|

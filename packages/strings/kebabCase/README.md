@@ -1,7 +1,7 @@
 <a name="kebabCase"></a>
 
 ## kebabCase(subjectString) ⇒ <code>String</code>
-Converts a string to [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
 Combines words of a string by replacing each space with a dash (-).
 
 **Returns**: <code>String</code> - Returns the kebab cased string.  

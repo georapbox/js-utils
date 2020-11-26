@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Converts a string to [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+ * Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  * Combines words of a string by replacing each space with a dash (-).
  *
  * @param {String} subjectString The string to convert.

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Converts a string to [camelCase](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+ * Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  * Combines words by capitalizing all words following the first word and removing spaces.
  *
  * @param {String} subjectString The string to convert.

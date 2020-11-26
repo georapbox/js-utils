@@ -1,7 +1,7 @@
 <a name="snakeCase"></a>
 
 ## snakeCase(subjectString) ⇒ <code>String</code>
-Converts a string to [snake_case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
 Combines words by replacing each space with an underscore (_).
 
 **Returns**: <code>String</code> - Returns the snake cased string.  

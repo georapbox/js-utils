@@ -1,6 +1,6 @@
 var snakeCase = require('./snakeCase');
 
-describe('String/snakeCase', function () {
+describe('String/snake case', function () {
   it('should convert string to snake_case', function () {
     expect(snakeCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 

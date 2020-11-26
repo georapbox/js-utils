@@ -1,7 +1,7 @@
 var kebabCase = require('./kebabCase');
 
 describe('String/kebabCase', function () {
-  it('should convert string to kebab-case', function () {
+  it('should convert string to kebab case', function () {
     expect(kebabCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');
 
     expect(kebabCase('the quick brown fox jumps over the lazy dog')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');

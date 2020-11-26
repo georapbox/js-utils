@@ -1,6 +1,6 @@
 var camelCase = require('./camelCase');
 
-describe('String/camelCase', function () {
+describe('String/camel case', function () {
   it('should convert string to camelCase', function () {
     expect(camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
 
