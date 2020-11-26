@@ -6,8 +6,10 @@ describe('String/words', function () {
       return words({});
     }).toThrow();
 
-    expect(words('')).toEqual([]);
+    expect(words('')).toHaveLength(0);
 
-    expect(words('Hello world! \n A is a message from outter \t space.').length).toEqual(9);
+    expect(words('  ')).toHaveLength(0);
+
+    expect(words('Hello world! \n A is a message \r from \v outter \t space. 😀')).toHaveLength(10);
   });
 });
