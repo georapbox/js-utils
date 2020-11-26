@@ -1,56 +1,58 @@
 'use strict';
 
 /**
- * Converts string into string delimited by underscores.
+ * Converts a string to [snake_case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+ * Combines words by replacing each space with an underscore (_).
  *
  * @param {String} subjectString The string to convert.
- * @throws {TypeError} If `subjectString` is not string.
- * @return {String} The result string.
+ * @throws {TypeError} Throws if `subjectString` is not string.
+ * @return {String} Returns the snake cased string.
  * @example
  *
- * snakeCase('Foo Bar');
- * // -> 'foo_bar'
+ * snakeCase('the quick brown fox jumps over the lazy dog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('fooBar');
- * // -> 'foo_bar'
+ * snakeCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('--FOO-BAR--');
- * // -> 'foo_bar'
+ * snakeCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('__FOO_BAR__');
- * // -> 'foo_bar'
+ * snakeCase('theQuickBrownFoxJumpsOverTheLazyDog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('foo_bar');
- * // -> 'foo_bar'
+ * snakeCase('TheQuickBrownFoxJumpsOverTheLazyDog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('foo bar');
- * // -> 'foo_bar'
+ * snakeCase('The Quick Brown Fox Jumps Over The Lazy Dog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('foo???bar');
- * // -> 'foo_bar'
+ * snakeCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('foo!@#$%^&*()bar');
- * // -> 'foo_bar'
+ * snakeCase('theQUICKBrownFoxJumpsOverTheLazyDog');
+ * // -> 'the_q_u_i_c_k_brown_fox_jumps_over_the_lazy_dog'
  *
- * snakeCase('-f-o-o-b-a-r-');
- * // -> f-o-o-b-a-r
+ * snakeCase('thequickbrownfoxjumpsoverthelazydog');
+ * // -> 'thequickbrownfoxjumpsoverthelazydog'
  *
- * snakeCase(' f o o b a r ');
- * // -> f-o-o-b-a-r
+ * snakeCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
+ * // -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  */
 function snakeCase(subjectString) {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
-  return subjectString
-    .replace(/[_]+/g, ' ') // Replace any `_` characters with a space.
-    .replace(/[^\w\s]/g, ' ') // Replace any non alphanumeric characters with a space.
-    .replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '') // Remove leading and trailing spaces.
-    .replace(/([a-z\d])([A-Z]+)/g, '$1_$2') // Uppercase characters preceeded by lowercase characters.
-    .replace(/([A-Z\d]+)([A-Z][a-z])/g, '$1_$2') // Uppercase characters preceeded by lowercase characters and followed by lowercase characters.
-    .replace(/[-\s]+/g, '_') // Replace spaces and `-` characters with `_` character.
-    .toLowerCase(); // Lower case string.
+  var capitalsRegexp = /[A-Z\u00C0-\u00D6\u00D9-\u00DD]/g;
+  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/; // http://stackoverflow.com/a/25575009
+  var lowercase = subjectString.replace(capitalsRegexp, function (match) {
+    return ' ' + (match.toLowerCase() || match); // Replace all capitals with space + lower case equivalent
+  });
+  var words = lowercase.split(wordSeparatorRegexp); // Split by spaces or any punctuation characters
+  var result = words.filter(Boolean).join('_');
+
+  return result;
 }
 
 module.exports = snakeCase;

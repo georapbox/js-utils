@@ -1,31 +1,31 @@
 var snakeCase = require('./snakeCase');
 
 describe('String/snakeCase', function () {
-  it('should convert string into string delimited by underscores', function () {
-    expect(snakeCase('Foo Bar')).toEqual('foo_bar');
+  it('should convert string to snake_case', function () {
+    expect(snakeCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('fooBar')).toEqual('foo_bar');
+    expect(snakeCase('the quick brown fox jumps over the lazy dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('--FOO-BAR--')).toEqual('foo_bar');
+    expect(snakeCase('the quick 😀 brown fox jumps over the lazy dog')).toBe('the_quick_😀_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('__FOO_BAR__')).toEqual('foo_bar');
+    expect(snakeCase('the-quick-brown-fox-jumps-over-the-lazy-dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('foo_bar')).toEqual('foo_bar');
+    expect(snakeCase('the_quick_brown_fox_jumps_over_the_lazy_dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('foo bar')).toEqual('foo_bar');
+    expect(snakeCase('thequickbrownfoxjumpsoverthelazydog')).toBe('thequickbrownfoxjumpsoverthelazydog');
 
-    expect(snakeCase('foo???bar')).toEqual('foo_bar');
+    expect(snakeCase('theQuickBrownFoxJumpsOverTheLazyDog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('foo!@#$%^&*()bar')).toEqual('foo_bar');
+    expect(snakeCase('TheQuickBrownFoxJumpsOverTheLazyDog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('foo?Bar2')).toEqual('foo_bar2');
+    expect(snakeCase('The Quick Brown Fox Jumps Over The Lazy Dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase('-f-o-o-b-a-r-')).toEqual('f_o_o_b_a_r');
+    expect(snakeCase('theQUICKBrownFoxJumpsOverTheLazyDog')).toBe('the_q_u_i_c_k_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(snakeCase(' f o o b a r ')).toEqual('f_o_o_b_a_r');
+    expect(snakeCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
     expect(function () {
-      return snakeCase({});
-    }).toThrow();
+      return snakeCase(['the quick brown fox jumps over the lazy dog']);
+    }).toThrow('Expected a string for first argument');
   });
 });

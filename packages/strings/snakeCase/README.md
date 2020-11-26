@@ -1,12 +1,13 @@
 <a name="snakeCase"></a>
 
 ## snakeCase(subjectString) ⇒ <code>String</code>
-Converts string into string delimited by underscores.
+Converts a string to [snake_case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+Combines words by replacing each space with an underscore (_).
 
-**Returns**: <code>String</code> - The result string.  
+**Returns**: <code>String</code> - Returns the snake cased string.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> Throws if `subjectString` is not string.
 
 
 | Param | Type | Description |
@@ -15,33 +16,33 @@ Converts string into string delimited by underscores.
 
 **Example**  
 ```js
-snakeCase('Foo Bar');
-// -> 'foo_bar'
+snakeCase('the quick brown fox jumps over the lazy dog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('fooBar');
-// -> 'foo_bar'
+snakeCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('--FOO-BAR--');
-// -> 'foo_bar'
+snakeCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('__FOO_BAR__');
-// -> 'foo_bar'
+snakeCase('theQuickBrownFoxJumpsOverTheLazyDog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('foo_bar');
-// -> 'foo_bar'
+snakeCase('TheQuickBrownFoxJumpsOverTheLazyDog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('foo bar');
-// -> 'foo_bar'
+snakeCase('The Quick Brown Fox Jumps Over The Lazy Dog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('foo???bar');
-// -> 'foo_bar'
+snakeCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('foo!@#$%^&*()bar');
-// -> 'foo_bar'
+snakeCase('theQUICKBrownFoxJumpsOverTheLazyDog');
+// -> 'the_q_u_i_c_k_brown_fox_jumps_over_the_lazy_dog'
 
-snakeCase('-f-o-o-b-a-r-');
-// -> f-o-o-b-a-r
+snakeCase('thequickbrownfoxjumpsoverthelazydog');
+// -> 'thequickbrownfoxjumpsoverthelazydog'
 
-snakeCase(' f o o b a r ');
-// -> f-o-o-b-a-r
+snakeCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
+// -> 'the_quick_brown_fox_jumps_over_the_lazy_dog'
 ```
