@@ -44,7 +44,8 @@ function camelCase(subjectString) {
     throw new TypeError('Expected a string for first argument');
   }
 
-  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/; // http://stackoverflow.com/a/25575009
+  // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
+  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
   var words = subjectString.split(wordSeparatorRegexp);
 
   return words.filter(Boolean).reduce(function (accum, word, index) {

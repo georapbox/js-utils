@@ -45,7 +45,8 @@ function kebabCase(subjectString) {
   }
 
   var capitalsRegexp = /[A-Z\u00C0-\u00D6\u00D9-\u00DD]/g;
-  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/; // http://stackoverflow.com/a/25575009
+  // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
+  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
   var lowercase = subjectString.replace(capitalsRegexp, function (match) {
     return ' ' + (match.toLowerCase() || match); // Replace all capitals with space + lower case equivalent
   });
