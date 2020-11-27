@@ -1,14 +1,19 @@
 <a name="randomString"></a>
 
-## randomString(length, [chars]) ⇒ <code>string</code>
+## randomString(length, [chars]) ⇒ <code>String</code>
 Generates a random string of specific `length` allowing a set of characters specified by `chars`.
 
-**Returns**: <code>string</code> - Returns the random generated string.  
+**Returns**: <code>String</code> - The random generated string.  
+**Throws**:
+
+- <code>TypeError</code> Throws if first argument is not number.
+- <code>TypeError</code> Throws if second argument is not string but not undefined.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| length | <code>number</code> | | The number of characters of the generated string. |
-| [chars] | <code>string</code> | '#aA!' | Type of characters to be allowed in the generated string. Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters. |
+| length | <code>Number</code> |  | The number of characters of the generated string. |
+| [chars] | <code>String</code> | <code>&#x27;#aA!&#x27;</code> | Type of characters to be allowed in the generated string. Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters. |
 
 **Example**  
 ```js

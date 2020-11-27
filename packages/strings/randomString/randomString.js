@@ -5,7 +5,9 @@
  *
  * @param {Number} length The number of characters of the generated string.
  * @param {String} [chars='#aA!'] Type of characters to be allowed in the generated string.
- *                                Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters.
+ * Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters.
+ * @throws {TypeError} Throws if first argument is not number.
+ * @throws {TypeError} Throws if second argument is not string but not undefined.
  * @returns {String} The random generated string.
  * @example
  *
@@ -28,6 +30,14 @@
  * // -> 'YGOSgnoUIHaUvEcp'
  */
 function randomString(length, chars) {
+  if (typeof length !== 'number') {
+    throw new TypeError('Expected a number for first argument');
+  }
+
+  if (typeof chars !== 'string' && typeof chars !== 'undefined') {
+    throw new TypeError('Expected a string for second argument');
+  }
+
   var mask = '';
   var result = '';
   var i = length;
