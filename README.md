@@ -63,7 +63,7 @@ A collection of standalone javascript utility functions.
 |[padLeft](https://github.com/georapbox/js-utils/tree/master/packages/strings/padLeft)|Pad `subjectString` on **left** side to the given `len`, with optional `chars` defaulting to a space.|
 |[padRight](https://github.com/georapbox/js-utils/tree/master/packages/strings/padRight)|Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.|
 |[pascalCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/pascalCase)|Converts a string to [pascal case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
-|[randomString](https://github.com/georapbox/js-utils/tree/master/packages/strings/randomString)|Generates a random string of specific `length` allowing a set of characters specified by `chars`.|
+|[randomString](https://github.com/georapbox/js-utils/tree/master/packages/strings/randomString)|Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.|
 |[removePrefix](https://github.com/georapbox/js-utils/tree/master/packages/strings/removePrefix)|Removes substring (prefix) from start of a string.|
 |[removeSuffix](https://github.com/georapbox/js-utils/tree/master/packages/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
 |[repeat](https://github.com/georapbox/js-utils/tree/master/packages/strings/repeat)|Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.|
