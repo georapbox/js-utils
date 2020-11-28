@@ -1,13 +1,13 @@
 <a name="randomString"></a>
 
 ## randomString(length, [chars]) ⇒ <code>String</code>
-Generates a random string of specific `length` allowing a set of characters specified by `chars`.
+Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.
 
 **Returns**: <code>String</code> - The random generated string.  
 **Throws**:
 
 - <code>TypeError</code> Throws if first argument is not number.
-- <code>TypeError</code> Throws if second argument is not string but not undefined.
+- <code>TypeError</code> Throws if second argument is not a string that contains the allowedcharacters but not undefined.
 
 
 | Param | Type | Default | Description |
