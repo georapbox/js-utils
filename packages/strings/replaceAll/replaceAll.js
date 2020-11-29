@@ -6,29 +6,24 @@
  * @param {String} subjectString The initial string.
  * @param {String} subString The substring to replace.
  * @param {String} replaceString The substring to replace with.
- * @param {Boolean} [caseInsensitive=false] If true, the lookup is case insensitive.
- * @throws {TypeError} If `subjectString` is not string.
- * @throws {TypeError} If `subString` is not string.
- * @throws {TypeError} If `replaceString` is not string.
- * @return {String} The result string.
+ * @param {Boolean} [caseInsensitive] If true or any truthy value, the lookup is case insensitive.
+ * @throws {TypeError} Throws if `subjectString` is not string.
+ * @throws {TypeError} Throws if `subString` is not string.
+ * @throws {TypeError} Throws if `replaceString` is not string.
+ * @return {String} Returns the final string.
  * @example
  *
- * var str = 'Lorem ispum 5 dolor sit amet.';
+ * replaceAll('The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?', 'dog', 'ferret');
+ * // -> 'The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?'
  *
- * replaceAll(str, ' ', '_'));
- * // -> 'Lorem_ispum_5_dolor_sit_amet.'
+ * replaceAll('The quick brown fox jumps over the lazy dog.', ' ', '-');
+ * // -> 'The-quick-brown-fox-jumps-over-the-lazy-dog.'
  *
- * replaceAll(str, '', '-'));
- * // -> 'L-o-r-e-m- -i-s-p-u-m- -5- -d-o-l-o-r- -s-i-t- -a-m-e-t-.'
+ * replaceAll('The quick brown\tfox jumps\tover the lazy dog.', '\t', ' ');
+ * // -> 'The quick brown fox jumps over the lazy dog.'
  *
- * replaceAll(str, '5', '15'));
- * // -> 'Lorem ispum 15 dolor sit amet.'
- *
- * replaceAll(str, 'Lorem', '***'));
- * // -> '*** ispum 5 dolor sit amet.'
- *
- * replaceAll(str, 'LOREM', '_lorem_', true));
- * // -> '_lorem_ ispum 5 dolor sit amet.'
+ * replaceAll('The quick brown fox jumps over the lazy DOG. If the dog reacted, was it really lazy?', 'dog', 'ferret', true);
+ * // -> 'The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?'
  */
 function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
   if (
@@ -39,14 +34,9 @@ function replaceAll(subjectString, subString, replaceString, caseInsensitive) {
     throw new TypeError('Expected a string for the first three arguments');
   }
 
-  // Case insensitive lookup.
-  if (caseInsensitive === true) {
-    subString = subString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return subjectString.replace(new RegExp(subString, 'gi'), replaceString);
-  }
+  subString = subString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-  // Case sensitive lookup.
-  return subjectString.split(subString).join(replaceString);
+  return subjectString.replace(new RegExp(subString, caseInsensitive ? 'gi' : 'g'), replaceString);
 }
 
 module.exports = replaceAll;
