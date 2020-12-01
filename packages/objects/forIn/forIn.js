@@ -28,7 +28,7 @@ function forIn(obj, callback) {
   var key;
 
   for (key in obj) {
-    callback && callback(obj[key], key, obj);
+    typeof callback === 'function' && callback(obj[key], key, obj);
   }
 
   return obj;

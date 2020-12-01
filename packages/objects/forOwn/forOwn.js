@@ -29,7 +29,7 @@ function forOwn(obj, callback) {
 
   for (key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      callback && callback(obj[key], key, obj);
+      typeof callback === 'function' && callback(obj[key], key, obj);
     }
   }
 
