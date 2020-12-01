@@ -58,7 +58,7 @@ A collection of standalone javascript utility functions.
 |[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Escapes a HTML string.|
 |[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
 |[lines](https://github.com/georapbox/js-utils/tree/master/packages/strings/lines)|Returns an array with the lines of a a string.|
-|[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/numbers/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
+|[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/strings/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
 |[pad](https://github.com/georapbox/js-utils/tree/master/packages/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
 |[padLeft](https://github.com/georapbox/js-utils/tree/master/packages/strings/padLeft)|Pad `subjectString` on **left** side to the given `len`, with optional `chars` defaulting to a space.|
 |[padRight](https://github.com/georapbox/js-utils/tree/master/packages/strings/padRight)|Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.|
