@@ -4,8 +4,8 @@
  * Removes all of the punctuation from a string.
  *
  * @param {String} subjectString The string to strip the punctuation from.
- * @throws {TypeError} If `subjectString` is not string.
- * @return {String} The stripped string.
+ * @throws {TypeError} Throws if `subjectString` is not string.
+ * @return {String} Returns the reuslt string with all punctuation stripped.
  * @example
  *
  * var str = ';``?You can\'t [make] an *ome*let + wit&&hout \\ %break_ing/% ~ a few eg-gs.!@#-"$"+:';
@@ -18,7 +18,11 @@ function stripPunctuation(subjectString) {
     throw new TypeError('Expected a string for first argument');
   }
 
-  return subjectString.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
+  // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
+  var punctRegExp = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]/g;
+  var spaceRegExp = /\s+/g;
+
+  return subjectString.replace(punctRegExp, '').replace(spaceRegExp, ' ');
 }
 
 module.exports = stripPunctuation;

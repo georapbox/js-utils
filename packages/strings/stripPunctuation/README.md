@@ -3,10 +3,10 @@
 ## stripPunctuation(subjectString) ⇒ <code>String</code>
 Removes all of the punctuation from a string.
 
-**Returns**: <code>String</code> - The stripped string.  
+**Returns**: <code>String</code> - Returns the reuslt string with all punctuation stripped.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> Throws if `subjectString` is not string.
 
 
 | Param | Type | Description |
