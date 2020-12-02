@@ -1,12 +1,12 @@
 <a name="words"></a>
 
 ## words(subjectString) ⇒ <code>Array</code>
-Splits string into an array of its words.
+Splits string into an array of its words. Any punctuation is stripped.
 
-**Returns**: <code>Array</code> - The string's words.  
+**Returns**: <code>Array</code> - Returns array that contains the string's words.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> Throws if `subjectString` is not string.
 
 
 | Param | Type | Description |
@@ -15,15 +15,9 @@ Splits string into an array of its words.
 
 **Example**  
 ```js
-words('Hello world!        \n This is a message     from outer\tspace.');
-// -> ['Hello', 'world!', 'This', 'is', 'a', 'message', 'from', 'outer', 'space.']
+words('Hello world! \n This is a message from outer\tspace.');
+// -> ['Hello', 'world', 'This', 'is', 'a', 'message', 'from', 'outer', 'space']
 
-words('');
-// -> []
-
-words();
-// -> Throws TypeError.
-
-words(100);
-// -> Throws TypeError.
+words('🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🥭');
+// -> ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
 ```
