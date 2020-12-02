@@ -52,7 +52,6 @@ A collection of standalone javascript utility functions.
 |[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
 |[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](https://github.com/georapbox/js-utils/tree/master/packages/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
-|[count](https://github.com/georapbox/js-utils/tree/master/packages/strings/count)|Counts the occurrences of substring in a string.|
 |[deburr](https://github.com/georapbox/js-utils/tree/master/packages/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
 |[endsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Escapes a HTML string.|
