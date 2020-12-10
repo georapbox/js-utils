@@ -12,13 +12,53 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    "no-unused-vars": ["warn"],
-    "no-constant-condition": ["error", { "checkLoops": false }],
-    "indent": ["warn", 2, { "SwitchCase": 1, "ignoredNodes": ["TemplateLiteral"] }],
-    "eqeqeq": ["error", "always", { "null": "ignore" }],
-    "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
+    // Possible Errors
+    "no-empty": ["error", {
+      "allowEmptyCatch": true
+    }],
+    "no-use-before-define": ["error", {
+      "functions": false
+    }],
+    // Stylistic Issues
+    "indent": ["warn", 2, {
+      "SwitchCase": 1,
+      "ignoredNodes": ["TemplateLiteral"]
+    }],
+    "quotes": ["warn", "single", {
+      "allowTemplateLiterals": true
+    }],
+    "no-multiple-empty-lines": ["warn", {
+      "max": 1
+    }],
+    "space-infix-ops": ["warn", {
+      "int32Hint": false
+    }],
     "semi": ["warn", "always"],
+    "no-trailing-spaces": ["warn"],
+    "comma-spacing": ["warn"],
+    "comma-style": ["warn"],
     "operator-linebreak": ["warn", "before"],
-    "no-use-before-define": ["error", { "functions": false }]
+    "brace-style": ["warn"],
+    "keyword-spacing": ["warn"],
+    "object-curly-spacing": ["warn", "always"],
+    "space-before-blocks": ["warn", "always"],
+    "spaced-comment": ["warn", "always"],
+    "space-before-function-paren": ["warn", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "padded-blocks": ["warn", "never"],
+    // Best Practices
+    "curly": ["warn"],
+    "eqeqeq": ["error", "always", {
+      "null": "ignore"
+    }],
+    "no-multi-spaces": ["warn", {
+      "ignoreEOLComments": true,
+      "exceptions": {
+        "Property": false
+      }
+    }]
   }
 }
