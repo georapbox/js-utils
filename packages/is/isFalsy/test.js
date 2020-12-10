@@ -6,7 +6,7 @@ describe('is/isFalsy', function () {
 
     expect(isFalsy(' ')).toBe(false);
 
-    expect(isFalsy({foo: 'bar'})).toBe(false);
+    expect(isFalsy({ foo: 'bar' })).toBe(false);
 
     expect(isFalsy(false)).toBe(true);
 

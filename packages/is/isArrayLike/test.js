@@ -18,9 +18,9 @@ describe('is/isArrayLike', function () {
 
     expect(isArrayLike(0)).toBe(false);
 
-    expect(isArrayLike({foo: 'bar'})).toBe(false);
+    expect(isArrayLike({ foo: 'bar' })).toBe(false);
 
-    expect(isArrayLike({foo: 'bar', length: 10})).toBe(true);
+    expect(isArrayLike({ foo: 'bar', length: 10 })).toBe(true);
 
     expect(isArrayLike(noop)).toBe(false);
 

@@ -6,7 +6,7 @@ describe('is/isFunction', function () {
 
     expect(isFunction(noop)).toBe(true);
 
-    expect(isFunction({foo: 'bar'})).toBe(false);
+    expect(isFunction({ foo: 'bar' })).toBe(false);
 
     expect(isFunction([1, 2, 3])).toBe(false);
 

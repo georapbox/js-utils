@@ -19,7 +19,7 @@ function flip(func) {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return function flipped (/* ...args */) {
+  return function flipped(/* ...args */) {
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }

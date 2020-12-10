@@ -2,7 +2,6 @@ var roundToNearest = require('./roundToNearest');
 
 describe('Math/roundToNearest', function () {
   it('rounds a number to the nearest multiple of a value provided', function () {
-
     expect(roundToNearest(100, 40)).toEqual(120);
 
     expect(roundToNearest(140, 40)).toEqual(160);

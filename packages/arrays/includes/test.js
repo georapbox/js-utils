@@ -29,7 +29,7 @@ describe('Array/includes', function () {
     expect(includes([1, 2, 3], 3, -5)).toBe(true);
 
     expect(function () {
-      return includes({foo: 'bar'}, 'bar');
+      return includes({ foo: 'bar' }, 'bar');
     }).toThrow();
   }
 

@@ -44,8 +44,8 @@ function captureTouch(element, callback) {
     throw new TypeError('"callback" must be a function');
   }
 
-  position = {x: null, y: null};
-  state = {isPressed: false};
+  position = { x: null, y: null };
+  state = { isPressed: false };
 
   onTouchStart = function () {
     state.isPressed = true;

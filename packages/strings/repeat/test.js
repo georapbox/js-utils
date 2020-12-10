@@ -27,7 +27,7 @@ describe('String/repeat', function () {
     }).toThrow();
 
     expect(function () {
-      return repeat('a', 1/0);
+      return repeat('a', 1 / 0);
     }).toThrow();
 
     expect(function () {

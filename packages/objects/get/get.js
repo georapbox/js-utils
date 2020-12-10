@@ -27,7 +27,7 @@ function get(object, path, defaultValue) {
   var result = String.prototype.split.call(path, /[,[\].]+?/)
     .filter(Boolean)
     .reduce(function (res, key) {
-      return res != null ? res[key]: res;
+      return res != null ? res[key] : res;
     }, object);
 
   return result === void 0 || result === object ? defaultValue : result;

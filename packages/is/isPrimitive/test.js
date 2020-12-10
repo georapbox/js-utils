@@ -35,6 +35,5 @@ describe('is/isPrimitive', function () {
     expect(isPrimitive(new Date())).toBe(false);
 
     expect(isPrimitive(/s+/g)).toBe(false);
-
   });
 });

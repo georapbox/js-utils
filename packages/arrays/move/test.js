@@ -1,8 +1,6 @@
 var move = require('./move');
 
 describe('Array/move', function () {
-
-
   it('moves an array element to a different position', function () {
     var array = ['A', 'B', 'C', 'D', 'E'];
 

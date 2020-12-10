@@ -3,10 +3,10 @@ var find = require('./find');
 describe('Array/find', function () {
   function runTests() {
     var fruits = [
-      {name: 'apples', quantity: 2},
-      {name: 'bananas', quantity: 0},
-      {name: 'cherries', quantity: 5},
-      {name: 'melons', quantity: 0}
+      { name: 'apples', quantity: 2 },
+      { name: 'bananas', quantity: 0 },
+      { name: 'cherries', quantity: 5 },
+      { name: 'melons', quantity: 0 }
     ];
 
     var cherries = find(fruits, function (element) {
@@ -25,16 +25,25 @@ describe('Array/find', function () {
       return element === 10;
     });
 
-    expect(cherries).toEqual({name: 'cherries', quantity: 5});
+    expect(cherries).toEqual({
+      name: 'cherries',
+      quantity: 5
+    });
 
-    expect(bananas).toEqual({name: 'bananas', quantity: 0});
+    expect(bananas).toEqual({
+      name: 'bananas',
+      quantity: 0
+    });
 
     expect(three).toEqual(3);
 
     expect(undef).toEqual(undefined);
 
     expect(function () {
-      return find({name: 'cherries', quantity: 5}, function (element) {
+      return find({
+        name: 'cherries',
+        quantity: 5
+      }, function (element) {
         return element.name === 'cherries';
       });
     }).toThrow();

@@ -6,10 +6,10 @@ describe('is/isEmpty', function () {
     expect(isEmpty([1, 2, 3])).toBe(false);
 
     expect(isEmpty({})).toBe(true);
-    expect(isEmpty({foo: 'bar'})).toBe(false);
+    expect(isEmpty({ foo: 'bar' })).toBe(false);
     expect(isEmpty(Object.create(null))).toBe(true);
     expect(isEmpty(Object.create({}))).toBe(true);
-    expect(isEmpty(Object.create({foo: 'bar'}))).toBe(true);
+    expect(isEmpty(Object.create({ foo: 'bar' }))).toBe(true);
 
     expect(isEmpty(new Map())).toBe(true);
     expect(isEmpty((new Map()).set('foo', 'bar'))).toBe(false);
@@ -42,7 +42,9 @@ describe('is/isEmpty', function () {
     expect(isEmpty(new Boolean(false))).toBe(true);
 
     expect(isEmpty(function noop() {})).toBe(true);
-    expect(isEmpty(function noop() { return 1; })).toBe(true);
+    expect(isEmpty(function noop() {
+      return 1;
+    })).toBe(true);
     expect(isEmpty(class MyClass {})).toBe(true);
     expect(isEmpty(class MyClass {
       constructor(a) {

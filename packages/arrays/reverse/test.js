@@ -10,7 +10,7 @@ describe('Array/reverse', function () {
     expect(revNumbers).toEqual([3, 2, 1]);
 
     expect(function () {
-      return reverse({a: '1', b: '2'});
+      return reverse({ a: '1', b: '2' });
     }).toThrow();
   });
 });

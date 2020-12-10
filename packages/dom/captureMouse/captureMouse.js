@@ -44,7 +44,10 @@ function captureMouse(element, callback) {
     throw new TypeError('"callback" must be a function');
   }
 
-  position = {x: 0, y: 0};
+  position = {
+    x: 0,
+    y: 0
+  };
 
   onMouseMove = function (event) {
     var x, y;

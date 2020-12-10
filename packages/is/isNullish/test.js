@@ -10,6 +10,6 @@ describe('is/isNullish', function () {
 
     expect(isNullish(null)).toBe(true);
 
-    expect(isNullish({foo: 'bar'})).toBe(false);
+    expect(isNullish({ foo: 'bar' })).toBe(false);
   });
 });

@@ -17,7 +17,7 @@ describe('Function/pipe', function () {
     return x + 1;
   }
 
-  function double (x) {
+  function double(x) {
     return x * 2;
   }
 
