@@ -5,12 +5,12 @@ describe('Math/randomRange', function () {
     var r0 = randomRange(0, 2);
     var r1 = randomRange(2, 0);
 
-    expect(r0 >= 0 && r0 < 2).toBeTruthy();
+    expect(r0 >= 0 && r0 < 2).toBe(true);
 
-    expect(r1 >= 0 && r1 < 2).toBeTruthy();
+    expect(r1 >= 0 && r1 < 2).toBe(true);
 
     expect(function () {
       return randomRange();
-    }).toThrow();
+    }).toThrow('Expected all arguments to be numbers');
   });
 });

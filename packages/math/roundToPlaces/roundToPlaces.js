@@ -44,7 +44,7 @@ function roundToPlaces(value, places) {
   var mult;
 
   if (typeof value !== 'number' || typeof places !== 'number') {
-    throw new TypeError('all arguments of "roundToPlaces" must be numbers');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   mult = Math.pow(10, parseInt(places, 10));

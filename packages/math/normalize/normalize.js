@@ -31,7 +31,7 @@
  */
 function normalize(value, min, max) {
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
-    throw new TypeError('"normalize" expects numbers as arguments');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   return (value - min) / (max - min);

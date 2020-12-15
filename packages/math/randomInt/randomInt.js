@@ -15,7 +15,7 @@
  */
 function randomInt(min, max) {
   if (typeof min !== 'number' || typeof max !== 'number') {
-    throw new TypeError('all arguments of "randomInt" must be numbers');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   return Math.floor(

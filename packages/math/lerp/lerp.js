@@ -28,7 +28,7 @@
  */
 function lerp(norm, min, max) {
   if (typeof norm !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
-    throw new TypeError('"lerp" expects numbers as arguments');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   return (max - min) * norm + min;

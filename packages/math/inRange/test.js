@@ -14,10 +14,10 @@ describe('Math/inRange', function () {
 
     expect(function () {
       return inRange('4.5', '8.2', '2.1');
-    }).toThrow();
+    }).toThrow('Expected all arguments to be numbers');
 
     expect(function () {
       return inRange(4, 'b8', 'c2');
-    }).toThrow();
+    }).toThrow('Expected all arguments to be numbers');
   });
 });

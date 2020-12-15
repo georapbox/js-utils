@@ -25,7 +25,7 @@
  */
 function radiansToDegrees(radians) {
   if (typeof radians !== 'number') {
-    throw new TypeError('"radians" must be a number');
+    throw new TypeError('Expected a number for first argument');
   }
 
   return radians * 180 / Math.PI;

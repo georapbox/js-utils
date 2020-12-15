@@ -26,7 +26,7 @@
  */
 function roundToNearest(value, nearest) {
   if (typeof value !== 'number' || typeof nearest !== 'number') {
-    throw new TypeError('all arguments of "roundToNearest" must be numbers');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   nearest = nearest || 1;
