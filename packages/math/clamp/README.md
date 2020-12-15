@@ -33,9 +33,6 @@ clamp(120, 0, 100);
 clamp(10, NaN, NaN);
 // -> NaN
 
-clamp(10, '-5', '5');
-// -> Throws TypeError
-
 clamp(120, 100, 0); // order of min and max is reversed (100 > 0)
 // -> 100
 ```

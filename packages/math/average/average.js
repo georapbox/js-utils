@@ -9,26 +9,26 @@
  * @return {Number} The average number of the set of data provided.
  * @example
  *
- * average(5, 10, 50, -45, 6, 7); // => 5.5
- * average([5, 10, 50, -45, 6, 7]); // => 5.5
+ * average(5, 10, 50, -45, 6, 7); // -> 5.5
+ * average([5, 10, 50, -45, 6, 7]); // -> 5.5
  *
- * average(2, 4, 0, -0); // => 1.5
- * average([2, 4, 0, -0]); // =>
+ * average(2, 4, 0, -0); // -> 1.5
+ * average([2, 4, 0, -0]); // ->
  *
- * average(7); // => 7
- * average([7]); // => 7
+ * average(7); // -> 7
+ * average([7]); // -> 7
  *
- * average(0, -0); // => 0
- * average([0, -0]); // => 0
+ * average(0, -0); // -> 0
+ * average([0, -0]); // -> 0
  *
- * average(); // => 0
- * average([]); // => 0
+ * average(); // -> 0
+ * average([]); // -> 0
  *
- * average(Infinity, -Infinity, 0, -0, null, NaN, undefined, false, true, 'foo'); // => 0
- * average([Infinity, -Infinity, 0, -0, null, NaN, undefined, false, true, 'foo']); // => 0
+ * average(Infinity, -Infinity, 0, -0, null, NaN, undefined, false, true, 'foo'); // -> 0
+ * average([Infinity, -Infinity, 0, -0, null, NaN, undefined, false, true, 'foo']); // -> 0
  *
- * average(5, 4, null, true, '12', Infinity); // => 0
- * average([5, 4, null, true, '12', Infinity]); // => 0
+ * average(5, 4, null, true, '12', Infinity); // -> 0
+ * average([5, 4, null, true, '12', Infinity]); // -> 0
  */
 function average(/* ...args */) {
   var sum = 0;

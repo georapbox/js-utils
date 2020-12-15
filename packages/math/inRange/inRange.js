@@ -25,22 +25,10 @@
  *
  * inRange(4.5, 8.2, 2.1);
  * // -> true
- *
- * inRange(4, 8);
- * // -> Throws TypeError (all arguments are required)
- *
- * inRange(4);
- * // -> Throws TypeError (all arguments are required)
- *
- * inRange('4.5', '8.2', '2.1');
- * // -> Throws TypeError (all arguments must be of type "number")
- *
- * inRange(4, 'b8', 'c2');
- * // -> Throws TypeError (all arguments must be of type "number")
  */
 function inRange(value, min, max) {
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
-    throw new TypeError('all arguments of "inRange" must be numbers');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   return value >= Math.min(min, max) && value <= Math.max(min, max);

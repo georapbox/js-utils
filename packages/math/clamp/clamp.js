@@ -27,15 +27,12 @@
  * clamp(10, NaN, NaN);
  * // -> NaN
  *
- * clamp(10, '-5', '5');
- * // -> Throws TypeError
- *
  * clamp(120, 100, 0); // order of min and max is reversed (100 > 0)
  * // -> 100
  */
 function clamp(value, min, max) {
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
-    throw new TypeError('all arguments of "clamp" must be numbers');
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
   return Math.min(Math.max(value, Math.min(min, max)), Math.max(min, max));

@@ -32,16 +32,4 @@ inRange(4, 8, 2);
 
 inRange(4.5, 8.2, 2.1);
 // -> true
-
-inRange(4, 8);
-// -> Throws TypeError (all arguments are required)
-
-inRange(4);
-// -> Throws TypeError (all arguments are required)
-
-inRange('4.5', '8.2', '2.1');
-// -> Throws TypeError (all arguments must be of type "number")
-
-inRange(4, 'b8', 'c2');
-// -> Throws TypeError (all arguments must be of type "number")
 ```
