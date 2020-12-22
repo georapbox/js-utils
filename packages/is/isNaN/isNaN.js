@@ -38,9 +38,8 @@ function isNaN(value) {
     return Number.isNaN(value);
   }
 
-  // NaN is of type "number" and it is also the only
-  // primitive value which does not equal itself.
-  return value !== value;
+  // NaN is of type "number" and it is also the only primitive value which does not equal itself.
+  return typeof value === 'number' && value !== value;
 }
 
 module.exports = isNaN;
