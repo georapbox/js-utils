@@ -1,39 +1,32 @@
 <a name="isNaN"></a>
 
 ## isNaN(value) ⇒ <code>Boolean</code>
-Determines whether a value is NaN or not.
+Determines whether the passed value is `NaN` and its type is `Number`.
+It is an implementation similar to native `Number.isNaN()` which is a more robust version of the original, global `isNaN()`.
 
-**Returns**: <code>Boolean</code> - True if NaN, else false.  
-**Note:**: `NaN` is number and it is also the only primitive value which does not equal to itself.  
+**Returns**: <code>Boolean</code> - Returns `true` if the given value is `NaN` and its type is `Number`; otherwise, `false`.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>\*</code> | The value to check if NaN. |
+| value | <code>\*</code> | The value to be tested for `NaN`. |
 
 **Example**  
 ```js
-isNaN(5);
-// -> false
+isNaN(NaN);        // -> true
+isNaN(Number.NaN); // -> true
+isNaN(0 / 0);      // -> true
 
-isNaN('hello world');
-// -> false
+isNaN(true);    // -> true
+isNaN(null);    // -> true
+isNaN(37);      // -> true
+isNaN('37');    // -> true
+isNaN('37.37'); // -> true
+isNaN('');      // -> true
+isNaN(' ');     // -> true
 
-isNaN(undefined);
-// -> false
-
-isNaN(null);
-// -> false
-
-isNaN({});
-// -> false
-
-isNaN(NaN);
-// -> true
-
-var a, b = a + 5;
-isNaN(b);
-// -> true (undefined + 5 = NaN)
-
-var a = null, b = a + 5;
-isNaN(b);
+// e.g. these would have been true with global isNaN()
+isNaN('NaN');     // -> false
+isNaN(undefined); // -> false
+isNaN({});        // -> false
+isNaN('blabla');  // -> false
 ```
