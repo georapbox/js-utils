@@ -5,8 +5,10 @@
  * If array can’t be split evenly, the final chunk will be the remaining elements.
  *
  * @param {Array} array The array to process.
- * @param {Number} [size=0] The length of each chunk. If a float number, it is converted to integer using `parseInt`.
+ * @param {Number} size The length of each chunk. If a float number, it is converted to integer using `Math.floor()`.
  * @throws {TypeError} If `array` is not array.
+ * @throws {TypeError} If `size` is not number.
+ * @throws {RangeError} If `size` is not a positive number or greater than `Number.MAX_SAFE_INTEGER`.
  * @return {Array} The new array containing chunks. If `size` is lower than 1, an empty array is returned.
  * @example
  *
@@ -16,57 +18,41 @@
  * chunk([1, 2, 3, 4, 5], 2);
  * // -> [[1, 2], [3, 4], [5]]
  *
- * chunk([1, 2, 3, 4, 5], -1);
- * // -> []
- *
- * chunk([1, 2, 3, 4, 5]);
- * // -> []
- *
- * chunk([1, 2, 3, 4, 5], null);
- * // -> []
- *
  * chunk([1, 2, 3, 4], 3);
  * // -> [[1, 2, 3], [4]]
  *
- * chunk([1, 2, 3, 4], '3');
- * // -> [[1, 2, 3], [4]]
- *
- * chunk([1, 2, 3, 4], Infinity);
- * // -> [[1, 2, 3, 4]]
- *
- * chunk([1, 2, 3, 4], -Infinity);
- * // -> []
- *
  * chunk([1, 2, 3, 4], 2.7);
  * // -> [[1, 2], [3, 4]]
- *
- * chunk([1, 2, 3, 4], 'test');
- * // -> []
  */
 function chunk(array, size) {
-  var MAX_INTEGER, length, result, index, resIndex;
+  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || 9007199254740991;
+  var len, result, index, resIndex;
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  MAX_INTEGER = Number.MAX_VALUE || 1.7976931348623157e+308;
+  if (typeof size !== 'number') {
+    throw new TypeError('Expected a number for second argument');
+  }
 
-  size = size === Infinity || size === -Infinity
-    ? (size < 0 ? -1 : 1) * MAX_INTEGER
-    : parseInt(size, 10) || 0;
+  if (size <= 0 || size > MAX_SAFE_INTEGER) {
+    throw new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument');
+  }
 
-  length = array ? array.length : 0;
+  size = Math.floor(size);
 
-  if (!length || size < 1) {
+  len = array.length;
+
+  if (!len) {
     return [];
   }
 
   index = 0;
   resIndex = 0;
-  result = [Math.ceil(length / size)];
+  result = [Math.ceil(len / size)];
 
-  while (index < length) {
+  while (index < len) {
     result[resIndex] = array.slice(index, index += size);
     resIndex += 1;
   }
