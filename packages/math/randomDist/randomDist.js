@@ -8,7 +8,7 @@
  * @param {Number} max The maximum value of the range.
  * @param {Number} iterations The number of the iterations. The value passed is converted to integer internally using `Math.floor()`.
  * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @throws {Error} If `iterations` is not a positive number.
+ * @throws {RangeError} If `iterations` is not a positive number or greater than `Number.MAX_SAFE_INTEGER`.
  * @returns {Number} The weighted random number.
  * @example
  *
@@ -16,16 +16,17 @@
  * // -> 49.27716133759931
  */
 function randomDist(min, max, iterations) {
+  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || 9007199254740991;
+  var total = 0;
+  var i = 0;
+
   if (typeof min !== 'number' || typeof max !== 'number' || typeof iterations !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  if (iterations <= 0) {
-    throw new Error('Expected a positive number as third argument');
+  if (iterations <= 0 || iterations > MAX_SAFE_INTEGER) {
+    throw new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument');
   }
-
-  var total = 0;
-  var i = 0;
 
   iterations = Math.floor(iterations);
 

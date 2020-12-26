@@ -2,7 +2,7 @@ var randomDist = require('./randomDist');
 
 describe('Math/randomDist', function () {
   it('should return a weighted random number that tends to center', function () {
-    var r0 = randomDist(0, 100, Infinity);
+    var r0 = randomDist(0, 100, 100);
     expect(r0 >= 0 && r0 <= 100).toBe(true);
 
     // Test that min and max can be inverted.
@@ -11,22 +11,26 @@ describe('Math/randomDist', function () {
 
     expect(function () {
       return randomDist('0', 100, 10);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return randomDist(0, '100', 10);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return randomDist(0, 100, '10');
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return randomDist(0, 100, 0);
-    }).toThrow('Expected a positive number as third argument');
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument'));
 
     expect(function () {
       return randomDist(0, 100, -100);
-    }).toThrow('Expected a positive number as third argument');
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument'));
+
+    expect(function () {
+      return randomDist(0, 100, Infinity);
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument'));
   });
 });

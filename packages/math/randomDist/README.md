@@ -8,7 +8,7 @@ The higher the iterations, the higher is the possibility the returned value to b
 **Throws**:
 
 - <code>TypeError</code> If one or more of the arguments passed is not a number.
-- <code>Error</code> If `iterations` is not a positive number.
+- <code>RangeError</code> If `iterations` is not a positive number or greater than `Number.MAX_SAFE_INTEGER`
 
 
 | Param | Type | Description |
