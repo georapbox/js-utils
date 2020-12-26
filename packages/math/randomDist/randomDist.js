@@ -1,36 +1,33 @@
 'use strict';
 
 /**
- * Returns a weighted random number (that tends to the center)
- * of a range of numbers based on the number of the iterations set.
+ * Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.
+ * The higher the iterations, the higher is the possibility the returned value to be closer to the center of the range.
  *
  * @param {Number} min The minimum value of the range.
  * @param {Number} max The maximum value of the range.
- * @param {Number} [iterations=2] The number of the iterations.
+ * @param {Number} iterations The number of the iterations. The value passed is converted to integer internally using `Math.floor()`.
  * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @return {Number} The weighted random number.
+ * @throws {Error} If `iterations` is not a positive number.
+ * @returns {Number} The weighted random number.
  * @example
  *
- * randomDist(0, 100, 3);
- * // -> 40.30361851105565
- *
- * randomDist(0, 100); // iterations = 2
- * // -> 59.116191772363024
+ * randomDist(0, 100, 200);
+ * // -> 49.27716133759931
  */
 function randomDist(min, max, iterations) {
-  var total, i;
-
-  if (
-    typeof min !== 'number' || typeof max !== 'number'
-    || typeof iterations !== 'number' && typeof iterations !== 'undefined'
-  ) {
-    throw new TypeError('all arguments of "randomDist" must be numbers');
+  if (typeof min !== 'number' || typeof max !== 'number' || typeof iterations !== 'number') {
+    throw new TypeError('Expected all arguments to be numbers');
   }
 
-  total = 0;
-  i = 0;
+  if (iterations <= 0) {
+    throw new Error('Expected a positive number as third argument');
+  }
 
-  iterations = iterations || 2;
+  var total = 0;
+  var i = 0;
+
+  iterations = Math.floor(iterations);
 
   for (i; i < iterations; i += 1) {
     total += Math.min(min, max) + Math.random() * (Math.max(min, max) - Math.min(min, max));
