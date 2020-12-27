@@ -8,13 +8,14 @@ of copies of the string on which it was called, concatenated together.
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.
-- <code>RangeError</code> If `count` is a negative number or overflows maximum string size.
+- <code>TypeError</code> If `count` is not number.
+- <code>RangeError</code> If `count` is a negative or zero number or is greater than `Number.MAX_SAFE_INTEGER`.
 
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| subjectString | <code>String</code> |  | The string to process. |
-| [count] | <code>Number</code> | <code>0</code> | An integer indicating the number of times to repeat the string. |
+| Param | Type | Description |
+| --- | --- | --- |
+| subjectString | <code>String</code> | The string to process. |
+| count | <code>Number</code> | An integer indicating the number of times to repeat the string. |
 
 **Example**  
 ```js
@@ -23,28 +24,4 @@ repeat('a', 4);
 
 repeat('a', 2.5);
 // -> 'aa' (count will be converted to integer)
-
-repeat('a', 0);
-// -> ''
-
-repeat('a', null);
-// -> ''
-
-repeat('a');
-// -> ''
-
-repeat('a', NaN);
-// -> ''
-
-repeat('a', Infinity);
-// -> Throws RangeError
-
-repeat('a', -Infinity);
-// -> Throws RangeError
-
-repeat('a', -2);
-// -> Throws RangeError
-
-repeat('a', 1/0);
-// -> Throws RangeError
 ```
