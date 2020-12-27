@@ -32,5 +32,9 @@ describe('Math/randomDist', function () {
     expect(function () {
       return randomDist(0, 100, Infinity);
     }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument'));
+
+    expect(function () {
+      return randomDist(0, 100, NaN);
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument'));
   });
 });
