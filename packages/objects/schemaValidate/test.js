@@ -97,6 +97,6 @@ describe('Object/schemaValidate', function () {
 
     expect(function () {
       return schemaValidate(user, schema);
-    }).toThrow('Schema validators must be functions');
+    }).toThrow(new TypeError('Schema validators must be functions'));
   });
 });

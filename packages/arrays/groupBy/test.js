@@ -51,6 +51,6 @@ describe('Array/groupBy', function () {
 
     expect(function () {
       return groupBy({}, '2');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

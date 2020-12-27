@@ -10,6 +10,6 @@ describe('Array/tail', function () {
 
     expect(function () {
       return tail({});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

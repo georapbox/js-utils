@@ -14,7 +14,7 @@ describe('String/endsWith', function () {
 
     expect(function () {
       return endsWith(123455, '123');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   }
 
   it('String should end with specified search string (using native String.prototype.endsWith)', function () {

@@ -46,18 +46,18 @@ describe('misc/cookie', function () {
 
     expect(function () {
       return cookie.set(null, 'value');
-    }).toThrow('Expected a string for first and second argument');
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
 
     expect(function () {
       return cookie.set('name', null);
-    }).toThrow('Expected a string for first and second argument');
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
 
     expect(function () {
       return cookie.get(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
 
     expect(function () {
       return cookie.remove(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

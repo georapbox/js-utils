@@ -29,6 +29,6 @@ describe('Array/zip', function () {
 
     expect(function () {
       return zip({}, {});
-    }).toThrow('Expected all arguments passed to be arrays');
+    }).toThrow(new TypeError('Expected all arguments passed to be arrays'));
   });
 });

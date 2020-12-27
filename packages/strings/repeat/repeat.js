@@ -5,9 +5,10 @@
  * of copies of the string on which it was called, concatenated together.
  *
  * @param {String} subjectString The string to process.
- * @param {Number} [count=0] An integer indicating the number of times to repeat the string.
+ * @param {Number} count An integer indicating the number of times to repeat the string.
  * @throws {TypeError} If `subjectString` is not string.
- * @throws {RangeError} If `count` is a negative number or overflows maximum string size.
+ * @throws {TypeError} If `count` is not number.
+ * @throws {RangeError} If `count` is a negative or zero number or is greater than `Number.MAX_SAFE_INTEGER`.
  * @return {String} A new string containing the specified number of copies of the given string.
  * @example
  *
@@ -16,71 +17,29 @@
  *
  * repeat('a', 2.5);
  * // -> 'aa' (count will be converted to integer)
- *
- * repeat('a', 0);
- * // -> ''
- *
- * repeat('a', null);
- * // -> ''
- *
- * repeat('a');
- * // -> ''
- *
- * repeat('a', NaN);
- * // -> ''
- *
- * repeat('a', Infinity);
- * // -> Throws RangeError
- *
- * repeat('a', -Infinity);
- * // -> Throws RangeError
- *
- * repeat('a', -2);
- * // -> Throws RangeError
- *
- * repeat('a', 1/0);
- * // -> Throws RangeError
  */
 function repeat(subjectString, count) {
+  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   var str, repeated;
-  var errors = {
-    stringTE: 'first parameter must be a string',
-    numberTE: 'repeat count must be a number',
-    negativeRE: 'repeat count must be non-negative',
-    maximumRE: 'repeat count must be less than infinity and not overflow maximum string size'
-  };
 
   if (typeof subjectString !== 'string') {
-    throw new TypeError(errors.stringTE);
+    throw new TypeError('Expected a string for first argument');
+  }
+
+  if (typeof count !== 'number') {
+    throw new TypeError('Expected a number for second argument');
   }
 
   str = '' + subjectString;
 
-  count = +count;
-
-  if (count !== count) {
-    count = 0;
-  }
-
-  if (count < 0) {
-    throw new RangeError(errors.negativeRE);
-  }
-
-  if (count === Infinity) {
-    throw new RangeError(errors.maximumRE);
+  if (count <= 0 || count > MAX_SAFE_INTEGER || count !== count) {
+    throw new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument');
   }
 
   count = Math.floor(count);
 
   if (str.length === 0 || count === 0) {
     return '';
-  }
-
-  // Ensuring count is a 31-bit integer allows us to heavily optimize the
-  // main part. But anyway, most current (August 2014) browsers can't handle
-  // strings 1 << 28 chars or longer, so:
-  if (str.length * count >= 1 << 28) {
-    throw new RangeError(errors.maximumRE);
   }
 
   repeated = '';

@@ -26,6 +26,6 @@ describe('Math/roundToPlaces', function () {
 
     expect(function () {
       return roundToPlaces('3.141592653589793', '2');
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });
 });

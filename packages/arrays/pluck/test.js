@@ -21,6 +21,6 @@ describe('Array/pluck', function () {
 
     expect(function () {
       return pluck({}, 'author');
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

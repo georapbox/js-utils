@@ -18,10 +18,10 @@ describe('Array/insert', function () {
 
     expect(function () {
       return insert({ foo: 'bar' }, 0, 'e');
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       return insert(arr);
-    }).toThrow('Expected a number for second argument');
+    }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

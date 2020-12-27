@@ -12,6 +12,6 @@ describe('Math/roundToNearest', function () {
 
     expect(function () {
       return roundToNearest('100', '40');
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });
 });

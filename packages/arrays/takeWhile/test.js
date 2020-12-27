@@ -29,10 +29,10 @@ describe('Array/takeWhile', function () {
         title: 'Javascript Design Patterns',
         read: false
       });
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       return takeWhile(books, null);
-    }).toThrow('Expected a function for second argument');
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

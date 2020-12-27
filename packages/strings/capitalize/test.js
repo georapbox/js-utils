@@ -9,7 +9,7 @@ describe('String/capitalize', function () {
     expect(capitalize('hElLo', true)).toEqual('Hello');
 
     expect(function () {
-      return capitalize({});
-    }).toThrow();
+      return capitalize(12345);
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

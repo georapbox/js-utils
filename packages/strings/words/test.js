@@ -22,6 +22,6 @@ describe('String/words', function () {
 
     expect(function () {
       return words(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

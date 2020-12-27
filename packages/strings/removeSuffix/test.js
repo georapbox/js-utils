@@ -12,10 +12,10 @@ describe('String/removeSuffix', function () {
 
     expect(function () {
       return removeSuffix('foobar__', {});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first and second argument argument'));
 
     expect(function () {
       return removeSuffix('foobar__', null);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first and second argument argument'));
   });
 });

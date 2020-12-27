@@ -18,10 +18,10 @@ describe('String/wrapHTML', function () {
 
     expect(function () {
       return wrapHTML(null, 'p');
-    }).toThrow('Expected a string for first and second argument');
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
 
     expect(function () {
       return wrapHTML(str);
-    }).toThrow('Expected a string for first and second argument');
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
   });
 });

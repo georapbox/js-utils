@@ -14,7 +14,7 @@ describe('String/startsWith', function () {
 
     expect(function () {
       return startsWith(123455, '123');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   }
 
   it('checks if subject string starts with string specified (String.prototype.startsWith is supported)', function () {

@@ -20,6 +20,6 @@ describe('is/isEmail', function () {
 
     expect(function () {
       return isEmail(123);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

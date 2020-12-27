@@ -18,22 +18,22 @@ describe('String/randomString', function () {
 
     expect(function () {
       return randomString();
-    }).toThrow('Expected a number for first argument');
+    }).toThrow(new TypeError('Expected a number for first argument'));
 
     expect(function () {
       return randomString(10, '');
-    }).toThrow(charsError);
+    }).toThrow(new TypeError(charsError));
 
     expect(function () {
       return randomString(10, ' ');
-    }).toThrow(charsError);
+    }).toThrow(new TypeError(charsError));
 
     expect(function () {
       return randomString(10, '\t\n\v\r');
-    }).toThrow(charsError);
+    }).toThrow(new TypeError(charsError));
 
     expect(function () {
       return randomString(10, 123);
-    }).toThrow(charsError);
+    }).toThrow(new TypeError(charsError));
   });
 });

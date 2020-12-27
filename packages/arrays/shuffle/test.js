@@ -10,6 +10,6 @@ describe('Array/shuffle', function () {
 
     expect(function () {
       return shuffle({ a: 'a', b: 'b', c: 'c' });
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

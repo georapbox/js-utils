@@ -19,10 +19,10 @@ describe('Function/after', function () {
       return after('five', function () {
         return count += 1;
       });
-    }).toThrow('Expected a number for first argument');
+    }).toThrow(new TypeError('Expected a number for first argument'));
 
     expect(function () {
       return after(5);
-    }).toThrow('Expected a function for second argument');
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

@@ -18,6 +18,6 @@ describe('String/strip', function () {
 
     expect(function () {
       return strip(['lorem_ipsum'], '_');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

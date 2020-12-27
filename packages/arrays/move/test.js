@@ -24,14 +24,14 @@ describe('Array/move', function () {
 
     expect(function () {
       return move(null, 0, 1);
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       return move(array, '0', 1);
-    }).toThrow('Expected a number for second and third arguments');
+    }).toThrow(new TypeError('Expected a number for second and third arguments'));
 
     expect(function () {
       return move(array, 0, '1');
-    }).toThrow('Expected a number for second and third arguments');
+    }).toThrow(new TypeError('Expected a number for second and third arguments'));
   });
 });

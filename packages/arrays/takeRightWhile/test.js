@@ -29,7 +29,7 @@ describe('Array/takeRightWhile', function () {
         title: 'Javascript Design Patterns',
         read: false
       });
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     books[3].read = true;
     expect(takeRightWhile(books, function (book) {
@@ -38,6 +38,6 @@ describe('Array/takeRightWhile', function () {
 
     expect(function () {
       return takeRightWhile(books, null);
-    }).toThrow('Expected a function for second argument');
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

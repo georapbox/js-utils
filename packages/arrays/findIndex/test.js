@@ -16,10 +16,10 @@ describe('Array/findIndex', function () {
       return findIndex({}, function (chr) {
         return chr === 'b';
       });
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       return findIndex(arr);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

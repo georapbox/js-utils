@@ -39,6 +39,6 @@ describe('dom/isEventSupported', function () {
 
     expect(function () {
       return isEventSupported({});
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

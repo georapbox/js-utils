@@ -29,7 +29,7 @@ describe('Function/curry', () => {
   it('throws if first argument is not a function', function () {
     expect(function () {
       return curry();
-    }).toThrow('Expected a function for first argument');
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 
   it('throws if second argument is not a number', function () {
@@ -37,6 +37,6 @@ describe('Function/curry', () => {
       return curry(function (a, b) {
         return a + b;
       }, '2')(1)(2);
-    }).toThrow('Expected a number for second argument');
+    }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

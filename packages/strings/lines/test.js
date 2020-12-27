@@ -14,6 +14,6 @@ describe('String/lines', function () {
 
     expect(function () {
       return lines(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

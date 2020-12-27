@@ -71,52 +71,52 @@ describe('Object/pickBy', function () {
       return pickBy(null, function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy(undefined, function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy([], function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy(new Map(), function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy(new WeakMap(), function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy(new Set(), function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy(new WeakSet(), function (value) {
         return typeof value === 'number';
       });
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pickBy(o1);
-    }).toThrow('Expected a function for second argument');
+    }).toThrow(new TypeError('Expected a function for second argument'));
 
     expect(function () {
       return pickBy(o1, function (value) {
         return typeof value === 'number';
       }, 0);
-    }).toThrow('Expected a boolean for third argument');
+    }).toThrow(new TypeError('Expected a boolean for third argument'));
   });
 });

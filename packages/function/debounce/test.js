@@ -58,6 +58,6 @@ describe('Function/debounce', function () {
   it('throws if first argument is not a function', function () {
     expect(function () {
       return debounce();
-    }).toThrow('Expected a function for first argument');
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });

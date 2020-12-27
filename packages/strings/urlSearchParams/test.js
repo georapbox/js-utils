@@ -22,6 +22,6 @@ describe('String/urlSearchParams', function () {
 
     expect(function () {
       return urlSearchParams();
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

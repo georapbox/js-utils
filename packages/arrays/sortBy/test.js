@@ -48,6 +48,6 @@ describe('Array/sortBy', function () {
 
     expect(function () {
       return sortBy({}, 'age');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

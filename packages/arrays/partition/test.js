@@ -47,12 +47,12 @@ describe('Array/partition', function () {
       return element.isAdmin;
     })).toEqual([[], []]);
 
+    expect(partition([1, 2, 3])).toEqual([[1, 2, 3], []]);
+
     expect(function () {
       return partition(null, function (element) {
         return element.isAdmin;
       });
-    }).toThrow();
-
-    expect(partition([1, 2, 3])).toEqual([[1, 2, 3], []]);
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

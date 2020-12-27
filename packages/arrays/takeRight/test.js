@@ -18,14 +18,10 @@ describe('Array/takeRight', function () {
 
     expect(function () {
       return takeRight({}, 2);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       return takeRight([1, 2, 3, 4, 5], '2');
-    }).toThrow();
-
-    expect(function () {
-      takeRight([1, 2, 3, 4, 5], null);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

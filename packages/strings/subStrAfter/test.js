@@ -8,10 +8,10 @@ describe('String/subStrAfter', function () {
 
     expect(function () {
       return subStrAfter(null, 'hello');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
 
     expect(function () {
       return subStrAfter('hello', null);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
   });
 });

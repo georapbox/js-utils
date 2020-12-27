@@ -10,6 +10,6 @@ describe('Array/uniq', function () {
 
     expect(function () {
       return uniq({});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

@@ -11,10 +11,10 @@ describe('Array/diff', function () {
 
     expect(function () {
       return diff(a);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected both arguments to be arrays'));
 
     expect(function () {
       return diff(null, b);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected both arguments to be arrays'));
   });
 });

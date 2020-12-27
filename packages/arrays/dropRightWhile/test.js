@@ -39,10 +39,10 @@ describe('Array/dropRightWhile', function () {
       dropRightWhile(null, function (book) {
         return !book.read;
       });
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       dropRightWhile(books, null);
-    }).toThrow('Expected a function for second argument');
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

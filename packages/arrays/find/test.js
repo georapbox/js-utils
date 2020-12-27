@@ -46,11 +46,11 @@ describe('Array/find', function () {
       }, function (element) {
         return element.name === 'cherries';
       });
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an an array for first argument'));
 
     expect(function () {
       return find(fruits);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a function for second argument'));
   }
 
   it('returns a value in the array, if an element in the array satisfies the provided testing function (Array.prototype.find is supported)', function () {

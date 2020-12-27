@@ -15,6 +15,6 @@ describe('String/unescapeHTML', function () {
 
     expect(function () {
       return unescapeHTML({});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

@@ -24,10 +24,10 @@ describe('String/truncate', function () {
 
     expect(function () {
       return truncate({ item: str }, 10);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
 
     expect(function () {
       return truncate(str, '10');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

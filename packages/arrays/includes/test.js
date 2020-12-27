@@ -30,7 +30,7 @@ describe('Array/includes', function () {
 
     expect(function () {
       return includes({ foo: 'bar' }, 'bar');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   }
 
   it('determines whether an array includes a certain element (Array.prototype.includes is supported)', function () {

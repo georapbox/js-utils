@@ -16,14 +16,14 @@ describe('Math/normalize', function () {
 
     expect(function () {
       return normalize(null, 0, 33);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return normalize(23, null, 33);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return normalize(23, 0, null);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });
 });

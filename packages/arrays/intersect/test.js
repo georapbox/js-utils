@@ -19,11 +19,11 @@ describe('Array/intersect', function () {
 
     expect(function () {
       return intersect(arrA, {});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected all arguments to be arrays'));
 
     expect(function () {
       return intersect({}, arrB);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected all arguments to be arrays'));
   }
 
   it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is supported)', function () {

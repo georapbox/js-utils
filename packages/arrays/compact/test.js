@@ -12,6 +12,6 @@ describe('Array/compact', function () {
 
     expect(function () {
       return compact({}, '2');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

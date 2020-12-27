@@ -26,6 +26,6 @@ describe('String/snake case', function () {
 
     expect(function () {
       return snakeCase(['the quick brown fox jumps over the lazy dog']);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

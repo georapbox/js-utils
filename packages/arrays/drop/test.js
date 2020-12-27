@@ -23,15 +23,11 @@ describe('Array/drop', function () {
     expect(drop(arr, Number.MAX_VALUE)).toEqual([]);
 
     expect(function () {
-      return drop(arr, '2');
-    }).toThrow();
-
-    expect(function () {
-      return drop(arr, null);
-    }).toThrow();
-
-    expect(function () {
       return drop({}, 2);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
+
+    expect(function () {
+      return drop(arr, '2');
+    }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

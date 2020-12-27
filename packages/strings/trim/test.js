@@ -16,11 +16,11 @@ describe('String/trim', function () {
 
     expect(function () {
       return trim(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
 
     expect(function () {
       return trim(123);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   }
 
   it('trims string both ends (String.prototype.trim is uspported)', function () {

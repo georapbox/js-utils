@@ -19,6 +19,6 @@ describe('Function/flip', function () {
 
     expect(function () {
       return flip(null)(1, 2);
-    }).toThrow('Expected a function for first argument');
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });

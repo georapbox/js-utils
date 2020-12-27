@@ -14,14 +14,14 @@ describe('Math/lerp', function () {
 
     expect(function () {
       return lerp(null, 0, 365);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return lerp(0.75, null, 365);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
     expect(function () {
       return lerp(0.75, 0, null);
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });
 });

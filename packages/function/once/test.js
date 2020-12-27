@@ -13,6 +13,6 @@ describe('Function/once', function () {
 
     expect(function () {
       once(null)();
-    }).toThrow('Expected a function for first argument');
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });

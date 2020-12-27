@@ -32,7 +32,7 @@ describe('Array/flat', function () {
 
     expect(function () {
       return flat({});
-    }).toThrow('Expected an array for first argument');
+    }).toThrow(new TypeError('Expected an array for first argument'));
   }
 
   it('flattens recursively up to the specified depth (Array.prototype.flat is supported)', function () {

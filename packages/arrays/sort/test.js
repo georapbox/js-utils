@@ -18,6 +18,6 @@ describe('Array/sort', function () {
 
     expect(function () {
       return sort('efhtechjrd');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

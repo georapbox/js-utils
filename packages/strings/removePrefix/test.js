@@ -10,10 +10,10 @@ describe('String/removePrefix', function () {
 
     expect(function () {
       return removePrefix('Hello world!', {});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected all arguments to be strings'));
 
     expect(function () {
       return removePrefix('Hello world!', null);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected all arguments to be strings'));
   });
 });

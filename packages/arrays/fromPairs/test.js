@@ -20,6 +20,6 @@ describe('Array/fromPairs', function () {
         'PHP': 3,
         'Java': 4
       });
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

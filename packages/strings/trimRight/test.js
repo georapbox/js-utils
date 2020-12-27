@@ -18,11 +18,11 @@ describe('String/trimRight', function () {
 
     expect(function () {
       return trimRight(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
 
     expect(function () {
       return trimRight(123);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   }
 
   it('trims string from right end (String.prototype.trimEnd is supported)', function () {

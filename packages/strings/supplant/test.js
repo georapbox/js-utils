@@ -41,6 +41,6 @@ describe('String/supplant', function () {
 
     expect(function () {
       return supplant({}, data);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

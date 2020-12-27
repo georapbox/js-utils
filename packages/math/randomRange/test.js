@@ -11,6 +11,6 @@ describe('Math/randomRange', function () {
 
     expect(function () {
       return randomRange();
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });
 });

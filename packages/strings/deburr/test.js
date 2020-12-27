@@ -12,6 +12,6 @@ describe('String/deburr', function () {
 
     expect(function () {
       return deburr();
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

@@ -16,6 +16,6 @@ describe('Math/radiansToDegrees', function () {
 
     expect(function () {
       return radiansToDegrees('3.14');
-    }).toThrow('Expected a number for first argument');
+    }).toThrow(new TypeError('Expected a number for first argument'));
   });
 });

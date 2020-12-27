@@ -16,6 +16,6 @@ describe('Function/negate', function () {
 
     expect(function () {
       return negate();
-    }).toThrow('Expected a function for first argument');
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });

@@ -16,6 +16,6 @@ describe('String/subStrBefore', function () {
 
     expect(function () {
       return subStrBefore(str);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first and second argument'));
   });
 });

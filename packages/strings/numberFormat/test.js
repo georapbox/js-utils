@@ -14,6 +14,6 @@ describe('String/numberFormat', function () {
 
     expect(function () {
       return numberFormat(null);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a number for first argument'));
   });
 });

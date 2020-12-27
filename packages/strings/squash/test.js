@@ -34,6 +34,6 @@ describe('String/squash', function () {
   it('throws TypeError is first argument is not a string', function () {
     expect(function () {
       return squash(['a', 'b', 'c']);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

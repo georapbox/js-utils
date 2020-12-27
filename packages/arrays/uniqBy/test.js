@@ -52,6 +52,6 @@ describe('Array/uniqBy', function () {
 
     expect(function () {
       return uniqBy({}, 'name');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

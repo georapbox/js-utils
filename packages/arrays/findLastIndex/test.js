@@ -17,10 +17,10 @@ describe('Array/findLastIndex', function () {
       return findLastIndex({}, function (chr) {
         return chr > 10;
       });
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
       return findLastIndex(letters);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

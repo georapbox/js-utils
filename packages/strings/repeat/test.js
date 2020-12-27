@@ -6,32 +6,36 @@ describe('String/repeat', function () {
 
     expect(repeat('a', 3.8)).toBe('aaa');
 
-    expect(repeat('a', 0)).toBe('');
+    expect(function () {
+      return repeat('a');
+    }).toThrow(new TypeError('Expected a number for second argument'));
 
-    expect(repeat('a')).toBe('');
+    expect(function () {
+      return repeat('a', 0);
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
 
-    expect(repeat('a', null)).toBe('');
-
-    expect(repeat('a', NaN)).toBe('');
+    expect(function () {
+      return repeat('a', NaN);
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
 
     expect(function () {
       return repeat('a', Infinity);
-    }).toThrow();
-
-    expect(function () {
-      return repeat('a', -Infinity);
-    }).toThrow();
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
 
     expect(function () {
       return repeat('a', -2);
-    }).toThrow();
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
 
     expect(function () {
       return repeat('a', 1 / 0);
-    }).toThrow();
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
 
     expect(function () {
       return repeat(null, 0);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
+
+    expect(function () {
+      return repeat('a', '3');
+    }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

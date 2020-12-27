@@ -39,42 +39,42 @@ describe('Object/pick', function () {
 
     expect(function () {
       return pick(null, ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(undefined, ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(['a', 'b', 'c'], ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(new Map(), ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(new WeakMap(), ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(new Set(), ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(new WeakSet(), ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(NaN, ['a']);
-    }).toThrow('Expected a plain object for first argument');
+    }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(function () {
       return pick(o1, 'a');
-    }).toThrow('Expected an array for second argument');
+    }).toThrow(new TypeError('Expected an array for second argument'));
 
     expect(function () {
       return pick(o1, ['a', 'b'], 1);
-    }).toThrow('Expected a boolean for third argument');
+    }).toThrow(new TypeError('Expected a boolean for third argument'));
   });
 });

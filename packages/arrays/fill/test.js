@@ -28,7 +28,7 @@ describe('Array/fill', function () {
       return fill({
         foo: 'bar'
       }, '*');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   }
 
   it('fills elements of array with value from start up to end (not including end) (Array.prototype.fill is supported)', function () {

@@ -14,6 +14,6 @@ describe('String/stripPunctuation', function () {
 
     expect(function () {
       return stripPunctuation(null);
-    }).toThrow('Expected a string for first argument');
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

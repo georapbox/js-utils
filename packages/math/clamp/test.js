@@ -16,6 +16,6 @@ describe('Math/clamp', function () {
 
     expect(function () {
       return clamp(10, '-5', '5');
-    }).toThrow('Expected all arguments to be numbers');
+    }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });
 });

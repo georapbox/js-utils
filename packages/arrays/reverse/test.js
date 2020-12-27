@@ -11,6 +11,6 @@ describe('Array/reverse', function () {
 
     expect(function () {
       return reverse({ a: '1', b: '2' });
-    }).toThrow();
+    }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

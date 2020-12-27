@@ -24,7 +24,7 @@ describe('String/contains', function () {
 
     expect(function () {
       return contains(123456, '123');
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   }
 
   it('String should contain the specified search string (String.prototype.includes is supported)', function () {

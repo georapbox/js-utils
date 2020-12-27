@@ -9,6 +9,6 @@ describe('String/stripHTML', function () {
 
     expect(function () {
       return stripHTML({});
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

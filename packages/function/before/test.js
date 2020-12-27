@@ -21,10 +21,10 @@ describe('Function/before', function () {
       return before('five', function () {
         return count += 1;
       });
-    }).toThrow('Expected a number for first argument');
+    }).toThrow(new TypeError('Expected a number for first argument'));
 
     expect(function () {
       return before(5);
-    }).toThrow('Expected a function for second argument');
+    }).toThrow(new TypeError('Expected a function for second argument'));
   });
 });

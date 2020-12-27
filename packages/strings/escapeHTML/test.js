@@ -15,6 +15,6 @@ describe('String/escapeHTML', function () {
 
     expect(function () {
       return escapeHTML(['Hello & <span>World</span>']);
-    }).toThrow();
+    }).toThrow(new TypeError('Expected a string for first argument'));
   });
 });

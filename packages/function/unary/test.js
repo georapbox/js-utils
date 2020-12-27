@@ -19,6 +19,6 @@ describe('Function/unary', function () {
 
     expect(function () {
       return unary();
-    }).toThrow('Expected a function for first argument');
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });
