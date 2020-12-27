@@ -32,7 +32,7 @@
  */
 function uniqBy(array, iteratee) {
   if (!Array.isArray(array)) {
-    throw new TypeError('Expected an array for second argument');
+    throw new TypeError('Expected an array for first argument');
   }
 
   var cb = typeof iteratee === 'function' ? iteratee : function (o) {

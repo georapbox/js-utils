@@ -14,7 +14,7 @@
  */
 function compact(array) {
   if (!Array.isArray(array)) {
-    throw new TypeError('Expected an array');
+    throw new TypeError('Expected an array for first argument');
   }
 
   return array.filter(Boolean);
