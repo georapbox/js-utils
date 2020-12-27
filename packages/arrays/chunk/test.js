@@ -41,5 +41,9 @@ describe('Array/chunk', function () {
     expect(function () {
       return chunk([1, 2, 3, 4], Infinity);
     }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
+
+    expect(function () {
+      return chunk([1, 2, 3, 4], NaN);
+    }).toThrow(new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument'));
   });
 });

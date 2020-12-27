@@ -9,7 +9,7 @@ If array can’t be split evenly, the final chunk will be the remaining elements
 
 - <code>TypeError</code> If `array` is not array.
 - <code>TypeError</code> If `size` is not number.
-- <code>RangeError</code> If `size` is not a positive number or greater than `Number.MAX_SAFE_INTEGER`.
+- <code>RangeError</code> If `size` is not a positive number, or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
 
 | Param | Type | Description |
 | --- | --- | --- |

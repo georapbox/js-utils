@@ -8,7 +8,7 @@
  * @param {Number} size The length of each chunk. If a float number, it is converted to integer using `Math.floor()`.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `size` is not number.
- * @throws {RangeError} If `size` is not a positive number or greater than `Number.MAX_SAFE_INTEGER`.
+ * @throws {RangeError} If `size` is not a positive number, or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
  * @return {Array} The new array containing chunks. If `size` is lower than 1, an empty array is returned.
  * @example
  *
@@ -25,7 +25,7 @@
  * // -> [[1, 2], [3, 4]]
  */
 function chunk(array, size) {
-  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || 9007199254740991;
+  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   var len, result, index, resIndex;
 
   if (!Array.isArray(array)) {
@@ -36,7 +36,7 @@ function chunk(array, size) {
     throw new TypeError('Expected a number for second argument');
   }
 
-  if (size <= 0 || size > MAX_SAFE_INTEGER) {
+  if (size <= 0 || size > MAX_SAFE_INTEGER || size !== size) {
     throw new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument');
   }
 
