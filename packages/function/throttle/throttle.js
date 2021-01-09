@@ -5,8 +5,8 @@
  *
  * @param {function} func The function to be executed.
  * @param {Number} [wait=0] Optional. Default value is 0. Time of delay in milliseconds.
- * @return {function} The throttled function.
  * @throws {TypeError} If `func` is not function.
+ * @returns {function} The throttled function.
  * @example
  *
  * // A method that should be called no more than 4 times per second.
