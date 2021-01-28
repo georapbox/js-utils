@@ -15,8 +15,8 @@ describe('Object/get', function () {
     expect(get(object, 'a[0].b.c')).toBe(3);
     expect(get(object, ['a', '0', 'b', 'c'])).toBe(3);
 
-    expect(get(object, 'a.b.c')).toBe(undefined);
-    expect(get(object, ['a', 'b', 'c'])).toBe(undefined);
+    expect(get(object, 'a.b.c')).toBe(void 0);
+    expect(get(object, ['a', 'b', 'c'])).toBe(void 0);
 
     expect(get(object, 'a.b.c', 'DEFAULT')).toBe('DEFAULT');
     expect(get(object, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
@@ -24,8 +24,8 @@ describe('Object/get', function () {
     expect(get(null, 'a.b.c', 'DEFAULT')).toBe('DEFAULT');
     expect(get(null, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
 
-    expect(get(undefined, 'a.b.c', 'DEFAULT')).toBe('DEFAULT');
-    expect(get(undefined, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
+    expect(get(void 0, 'a.b.c', 'DEFAULT')).toBe('DEFAULT');
+    expect(get(void 0, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
 
     expect(get(1, 'a.b.c', 'DEFAULT')).toBe('DEFAULT');
     expect(get(1, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
@@ -44,6 +44,6 @@ describe('Object/get', function () {
     expect(get(browsers, 'engines.gecko[5]', 'Pale Moon')).toBe('Pale Moon');
     expect(get(browsers, 'engines.gecko[3]', 'Pale Moon')).toBe(null);
     expect(get(browsers, 'engines.blink[1]')).toBe('Brave');
-    expect(get(browsers, 'engines.blink[4]')).toBe(undefined);
+    expect(get(browsers, 'engines.blink[4]')).toBe(void 0);
   });
 });
