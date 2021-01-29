@@ -16,11 +16,9 @@
     "test": "jest --config jest.config.js",
     "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage",
-    "coveralls": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "eslint packages/**/*.js"
   },
   "devDependencies": {
-    "coveralls": "~3.1.0",
     "eslint": "~7.13.0",
     "jest": "~26.6.3"
   }
