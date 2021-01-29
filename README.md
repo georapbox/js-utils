@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/georapbox/js-utils.svg?branch=master)](https://travis-ci.com/georapbox/js-utils)
+![build](https://github.com/georapbox/js-utils/workflows/build/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/georapbox/js-utils/badge.svg?branch=master)](https://coveralls.io/github/georapbox/js-utils?branch=master)
 [![License](https://img.shields.io/github/license/georapbox/js-utils?color=blue)](https://github.com/georapbox/js-utils/blob/master/LICENSE)
 
