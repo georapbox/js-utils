@@ -49,7 +49,8 @@ A collection of standalone javascript utility functions.
 |Name|Description|
 |--------|-----------|
 |[camelCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/camelCase)|Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).|
-|[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/strings/capitalize)|Capitalizes the first character of a string ( Optionally, converts the rest of the string to lower case).|
+|[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/strings/capitalize)|Capitalizes the first character of a string (Optionally, converts the rest of the string to lower case).|
+|[classnames](https://github.com/georapbox/js-utils/tree/master/packages/strings/classnames)|Creates a string by conditionally joining classNames together.|
 |[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[contains](https://github.com/georapbox/js-utils/tree/master/packages/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
 |[deburr](https://github.com/georapbox/js-utils/tree/master/packages/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
