@@ -6,6 +6,8 @@ describe('String/repeat', function () {
 
     expect(repeat('a', 3.8)).toBe('aaa');
 
+    expect(repeat('', 3)).toBe('');
+
     expect(function () {
       return repeat('a');
     }).toThrow(new TypeError('Expected a number for second argument'));
