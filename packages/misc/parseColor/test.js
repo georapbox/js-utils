@@ -17,5 +17,9 @@ describe('misc/parseColor', function () {
     expect(parseColor(0xff0000)).toEqual('#ff0000');
 
     expect(parseColor(0xff0000, true)).toEqual(16711680);
+
+    expect(function () {
+      return parseColor(null, true);
+    }).toThrow(new TypeError('Expected a number or string for first argument'));
   });
 });

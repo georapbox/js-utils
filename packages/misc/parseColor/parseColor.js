@@ -37,7 +37,7 @@
  */
 function parseColor(color, toNumber) {
   if (typeof color !== 'number' && typeof color !== 'string') {
-    throw new TypeError('"parseColor" expects a number or string for color');
+    throw new TypeError('Expected a number or string for first argument');
   }
 
   if (toNumber === true) {
