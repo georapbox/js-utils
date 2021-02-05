@@ -25,13 +25,18 @@
  * zip();
  * // -> []
  */
-function zip(/* , args... */) {
-  var args = Array.prototype.slice.call(arguments);
-  var argsLength = args.length;
+function zip(/* ...args */) {
+  var _len = arguments.length;
+  var args = new Array(_len);
+  var _key = 0;
   var longest;
 
-  while (argsLength--) {
-    if (!Array.isArray(args[argsLength])) {
+  for (; _key < _len; _key += 1) {
+    args[_key] = arguments[_key];
+  }
+
+  while (_len--) {
+    if (!Array.isArray(args[_len])) {
       throw new TypeError('Expected all arguments passed to be arrays');
     }
   }

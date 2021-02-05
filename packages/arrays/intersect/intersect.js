@@ -4,7 +4,7 @@
  * Creates an array of unique values that are included in all given arrays.
  * The order of result values is determined by the order they occur in the first array.
  *
- * @param {Array} arrays The arrays to intersect.
+ * @param {Array} ...arrays The arrays to intersect.
  * @throws {TypeError} If any of the arguments is not array.
  * @return {Array} The array of intersecting values.
  * @example
@@ -19,12 +19,17 @@
  * intersect(arrA, arrB, arrC);
  * // -> [NaN, 3]
  */
-function intersect(/* arrays */) {
-  var arrays = Array.prototype.slice.call(arguments, 0);
-  var numberOfArrays = arrays.length;
+function intersect(/* ...arrays */) {
+  var _len = arguments.length;
+  var _key = 0;
+  var arrays = new Array(_len);
 
-  while (numberOfArrays--) {
-    if (!Array.isArray(arrays[numberOfArrays])) {
+  for (; _key < _len; _key += 1) {
+    arrays[_key] = arguments[_key];
+  }
+
+  while (_len--) {
+    if (!Array.isArray(arrays[_len])) {
       throw new TypeError('Expected all arguments to be arrays');
     }
   }

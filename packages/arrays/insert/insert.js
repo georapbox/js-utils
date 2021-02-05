@@ -33,7 +33,7 @@
  * // -> [1, 2, undefined, 3, ['x', 'y']]
  */
 function insert(array, start /* [element1 [, element2 [, ...]]] */) {
-  var resultArray, elements, i, len;
+  var _len, _key, elements, result, i;
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
@@ -43,16 +43,17 @@ function insert(array, start /* [element1 [, element2 [, ...]]] */) {
     throw new TypeError('Expected a number for second argument');
   }
 
-  resultArray = array.slice(0);
-  elements = Array.prototype.slice.call(arguments, 2);
-  i = 0;
-  len = elements.length;
-
-  for (; i < len; i += 1) {
-    resultArray.splice(start++, 0, elements[i]);
+  for (_len = arguments.length, _key = 2, elements = new Array(_len > 2 ? _len - 2 : 0); _key < _len; _key++) {
+    elements[_key - 2] = arguments[_key];
   }
 
-  return resultArray;
+  result = array.slice(0);
+
+  for (i = 0; i < elements.length; i++) {
+    result.splice(start++, 0, elements[i]);
+  }
+
+  return result;
 }
 
 module.exports = insert;
