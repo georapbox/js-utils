@@ -1,22 +1,18 @@
 var unary = require('./unary.js');
 
 describe('Function/unary', function () {
-  it('creates a function that accepts up to one argument, ignoring any additional arguments', function () {
-    var mockFn = jest.fn().mockImplementation(function (a, b) {
-      return [a, b];
-    });
+  var fn = function (a, b) {
+    return [a, b];
+  };
 
-    mockFn('foo', 'bar');
-    expect(mockFn).toHaveBeenCalledWith('foo', 'bar');
+  it('should create a function that accepts up to 1 argument, ignoring any additional arguments', function () {
+    expect(unary(fn)()).toStrictEqual([void 0, void 0]);
+    expect(unary(fn)('foo')).toStrictEqual(['foo', void 0]);
+    expect(unary(fn)('foo', 'bar')).toStrictEqual(['foo', void 0]);
+    expect(unary(fn)('foo', 'bar', 'baz')).toStrictEqual(['foo', void 0]);
+  });
 
-    var result = unary(mockFn)('foo');
-    expect(mockFn).toHaveBeenCalledWith('foo');
-    expect(result).toStrictEqual(['foo', void 0]);
-
-    var result2 = unary(mockFn)('foo', 'bar', 'baz'); // pass extra arguments to test that onlu the first one is used
-    expect(mockFn).toHaveBeenCalledWith('foo');
-    expect(result2).toStrictEqual(['foo', void 0]);
-
+  it('should throw TypeError if first argument is not a function', function () {
     expect(function () {
       return unary();
     }).toThrow(new TypeError('Expected a function for first argument'));
