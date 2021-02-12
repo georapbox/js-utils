@@ -1,7 +1,7 @@
 <a name="squash"></a>
 
 ## squash(subjectString, [squashEscapeSequences]) ⇒ <code>String</code>
-Removes all spaces from a string; optionally removes any escape sequences such as \t, \n, \f, \r and \v.
+Removes all spaces from a string; optionally removes any escape sequences such as `\t`, `\n`, `\f`, `\r` and `\v`.
 
 **Returns**: <code>String</code> - The result string with all spaces removed.  
 **Throws**:
