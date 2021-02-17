@@ -137,6 +137,7 @@ A collection of standalone javascript utility functions.
 |[isFalse](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalse)|Checks if `value` is false (strict equality).|
 |[isFalsy](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalsy)|Checks if `value` is falsy.|
 |[isFiniteNum](https://github.com/georapbox/js-utils/tree/master/packages/is/isFiniteNum)|Checks if `value` is a finite number.|
+|[isFlatArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isFlatArray)|Checks if `value` is a flat array.|
 |[isFunction](https://github.com/georapbox/js-utils/tree/master/packages/is/isFunction)|Checks if `value` is a function.|
 |[isHexadecimal](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexadecimal)|Checks if `value` matches a hexadecimal regular expression.|
 |[isHexColor](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexColor)|Checks if `value` matches a hexadecimal color regular expression.|
