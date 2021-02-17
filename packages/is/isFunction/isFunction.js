@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is a function.
+ * Checks if `value` is a function.
  *
  * @param {*} value The value to check.
  * @return {Boolean} True if 'value' is a function, else returns false.
