@@ -26,7 +26,7 @@ A collection of standalone javascript utility functions.
 |[groupBy](https://github.com/georapbox/js-utils/tree/master/packages/arrays/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
 |[includes](https://github.com/georapbox/js-utils/tree/master/packages/arrays/includes)|Determines whether an array includes a certain element.|
 |[intersect](https://github.com/georapbox/js-utils/tree/master/packages/arrays/intersect)|Creates an array of unique values that are included in all given arrays.|
-|[insert](https://github.com/georapbox/js-utils/tree/master/packages/arrays/insert)|Inserts elements to array at specific index.|
+|[insert](https://github.com/georapbox/js-utils/tree/master/packages/arrays/insert)|Inserts one or more elements to array at specific index.|
 |[move](https://github.com/georapbox/js-utils/tree/master/packages/arrays/move)|Move an array element to a different position.|
 |[partition](https://github.com/georapbox/js-utils/tree/master/packages/arrays/partition)|Creates an array of elements split into two groups (arrays) depending on the result of a predicated function invoked for each iteration.|
 |[pluck](https://github.com/georapbox/js-utils/tree/master/packages/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|

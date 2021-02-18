@@ -2,26 +2,34 @@ var insert = require('./insert');
 
 describe('Array/insert', function () {
   it('inserts elements to array at specific index', function () {
-    var arr = [1, 2, 3, ['x', 'y']];
+    var arr = [1, 2, 3];
 
-    expect(insert(arr, 0, 'a')).toEqual(['a', 1, 2, 3, ['x', 'y']]);
+    expect(insert(arr, 0, ['a'])).toEqual(['a', 1, 2, 3]);
 
-    expect(insert(arr, 2, 'b')).toEqual([1, 2, 'b', 3, ['x', 'y']]);
+    expect(insert(arr, -0, ['a'])).toEqual(['a', 1, 2, 3]);
 
-    expect(insert(arr, -1, 'c')).toEqual([1, 2, 3, 'c', ['x', 'y']]);
+    expect(insert(arr, 2, ['a'])).toEqual([1, 2, 'a', 3]);
 
-    expect(insert(arr, 10, 'd')).toEqual([1, 2, 3, ['x', 'y'], 'd']);
+    expect(insert(arr, -1, ['a'])).toEqual([1, 2, 'a', 3]);
 
-    expect(insert(arr, 2)).toEqual([1, 2, 3, ['x', 'y']]);
+    expect(insert(arr, arr.length + 1, ['a'])).toEqual([1, 2, 3, 'a']);
 
-    expect(insert(arr, 2, undefined)).toEqual([1, 2, undefined, 3, ['x', 'y']]);
+    expect(insert(arr, 1, ['a', 'b', 'c'])).toEqual([1, 'a', 'b', 'c', 2, 3]);
+
+    expect(insert(arr, 2, [])).toEqual([1, 2, 3]);
+
+    expect(insert(arr, 2, [undefined])).toEqual([1, 2, undefined, 3]);
 
     expect(function () {
-      return insert({ foo: 'bar' }, 0, 'e');
+      return insert({ foo: 'bar' }, 0, ['a', 'b']);
     }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {
-      return insert(arr);
+      return insert(arr, '0', ['a', 'b']);
     }).toThrow(new TypeError('Expected a number for second argument'));
+
+    expect(function () {
+      return insert(arr, 0, 'a');
+    }).toThrow(new TypeError('Expected an array for third argument'));
   });
 });
