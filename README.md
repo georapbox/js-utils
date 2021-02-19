@@ -30,6 +30,7 @@ A collection of standalone javascript utility functions.
 |[move](https://github.com/georapbox/js-utils/tree/master/packages/arrays/move)|Move an array element to a different position.|
 |[partition](https://github.com/georapbox/js-utils/tree/master/packages/arrays/partition)|Creates an array of elements split into two groups (arrays) depending on the result of a predicated function invoked for each iteration.|
 |[pluck](https://github.com/georapbox/js-utils/tree/master/packages/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
+|[remove](https://github.com/georapbox/js-utils/tree/master/packages/arrays/remove)|Removes one or more elements from an array at the specified index(es).|
 |[shuffle](https://github.com/georapbox/js-utils/tree/master/packages/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
 |[reverse](https://github.com/georapbox/js-utils/tree/master/packages/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
 |[tail](https://github.com/georapbox/js-utils/tree/master/packages/arrays/tail)|Gets all but the first element of array.|
