@@ -7,6 +7,7 @@
  * @param {Number} start The index to insert elements.
  * If greater than the length of the array, actual starting index will be set to the length of the array.
  * If negative, will begin that many elements from the end.
+ * If a float number is passed, it is implicitly converted to integers using `Math.floor()`.
  * @param {Array} elements The elements to insert to the array.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `start` is not number.
@@ -24,6 +25,9 @@
  *
  * insert(arr, -1, ['a']);
  * // -> [1, 2, 'a', 3]
+ *
+ * insert(arr, 0.9, ['a']);
+ * // -> ['a', 1, 2, 3];
  *
  * insert(arr, arr.length + 1, ['a']);
  * // -> [1, 2, 3, 'a']

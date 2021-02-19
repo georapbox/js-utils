@@ -6,6 +6,12 @@ describe('Array/insert', function () {
 
     expect(insert(arr, 0, ['a'])).toEqual(['a', 1, 2, 3]);
 
+    expect(insert(arr, 0.9, ['a'])).toEqual(['a', 1, 2, 3]);
+
+    expect(insert(arr, 1.2, ['a'])).toEqual([1, 'a', 2, 3]);
+
+    expect(insert(arr, -1.2, ['a'])).toEqual([1, 2, 'a', 3]);
+
     expect(insert(arr, -0, ['a'])).toEqual(['a', 1, 2, 3]);
 
     expect(insert(arr, 2, ['a'])).toEqual([1, 2, 'a', 3]);
