@@ -8,11 +8,13 @@ describe('Array/remove', function () {
 
     expect(remove(arr, [0, 1])).toEqual([3, 4, 5]);
 
+    expect(remove(arr, [1, 0])).toEqual([3, 4, 5]);
+
     expect(remove(arr, [0, 4])).toEqual([2, 3, 4]);
 
-    expect(remove(arr, [-1])).toEqual([1, 2, 3, 4]);
+    expect(remove(arr, [4, 0])).toEqual([2, 3, 4]);
 
-    expect(remove(arr, [-1, -4])).toEqual([1, 3, 4]);
+    expect(remove(arr, [0, 0])).toEqual([2, 3, 4, 5]);
 
     expect(remove(arr, [arr.length])).toEqual([1, 2, 3, 4, 5]);
 
@@ -25,8 +27,6 @@ describe('Array/remove', function () {
     expect(remove(arr, [null])).toEqual([1, 2, 3, 4, 5]);
 
     expect(remove(arr, ['0', '1'])).toEqual([1, 2, 3, 4, 5]);
-
-    expect(remove(arr, [0.2, 1.8])).toEqual([3, 4, 5]);
 
     expect(function () {
       return remove({ foo: 'bar' }, [0]);
