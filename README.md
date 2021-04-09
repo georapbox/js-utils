@@ -204,6 +204,7 @@ A collection of standalone javascript utility functions.
 |Name|Description|
 |--------|-----------|
 |[convertImageToBase64](https://github.com/georapbox/js-utils/tree/master/packages/canvas/convertImageToBase64)|Converts an image's content to Data URI scheme.|
+|[highResolutionCanvas](https://github.com/georapbox/js-utils/tree/master/packages/canvas/highResolutionCanvas)|Processes an `HTMLCanvasElement` by downsampling on the canvas to ensure that the drawn visuals do not look blurry on high-DPI screens.|
 
 
 ## Misc
