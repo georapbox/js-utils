@@ -14,15 +14,15 @@ Checks if a value is classified as a Symbol primitive.
 isSymbol(Symbol());
 // -> true
 
-isSymbol(Symbol('abc'));
+isSymbol(Symbol('foo'));
 // -> true
 
-isSymbol(Symbol.for('abc'));
+isSymbol(Symbol.for('foo'));
 // -> true
 
 isSymbol(Symbol.iterator);
 // -> true
 
-isSymbol('abc');
+isSymbol('foo');
 // -> false
 ```
