@@ -1,5 +1,5 @@
 /**
- * Checks if `value` is an empty object, collection, map, or set.
+ * Checks if a value is an empty object, collection, map, or set.
  * Any other primitive types (`number`, `null`, `undefined`, `boolean` `symbol`, `function`, `RegExp`) are considered empty.
  *
  * @param {*} value The value to check.

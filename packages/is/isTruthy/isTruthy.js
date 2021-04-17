@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if 'value' is a truthy one.
+ * Checks if a value is a truthy one.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is truthy, else false.
+ * @return {Boolean} True if the value is truthy, else false.
  * @example
  *
  * isTruthy(true);

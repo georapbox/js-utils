@@ -1,9 +1,9 @@
 <a name="isRegexp"></a>
 
 ## isRegexp(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a regular expression.
+Checks if a value is a regular expression.
 
-**Returns**: <code>Boolean</code> - True if the 'value' is a regular expression, else false.  
+**Returns**: <code>Boolean</code> - True if the value is a regular expression, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

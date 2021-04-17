@@ -1,7 +1,7 @@
 <a name="isElement"></a>
 
 ## isElement(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a DOM element.
+Checks if a value is a DOM element.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a DOM element, else false.  
 

@@ -1,7 +1,7 @@
 <a name="isArray"></a>
 
 ## isArray(value) ⇒ <code>Boolean</code>
-Checks if 'value' is array.
+Checks if a value is array.
 
 **Returns**: <code>Boolean</code> - True if array, else false.  
 

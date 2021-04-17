@@ -3,7 +3,7 @@
 ## isMap(value) ⇒ <code>Boolean</code>
 Checks if value is classified as a Map object.
 
-**Returns**: <code>Boolean</code> - True if `value` is classified as a Map object, else false.  
+**Returns**: <code>Boolean</code> - True if value is classified as a Map object, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,7 +1,7 @@
 <a name="isDate"></a>
 
 ## isDate(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a date.
+Checks if a value is a date object.
 
 **Returns**: <code>Boolean</code> - True if 'value' is a date, else returns false.  
 

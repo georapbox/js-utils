@@ -1,9 +1,9 @@
 <a name="isFunction"></a>
 
 ## isFunction(value) ⇒ <code>Boolean</code>
-Checks if `value` is a function.
+Checks if a value is a function.
 
-**Returns**: <code>Boolean</code> - True if 'value' is a function, else returns false.  
+**Returns**: <code>Boolean</code> - True if value is a function, else returns false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

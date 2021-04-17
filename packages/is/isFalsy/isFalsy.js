@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if 'value' is a falsy one.
+ * Checks if a value is a falsy one.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is falsy, else false.
+ * @return {Boolean} True if the value is falsy, else false.
  * @example
  *
  * isFalsy(true);

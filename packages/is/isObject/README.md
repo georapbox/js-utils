@@ -1,9 +1,9 @@
 <a name="isObject"></a>
 
 ## isObject(value) ⇒ <code>Boolean</code>
-Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
+Checks if a value is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
 
-**Returns**: <code>Boolean</code> - True if "value" is an object, else false.  
+**Returns**: <code>Boolean</code> - True if value is an object, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

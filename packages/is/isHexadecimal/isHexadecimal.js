@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if 'value' matches a hexadecimal regular expression.
+ * Checks if a value matches a hexadecimal regular expression.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if 'value' is a hexadecimal, else false.
+ * @return {Boolean} True if value is a hexadecimal, else false.
  * @example
  *
  * isHexadecimal('f5f5f5');

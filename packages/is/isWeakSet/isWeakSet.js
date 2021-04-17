@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if value is classified as a WeakSet object.
+ * Checks if a value is classified as a WeakSet object.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if `value` is classified as a WeakSet object, else false.
+ * @return {Boolean} True if value is classified as a WeakSet object, else false.
  * @example
  *
  * isWeakSet(new WeakSet());

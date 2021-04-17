@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if `value` is a function.
+ * Checks if a value is a function.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if 'value' is a function, else returns false.
+ * @return {Boolean} True if value is a function, else returns false.
  * @example
  *
  * isFunction(function test() {

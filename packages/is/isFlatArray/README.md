@@ -1,7 +1,7 @@
 <a name="isFlatArray"></a>
 
 ## isFlatArray(value) ⇒ <code>Boolean</code>
-Checks if `value` is a flat array. If the value is not array, will return `false`.
+Checks if a value is a flat array. If the value is not array, will return `false`.
 
 **Returns**: <code>Boolean</code> - Returns `true` if value is flat array, otherwise returns `false`.  
 

@@ -1,7 +1,7 @@
 <a name="isBoolean"></a>
 
 ## isBoolean(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a boolean value.
+Checks if a value is boolean.
 
 **Returns**: <code>Boolean</code> - True if the 'value' is a boolean value, else false.  
 

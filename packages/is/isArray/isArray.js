@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is array.
+ * Checks if a value is array.
  *
  * @param {*} value The value to check if is array.
  * @return {Boolean} True if array, else false.

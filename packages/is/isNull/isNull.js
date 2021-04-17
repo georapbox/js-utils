@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is null.
+ * Checks if a value is `null`.
  *
  * @param {*} value The value to check.
  * @return {Boolean} True if the 'value' is null, else false.

@@ -1,7 +1,8 @@
 <a name="isEmpty"></a>
 
 ## isEmpty(value) ⇒ <code>Boolean</code>
-Checks if `value` is an empty object, collection, map, or set.
+Checks if a value is an empty object, collection, map, or set.
+
 Any other primitive types (`number`, `null`, `undefined`, `boolean` `symbol`, `function`, `RegExp`) are considered empty.
 
 **Returns**: <code>Boolean</code> - Returns `true` if value is empty, otherwise `false`.

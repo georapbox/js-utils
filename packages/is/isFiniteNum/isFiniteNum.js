@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * Checks if 'value' is a finite number.
+ * Checks if a value is a finite number.
  *
- * @param {*} value The 'value' to check.
+ * @param {*} value The value to check.
  * @return {Boolean} True if value is a finite number, else false.
  * @example
  *

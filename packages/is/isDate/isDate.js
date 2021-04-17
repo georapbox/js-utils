@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is a date.
+ * Checks if a value is a date object.
  *
  * @param {*} value The value to check.
  * @return {Boolean} True if 'value' is a date, else returns false.

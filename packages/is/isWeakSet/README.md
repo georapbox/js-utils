@@ -1,9 +1,9 @@
 <a name="isWeakSet"></a>
 
 ## isWeakSet(value) ⇒ <code>Boolean</code>
-Checks if value is classified as a WeakSet object.
+Checks if a value is classified as a WeakSet object.
 
-**Returns**: <code>Boolean</code> - True if `value` is classified as a WeakSet object, else false.  
+**Returns**: <code>Boolean</code> - True if value is classified as a WeakSet object, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

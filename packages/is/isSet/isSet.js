@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if value is classified as a Set object.
+ * Checks if a value is classified as a Set object.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if `value` is classified as a Set object, else false.
+ * @return {Boolean} True if value is classified as a Set object, else false.
  * @example
  *
  * isSet(new Set());

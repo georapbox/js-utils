@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if value is odd.
+ * Checks if a value is odd.
  *
  * @param {Number} value The value to check.
  * @return {Boolean} True if value is odd, else false.

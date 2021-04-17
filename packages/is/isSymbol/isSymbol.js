@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if value is classified as a Symbol primitive.
+ * Checks if a value is classified as a Symbol primitive.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if `value` is classified as a Symbol primitive, else false.
+ * @return {Boolean} True if value is classified as a Symbol primitive, else false.
  * @example
  *
  * isSymbol(Symbol());

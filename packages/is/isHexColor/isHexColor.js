@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if 'value' matches a hexadecimal color regular expression.
+ * Checks if a value matches a hexadecimal color regular expression.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if 'value' is a hexadecimal color regexp, else false.
+ * @return {Boolean} True if value is a hexadecimal color regexp, else false.
  * @example
  *
  * isHexColor('#f5f5f5');

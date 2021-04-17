@@ -1,9 +1,9 @@
 <a name="isTruthy"></a>
 
 ## isTruthy(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a truthy one.
+Checks if a value is a truthy one.
 
-**Returns**: <code>Boolean</code> - True if the 'value' is truthy, else false.  
+**Returns**: <code>Boolean</code> - True if the value is truthy, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

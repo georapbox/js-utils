@@ -1,7 +1,7 @@
 <a name="isOdd"></a>
 
 ## isOdd(value) ⇒ <code>Boolean</code>
-Checks if value is odd.
+Checks if a value is odd.
 
 **Returns**: <code>Boolean</code> - True if value is odd, else false.  
 

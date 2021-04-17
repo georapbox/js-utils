@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if value is classified as a Map object.
+ * Checks if a value is classified as a Map object.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if `value` is classified as a Map object, else false.
+ * @return {Boolean} True if value is classified as a Map object, else false.
  * @example
  *
  * isMap(new Map());

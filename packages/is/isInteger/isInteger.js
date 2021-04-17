@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is an integer number.
+ * Checks if a value is an integer number.
  * If the value is NaN or infinite, return false.
  *
  * @param {*} value The value to check.

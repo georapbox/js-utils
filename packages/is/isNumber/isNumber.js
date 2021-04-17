@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * Checks if 'value' is a number.
+ * Checks if a value is a number.
  *
  * @NOTE: `NaN` is considered to be a number, as so will return true.
  * @param {*} value The value to check.
- * @return {Boolean} True if 'value' is a number, else false.
+ * @return {Boolean} True if value is a number, else false.
  * @example
  *
  * isNumber(10);

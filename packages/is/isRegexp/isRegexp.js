@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if 'value' is a regular expression.
+ * Checks if a value is a regular expression.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is a regular expression, else false.
+ * @return {Boolean} True if the value is a regular expression, else false.
  * @example
  *
  * isRegexp(/^[0-9a-fA-F]+$/);

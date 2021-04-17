@@ -7,7 +7,7 @@ Checks if 'value' is a finite number.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>\*</code> | The 'value' to check. |
+| value | <code>\*</code> | The value to check. |
 
 **Example**  
 ```js

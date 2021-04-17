@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if 'value' is true (strict equality).
+ * Checks if a value is `true` (strict equality).
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is true, else false.
+ * @return {Boolean} True if the value is true, else false.
  * @example
  *
  * isTrue(true);

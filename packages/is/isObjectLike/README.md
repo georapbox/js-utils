@@ -1,9 +1,9 @@
 <a name="isObjectLike"></a>
 
 ## isObjectLike(value) ⇒ <code>Boolean</code>
-Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".
+Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".
 
-**Returns**: <code>Boolean</code> - Returns `true` if `value` is object-like, else `false`.  
+**Returns**: <code>Boolean</code> - Returns `true` if value is object-like, else `false`.  
 
 | Param | Type | Description |
 | --- | --- | --- |

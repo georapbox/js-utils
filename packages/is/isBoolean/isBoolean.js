@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is a boolean value.
+ * Checks if a value is boolean.
  *
  * @param {*} value The value to check.
  * @return {Boolean} True if the 'value' is a boolean value, else false.

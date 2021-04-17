@@ -126,43 +126,43 @@ A collection of standalone javascript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[isArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isArray)|Checks if `value` is an array.|
-|[isArrayLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLike)|Checks if `value` is array-like.|
-|[isArrayLikeObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLikeObject)|Checks if `value` is array-like and object as well.|
-|[isBoolean](https://github.com/georapbox/js-utils/tree/master/packages/is/isBoolean)|Checks if `value` is a boolean value.|
-|[isDate](https://github.com/georapbox/js-utils/tree/master/packages/is/isDate)|Checks if `value` is a date.|
-|[isElement](https://github.com/georapbox/js-utils/tree/master/packages/is/isElement)|Checks if `value` is a DOM element.|
+|[isArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isArray)|Checks if a value is an array.|
+|[isArrayLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLike)|Checks if a value is array-like.|
+|[isArrayLikeObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLikeObject)|Checks if a value is array-like and object as well.|
+|[isBoolean](https://github.com/georapbox/js-utils/tree/master/packages/is/isBoolean)|Checks if a value is boolean.|
+|[isDate](https://github.com/georapbox/js-utils/tree/master/packages/is/isDate)|Checks if a value is a date object.|
+|[isElement](https://github.com/georapbox/js-utils/tree/master/packages/is/isElement)|Checks if a value is a DOM element.|
 |[isEmail](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmail)|Validates a string as email address.|
-|[isEmpty](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmpty)|Checks if `value` is an empty object, collection, map, or set.|
-|[isEven](https://github.com/georapbox/js-utils/tree/master/packages/is/isEven)|Checks if `value` is even.|
-|[isFalse](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalse)|Checks if `value` is false (strict equality).|
-|[isFalsy](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalsy)|Checks if `value` is falsy.|
-|[isFiniteNum](https://github.com/georapbox/js-utils/tree/master/packages/is/isFiniteNum)|Checks if `value` is a finite number.|
-|[isFlatArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isFlatArray)|Checks if `value` is a flat array.|
-|[isFunction](https://github.com/georapbox/js-utils/tree/master/packages/is/isFunction)|Checks if `value` is a function.|
-|[isHexadecimal](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexadecimal)|Checks if `value` matches a hexadecimal regular expression.|
-|[isHexColor](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexColor)|Checks if `value` matches a hexadecimal color regular expression.|
-|[isInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isInteger)|Checks if `value` is an integer number.|
-|[isMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isMap)|Checks if `value` is classified as a Map object.|
+|[isEmpty](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmpty)|Checks if a value is an empty object, collection, map, or set.|
+|[isEven](https://github.com/georapbox/js-utils/tree/master/packages/is/isEven)|Checks if a value is even.|
+|[isFalse](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalse)|Checks if a value is `false` (strict equality).|
+|[isFalsy](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalsy)|Checks if a value is falsy.|
+|[isFiniteNum](https://github.com/georapbox/js-utils/tree/master/packages/is/isFiniteNum)|Checks if a value is a finite number.|
+|[isFlatArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isFlatArray)|Checks if a value is a flat array.|
+|[isFunction](https://github.com/georapbox/js-utils/tree/master/packages/is/isFunction)|Checks if a value is a function.|
+|[isHexadecimal](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexadecimal)|Checks if a value matches a hexadecimal regular expression.|
+|[isHexColor](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexColor)|Checks if a value matches a hexadecimal color regular expression.|
+|[isInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isInteger)|Checks if a value is an integer number.|
+|[isMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isMap)|Checks if a value is classified as a Map object.|
 |[isNaN](https://github.com/georapbox/js-utils/tree/master/packages/is/isNaN)|Determines whether the passed value is `NaN` and its type is `Number`.|
-|[isNull](https://github.com/georapbox/js-utils/tree/master/packages/is/isNull)|Checks if `value` is null.|
-|[isNullish](https://github.com/georapbox/js-utils/tree/master/packages/is/isNullish)|Checks if `value` is `null` or `undefined`.|
-|[isNumber](https://github.com/georapbox/js-utils/tree/master/packages/is/isNumber)|Checks if `value` is a number.|
-|[isObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isObject)|Checks if `value` is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
-|[isObjectLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isObjectLike)|Checks if `value` is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
-|[isOdd](https://github.com/georapbox/js-utils/tree/master/packages/is/isOdd)|Checks if `value` is odd.|
-|[isPlainObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isPlainObject)|Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).|
-|[isPrimitive](https://github.com/georapbox/js-utils/tree/master/packages/is/isPrimitive)|Checks if `value` is a primitive data type.|
-|[isRegexp](https://github.com/georapbox/js-utils/tree/master/packages/is/isRegexp)|Checks if `value` is a regular expression.|
+|[isNull](https://github.com/georapbox/js-utils/tree/master/packages/is/isNull)|Checks if a value is `null`.|
+|[isNullish](https://github.com/georapbox/js-utils/tree/master/packages/is/isNullish)|Checks if a value is `null` or `undefined`.|
+|[isNumber](https://github.com/georapbox/js-utils/tree/master/packages/is/isNumber)|Checks if a value is a number.|
+|[isObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isObject)|Checks if a value is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
+|[isObjectLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isObjectLike)|Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
+|[isOdd](https://github.com/georapbox/js-utils/tree/master/packages/is/isOdd)|Checks if a value is odd.|
+|[isPlainObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isPlainObject)|Checks if a value is a plain object. An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.|
+|[isPrimitive](https://github.com/georapbox/js-utils/tree/master/packages/is/isPrimitive)|Checks if a value is a primitive data type.|
+|[isRegexp](https://github.com/georapbox/js-utils/tree/master/packages/is/isRegexp)|Checks if a value is a regular expression.|
 |[isSafeInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
-|[isSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isSet)|Checks if `value` is classified as a Set object.|
-|[isString](https://github.com/georapbox/js-utils/tree/master/packages/is/isString)|Checks if `value` is a string.|
-|[isSymbol](https://github.com/georapbox/js-utils/tree/master/packages/is/isSymbol)|Checks if `value` is classified as a Symbol primitive.|
-|[isTrue](https://github.com/georapbox/js-utils/tree/master/packages/is/isTrue)|Checks if `value` is true (strict equality).|
-|[isTruthy](https://github.com/georapbox/js-utils/tree/master/packages/is/isTruthy)|Checks if `value` is truthy.|
-|[isUndefined](https://github.com/georapbox/js-utils/tree/master/packages/is/isUndefined)|Checks if `value` is undefined.|
-|[isWeakMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakMap)|Checks if `value` is classified as a WeakMap object.|
-|[isWeakSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakSet)|Checks if `value` is classified as a WeakSet object.|
+|[isSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isSet)|Checks if a value is classified as a Set object.|
+|[isString](https://github.com/georapbox/js-utils/tree/master/packages/is/isString)|Checks if a value is a string.|
+|[isSymbol](https://github.com/georapbox/js-utils/tree/master/packages/is/isSymbol)|Checks if a value is classified as a Symbol primitive.|
+|[isTrue](https://github.com/georapbox/js-utils/tree/master/packages/is/isTrue)|Checks if a value is `true` (strict equality).|
+|[isTruthy](https://github.com/georapbox/js-utils/tree/master/packages/is/isTruthy)|Checks if a value is truthy.|
+|[isUndefined](https://github.com/georapbox/js-utils/tree/master/packages/is/isUndefined)|Checks if a value is `undefined`.|
+|[isWeakMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakMap)|Checks if a value is classified as a WeakMap object.|
+|[isWeakSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakSet)|Checks if a value is classified as a WeakSet object.|
 
 
 ## Math

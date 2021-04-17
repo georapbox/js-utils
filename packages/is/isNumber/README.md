@@ -1,9 +1,9 @@
 <a name="isNumber"></a>
 
 ## isNumber(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a number.
+Checks if a value is a number.
 
-**Returns**: <code>Boolean</code> - True if 'value' is a number, else false.  
+**Returns**: <code>Boolean</code> - True if value is a number, else false.  
 **Note:**: `NaN` is considered to be a number, as so will return true.  
 
 | Param | Type | Description |

@@ -1,9 +1,9 @@
 <a name="isFalsy"></a>
 
 ## isFalsy(value) ⇒ <code>Boolean</code>
-Checks if 'value' is a falsy one.
+Checks if a value is a falsy one.
 
-**Returns**: <code>Boolean</code> - True if the 'value' is falsy, else false.  
+**Returns**: <code>Boolean</code> - True if the value is falsy, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

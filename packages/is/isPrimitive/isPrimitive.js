@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if `value` is a primitive data type.
+ * Checks if a value is a primitive data type.
  *
  * @param {*} value The value to check.
  * @returns {Boolean} Returns true if value is primitive, otherwise false.

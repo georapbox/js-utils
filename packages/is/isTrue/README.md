@@ -1,9 +1,9 @@
 <a name="isTrue"></a>
 
 ## isTrue(value) ⇒ <code>Boolean</code>
-Checks if 'value' is true (strict equality).
+Checks if a value is `true` (strict equality).
 
-**Returns**: <code>Boolean</code> - True if the 'value' is true, else false.  
+**Returns**: <code>Boolean</code> - True if the value is true, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

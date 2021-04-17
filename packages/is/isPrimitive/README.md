@@ -1,7 +1,7 @@
 <a name="isPrimitive"></a>
 
 ## isPrimitive(value) ⇒ <code>Boolean</code>
-Checks if `value` is a primitive data type.
+Checks if value is a primitive data type.
 
 **Returns**: <code>Boolean</code> - Returns true if value is primitive, otherwise false.  
 

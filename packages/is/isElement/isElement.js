@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if 'value' is a DOM element.
+ * Checks if a value is a DOM element.
  *
  * @param {*} value The value to check.
  * @return {Boolean} True if 'value' is a DOM element, else false.

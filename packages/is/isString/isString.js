@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * Checks if `value` is string.
+ * Checks if a value is string.
  *
- * @param {*} value The value to check if is string.
- * @return {Boolean} True if string, else false.
+ * @param {*} value The value to check.
+ * @return {Boolean} True if value is string, else false.
  * @example
  *
  * isString(['a', 'b', 'c', 'd']);

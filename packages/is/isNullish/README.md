@@ -1,9 +1,9 @@
 <a name="isNullish"></a>
 
 ## isNullish(value) ⇒ <code>Boolean</code>
-Checks if `value` is `null` or `undefined`.
+Checks if value is `null` or `undefined`.
 
-**Returns**: <code>Boolean</code> - `true` if the `value` is `null` or `undefined`; otherwise `false`.  
+**Returns**: <code>Boolean</code> - `true` if the value is `null` or `undefined`; otherwise `false`.  
 
 | Param | Type | Description |
 | --- | --- | --- |

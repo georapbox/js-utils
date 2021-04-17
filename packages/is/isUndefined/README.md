@@ -1,9 +1,9 @@
 <a name="isUndefined"></a>
 
 ## isUndefined(value) ⇒ <code>Boolean</code>
-Checks if 'value' is undefined.
+Checks if a value is `undefined`.
 
-**Returns**: <code>Boolean</code> - True if the 'value' is undefined, else false.  
+**Returns**: <code>Boolean</code> - True if the value is `undefined`, else false.  
 
 | Param | Type | Description |
 | --- | --- | --- |

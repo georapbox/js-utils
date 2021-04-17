@@ -1,7 +1,7 @@
 <a name="isInteger"></a>
 
 ## isInteger(value) ⇒ <code>Boolean</code>
-Checks if 'value' is an integer number.
+Checks if a value is an integer number.
 If the value is NaN or infinite, return false.
 
 **Returns**: <code>Boolean</code> - True if value is integer, else false.  

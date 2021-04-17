@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Checks if `value` is a flat array.
+ * Checks if a value is a flat array.
  * If the value is not array, will return `false`.
  *
  * @param {*} value The value to check.
