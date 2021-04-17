@@ -1,7 +1,9 @@
 <a name="isPlainObject"></a>
 
 ## isPlainObject(value) ⇒ <code>Boolean</code>
-Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).
+Checks if a value is a plain object.
+
+An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.
 
 **Returns**: <code>Boolean</code> - True if "value" is a plain object, else false.  
 **Note**: Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.  

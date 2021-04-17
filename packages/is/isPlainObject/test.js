@@ -27,5 +27,21 @@ describe('is/isPlainObject', function () {
     expect(isPlainObject(100)).toBe(false);
 
     expect(isPlainObject('lorem ipsum')).toBe(false);
+
+    expect(isPlainObject(new Map())).toBe(false);
+
+    expect(isPlainObject(new WeakMap())).toBe(false);
+
+    expect(isPlainObject(new Set())).toBe(false);
+
+    expect(isPlainObject(new WeakSet())).toBe(false);
+
+    expect(isPlainObject(Symbol('foo'))).toBe(false);
+
+    expect(isPlainObject(Symbol({}))).toBe(false);
+
+    expect(isPlainObject(Symbol(new Object({ foo: 'bar' })))).toBe(false);
+
+    expect(isPlainObject(Symbol(new Foo()))).toBe(false);
   });
 });

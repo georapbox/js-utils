@@ -1,7 +1,8 @@
 'use strict';
 
 /**
- * Checks if `value` is a plain object (created using `{}`,  `new Object()`, or `Object.create(null)`).
+ * Checks if a value is a plain object.
+ * An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.
  *
  * @NOTE Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
  * @param {*} value The value to check.
@@ -49,24 +50,13 @@
  * // -> false
  */
 function isPlainObject(value) {
-  var toString = Object.prototype.toString;
-  var proto;
-
-  if (typeof value !== 'object' || value === null || toString.call(value) !== '[object Object]') {
+  if (Object.prototype.toString.call(value) !== '[object Object]') {
     return false;
   }
 
-  if (Object.getPrototypeOf(value) === null) {
-    return true;
-  }
+  var proto = Object.getPrototypeOf(value);
 
-  proto = value;
-
-  while (Object.getPrototypeOf(proto) !== null) {
-    proto = Object.getPrototypeOf(proto);
-  }
-
-  return Object.getPrototypeOf(value) === proto;
+  return proto === null || proto === Object.prototype;
 }
 
 module.exports = isPlainObject;
