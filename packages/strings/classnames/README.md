@@ -3,11 +3,11 @@
 ## classnames() ⇒ <code>String</code>
 Creates a string by conditionally joining classNames together.
 
-**Returns**: <code>String</code> - Returns the final concatenated string.
+**Returns**: <code>string</code> - Returns the final concatenated string.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ...arguments | <code>String</code> \| <code>Object</code> | List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored. |
+| ...arguments | <code>...string</code>\|<code>...object</code> | List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored. |
 
 **Example**
 ```js

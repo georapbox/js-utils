@@ -3,8 +3,8 @@
 /**
  * Creates a string by conditionally joining classNames together.
  *
- * @param {String | Object} ...arguments List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored.
- * @returns {String} Returns the final concatenated string.
+ * @param {...string|...object} ...arguments List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored.
+ * @returns {string} Returns the final concatenated string.
  * @example
  *
  * classnames('foo', 'bar');
