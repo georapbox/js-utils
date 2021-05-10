@@ -24,6 +24,12 @@
  *
  * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
  * // -> ''
+ *
+ * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍊');
+ * // -> '🍌🍉🍇🍓'
+ *
+ * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
+ * // -> ''
  */
 function substringAfter(subjectString, characters, last) {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {

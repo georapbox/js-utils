@@ -16,7 +16,7 @@ If the character or sequence of characters not found, returns an empty string.
 | --- | --- | --- | --- |
 | subjectString | <code>String</code> |  | The string to process. |
 | characters | <code>String</code> |  | The sequence of characters to use as delimiter. Case sensitivity matters. |
-| [last] | <code>Boolean</code> | undefined | If true or any truthy value, will look for the last occurence of the characters specified. |
+| [last] | <code>Boolean</code> | <code>undefined</code> | If true or any truthy value, will look for the last occurence of the characters specified. |
 
 **Example**  
 ```js
@@ -30,5 +30,11 @@ substringAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
 // -> 'AMET'
 
 substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
+// -> ''
+
+substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍊');
+// -> '🍌🍉🍇🍓'
+
+substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
 // -> ''
 ```
