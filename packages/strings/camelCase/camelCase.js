@@ -49,8 +49,8 @@ function camelCase(subjectString) {
   var words = subjectString.split(wordSeparatorRegexp);
 
   return words.filter(Boolean).reduce(function (accum, word, index) {
-    var firstChar = word.substr(0, 1);
-    var restChars = word.substr(1);
+    var firstChar = word.substring(0, 1);
+    var restChars = word.substring(1);
     var tempStr = index === 0 ? firstChar.toLowerCase() + restChars : firstChar.toUpperCase() + restChars;
 
     return accum + tempStr;

@@ -47,7 +47,7 @@ function pascalCase(subjectString) {
 
   return words.reduce(function (accum, word) {
     if (word !== '') {
-      accum += word.substr(0, 1).toUpperCase() + word.substr(1);
+      accum += word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
     return accum;

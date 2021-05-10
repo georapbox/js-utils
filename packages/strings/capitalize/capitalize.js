@@ -25,7 +25,7 @@ function capitalize(subjectString, lowerCaseRest) {
     throw new TypeError('Expected a string for first argument');
   }
 
-  firstChar = subjectString.substr(0, 1).toUpperCase();
+  firstChar = subjectString.substring(0, 1).toUpperCase();
 
   restStr = lowerCaseRest === true
     ? subjectString.substring(1).toLocaleLowerCase()
