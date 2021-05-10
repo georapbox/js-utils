@@ -74,7 +74,6 @@ A collection of standalone javascript utility functions.
 |[strip](https://github.com/georapbox/js-utils/tree/master/packages/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
 |[stripHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripHTML)|Returns a new string with all HTML tags removed.|
 |[stripPunctuation](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|
-|[subStr](https://github.com/georapbox/js-utils/tree/master/packages/strings/subStr)|Returns a substring denoted by n (positive or negative) characters.|
 |[subStrAfter](https://github.com/georapbox/js-utils/tree/master/packages/strings/subStrAfter)|Returns a substring after a specific sequence of character(s).|
 |[subStrBefore](https://github.com/georapbox/js-utils/tree/master/packages/strings/subStrBefore)|Returns a substring before a specific sequence of character(s).|
 |[supplant](https://github.com/georapbox/js-utils/tree/master/packages/strings/supplant)|supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.|
