@@ -12,6 +12,10 @@ describe('String/startsWith', function () {
 
     expect(startsWith('Hello world', null)).toBe(false);
 
+    expect(startsWith('🍏 🍎 🍐 🍊 🍋', '🍏')).toBe(true);
+
+    expect(startsWith('🍏 🍎 🍐 🍊 🍋', '🍎')).toBe(false);
+
     expect(function () {
       return startsWith(123455, '123');
     }).toThrow(new TypeError('Expected a string for first argument'));

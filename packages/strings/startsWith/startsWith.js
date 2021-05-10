@@ -7,7 +7,7 @@
  * @param {String} searchString The characters to be searched for at the start of the string.
  * @param {Number} [position=0] The position in the original string at which to begin searching for `prefix`.
  * @throws {TypeError} If `subjectString` is not string.
- * @return {Boolean} True if `subjectString` starts with `searchString`, else false.
+ * @return {Boolean} Returns `true` if `subjectString` starts with `searchString`; otherwise `false`.
  *
  * @example
  *
@@ -24,6 +24,12 @@
  *
  * startsWith(str, 'orem', 1);
  * // -> true
+ *
+ * startsWith('🍏 🍎 🍐 🍊 🍋', '🍏');
+ * // -> true
+ *
+ * startsWith('🍏 🍎 🍐 🍊 🍋', '🍎');
+ * // -> false
  */
 function startsWith(subjectString, searchString, position) {
   if (typeof subjectString !== 'string') {
@@ -38,11 +44,9 @@ function startsWith(subjectString, searchString, position) {
     return subjectString.startsWith(searchString, position);
   }
 
-  subjectString = subjectString.toString();
-  searchString = searchString.toString();
-  position = position || 0;
+  var pos = position > 0 ? position | 0 : 0;
 
-  return subjectString.substr(position, searchString.length) === searchString;
+  return subjectString.substring(pos, pos + searchString.length) === searchString;
 }
 
 module.exports = startsWith;

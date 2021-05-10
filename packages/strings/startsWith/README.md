@@ -3,7 +3,7 @@
 ## startsWith(subjectString, searchString, [position]) ⇒ <code>Boolean</code>
 Determines whether a string begins with the characters of another string.
 
-**Returns**: <code>Boolean</code> - True if `subjectString` starts with `searchString`, else false.  
+**Returns**: <code>Boolean</code> - Returns `true` if `subjectString` starts with `searchString`; otherwise `false`.  
 **Throws**:
 
 - <code>TypeError</code> If `subjectString` is not string.
@@ -30,4 +30,10 @@ startsWith(str, 'ipsum');
 
 startsWith(str, 'orem', 1);
 // -> true
+
+startsWith('🍏 🍎 🍐 🍊 🍋', '🍏');
+// -> true
+
+startsWith('🍏 🍎 🍐 🍊 🍋', '🍎');
+// -> false
 ```
