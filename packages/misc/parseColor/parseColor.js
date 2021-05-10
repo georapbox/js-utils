@@ -5,7 +5,7 @@
  * or a hexadecimal formatted string to a number.
  *
  * @param {Number|String} color The color value to convert.
- * @param {Boolean} [toNumber] If set to true, a numeric color value is returned.
+ * @param {Boolean} [toNumber] If set to true or any truthy value, a numeric color value is returned.
  * @throws {TypeError} If `color` is not number or string.
  * @return {Number|String} The converted color value.
  * @example
@@ -40,7 +40,7 @@ function parseColor(color, toNumber) {
     throw new TypeError('Expected a number or string for first argument');
   }
 
-  if (toNumber === true) {
+  if (toNumber) {
     if (typeof color === 'number') {
       return color | 0;
     }
@@ -52,7 +52,7 @@ function parseColor(color, toNumber) {
     return parseInt(color, 16);
   } else {
     if (typeof color === 'number') {
-      color = '#' + ('000000' + (color | 0).toString(16)).substr(-6);
+      color = '#' + ('000000' + (color | 0).toString(16)).substring(6);
     }
 
     return color;

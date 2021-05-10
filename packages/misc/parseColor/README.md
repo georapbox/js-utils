@@ -13,7 +13,7 @@ or a hexadecimal formatted string to a number.
 | Param | Type | Description |
 | --- | --- | --- |
 | color | <code>Number</code> &#124; <code>String</code> | The color value to convert. |
-| [toNumber] | <code>Boolean</code> | If set to true, a numeric color value is returned. |
+| [toNumber] | <code>Boolean</code> | If set to true or any truthy value, a numeric color value is returned. |
 
 **Example**  
 ```js
