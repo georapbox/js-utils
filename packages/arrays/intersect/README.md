@@ -1,6 +1,6 @@
 <a name="intersect"></a>
 
-## intersect() ⇒ <code>Array</code>
+## intersect(...arrays) ⇒ <code>Array</code>
 Creates an array of unique values that are included in all given arrays.
 The order of result values is determined by the order they occur in the first array.
 

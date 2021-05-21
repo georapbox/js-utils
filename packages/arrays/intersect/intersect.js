@@ -4,7 +4,7 @@
  * Creates an array of unique values that are included in all given arrays.
  * The order of result values is determined by the order they occur in the first array.
  *
- * @param {Array} ...arrays The arrays to intersect.
+ * @param {...Array} arrays The arrays to intersect.
  * @throws {TypeError} If any of the arguments is not array.
  * @return {Array} The array of intersecting values.
  * @example

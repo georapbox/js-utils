@@ -1,6 +1,6 @@
 <a name="pipe"></a>
 
-## pipe() ⇒ <code>function</code>
+## pipe(...fns) ⇒ <code>function</code>
 Performs left-to-right function composition.
 The leftmost function may have any arity; the remaining functions must be unary.
 
@@ -8,7 +8,7 @@ The leftmost function may have any arity; the remaining functions must be unary.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [...fns] | <code>function</code> | The functions to compose |
+| ...fns | <code>function</code> | The functions to compose |
 
 **Example**  
 ```js

@@ -4,7 +4,7 @@
  * Performs right-to-left function composition.
  * The rightmost function may have any arity; the remaining functions must be unary.
  *
- * @param {function} [...fns] The functions to compose
+ * @param {...function} fns The functions to compose
  * @returns {function} A new function as the result of the composition
  * @example
  *

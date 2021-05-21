@@ -5,7 +5,7 @@
  * the second of which contains the second elements of the given arrays, and so on.
  *
  * @NOTE To support legacy browsers, use `Array.prototype.map` and `Array.prototype.reduce` polyfills.
- * @param {Array} [args...] The arrays to process.
+ * @param {...Array} arrays The arrays to process.
  * @throws {TypeError} If any of the arguments is not array.
  * @return {Array} Returns the new array of grouped elements.
  * @example
@@ -25,29 +25,29 @@
  * zip();
  * // -> []
  */
-function zip(/* ...args */) {
+function zip(/* ...arrays */) {
   var _len = arguments.length;
-  var args = new Array(_len);
+  var arrays = new Array(_len);
   var _key = 0;
   var longest;
 
   for (; _key < _len; _key += 1) {
-    args[_key] = arguments[_key];
+    arrays[_key] = arguments[_key];
   }
 
   while (_len--) {
-    if (!Array.isArray(args[_len])) {
+    if (!Array.isArray(arrays[_len])) {
       throw new TypeError('Expected all arguments passed to be arrays');
     }
   }
 
   // Find the longest of the arrays, to begin mapping from this one.
-  longest = args.reduce(function (a, b) {
+  longest = arrays.reduce(function (a, b) {
     return a.length > b.length ? a : b;
   }, []);
 
   return longest.map(function (item, index) {
-    return args.map(function (array) {
+    return arrays.map(function (array) {
       return array[index];
     });
   });

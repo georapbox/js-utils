@@ -1,6 +1,6 @@
 <a name="zip"></a>
 
-## zip() ⇒ <code>Array</code>
+## zip(...arrays) ⇒ <code>Array</code>
 Creates an array of grouped elements, the first of which contains the first elements of the given arrays,
 the second of which contains the second elements of the given arrays, and so on.
 
@@ -13,7 +13,7 @@ the second of which contains the second elements of the given arrays, and so on.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [args...] | <code>Array</code> | The arrays to process. |
+| ...arrays | <code>Array</code> | The arrays to process. |
 
 **Example**  
 ```js

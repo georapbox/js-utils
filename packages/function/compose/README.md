@@ -1,6 +1,6 @@
 <a name="compose"></a>
 
-## compose() ⇒ <code>function</code>
+## compose(...fns) ⇒ <code>function</code>
 Performs right-to-left function composition.
 The rightmost function may have any arity; the remaining functions must be unary.
 
@@ -8,7 +8,7 @@ The rightmost function may have any arity; the remaining functions must be unary
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [...fns] | <code>function</code> | The functions to compose |
+| ...fns | <code>function</code> | The functions to compose |
 
 **Example**  
 ```js
