@@ -6,6 +6,8 @@ describe('String/kebabCase', function () {
 
     expect(kebabCase('the quick brown fox jumps over the lazy dog')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');
 
+    expect(kebabCase('   the quick brown fox jumps over the lazy dog   ')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');
+
     expect(kebabCase('the quick 😀 brown fox jumps over the lazy dog')).toBe('the-quick-😀-brown-fox-jumps-over-the-lazy-dog');
 
     expect(kebabCase('The Quick Brown Fox Jumps Over The Lazy Dog')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');

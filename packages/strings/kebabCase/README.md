@@ -19,6 +19,9 @@ Combines words of a string by replacing each space with a dash (-).
 kebabCase('the quick brown fox jumps over the lazy dog');
 // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
 
+kebabCase('   the quick brown fox jumps over the lazy dog   ');
+// -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+
 kebabCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
 // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
 
