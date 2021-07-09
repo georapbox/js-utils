@@ -193,6 +193,7 @@ A collection of standalone javascript utility functions.
 |[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
 |[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
 |[isEventSupported](https://github.com/georapbox/js-utils/tree/master/packages/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
+|[mediaQuery](https://github.com/georapbox/js-utils/tree/master/packages/dom/mediaQuery)|Determines if the document matches a media query string.|
 |[scroll](https://github.com/georapbox/js-utils/tree/master/packages/dom/scroll)|Easing based scrolling to a specified y point inside page.|
 |[whichAnimationEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
