@@ -14,7 +14,15 @@ Gets the `value` at path of `object`. If the resolved value is `undefined`, the 
 
 **Example**
 ```js
-var object = { 'a': [{ 'b': { 'c': 3 } }] };
+var object = {
+  a: [
+    {
+      b: {
+        c: 3
+      }
+    }
+  ]
+};
 
 get(object, 'a.0.b.c');
 // -> 3
@@ -22,9 +30,9 @@ get(object, 'a.0.b.c');
 get(object, ['a', '0', 'b', 'c']);
 // -> 3
 
-get(object, 'a.b.c');
+get(object, 'a[1].b.c');
 // -> undefined
 
-get(object, 'a.b.c', 'DEFAULT');
+get(object, 'a[1].b.c', 'DEFAULT');
 // -> 'DEFAULT'
 ```
