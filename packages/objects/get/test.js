@@ -41,5 +41,17 @@ describe('Object/get', function () {
 
     expect(get('string', 'a.b.c')).toBeUndefined();
     expect(get('string', ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
+
+    expect(get(12345, 'a.b.c')).toBeUndefined();
+    expect(get(12345, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
+
+    expect(get(null, 'a.b.c')).toBeUndefined();
+    expect(get(null, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
+
+    expect(get(void 0, 'a.b.c')).toBeUndefined();
+    expect(get(void 0, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
+
+    expect(get(new Set(), 'a.b.c')).toBeUndefined();
+    expect(get(new Set(), ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
   });
 });
