@@ -14,9 +14,18 @@ describe('Object/get', function () {
 
     var o2 = {
       a: {
-        b: null
+        b: null,
+        c: 'C'
       }
     };
+
+    var o3 = {
+      0: {
+        1: 'foo'
+      }
+    };
+
+    var o4 = ['a', 'b'];
 
     expect(get(o1, 'a[0].b.c')).toBe(3);
     expect(get(o1, ['a', '0', 'b', 'c'])).toBe(3);
@@ -38,6 +47,16 @@ describe('Object/get', function () {
 
     expect(get(o2, 'a.b.c', 'DEFAULT')).toBe('DEFAULT');
     expect(get(o2, ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
+
+    expect(get(o2, ['a', '', null, 'b', void 0])).toBeNull();
+    expect(get(o2, ['a', '', null, 'c', void 0])).toBe('C');
+
+    expect(get(o3, '0.1')).toBe('foo');
+    expect(get(o3, ['0', '1'])).toBe('foo');
+    expect(get(o3, [0, 1])).toBe('foo');
+
+    expect(get(o4, 0)).toBe('a');
+    expect(get(o4, '1')).toBe('b');
 
     expect(get('string', 'a.b.c')).toBeUndefined();
     expect(get('string', ['a', 'b', 'c'], 'DEFAULT')).toBe('DEFAULT');
