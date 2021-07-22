@@ -24,11 +24,15 @@
  * // -> 'DEFAULT'
  */
 function get(object, path, defaultValue) {
-  var result = String.prototype.split.call(path, /[,[\].]+?/)
-    .filter(Boolean)
-    .reduce(function (res, key) {
-      return res != null ? res[key] : void 0;
-    }, object);
+  var keys = String.prototype.split.call(path, /[,[\].]+?/);
+
+  var result = keys.reduce(function (accum, key) {
+    if (key) {
+      return accum != null ? accum[key] : void 0;
+    } else {
+      return accum;
+    }
+  }, object);
 
   return result === void 0 || result === object ? defaultValue : result;
 }
