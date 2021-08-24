@@ -1,4 +1,4 @@
-const partial = require('./partial.js');
+var partial = require('./partial.js');
 
 describe('Function/partial', function () {
   it('partially applies provided function to its arguments', function () {

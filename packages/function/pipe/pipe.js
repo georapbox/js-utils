@@ -8,8 +8,13 @@
  * @returns {function} A new function as the result of the composition
  * @example
  *
- * const inc = x => x + 1;
- * const double = x => x * 2;
+ * function inc(x) {
+ *   return x + 1;
+ * }
+ *
+ * function double(x) {
+ *   return x * 2;
+ * }
  *
  * pipe(inc, double)(3); // -> 8
  * pipe(double, inc)(3); // -> 7
