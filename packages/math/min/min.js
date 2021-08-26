@@ -3,8 +3,13 @@
 /**
  * Finds the smallest of zero or more numbers.
  *
- * @param {Number|Array} [args...] A set of numbers as arguments, or an array of numbers as the only argument.
- * @return {Number} The smallest number from the arguments provided.
+ * NOTE: The following function uses `Function.prototype.apply` to get the maximum of an array.
+ * This should be avoided for arrays with relatively many elements. See links below for more details:
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max#getting_the_maximum_element_of_an_array
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions
+ *
+ * @param {...Number|Array} [...args] A set of numbers as arguments, or an array of numbers as the only argument.
+ * @returns {Number} The smallest number from the arguments provided.
  * @example
  *
  * min(5);

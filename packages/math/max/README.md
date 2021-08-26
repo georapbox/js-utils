@@ -3,11 +3,16 @@
 ## max() ⇒ <code>Number</code>
 Finds the largest of zero or more numbers.
 
+NOTE: The following function uses `Function.prototype.apply` to get the maximum of an array.  
+This should be avoided for arrays with relatively many elements. See links below for more details:  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max#getting_the_maximum_element_of_an_array  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions
+
 **Returns**: <code>Number</code> - The largest number from the arguments provided.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [args...] | <code>Number</code> &#124; <code>Array</code> | A set of numbers as arguments, or an array of numbers as the only argument. |
+| [...args] | <code>Number</code> \| <code>Array</code> | A set of numbers as arguments, or an array of numbers as the only argument. |
 
 **Example**  
 ```js
