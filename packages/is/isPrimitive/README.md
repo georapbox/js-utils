@@ -3,7 +3,7 @@
 ## isPrimitive(value) ⇒ <code>Boolean</code>
 Checks if value is a primitive data type.
 
-**Returns**: <code>Boolean</code> - Returns true if value is primitive, otherwise false.  
+**Returns**: <code>Boolean</code> - Returns `true` if value is primitive, otherwise `false`.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -11,12 +11,13 @@ Checks if value is a primitive data type.
 
 **Example**  
 ```js
-isPrimitive(null);
-// -> true
+isPrimitive(null); // -> true
 
 isPrimitive(undefined); // -> true
 
 isPrimitive(123); // -> true
+
+isPrimitive(Infinity); // -> true
 
 isPrimitive(NaN); // -> true
 

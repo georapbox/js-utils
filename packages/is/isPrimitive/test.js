@@ -8,6 +8,12 @@ describe('is/isPrimitive', function () {
 
     expect(isPrimitive(123)).toBe(true);
 
+    expect(isPrimitive(BigInt(0))).toBe(true);
+
+    expect(isPrimitive(Infinity)).toBe(true);
+
+    expect(isPrimitive(-Infinity)).toBe(true);
+
     expect(isPrimitive(NaN)).toBe(true);
 
     expect(isPrimitive('foo')).toBe(true);

@@ -4,15 +4,16 @@
  * Checks if a value is a primitive data type.
  *
  * @param {*} value The value to check.
- * @returns {Boolean} Returns true if value is primitive, otherwise false.
+ * @returns {Boolean} Returns `true` if value is primitive, otherwise `false`.
  * @example
  *
- * isPrimitive(null);
- * // -> true
+ * isPrimitive(null); // -> true
  *
  * isPrimitive(undefined); // -> true
  *
  * isPrimitive(123); // -> true
+ *
+ * isPrimitive(Infinity); // -> true
  *
  * isPrimitive(NaN); // -> true
  *
@@ -43,7 +44,11 @@
  * isPrimitive(/s+/g); // -> false
  */
 function isPrimitive(value) {
-  return value !== Object(value);
+  if (typeof value === 'object') {
+    return value === null;
+  }
+
+  return typeof value !== 'function';
 }
 
 module.exports = isPrimitive;
