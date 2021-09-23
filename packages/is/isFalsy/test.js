@@ -16,6 +16,10 @@ describe('is/isFalsy', function () {
 
     expect(isFalsy(0)).toBe(true);
 
+    expect(isFalsy(-0)).toBe(true);
+
+    expect(isFalsy(BigInt(0))).toBe(true);
+
     expect(isFalsy('')).toBe(true);
   });
 });

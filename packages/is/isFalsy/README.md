@@ -3,7 +3,7 @@
 ## isFalsy(value) ⇒ <code>Boolean</code>
 Checks if a value is a falsy one.
 
-**Returns**: <code>Boolean</code> - True if the value is falsy, else false.  
+**Returns**: <code>Boolean</code> - Returns `true` if the value is falsy, otherwise `false`.  
 
 | Param | Type | Description |
 | --- | --- | --- |

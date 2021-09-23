@@ -4,7 +4,7 @@
  * Checks if a value is a falsy one.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the value is falsy, else false.
+ * @returns {Boolean} Returns `true` if the value is falsy, otherwise `false`.
  * @example
  *
  * isFalsy(true);
@@ -32,11 +32,7 @@
  * // -> true
  */
 function isFalsy(value) {
-  return value == null // value is non existy
-    || value === false // obviously :)
-    || value !== value // check if is NaN (NaN is falsy)
-    || value === '' // empty string is falsy
-    || value === 0; // 0 is the only falsy number
+  return !value;
 }
 
 module.exports = isFalsy;
