@@ -4,7 +4,7 @@
  * Checks if a value is a truthy one.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the value is truthy, else false.
+ * @return {Boolean} Returns `true` if the value is truthy, otherwise `false`.
  * @example
  *
  * isTruthy(true);
@@ -32,11 +32,7 @@
  * // -> false
  */
 function isTruthy(value) {
-  return value != null // value is existy
-    && value !== false // obviously :)
-    && value === value // check if is not NaN (NaN is falsy)
-    && value !== '' // empty string is falsy
-    && value !== 0; // 0 is the only falsy number
+  return !!value;
 }
 
 module.exports = isTruthy;
