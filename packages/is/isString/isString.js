@@ -20,8 +20,7 @@
  * // -> false
  */
 function isString(value) {
-  return value != null
-    && (typeof value === 'string' || Object.prototype.toString.call(value) === '[object String]');
+  return typeof value === 'string' || Object.prototype.toString.call(value) === '[object String]';
 }
 
 module.exports = isString;
