@@ -24,7 +24,7 @@
  * clamp(120, 0, 100);
  * // -> 100
  *
- * clamp(-5, 0, NaN); // If any of lower or upper bound are `NaN`, they will be converted to `0`.
+ * clamp(-5, NaN, 5); // If any of lower or upper bound are `NaN`, they will be converted to `0`.
  * // -> 0
  *
  * clamp(120, 100, 0); // The order of lower and upper bounds is reversed (100 > 0)
