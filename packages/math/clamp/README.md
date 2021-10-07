@@ -30,9 +30,9 @@ clamp(-15, 0, 100);
 clamp(120, 0, 100);
 // -> 100
 
-clamp(10, NaN, NaN);
-// -> NaN
+clamp(-5, 0, NaN); // If any of lower or upper bound are `NaN`, they will be converted to `0`.
+// -> 0
 
-clamp(120, 100, 0); // order of min and max is reversed (100 > 0)
+clamp(120, 100, 0); // The order of lower and upper bounds is reversed (100 > 0)
 // -> 100
 ```

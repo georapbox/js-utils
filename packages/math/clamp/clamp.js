@@ -24,18 +24,26 @@
  * clamp(120, 0, 100);
  * // -> 100
  *
- * clamp(10, NaN, NaN);
- * // -> NaN
+ * clamp(-5, 0, NaN); // If any of lower or upper bound are `NaN`, they will be converted to `0`.
+ * // -> 0
  *
- * clamp(120, 100, 0); // order of min and max is reversed (100 > 0)
+ * clamp(120, 100, 0); // The order of lower and upper bounds is reversed (100 > 0)
  * // -> 100
  */
-function clamp(value, min, max) {
-  if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
+function clamp(value, lower, upper) {
+  if (typeof value !== 'number' || typeof lower !== 'number' || typeof upper !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  return Math.min(Math.max(value, Math.min(min, max)), Math.max(min, max));
+  if (lower !== lower) { // lower bound is not `NaN`
+    lower = 0;
+  }
+
+  if (upper !== upper) { // upper bound is not `NaN`
+    upper = 0;
+  }
+
+  return Math.min(Math.max(value, Math.min(lower, upper)), Math.max(lower, upper));
 }
 
 module.exports = clamp;

@@ -2,6 +2,8 @@ var clamp = require('./clamp');
 
 describe('Math/clamp', function () {
   it('clamps number within the inclusive lower and upper bounds', function () {
+    expect(clamp(5, 0, 10)).toBe(5);
+
     expect(clamp(10, -5, 5)).toBe(5);
 
     expect(clamp(-10, -5, 5)).toBe(-5);
@@ -10,7 +12,11 @@ describe('Math/clamp', function () {
 
     expect(clamp(120, 0, 100)).toBe(100);
 
-    expect(clamp(10, NaN, NaN)).toBe(NaN);
+    expect(clamp(-5, NaN, NaN)).toBe(0);
+
+    expect(clamp(-5, NaN, 5)).toBe(0);
+
+    expect(clamp(-5, 0, NaN)).toBe(0);
 
     expect(clamp(120, 100, 0)).toBe(100);
 
