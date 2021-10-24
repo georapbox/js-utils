@@ -147,7 +147,7 @@ A collection of standalone javascript utility functions.
 |[isNull](https://github.com/georapbox/js-utils/tree/master/packages/is/isNull)|Checks if a value is `null`.|
 |[isNullish](https://github.com/georapbox/js-utils/tree/master/packages/is/isNullish)|Checks if a value is `null` or `undefined`.|
 |[isNumber](https://github.com/georapbox/js-utils/tree/master/packages/is/isNumber)|Checks if a value is a number.|
-|[isObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isObject)|Checks if a value is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
+|[isObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isObject)|Checks if a value is the [language type](https://262.ecma-international.org/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
 |[isObjectLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isObjectLike)|Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
 |[isOdd](https://github.com/georapbox/js-utils/tree/master/packages/is/isOdd)|Checks if a value is odd.|
 |[isPlainObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isPlainObject)|Checks if a value is a plain object. An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.|

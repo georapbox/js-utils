@@ -1,13 +1,20 @@
 'use strict';
 
 /**
- * Checks if a value is the [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
+ * Checks if a value is the [language type](https://262.ecma-international.org/#sec-ecmascript-language-types) of `Object`.
+ * (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is an object, else false.
+ * @return {Boolean} Returns `true` if `value` is an object, else `false`.
  * @example
  *
  * isObject({});
+ * // -> true
+ *
+ * isObject(Object.create({}));
+ * // -> true
+ *
+ * isObject(Object.create(null));
  * // -> true
  *
  * isObject(function test() {});
@@ -16,20 +23,26 @@
  * isObject([1, 2, 3]);
  * // -> true
  *
- * isObject('Hello World!');
- * // -> false
- *
- * isObject(false);
- * // -> false
+ * isObject(new Number(0));
+ * // -> true
  *
  * isObject(new String('Hello world'));
  * // -> true
  *
- * isObject();
+ * isObject(new RegExp('s+')));
+ * // -> true
+ *
+ * isObject(/s+/);
+ * // -> true
+ *
+ * isObject(0);
+ * // -> false
+ *
+ * isObject('Hello world');
  * // -> false
  */
 function isObject(value) {
-  return value != null && (typeof value === 'object' || typeof value === 'function');
+  return !!value && (typeof value === 'object' || typeof value === 'function');
 }
 
 module.exports = isObject;
