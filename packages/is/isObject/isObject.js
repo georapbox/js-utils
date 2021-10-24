@@ -35,10 +35,25 @@
  * isObject(/s+/);
  * // -> true
  *
+ * isObject(new Map());
+ * // -> true
+ *
+ * isObject(new Set());
+ * // -> true
+ *
  * isObject(0);
  * // -> false
  *
  * isObject('Hello world');
+ * // -> false
+ *
+ * isObject(null);
+ * // -> false
+ *
+ * isObject(Boolean(1));
+ * // -> false
+ *
+ * isObject(Symbol('foo'));
  * // -> false
  */
 function isObject(value) {

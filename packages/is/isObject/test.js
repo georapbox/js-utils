@@ -35,5 +35,7 @@ describe('is/isObject', function () {
     expect(isObject(true)).toBe(false);
 
     expect(isObject(Boolean(1))).toBe(false);
+
+    expect(isObject(null)).toBe(false);
   });
 });
