@@ -7,6 +7,9 @@
     "commonjs": true,
     "es6": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
   "globals": {
     "Promise": false,
     "BigInt": false
