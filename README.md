@@ -91,6 +91,7 @@ A collection of standalone javascript utility functions.
 
 |Name|Description|
 |--------|-----------|
+|[deepClone](https://github.com/georapbox/js-utils/tree/master/packages/objects/deepClone)|Creates a deep clone of a given value.|
 |[extend](https://github.com/georapbox/js-utils/tree/master/packages/objects/extend)|Merge the contents of two or more objects together into the first object.|
 |[forIn](https://github.com/georapbox/js-utils/tree/master/packages/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[forOwn](https://github.com/georapbox/js-utils/tree/master/packages/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
