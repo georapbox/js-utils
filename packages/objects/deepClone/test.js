@@ -9,13 +9,15 @@ describe('Object/deepClone', function () {
     };
 
     original.obj._proto_ = { foo: 'bar' };
-    original.arr.foobar = 'foobar';
+    original.arr.foobar = { foo: 'bar' };
 
     var copy = deepClone(original);
 
     expect(original.obj === copy.obj).toBe(false);
+    expect(original.obj._proto_ === copy.obj._proto_).toBe(false);
     expect(original.arr === copy.arr).toBe(false);
     expect(original.arr[0] === copy.arr[0]).toBe(false);
+    expect(original.arr.foobar === copy.arr.foobar).toBe(false);
     expect(original.date === copy.date).toBe(false);
   });
 });
