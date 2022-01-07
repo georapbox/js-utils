@@ -208,13 +208,6 @@ A collection of standalone javascript utility functions.
 |[highResolutionCanvas](https://github.com/georapbox/js-utils/tree/master/packages/canvas/highResolutionCanvas)|Processes an `HTMLCanvasElement` by downsampling on the canvas to ensure that the drawn visuals do not look blurry on high-DPI screens.|
 
 
-## Misc
-
-|Name|Description|
-|--------|-----------|
-|[hexToRGB](https://github.com/georapbox/js-utils/tree/master/packages/misc/hexToRGB)|Converts a color value (number or hexadecimal string) to RGB(A) format.|
-|[parseColor](https://github.com/georapbox/js-utils/tree/master/packages/misc/parseColor)|Converts a color number value to a hexadecimal formatted string, or a hexadecimal formatted string to a number.|
-
 ## Installation
 
 - To clone the repository, run: `git clone https://github.com/georapbox/js-utils.git`

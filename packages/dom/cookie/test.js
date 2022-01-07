@@ -1,6 +1,6 @@
 var cookie = require('./cookie');
 
-describe('misc/cookie', function () {
+describe('dom/cookie', function () {
   it('should create, read and delete cookies', function () {
     cookie.set('cookie-1', 'value-1');
     expect(cookie.get('cookie-1')).toBe('value-1');
