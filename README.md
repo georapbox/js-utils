@@ -143,6 +143,7 @@ A collection of standalone javascript utility functions.
 |[isHexadecimal](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexadecimal)|Checks if a value matches a hexadecimal regular expression.|
 |[isHexColor](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexColor)|Checks if a value matches a hexadecimal color regular expression.|
 |[isInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isInteger)|Checks if a value is an integer number.|
+|[isIterable](https://github.com/georapbox/js-utils/tree/master/packages/is/isIterable)|Checks if a value is an iterable.|
 |[isMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isMap)|Checks if a value is classified as a Map object.|
 |[isNaN](https://github.com/georapbox/js-utils/tree/master/packages/is/isNaN)|Determines whether the passed value is `NaN` and its type is `Number`.|
 |[isNull](https://github.com/georapbox/js-utils/tree/master/packages/is/isNull)|Checks if a value is `null`.|
