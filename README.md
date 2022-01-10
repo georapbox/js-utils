@@ -154,6 +154,7 @@ A collection of standalone javascript utility functions.
 |[isOdd](https://github.com/georapbox/js-utils/tree/master/packages/is/isOdd)|Checks if a value is odd.|
 |[isPlainObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isPlainObject)|Checks if a value is a plain object. An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.|
 |[isPrimitive](https://github.com/georapbox/js-utils/tree/master/packages/is/isPrimitive)|Checks if a value is a primitive data type.|
+|[isPromise](https://github.com/georapbox/js-utils/tree/master/packages/is/isPromise)|Check if a value is a native ES2015 Promise.|
 |[isRegexp](https://github.com/georapbox/js-utils/tree/master/packages/is/isRegexp)|Checks if a value is a regular expression.|
 |[isSafeInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
 |[isSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isSet)|Checks if a value is classified as a Set object.|
