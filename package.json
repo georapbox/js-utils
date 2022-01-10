@@ -1,15 +1,12 @@
 {
   "name": "js-utils",
   "version": "1.0.0",
-  "description": "A collection of standalone javascript utility functions.",
+  "description": "A collection of dependency-free JavaScript utility functions.",
   "author": "George Raptis <georapbox@gmail.com>",
   "homepage": "https://github.com/georapbox/js-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:georapbox/js-utils.git"
-  },
-  "config": {
-    "port": "3333"
   },
   "license": "(MIT)",
   "scripts": {
