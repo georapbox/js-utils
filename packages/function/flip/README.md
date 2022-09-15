@@ -1,23 +1,21 @@
 <a name="flip"></a>
 
-## flip(func) ⇒ <code>function</code>
+## flip(fn) ⇒ <code>function</code>
 Creates a function that invokes the original function with its parameters reversed.
 
 **Returns**: <code>function</code> - Returns the new flipped function.  
 **Throws**:
 
-- <code>TypeError</code> Throws if `func` is not a function.
+- <code>TypeError</code> Throws if `fn` is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| func | <code>function</code> | The function to invoke with its parameters reversed. |
+| fn | <code>function</code> | The function to invoke with its parameters reversed. |
 
-**Example**  
+**Example**
 ```js
-var flipped = flip(function () {
-  return Array.prototype.slice.call(arguments, 0);
-});
+const flipped = flip((...args) => args);
 
-flipped(1, 2, 3, 4); // -> [4, 3, 2, 1]
+flipped(1, 2, 3, 4); // => [4, 3, 2, 1]
 ```

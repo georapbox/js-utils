@@ -1,4 +1,4 @@
-var debounce = require('./debounce');
+const debounce = require('./debounce');
 
 describe('Function/debounce', function () {
   beforeEach(function () {
@@ -10,16 +10,16 @@ describe('Function/debounce', function () {
   });
 
   it('debounces a function; triggers the function on the trailing edge', function () {
-    var func = jest.fn();
-    var delay = 1000; // ms
-    var debouncedFunc = debounce(func, delay);
+    const func = jest.fn();
+    const delay = 1000; // ms
+    const debouncedFunc = debounce(func, delay);
 
     // Call it immediately
     debouncedFunc();
     expect(func).toHaveBeenCalledTimes(0);
 
     // Call it several times with 500ms (< 1000ms) between each call
-    for (var i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 5; i += 1) {
       jest.advanceTimersByTime(500);
       debouncedFunc();
     }
@@ -33,16 +33,16 @@ describe('Function/debounce', function () {
   });
 
   it('debounces a function; triggers the function on the leading edge', function () {
-    var func = jest.fn();
-    var delay = 1000; // ms
-    var debouncedFunc = debounce(func, delay, true);
+    const func = jest.fn();
+    const delay = 1000; // ms
+    const debouncedFunc = debounce(func, delay, true);
 
     // Call it immediately
     debouncedFunc();
     expect(func).toHaveBeenCalledTimes(1);
 
     // Call it several times with 500ms (< 1000ms) between each call
-    for (var i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 5; i += 1) {
       jest.advanceTimersByTime(500);
       debouncedFunc();
     }

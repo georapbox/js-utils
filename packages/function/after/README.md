@@ -1,26 +1,25 @@
 <a name="after"></a>
 
-## after(n, func) ⇒ <code>function</code>
-Creates a function that invokes `func` once it's called `n` or more times.
-`func` is invoked with the this binding and arguments of the created function.
+## after(n, fn) ⇒ <code>function</code>
+Creates a function that invokes `fn` once it's called `n` or more times.
+`fn` is invoked with the this binding and arguments of the created function.
 
 **Returns**: <code>function</code> - The new restricted function.  
 **Throws**:
 
 - <code>TypeError</code> If `n` is not number.
-- <code>TypeError</code> If `func` is not function.
+- <code>TypeError</code> If `fn` is not function.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
-| n | <code>Number</code> | The number of calls before `func` is invoked.        A positive integer is expected.        If a negative number or 0, `func` is invoked immediately.        If `NaN`, `-Infinity` or `Infinity`, `func` is never invoked. |
-| func | <code>function</code> | The function to restrict. |
+| n | <code>Number</code> | The number of calls before `fn` is invoked. A positive integer is expected. If a negative number or 0, `fn` is invoked immediately. If `NaN`, `-Infinity` or `Infinity`, `fn` is never invoked. |
+| fn | <code>function</code> | The function to restrict. |
 
-**Example**  
+**Example**
 ```js
-var doSomething = after(4, function () {
-  console.log('Do something...');
-});
+const doSomething = after(4, () => console.log('Do something...');
 
 button.addEventListener('click', doSomething);
-// -> logs "Do something..." after button is clicked at least 4 times.
+// => logs "Do something..." after button is clicked at least 4 times.
 ```

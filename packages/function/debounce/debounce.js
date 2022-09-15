@@ -6,42 +6,40 @@
  * 'n' milliseconds. If `immediate` is passed, trigger the function on the
  * leading edge, instead of the trailing.
  *
- * @param {function} func The function to be executed.
- * @param {Number} [wait] Time of delay in milliseconds. It is required if `immediate` is used.
- * @param {Boolean} [immediate] If true or any truthy value, triggers the function on the leading edge.
- * @throws {TypeError} If `func` is not function.
+ * @param {function} fn The function to be executed.
+ * @param {Number} [wait=0] Time of delay in milliseconds. It is required if `immediate` is used.
+ * @param {Boolean} [immediate=false] If true or any truthy value, triggers the function on the leading edge.
+ * @throws {TypeError} If `fn` is not function.
  * @returns {function} A new debounced function.
  * @example
  *
- * var debouncedHandler = debounce(function () {
+ * const debouncedHandler = debounce(() => {
  *   // Do your thing here...
  * }, 250);
  *
  * window.addEventListener('resize', debouncedHandler, false);
  */
-function debounce(func, wait, immediate) {
-  var timerId = null;
+const debounce = (fn, wait = 0, immediate = false) => {
+  let timerId = null;
 
-  if (typeof func !== 'function') {
+  if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return function debounced() {
-    var context = this;
-    var args = arguments;
+  return (...args) => {
     clearTimeout(timerId);
 
     if (immediate && !timerId) {
-      func.apply(context, args);
+      fn(...args);
     }
 
-    timerId = setTimeout(function () {
+    timerId = setTimeout(() => {
       timerId = null;
       if (!immediate) {
-        func.apply(context, args);
+        fn(...args);
       }
     }, wait);
   };
-}
+};
 
 module.exports = debounce;

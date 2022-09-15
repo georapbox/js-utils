@@ -1,22 +1,14 @@
-var partialRight = require('./partialRight.js');
+const partialRight = require('./partialRight.js');
 
-describe('Function/partialRight', function () {
-  var greet = function (greeting, title, fname, lname) {
-    return greeting + ', ' + title + ' ' + fname + ' ' + lname + '.';
-  };
-  var greetMrJoeBlack = partialRight(greet, 'Mr.', 'Joe', 'Black');
+describe('partialRight', () => {
+  const greet = (greeting, title, fname, lname) => `${greeting}, ${title} ${fname} ${lname}.`;
+  const greetMrJoeBlack = partialRight(greet, 'Mr.', 'Joe', 'Black');
 
-  it('partially applies provided function to its arguments', function () {
+  it('partially applies provided function to its arguments', () => {
     expect(greetMrJoeBlack('Hello')).toBe('Hello, Mr. Joe Black.');
   });
 
-  it('providing more arguments than expected in the newly created function should affect the result', function () {
+  it('providing more arguments than expected in the newly created function should affect the result', () => {
     expect(greetMrJoeBlack('Hello', 'there')).toBe('Hello, there Mr. Joe.');
-  });
-
-  it('throws if first argument is not a function', function () {
-    expect(function () {
-      return partialRight(null, 'foo', 'bar');
-    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });

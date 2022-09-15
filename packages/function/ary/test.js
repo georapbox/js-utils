@@ -1,9 +1,7 @@
-var ary = require('./ary.js');
+const ary = require('./ary.js');
 
 describe('Function/ary', function () {
-  var fn = function (a, b) {
-    return [a, b];
-  };
+  const fn = (a, b) => ([a, b]);
 
   it('should create a function that accepts up to 1 argument, ignoring any additional arguments', function () {
     expect(ary(fn, 1)()).toStrictEqual([void 0, void 0]);

@@ -1,4 +1,4 @@
-var throttle = require('./throttle');
+const throttle = require('./throttle');
 
 describe('Function/throttle', function () {
   beforeEach(function () {
@@ -10,9 +10,9 @@ describe('Function/throttle', function () {
   });
 
   it('limits the number of times a function can be called in a given period', function () {
-    var func = jest.fn();
+    const func = jest.fn();
 
-    var throttled = throttle(func);
+    const throttled = throttle(func);
 
     throttled();
     throttled();

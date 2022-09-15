@@ -1,9 +1,7 @@
-var unary = require('./unary.js');
+const unary = require('./unary.js');
 
 describe('Function/unary', function () {
-  var fn = function (a, b) {
-    return [a, b];
-  };
+  const fn = (a, b) => ([a, b]);
 
   it('should create a function that accepts up to 1 argument, ignoring any additional arguments', function () {
     expect(unary(fn)()).toStrictEqual([void 0, void 0]);

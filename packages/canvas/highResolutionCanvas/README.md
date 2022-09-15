@@ -17,9 +17,9 @@ Downsampling on the canvas is achieved by performing the following three actions
 
 **Example**
 ```js
-var canvas = document.querySelector('canvas');
+const canvas = document.querySelector('canvas');
 
-var context = highResolutionCanvas(canvas);
+const context = highResolutionCanvas(canvas);
 
 // Use the `context` variable from now on to access the `CanvasRenderingContext2D` interface.
 context.beginPath();

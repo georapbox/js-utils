@@ -1,34 +1,31 @@
 <a name="partial"></a>
 
-## partial(func) ⇒ <code>function</code>
-Creates a new function that invokes the provided function `func` with `partials` prepended to the arguments it receives.
+## partial(fn, ...args) ⇒ <code>function</code>
+Creates a new function that invokes the provided function `fn` with `partials` prepended to the arguments it receives.
 
 **Returns**: <code>function</code> - Returns the new partially applied function.  
 **Throws**:
 
-- <code>TypeError</code> Throws if `func` is not a function.
+- <code>TypeError</code> Throws if `fn` is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| func | <code>function</code> | The function to partially apply arguments to. |
+| fn | <code>function</code> | The function to partially apply arguments to. |
 | [...args] | <code>\*</code> | The arguments to be partially applied. |
 
-**Example**  
+**Example**
 ```js
-var add = function (a, b, c) {
-  return a + b + c;
-};
+const add = (a, b, c) => a + b + c;
+const p1 = partial(add, 1);
+p1(2, 3); // => 6
 
-var p1 = partial(add, 1);
-p1(2, 3); // -> 6
+const p2 = partial(add, 10, 20);
+p2(30); // => 60
 
-var p2 = partial(add, 10, 20);
-p2(30); // -> 60
+const p3 = partial(add, 100, 200, 300);
+p3(); // => 600
 
-var p3 = partial(add, 100, 200, 300);
-p3(); // -> 600
-
-var p4 = partial(add);
-p4(5, 10, 15); // -> 30
+const p4 = partial(add);
+p4(5, 10, 15); // => 30
 ```

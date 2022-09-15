@@ -11,26 +11,20 @@
  * parameter with default value, the `func.length` is not properly calculated.
  * @throws {TypeError} Throws if `func` is not a function.
  * @throws {TypeError} Throws if `arity` is not a number but not undefined.
- * @returns {function} A curried equivalent of the provided function
+ * @returns {function} A curried equivalent of the provided function.
  * @example
  *
- * var add = curry(function (a, b) {
- *   return a + b;
- * });
- *
- * var addOne = add(1);
- * addOne(2); // -> 3
+ * const add = curry((a, b) => a + b);
+ * const addOne = add(1);
+ * addOne(2); // => 3
  *
  * // Provide arity as second argument in cases that it cannot be determined.
- * var add = curry(function (a = 0, ...args) {
- *   return a + args[0] + args[1];
- * }, 3);
- *
- * var addOne = add(1);
- * var addTwo = addOne(2);
- * addTwo(3); // -> 6
+ * const add = curry((a = 0, ...args) => a + args[0] + args[1], 3);
+ * const addOne = add(1);
+ * const addTwo = addOne(2);
+ * addTwo(3); // => 6
  */
-function curry(func, arity) {
+const curry = (func, arity) => {
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
@@ -39,19 +33,11 @@ function curry(func, arity) {
     throw new TypeError('Expected a number for second argument');
   }
 
-  return function curried(/* ...args_a */) {
-    for (var _len = arguments.length, args_a = new Array(_len), _key = 0; _key < _len; _key++) {
-      args_a[_key] = arguments[_key];
-    }
-
-    return args_a.length >= (arity || func.length) ? func.apply(void 0, args_a) : function (/* ...args_b */) {
-      for (var _len2 = arguments.length, args_b = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args_b[_key2] = arguments[_key2];
-      }
-
-      return curried.apply(void 0, args_a.concat(args_b));
-    };
+  return function curried(...args_a) {
+    return args_a.length >= (arity || func.length)
+      ? func(...args_a)
+      : (...args_b) => curried(...args_a, ...args_b);
   };
-}
+};
 
 module.exports = curry;

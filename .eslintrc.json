@@ -4,11 +4,10 @@
     "node": true,
     "jest": true,
     "amd": true,
-    "commonjs": true,
-    "es6": true
+    "commonjs": true
   },
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": "latest"
   },
   "globals": {
     "Promise": false,
@@ -63,6 +62,9 @@
       "exceptions": {
         "Property": false
       }
-    }]
+    }],
+    "prefer-rest-params": ["warn"],
+    "prefer-const": ["warn"],
+    "no-var": ["warn"]
   }
 }

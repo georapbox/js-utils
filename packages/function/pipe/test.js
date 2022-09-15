@@ -1,27 +1,13 @@
-var pipe = require('./pipe.js');
+const pipe = require('./pipe.js');
 
-describe('Function/pipe', function () {
-  function capitalize(a) {
-    return a.toUpperCase();
-  }
+describe('pipe', () => {
+  const capitalize = a => a.toUpperCase();
+  const head = a => a[0];
+  const reverse = a => a.split('').reverse().join('');
+  const inc = x => x + 1;
+  const double = x => x * 2;
 
-  function head(a) {
-    return a[0];
-  }
-
-  function reverse(a) {
-    return a.split('').reverse().join('');
-  }
-
-  function inc(x) {
-    return x + 1;
-  }
-
-  function double(x) {
-    return x * 2;
-  }
-
-  it('should perform left-to-right function composition', function () {
+  it('should perform left-to-right function composition', () => {
     expect(pipe()(1)).toBe(1);
 
     expect(pipe()(1, 2, 3)).toBe(1);
@@ -38,14 +24,12 @@ describe('Function/pipe', function () {
 
     expect(pipe(double, inc)(3)).toBe(7);
 
-    var reverseAndHead = pipe(reverse, head);
-    var reverseHeadAndCapitalize = pipe(capitalize, reverseAndHead);
+    const reverseAndHead = pipe(reverse, head);
+    const reverseHeadAndCapitalize = pipe(capitalize, reverseAndHead);
     expect(reverseHeadAndCapitalize('hello')).toBe('O');
 
-    var greeting = function (firstName, lastName) {
-      return 'Hello, my name is ' + firstName + ' ' + lastName + '.';
-    };
-    var shoutGreeting = pipe(greeting, capitalize);
+    const greeting = (firstName, lastName) => `Hello, my name is ${firstName} ${lastName}.`;
+    const shoutGreeting = pipe(greeting, capitalize);
     expect(shoutGreeting('John', 'Doe')).toBe('HELLO, MY NAME IS JOHN DOE.');
     expect(pipe(shoutGreeting('John', 'Doe'))).toBe('HELLO, MY NAME IS JOHN DOE.');
   });
