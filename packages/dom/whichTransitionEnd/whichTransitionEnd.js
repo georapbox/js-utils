@@ -6,7 +6,7 @@
  * @return {String} The supported property name or `undefined` if not supported.
  * @example
  *
- * var transEnd = whichTransitionEnd();
+ * const transEnd = whichTransitionEnd();
  * // -> eg 'transitionend'
  *
  * element.addEventListener(transEnd, function () {
@@ -14,16 +14,16 @@
  * });
  */
 function whichTransitionEnd() {
-  var key;
-  var el = document.createElement('div');
-  var transitions = {
+  let el = document.createElement('div');
+
+  const transitions = {
     'transition': 'transitionend',
     'OTransition': 'oTransitionEnd',
     'MozTransition': 'transitionend',
     'WebkitTransition': 'webkitTransitionEnd'
   };
 
-  for (key in transitions) {
+  for (const key in transitions) {
     if (Object.prototype.hasOwnProperty.call(transitions, key)) {
       if (el.style[key] !== undefined) {
         el = null;

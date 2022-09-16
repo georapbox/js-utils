@@ -11,7 +11,7 @@
  * @return {undefined}
  * @example
  *
- * var images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
+ * const images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
  *
  * function success(data) {
  *   console.log(data.currentImage.src + ' -> loaded');
@@ -31,14 +31,16 @@
  *
  * preloadImages(images, success, fail, always);
  */
-function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
-  var list, i, len, img;
+const preloadImages = (images, successCallback, errorCallback, alwaysCallback) => {
+  const list = [];
 
-  function onloadSuccess(image) {
-    var index;
+  if (!Array.isArray(images)) {
+    throw new TypeError('Expected an array for first argument');
+  }
 
+  const onloadSuccess = image => {
     image.onload = function imagesLoadSuccess(event) {
-      index = list.indexOf(this);
+      const index = list.indexOf(this);
 
       if (index !== -1) {
         list.splice(index, 1);
@@ -56,9 +58,9 @@ function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
         currentImage: image
       });
     };
-  }
+  };
 
-  function onLoadError(image) {
+  const onLoadError = image => {
     image.onerror = function imageLoadError(error) {
       errorCallback && errorCallback({
         error: error,
@@ -73,23 +75,15 @@ function preloadImages(images, successCallback, errorCallback, alwaysCallback) {
         currentImage: image
       });
     };
-  }
+  };
 
-  if (!Array.isArray(images)) {
-    throw new TypeError('Expected an array for first argument');
-  }
-
-  list = [];
-  i = 0;
-  len = images.length;
-
-  for (i; i < len; i += 1) {
-    img = new Image();
+  for (let i = 0; i < images.length; i += 1) {
+    const img = new Image();
     onloadSuccess(img);
     onLoadError(img);
     list.push(img);
     img.src = images[i];
   }
-}
+};
 
 module.exports = preloadImages;

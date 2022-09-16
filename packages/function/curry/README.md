@@ -1,20 +1,20 @@
 <a name="curry"></a>
 
-## curry(func, [arity]) ⇒ <code>function</code>
+## curry(fn, [arity]) ⇒ <code>function</code>
 Transforms a function of N arguments in such a way that it can
 be called as a chain of N functions each with a single argument (arity: 1).
 
 **Returns**: <code>function</code> - A curried equivalent of the provided function.  
 **Throws**:
 
-- <code>TypeError</code> Throws if `func` is not a function.
+- <code>TypeError</code> Throws if `fn` is not a function.
 - <code>TypeError</code> Throws if `arity` is not a number but not undefined.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| func | <code>function</code> |  | The initial function to be curried. |
-| [arity] | <code>Number</code> | <code>func.length</code> | The arity of the provided function. Useful in cases that arity cannot be determined by `func.length`. As of ES2015 when a function has a rest parameter or at least one parameter with default value, the `func.length` is not properly calculated. |
+| fn | <code>function</code> |  | The initial function to be curried. |
+| [arity] | <code>Number</code> | <code>fn.length</code> | The arity of the provided function. Useful in cases that arity cannot be determined by `fn.length`. As of ES2015 when a function has a rest parameter or at least one parameter with default value, the `fn.length` is not properly calculated. |
 
 **Example**
 ```js

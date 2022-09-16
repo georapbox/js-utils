@@ -19,7 +19,7 @@ Determines if the document matches a media query string.
 **Example**
 ```js
 // Start listening for media query status changes.
-var unsubscribe = mediaQuery('(min-width: 480px) and (max-width: 768px)', function (matches) {
+const unsubscribe = mediaQuery('(min-width: 480px) and (max-width: 768px)', matches => {
   document.body.style.backgroundColor = matches ? 'green' : 'red';
 });
 

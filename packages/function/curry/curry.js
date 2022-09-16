@@ -4,12 +4,12 @@
  * Transforms a function of N arguments in such a way that it can
  * be called as a chain of N functions each with a single argument (arity: 1).
  *
- * @param {function} func The initial function to be curried.
- * @param {Number} [arity=func.length] The arity of the provided function.
- * Useful in cases that arity cannot be determined by `func.length`.
+ * @param {function} fn The initial function to be curried.
+ * @param {Number} [arity=fn.length] The arity of the provided function.
+ * Useful in cases that arity cannot be determined by `fn.length`.
  * As of ES2015 when a function has a rest parameter or at least one
- * parameter with default value, the `func.length` is not properly calculated.
- * @throws {TypeError} Throws if `func` is not a function.
+ * parameter with default value, the `fn.length` is not properly calculated.
+ * @throws {TypeError} Throws if `fn` is not a function.
  * @throws {TypeError} Throws if `arity` is not a number but not undefined.
  * @returns {function} A curried equivalent of the provided function.
  * @example
@@ -24,18 +24,18 @@
  * const addTwo = addOne(2);
  * addTwo(3); // => 6
  */
-const curry = (func, arity) => {
-  if (typeof func !== 'function') {
+const curry = (fn, arity = fn.length) => {
+  if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  if (typeof arity !== 'undefined' && typeof arity !== 'number') {
+  if (typeof arity !== 'number') {
     throw new TypeError('Expected a number for second argument');
   }
 
   return function curried(...args_a) {
-    return args_a.length >= (arity || func.length)
-      ? func(...args_a)
+    return args_a.length >= arity
+      ? fn(...args_a)
       : (...args_b) => curried(...args_a, ...args_b);
   };
 };

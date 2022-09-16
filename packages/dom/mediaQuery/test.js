@@ -1,4 +1,4 @@
-var mediaQuery = require('./mediaQuery');
+const mediaQuery = require('./mediaQuery');
 
 describe('dom/mediaQuery', function () {
   function mockMediaQueryList(testQuery) {
@@ -17,8 +17,8 @@ describe('dom/mediaQuery', function () {
     });
   }
 
-  var mediaQueryString = '(min-width: 480px) and (max-width: 768px)';
-  var matchMediaListener, unsubscribeMediaQuery;
+  const mediaQueryString = '(min-width: 480px) and (max-width: 768px)';
+  let matchMediaListener, unsubscribeMediaQuery;
 
   beforeEach(function () {
     matchMediaListener = jest.fn().mockImplementation(function (matches) {

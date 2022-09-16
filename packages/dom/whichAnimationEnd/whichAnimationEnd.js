@@ -6,24 +6,24 @@
  * @return {String} The supported property name or `undefined` if not supported.
  * @example
  *
- * var animEnd = whichAnimationEnd();
+ * const animEnd = whichAnimationEnd();
  * // -> eg 'animationend'
  *
  * element.addEventListener(animEnd, function () {
  *   // Do soething...
  * });
  */
-function whichAnimationEnd() {
-  var key;
-  var el = document.createElement('div');
-  var animations = {
+const whichAnimationEnd = () => {
+  let el = document.createElement('div');
+
+  const animations = {
     'animation': 'animationend',
     'OAnimation': 'oAnimationEnd',
     'MozAnimation': 'animationend',
     'WebkitAnimation': 'webkitAnimationEnd'
   };
 
-  for (key in animations) {
+  for (const key in animations) {
     if (Object.prototype.hasOwnProperty.call(animations, key)) {
       if (el.style[key] !== undefined) {
         el = null;
@@ -31,6 +31,6 @@ function whichAnimationEnd() {
       }
     }
   }
-}
+};
 
 module.exports = whichAnimationEnd;

@@ -1,9 +1,9 @@
-var whichTransitionEnd = require('./whichTransitionEnd');
+const whichTransitionEnd = require('./whichTransitionEnd');
 
 describe('dom/whichTransitionEnd', function () {
   it('returns the transition end event name', function () {
-    var values = ['transitionend', 'oTransitionEnd', 'webkitTransitionEnd', undefined];
-    var exists = values.indexOf(whichTransitionEnd()) !== -1;
+    const values = ['transitionend', 'oTransitionEnd', 'webkitTransitionEnd', undefined];
+    const exists = values.indexOf(whichTransitionEnd()) !== -1;
 
     expect(exists).toBe(true);
   });

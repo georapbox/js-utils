@@ -106,14 +106,14 @@ A collection of dependency-free JavaScript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[after](https://github.com/georapbox/js-utils/tree/master/packages/function/after)|Creates a function that invokes `func` once it's called `n` or more times.|
+|[after](https://github.com/georapbox/js-utils/tree/master/packages/function/after)|Creates a function that invokes `fn` once it's called `n` or more times.|
 |[ary](https://github.com/georapbox/js-utils/tree/master/packages/function/ary)|Creates a function that accepts up to `n` arguments, ignoring any additional arguments.|
-|[before](https://github.com/georapbox/js-utils/tree/master/packages/function/before)|Creates a function that invokes `func` while it’s called less than `n` times.|
+|[before](https://github.com/georapbox/js-utils/tree/master/packages/function/before)|Creates a function that invokes `fn` while it’s called less than `n` times.|
 |[compose](https://github.com/georapbox/js-utils/tree/master/packages/function/compose)|Performs right-to-left function composition.|
 |[curry](https://github.com/georapbox/js-utils/tree/master/packages/function/curry)|Returns a curried equivalent of the provided function.|
 |[debounce](https://github.com/georapbox/js-utils/tree/master/packages/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
 |[flip](https://github.com/georapbox/js-utils/tree/master/packages/function/flip)|Creates a function that invokes the original function with its parameters reversed.|
-|[negate](https://github.com/georapbox/js-utils/tree/master/packages/function/negate)|Creates a function that negates the result of the predicate `func`.|
+|[negate](https://github.com/georapbox/js-utils/tree/master/packages/function/negate)|Creates a function that negates the result of the predicate `fn`.|
 |[once](https://github.com/georapbox/js-utils/tree/master/packages/function/once)|Ensure a given functionality only runs once.|
 |[partial](https://github.com/georapbox/js-utils/tree/master/packages/function/partial)|Creates a new function that invokes the provided function with partials prepended to the arguments it receives.|
 |[partialRight](https://github.com/georapbox/js-utils/tree/master/packages/function/partialRight)|Creates a new function that invokes the provided function with partials appended to the arguments it receives.|
@@ -191,13 +191,9 @@ A collection of dependency-free JavaScript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[captureMouse](https://github.com/georapbox/js-utils/tree/master/packages/dom/captureMouse)|Captures the mouse position on a specific HTML element.|
-|[captureTouch](https://github.com/georapbox/js-utils/tree/master/packages/dom/captureTouch)|Captures the touch position on a specific HTML element.|
 |[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
-|[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
-|[isEventSupported](https://github.com/georapbox/js-utils/tree/master/packages/dom/isEventSupported)|Checks if an event is supported in a browser environment.|
 |[mediaQuery](https://github.com/georapbox/js-utils/tree/master/packages/dom/mediaQuery)|Determines if the document matches a media query string.|
-|[scroll](https://github.com/georapbox/js-utils/tree/master/packages/dom/scroll)|Easing based scrolling to a specified y point inside page.|
+|[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
 |[whichAnimationEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
