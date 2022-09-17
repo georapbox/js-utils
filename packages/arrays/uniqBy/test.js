@@ -1,21 +1,21 @@
-var uniqBy = require('./uniqBy');
+const uniqBy = require('./uniqBy');
 
 describe('Array/uniqBy', function () {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
-    var arr1 = [
+    const arr1 = [
       { id: 1, name: 'John' },
       { id: 2, name: 'George' },
       { id: 1, name: 'Helen' },
       { id: 3, name: 'Helen' }
     ];
 
-    var arr2 = [
+    const arr2 = [
       { v: 1.6 },
       { v: 2.1 },
       { v: 1.1 }
     ];
 
-    var arr3 = [
+    const arr3 = [
       { x: '0', y: '1', z: '2' },
       { x: '1', y: '0', z: '2' },
       { x: '0', y: '1', z: '2' },

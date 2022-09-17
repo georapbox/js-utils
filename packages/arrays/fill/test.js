@@ -1,4 +1,4 @@
-var fill = require('./fill');
+const fill = require('./fill');
 
 describe('Array/fill', function () {
   function runTests() {
@@ -36,7 +36,7 @@ describe('Array/fill', function () {
   });
 
   it('fills elements of array with value from start up to end (not including end) (Array.prototype.fill is not supported)', function () {
-    var nativeCode = Array.prototype.fill;
+    const nativeCode = Array.prototype.fill;
     Array.prototype.fill = null;
     runTests();
     Array.prototype.fill = nativeCode;

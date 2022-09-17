@@ -15,7 +15,7 @@ If array values are of different type, the result is not guaranteed to be correc
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | array | <code>Array</code> |  | The array to sort. |
-| [ascending] | <code>Boolean</code> | <code>true</code> | Defines the sort order. Default is true (ascending). |
+| [ascending] | <code>Boolean</code> | <code>true</code> | Defines the sort order. Falsy values will assume descending. |
 
 **Example**  
 ```js

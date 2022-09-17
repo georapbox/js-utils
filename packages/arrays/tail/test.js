@@ -1,4 +1,4 @@
-var tail = require('./tail');
+const tail = require('./tail');
 
 describe('Array/tail', function () {
   it('Gets all but the first element of array', function () {

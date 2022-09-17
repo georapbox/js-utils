@@ -1,8 +1,8 @@
-var flat = require('./flat');
+const flat = require('./flat');
 
 describe('Array/flat', function () {
   function runTests() {
-    var arr = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+    const arr = [1, 2, [3, 4, [5, 6, [7, 8]]]];
 
     expect(flat(arr)).toEqual([1, 2, 3, 4, [5, 6, [7, 8]]]);
 
@@ -40,7 +40,7 @@ describe('Array/flat', function () {
   });
 
   it('flattens recursively up to the specified depth (Array.prototype.flat is not supported)', function () {
-    var nativeCode = Array.prototype.flat;
+    const nativeCode = Array.prototype.flat;
     Array.prototype.flat = null;
     runTests();
     Array.prototype.flat = nativeCode;

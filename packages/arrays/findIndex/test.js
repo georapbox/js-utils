@@ -1,9 +1,9 @@
-var findIndex = require('./findIndex');
+const findIndex = require('./findIndex');
 
 describe('Array/findIndex', function () {
-  var arr = ['a', 'b', 'c', 'd', 'e'];
+  function runTests() {
+    const arr = ['a', 'b', 'c', 'd', 'e'];
 
-  it('returns the index in the array', function () {
     expect(findIndex(arr, function (chr) {
       return chr === 'b';
     })).toBe(1);
@@ -21,5 +21,16 @@ describe('Array/findIndex', function () {
     expect(function () {
       return findIndex(arr);
     }).toThrow(new TypeError('Expected a function for second argument'));
+  }
+
+  it('returns the index in the array ((Array.prototype.findIndex is supported))', function () {
+    runTests();
+  });
+
+  it('returns the index in the array ((Array.prototype.findIndex is not supported))', function () {
+    const nativeCode = Array.prototype.findIndex;
+    Array.prototype.findIndex = null;
+    runTests();
+    Array.prototype.findIndex = nativeCode;
   });
 });

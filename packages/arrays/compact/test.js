@@ -1,12 +1,11 @@
-var compact = require('./compact');
+const compact = require('./compact');
 
 describe('Array/compact', function () {
-  var arr = [0, 1, false, 2, '', 3, null];
-  var ca = compact(arr);
-  var i, l;
+  const arr = [0, 1, false, 2, '', 3, null];
+  const ca = compact(arr);
 
   it('compacts array (removes falsy values)', function () {
-    for (i = 0, l = ca.length; i < l; i++) {
+    for (let i = 0; i < ca.length; i += 1) {
       expect(ca[i]).toBeTruthy();
     }
 

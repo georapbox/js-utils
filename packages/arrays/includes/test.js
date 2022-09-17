@@ -1,8 +1,8 @@
-var includes = require('./includes');
+const includes = require('./includes');
 
 describe('Array/includes', function () {
   function runTests() {
-    var obj = { foo: 'bar' };
+    const obj = { foo: 'bar' };
 
     expect(includes([1, 2, 3], 2)).toBe(true);
 
@@ -38,7 +38,7 @@ describe('Array/includes', function () {
   });
 
   it('determines whether an array includes a certain element (Array.prototype.includes is not supported)', function () {
-    var nativeCode = Array.prototype.includes;
+    const nativeCode = Array.prototype.includes;
     Array.prototype.includes = null;
     runTests();
     Array.prototype.includes = nativeCode;

@@ -9,7 +9,7 @@
  * @returns {Array} Returns a new array with the sub-array elements concatenated into it.
  * @example
  *
- * var arr = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+ * const arr = [1, 2, [3, 4, [5, 6, [7, 8]]]];
  *
  * flat(arr);
  * // -> [1, 2, 3, 4, [5, 6, [7, 8]]]
@@ -26,9 +26,7 @@
  * flat(arr, 0);
  * // -> [1, 2, [3, 4, [5, 6, [7, 8]]]]
  */
-function flat(array, depth) {
-  var result, length, element, index;
-
+const flat = (array, depth = 1) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -37,25 +35,25 @@ function flat(array, depth) {
     return array.flat(depth);
   }
 
-  result = [];
-  length = array.length;
-  depth = typeof depth !== 'undefined' ? Math.floor(depth) : 1;
+  let result = [];
 
-  for (index = 0; index < length; index += 1) {
-    element = array[index];
+  depth = Math.floor(depth);
+
+  for (let index = 0; index < array.length; index += 1) {
+    const element = array[index];
 
     if (depth > 0) {
       if (Array.isArray(element)) {
-        result.push.apply(result, flat(element, depth - 1));
+        result.push(...flat(element, depth - 1));
       } else {
         result.push(element);
       }
     } else {
-      result = Array.prototype.slice.call(array, 0);
+      result = [...array];
     }
   }
 
   return result;
-}
+};
 
 module.exports = flat;

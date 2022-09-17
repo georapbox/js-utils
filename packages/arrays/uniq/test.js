@@ -1,10 +1,10 @@
-var uniq = require('./uniq');
+const uniq = require('./uniq');
 
 describe('Array/uniq', function () {
-  var arr = ['a', 'a', 'b', true, '2', 2, false, true];
+  const arr = ['a', 'a', 'b', true, '2', 2, false, true];
 
   it('removes duplicate primitive values from an array', function () {
-    var result = uniq(arr);
+    const result = uniq(arr);
 
     expect(result).toEqual(['a', 'b', true, '2', 2, false]);
 

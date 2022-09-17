@@ -7,15 +7,15 @@
  * @param {Array} arrayA The array to process.
  * @param {Array} arrayB The values to exclude from `arrayA`.
  * @throws {TypeError} If any of the arguments passed are not arrays.
- * @return {Array} Array of values not included in the exclusion set.
+ * @returns {Array} Array of values not included in the exclusion set.
  * @example
  *
- * var obj = {
+ * const obj = {
  *   foo: 'bar'
  * };
  *
- * var a = [1, 2, 3, 4, 5, obj];
- * var b = [5, 2, 10, obj];
+ * const a = [1, 2, 3, 4, 5, obj];
+ * const b = [5, 2, 10, obj];
  *
  * diff(a, b);
  * // -> [1, 3, 4]
@@ -23,15 +23,13 @@
  * diff(a, []);
  * // -> [1, 2, 3, 4, 5, obj]
  */
-function diff(arrayA, arrayB) {
-  var len, arr;
-
+const diff = (arrayA, arrayB) => {
   if (!Array.isArray(arrayA) || !Array.isArray(arrayB)) {
     throw new TypeError('Expected both arguments to be arrays');
   }
 
-  len = arrayA.length;
-  arr = [];
+  let len = arrayA.length;
+  const arr = [];
 
   while (len--) {
     if (arrayB.indexOf(arrayA[len]) === -1) {
@@ -40,6 +38,6 @@ function diff(arrayA, arrayB) {
   }
 
   return arr;
-}
+};
 
 module.exports = diff;

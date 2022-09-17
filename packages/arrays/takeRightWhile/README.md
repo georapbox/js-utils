@@ -18,7 +18,7 @@ The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
 
 **Example**  
 ```js
-var books = [
+const books = [
   {title: 'Javascript Design Patterns', read: false},
   {title: 'Programming Javascript Applications', read: true},
   {title: 'JavaScript The Good Parts', read: false},

@@ -12,12 +12,12 @@
  * reverse([1, 2, 3]);
  * // -> [3, 2, 1]
  */
-function reverse(array) {
+const reverse = array => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  return array.slice(0).reverse();
-}
+  return [...array].reverse();
+};
 
 module.exports = reverse;

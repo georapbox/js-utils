@@ -1,7 +1,7 @@
-var pluck = require('./pluck');
+const pluck = require('./pluck');
 
 describe('Array/pluck', function () {
-  var books = [
+  const books = [
     { title: 'Around the World in Eighty Days', author: 'Jules Verne' },
     { title: 'The Mist', author: 'Stephen King' },
     { title: 'Journey to the Center of the Earth', author: 'Jules Verne' },

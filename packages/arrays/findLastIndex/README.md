@@ -14,17 +14,18 @@ Returns the index of the last element of a collection that passes the callback c
 | --- | --- | --- |
 | array | <code>Array</code> | The array to check. |
 | callback | <code>function</code> | The function called per iteration. |
+| [thisArg] | <code>*</code> | Optional object to use as `this` when executing the callback function. |
 
 **Example**  
 ```js
-var heroes = [
+const heroes = [
   {name: 'Bruce Wayne', hero: 'Batman'},
   {name: 'Clark Kent', hero: 'Superman', specialPowers: ['speed', 'flying', 'strength']},
   {name: 'Peter Parker', hero: 'Spiderman', specialPowers: ['climbing']}
 ];
 
-var characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'];
-var numbers = [1, 2, 3];
+const characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'];
+const numbers = [1, 2, 3];
 
 findLastIndex(characters, function (chr, index, array) {
   return chr === 'E';
@@ -38,7 +39,7 @@ findLastIndex(heroes, function (hero, index, array) {
 
 findLastIndex(heroes, function (hero, index, array) {
   if (hero.specialPowers) {
-    for (var i = 0; i < hero.specialPowers.length; i++) {
+    for (let i = 0; i < hero.specialPowers.length; i++) {
       if (hero.specialPowers[i] === 'climbing') return true;
     }
  }

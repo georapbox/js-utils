@@ -18,7 +18,7 @@ Move an array element to a different position.
 
 **Example**  
 ```js
-var array = ['A', 'B', 'C', 'D', 'E'];
+const array = ['A', 'B', 'C', 'D', 'E'];
 
 move(array, 0, 1);
 // -> ['B', 'A', 'C', 'D', 'E']

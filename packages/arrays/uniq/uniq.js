@@ -5,26 +5,23 @@
  *
  * @param {Array} array The array to process.
  * @throws {TypeError} If `array` is not array.
- * @return {Array} Returns the result (duplicates-free) array.
+ * @returns {Array} Returns the result (duplicates-free) array.
  * @example
  *
  * uniq(['a', 'a', 'b', true, '2', 2, false, true]);
  * // -> ['a', 'b', true, '2', 2, false]
  */
-function uniq(array) {
-  var duplicates, len, i, j, found;
-
+const uniq = array => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  duplicates = [];
-  len = array.length;
+  const duplicates = [];
 
-  for (i = 0; i < len; i += 1) {
-    found = false;
+  for (let i = 0; i < array.length; i += 1) {
+    let found = false;
 
-    for (j = 0; j < duplicates.length; j += 1) {
+    for (let j = 0; j < duplicates.length; j += 1) {
       if (array[i] === duplicates[j]) {
         found = true;
         break;
@@ -37,6 +34,6 @@ function uniq(array) {
   }
 
   return duplicates;
-}
+};
 
 module.exports = uniq;

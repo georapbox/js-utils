@@ -16,7 +16,7 @@ Retrieves the value of a specified property from all elements in an array.
 
 **Example**  
 ```js
-var books = [
+const books = [
   {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
   {title: 'The Mist', author: 'Stephen King'},
   {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},

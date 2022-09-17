@@ -14,7 +14,7 @@ returning true or false as appropriate.
 | --- | --- | --- | --- |
 | array | <code>Array</code> |  | The array to search. |
 | searchElement | <code>\*</code> |  | The element to search for. |
-| [fromIndex] | <code>Number</code> | <code>0</code> | The position in the array at which to begin searching for `searchElement`.        A negative value searches from the index of `array.length + fromIndex` by ascending. |
+| [fromIndex] | <code>Number</code> | <code>0</code> | The position in the array at which to begin searching for `searchElement`. A negative value searches from the index of `array.length + fromIndex` by ascending. |
 
 **Example**  
 ```js

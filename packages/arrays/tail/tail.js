@@ -5,7 +5,7 @@
  *
  * @param {Array} array The array to process.
  * @throws {TypeError} If `array` is not array.
- * @return {Array} The new tailed array.
+ * @returns {Array} The new tailed array.
  * @example
  *
  * tail([1, 2, 3,]);
@@ -17,12 +17,12 @@
  * tail([]);
  * // -> []
  */
-function tail(array) {
+const tail = array => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   return array.slice(1);
-}
+};
 
 module.exports = tail;

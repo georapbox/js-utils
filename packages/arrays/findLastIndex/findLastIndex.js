@@ -5,19 +5,20 @@
  *
  * @param {Array} array The array to check.
  * @param {function} callback The function called per iteration.
+ * @param {*} [thisArg] Optional object to use as `this` when executing the callback function.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `callback` is not function.
- * @return {Number} Returns the index of the last element that matches the callback check.
+ * @returns {Number} Returns the index of the last element that matches the callback check.
  * @example
  *
- * var heroes = [
+ * const heroes = [
  *   {name: 'Bruce Wayne', hero: 'Batman'},
  *   {name: 'Clark Kent', hero: 'Superman', specialPowers: ['speed', 'flying', 'strength']},
  *   {name: 'Peter Parker', hero: 'Spiderman', specialPowers: ['climbing']}
  * ];
  *
- * var characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'];
- * var numbers = [1, 2, 3];
+ * const characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'];
+ * const numbers = [1, 2, 3];
  *
  * findLastIndex(characters, function (chr, index, array) {
  *   return chr === 'E';
@@ -31,7 +32,7 @@
  *
  * findLastIndex(heroes, function (hero, index, array) {
  *   if (hero.specialPowers) {
- *     for (var i = 0; i < hero.specialPowers.length; i++) {
+ *     for (let i = 0; i < hero.specialPowers.length; i++) {
  *       if (hero.specialPowers[i] === 'climbing') return true;
  *     }
  *  }
@@ -43,9 +44,7 @@
  * });
  * // -> -1
  */
-function findLastIndex(array, callback) {
-  var length;
-
+const findLastIndex = (array, callback, thisArg) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -54,15 +53,19 @@ function findLastIndex(array, callback) {
     throw new TypeError('Expected a function for second argument');
   }
 
-  length = array.length;
+  if (Array.prototype.findLastIndex) {
+    return array.findLastIndex(callback, thisArg);
+  }
 
-  while (length--) {
-    if (callback(array[length], length, array)) {
-      return length;
+  let len = array.length;
+
+  while (len--) {
+    if (callback.call(thisArg, array[len], len, array)) {
+      return len;
     }
   }
 
   return -1;
-}
+};
 
 module.exports = findLastIndex;

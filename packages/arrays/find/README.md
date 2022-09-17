@@ -19,11 +19,11 @@ it is not invoked for indexes which have been deleted or which have never been a
 | --- | --- | --- |
 | array | <code>Array</code> | The array to process. |
 | predicate | <code>function</code> | Function to execute on each value in the array, taking three arguments: - `{*}` element: The current element being processed in the array. - `{Number}` index: The index of the current element being processed in the array. - `{Array}` array: The array find was called upon. |
-| [thisArg] | <code>Object</code> | Object to use as `this` when executing predicate. |
+| [thisArg] | <code>*</code> | Optional object to use as `this` when executing the predicate function. |
 
-**Example**  
+**Example**
 ```js
-var fruits = [
+const fruits = [
   {name: 'apples', quantity: 2},
   {name: 'bananas', quantity: 0},
   {name: 'cherries', quantity: 5},

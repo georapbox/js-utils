@@ -17,12 +17,12 @@ by excluding all values from the second array using strict equality for comparis
 
 **Example**  
 ```js
-var obj = {
+const obj = {
   foo: 'bar'
 };
 
-var a = [1, 2, 3, 4, 5, obj];
-var b = [5, 2, 10, obj];
+const a = [1, 2, 3, 4, 5, obj];
+const b = [5, 2, 10, obj];
 
 diff(a, b);
 // -> [1, 3, 4]

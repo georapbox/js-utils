@@ -9,6 +9,8 @@ The predicate is invoked with three arguments: (value, index, collection).
 **Throws**:
 
 - <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If `predicate` is defined but not a function.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -17,7 +19,7 @@ The predicate is invoked with three arguments: (value, index, collection).
 
 **Example**
 ```js
-var users = [{
+const users = [{
   name: 'John',
   isAdmin: true
 }, {
@@ -28,15 +30,11 @@ var users = [{
   isAdmin: true
 }];
 
-partition(users, function (element) {
-  return element.isAdmin
-});
+partition(users, user => user.isAdmin);
 // -> [[{ name: 'John', isAdmin: true }, { name: 'Alice', isAdmin: true }], [{ name: 'George', isAdmin: false }]]
 
-var numbers = [1, 3, 5, -4, 6, -2];
+const numbers = [1, 3, 5, -4, 6, -2];
 
-partition(numbers, function (element) {
-  return element > 0;
-});
+partition(numbers, num => num > 0);
 // -> [[1, 3, 5, 6], [-4, -2]]
 ```

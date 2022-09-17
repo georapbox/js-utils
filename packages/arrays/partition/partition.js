@@ -8,10 +8,11 @@
  * @param {Array} array The array to iterate over.
  * @param {Function} [predicate=Identity] The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.
+ * @throws {TypeError} If `predicate` is defined but not a function.
  * @returns {Array} Returns the array of grouped elements.
  * @example
  *
- * var users = [{
+ * const users = [{
  *   name: 'John',
  *   isAdmin: true
  * }, {
@@ -22,40 +23,32 @@
  *   isAdmin: true
  * }];
  *
- * partition(users, function (element) {
- *   return element.isAdmin
- * });
+ * partition(users, user => user.isAdmin);
  * // -> [[{ name: 'John', isAdmin: true }, { name: 'Alice', isAdmin: true }], [{ name: 'George', isAdmin: false }]]
  *
+ * const numbers = [1, 3, 5, -4, 6, -2];
  *
- * var numbers = [1, 3, 5, -4, 6, -2];
- *
- * partition(numbers, function (element) {
- *   return element > 0;
- * });
+ * partition(numbers, num => num > 0);
  * // -> [[1, 3, 5, 6], [-4, -2]]
  */
-function partition(array, predicate) {
-  var part1 = [];
-  var part2 = [];
-  var index, value;
+const partition = (array, predicate = x => x) => {
+  const part1 = [];
+  const part2 = [];
 
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   if (typeof predicate !== 'function') {
-    predicate = function (x) {
-      return x;
-    };
+    throw new TypeError('Expected a function for second argument');
   }
 
-  for (index = 0; index < array.length; index += 1) {
-    value = array[index];
+  for (let index = 0; index < array.length; index += 1) {
+    const value = array[index];
     predicate(value, index, array) ? part1.push(value) : part2.push(value);
   }
 
   return [part1, part2];
-}
+};
 
 module.exports = partition;

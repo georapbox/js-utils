@@ -23,9 +23,7 @@
  * });
  * // -> [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
-function dropWhile(array, predicate) {
-  var index, length;
-
+const dropWhile = (array, predicate) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -34,14 +32,14 @@ function dropWhile(array, predicate) {
     throw new TypeError('Expected a function for second argument');
   }
 
-  index = -1;
-  length = array.length;
+  let index = -1;
+  const len = array.length;
 
-  while (++index < length && predicate(array[index], index, array)) {
+  while (++index < len && predicate(array[index], index, array)) {
     continue;
   }
 
-  return array.slice(index, length);
-}
+  return array.slice(index, len);
+};
 
 module.exports = dropWhile;

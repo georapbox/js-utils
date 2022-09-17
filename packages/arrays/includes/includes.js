@@ -7,9 +7,9 @@
  * @param {Array} array The array to search.
  * @param {*} searchElement The element to search for.
  * @param {Number} [fromIndex=0] The position in the array at which to begin searching for `searchElement`.
- *        A negative value searches from the index of `array.length + fromIndex` by ascending.
+ * A negative value searches from the index of `array.length + fromIndex` by ascending.
  * @throws {TypeError} If `array` is not array.
- * @return {Boolean} True if array includes `searchElement`, else false.
+ * @returns {Boolean} True if array includes `searchElement`, else false.
  * @example
  *
  * includes([1, 2, 3], 2);
@@ -39,14 +39,12 @@
  * includes([1, 2, 0], -0);
  * // -> true
  */
-function includes(array, searchElement, fromIndex) {
-  var arrayLength, currentIndex, currentElement;
-
+const includes = (array, searchElement, fromIndex = 0) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  arrayLength = array.length;
+  const arrayLength = array.length;
 
   if (arrayLength === 0) {
     return false;
@@ -57,6 +55,8 @@ function includes(array, searchElement, fromIndex) {
   }
 
   fromIndex = parseInt(fromIndex, 10) || 0;
+
+  let currentIndex;
 
   if (fromIndex >= 0) {
     currentIndex = fromIndex;
@@ -69,7 +69,7 @@ function includes(array, searchElement, fromIndex) {
   }
 
   while (currentIndex < arrayLength) {
-    currentElement = array[currentIndex];
+    const currentElement = array[currentIndex];
 
     if (
       searchElement === currentElement
@@ -82,6 +82,6 @@ function includes(array, searchElement, fromIndex) {
   }
 
   return false;
-}
+};
 
 module.exports = includes;

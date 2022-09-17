@@ -11,24 +11,21 @@
  * fromPairs([['Javascript', 10], ['PHP', 3], ['Java', 4]]);
  * // -> { 'Javascript': 10, 'PHP': 3, 'Java': 4 }
  */
-function fromPairs(array) {
-  var index, length, result, pair;
-
+const fromPairs = array => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  index = 0;
-  length = array.length;
-  result = {};
+  const result = {};
+  let index = 0;
 
-  while (index < length) {
-    pair = array[index];
+  while (index < array.length) {
+    const pair = array[index];
     result[pair[0]] = pair[1];
     index += 1;
   }
 
   return result;
-}
+};
 
 module.exports = fromPairs;

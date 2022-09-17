@@ -4,7 +4,8 @@
     "node": true,
     "jest": true,
     "amd": true,
-    "commonjs": true
+    "commonjs": true,
+    "es6": true
   },
   "parserOptions": {
     "ecmaVersion": "latest"
@@ -15,14 +16,12 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    // Possible Errors
     "no-empty": ["error", {
       "allowEmptyCatch": true
     }],
     "no-use-before-define": ["error", {
       "functions": false
     }],
-    // Stylistic Issues
     "indent": ["warn", 2, {
       "SwitchCase": 1,
       "ignoredNodes": ["TemplateLiteral"]
@@ -52,7 +51,6 @@
       "asyncArrow": "always"
     }],
     "padded-blocks": ["warn", "never"],
-    // Best Practices
     "curly": ["warn"],
     "eqeqeq": ["error", "always", {
       "null": "ignore"
@@ -65,6 +63,7 @@
     }],
     "prefer-rest-params": ["warn"],
     "prefer-const": ["warn"],
-    "no-var": ["warn"]
+    "no-var": ["warn"],
+    "no-extra-parens": ["warn", "all"]
   }
 }

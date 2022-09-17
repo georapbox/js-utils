@@ -29,9 +29,7 @@
  * fill(['a', 'b', 'c']);
  * // -> [undefined, undefined, undefined]
  */
-function fill(array, value, start, end) {
-  var resultArray, length;
-
+const fill = (array, value, start = 0, end = array.length) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -40,23 +38,23 @@ function fill(array, value, start, end) {
     return array.fill(value, start, end);
   }
 
-  resultArray = array.slice(0);
-  length = resultArray.length;
+  const resultArray = array.slice(0);
+  const len = resultArray.length;
 
-  if (length === 0) {
+  if (len === 0) {
     return [];
   }
 
   start = parseInt(start, 10) || 0;
 
   if (start < 0) {
-    start = -start > length ? 0 : length + start;
+    start = -start > len ? 0 : len + start;
   }
 
-  end = typeof end === 'undefined' || end > length ? length : parseInt(end, 10);
+  end = end > len ? len : parseInt(end, 10);
 
   if (end < 0) {
-    end += length;
+    end += len;
   }
 
   if (start > end) {
@@ -68,6 +66,6 @@ function fill(array, value, start, end) {
   }
 
   return resultArray;
-}
+};
 
 module.exports = fill;

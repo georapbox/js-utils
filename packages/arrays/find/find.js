@@ -13,13 +13,13 @@
  * - `{*}` element: The current element being processed in the array.
  * - `{Number}` index: The index of the current element being processed in the array.
  * - `{Array}` array: The array find was called upon.
- * @param {Object} [thisArg] Object to use as `this` when executing predicate.
+ * @param {*} [thisArg] Optional object to use as `this` when executing the predicate function.
  * @throws {TypeError} If `array` is not an array.
  * @throws {TypeError} If `predicate` is not a function.
- * @return {*} A value in the array if an element passes the test, else, `undefined`.
+ * @returns {*} A value in the array if an element passes the test, else, `undefined`.
  * @example
  *
- * var fruits = [
+ * const fruits = [
  *   {name: 'apples', quantity: 2},
  *   {name: 'bananas', quantity: 0},
  *   {name: 'cherries', quantity: 5},
@@ -46,9 +46,7 @@
  * });
  * // -> undefined
  */
-function find(array, predicate, thisArg) {
-  var index, element, length;
-
+const find = (array, predicate, thisArg) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an an array for first argument');
   }
@@ -61,17 +59,15 @@ function find(array, predicate, thisArg) {
     return array.find(predicate, thisArg);
   }
 
-  length = array.length >>> 0;
-
-  for (index = 0; index < length; index += 1) {
-    element = array[index];
+  for (let index = 0; index < array.length; index += 1) {
+    const element = array[index];
 
     if (predicate.call(thisArg, element, index, array)) {
       return element;
     }
   }
 
-  return undefined;
-}
+  return;
+};
 
 module.exports = find;

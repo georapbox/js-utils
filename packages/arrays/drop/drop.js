@@ -7,7 +7,7 @@
  * @param {Number} [n=1] The number of elements to drop.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `n` is not number but not if is `undefined`.
- * @return {Array} The slice of the array.
+ * @returns {Array} The slice of the array.
  * @example
  *
  * drop([1, 2, 3, 4, 5]);
@@ -40,9 +40,7 @@
  * drop({}, 2);
  * // -> Throws TypeError
  */
-function drop(array, n) {
-  var MAX_SAFE_INTEGER, length;
-
+const drop = (array, n) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -51,14 +49,14 @@ function drop(array, n) {
     throw new TypeError('Expected a number for second argument');
   }
 
-  MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-  length = array.length;
+  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+  const len = array.length;
 
   n = n > MAX_SAFE_INTEGER
-    ? length
+    ? len
     : n == null || n !== n ? 1 : Math.floor(n);
 
-  return array.slice(n < 0 ? 0 : n, length);
-}
+  return array.slice(n < 0 ? 0 : n, len);
+};
 
 module.exports = drop;

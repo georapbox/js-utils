@@ -1,19 +1,19 @@
-var takeRightWhile = require('./takeRightWhile');
+const takeRightWhile = require('./takeRightWhile');
 
 describe('Array/takeRightWhile', function () {
   it('creates a slice of array with n items taken from the end', function () {
-    var books = [
+    const books = [
       { title: 'Javascript Design Patterns', read: false },
       { title: 'Programming Javascript Applications', read: true },
       { title: 'JavaScript The Good Parts', read: false },
       { title: 'Eloquent Javascript', read: false }
     ];
 
-    var unread = takeRightWhile(books, function (book) {
+    const unread = takeRightWhile(books, function (book) {
       return !book.read;
     });
 
-    var read = takeRightWhile(books, function (book) {
+    const read = takeRightWhile(books, function (book) {
       return book.read;
     });
 

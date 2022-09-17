@@ -1,8 +1,8 @@
-var dropRight = require('./dropRight');
+const dropRight = require('./dropRight');
 
 describe('Array/dropRight', function () {
   it('creates a slice of array with n elements dropped from the end', function () {
-    var arr = [1, 2, 3, 4, 5];
+    const arr = [1, 2, 3, 4, 5];
 
     expect(dropRight(arr)).toEqual([1, 2, 3, 4]);
 

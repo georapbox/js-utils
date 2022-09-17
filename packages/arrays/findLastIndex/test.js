@@ -1,10 +1,10 @@
-var findLastIndex = require('./findLastIndex');
+const findLastIndex = require('./findLastIndex');
 
 describe('Array/findLastIndex', function () {
-  var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'];
-  var numbers = [1, 2, 3, 4];
+  function runTests() {
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'E'];
+    const numbers = [1, 2, 3, 4];
 
-  it('returns the last index in the array', function () {
     expect(findLastIndex(letters, function (chr) {
       return chr === 'E';
     })).toBe(7);
@@ -22,5 +22,16 @@ describe('Array/findLastIndex', function () {
     expect(function () {
       return findLastIndex(letters);
     }).toThrow(new TypeError('Expected a function for second argument'));
+  }
+
+  it('returns the last index in the array (Array.prototype.findLastIndex is supported)', function () {
+    runTests();
   });
+
+  it('returns the last index in the array (Array.prototype.findLastIndex is not supported', function () {
+    const nativeCode = Array.prototype.findLastIndex;
+    Array.prototype.findLastIndex = null;
+    runTests();
+    Array.prototype.findLastIndex = nativeCode;
+  })
 });

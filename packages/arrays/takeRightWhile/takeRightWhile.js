@@ -8,10 +8,10 @@
  * @param {function} predicate The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `predicate` is not function but not if is `undefined`.
- * @return {Array} The slice of `array`.
+ * @returns {Array} The slice of `array`.
  * @example
  *
- * var books = [
+ * const books = [
  *   {title: 'Javascript Design Patterns', read: false},
  *   {title: 'Programming Javascript Applications', read: true},
  *   {title: 'JavaScript The Good Parts', read: false},
@@ -23,9 +23,7 @@
  * });
  * // -> [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
  */
-function takeRightWhile(array, predicate) {
-  var index, length;
-
+const takeRightWhile = (array, predicate) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -34,14 +32,14 @@ function takeRightWhile(array, predicate) {
     throw new TypeError('Expected a function for second argument');
   }
 
-  length = array.length;
-  index = length;
+  const len = array.length;
+  let index = len;
 
-  while (--index < length && index >= 0 && predicate(array[index], index, array)) {
+  while (--index < len && index >= 0 && predicate(array[index], index, array)) {
     continue;
   }
 
-  return array.slice(index + 1, length);
-}
+  return array.slice(index + 1, len);
+};
 
 module.exports = takeRightWhile;

@@ -6,18 +6,18 @@
  *
  * @param {Array} array The array to compact.
  * @throws {TypeError} If `array` is not array.
- * @return {Array} Returns the new array of filtered values.
+ * @returns {Array} Returns the new array of filtered values.
  * @example
  *
  * compact([0, 1, false, 2, '', 3, null]);
  * // => [1, 2, 3]
  */
-function compact(array) {
+const compact = array => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   return array.filter(Boolean);
-}
+};
 
 module.exports = compact;

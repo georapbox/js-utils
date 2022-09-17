@@ -1,4 +1,4 @@
-var chunk = require('./chunk');
+const chunk = require('./chunk');
 
 describe('Array/chunk', function () {
   it('creates an array of elements split into groups the length of size specified', function () {

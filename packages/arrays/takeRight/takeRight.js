@@ -7,7 +7,7 @@
  * @param {Number} [n=1] The number of items to take.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `n` is not number but not if is `undefined`.
- * @return {Array} The slice of the array.
+ * @returns {Array} The slice of the array.
  * @example
  *
  * takeRight([1, 2, 3, 4, 5]);
@@ -37,23 +37,22 @@
  * takeRight({}, 2);
  * // -> Throws TypeError
  */
-function takeRight(array, n) {
-  var MAX_SAFE_INTEGER, length;
-
+const takeRight = (array, n = 1) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  if (typeof n !== 'number' && typeof n !== 'undefined') {
+  if (typeof n !== 'number') {
     throw new TypeError('Expected a number for second argument');
   }
 
-  MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-  length = array.length;
-  n = n > MAX_SAFE_INTEGER ? length : n == null || n !== n ? 1 : Math.floor(n);
-  n = length - n;
+  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+  const len = array.length;
 
-  return array.slice(n < 0 ? 0 : n, length);
-}
+  n = n > MAX_SAFE_INTEGER ? len : n == null || n !== n ? 1 : Math.floor(n);
+  n = len - n;
+
+  return array.slice(n < 0 ? 0 : n, len);
+};
 
 module.exports = takeRight;
