@@ -17,14 +17,7 @@ A collection of dependency-free JavaScript utility functions.
 |[dropRight](https://github.com/georapbox/js-utils/tree/master/packages/arrays/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
 |[dropRightWhile](https://github.com/georapbox/js-utils/tree/master/packages/arrays/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
 |[dropWhile](https://github.com/georapbox/js-utils/tree/master/packages/arrays/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
-|[fill](https://github.com/georapbox/js-utils/tree/master/packages/arrays/fill)|Fills elements of array with value from start up to end (not including end).|
-|[find](https://github.com/georapbox/js-utils/tree/master/packages/arrays/find)|Returns a value in the array, if an element in the array satisfies the provided testing function.|
-|[findIndex](https://github.com/georapbox/js-utils/tree/master/packages/arrays/findIndex)|Returns the index of the first element of a collection that passes the callback check.|
-|[findLastIndex](https://github.com/georapbox/js-utils/tree/master/packages/arrays/findLastIndex)|Returns the index of the first element of a collection that passes the callback check, iterating from right to left.|
-|[flat](https://github.com/georapbox/js-utils/tree/master/packages/arrays/flat)|Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.|
-|[fromPairs](https://github.com/georapbox/js-utils/tree/master/packages/arrays/fromPairs)|Creates an object composed from key-value pairs.|
 |[groupBy](https://github.com/georapbox/js-utils/tree/master/packages/arrays/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
-|[includes](https://github.com/georapbox/js-utils/tree/master/packages/arrays/includes)|Determines whether an array includes a certain element.|
 |[intersect](https://github.com/georapbox/js-utils/tree/master/packages/arrays/intersect)|Creates an array of unique values that are included in all given arrays.|
 |[insert](https://github.com/georapbox/js-utils/tree/master/packages/arrays/insert)|Inserts one or more elements to array at specific index.|
 |[move](https://github.com/georapbox/js-utils/tree/master/packages/arrays/move)|Move an array element to a different position.|
@@ -32,7 +25,6 @@ A collection of dependency-free JavaScript utility functions.
 |[pluck](https://github.com/georapbox/js-utils/tree/master/packages/arrays/pluck)|Retrieves the value of a specified property from all elements in an array.|
 |[remove](https://github.com/georapbox/js-utils/tree/master/packages/arrays/remove)|Removes one or more elements from an array at the specified index(es).|
 |[shuffle](https://github.com/georapbox/js-utils/tree/master/packages/arrays/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
-|[reverse](https://github.com/georapbox/js-utils/tree/master/packages/arrays/reverse)|Reverses an array (not in place). The first array element becomes the last and the last becomes the first.|
 |[tail](https://github.com/georapbox/js-utils/tree/master/packages/arrays/tail)|Gets all but the first element of array.|
 |[take](https://github.com/georapbox/js-utils/tree/master/packages/arrays/take)|Creates a slice of array with `n` items taken from the beginning.|
 |[takeRight](https://github.com/georapbox/js-utils/tree/master/packages/arrays/takeRight)|Creates a slice of array with `n` items taken from the end.|
@@ -53,36 +45,25 @@ A collection of dependency-free JavaScript utility functions.
 |[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/strings/capitalize)|Capitalizes the first character of a string (Optionally, converts the rest of the string to lower case).|
 |[classnames](https://github.com/georapbox/js-utils/tree/master/packages/strings/classnames)|Creates a string by conditionally joining classNames together.|
 |[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
-|[contains](https://github.com/georapbox/js-utils/tree/master/packages/strings/contains)|Determines whether one string may be found within another string, returning true or false as appropriate.|
 |[deburr](https://github.com/georapbox/js-utils/tree/master/packages/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
-|[endsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/endsWith)|Determines whether a string ends with the characters of another string, returning true or false as appropriate.|
 |[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Escapes a HTML string.|
 |[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the-quick-brown-fox-jumps-over-the-lazy-dog'`.|
 |[lines](https://github.com/georapbox/js-utils/tree/master/packages/strings/lines)|Returns an array with the lines of a a string.|
 |[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/strings/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
-|[pad](https://github.com/georapbox/js-utils/tree/master/packages/strings/pad)|Pad `subjectString` on **both** sides to the given `len`, with optional `chars` defaulting to a space.|
-|[padLeft](https://github.com/georapbox/js-utils/tree/master/packages/strings/padLeft)|Pad `subjectString` on **left** side to the given `len`, with optional `chars` defaulting to a space.|
-|[padRight](https://github.com/georapbox/js-utils/tree/master/packages/strings/padRight)|Pad `subjectString` on **right** side to the given `len`, with optional `chars` defaulting to a space.|
 |[pascalCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/pascalCase)|Converts a string to [pascal case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'TheQuickBrownFoxJumpsOverTheLazyDog'`.|
 |[randomString](https://github.com/georapbox/js-utils/tree/master/packages/strings/randomString)|Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.|
 |[removePrefix](https://github.com/georapbox/js-utils/tree/master/packages/strings/removePrefix)|Removes substring (prefix) from start of a string.|
 |[removeSuffix](https://github.com/georapbox/js-utils/tree/master/packages/strings/removeSuffix)|Removes substring (suffix) from end of a string.|
-|[repeat](https://github.com/georapbox/js-utils/tree/master/packages/strings/repeat)|Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.|
 |[snakeCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/snakeCase)|Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the_quick_brown_fox_jumps_over_the_lazy_dog'`.|
 |[squash](https://github.com/georapbox/js-utils/tree/master/packages/strings/squash)|Removes all spaces from a string; optionally removes any escape sequences such as `\t`, `\n`, `\f`, `\r` and `\v`.|
-|[startsWith](https://github.com/georapbox/js-utils/tree/master/packages/strings/startsWith)|Returns true if string begins with substring (prefix).|
 |[strip](https://github.com/georapbox/js-utils/tree/master/packages/strings/strip)|Returns a new string with all occurrences of arguments passed removed.|
 |[stripHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripHTML)|Returns a new string with all HTML tags removed.|
 |[stripPunctuation](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|
 |[substringAfter](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringAfter)|Returns a substring after a specific sequence of character(s).|
 |[substringBefore](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringBefore)|Returns a substring before a specific sequence of character(s).|
 |[supplant](https://github.com/georapbox/js-utils/tree/master/packages/strings/supplant)|supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.|
-|[trim](https://github.com/georapbox/js-utils/tree/master/packages/strings/trim)|Removes whitespace from both ends of a string.|
-|[trimLeft](https://github.com/georapbox/js-utils/tree/master/packages/strings/trimLeft)|Removes whitespace from the left end of a string.|
-|[trimRight](https://github.com/georapbox/js-utils/tree/master/packages/strings/trimRight)|Removes whitespace from the right end of a string.|
 |[truncate](https://github.com/georapbox/js-utils/tree/master/packages/strings/truncate)|Truncates a string based on character count.|
 |[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Unescapes a HTML string.|
-|[urlSearchParams](https://github.com/georapbox/js-utils/tree/master/packages/strings/urlSearchParams)|Factory to access the URL search parameters.|
 |[words](https://github.com/georapbox/js-utils/tree/master/packages/strings/words)|Splits string into an array of its words.|
 |[wrapHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 

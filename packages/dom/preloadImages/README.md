@@ -20,12 +20,12 @@ Load images to browser asynchronously so that can be cached.
 var images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
 
 function success(data) {
-  console.log(data.currentImage.src + ' -> loaded');
+  console.log(data.currentImage.src, 'loaded');
 }
 
 function fail(data) {
   console.error(data.error);
-  console.log(data.currentImage.src + ' -> failed');
+  console.log(data.currentImage.src, 'failed');
 }
 
 function always(data) {
