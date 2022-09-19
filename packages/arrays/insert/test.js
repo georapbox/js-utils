@@ -27,7 +27,7 @@ describe('Array/insert', function () {
     expect(insert(arr, 2, undefined)).toEqual([1, 2, undefined, 3]);
 
     expect(function () {
-      return insert({ foo: 'bar' }, 0, ['a', 'b']);
+      return insert({foo: 'bar'}, 0, ['a', 'b']);
     }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(function () {

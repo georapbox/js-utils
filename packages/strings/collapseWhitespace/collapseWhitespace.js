@@ -5,11 +5,11 @@
  *
  * @param {String} subjectString The string to process.
  * @throws {TypeError} If `subjectString` is not string.
- * @return {String} The final string with all adjacent whitespace converted to single space.
+ * @returns {String} The final string with all adjacent whitespace converted to single space.
  * @example
  *
  * collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
- * // -> 'Lorem ispum dolor sit amet.'
+ * // => 'Lorem ispum dolor sit amet.'
  */
 const collapseWhitespace = subjectString => {
   if (typeof subjectString !== 'string') {

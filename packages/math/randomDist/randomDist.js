@@ -13,7 +13,7 @@
  * @example
  *
  * randomDist(0, 100, 200);
- * // -> 49.27716133759931
+ * // => 49.27716133759931
  */
 const randomDist = (min, max, iterations) => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;

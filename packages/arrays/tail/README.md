@@ -16,11 +16,11 @@ Gets all but the first element of array.
 **Example**  
 ```js
 tail([1, 2, 3,]);
-// -> [2, 3]
+// => [2, 3]
 
 tail([1]);
-// -> []
+// => []
 
 tail([]);
-// -> []
+// => []
 ```

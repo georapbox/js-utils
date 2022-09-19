@@ -10,26 +10,26 @@
  * @param {Boolean} [last] If true or any truthy value, will look for the last occurence of the characters specified.
  * @throws {TypeError} If `subjectString` is not string.
  * @throws {TypeError} If `characters` is not string.
- * @return {string} Returns the result string.
+ * @returns {string} Returns the result string.
  * @example
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
- * // -> 'LOREM'
+ * // => 'LOREM'
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
- * // -> 'LOREM_IPSUM DOLOR'
+ * // => 'LOREM_IPSUM DOLOR'
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
- * // -> 'LOREM_IPSUM DOLOR_'
+ * // => 'LOREM_IPSUM DOLOR_'
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '???', true); // using a sequense of characters that does not exist
- * // -> ''
+ * // => ''
  *
  * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍊');
- * // -> '🍎🍐'
+ * // => '🍎🍐'
  *
  * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
- * // -> ''
+ * // => ''
  */
 const substringBefore = (subjectString, characters, last) => {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {

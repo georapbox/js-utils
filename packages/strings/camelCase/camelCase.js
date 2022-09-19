@@ -6,38 +6,38 @@
  *
  * @param {String} subjectString The string to convert.
  * @throws {TypeError} Throws if `subjectString` is not string.
- * @return {String} Returns the camel cased string.
+ * @returns {String} Returns the camel cased string.
  * @example
  *
  * camelCase('the quick brown fox jumps over the lazy dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('thequickbrownfoxjumpsoverthelazydog');
- * // -> 'thequickbrownfoxjumpsoverthelazydog'
+ * // => 'thequickbrownfoxjumpsoverthelazydog'
  *
  * camelCase('theQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('TheQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('The Quick Brown Fox Jumps Over The Lazy Dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('theQUICKBrownFoxJumpsOverTheLazyDog');
- * // -> 'theQUICKBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQUICKBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  */
 const camelCase = subjectString => {
   if (typeof subjectString !== 'string') {

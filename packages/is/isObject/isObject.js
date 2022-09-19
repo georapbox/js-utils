@@ -5,56 +5,56 @@
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
  *
  * @param {*} value The value to check.
- * @return {Boolean} Returns `true` if `value` is an object, else `false`.
+ * @returns {Boolean} Returns `true` if `value` is an object, else `false`.
  * @example
  *
  * isObject({});
- * // -> true
+ * // => true
  *
  * isObject(Object.create({}));
- * // -> true
+ * // => true
  *
  * isObject(Object.create(null));
- * // -> true
+ * // => true
  *
  * isObject(function test() {});
- * // -> true
+ * // => true
  *
  * isObject([1, 2, 3]);
- * // -> true
+ * // => true
  *
  * isObject(new Number(0));
- * // -> true
+ * // => true
  *
  * isObject(new String('Hello world'));
- * // -> true
+ * // => true
  *
  * isObject(new RegExp('s+')));
- * // -> true
+ * // => true
  *
  * isObject(/s+/);
- * // -> true
+ * // => true
  *
  * isObject(new Map());
- * // -> true
+ * // => true
  *
  * isObject(new Set());
- * // -> true
+ * // => true
  *
  * isObject(0);
- * // -> false
+ * // => false
  *
  * isObject('Hello world');
- * // -> false
+ * // => false
  *
  * isObject(null);
- * // -> false
+ * // => false
  *
  * isObject(Boolean(1));
- * // -> false
+ * // => false
  *
  * isObject(Symbol('foo'));
- * // -> false
+ * // => false
  */
 const isObject = value => {
   return !!value && (typeof value === 'object' || typeof value === 'function');

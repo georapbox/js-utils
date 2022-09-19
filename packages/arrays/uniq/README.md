@@ -20,5 +20,5 @@ const arr = ['foo', 'bar'];
 const values = ['a', 'a', 'b', '2', 2, obj, obj, arr, arr, true, true, false, false, NaN, NaN];
 
 uniq(values);
-// -> ['a', 'b', '2', 2, obj, arr, true, false, NaN]
+// => ['a', 'b', '2', 2, obj, arr, true, false, NaN]
 ```

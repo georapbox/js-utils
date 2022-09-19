@@ -22,20 +22,20 @@ If the character or sequence of characters not found, returns an empty string.
 **Example**  
 ```js
 substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
-// -> 'LOREM'
+// => 'LOREM'
 
 substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
-// -> 'LOREM_IPSUM DOLOR'
+// => 'LOREM_IPSUM DOLOR'
 
 substringBefore('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
-// -> 'LOREM_IPSUM DOLOR_'
+// => 'LOREM_IPSUM DOLOR_'
 
 substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
-// -> ''
+// => ''
 
 substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍊');
-// -> '🍎🍐'
+// => '🍎🍐'
 
 substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
-// -> ''
+// => ''
 ```

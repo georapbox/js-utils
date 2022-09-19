@@ -18,14 +18,14 @@ Removes suffix from start of a string.
 **Example**  
 ```js
 removeSuffix('foobar__', '__');
-// -> 'foo'
+// => 'foo'
 
 removeSuffix('foobar__', '??');
-// -> 'foobar'
+// => 'foobar'
 
 removeSuffix('foobar__');
-// -> 'foobar'
+// => 'foobar'
 
 removeSuffix('foobar__', {});
-// -> TypeError
+// => TypeError
 ```

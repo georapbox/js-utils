@@ -6,23 +6,23 @@
  *
  * @param {...Array} arrays The arrays to process.
  * @throws {TypeError} If any of the arguments is not array.
- * @return {Array} Returns the new array of grouped elements.
+ * @returns {Array} Returns the new array of grouped elements.
  * @example
  *
  * zip([1, 2, 3], [11, 22, 33], [111, 222, 333]);
- * // -> [ [1, 11, 111], [2, 22, 222], [3, 33, 333] ]
+ * // => [ [1, 11, 111], [2, 22, 222], [3, 33, 333] ]
  *
  * zip([1, 2, 3], [11, 22, 33], [111, 222]);
- * // -> [ [1, 11, 111], [2, 22, 222], [3, 33, undefined] ]
+ * // => [ [1, 11, 111], [2, 22, 222], [3, 33, undefined] ]
  *
  * zip([1, 2, 3], [11, 22, 33], [111, 222]);
- * // -> [ [1, 11, 111], [2, 22, undefined], [3, undefined, undefined] ]
+ * // => [ [1, 11, 111], [2, 22, undefined], [3, undefined, undefined] ]
  *
  * zip([], []);
- * // -> []
+ * // => []
  *
  * zip();
- * // -> []
+ * // => []
  */
 const zip = (...arrays) => {
   let len = arrays.length;

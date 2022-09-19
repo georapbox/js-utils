@@ -30,10 +30,10 @@ const arr2 = [
 ];
 
 uniqBy(arr1, 'id');
-// -> [{ id: 1, name: 'John' }, { id: 2, name: 'George' }]
+// => [{ id: 1, name: 'John' }, { id: 2, name: 'George' }]
 
 uniqBy(arr2, function (o) {
   return Math.floor(o.v);
 });
-// -> [{ v: 1.6 }, { v: 2.1 }]
+// => [{ v: 1.6 }, { v: 2.1 }]
 ```

@@ -12,16 +12,16 @@
  * const object = { a: [{ b: { c: 3 } }] };
  *
  * get(object, 'a[0]b.c');
- * // -> 3
+ * // => 3
  *
  * get(object, ['a', '0', 'b', 'c']);
- * // -> 3
+ * // => 3
  *
  * get(object, 'a[1].b.c');
- * // -> undefined
+ * // => undefined
  *
  * get(object, 'a[1].b.c', 'DEFAULT');
- * // -> 'DEFAULT'
+ * // => 'DEFAULT'
  */
 const get = (object, path, defaultValue) => {
   const keys = String.prototype.split.call(path, /[,[\].]+?/);

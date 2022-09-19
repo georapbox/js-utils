@@ -17,5 +17,5 @@ using the Fisher-Yates (aka Knuth) Shuffle algorithm.
 **Example**  
 ```js
 shuffle(arr);
-// -> ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
+// => ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
 ```

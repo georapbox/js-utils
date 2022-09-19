@@ -21,7 +21,7 @@
  * takeRightWhile(books, function (book, index, books) {
  *   return !book.read;
  * });
- * // -> [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
+ * // => [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
  */
 const takeRightWhile = (array, predicate) => {
   if (!Array.isArray(array)) {

@@ -12,14 +12,14 @@ Checks if a value is boolean.
 **Example**  
 ```js
 isBoolean(true);
-// -> true
+// => true
 
 isBoolean(false);
-// -> true
+// => true
 
 isBoolean({a: 'a'});
-// -> false
+// => false
 
 isBoolean(null);
-// -> false
+// => false
 ```

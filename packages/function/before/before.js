@@ -11,7 +11,7 @@
  * @param {function} func The function to restrict.
  * @throws {TypeError} If `n` is not number.
  * @throws {TypeError} If `fn` is not function.
- * @return {function} Returns the new restricted function.
+ * @returns {function} Returns the new restricted function.
  * @example
  *
  * const doSomething = before(6, () => console.log('Do something...'));

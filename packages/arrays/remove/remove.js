@@ -12,25 +12,25 @@
  * const arr = [1, 2, 3, 4, 5];
  *
  * remove(arr, 0);
- * // -> [2, 3, 4, 5]
+ * // => [2, 3, 4, 5]
  *
  * remove(arr, 0, 1);
- * // -> [3, 4, 5]
+ * // => [3, 4, 5]
  *
  * remove(arr, 0, 4);
- * // -> [2, 3, 4]
+ * // => [2, 3, 4]
  *
  * remove(arr);
- * // -> [1, 2, 3, 4, 5]
+ * // => [1, 2, 3, 4, 5]
  *
  * remove(arr, arr.length);
- * // -> [1, 2, 3, 4, 5]
+ * // => [1, 2, 3, 4, 5]
  *
  * remove(arr, arr.length - 1);
- * // -> [1, 2, 3, 4]
+ * // => [1, 2, 3, 4]
  *
  * remove(arr, NaN);
- * // -> [1, 2, 3, 4, 5]
+ * // => [1, 2, 3, 4, 5]
  */
 const remove = (array, ...indexes) => {
   if (!Array.isArray(array)) {
@@ -38,7 +38,7 @@ const remove = (array, ...indexes) => {
   }
 
   return array.filter((_, index) => {
-    return typeof index === 'number' && index === index // check if number and not NaN
+    return typeof index === 'number' && !Number.isNaN(index)
       ? indexes.indexOf(index) === -1
       : false;
   });

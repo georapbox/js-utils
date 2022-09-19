@@ -13,7 +13,7 @@
  * groupBy(['one', 'two', 'three', 'four', 'five'], function (item) {
  *   return item.length;
  * });
- * // -> { '3': ['one', 'two'], '4': ['four', 'five'], '5': ['three'] }
+ * // => { '3': ['one', 'two'], '4': ['four', 'five'], '5': ['three'] }
  *
  * groupBy([
  *   { name: 'John' },
@@ -24,7 +24,7 @@
  *   { name: 'Alex' },
  *   { name: 'George' }
  * ], 'name');
- * // -> { 'John': [{'name': 'John'}, {'name': 'John'}], 'George': [{'name': 'George'}, {'name': 'George'}], 'Helen': [{'name': 'Helen'}, {'name': 'Helen'}], 'Alex': [{'name': 'Alex'}] }
+ * // => { 'John': [{'name': 'John'}, {'name': 'John'}], 'George': [{'name': 'George'}, {'name': 'George'}], 'Helen': [{'name': 'Helen'}, {'name': 'Helen'}], 'Alex': [{'name': 'Alex'}] }
  */
 const groupBy = (array, iteratee) => {
   if (!Array.isArray(array)) {

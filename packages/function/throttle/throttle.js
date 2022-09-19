@@ -31,11 +31,11 @@ const throttle = (fn, wait = 0) => {
       clearTimeout(timerId);
 
       timerId = setTimeout(() => {
-        if ((Date.now() - lastRan) >= wait) {
+        if (Date.now() - lastRan >= wait) {
           fn(...args);
           lastRan = Date.now();
         }
-      }, (wait - (Date.now() - lastRan)) || 0);
+      }, wait - (Date.now() - lastRan) || 0);
     }
   };
 };

@@ -8,22 +8,22 @@
  * @example
  *
  * classnames('foo', 'bar');
- * // -> 'foo bar'
+ * // => 'foo bar'
  *
  * classnames('foo', { bar: true });
- * // -> 'foo bar'
+ * // => 'foo bar'
  *
  * classnames('foo', { bar: false });
- * // -> 'foo'
+ * // => 'foo'
  *
  * classnames({ foo: true }, { bar: true });
- * // -> 'foo bar'
+ * // => 'foo bar'
  *
  * classnames({ foo: true, bar: true });
- * // -> 'foo bar'
+ * // => 'foo bar'
  *
  * classnames('foo', 0, false, undefined, null, { bar: 1 }, NaN, { baz: 0 }); // falsy values are ignored
- * // -> 'foo bar'
+ * // => 'foo bar'
  */
 const classnames = (...args) => {
   const len = args.length;

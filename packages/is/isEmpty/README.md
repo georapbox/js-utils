@@ -13,51 +13,51 @@ Any other primitive types (`number`, `null`, `undefined`, `boolean` `symbol`, `f
 
 **Example**
 ```js
-isEmpty([]); // -> true
-isEmpty([1, 2, 3]); // -> false
+isEmpty([]); // => true
+isEmpty([1, 2, 3]); // => false
 
-isEmpty({}); // -> true
-isEmpty({foo: 'bar'}); // -> false
-isEmpty(Object.create(null)); // -> true
-isEmpty(Object.create({})); // -> true
-isEmpty(Object.create({foo: 'bar'})); // -> true
+isEmpty({}); // => true
+isEmpty({foo: 'bar'}); // => false
+isEmpty(Object.create(null)); // => true
+isEmpty(Object.create({})); // => true
+isEmpty(Object.create({foo: 'bar'})); // => true
 
-isEmpty(new Map()); // -> true
-isEmpty((new Map()).set('foo', 'bar')); // -> false
+isEmpty(new Map()); // => true
+isEmpty((new Map()).set('foo', 'bar')); // => false
 
-isEmpty(new Set()); // -> true
-isEmpty(new Set([1, 2, 3])); // -> false
+isEmpty(new Set()); // => true
+isEmpty(new Set([1, 2, 3])); // => false
 
-isEmpty(Symbol()); // -> true
-isEmpty(Symbol('foo')); // -> true
+isEmpty(Symbol()); // => true
+isEmpty(Symbol('foo')); // => true
 
-isEmpty(''); // -> true
-isEmpty(String('')); // -> true
-isEmpty(new String('')); // -> true
-isEmpty('foo'); // -> false
-isEmpty(String('foo')); // -> false
-isEmpty(new String('foo')); // -> false
+isEmpty(''); // => true
+isEmpty(String('')); // => true
+isEmpty(new String('')); // => true
+isEmpty('foo'); // => false
+isEmpty(String('foo')); // => false
+isEmpty(new String('foo')); // => false
 
-isEmpty(0); // -> true
-isEmpty(Number(0)); // -> true
-isEmpty(new Number(0)); // -> true
-isEmpty(1); // -> true
-isEmpty(Number(1)); // -> true
-isEmpty(new Number(1)); // -> true
+isEmpty(0); // => true
+isEmpty(Number(0)); // => true
+isEmpty(new Number(0)); // => true
+isEmpty(1); // => true
+isEmpty(Number(1)); // => true
+isEmpty(new Number(1)); // => true
 
-isEmpty(true); // -> true
-isEmpty(Boolean(true)); // -> true
-isEmpty(new Boolean(true)); // -> true
-isEmpty(false); // -> true
-isEmpty(Boolean(false)); // -> true
-isEmpty(new Boolean(false)); // -> true
+isEmpty(true); // => true
+isEmpty(Boolean(true)); // => true
+isEmpty(new Boolean(true)); // => true
+isEmpty(false); // => true
+isEmpty(Boolean(false)); // => true
+isEmpty(new Boolean(false)); // => true
 
-isEmpty(function noop() {}); // -> true
-isEmpty(class MyClass {}); // -> true
+isEmpty(function noop() {}); // => true
+isEmpty(class MyClass {}); // => true
 
-isEmpty(/s+/g); // -> true
-isEmpty(new RegExp('s+', 'g')); // -> true
+isEmpty(/s+/g); // => true
+isEmpty(new RegExp('s+', 'g')); // => true
 
-isEmpty(null); // -> true
-isEmpty(undefined); // -> true
+isEmpty(null); // => true
+isEmpty(undefined); // => true
 ```

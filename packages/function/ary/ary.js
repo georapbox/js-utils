@@ -14,7 +14,7 @@
  *
  * const toInteger = ary(parseInt, 1);
  *
- * array.map(toInteger); // -> [1, 2, 3]
+ * array.map(toInteger); // => [1, 2, 3]
  */
 const ary = (fn, n) => {
   if (typeof fn !== 'function') {

@@ -13,29 +13,29 @@ Checks if a value is a number.
 **Example**  
 ```js
 isNumber(10);
-// -> true
+// => true
 
 isNumber('10');
-// -> false
+// => false
 
 isNumber(new Date());
-// -> false
+// => false
 
 isNumber(new Date().getTime());
-// -> true
+// => true
 
 isNumber(true);;
-// -> false
+// => false
 
 isNumber(null);;
-// -> false
+// => false
 
 isNumber(undefined);;
-// -> false
+// => false
 
 isNumber('');
-// -> false
+// => false
 
 isNumber(NaN);
-// -> true
+// => true
 ```

@@ -4,20 +4,20 @@
  * Checks if a value is string.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is string, else false.
+ * @returns {Boolean} True if value is string, else false.
  * @example
  *
  * isString(['a', 'b', 'c', 'd']);
- * // -> false
+ * // => false
  *
  * isString(100);
- * // -> false
+ * // => false
  *
  * isString('Lorem ipsum dolor sit amet');
- * // -> true
+ * // => true
  *
  * isString({ a: 'a', b: 'b' });
- * // -> false
+ * // => false
  */
 const isString = value => {
   return typeof value === 'string' || Object.prototype.toString.call(value) === '[object String]';

@@ -4,32 +4,32 @@
  * Checks if a value matches a hexadecimal color regular expression.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is a hexadecimal color regexp, else false.
+ * @returns {Boolean} True if value is a hexadecimal color regexp, else false.
  * @example
  *
  * isHexColor('#f5f5f5');
- * // -> true
+ * // => true
  *
  * isHexColor('#9c0');
- * // -> true
+ * // => true
  *
  * isHexColor('333');
- * // -> true
+ * // => true
  *
  * isHexColor(333);
- * // -> true
+ * // => true
  *
  * isHexColor(6.6);
- * // -> false
+ * // => false
  *
  * isHexColor('foo');
- * // -> false
+ * // => false
  *
  * isHexColor(null);
- * // -> false
+ * // => false
  *
  * isHexColor();
- * // -> false
+ * // => false
  */
 const isHexColor = value => /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
 

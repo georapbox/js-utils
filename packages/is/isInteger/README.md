@@ -13,35 +13,35 @@ If the value is NaN or infinite, return false.
 **Example**  
 ```js
 isInteger(1);
-// -> true
+// => true
 
 isInteger(9007199254740992);
-// -> true
+// => true
 
 isInteger(-9007199254740992);
-// -> true
+// => true
 
 isInteger(-100000);
-// -> true
+// => true
 
 isInteger(0);
-// -> true
+// => true
 
 isInteger(0.1);
-// -> false
+// => false
 
 isInteger(Math.PI);
-// -> false
+// => false
 
 isInteger(NaN);
-// -> false
+// => false
 
 isInteger('10');
-// -> false
+// => false
 
 isInteger(Number.MAX_VALUE);
-// -> false
+// => false
 
 isInteger(Infinity);
-// -> false
+// => false
 ```

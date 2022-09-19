@@ -14,8 +14,8 @@ Checks if a value is a function.
 isFunction(function test() {
   return 'This is test function.';
 });
-// -> true
+// => true
 
 isFunction('This is a test function.');
-// -> false
+// => false
 ```

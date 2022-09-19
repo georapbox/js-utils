@@ -12,26 +12,26 @@ Checks if a value is a truthy one.
 **Example**  
 ```js
 isTruthy(true);
-// -> true
+// => true
 
 isTruthy(' ');
-// -> true
+// => true
 
 isTruthy(1);
-// -> true
+// => true
 
 isTruthy(false);
-// -> false
+// => false
 
 isTruthy('');
-// -> false
+// => false
 
 isTruthy();
-// -> false
+// => false
 
 isTruthy(0);
-// -> false
+// => false
 
 isTruthy(NaN);
-// -> false
+// => false
 ```

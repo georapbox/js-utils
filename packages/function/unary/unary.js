@@ -12,7 +12,7 @@
  *
  * const toInteger = unary(parseInt);
  *
- * array.map(toInteger); // -> [1, 2, 3]
+ * array.map(toInteger); // => [1, 2, 3]
  */
 const unary = fn => {
   if (typeof fn !== 'function') {

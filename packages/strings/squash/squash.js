@@ -8,16 +8,16 @@
  * @xample
  *
  * squash('Lorem ispum dolor sit amet');
- * // -> 'Loremispumdolorsitamet'
+ * // => 'Loremispumdolorsitamet'
  *
  * squash('   Lorem   ispum   dolor sit amet  ');
- * // -> 'Loremispumdolorsitamet'
+ * // => 'Loremispumdolorsitamet'
  *
  * squash('\tLorem \n\vispum \tdolor \fsit \n amet  ');
- * // -> '\tLorem\n\vispum\tdolor\fsit\namet'
+ * // => '\tLorem\n\vispum\tdolor\fsit\namet'
  *
  * squash('\tLorem \n\vispum \tdolor \fsit \n amet  ', true);
- * // -> 'Loremispumdolorsitamet'
+ * // => 'Loremispumdolorsitamet'
  */
 const squash = (subjectString, squashEscapeSequences) => {
   const regex = squashEscapeSequences ? /\s+/g : / /g;

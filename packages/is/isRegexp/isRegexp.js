@@ -4,14 +4,14 @@
  * Checks if a value is a regular expression.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the value is a regular expression, else false.
+ * @returns {Boolean} True if the value is a regular expression, else false.
  * @example
  *
  * isRegexp(/^[0-9a-fA-F]+$/);
- * // -> true
+ * // => true
  *
  * isRegexp('/^[0-9a-fA-F]+$/');
- * // -> false
+ * // => false
  */
 const isRegexp = value => Object.prototype.toString.call(value) === '[object RegExp]';
 

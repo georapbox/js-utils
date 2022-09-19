@@ -4,32 +4,32 @@
  * Checks if a value is a truthy one.
  *
  * @param {*} value The value to check.
- * @return {Boolean} Returns `true` if the value is truthy, otherwise `false`.
+ * @returns {Boolean} Returns `true` if the value is truthy, otherwise `false`.
  * @example
  *
  * isTruthy(true);
- * // -> true
+ * // => true
  *
  * isTruthy(' ');
- * // -> true
+ * // => true
  *
  * isTruthy(1);
- * // -> true
+ * // => true
  *
  * isTruthy(false);
- * // -> false
+ * // => false
  *
  * isTruthy('');
- * // -> false
+ * // => false
  *
  * isTruthy();
- * // -> false
+ * // => false
  *
  * isTruthy(0);
- * // -> false
+ * // => false
  *
  * isTruthy(NaN);
- * // -> false
+ * // => false
  */
 const isTruthy = value => !!value;
 

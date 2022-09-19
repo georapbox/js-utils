@@ -9,24 +9,24 @@
  * @param {Number} [nDecimals=0] The number of decimal points the formatted number will have.
  * @param {String} [sDecimalSeparator='.'] The decimal separator character(s).
  * @param {String} [sThousandSeparator=','] The thousands separator character(s).
- * @return {String} The formatted number as a string.
+ * @returns {String} The formatted number as a string.
  * @example
  *
  * numberFormat(123456789.12345);
- * // -> '123,456,789'
+ * // => '123,456,789'
  *
  * numberFormat(123456789.12345, 3, '.', ',');
- * // -> '123,456,789.123'
+ * // => '123,456,789.123'
  *
  * numberFormat(123456789.12345, 3, ',', '.');
- * // -> '123.456.789,123'
+ * // => '123.456.789,123'
  */
 const numberFormat = (nNumber, nDecimals, sDecimalSeparator, sThousandSeparator) => {
   if (typeof nNumber !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
 
-  if (nNumber !== nNumber) { // Check for NaN
+  if (Number.isNaN(nNumber)) {
     return '';
   }
 

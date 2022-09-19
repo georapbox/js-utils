@@ -7,41 +7,41 @@
  * @returns {Boolean} Returns `true` if value is primitive, otherwise `false`.
  * @example
  *
- * isPrimitive(null); // -> true
+ * isPrimitive(null); // => true
  *
- * isPrimitive(undefined); // -> true
+ * isPrimitive(undefined); // => true
  *
- * isPrimitive(123); // -> true
+ * isPrimitive(123); // => true
  *
- * isPrimitive(Infinity); // -> true
+ * isPrimitive(Infinity); // => true
  *
- * isPrimitive(NaN); // -> true
+ * isPrimitive(NaN); // => true
  *
- * isPrimitive('foo'); // -> true
+ * isPrimitive('foo'); // => true
  *
- * isPrimitive(true); // -> true
+ * isPrimitive(true); // => true
  *
- * isPrimitive(false); // -> true
+ * isPrimitive(false); // => true
  *
- * isPrimitive(Symbol('foo')); // -> true
+ * isPrimitive(Symbol('foo')); // => true
  *
- * isPrimitive({}); // -> false
+ * isPrimitive({}); // => false
  *
- * isPrimitive([]); // -> false
+ * isPrimitive([]); // => false
  *
- * isPrimitive(function () {}); // -> false
+ * isPrimitive(function () {}); // => false
  *
- * isPrimitive(new Map()); // -> false
+ * isPrimitive(new Map()); // => false
  *
- * isPrimitive(new WeakMap()); // -> false
+ * isPrimitive(new WeakMap()); // => false
  *
- * isPrimitive(new Set()); // -> false
+ * isPrimitive(new Set()); // => false
  *
- * isPrimitive(new WeakSet()); // -> false
+ * isPrimitive(new WeakSet()); // => false
  *
- * isPrimitive(new Date()); // -> false
+ * isPrimitive(new Date()); // => false
  *
- * isPrimitive(/s+/g); // -> false
+ * isPrimitive(/s+/g); // => false
  */
 const isPrimitive = value => {
   if (typeof value === 'object') {

@@ -24,8 +24,8 @@ const books = [
 ];
 
 pluck(books, 'title');
-// -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
+// => ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
 
 pluck(books, 'author');
-// -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
+// => ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
 ```

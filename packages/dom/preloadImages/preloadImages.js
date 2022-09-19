@@ -8,7 +8,7 @@
  * @param {function} [errorCallback] A function to be executed after an image is not loaded.
  * @param {function} [alwaysCallback] A function to be always executed regardless an image is loaded or failed to load.
  * @throws {TypeError} If `images` is not array.
- * @return {undefined}
+ * @returns {undefined}
  * @example
  *
  * const images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];

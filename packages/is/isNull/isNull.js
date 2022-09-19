@@ -4,20 +4,20 @@
  * Checks if a value is `null`.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is null, else false.
+ * @returns {Boolean} True if the 'value' is null, else false.
  * @example
  *
  * isNull(null);
- * // -> true
+ * // => true
  *
  * isNull(true);
- * // -> false
+ * // => false
  *
  * isNull({a: 'a'});
- * // -> false
+ * // => false
  *
  * isNull();
- * // -> false
+ * // => false
  */
 const isNull = value => value === null;
 

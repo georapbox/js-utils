@@ -9,7 +9,7 @@ describe('Array/shuffle', function () {
     expect(shuffle(arr)).not.toEqual(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
 
     expect(function () {
-      return shuffle({ a: 'a', b: 'b', c: 'c' });
+      return shuffle({a: 'a', b: 'b', c: 'c'});
     }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

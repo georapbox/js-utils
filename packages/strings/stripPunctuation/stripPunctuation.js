@@ -5,13 +5,13 @@
  *
  * @param {String} subjectString The string to strip the punctuation from.
  * @throws {TypeError} Throws if `subjectString` is not string.
- * @return {String} Returns the reuslt string with all punctuation stripped.
+ * @returns {String} Returns the reuslt string with all punctuation stripped.
  * @example
  *
  * const str = ';``?You can\'t [make] an *ome*let + wit&&hout \\ %break_ing/% ~ a few eg-gs.!@#-"$"+:';
  *
  * stripPunctuation(str);
- * // -> You cant make an omelet without breaking a few eggs
+ * // => You cant make an omelet without breaking a few eggs
  */
 const stripPunctuation = subjectString => {
   if (typeof subjectString !== 'string') {

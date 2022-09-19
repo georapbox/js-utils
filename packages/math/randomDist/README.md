@@ -20,5 +20,5 @@ The higher the iterations, the higher is the possibility the returned value to b
 **Example**  
 ```js
 randomDist(0, 100, 200);
-// -> 49.27716133759931
+// => 49.27716133759931
 ```

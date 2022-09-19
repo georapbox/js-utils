@@ -7,7 +7,7 @@ Detects the supported property name for the `animationend` event.
 **Example**  
 ```js
 const animEnd = whichAnimationEnd();
-// -> eg 'animationend'
+// => eg 'animationend'
 
 element.addEventListener(animEnd, function () {
   // Do soething...

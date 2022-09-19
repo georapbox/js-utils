@@ -14,14 +14,14 @@ Checks if value is `null` or `undefined`.
 let foo;
 
 isNullish(foo);
-// -> true
+// => true
 
 isNullish(null);
-// -> true
+// => true
 
 isNullish({foo: 'bar'});
-// -> false
+// => false
 
 isNullish();
-// -> true
+// => true
 ```

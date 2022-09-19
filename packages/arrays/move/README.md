@@ -21,14 +21,14 @@ Move an array element to a different position.
 const array = ['A', 'B', 'C', 'D', 'E'];
 
 move(array, 0, 1);
-// -> ['B', 'A', 'C', 'D', 'E']
+// => ['B', 'A', 'C', 'D', 'E']
 
 move(array, 0, array.length - 1);
-// -> ['B', 'C', 'D', 'E', 'A']
+// => ['B', 'C', 'D', 'E', 'A']
 
 move(array, -1, 3);
-// -> ['A', 'B', 'C', 'E', 'D']
+// => ['A', 'B', 'C', 'E', 'D']
 
 move(array, -1, -3);
-// -> ['A', 'B', 'E', 'C', 'D']
+// => ['A', 'B', 'E', 'C', 'D']
 ```

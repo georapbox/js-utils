@@ -9,13 +9,13 @@
  * @example
  *
  * tail([1, 2, 3,]);
- * // -> [2, 3]
+ * // => [2, 3]
  *
  * tail([1]);
- * // -> []
+ * // => []
  *
  * tail([]);
- * // -> []
+ * // => []
  */
 const tail = array => {
   if (!Array.isArray(array)) {

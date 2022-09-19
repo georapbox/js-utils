@@ -4,14 +4,14 @@
  * Checks if a value is a date object.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if 'value' is a date, else returns false.
+ * @returns {Boolean} True if 'value' is a date, else returns false.
  * @example
  *
  * isDate(new Date());
- * // -> true
+ * // => true
  *
  * isDate(new Date().getTime());
- * // -> false
+ * // => false
  */
 const isDate = value => {
   return Object.prototype.toString.call(value) === '[object Date]';

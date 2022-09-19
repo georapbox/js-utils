@@ -12,22 +12,22 @@
  * @example
  *
  * randomString(8, '#aA!');
- * // -> '@+[cd{tX'
+ * // => '@+[cd{tX'
  *
  * randomString(8, '#aA');
- * // -> 'jeEmsT8z'
+ * // => 'jeEmsT8z'
  *
  * randomString(8, '#a');
- * // -> 'toae8z3z'
+ * // => 'toae8z3z'
  *
  * randomString(8, '#');
- * // -> '63263257'
+ * // => '63263257'
  *
  * randomString(16);
- * // -> 'g*EY;#5PlO2V!!'
+ * // => 'g*EY;#5PlO2V!!'
  *
  * randomString(16, 'aA');
- * // -> 'YGOSgnoUIHaUvEcp'
+ * // => 'YGOSgnoUIHaUvEcp'
  */
 const randomString = (len, chars = '#aA!') => {
   const charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';

@@ -21,26 +21,26 @@ Inserts one or more elements to array at a specific index.
 const arr = [1, 2, 3];
 
 insert(arr, 0, 'a');
-// -> ['a', 1, 2, 3]
+// => ['a', 1, 2, 3]
 
 insert(arr, 2, 'a');
-// -> [1, 2, 'a', 3]
+// => [1, 2, 'a', 3]
 
 insert(arr, -1, 'a');
-// -> [1, 2, 'a', 3]
+// => [1, 2, 'a', 3]
 
 insert(arr, 0.9, 'a');
-// -> ['a', 1, 2, 3];
+// => ['a', 1, 2, 3];
 
 insert(arr, arr.length + 1, 'a');
-// -> [1, 2, 3, 'a']
+// => [1, 2, 3, 'a']
 
 insert(arr, 1, 'a', 'b', 'c');
-// -> [1, 'a', 'b', 'c', 2, 3]
+// => [1, 'a', 'b', 'c', 2, 3]
 
 insert(arr, 2, undefined);
-// -> [1, 2, undefined, 3]
+// => [1, 2, undefined, 3]
 
 insert(arr, 2);
-// -> [1, 2, 3]
+// => [1, 2, 3]
 ```

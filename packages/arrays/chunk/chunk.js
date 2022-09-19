@@ -9,20 +9,20 @@
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `size` is not number.
  * @throws {RangeError} If `size` is not a positive number, or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
- * @return {Array} The new array containing chunks. If `size` is lower than 1, an empty array is returned.
+ * @returns {Array} The new array containing chunks. If `size` is lower than 1, an empty array is returned.
  * @example
  *
  * chunk([1, 2, 3, 4], 2);
- * // -> [[1, 2], [3, 4]]
+ * // => [[1, 2], [3, 4]]
  *
  * chunk([1, 2, 3, 4, 5], 2);
- * // -> [[1, 2], [3, 4], [5]]
+ * // => [[1, 2], [3, 4], [5]]
  *
  * chunk([1, 2, 3, 4], 3);
- * // -> [[1, 2, 3], [4]]
+ * // => [[1, 2, 3], [4]]
  *
  * chunk([1, 2, 3, 4], 2.7);
- * // -> [[1, 2], [3, 4]]
+ * // => [[1, 2], [3, 4]]
  */
 const chunk = (array, size) => {
   if (!Array.isArray(array)) {

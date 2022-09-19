@@ -12,11 +12,11 @@ Checks if a value is a DOM element.
 **Example**  
 ```js
 isElement('Lorem ipusm dolr sit amet.');
-// -> false
+// => false
 
 isElement(document.body);
-// -> true
+// => true
 
 isElement(document.getElementsByTagName('head')[0])
-// -> true
+// => true
 ```

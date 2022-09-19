@@ -10,7 +10,7 @@
  * @example
  *
  * shuffle(arr);
- * // -> ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
+ * // => ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
  */
 const shuffle = array => {
   if (!Array.isArray(array)) {

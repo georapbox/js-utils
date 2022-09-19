@@ -6,41 +6,41 @@
  *
  * @param {String} subjectString The string to convert.
  * @throws {TypeError} Throws if `subjectString` is not string.
- * @return {String} Returns the kebab cased string.
+ * @returns {String} Returns the kebab cased string.
  * @example
  *
  * kebabCase('the quick brown fox jumps over the lazy dog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('   the quick brown fox jumps over the lazy dog   ');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('theQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('TheQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('The Quick Brown Fox Jumps Over The Lazy Dog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('theQUICKBrownFoxJumpsOverTheLazyDog');
- * // -> 'the-q-u-i-c-k-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-q-u-i-c-k-brown-fox-jumps-over-the-lazy-dog'
  *
  * kebabCase('thequickbrownfoxjumpsoverthelazydog');
- * // -> 'thequickbrownfoxjumpsoverthelazydog'
+ * // => 'thequickbrownfoxjumpsoverthelazydog'
  *
  * kebabCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
- * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
+ * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  */
 const kebabCase = subjectString => {
   if (typeof subjectString !== 'string') {

@@ -4,22 +4,22 @@
  * Checks if a value is `null` or `undefined`.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the value is `null` or `undefined`; otherwise false.
+ * @returns {Boolean} True if the value is `null` or `undefined`; otherwise false.
  * @example
  *
  * let foo;
  *
  * isNullish(foo);
- * // -> true
+ * // => true
  *
  * isNullish(null);
- * // -> true
+ * // => true
  *
  * isNullish({foo: 'bar'});
- * // -> false
+ * // => false
  *
  * isNullish();
- * // -> true
+ * // => true
  */
 const isNullish = value => value == null;
 

@@ -12,17 +12,17 @@ Checks if a value is classified as a Symbol primitive.
 **Example**  
 ```js
 isSymbol(Symbol());
-// -> true
+// => true
 
 isSymbol(Symbol('foo'));
-// -> true
+// => true
 
 isSymbol(Symbol.for('foo'));
-// -> true
+// => true
 
 isSymbol(Symbol.iterator);
-// -> true
+// => true
 
 isSymbol('foo');
-// -> false
+// => false
 ```

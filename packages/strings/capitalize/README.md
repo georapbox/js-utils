@@ -17,11 +17,11 @@ Capitalizes the first character of a string.
 **Example**  
 ```js
 capitalize('hello');
-// -> 'Hello'
+// => 'Hello'
 
 capitalize('hElLo');
 // -< 'HElLo'
 
 capitalize('hElLo', true);
-// -> 'Hello'
+// => 'Hello'
 ```

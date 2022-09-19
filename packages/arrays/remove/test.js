@@ -33,7 +33,7 @@ describe('Array/remove', function () {
     expect(remove(arr, '0', '1')).toEqual([1, 2, 3, 4, 5]);
 
     expect(function () {
-      return remove({ foo: 'bar' }, [0]);
+      return remove({foo: 'bar'}, [0]);
     }).toThrow(new TypeError('Expected an array for first argument'));
   });
 });

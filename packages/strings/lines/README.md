@@ -21,8 +21,8 @@ const str2 = `You can\'t make
   breaking a few eggs.`;
 
 lines(str);
-// -> ['You can't make', 'an omelet without', 'breaking a few eggs.']
+// => ['You can't make', 'an omelet without', 'breaking a few eggs.']
 
 lines(str2);
-// -> ['You can't make', 'an omelet without', 'breaking a few eggs.']
+// => ['You can't make', 'an omelet without', 'breaking a few eggs.']
 ```

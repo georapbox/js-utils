@@ -28,5 +28,5 @@ const books = [
 dropRightWhile(books, function (book, index, books) {
   return !book.read;
 });
-// -> [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: true}]
+// => [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: true}]
 ```

@@ -4,32 +4,32 @@
  * Validates a string as email address.
  *
  * @param {String} value The string to validate.
- * @return {Boolean} True if valid email, else false.
+ * @returns {Boolean} True if valid email, else false.
  * @example
  *
  * isEmail('me@example.com';
- * // -> true
+ * // => true
  *
  * isEmail('a.nonymous@example.com';
- * // -> true
+ * // => true
  *
  * isEmail('name+tag@example.com';
- * // -> true
+ * // => true
  *
  * isEmail('name\@tag@example.com');
- * // -> true
+ * // => true
  *
  * isEmail('name@tag@example.com');
- * // -> true
+ * // => true
  *
  * isEmail('spaces are allowed@example.com');
- * // -> true
+ * // => true
  *
  * isEmail("!#$%&'+-/=.?^`{|}~@[1.0.0.127]");
- * // -> true
+ * // => true
  *
  * isEmail("!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]");
- * // -> false
+ * // => false
  */
 const isEmail = value => {
   if (typeof value !== 'string') {

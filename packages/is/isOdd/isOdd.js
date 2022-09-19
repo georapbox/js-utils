@@ -4,29 +4,29 @@
  * Checks if a value is odd.
  *
  * @param {Number} value The value to check.
- * @return {Boolean} True if value is odd, else false.
+ * @returns {Boolean} True if value is odd, else false.
  * @example
  *
  * isOdd(0);
- * // -> false
+ * // => false
  *
  *isOdd(2);
- * // -> false
+ * // => false
  *
  * isOdd(3);
- * // -> true
+ * // => true
  *
  * isOdd(5);
- * // -> true
+ * // => true
  *
  * isOdd('5');
- * // -> true
+ * // => true
  *
  * isOdd(null);
- * // -> false
+ * // => false
  *
  * isOdd();
- * // -> false
+ * // => false
  */
 const isOdd = value => {
   if (typeof value === 'object' || typeof value === 'undefined') {

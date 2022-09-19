@@ -16,5 +16,5 @@ Converts all adjacent whitespace characters to a single space.
 **Example**  
 ```js
 collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
-// -> 'Lorem ispum dolor sit amet.'
+// => 'Lorem ispum dolor sit amet.'
 ```

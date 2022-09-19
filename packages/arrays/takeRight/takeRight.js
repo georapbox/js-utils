@@ -11,31 +11,31 @@
  * @example
  *
  * takeRight([1, 2, 3, 4, 5]);
- * // -> [5]
+ * // => [5]
  *
  * takeRight([1, 2, 3, 4, 5], NaN);
- * // -> [5]
+ * // => [5]
  *
  * takeRight([1, 2, 3, 4, 5], 3);
- * // -> [3, 4, 5]
+ * // => [3, 4, 5]
  *
  * takeRight([1, 2, 3, 4, 5], 0);
- * // -> []
+ * // => []
  *
  * takeRight([1, 2, 3, 4, 5], -2);
- * // -> []
+ * // => []
  *
  * takeRight([1, 2, 3, 4, 5], 10);
- * // -> [1, 2, 3, 4, 5]
+ * // => [1, 2, 3, 4, 5]
  *
  * takeRight([1, 2, 3, 4, 5], Number.MAX_VALUE);
- * // -> [1, 2, 3, 4, 5]
+ * // => [1, 2, 3, 4, 5]
  *
  * takeRight([1, 2, 3, 4, 5], '2');
- * // -> Throws TypeError
+ * // => Throws TypeError
  *
  * takeRight({}, 2);
- * // -> Throws TypeError
+ * // => Throws TypeError
  */
 const takeRight = (array, n = 1) => {
   if (!Array.isArray(array)) {

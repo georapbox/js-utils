@@ -12,11 +12,11 @@ Checks if a value is `false` (strict equality).
 **Example**  
 ```js
 isFalse(false);
-// -> true
+// => true
 
 isFalse(true);
-// -> false
+// => false
 
 isFalse();
-// -> false
+// => false
 ```

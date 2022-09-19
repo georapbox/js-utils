@@ -4,17 +4,17 @@
  * Checks if a value is `true` (strict equality).
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the value is true, else false.
+ * @returns {Boolean} True if the value is true, else false.
  * @example
  *
  * isTrue(true);
- * // -> true
+ * // => true
  *
  * isTrue(false);
- * // -> false
+ * // => false
  *
  * isTrue();
- * // -> false
+ * // => false
  */
 const isTrue = value => value === true;
 

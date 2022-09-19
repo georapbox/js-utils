@@ -10,22 +10,22 @@
  * @example
  *
  * roundToNearest(100, 40);
- * // -> 120
+ * // => 120
  *
  * roundToNearest(140, 40);
- * // -> 160
+ * // => 160
  *
  * roundToNearest(180, 40);
- * // -> 200
+ * // => 200
  *
  * roundToNearest(100, 0);
- * // -> NaN
+ * // => NaN
  *
  * roundToNearest(100, NaN);
- * // -> NaN
+ * // => NaN
  *
  * roundToNearest(100);
- * // -> NaN
+ * // => NaN
  */
 const roundToNearest = (value, nearest) => {
   if (typeof value !== 'number' || typeof nearest !== 'number') {

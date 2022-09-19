@@ -27,7 +27,7 @@ module.exports = (function () {
    *   secure: true,
    *   samesite: 'strict'
    * });
-   * // -> undefined
+   * // => undefined
    */
   function setCookie(name, value, options = {}) {
     if (typeof name !== 'string' || typeof value !== 'string') {
@@ -63,10 +63,10 @@ module.exports = (function () {
    * @example
    *
    * cookie.get('foo');
-   * // -> 'bar'
+   * // => 'bar'
    *
    * cookie.get('cookie-that-does-not-exist');
-   * // -> ''
+   * // => ''
    */
   function getCookie(name) {
     if (typeof name !== 'string') {
@@ -90,7 +90,7 @@ module.exports = (function () {
    * @example
    *
    * cookie.remove('foo');
-   * // -> undefined
+   * // => undefined
    */
   function removeCookie(name) {
     if (typeof name !== 'string') {

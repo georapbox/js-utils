@@ -22,8 +22,8 @@ const str = 'Maître Corbeau, sur un arbre perché,' +
   'Lui tint à peu près ce langage.';
 
 deburr(str);
-// -> 'Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.'
+// => 'Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.'
 
 deburr('déjà vu');
-// -> 'deja vu'
+// => 'deja vu'
 ```

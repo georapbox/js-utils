@@ -3,11 +3,11 @@
 /**
  * Detects the supported property name for the `transitionend` event.
  *
- * @return {String} The supported property name or `undefined` if not supported.
+ * @returns {String} The supported property name or `undefined` if not supported.
  * @example
  *
  * const transEnd = whichTransitionEnd();
- * // -> eg 'transitionend'
+ * // => eg 'transitionend'
  *
  * element.addEventListener(transEnd, function () {
  *   // Do soething...

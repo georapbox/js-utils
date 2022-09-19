@@ -12,26 +12,26 @@ Checks if 'value' is a finite number.
 **Example**  
 ```js
 isFiniteNum(Infinity);
-// -> false
+// => false
 
 isFiniteNum(NaN);
-// -> false
+// => false
 
 isFiniteNum(-Infinity);
-// -> false
+// => false
 
 isFiniteNum(0);
-// -> true
+// => true
 
 isFiniteNum(2e64);
-// -> true
+// => true
 
 isFiniteNum(null);
-// -> false
+// => false
 
 isFiniteNum(undefined);
-// -> false
+// => false
 
 isFiniteNum('0');
-// -> false
+// => false
 ```

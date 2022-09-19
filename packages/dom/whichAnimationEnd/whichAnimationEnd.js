@@ -3,11 +3,11 @@
 /**
  * Detects the supported property name for the `animationend` event.
  *
- * @return {String} The supported property name or `undefined` if not supported.
+ * @returns {String} The supported property name or `undefined` if not supported.
  * @example
  *
  * const animEnd = whichAnimationEnd();
- * // -> eg 'animationend'
+ * // => eg 'animationend'
  *
  * element.addEventListener(animEnd, function () {
  *   // Do soething...

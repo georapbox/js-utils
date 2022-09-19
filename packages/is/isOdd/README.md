@@ -12,23 +12,23 @@ Checks if a value is odd.
 **Example**  
 ```js
 isOdd(0);
-// -> false
+// => false
 
 isOdd(2);
-// -> false
+// => false
 
 isOdd(3);
-// -> true
+// => true
 
 isOdd(5);
-// -> true
+// => true
 
 isOdd('5');
-// -> true
+// => true
 
 isOdd(null);
-// -> false
+// => false
 
 isOdd();
-// -> false
+// => false
 ```

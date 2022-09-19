@@ -12,14 +12,14 @@ Checks if a value is a flat array. If the value is not array, will return `false
 **Example**  
 ```js
 isFlatArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-// -> true
+// => true
 
 isFlatArray([1, 2, [3], [4, 5], 6, 7, [8], 9]);
-// -> false
+// => false
 
 isFlatArray([]);
-// -> true
+// => true
 
 isFlatArray(new Set());
-// -> false
+// => false
 ```

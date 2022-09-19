@@ -11,7 +11,7 @@
  * @param {function} fn The function to restrict.
  * @throws {TypeError} If `n` is not number.
  * @throws {TypeError} If `fn` is not function.
- * @return {function} The new restricted function.
+ * @returns {function} The new restricted function.
  * @example
  *
  * const doSomething = after(4, () => console.log('Do something...');

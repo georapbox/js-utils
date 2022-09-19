@@ -9,16 +9,16 @@
  * @example
  *
  * isFlatArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
- * // -> true
+ * // => true
  *
  * isFlatArray([1, 2, [3], [4, 5], 6, 7, [8], 9]);
- * // -> false
+ * // => false
  *
  * isFlatArray([]);
- * // -> true
+ * // => true
  *
  * isFlatArray(new Set());
- * // -> false
+ * // => false
  */
 const isFlatArray = value => {
   if (!Array.isArray(value)) {

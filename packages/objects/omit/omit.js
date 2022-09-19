@@ -15,19 +15,19 @@
  * };
  *
  * omit(obj, ['a', 'c']);
- * // -> { b: 'bbb' }
+ * // => { b: 'bbb' }
  *
  * omit(obj, ['a', 'b', 'c']);
- * // -> {}
+ * // => {}
  *
  * omit(obj);
- * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  *
  * omit(obj, []);
- * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  *
  * omit(obj, ['key_not_exists']);
- * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  */
 const omit = (obj, props) => {
   if (!Array.isArray(props) || props.length === 0) {

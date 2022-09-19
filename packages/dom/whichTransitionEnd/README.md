@@ -7,7 +7,7 @@ Detects the supported property name for the `transitionend` event.
 **Example**  
 ```js
 const transEnd = whichTransitionEnd();
-// -> eg 'transitionend'
+// => eg 'transitionend'
 
 element.addEventListener(transEnd, function () {
   // Do soething...

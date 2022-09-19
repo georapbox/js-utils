@@ -15,26 +15,26 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Example**  
 ```js
 max(5);
-// -> 5
+// => 5
 
 max([1, -10, 1024, 1024.5, 29]);
-// -> 1024.5
+// => 1024.5
 
 max(5, 10, 154, 4, 8, 87);
-// -> 154
+// => 154
 
 max(NaN, 10);
-// -> NaN
+// => NaN
 
 max('', '1');
-// -> 1
+// => 1
 
 max(0, true);
-// -> 1
+// => 1
 
 max(false);
-// -> 0
+// => 0
 
 max();
-// -> -Infinity
+// => -Infinity
 ```

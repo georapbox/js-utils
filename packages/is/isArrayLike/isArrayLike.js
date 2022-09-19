@@ -7,7 +7,7 @@
  * integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is array-like, else false.
+ * @returns {Boolean} True if value is array-like, else false.
  * @example
  *
  * function noop() {}
@@ -19,31 +19,31 @@
  * const args = dummy();
  *
  * isArrayLike([1, 2, 3]));
- * // -> true
+ * // => true
  *
  * isArrayLike('abc'));
- * // -> true
+ * // => true
  *
  * isArrayLike(0));
- * // -> false
+ * // => false
  *
  * isArrayLike({foo: 'bar'}));
- * // -> false
+ * // => false
  *
  * isArrayLike(noop));
- * // -> false
+ * // => false
  *
  * isArrayLike(null));
- * // -> false
+ * // => false
  *
  * isArrayLike());
- * // -> false
+ * // => false
  *
  * isArrayLike(document.body.children);
- * // -> true
+ * // => true
  *
  * isArrayLike(args));
- * // -> true
+ * // => true
  */
 const isArrayLike = value => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;

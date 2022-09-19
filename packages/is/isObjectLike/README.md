@@ -12,50 +12,50 @@ Checks if a value is object-like. A value is object-like if it's not `null` and 
 **Example**
 ```js
 isObjectLike({});
-// -> true
+// => true
 
 isObjectLike(Object.create({}));
-// -> true
+// => true
 
 isObjectLike(Object.create(null));
-// -> true
+// => true
 
 isObjectLike([1, 2, 3]);
-// -> true
+// => true
 
 isObjectLike(new Number(0));
-// -> true
+// => true
 
 isObjectLike(new String('Hello world'));
-// -> true
+// => true
 
 isObjectLike(new RegExp('s+')));
-// -> true
+// => true
 
 isObjectLike(/s+/);
-// -> true
+// => true
 
 isObjectLike(new Map());
-// -> true
+// => true
 
 isObjectLike(new Set());
-// -> true
+// => true
 
 isObjectLike(0);
-// -> false
+// => false
 
 isObjectLike('Hello world');
-// -> false
+// => false
 
 isObjectLike(function noop() {});
-// -> false
+// => false
 
 isObjectLike(null);
-// -> false
+// => false
 
 isObjectLike(Boolean(1));
-// -> false
+// => false
 
 isObjectLike(Symbol('foo'));
-// -> false
+// => false
 ```

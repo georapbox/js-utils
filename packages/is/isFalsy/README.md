@@ -12,26 +12,26 @@ Checks if a value is a falsy one.
 **Example**  
 ```js
 isFalsy(true);
-// -> false
+// => false
 
 isFalsy(' ');
-// -> false
+// => false
 
 isFalsy(1);
-// -> false
+// => false
 
 isFalsy(false);
-// -> true
+// => true
 
 isFalsy('');
-// -> true
+// => true
 
 isFalsy();
-// -> true
+// => true
 
 isFalsy(0);
-// -> true
+// => true
 
 isFalsy(NaN);
-// -> true
+// => true
 ```

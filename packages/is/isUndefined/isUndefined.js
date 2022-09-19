@@ -4,22 +4,22 @@
  * Checks if a value is `undefined`.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the value is `undefined`, else false.
+ * @returns {Boolean} True if the value is `undefined`, else false.
  * @example
  *
  * let foo;
  *
  * isUndefined(foo);
- * // -> true
+ * // => true
  *
  * isUndefined(null);
- * // -> false
+ * // => false
  *
  * isUndefined({foo: 'bar'});
- * // -> false
+ * // => false
  *
  * isUndefined();
- * // -> true
+ * // => true
  */
 const isUndefined = value => typeof value === 'undefined';
 

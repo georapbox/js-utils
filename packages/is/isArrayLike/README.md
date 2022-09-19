@@ -23,29 +23,29 @@ function dummy(...args) {
 const args = dummy();
 
 isArrayLike([1, 2, 3]));
-// -> true
+// => true
 
 isArrayLike('abc'));
-// -> true
+// => true
 
 isArrayLike(0));
-// -> false
+// => false
 
 isArrayLike({foo: 'bar'}));
-// -> false
+// => false
 
 isArrayLike(noop));
-// -> false
+// => false
 
 isArrayLike(null));
-// -> false
+// => false
 
 isArrayLike());
-// -> false
+// => false
 
 isArrayLike(document.body.children);
-// -> true
+// => true
 
 isArrayLike(args));
-// -> true
+// => true
 ```

@@ -5,7 +5,7 @@
  *
  * @param {function} fn The function to restrict.
  * @throws {TypeError} If `fn` is not function.
- * @return {function} Returns the new restricted function.
+ * @returns {function} Returns the new restricted function.
  * @example
  *
  * let num = 0;

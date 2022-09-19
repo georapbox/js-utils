@@ -12,19 +12,19 @@
  * @example
  *
  * inRange(3, 2, 4);
- * // -> true
+ * // => true
  *
  * inRange(3, 4, 2);
- * // -> true (`min` and `max` parameters are swapped)
+ * // => true (`min` and `max` parameters are swapped)
  *
  * inRange(-3, -2, -6);
- * // -> true
+ * // => true
  *
  * inRange(4, 8, 2);
- * // -> true
+ * // => true
  *
  * inRange(4.5, 8.2, 2.1);
- * // -> true
+ * // => true
  */
 const inRange = (value, min, max) => {
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {

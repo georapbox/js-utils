@@ -15,29 +15,29 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Example**  
 ```js
 min(5);
-// -> 5
+// => 5
 
 min([1, -10, 1024, 1024.5, 29]);
-// -> -10
+// => -10
 
 min(5, 10, 154, 4, 8, 87);
-// -> 4
+// => 4
 
 min(NaN, 10);
-// -> NaN
+// => NaN
 
 min('', '1');
-// -> 0
+// => 0
 
 min(0, true);
-// -> 0
+// => 0
 
 min(false);
-// -> 0
+// => 0
 
 min(true);
-// -> 1
+// => 1
 
 min();
-// -> Infinity
+// => Infinity
 ```

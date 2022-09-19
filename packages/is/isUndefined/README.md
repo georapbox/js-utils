@@ -14,14 +14,14 @@ Checks if a value is `undefined`.
 let foo;
 
 isUndefined(foo);
-// -> true
+// => true
 
 isUndefined(null);
-// -> false
+// => false
 
 isUndefined({foo: 'bar'});
-// -> false
+// => false
 
 isUndefined();
-// -> true
+// => true
 ```

@@ -5,14 +5,14 @@
  *
  * @param {String} subjectString The string to process.
  * @throws {TypeError} Throws if `subjectString` is not string.
- * @return {Array} Returns array that contains the string's words.
+ * @returns {Array} Returns array that contains the string's words.
  * @example
  *
  * words('Hello world! \n This is a message from outer\tspace.');
- * // -> ['Hello', 'world', 'This', 'is', 'a', 'message', 'from', 'outer', 'space']
+ * // => ['Hello', 'world', 'This', 'is', 'a', 'message', 'from', 'outer', 'space']
  *
  * words('🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🥭');
- * // -> ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
+ * // => ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
  */
 const words = subjectString => {
   if (typeof subjectString !== 'string') {

@@ -12,8 +12,8 @@ Checks if a value is a date object.
 **Example**  
 ```js
 isDate(new Date());
-// -> true
+// => true
 
 isDate(new Date().getTime());
-// -> false
+// => false
 ```

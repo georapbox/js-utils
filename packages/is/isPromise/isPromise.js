@@ -8,18 +8,18 @@
  * @example
  *
  * isPromise(new Promise(resolve, reject));
- * // -> true
+ * // => true
  *
  * isPromise(Promise.resolve('Success'));
- * // -> true
+ * // => true
  *
  * isPromise(Promise.reject('Error'));
- * // -> true
+ * // => true
  *
  * isPromise(function () {
  *   return Promise.resolve('Success');
  * });
- * // -> false
+ * // => false
  */
 const isPromise = value => {
   // Checking with `Object.prototype.toString` should be enough for most cases except for the

@@ -21,13 +21,13 @@
  * });
  *
  * pick(object, ['a', 'c', 'foo']);
- * // -> { a: 1, c: 3 }
+ * // => { a: 1, c: 3 }
  *
  * pick(object, ['a', 'c', 'foo'], false);
- * // -> { a: 1, c: 3, foo: 'bar' }
+ * // => { a: 1, c: 3, foo: 'bar' }
  *
  * pick(object, ['d']);
- * // -> {}
+ * // => {}
  */
 const pick = (object, paths, pickOwnKeys) => {
   const result = {};

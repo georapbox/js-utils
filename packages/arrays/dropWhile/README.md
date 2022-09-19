@@ -28,5 +28,5 @@ const books = [
 dropWhile(books, function (book, index, books) {
   return !book.read;
 });
-// -> [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
+// => [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
 ```

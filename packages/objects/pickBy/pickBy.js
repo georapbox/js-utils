@@ -37,27 +37,27 @@
  * pickBy(object, function (value) {
  *   return typeof value === 'number';
  * });
- * // -> { a: 1, c: 3 }
+ * // => { a: 1, c: 3 }
  *
  * pickBy(object, function (value) {
  *   return typeof value === 'number';
  * }, false);
- * // -> { a: 1, c: 3, e: 5 }
+ * // => { a: 1, c: 3, e: 5 }
  *
  * pickBy(object, function (value) {
  *   return typeof value === 'function';
  * });
- * // -> {}
+ * // => {}
  *
  * pickBy(object, function (_, key) {
  *   return key === 'a';
  * });
- * // -> { a: 1 }
+ * // => { a: 1 }
  *
  * pickBy(object, function (_, key) {
  *   return key === 'd'; // property "d" is not enumerable
  * });
- * // -> {}
+ * // => {}
  */
 const pickBy = (object, predicate, pickOwnKeys) => {
   const result = {};

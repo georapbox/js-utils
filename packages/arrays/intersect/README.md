@@ -20,8 +20,8 @@ const arrB = [2, 7, 'foo', NaN, 3];
 const arrC = [1, 2, 3, NaN];
 
 intersect(arrA, arrB);
-// -> [NaN, 3, 'foo']
+// => [NaN, 3, 'foo']
 
 intersect(arrA, arrB, arrC);
-// -> [NaN, 3]
+// => [NaN, 3]
 ```

@@ -19,5 +19,5 @@ const array = ['1', '2', '3'];
 
 const toInteger = unary(parseInt);
 
-array.map(toInteger); // -> [1, 2, 3]
+array.map(toInteger); // => [1, 2, 3]
 ```

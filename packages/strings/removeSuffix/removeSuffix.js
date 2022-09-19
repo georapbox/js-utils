@@ -7,20 +7,20 @@
  * @param {String} [suffix] The suffix substring to remove from the original string.
  * @throws {TypeError} If `subjectString` is not string.
  * @throws {TypeError} If `suffix` is not string but not if is `undefined`.
- * @return {String} The result string.
+ * @returns {String} The result string.
  * @example
  *
  * removeSuffix('foobar__', '__');
- * // -> 'foo'
+ * // => 'foo'
  *
  * removeSuffix('foobar__', '??');
- * // -> 'foobar'
+ * // => 'foobar'
  *
  * removeSuffix('foobar__');
- * // -> 'foobar'
+ * // => 'foobar'
  *
  * removeSuffix('foobar__', {});
- * // -> TypeError
+ * // => TypeError
  */
 const removeSuffix = (subjectString, suffix) => {
   if (typeof subjectString !== 'string' || typeof suffix !== 'string' && typeof suffix !== 'undefined') {

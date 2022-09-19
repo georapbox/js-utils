@@ -5,7 +5,7 @@
  *
  * @param {String} subjectString The string to process.
  * @throws {TypeError} If `subjectString` is not string.
- * @return {Array} An array or strings containing the lines of the string.
+ * @returns {Array} An array or strings containing the lines of the string.
  * @example
  *
  * const str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
@@ -14,10 +14,10 @@
  *   breaking a few eggs.`;
  *
  * lines(str);
- * // -> ['You can't make', 'an omelet without', 'breaking a few eggs.']
+ * // => ['You can't make', 'an omelet without', 'breaking a few eggs.']
  *
  * lines(str2);
- * // -> ['You can't make', 'an omelet without', 'breaking a few eggs.']
+ * // => ['You can't make', 'an omelet without', 'breaking a few eggs.']
  */
 const lines = subjectString => {
   if (typeof subjectString !== 'string') {

@@ -31,10 +31,10 @@ const users = [{
 }];
 
 partition(users, user => user.isAdmin);
-// -> [[{ name: 'John', isAdmin: true }, { name: 'Alice', isAdmin: true }], [{ name: 'George', isAdmin: false }]]
+// => [[{ name: 'John', isAdmin: true }, { name: 'Alice', isAdmin: true }], [{ name: 'George', isAdmin: false }]]
 
 const numbers = [1, 3, 5, -4, 6, -2];
 
 partition(numbers, num => num > 0);
-// -> [[1, 3, 5, 6], [-4, -2]]
+// => [[1, 3, 5, 6], [-4, -2]]
 ```

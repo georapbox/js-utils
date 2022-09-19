@@ -6,35 +6,35 @@
  *
  * @param {String} subjectString The string to convert.
  * @throws {TypeError} Throws if `subjectString` is not string.
- * @return {String} Returns the pascal cased string.
+ * @returns {String} Returns the pascal cased string.
  * @example
  *
  * pascalCase('the quick brown fox jumps over the lazy dog');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase('The Quick Brown Fox Jumps Over The Lazy Dog');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase('TheQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase('thequickbrownfoxjumpsoverthelazydog');
- * // -> 'Thequickbrownfoxjumpsoverthelazydog'
+ * // => 'Thequickbrownfoxjumpsoverthelazydog'
  *
  * pascalCase('theQUICKBrownFoxJumpsOverTheLazyDog');
- * // -> 'TheQUICKBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQUICKBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  *
  * pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
- * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  */
 const pascalCase = subjectString => {
   if (typeof subjectString !== 'string') {

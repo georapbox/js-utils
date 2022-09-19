@@ -14,10 +14,10 @@
  * const arrC = [1, 2, 3, NaN];
  *
  * intersect(arrA, arrB);
- * // -> [NaN, 3, 'foo']
+ * // => [NaN, 3, 'foo']
  *
  * intersect(arrA, arrB, arrC);
- * // -> [NaN, 3]
+ * // => [NaN, 3]
  */
 const intersect = (...arrays) => {
   let len = arrays.length;
@@ -38,10 +38,7 @@ const intersect = (...arrays) => {
         while (index < currentArray.length) {
           const currentElement = currentArray[index];
 
-          if (
-            element === currentElement
-            || (element !== element && currentElement !== currentElement) // Check for NaN values
-          ) {
+          if (element === currentElement || Number.isNaN(element) && Number.isNaN(currentElement)) {
             return true;
           }
 

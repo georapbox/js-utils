@@ -18,10 +18,10 @@
  * const b = [5, 2, 10, obj];
  *
  * diff(a, b);
- * // -> [1, 3, 4]
+ * // => [1, 3, 4]
  *
  * diff(a, []);
- * // -> [1, 2, 3, 4, 5, obj]
+ * // => [1, 2, 3, 4, 5, obj]
  */
 const diff = (arrayA, arrayB) => {
   if (!Array.isArray(arrayA) || !Array.isArray(arrayB)) {

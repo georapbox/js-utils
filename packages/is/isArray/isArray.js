@@ -4,20 +4,20 @@
  * Checks if a value is array.
  *
  * @param {*} value The value to check if is array.
- * @return {Boolean} True if array, else false.
+ * @returns {Boolean} True if array, else false.
  * @example
  *
  * isArray(['a', 'b', 'c', 'd']);
- * // -> true
+ * // => true
  *
  * isArray(100);
- * // -> false
+ * // => false
  *
  * isArray('Lorem ipsum dolor sit amet');
- * // -> false
+ * // => false
  *
  * isArray({ a: 'a', b: 'b' });
- * // -> false
+ * // => false
  */
 const isArray = value => {
   return Array.isArray

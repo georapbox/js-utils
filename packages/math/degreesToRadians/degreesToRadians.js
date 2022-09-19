@@ -9,19 +9,19 @@
  * @example
  *
  * degreesToRadians(0);
- * // -> 0
+ * // => 0
  *
  * degreesToRadians(90);
- * // -> 1.5707963267948966 (π / 2)
+ * // => 1.5707963267948966 (π / 2)
  *
  * degreesToRadians(180);
- * // -> 3.141592653589793 (π)
+ * // => 3.141592653589793 (π)
  *
  * degreesToRadians(270);
- * // -> 4.71238898038469 (3π / 2)
+ * // => 4.71238898038469 (3π / 2)
  *
  * degreesToRadians(360);
- * // -> 6.283185307179586 (2π)
+ * // => 6.283185307179586 (2π)
  */
 const degreesToRadians = degrees => {
   if (typeof degrees !== 'number') {
@@ -29,6 +29,6 @@ const degreesToRadians = degrees => {
   }
 
   return degrees * Math.PI / 180;
-}
+};
 
 module.exports = degreesToRadians;

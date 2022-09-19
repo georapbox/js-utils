@@ -8,7 +8,7 @@
  * @param {function} predicate The function invoked per iteration.
  * @throws {TypeError} If `array` is not array.
  * @throws {TypeError} If `predicate` is not function but not if is `undefined`.
- * @return {Array} The slice of the array.
+ * @returns {Array} The slice of the array.
  * @example
  *
  * const books = [
@@ -21,7 +21,7 @@
  * dropWhile(books, function (book, index, books) {
  *   return !book.read;
  * });
- * // -> [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
+ * // => [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
 const dropWhile = (array, predicate) => {
   if (!Array.isArray(array)) {

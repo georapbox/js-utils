@@ -11,7 +11,7 @@
  * @example
  *
  * randomInt(3, 8);
- * // -> Any integer number between 3 (inclusive) and 8 (inclusive). eg 6
+ * // => Any integer number between 3 (inclusive) and 8 (inclusive). eg 6
  */
 const randomInt = (min, max) => {
   if (typeof min !== 'number' || typeof max !== 'number') {

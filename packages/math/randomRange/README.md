@@ -18,5 +18,5 @@ If `min` is greater than `max` the parameters are swapped to support inverted ra
 **Example**  
 ```js
 randomRange(3, 8);
-// -> Any number between 3 (inclusive) and 8 (exclusive). eg 5.3304674779064953
+// => Any number between 3 (inclusive) and 8 (exclusive). eg 5.3304674779064953
 ```

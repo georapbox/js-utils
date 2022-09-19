@@ -17,11 +17,11 @@ If a string is provided as the first argument, will try to convert it.
 **Example**  
 ```js
 numberFormat(123456789.12345);
-// -> '123,456,789'
+// => '123,456,789'
 
 numberFormat(123456789.12345, 3, '.', ',');
-// -> '123,456,789.123'
+// => '123,456,789.123'
 
 numberFormat(123456789.12345, 3, ',', '.');
-// -> '123.456.789,123'
+// => '123.456.789,123'
 ```

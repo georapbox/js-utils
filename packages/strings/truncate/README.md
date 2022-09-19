@@ -21,28 +21,28 @@ Truncates a string based on character count.
 const str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 
 truncate(str, 50, '...');
-// -> 'Lorem ipsum dolor sit amet, consectetur adipisicin...'
+// => 'Lorem ipsum dolor sit amet, consectetur adipisicin...'
 
 truncate(str, 30, '---');
-// -> 'Lorem ipsum dolor sit amet, co---'
+// => 'Lorem ipsum dolor sit amet, co---'
 
 truncate(str, 30);
-// -> 'Lorem ipsum dolor sit amet, co'
+// => 'Lorem ipsum dolor sit amet, co'
 
 truncate(str, 0);
-// -> ''
+// => ''
 
 truncate(str, 0, '...');
-// -> '...'
+// => '...'
 
 truncate(str, 3.7);
-// -> 'Lor'
+// => 'Lor'
 
 truncate(str, -1);
-// -> Returns the original string
+// => Returns the original string
 
 truncate(str, NaN);
-// -> Returns the original string
+// => Returns the original string
 
 truncate({item: str}, 10);
 // Throws TypeError
