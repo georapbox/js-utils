@@ -10,5 +10,9 @@ describe('flip', () => {
     const subtract = (a, b) => a - b;
     expect(subtract(1, 2)).toBe(-1);
     expect(flip(subtract)(1, 2)).toBe(1);
+
+    expect(() => {
+      return flip(null);
+    }).toThrow(new TypeError('Expected a function for first argument'));
   });
 });

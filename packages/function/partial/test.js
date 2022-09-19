@@ -25,4 +25,10 @@ describe('partial', () => {
     const p2 = partial(noop, 'foo', 'bar');
     expect(p2()).toBeUndefined();
   });
+
+  it('throws error if argument is not function', () => {
+    expect(() => {
+      return partial(null);
+    }).toThrow(new TypeError('Expected a function for first argument'));
+  });
 });

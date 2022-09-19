@@ -24,17 +24,17 @@
  * const addTwo = addOne(2);
  * addTwo(3); // => 6
  */
-const curry = (fn, arity = fn.length) => {
+const curry = (fn, arity) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  if (typeof arity !== 'number') {
+  if (typeof arity !== 'number' && typeof arity !== 'undefined') {
     throw new TypeError('Expected a number for second argument');
   }
 
   return function curried(...args_a) {
-    return args_a.length >= arity
+    return args_a.length >= (arity || fn.length)
       ? fn(...args_a)
       : (...args_b) => curried(...args_a, ...args_b);
   };

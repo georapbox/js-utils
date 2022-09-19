@@ -11,4 +11,10 @@ describe('partialRight', () => {
   it('providing more arguments than expected in the newly created function should affect the result', () => {
     expect(greetMrJoeBlack('Hello', 'there')).toBe('Hello, there Mr. Joe.');
   });
+
+  it('throws error if argument is not function', () => {
+    expect(() => {
+      return partialRight(null);
+    }).toThrow(new TypeError('Expected a function for first argument'));
+  });
 });
