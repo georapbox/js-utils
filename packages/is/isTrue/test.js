@@ -1,4 +1,4 @@
-var isTrue = require('./isTrue');
+const isTrue = require('./isTrue');
 
 describe('is/isTrue', function () {
   it('checks if a valud is true', function () {

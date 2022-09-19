@@ -1,4 +1,4 @@
-var isHexColor = require('./isHexColor');
+const isHexColor = require('./isHexColor');
 
 describe('is/isHexColor', function () {
   it('checks if a value matches a hexadecimal color regular expression', function () {

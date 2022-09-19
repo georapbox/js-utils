@@ -1,4 +1,4 @@
-var isFiniteNum = require('./isFiniteNum');
+const isFiniteNum = require('./isFiniteNum');
 
 describe('is/isFiniteNum', function () {
   function runTests() {
@@ -24,7 +24,7 @@ describe('is/isFiniteNum', function () {
   });
 
   it('checks if a value is finite (Number.isFinite is not supported)', function () {
-    var nativeCode = Number.isFinite;
+    const nativeCode = Number.isFinite;
     Number.isFinite = null;
     runTests();
     Number.isFinite = nativeCode;

@@ -33,7 +33,7 @@
  * isIterable(null);
  * // -> false
  */
-function isIterable(value) {
+const isIterable = value => {
   if (typeof Symbol === 'undefined' || !Symbol.iterator) {
     throw new TypeError('Symbol or Symbol.iterator is not supported by your environment.');
   }
@@ -43,6 +43,6 @@ function isIterable(value) {
   }
 
   return typeof value[Symbol.iterator] === 'function';
-}
+};
 
 module.exports = isIterable;

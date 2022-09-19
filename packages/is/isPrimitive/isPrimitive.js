@@ -43,12 +43,12 @@
  *
  * isPrimitive(/s+/g); // -> false
  */
-function isPrimitive(value) {
+const isPrimitive = value => {
   if (typeof value === 'object') {
     return value === null;
   }
 
   return typeof value !== 'function';
-}
+};
 
 module.exports = isPrimitive;

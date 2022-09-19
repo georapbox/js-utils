@@ -16,8 +16,6 @@
  * isTrue();
  * // -> false
  */
-function isTrue(value) {
-  return value === true;
-}
+const isTrue = value => value === true;
 
 module.exports = isTrue;

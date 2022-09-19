@@ -20,20 +20,18 @@
  * isFlatArray(new Set());
  * // -> false
  */
-function isFlatArray(value) {
-  var i, len;
-
+const isFlatArray = value => {
   if (!Array.isArray(value)) {
     return false;
   }
 
-  for (i = 0, len = value.length; i < len; i += 1) {
+  for (let i = 0; i < value.length; i += 1) {
     if (Array.isArray(value[i])) {
       return false;
     }
   }
 
   return true;
-}
+};
 
 module.exports = isFlatArray;

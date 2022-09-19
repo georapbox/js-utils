@@ -1,4 +1,4 @@
-var isMap = require('./isMap');
+const isMap = require('./isMap');
 
 describe('is/isMap', function () {
   it('checks if a value is Map', function () {

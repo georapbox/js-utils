@@ -13,8 +13,6 @@
  * isRegexp('/^[0-9a-fA-F]+$/');
  * // -> false
  */
-function isRegexp(value) {
-  return Object.prototype.toString.call(value) === '[object RegExp]';
-}
+const isRegexp = value => Object.prototype.toString.call(value) === '[object RegExp]';
 
 module.exports = isRegexp;

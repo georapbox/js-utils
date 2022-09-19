@@ -41,7 +41,7 @@
  * isInteger(Infinity);
  * // -> false
  */
-function isInteger(value) {
+const isInteger = value => {
   if (Number.isInteger) {
     return Number.isInteger(value);
   }
@@ -49,6 +49,6 @@ function isInteger(value) {
   return (Object.prototype.toString.call(value) === '[object Number]' || typeof value === 'number')
     && value !== Infinity && value !== -Infinity
     && Math.floor(value) === value;
-}
+};
 
 module.exports = isInteger;

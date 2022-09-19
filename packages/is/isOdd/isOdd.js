@@ -28,12 +28,12 @@
  * isOdd();
  * // -> false
  */
-function isOdd(value) {
+const isOdd = value => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }
 
   return value % 2 === 1;
-}
+};
 
 module.exports = isOdd;

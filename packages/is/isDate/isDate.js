@@ -13,8 +13,8 @@
  * isDate(new Date().getTime());
  * // -> false
  */
-function isDate(value) {
+const isDate = value => {
   return Object.prototype.toString.call(value) === '[object Date]';
-}
+};
 
 module.exports = isDate;

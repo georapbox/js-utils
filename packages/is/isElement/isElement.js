@@ -16,8 +16,8 @@
  * isElement(document.getElementsByTagName('head')[0])
  * // -> true
  */
-function isElement(value) {
+const isElement = value => {
   return !!value && value.nodeType === 1 && value instanceof Element === true;
-}
+};
 
 module.exports = isElement;

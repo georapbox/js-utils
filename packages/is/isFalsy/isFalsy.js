@@ -31,8 +31,6 @@
  * isFalsy(NaN);
  * // -> true
  */
-function isFalsy(value) {
-  return !value;
-}
+const isFalsy = value => !value;
 
 module.exports = isFalsy;

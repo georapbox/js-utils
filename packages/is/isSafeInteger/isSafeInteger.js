@@ -35,7 +35,7 @@
  * isSafeInteger(3.0));
  * // -> true
  */
-function isSafeInteger(value) {
+const isSafeInteger = value => {
   if (Number.isSafeInteger) {
     return Number.isSafeInteger(value);
   }
@@ -44,6 +44,6 @@ function isSafeInteger(value) {
     && Math.round(value) === value
     && -(Math.pow(2, 53) - 1) <= value
     && value <= Math.pow(2, 53) - 1;
-}
+};
 
 module.exports = isSafeInteger;

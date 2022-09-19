@@ -7,7 +7,7 @@
  * @return {Boolean} True if the value is `undefined`, else false.
  * @example
  *
- * var foo;
+ * let foo;
  *
  * isUndefined(foo);
  * // -> true
@@ -21,8 +21,6 @@
  * isUndefined();
  * // -> true
  */
-function isUndefined(value) {
-  return typeof value === 'undefined';
-}
+const isUndefined = value => typeof value === 'undefined';
 
 module.exports = isUndefined;

@@ -56,8 +56,8 @@
  * isObject(Symbol('foo'));
  * // -> false
  */
-function isObject(value) {
+const isObject = value => {
   return !!value && (typeof value === 'object' || typeof value === 'function');
-}
+};
 
 module.exports = isObject;

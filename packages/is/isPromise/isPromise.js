@@ -21,10 +21,10 @@
  * });
  * // -> false
  */
-function isPromise(value) {
+const isPromise = value => {
   // Checking with `Object.prototype.toString` should be enough for most cases except for the
   // rare case that a host object's tag is modified via `Symbol.toStringTag`, eg:
-  // var obj = {
+  // const obj = {
   //   get [Symbol.toStringTag]() {
   //     return 'Promise';
   //   }
@@ -35,6 +35,6 @@ function isPromise(value) {
   return Object.prototype.toString.call(value) === '[object Promise]'
     && typeof value.then === 'function'
     && typeof value.catch === 'function';
-}
+};
 
 module.exports = isPromise;

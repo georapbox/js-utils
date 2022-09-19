@@ -1,4 +1,4 @@
-var isObjectLike = require('./isObjectLike');
+const isObjectLike = require('./isObjectLike');
 
 describe('is/isObjectLike', function () {
   it('checks if a value is object-like', function () {

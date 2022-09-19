@@ -1,4 +1,4 @@
-var isSafeInteger = require('./isSafeInteger');
+const isSafeInteger = require('./isSafeInteger');
 
 describe('is/isSafeInteger', function () {
   function runTests() {
@@ -26,7 +26,7 @@ describe('is/isSafeInteger', function () {
   });
 
   it('check if integer number is in the safe range (Number.isSafeInteger is not supported)', function () {
-    var nativeCode = Number.isSafeInteger;
+    const nativeCode = Number.isSafeInteger;
     Number.isSafeInteger = null;
     runTests();
     Number.isSafeInteger = nativeCode;

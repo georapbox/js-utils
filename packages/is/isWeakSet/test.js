@@ -1,4 +1,4 @@
-var isWeakSet = require('./isWeakSet');
+const isWeakSet = require('./isWeakSet');
 
 describe('is/isWeakSet', function () {
   it('checks if a value is WeakMap', function () {

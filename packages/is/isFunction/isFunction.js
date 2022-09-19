@@ -15,8 +15,6 @@
  * isFunction('This is a test function.');
  * // -> false
  */
-function isFunction(value) {
-  return typeof value === 'function';
-}
+const isFunction = value => typeof value === 'function';
 
 module.exports = isFunction;

@@ -1,4 +1,4 @@
-var isFunction = require('./isFunction');
+const isFunction = require('./isFunction');
 
 describe('is/isFunction', function () {
   it('checks if a value is function', function () {
@@ -19,7 +19,7 @@ describe('is/isFunction', function () {
     expect(isFunction(genFunc)).toBe(true);
     expect(isFunction(true)).toBe(false);
     expect(isFunction(1)).toBe(false);
-    expect(isFunction({ foo: 'bar' })).toBe(false);
+    expect(isFunction({foo: 'bar'})).toBe(false);
     expect(isFunction([1, 2, 3])).toBe(false);
     expect(isFunction('foo')).toBe(false);
     expect(isFunction(null)).toBe(false);

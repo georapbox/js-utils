@@ -17,7 +17,7 @@ isWeakMap(new WeakMap());
 isWeakMap(new Map());
 // -> false
 
-var obj = {
+const obj = {
   foo: 'bar'
 };
 

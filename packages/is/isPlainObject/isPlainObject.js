@@ -49,14 +49,14 @@
  * isPlainObject('lorem ipsum');
  * // -> false
  */
-function isPlainObject(value) {
+const isPlainObject = value => {
   if (Object.prototype.toString.call(value) !== '[object Object]') {
     return false;
   }
 
-  var proto = Object.getPrototypeOf(value);
+  const proto = Object.getPrototypeOf(value);
 
   return proto === null || proto === Object.prototype;
-}
+};
 
 module.exports = isPlainObject;

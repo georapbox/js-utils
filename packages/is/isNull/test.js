@@ -1,4 +1,4 @@
-var isNull = require('./isNull');
+const isNull = require('./isNull');
 
 describe('is/isNull', function () {
   it('checks if a valud is null', function () {

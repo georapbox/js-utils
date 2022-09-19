@@ -13,8 +13,8 @@
  * isSet(new WeakSet());
  * // -> false
  */
-function isSet(value) {
+const isSet = value => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object Set]';
-}
+};
 
 module.exports = isSet;

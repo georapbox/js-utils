@@ -1,4 +1,4 @@
-var isNumber = require('./isNumber');
+const isNumber = require('./isNumber');
 
 describe('is/isNumber', function () {
   it('checks if a value is number', function () {

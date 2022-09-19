@@ -1,4 +1,4 @@
-var isPrimitive = require('./isPrimitive');
+const isPrimitive = require('./isPrimitive');
 
 describe('is/isPrimitive', function () {
   it('checks if value is a primitive data type', function () {

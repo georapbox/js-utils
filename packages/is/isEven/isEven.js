@@ -28,12 +28,12 @@
  * isEven();
  * // -> false
  */
-function isEven(value) {
+const isEven = value => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }
 
   return value % 2 === 0;
-}
+};
 
 module.exports = isEven;

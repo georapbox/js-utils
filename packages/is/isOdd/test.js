@@ -1,4 +1,4 @@
-var isOdd = require('./isOdd');
+const isOdd = require('./isOdd');
 
 describe('is/isOdd', function () {
   it('checks if a value is odd', function () {

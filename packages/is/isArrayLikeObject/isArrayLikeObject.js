@@ -12,11 +12,11 @@
  *
  * function noop() {}
  *
- * function dummy() {
- *   return arguments;
+ * function dummy(...args) {
+ *   return args;
  * }
  *
- * var args = dummy();
+ * const args = dummy();
  *
  * isArrayLikeObject([1, 2, 3]));
  * // -> true
@@ -45,9 +45,9 @@
  * isArrayLikeObject(args));
  * // -> true
  */
-function isArrayLikeObject(value) {
-  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-  var len = !!value && value.length;
+const isArrayLikeObject = value => {
+  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+  const len = !!value && value.length;
 
   return value != null
     && typeof value !== 'function'
@@ -56,6 +56,6 @@ function isArrayLikeObject(value) {
     && len > -1
     && len % 1 === 0
     && len <= MAX_SAFE_INTEGER;
-}
+};
 
 module.exports = isArrayLikeObject;

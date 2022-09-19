@@ -1,4 +1,4 @@
-var isObject = require('./isObject');
+const isObject = require('./isObject');
 
 describe('is/isObject', function () {
   it('checks if a value is object', function () {

@@ -1,4 +1,4 @@
-var isArray = require('./isArray');
+const isArray = require('./isArray');
 
 describe('is/isArray', function () {
   function runTests() {
@@ -18,7 +18,7 @@ describe('is/isArray', function () {
   });
 
   it('checks if value is array (Array.isArray is not supported)', function () {
-    var nativeCode = Array.isArray;
+    const nativeCode = Array.isArray;
     Array.isArray = null;
     runTests();
     Array.isArray = nativeCode;

@@ -7,7 +7,7 @@
  * @return {Boolean} True if the value is `null` or `undefined`; otherwise false.
  * @example
  *
- * var foo;
+ * let foo;
  *
  * isNullish(foo);
  * // -> true
@@ -21,8 +21,6 @@
  * isNullish();
  * // -> true
  */
-function isNullish(value) {
-  return value == null;
-}
+const isNullish = value => value == null;
 
 module.exports = isNullish;

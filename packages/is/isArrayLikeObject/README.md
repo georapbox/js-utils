@@ -16,11 +16,11 @@ integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_IN
 ```js
 function noop() {}
 
-function dummy() {
-  return arguments;
+function dummy(...args) {
+  return args;
 }
 
-var args = dummy();
+const args = dummy();
 
 isArrayLikeObject([1, 2, 3]));
 // -> true

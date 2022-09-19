@@ -1,4 +1,4 @@
-var isHexadecimal = require('./isHexadecimal');
+const isHexadecimal = require('./isHexadecimal');
 
 describe('is/isHexadecimal', function () {
   it('checks if a value is hexadecimal', function () {

@@ -13,7 +13,7 @@
  * isWeakMap(new Map());
  * // -> false
  *
- * var obj = {
+ * const obj = {
  *   foo: 'bar'
  * };
  *
@@ -23,8 +23,8 @@
  * isWeakMap([['foo', 'bar'], ['hello', 'world']]);
  * // -> false
  */
-function isWeakMap(value) {
+const isWeakMap = value => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object WeakMap]';
-}
+};
 
 module.exports = isWeakMap;

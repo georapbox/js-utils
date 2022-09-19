@@ -19,8 +19,8 @@
  * isMap({foo: 'bar', 'hello': 'world'});
  * // -> false
  */
-function isMap(value) {
+const isMap = value => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object Map]';
-}
+};
 
 module.exports = isMap;

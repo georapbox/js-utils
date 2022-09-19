@@ -31,7 +31,7 @@
  * isFiniteNum('0');
  * // -> false
  */
-function isFiniteNum(value) {
+const isFiniteNum = value => {
   if (Number.isFinite) {
     return Number.isFinite(value);
   }
@@ -39,6 +39,6 @@ function isFiniteNum(value) {
   return value != null && typeof value === 'number'
     && value !== Infinity && value !== -Infinity
     && value === value;
-}
+};
 
 module.exports = isFiniteNum;

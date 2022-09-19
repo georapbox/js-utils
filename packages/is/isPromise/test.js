@@ -1,12 +1,12 @@
-var isPromise = require('./isPromise');
+const isPromise = require('./isPromise');
 
 describe('is/isPromise', function () {
   it('checks if a value is a Promise', function () {
     function noop() {}
 
-    var p1 = new Promise(noop, noop);
-    var p2 = Promise.resolve('Success');
-    var p3 = Promise.reject('Error').catch(noop);
+    const p1 = new Promise(noop, noop);
+    const p2 = Promise.resolve('Success');
+    const p3 = Promise.reject('Error').catch(noop);
 
     expect(isPromise(p1)).toBe(true);
     expect(isPromise(p2)).toBe(true);
@@ -28,13 +28,13 @@ describe('is/isPromise', function () {
       return Promise.resolve('Success');
     })).toBe(false);
 
-    var fp1 = {
+    const fp1 = {
       get [Symbol.toStringTag]() {
         return 'Promise';
       }
     };
 
-    var fp2 = {
+    const fp2 = {
       get [Symbol.toStringTag]() {
         return 'Promise';
       },
