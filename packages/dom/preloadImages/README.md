@@ -17,7 +17,7 @@ Load images to browser asynchronously so that can be cached.
 
 **Example**  
 ```js
-var images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
+const images = ['image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
 
 function success(data) {
   console.log(data.currentImage.src, 'loaded');

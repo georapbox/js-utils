@@ -1,7 +1,7 @@
-var lines = require('./lines');
+const lines = require('./lines');
 
 describe('String/lines', function () {
-  var str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
+  const str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
 
   it('should return an array with the lines from a string', function () {
     expect(lines(str)).toHaveLength(3);

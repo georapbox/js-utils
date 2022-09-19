@@ -15,7 +15,7 @@ Removes all of the punctuation from a string.
 
 **Example**  
 ```js
-var str = ';``?You can\'t [make] an *ome*let + wit&&hout \\ %break_ing/% ~ a few eg-gs.!@#-"$"+:';
+const str = ';``?You can\'t [make] an *ome*let + wit&&hout \\ %break_ing/% ~ a few eg-gs.!@#-"$"+:';
 
 stripPunctuation(str);
 // -> You cant make an omelet without breaking a few eggs

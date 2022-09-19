@@ -1,8 +1,8 @@
-var randomString = require('./randomString');
+const randomString = require('./randomString');
 
 describe('String/randomString', function () {
   it('generates a pseudo-random string of n characters', function () {
-    var charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
+    const charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
 
     expect(randomString(16)).toHaveLength(16);
 

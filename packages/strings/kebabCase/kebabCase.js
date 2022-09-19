@@ -42,21 +42,18 @@
  * kebabCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // -> 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  */
-function kebabCase(subjectString) {
+const kebabCase = subjectString => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
-  var capitalsRegexp = /[A-Z\u00C0-\u00D6\u00D9-\u00DD]/g;
+  const capitalsRegexp = /[A-Z\u00C0-\u00D6\u00D9-\u00DD]/g;
   // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
-  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
-  var lowercase = subjectString.replace(capitalsRegexp, function (match) {
-    return ' ' + (match.toLowerCase() || match); // Replace all capitals with space + lower case equivalent
-  });
-  var words = lowercase.split(wordSeparatorRegexp); // Split by spaces or any punctuation characters
-  var result = words.filter(Boolean).join('-');
-
+  const wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
+  const lowercase = subjectString.replace(capitalsRegexp, match => ' ' + (match.toLowerCase() || match)); // Replace all capitals with space + lower case equivalent
+  const words = lowercase.split(wordSeparatorRegexp); // Split by spaces or any punctuation characters
+  const result = words.filter(Boolean).join('-');
   return result;
-}
+};
 
 module.exports = kebabCase;

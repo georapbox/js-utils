@@ -61,11 +61,9 @@ A collection of dependency-free JavaScript utility functions.
 |[stripPunctuation](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|
 |[substringAfter](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringAfter)|Returns a substring after a specific sequence of character(s).|
 |[substringBefore](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringBefore)|Returns a substring before a specific sequence of character(s).|
-|[supplant](https://github.com/georapbox/js-utils/tree/master/packages/strings/supplant)|supplant() does variable substitution on a string. It scans through the string looking for expressions enclosed in {{ }} braces. If an expression is found, use it as a key on the object, and if the key has a string value or number value, it is substituted for the bracket expression and it repeats.|
 |[truncate](https://github.com/georapbox/js-utils/tree/master/packages/strings/truncate)|Truncates a string based on character count.|
 |[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Unescapes a HTML string.|
 |[words](https://github.com/georapbox/js-utils/tree/master/packages/strings/words)|Splits string into an array of its words.|
-|[wrapHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/wrapHTML)|Wraps a string with a HTML tag with attributes if specified.|
 
 
 ## Object

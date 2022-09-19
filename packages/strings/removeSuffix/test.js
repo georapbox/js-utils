@@ -1,4 +1,4 @@
-var removeSuffix = require('./removeSuffix');
+const removeSuffix = require('./removeSuffix');
 
 describe('String/removeSuffix', function () {
   it('removes a specific suffix from string', function () {

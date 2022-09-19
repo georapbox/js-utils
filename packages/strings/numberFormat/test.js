@@ -1,4 +1,4 @@
-var numberFormat = require('./numberFormat');
+const numberFormat = require('./numberFormat');
 
 describe('String/numberFormat', function () {
   it('formats a number based on the number of decimal points, the decimal separator and the thousands separator', function () {

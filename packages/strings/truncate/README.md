@@ -18,7 +18,7 @@ Truncates a string based on character count.
 
 **Example**  
 ```js
-var str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
+const str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 
 truncate(str, 50, '...');
 // -> 'Lorem ipsum dolor sit amet, consectetur adipisicin...'

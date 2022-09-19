@@ -22,19 +22,17 @@
  * removeSuffix('foobar__', {});
  * // -> TypeError
  */
-function removeSuffix(subjectString, suffix) {
-  var strLen, suffixLen;
-
+const removeSuffix = (subjectString, suffix) => {
   if (typeof subjectString !== 'string' || typeof suffix !== 'string' && typeof suffix !== 'undefined') {
     throw new TypeError('Expected a string for first and second argument argument');
   }
 
-  strLen = subjectString.length;
-  suffixLen = suffix ? suffix.length : 0;
+  const strLen = subjectString.length;
+  const suffixLen = suffix ? suffix.length : 0;
 
   return subjectString.indexOf(suffix, strLen - suffixLen) !== -1
     ? subjectString.slice(0, strLen - suffixLen)
     : subjectString;
-}
+};
 
 module.exports = removeSuffix;

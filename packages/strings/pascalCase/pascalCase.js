@@ -36,22 +36,22 @@
  * pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // -> 'TheQuickBrownFoxJumpsOverTheLazyDog'
  */
-function pascalCase(subjectString) {
+const pascalCase = subjectString => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
-  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
-  var words = subjectString.split(wordSeparatorRegexp);
+  const wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
+  const words = subjectString.split(wordSeparatorRegexp);
 
-  return words.reduce(function (accum, word) {
+  return words.reduce((accum, word) => {
     if (word !== '') {
       accum += word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
     return accum;
   }, '');
-}
+};
 
 module.exports = pascalCase;

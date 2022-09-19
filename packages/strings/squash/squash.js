@@ -19,14 +19,14 @@
  * squash('\tLorem \n\vispum \tdolor \fsit \n amet  ', true);
  * // -> 'Loremispumdolorsitamet'
  */
-function squash(subjectString, squashEscapeSequences) {
-  var regex = squashEscapeSequences ? /\s+/g : / /g;
+const squash = (subjectString, squashEscapeSequences) => {
+  const regex = squashEscapeSequences ? /\s+/g : / /g;
 
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString.replace(regex, '');
-}
+};
 
 module.exports = squash;

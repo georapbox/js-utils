@@ -17,7 +17,7 @@ Feed with negative place values to round to powers of 10.
 
 **Example**  
 ```js
-var PI = Math.PI
+const PI = Math.PI
 // -> 3.141592653589793
 
 roundToPlaces(PI, 0);

@@ -1,4 +1,4 @@
-var escapeHTML = require('./escapeHTML');
+const escapeHTML = require('./escapeHTML');
 
 describe('String/escapeHTML', function () {
   it('should escape a HTML string', function () {

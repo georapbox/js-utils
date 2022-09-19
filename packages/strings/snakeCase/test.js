@@ -1,4 +1,4 @@
-var snakeCase = require('./snakeCase');
+const snakeCase = require('./snakeCase');
 
 describe('String/snake case', function () {
   it('should convert string to snake_case', function () {

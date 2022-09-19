@@ -1,8 +1,8 @@
-var truncate = require('./truncate');
+const truncate = require('./truncate');
 
 describe('String/truncate', function () {
   it('should truncate a string based on character count', function () {
-    var str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
+    const str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 
     expect(truncate(str, 50, '...')).toEqual('Lorem ipsum dolor sit amet, consectetur adipisicin...');
 
@@ -23,11 +23,15 @@ describe('String/truncate', function () {
     expect(truncate(str, NaN)).toEqual(str);
 
     expect(function () {
-      return truncate({ item: str }, 10);
+      return truncate({item: str}, 10);
     }).toThrow(new TypeError('Expected a string for first argument'));
 
     expect(function () {
       return truncate(str, '10');
     }).toThrow(new TypeError('Expected a number for second argument'));
+
+    expect(function () {
+      return truncate(str, 10, null);
+    }).toThrow(new TypeError('Expected a string for third argument'));
   });
 });

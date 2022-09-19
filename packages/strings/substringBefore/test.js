@@ -1,8 +1,8 @@
-var substringBefore = require('./substringBefore');
+const substringBefore = require('./substringBefore');
 
 describe('String/substringBefore', function () {
   it('should return a substring before a specific sequence of character(s)', function () {
-    var str = 'LOREM_IPSUM DOLOR_SIT AMET';
+    const str = 'LOREM_IPSUM DOLOR_SIT AMET';
 
     expect(substringBefore(str, 'SIT')).toEqual('LOREM_IPSUM DOLOR_');
 

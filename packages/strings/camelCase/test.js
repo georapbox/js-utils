@@ -1,4 +1,4 @@
-var camelCase = require('./camelCase');
+const camelCase = require('./camelCase');
 
 describe('String/camel case', function () {
   it('should convert string to camelCase', function () {

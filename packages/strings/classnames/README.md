@@ -7,7 +7,7 @@ Creates a string by conditionally joining classNames together.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ...arguments | <code>...string</code>\|<code>...object</code> | List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored. |
+| ...args | <code>...string</code>\|<code>...object</code> | List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored. |
 
 **Example**
 ```js

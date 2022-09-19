@@ -31,14 +31,14 @@
  * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
  * // -> ''
  */
-function substringBefore(subjectString, characters, last) {
+const substringBefore = (subjectString, characters, last) => {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
 
-  var index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
+  const index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
 
   return index !== -1 ? subjectString.substring(0, index) : '';
-}
+};
 
 module.exports = substringBefore;

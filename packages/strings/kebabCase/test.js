@@ -1,4 +1,4 @@
-var kebabCase = require('./kebabCase');
+const kebabCase = require('./kebabCase');
 
 describe('String/kebabCase', function () {
   it('should convert string to kebab case', function () {

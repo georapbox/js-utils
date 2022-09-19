@@ -1,7 +1,7 @@
 <a name="randomString"></a>
 
-## randomString(length, [chars]) ⇒ <code>String</code>
-Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.
+## randomString(len, [chars]) ⇒ <code>String</code>
+Generates a pseudo-random string of specific `len` allowing a set of characters specified by `chars`.
 
 **Returns**: <code>String</code> - The random generated string.  
 **Throws**:
@@ -12,7 +12,7 @@ Generates a pseudo-random string of specific `length` allowing a set of characte
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| length | <code>Number</code> |  | The number of characters of the generated string. |
+| len | <code>Number</code> |  | The number of characters of the generated string. |
 | [chars] | <code>String</code> | <code>&#x27;#aA!&#x27;</code> | Type of characters to be allowed in the generated string. Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters. |
 
 **Example**  

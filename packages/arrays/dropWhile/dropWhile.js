@@ -11,7 +11,7 @@
  * @return {Array} The slice of the array.
  * @example
  *
- * var books = [
+ * const books = [
  *   {title: 'Javascript Design Patterns', read: false},
  *   {title: 'Programming Javascript Applications', read: false},
  *   {title: 'JavaScript The Good Parts', read: true},

@@ -1,4 +1,4 @@
-var unescapeHTML = require('./unescapeHTML');
+const unescapeHTML = require('./unescapeHTML');
 
 describe('String/unescapeHTML', function () {
   it('should unescape a HTML string', function () {

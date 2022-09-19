@@ -12,11 +12,11 @@ Creates a new string with all occurrences of [string1], [string2],... removed.
 | Param | Type | Description |
 | --- | --- | --- |
 | subjectString | <code>String</code> | The string to process. |
-| [args...] | <code>String</code> | The substrings to remove from the original string. |
+| [...args] | <code>...String</code> | The substrings to remove from the original string. |
 
 **Example**  
 ```js
-var str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';
+const str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';
 
 strip(str, '_');
 // -> 'Loremipsumdolorsitamet. Lorem+ipsum+dolor+sit+amet. 123456789'

@@ -17,14 +17,12 @@
  * escapeHTML('<p data-id="1">lorem ipsum</p>');
  * // -> '&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;&#x2F;p&gt;'
  */
-function escapeHTML(subjectString) {
-  var entityMap;
-
+const escapeHTML = subjectString => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
-  entityMap = {
+  const entityMap = {
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
@@ -35,9 +33,7 @@ function escapeHTML(subjectString) {
     '=': '&#x3D;'
   };
 
-  return subjectString.replace(/[&<>"'`=/]/g, function fromEntityMap(tag) {
-    return entityMap[tag] || tag;
-  });
-}
+  return subjectString.replace(/[&<>"'`=/]/g, tag => entityMap[tag] || tag);
+};
 
 module.exports = escapeHTML;

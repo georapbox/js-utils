@@ -14,16 +14,16 @@
  * words('🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🥭');
  * // -> ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
  */
-function words(subjectString) {
+const words = subjectString => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
-  var punctRegExp = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]/g;
-  var nonSpaceRegExp = /\S+/g;
+  const punctRegExp = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]/g;
+  const nonSpaceRegExp = /\S+/g;
 
   return subjectString.replace(punctRegExp, '').match(nonSpaceRegExp) || [];
-}
+};
 
 module.exports = words;

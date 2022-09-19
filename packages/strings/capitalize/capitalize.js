@@ -18,20 +18,18 @@
  * capitalize('hElLo', true);
  * // -> 'Hello'
  */
-function capitalize(subjectString, lowerCaseRest) {
-  var firstChar, restStr;
-
+const capitalize = (subjectString, lowerCaseRest = false) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
-  firstChar = subjectString.substring(0, 1).toUpperCase();
+  const firstChar = subjectString.substring(0, 1).toUpperCase();
 
-  restStr = lowerCaseRest === true
+  const restStr = lowerCaseRest === true
     ? subjectString.substring(1).toLocaleLowerCase()
     : subjectString.substring(1);
 
   return firstChar + restStr;
-}
+};
 
 module.exports = capitalize;
