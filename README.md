@@ -72,15 +72,10 @@ A collection of dependency-free JavaScript utility functions.
 
 |Name|Description|
 |--------|-----------|
-|[deepClone](https://github.com/georapbox/js-utils/tree/master/packages/objects/deepClone)|Creates a deep clone of a given value.|
-|[extend](https://github.com/georapbox/js-utils/tree/master/packages/objects/extend)|Merge the contents of two or more objects together into the first object.|
-|[forIn](https://github.com/georapbox/js-utils/tree/master/packages/objects/forIn)|Iterates over **own and inherited** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
-|[forOwn](https://github.com/georapbox/js-utils/tree/master/packages/objects/forOwn)|Iterates over **own** enumerable properties of an object, executing the callback for each property. The callback is invoked with three arguments (value, key, object)|
 |[get](https://github.com/georapbox/js-utils/tree/master/packages/objects/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
 |[omit](https://github.com/georapbox/js-utils/tree/master/packages/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[pick](https://github.com/georapbox/js-utils/tree/master/packages/objects/pick)|Creates an object composed of the picked object properties.|
 |[pickBy](https://github.com/georapbox/js-utils/tree/master/packages/objects/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
-|[schemaValidate](https://github.com/georapbox/js-utils/tree/master/packages/objects/schemaValidate)|Validates a plain object against a provided schema object.|
 
 
 ## Function
