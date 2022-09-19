@@ -1,8 +1,8 @@
-var roundToPlaces = require('./roundToPlaces');
+const roundToPlaces = require('./roundToPlaces');
 
 describe('Math/roundToPlaces', function () {
   it('rounds a number to a number of desired places', function () {
-    var PI = Math.PI;
+    const PI = Math.PI;
 
     expect(roundToPlaces(PI, 0)).toBe(3);
 

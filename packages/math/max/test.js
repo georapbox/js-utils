@@ -1,4 +1,4 @@
-var max = require('./max');
+const max = require('./max');
 
 describe('Math/max', function () {
   it('finds the largest of zero or more numbers', function () {

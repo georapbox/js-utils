@@ -8,7 +8,7 @@
  * @param {Number} min The minimum value of the range of values.
  * @param {Number} max The maximum value of the range of values.
  * @throws {TypeError} If any of the arguments passed is not a number.
- * @return {Number} The normalized value.
+ * @returns {Number} The normalized value.
  * @example
  *
  * normalize(23, 0, 33);
@@ -29,12 +29,12 @@
  * normalize(-5, -5, 33);
  * // -> 0
  */
-function normalize(value, min, max) {
+const normalize = (value, min, max) => {
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
   return (value - min) / (max - min);
-}
+};
 
 module.exports = normalize;

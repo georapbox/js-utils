@@ -9,7 +9,7 @@ Ommits any non number value.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [...args] | <code>Number</code> &#124; <code>Array</code> | A set of numbers or an array of numbers. |
+| [...nums] | <code>Number</code> &#124; <code>Array</code> | A set of numbers or an array of numbers. |
 
 **Example**  
 ```js

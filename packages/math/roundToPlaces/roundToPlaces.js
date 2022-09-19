@@ -7,10 +7,10 @@
  * @param {Number} value The number to be rounded.
  * @param {Number} places The places that the `value` is rounded to.
  * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @return {Number} The rounded number.
+ * @returns {Number} The rounded number.
  * @example
  *
- * var PI = Math.PI
+ * const PI = Math.PI
  * // -> 3.141592653589793
  *
  * roundToPlaces(PI, 0);
@@ -40,16 +40,14 @@
  * roundToPlaces(123456789, -3);
  * // -> 123457000
  */
-function roundToPlaces(value, places) {
-  var mult;
-
+const roundToPlaces = (value, places) => {
   if (typeof value !== 'number' || typeof places !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  mult = Math.pow(10, parseInt(places, 10));
+  const mult = Math.pow(10, parseInt(places, 10));
 
   return Math.round(value * mult) / mult;
-}
+};
 
 module.exports = roundToPlaces;

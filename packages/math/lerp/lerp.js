@@ -8,7 +8,7 @@
  * @param {Number} min The minimum value of the range of values.
  * @param {Number} max The maximum value of the range of values.
  * @throws {TypeError} If any of the arguments passed is not a number.
- * @return {Number} The value that the normalized value points to.
+ * @returns {Number} The value that the normalized value points to.
  * @example
  *
  * lerp(0.75, 0, 365);
@@ -26,12 +26,12 @@
  * lerp(-0.5, 0, 500);
  * // -> -250
  */
-function lerp(norm, min, max) {
+const lerp = (norm, min, max) => {
   if (typeof norm !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
   return (max - min) * norm + min;
-}
+};
 
 module.exports = lerp;

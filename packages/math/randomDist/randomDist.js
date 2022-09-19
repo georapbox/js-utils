@@ -15,10 +15,8 @@
  * randomDist(0, 100, 200);
  * // -> 49.27716133759931
  */
-function randomDist(min, max, iterations) {
-  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-  var total = 0;
-  var i = 0;
+const randomDist = (min, max, iterations) => {
+  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
 
   if (typeof min !== 'number' || typeof max !== 'number' || typeof iterations !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
@@ -30,11 +28,13 @@ function randomDist(min, max, iterations) {
 
   iterations = Math.floor(iterations);
 
-  for (i; i < iterations; i += 1) {
+  let total = 0;
+
+  for (let i = 0; i < iterations; i += 1) {
     total += Math.min(min, max) + Math.random() * (Math.max(min, max) - Math.min(min, max));
   }
 
   return total / iterations;
-}
+};
 
 module.exports = randomDist;

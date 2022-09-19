@@ -7,18 +7,18 @@
  * @param {Number} min The minimum value of the range.
  * @param {Number} max The maximum value of the range.
  * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @return {Number} The pseudo-random number.
+ * @returns {Number} The pseudo-random number.
  * @example
  *
  * randomRange(3, 8);
  * // -> Any number between 3 (inclusive) and 8 (exclusive). eg 5.3304674779064953
  */
-function randomRange(min, max) {
+const randomRange = (min, max) => {
   if (typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
   return Math.min(min, max) + Math.random() * (Math.max(min, max) - Math.min(min, max));
-}
+};
 
 module.exports = randomRange;

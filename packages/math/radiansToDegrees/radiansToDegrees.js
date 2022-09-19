@@ -5,7 +5,7 @@
  *
  * @param {Number} radians A number representing the radians to convert.
  * @throws {TypeError} If `radians` is not a number.
- * @return {Number} The result in degrees, after conversion.
+ * @returns {Number} The result in degrees, after conversion.
  * @example
  *
  * radiansToDegrees(0);
@@ -23,12 +23,12 @@
  * radiansToDegrees(6.283185307179586); // 2π
  * // -> 360
  */
-function radiansToDegrees(radians) {
+const radiansToDegrees = radians => {
   if (typeof radians !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
 
   return radians * 180 / Math.PI;
-}
+};
 
 module.exports = radiansToDegrees;

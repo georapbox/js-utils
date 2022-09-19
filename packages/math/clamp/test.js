@@ -1,4 +1,4 @@
-var clamp = require('./clamp');
+const clamp = require('./clamp');
 
 describe('Math/clamp', function () {
   it('clamps number within the inclusive lower and upper bounds', function () {
