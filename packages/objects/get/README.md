@@ -14,7 +14,7 @@ Gets the `value` at path of `object`. If the resolved value is `undefined`, the 
 
 **Example**
 ```js
-var object = {
+const object = {
   a: [
     {
       b: {

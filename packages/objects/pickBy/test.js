@@ -1,8 +1,8 @@
-var pickBy = require('./pickBy');
+const pickBy = require('./pickBy');
 
 describe('Object/pickBy', function () {
   it('creates an object composed of the object enumerable properties that predicate returns truthy for', function () {
-    var o1 = Object.create({
+    const o1 = Object.create({
       e: 5
     });
 
@@ -33,23 +33,23 @@ describe('Object/pickBy', function () {
 
     O.prototype.d = 4;
 
-    var o2 = new O(1, '2', 3);
+    const o2 = new O(1, '2', 3);
 
     expect(pickBy(o1, function (value) {
       return typeof value === 'number';
-    })).toStrictEqual({ a: 1, c: 3 });
+    })).toStrictEqual({a: 1, c: 3});
 
     expect(pickBy(o1, function (value) {
       return typeof value === 'number';
-    }, false)).toStrictEqual({ a: 1, c: 3, e: 5 });
+    }, false)).toStrictEqual({a: 1, c: 3, e: 5});
 
     expect(pickBy(o2, function (value) {
       return typeof value === 'number';
-    })).toStrictEqual({ a: 1, c: 3 });
+    })).toStrictEqual({a: 1, c: 3});
 
     expect(pickBy(o2, function (value) {
       return typeof value === 'number';
-    }, false)).toStrictEqual({ a: 1, c: 3, d: 4 });
+    }, false)).toStrictEqual({a: 1, c: 3, d: 4});
 
     expect(pickBy(o1, function (value) {
       return typeof value === 'function';
@@ -61,7 +61,7 @@ describe('Object/pickBy', function () {
 
     expect(pickBy(o1, function (_, key) {
       return key === 'a';
-    }, false)).toStrictEqual({ a: 1 });
+    }, false)).toStrictEqual({a: 1});
 
     expect(pickBy(o1, function (_, key) {
       return key === 'd';

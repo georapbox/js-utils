@@ -10,7 +10,7 @@
  * @returns {Object} Returns the new object.
  * @example
  *
- * var object = Object.create({
+ * const object = Object.create({
  *   foo: 'bar'
  * });
  *
@@ -29,9 +29,9 @@
  * pick(object, ['d']);
  * // -> {}
  */
-function pick(object, paths, pickOwnKeys) {
-  var result = {};
-  var type = Object.prototype.toString.call(object);
+const pick = (object, paths, pickOwnKeys) => {
+  const result = {};
+  const type = Object.prototype.toString.call(object);
 
   if (
     typeof object !== 'object'
@@ -57,9 +57,9 @@ function pick(object, paths, pickOwnKeys) {
     throw new TypeError('Expected a boolean for third argument');
   }
 
-  for (var i = 0; i < paths.length; i += 1) {
-    var key = paths[i];
-    var meetsCriteria = pickOwnKeys
+  for (let i = 0; i < paths.length; i += 1) {
+    const key = paths[i];
+    const meetsCriteria = pickOwnKeys
       ? Object.prototype.hasOwnProperty.call(object, key)
       : key in object;
 
@@ -69,6 +69,6 @@ function pick(object, paths, pickOwnKeys) {
   }
 
   return result;
-}
+};
 
 module.exports = pick;

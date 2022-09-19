@@ -1,8 +1,8 @@
-var get = require('./get');
+const get = require('./get');
 
 describe('Object/get', function () {
   it('Gets the value at path of object. If the resolved value is undefined, the "defaultValue" is returned in its place.', function () {
-    var o1 = {
+    const o1 = {
       'a': [
         {
           'b': {
@@ -12,20 +12,20 @@ describe('Object/get', function () {
       ]
     };
 
-    var o2 = {
+    const o2 = {
       a: {
         b: null,
         c: 'C'
       }
     };
 
-    var o3 = {
+    const o3 = {
       0: {
         1: 'foo'
       }
     };
 
-    var o4 = ['a', 'b'];
+    const o4 = ['a', 'b'];
 
     expect(get(o1, 'a[0].b.c')).toBe(3);
     expect(get(o1, ['a', '0', 'b', 'c'])).toBe(3);

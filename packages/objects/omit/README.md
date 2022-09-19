@@ -13,7 +13,7 @@ Creates an object composed of the own enumerable (not inherited) property paths 
 
 **Example**
 ```js
-var obj = {
+const obj = {
   a: 'aaa',
   b: 'bbb',
   c: 'ccc'

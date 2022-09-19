@@ -19,7 +19,7 @@ Creates an object composed of the picked object properties.
 
 **Example**
 ```js
-var object = Object.create({
+const object = Object.create({
   foo: 'bar'
 });
 

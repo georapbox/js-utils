@@ -20,7 +20,7 @@ The predicate is invoked with two arguments: (value, key).
 
 **Example**  
 ```js
-var object = Object.create({
+const object = Object.create({
   e: 5
 });
 

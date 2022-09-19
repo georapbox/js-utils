@@ -9,7 +9,7 @@
  * @returns {*} Returns the resolved value.
  * @example
  *
- * var object = { a: [{ b: { c: 3 } }] };
+ * const object = { a: [{ b: { c: 3 } }] };
  *
  * get(object, 'a[0]b.c');
  * // -> 3
@@ -23,10 +23,10 @@
  * get(object, 'a[1].b.c', 'DEFAULT');
  * // -> 'DEFAULT'
  */
-function get(object, path, defaultValue) {
-  var keys = String.prototype.split.call(path, /[,[\].]+?/);
+const get = (object, path, defaultValue) => {
+  const keys = String.prototype.split.call(path, /[,[\].]+?/);
 
-  var result = keys.reduce(function (accum, key) {
+  const result = keys.reduce((accum, key) => {
     if (key) {
       return accum != null ? accum[key] : void 0;
     } else {
@@ -35,6 +35,6 @@ function get(object, path, defaultValue) {
   }, object);
 
   return result === void 0 || result === object ? defaultValue : result;
-}
+};
 
 module.exports = get;
