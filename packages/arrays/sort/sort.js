@@ -5,7 +5,6 @@
  * Any `null`, `undefined` or `NaN` values are removed from the result array.
  * If array values are of different type, the result is not guaranteed to be correct.
  *
- * @Note: For legacy browsers use the `Array.prototype.map` and `Array.prototype.filter` polyfills.
  * @param {Array} array The array to sort.
  * @param {Boolean} [ascending=true] Defines the sort order. Falsy values will assume descending.
  * @throws {TypeError} If `array` is not array.

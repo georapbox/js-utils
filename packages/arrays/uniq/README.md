@@ -1,7 +1,7 @@
 <a name="uniq"></a>
 
 ## uniq(array) ⇒ <code>Array</code>
-Removes duplicate primitive values from an array.
+Creates a duplicate-free version of an array, using [SameValueZero](https://262.ecma-international.org/7.0/#sec-samevaluezero) for equality comparisons, in which only the first occurrence of each element is kept. The order of result values is determined by the order they occur in the array.
 
 **Returns**: <code>Array</code> - Returns the result (duplicates-free) array.  
 **Throws**:
@@ -15,6 +15,10 @@ Removes duplicate primitive values from an array.
 
 **Example**  
 ```js
-uniq(['a', 'a', 'b', true, '2', 2, false, true]);
-// -> ['a', 'b', true, '2', 2, false]
+const obj = {foo: 'bar'};
+const arr = ['foo', 'bar'];
+const values = ['a', 'a', 'b', '2', 2, obj, obj, arr, arr, true, true, false, false, NaN, NaN];
+
+uniq(values);
+// -> ['a', 'b', '2', 2, obj, arr, true, false, NaN]
 ```

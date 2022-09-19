@@ -40,7 +40,7 @@ A collection of dependency-free JavaScript utility functions.
 |[takeWhile](https://github.com/georapbox/js-utils/tree/master/packages/arrays/takeWhile)|Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.|
 |[sort](https://github.com/georapbox/js-utils/tree/master/packages/arrays/sort)|Sorts an **array of primitive values**.|
 |[sortBy](https://github.com/georapbox/js-utils/tree/master/packages/arrays/sortBy)|Sorts an **array of objects** by a property.|
-|[uniq](https://github.com/georapbox/js-utils/tree/master/packages/arrays/uniq)|Removes duplicate primitive values from an array.|
+|[uniq](https://github.com/georapbox/js-utils/tree/master/packages/arrays/uniq)|Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.|
 |[uniqBy](https://github.com/georapbox/js-utils/tree/master/packages/arrays/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
 |[zip](https://github.com/georapbox/js-utils/tree/master/packages/arrays/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 

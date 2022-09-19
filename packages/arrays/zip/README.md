@@ -9,8 +9,6 @@ the second of which contains the second elements of the given arrays, and so on.
 
 - <code>TypeError</code> If any of the arguments is not array.
 
-**Note**: To support legacy browsers, use `Array.prototype.map` and `Array.prototype.reduce` polyfills.  
-
 | Param | Type | Description |
 | --- | --- | --- |
 | ...arrays | <code>Array</code> | The arrays to process. |

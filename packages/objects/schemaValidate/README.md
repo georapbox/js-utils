@@ -8,8 +8,6 @@ Validates a plain object against a provided schema object.
 
 - <code>TypeError</code> If any of the schema validators are not function.
 
-**Note**: To support legacy browsers, use `Array.prototype.map`, `Array.prototype.reduce` and `Object.keys()` polyfills.  
-
 | Param | Type | Description |
 | --- | --- | --- |
 | object | <code>Object</code> | The object to validate. |
