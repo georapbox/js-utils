@@ -19,17 +19,17 @@ it to a numerical value that the normalized value points to.
 **Example**  
 ```js
 lerp(0.75, 0, 365);
-// -> 273.75
+// => 273.75
 
 lerp(0.33, 100, 500);
-// -> 232
+// => 232
 
 lerp(0, 100, 500);
-// -> 100
+// => 100
 
 lerp(1, 100, 500);
-// -> 500
+// => 500
 
 lerp(-0.5, 0, 500);
-// -> -250
+// => -250
 ```

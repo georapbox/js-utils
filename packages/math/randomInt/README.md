@@ -18,5 +18,5 @@ If `min` is greater than `max` the parameters are swapped to support inverted ra
 **Example**  
 ```js
 randomInt(3, 8);
-// -> Any integer number between 3 (inclusive) and 8 (inclusive). eg 6
+// => Any integer number between 3 (inclusive) and 8 (inclusive). eg 6
 ```

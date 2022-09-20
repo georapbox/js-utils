@@ -1,18 +1,14 @@
-var before = require('./before');
+const before = require('./before');
 
 describe('Function/before', function () {
   it('should invoke a function up to 5 times', function () {
-    var count = 0,
-      result;
+    let count = 0;
+    let result;
 
-    var doSomething = before(6, function () {
-      return count += 1;
-    });
+    const doSomething = before(6, x => count += x);
 
-    var i = 0;
-
-    for (i = 0; i < 10; i += 1) {
-      result = doSomething();
+    for (let i = 0; i < 10; i += 1) {
+      result = doSomething(1);
     }
 
     expect(result).toEqual(5);

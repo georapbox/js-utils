@@ -1,4 +1,4 @@
-var isIterable = require('./isIterable');
+const isIterable = require('./isIterable');
 
 describe('is/isIterable', function () {
   function* generatorFunc() {
@@ -27,7 +27,7 @@ describe('is/isIterable', function () {
   });
 
   it('should throw `TypeError` if `Symbol` is not supported', function () {
-    var nativeCode = window.Symbol;
+    const nativeCode = window.Symbol;
 
     window.Symbol = undefined; // emulate `Symbol` not being supported
 
@@ -39,7 +39,7 @@ describe('is/isIterable', function () {
   });
 
   it('should throw `TypeError` if `Symbol.iterator` is not supported', function () {
-    var nativeCode = window.Symbol;
+    const nativeCode = window.Symbol;
 
     window.Symbol = {}; // emulate `Symbol.iterator` not being supported
 

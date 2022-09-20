@@ -1,4 +1,4 @@
-var isNaN = require('./isNaN');
+const isNaN = require('./isNaN');
 
 describe('is/isNaN', function () {
   function runTests() {
@@ -27,7 +27,7 @@ describe('is/isNaN', function () {
   });
 
   it('check if value is NaN (Number.isNaN is not supported)', function () {
-    var nativeCode = Number.isNaN;
+    const nativeCode = Number.isNaN;
     Number.isNaN = null;
     runTests();
     Number.isNaN = nativeCode;

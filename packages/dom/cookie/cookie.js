@@ -27,26 +27,21 @@ module.exports = (function () {
    *   secure: true,
    *   samesite: 'strict'
    * });
-   * // -> undefined
+   * // => undefined
    */
-  function setCookie(name, value, options) {
-    var cookie, optionKey, optionValue;
-
+  function setCookie(name, value, options = {}) {
     if (typeof name !== 'string' || typeof value !== 'string') {
       throw new TypeError('Expected a string for first and second argument');
     }
 
-    if (!options || typeof options !== 'object') {
-      options = {};
-    }
-
     options.path = options.path || '/';
 
-    cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+    let cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 
-    for (optionKey in options) {
+    for (const optionKey in options) {
       if (Object.prototype.hasOwnProperty.call(options, optionKey)) {
-        optionValue = options[optionKey];
+        const optionValue = options[optionKey];
+
         cookie += '; ' + optionKey;
 
         if (optionValue !== true) {
@@ -68,19 +63,17 @@ module.exports = (function () {
    * @example
    *
    * cookie.get('foo');
-   * // -> 'bar'
+   * // => 'bar'
    *
    * cookie.get('cookie-that-does-not-exist');
-   * // -> ''
+   * // => ''
    */
   function getCookie(name) {
-    var matches;
-
     if (typeof name !== 'string') {
       throw new TypeError('Expected a string for first argument');
     }
 
-    matches = document.cookie.match(
+    const matches = document.cookie.match(
       new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + '=([^;]*)')
     );
 
@@ -97,7 +90,7 @@ module.exports = (function () {
    * @example
    *
    * cookie.remove('foo');
-   * // -> undefined
+   * // => undefined
    */
   function removeCookie(name) {
     if (typeof name !== 'string') {

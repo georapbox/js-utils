@@ -1,15 +1,15 @@
-var once = require('./once');
+const once = require('./once');
 
 describe('Function/once', function () {
   it('should execute a function only one time', function () {
-    var num = 0;
-    var canOnlyFireOnce = once(function () {
-      return num += 1;
-    });
+    const fn = jest.fn();
+    const canOnlyFireOnce = once(fn);
 
-    expect(canOnlyFireOnce()).toBe(1);
+    canOnlyFireOnce('foo');
+    canOnlyFireOnce('bar');
 
-    expect(canOnlyFireOnce()).toBe(1);
+    expect(fn).toHaveBeenCalledTimes(1);
+    expect(fn).toHaveBeenCalledWith('foo');
 
     expect(function () {
       once(null)();

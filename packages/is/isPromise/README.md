@@ -12,16 +12,16 @@ Check if a value is a native ES2015 Promise.
 **Example**  
 ```js
 isPromise(new Promise(resolve, reject));
-// -> true
+// => true
 
 isPromise(Promise.resolve('Success'));
-// -> true
+// => true
 
 isPromise(Promise.reject('Error'));
-// -> true
+// => true
 
 isPromise(function () {
   return Promise.resolve('Success');
 });
-// -> false
+// => false
 ```

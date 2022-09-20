@@ -4,41 +4,41 @@
  * Checks if a value is a finite number.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is a finite number, else false.
+ * @returns {Boolean} True if value is a finite number, else false.
  * @example
  *
  * isFiniteNum(Infinity);
- * // -> false
+ * // => false
  *
  * isFiniteNum(NaN);
- * // -> false
+ * // => false
  *
  * isFiniteNum(-Infinity);
- * // -> false
+ * // => false
  *
  * isFiniteNum(0);
- * // -> true
+ * // => true
  *
  * isFiniteNum(2e64);
- * // -> true
+ * // => true
  *
  * isFiniteNum(null);
- * // -> false
+ * // => false
  *
  * isFiniteNum(undefined);
- * // -> false
+ * // => false
  *
  * isFiniteNum('0');
- * // -> false
+ * // => false
  */
-function isFiniteNum(value) {
+const isFiniteNum = value => {
   if (Number.isFinite) {
     return Number.isFinite(value);
   }
 
   return value != null && typeof value === 'number'
     && value !== Infinity && value !== -Infinity
-    && value === value;
-}
+    && !Number.isNaN(value);
+};
 
 module.exports = isFiniteNum;

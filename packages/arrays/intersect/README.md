@@ -15,13 +15,13 @@ The order of result values is determined by the order they occur in the first ar
 
 **Example**  
 ```js
-var arrA = [NaN, 3, 8, 'foo', 'bar'];
-var arrB = [2, 7, 'foo', NaN, 3];
-var arrC = [1, 2, 3, NaN];
+const arrA = [NaN, 3, 8, 'foo', 'bar'];
+const arrB = [2, 7, 'foo', NaN, 3];
+const arrC = [1, 2, 3, NaN];
 
 intersect(arrA, arrB);
-// -> [NaN, 3, 'foo']
+// => [NaN, 3, 'foo']
 
 intersect(arrA, arrB, arrC);
-// -> [NaN, 3]
+// => [NaN, 3]
 ```

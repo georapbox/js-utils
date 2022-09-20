@@ -4,26 +4,24 @@
  * Checks if a value matches a hexadecimal regular expression.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is a hexadecimal, else false.
+ * @returns {Boolean} True if value is a hexadecimal, else false.
  * @example
  *
  * isHexadecimal('f5f5f5');
- * // -> true
+ * // => true
  *
  * isHexadecimal('9c0');
- * // -> true
+ * // => true
  *
  * isHexadecimal(333);
- * // -> true
+ * // => true
  *
  * isHexadecimal('foo');
- * // -> false
+ * // => false
  *
  * isHexadecimal(6.6);
- * // -> false
+ * // => false
  */
-function isHexadecimal(value) {
-  return /^[0-9a-fA-F]+$/.test(value);
-}
+const isHexadecimal = value => /^[0-9a-fA-F]+$/.test(value);
 
 module.exports = isHexadecimal;

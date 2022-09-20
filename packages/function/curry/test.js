@@ -1,42 +1,34 @@
-var curry = require('./curry.js');
+const curry = require('./curry.js');
 
-describe('Function/curry', () => {
+describe('curry', () => {
   it('should return a curried function until all expected arguments are satisfied', () => {
-    var add = curry(function (a, b, c) {
-      return a + b + c;
-    });
-
-    var addOne = add(1);
-    var addTwo = addOne(2);
-    var res = addTwo(3);
+    const add = curry((a, b, c) => a + b + c);
+    const addOne = add(1);
+    const addTwo = addOne(2);
+    const res = addTwo(3);
 
     expect(res).toEqual(6);
   });
 
   it('providing arity when cannot be automatically calculated', () => {
-    var add = curry(function (a = 0, ...args) {
-      return a + args[0] + args[1];
-    }, 3);
+    const add = curry((a = 0, ...args) => a + args[0] + args[1], 3);
+    const addOne = add(1);
+    const addTwo = addOne(2);
+    const res = addTwo(3);
 
-    var addOne = add(1);
-    var addTwo = addOne(2);
-    var res = addTwo(3);
-
-    expect(add).toHaveLength(0);
+    expect(add.length).toBe(0);
     expect(res).toBe(6);
   });
 
-  it('throws if first argument is not a function', function () {
-    expect(function () {
-      return curry();
+  it('throws error if first argument is not function', () => {
+    expect(() => {
+      return curry(null);
     }).toThrow(new TypeError('Expected a function for first argument'));
   });
 
-  it('throws if second argument is not a number', function () {
-    expect(function () {
-      return curry(function (a, b) {
-        return a + b;
-      }, '2')(1)(2);
+  it('throws error if second argument is not number', () => {
+    expect(() => {
+      return curry((a = 0, b = 1) => a + b, null);
     }).toThrow(new TypeError('Expected a number for second argument'));
   });
 });

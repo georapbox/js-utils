@@ -16,36 +16,36 @@ integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_IN
 ```js
 function noop() {}
 
-function dummy() {
-  return arguments;
+function dummy(...args) {
+  return args;
 }
 
-var args = dummy();
+const args = dummy();
 
 isArrayLike([1, 2, 3]));
-// -> true
+// => true
 
 isArrayLike('abc'));
-// -> true
+// => true
 
 isArrayLike(0));
-// -> false
+// => false
 
 isArrayLike({foo: 'bar'}));
-// -> false
+// => false
 
 isArrayLike(noop));
-// -> false
+// => false
 
 isArrayLike(null));
-// -> false
+// => false
 
 isArrayLike());
-// -> false
+// => false
 
 isArrayLike(document.body.children);
-// -> true
+// => true
 
 isArrayLike(args));
-// -> true
+// => true
 ```

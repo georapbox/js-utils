@@ -18,14 +18,14 @@ Removes prefix from start of a string.
 **Example**  
 ```js
 removePrefix('__foo', '__');
-// -> 'foo'
+// => 'foo'
 
 removePrefix('__foobar', '??');
-// -> 'foobar'
+// => 'foobar'
 
 removePrefix('__foobar');
-// -> 'foobar'
+// => 'foobar'
 
 removePrefix('__foobar', {});
-// -> TypeError
+// => TypeError
 ```

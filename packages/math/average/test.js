@@ -1,4 +1,4 @@
-var average = require('./average');
+const average = require('./average');
 
 describe('Math/average', function () {
   it('calculates the average of a set of numbers', function () {

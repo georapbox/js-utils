@@ -10,46 +10,42 @@
  * @returns {Array} The duplicate free array.
  * @example
  *
- * var arr1 = [
+ * const arr1 = [
  *   { id: 1, name: 'John' },
  *   { id: 2, name: 'George' },
  *   { id: 1, name: 'Helen' }
  * ];
  *
- * var arr2 = [
+ * const arr2 = [
  *   { v: 1.6 },
  *   { v: 2.1 },
  *   { v: 1.1 }
  * ];
  *
  * uniqBy(arr1, 'id');
- * // -> [{ id: 1, name: 'John' }, { id: 2, name: 'George' }]
+ * // => [{ id: 1, name: 'John' }, { id: 2, name: 'George' }]
  *
  * uniqBy(arr2, function (o) {
  *   return Math.floor(o.v);
  * });
- * // -> [{ v: 1.6 }, { v: 2.1 }]
+ * // => [{ v: 1.6 }, { v: 2.1 }]
  */
-function uniqBy(array, iteratee) {
+const uniqBy = (array, iteratee) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  var cb = typeof iteratee === 'function' ? iteratee : function (o) {
-    return o[iteratee];
-  };
+  const cb = typeof iteratee === 'function' ? iteratee : (o) => o[iteratee];
 
-  return array.reduce(function (acc, current) {
-    var found = acc.find(function (item) {
-      return cb(item) === cb(current);
-    });
+  return array.reduce((acc, current) => {
+    const found = acc.find(item => cb(item) === cb(current));
 
     if (!found) {
-      return acc.concat([current]);
+      return [...acc, current];
     } else {
       return acc;
     }
   }, []);
-}
+};
 
 module.exports = uniqBy;

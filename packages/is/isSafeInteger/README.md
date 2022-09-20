@@ -13,29 +13,29 @@ Checks if an integer number is in the safe range, i.e., it is correctly represen
 **Example**  
 ```js
 isSafeInteger(3));
-// -> true
+// => true
 
 isSafeInteger(Math.pow(2, 53)));
-// -> false
+// => false
 
 isSafeInteger(-Math.pow(2, 53))).
-// -> false
+// => false
 
 isSafeInteger(Math.pow(2, 53) - 1));
-// -> true
+// => true
 
 isSafeInteger(NaN));
-// -> false
+// => false
 
 isSafeInteger(Infinity));
-// -> false
+// => false
 
 isSafeInteger('3'));
-// -> false
+// => false
 
 isSafeInteger(3.1));
-// -> false
+// => false
 
 isSafeInteger(3.0));
-// -> true
+// => true
 ```

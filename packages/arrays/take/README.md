@@ -18,29 +18,29 @@ Creates a slice of `array` with `n` items taken from the beginning.
 **Example**  
 ```js
 take([1, 2, 3, 4, 5]);
-// -> [1]
+// => [1]
 
 take([1, 2, 3, 4, 5], NaN);
-// -> [1]
+// => [1]
 
 take([1, 2, 3, 4, 5], 3);
-// -> [1, 2, 3]
+// => [1, 2, 3]
 
 take([1, 2, 3, 4, 5], 0);
-// -> []
+// => []
 
 take([1, 2, 3, 4, 5], -2);
-// -> []
+// => []
 
 take([1, 2, 3, 4, 5], 10);
-// -> [1, 2, 3, 4, 5]
+// => [1, 2, 3, 4, 5]
 
 take([1, 2, 3, 4, 5], Number.MAX_VALUE);
-// -> [1, 2, 3, 4, 5]
+// => [1, 2, 3, 4, 5]
 
 take([1, 2, 3, 4, 5], '2');
-// -> Throws TypeError
+// => Throws TypeError
 
 take({}, 2);
-// -> Throws TypeError
+// => Throws TypeError
 ```

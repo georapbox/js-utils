@@ -12,50 +12,50 @@ Checks if a value is the [language type](https://262.ecma-international.org/#sec
 **Example**  
 ```js
 isObject({});
-// -> true
+// => true
 
 isObject(Object.create({}));
-// -> true
+// => true
 
 isObject(Object.create(null));
-// -> true
+// => true
 
 isObject(function test() {});
-// -> true
+// => true
 
 isObject([1, 2, 3]);
-// -> true
+// => true
 
 isObject(new Number(0));
-// -> true
+// => true
 
 isObject(new String('Hello world'));
-// -> true
+// => true
 
 isObject(new RegExp('s+')));
-// -> true
+// => true
 
 isObject(/s+/);
-// -> true
+// => true
 
 isObject(new Map());
-// -> true
+// => true
 
 isObject(new Set());
-// -> true
+// => true
 
 isObject(1);
-// -> false
+// => false
 
 isObject('Hello world');
-// -> false
+// => false
 
 isObject(null);
-// -> false
+// => false
 
 isObject(Boolean(1));
-// -> false
+// => false
 
 isObject(Symbol('foo'));
-// -> false
+// => false
 ```

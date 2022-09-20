@@ -21,20 +21,20 @@ If the character or sequence of characters not found, returns an empty string.
 **Example**  
 ```js
 substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
-// -> 'IPSUM DOLOR_SIT AMET'
+// => 'IPSUM DOLOR_SIT AMET'
 
 substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
-// -> 'SIT AMET'
+// => 'SIT AMET'
 
 substringAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
-// -> 'AMET'
+// => 'AMET'
 
 substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
-// -> ''
+// => ''
 
 substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍊');
-// -> '🍌🍉🍇🍓'
+// => '🍌🍉🍇🍓'
 
 substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
-// -> ''
+// => ''
 ```

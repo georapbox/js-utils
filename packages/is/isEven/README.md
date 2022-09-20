@@ -12,23 +12,23 @@ Checks if a value is even.
 **Example**  
 ```js
 isEven(0);
-// -> true
+// => true
 
 isEven(2);
-// -> true
+// => true
 
 isEven(3);
-// -> false
+// => false
 
 isEven(5);
-// -> false
+// => false
 
 isEven('2');
-// -> true
+// => true
 
 isEven(null);
-// -> false
+// => false
 
 isEven();
-// -> false
+// => false
 ```

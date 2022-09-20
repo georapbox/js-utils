@@ -40,7 +40,7 @@ cookie.set('foo', 'bar', {
   secure: true,
   samesite: 'strict'
 });
-// -> undefined
+// => undefined
 ```
 <a name="module_cookie..get"></a>
 
@@ -61,10 +61,10 @@ Get a cookie by its name.
 **Example**
 ```js
 cookie.get('foo');
-// -> 'bar'
+// => 'bar'
 
 cookie.get('cookie-that-does-not-exist');
-// -> ''
+// => ''
 ```
 <a name="module_cookie..remove"></a>
 
@@ -84,5 +84,5 @@ Deletes a cookie by its name.
 **Example**
 ```js
 cookie.remove('foo');
-// -> undefined
+// => undefined
 ```

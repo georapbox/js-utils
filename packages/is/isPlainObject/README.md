@@ -19,38 +19,38 @@ function Foo() {
 }
 
 isPlainObject({});
-// -> true
+// => true
 
 isPlainObject({foo: 'bar'});
-// -> true
+// => true
 
 isPlainObject(new Object({foo: 'bar'}));
-// -> true
+// => true
 
 isPlainObject(new Foo());
-// -> false
+// => false
 
 isPlainObject(Object.create(null));
-// -> true
+// => true
 
 isPlainObject(Object.create({}));
-// -> false
+// => false
 
 isPlainObject(Object.create({foo: 'bar'}));
-// -> false
+// => false
 
 isPlainObject([1, 2, 3]);
-// -> false
+// => false
 
 isPlainObject(null);
-// -> false
+// => false
 
 isPlainObject();
-// -> false
+// => false
 
 isPlainObject(100);
-// -> false
+// => false
 
 isPlainObject('lorem ipsum');
-// -> false
+// => false
 ```

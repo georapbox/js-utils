@@ -1,4 +1,4 @@
-var isBoolean = require('./isBoolean');
+const isBoolean = require('./isBoolean');
 
 describe('is/isBoolean', function () {
   it('checks if a value is boolean', function () {

@@ -4,23 +4,21 @@
  * Checks if a value is `null`.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is null, else false.
+ * @returns {Boolean} True if the 'value' is null, else false.
  * @example
  *
  * isNull(null);
- * // -> true
+ * // => true
  *
  * isNull(true);
- * // -> false
+ * // => false
  *
  * isNull({a: 'a'});
- * // -> false
+ * // => false
  *
  * isNull();
- * // -> false
+ * // => false
  */
-function isNull(value) {
-  return value === null;
-}
+const isNull = value => value === null;
 
 module.exports = isNull;

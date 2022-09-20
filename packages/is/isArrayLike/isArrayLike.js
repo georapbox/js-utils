@@ -7,47 +7,47 @@
  * integer greater than or equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if value is array-like, else false.
+ * @returns {Boolean} True if value is array-like, else false.
  * @example
  *
  * function noop() {}
  *
- * function dummy() {
- *   return arguments;
+ * function dummy(...args) {
+ *   return args;
  * }
  *
- * var args = dummy();
+ * const args = dummy();
  *
  * isArrayLike([1, 2, 3]));
- * // -> true
+ * // => true
  *
  * isArrayLike('abc'));
- * // -> true
+ * // => true
  *
  * isArrayLike(0));
- * // -> false
+ * // => false
  *
  * isArrayLike({foo: 'bar'}));
- * // -> false
+ * // => false
  *
  * isArrayLike(noop));
- * // -> false
+ * // => false
  *
  * isArrayLike(null));
- * // -> false
+ * // => false
  *
  * isArrayLike());
- * // -> false
+ * // => false
  *
  * isArrayLike(document.body.children);
- * // -> true
+ * // => true
  *
  * isArrayLike(args));
- * // -> true
+ * // => true
  */
-function isArrayLike(value) {
-  var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-  var len = !!value && value.length;
+const isArrayLike = value => {
+  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+  const len = !!value && value.length;
 
   return value != null
     && typeof value !== 'function'
@@ -55,6 +55,6 @@ function isArrayLike(value) {
     && len > -1
     && len % 1 === 0
     && len <= MAX_SAFE_INTEGER;
-}
+};
 
 module.exports = isArrayLike;

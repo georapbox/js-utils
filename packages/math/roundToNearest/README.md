@@ -17,17 +17,17 @@ Rounds a number to the nearest multiple of a value provided.
 **Example**  
 ```js
 roundToNearest(100, 40);
-// -> 120
+// => 120
 
 roundToNearest(140, 40);
-// -> 160
+// => 160
 
 roundToNearest(180, 40);
-// -> 200
+// => 200
 
 roundToNearest(113, 0);
-// -> 113 (0 is converted to 1)
+// => 113 (0 is converted to 1)
 
 roundToNearest(113, NaN);
-// -> 113 (NaN is converted to 1)
+// => 113 (NaN is converted to 1)
 ```

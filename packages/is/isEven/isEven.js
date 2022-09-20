@@ -4,36 +4,36 @@
  * Checks if a value is even.
  *
  * @param {Number} value The value to check.
- * @return {Boolean} True if number is even, else false.
+ * @returns {Boolean} True if number is even, else false.
  * @example
  *
  * isEven(0);
- * // -> true
+ * // => true
  *
  * isEven(2);
- * // -> true
+ * // => true
  *
  * isEven(3);
- * // -> false
+ * // => false
  *
  * isEven(5);
- * // -> false
+ * // => false
  *
  * isEven('2');
- * // -> true
+ * // => true
  *
  * isEven(null);
- * // -> false
+ * // => false
  *
  * isEven();
- * // -> false
+ * // => false
  */
-function isEven(value) {
+const isEven = value => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }
 
   return value % 2 === 0;
-}
+};
 
 module.exports = isEven;

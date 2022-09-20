@@ -13,27 +13,27 @@
  * }
  *
  * isIterable([]);
- * // -> true
+ * // => true
  *
  * isIterable(new Map());
- * // -> true
+ * // => true
  *
  * isIterable('');
- * // -> true
+ * // => true
  *
  * isIterable(generatorFunc());
- * // -> true
+ * // => true
  *
  * isIterable({});
- * // -> false
+ * // => false
  *
  * isIterable(0);
- * // -> false
+ * // => false
  *
  * isIterable(null);
- * // -> false
+ * // => false
  */
-function isIterable(value) {
+const isIterable = value => {
   if (typeof Symbol === 'undefined' || !Symbol.iterator) {
     throw new TypeError('Symbol or Symbol.iterator is not supported by your environment.');
   }
@@ -43,6 +43,6 @@ function isIterable(value) {
   }
 
   return typeof value[Symbol.iterator] === 'function';
-}
+};
 
 module.exports = isIterable;

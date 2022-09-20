@@ -3,43 +3,41 @@
 /**
  * Limits the number of times a function can be called in a given period.
  *
- * @param {function} func The function to be executed.
+ * @param {function} fn The function to be executed.
  * @param {Number} [wait=0] Optional. Default value is 0. Time of delay in milliseconds.
- * @throws {TypeError} If `func` is not function.
+ * @throws {TypeError} If `fn` is not function.
  * @returns {function} The throttled function.
  * @example
  *
  * // A method that should be called no more than 4 times per second.
- * var throttledHandler = throttle(function () {
+ * const throttledHandler = throttle(() => {
  *   // Do your thing here...
  * }, 250);
  *
  * window.addEventListener('resize', throttledHandler, false);
  */
-function throttle(func, wait) {
-  var timerId, lastRan;
-
-  if (typeof func !== 'function') {
+const throttle = (fn, wait = 0) => {
+  if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return function throttled() {
-    var context = this;
-    var args = arguments;
+  let timerId, lastRan;
 
+  return (...args) => {
     if (!lastRan) {
-      func.apply(context, args);
+      fn(...args);
       lastRan = Date.now();
     } else {
       clearTimeout(timerId);
-      timerId = setTimeout(function () {
-        if ((Date.now() - lastRan) >= wait) {
-          func.apply(context, args);
+
+      timerId = setTimeout(() => {
+        if (Date.now() - lastRan >= wait) {
+          fn(...args);
           lastRan = Date.now();
         }
-      }, (wait - (Date.now() - lastRan)) || 0);
+      }, wait - (Date.now() - lastRan) || 0);
     }
   };
-}
+};
 
 module.exports = throttle;

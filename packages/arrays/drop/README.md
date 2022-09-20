@@ -18,32 +18,32 @@ Creates a slice of `array` with `n` elements dropped from the beginning.
 **Example**  
 ```js
 drop([1, 2, 3, 4, 5]);
-// -> [2, 3, 4, 5]
+// => [2, 3, 4, 5]
 
 drop([1, 2, 3, 4, 5], null);
-// -> [2, 3, 4, 5]
+// => [2, 3, 4, 5]
 
 drop([1, 2, 3, 4, 5], NaN);
-// -> [2, 3, 4, 5]
+// => [2, 3, 4, 5]
 
 drop([1, 2, 3, 4, 5], 3);
-// -> [4, 5]
+// => [4, 5]
 
 drop([1, 2, 3, 4, 5], 0);
-// -> [1, 2, 3, 4, 5]
+// => [1, 2, 3, 4, 5]
 
 drop([1, 2, 3, 4, 5], -2);
-// -> [1, 2, 3, 4, 5]
+// => [1, 2, 3, 4, 5]
 
 drop([1, 2, 3, 4, 5], 10);
-// -> []
+// => []
 
 drop([1, 2, 3, 4, 5], Number.MAX_VALUE);
-// -> []
+// => []
 
 drop([1, 2, 3, 4, 5], '2');
-// -> Throws TypeError
+// => Throws TypeError
 
 drop({}, 2);
-// -> Throws TypeError
+// => Throws TypeError
 ```

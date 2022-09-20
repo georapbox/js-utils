@@ -12,14 +12,14 @@ Checks if a value is array.
 **Example**  
 ```js
 isArray(['a', 'b', 'c', 'd']);
-// -> true
+// => true
 
 isArray(100);
-// -> false
+// => false
 
 isArray('Lorem ipsum dolor sit amet');
-// -> false
+// => false
 
 isArray({ a: 'a', b: 'b' });
-// -> false
+// => false
 ```

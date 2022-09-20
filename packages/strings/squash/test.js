@@ -1,4 +1,4 @@
-var squash = require('./squash');
+const squash = require('./squash');
 
 describe('String/squash', function () {
   it('removes all spaces from a string', function () {
@@ -12,7 +12,7 @@ describe('String/squash', function () {
   });
 
   it('removes all spaces from a string including escape sequences', function () {
-    var expected = 'Loremispumdolorsitamet';
+    const expected = 'Loremispumdolorsitamet';
 
     expect(squash('Lorem ispum dolor sit amet', true)).toBe(expected);
 

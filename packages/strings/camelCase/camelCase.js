@@ -6,55 +6,54 @@
  *
  * @param {String} subjectString The string to convert.
  * @throws {TypeError} Throws if `subjectString` is not string.
- * @return {String} Returns the camel cased string.
+ * @returns {String} Returns the camel cased string.
  * @example
  *
  * camelCase('the quick brown fox jumps over the lazy dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('thequickbrownfoxjumpsoverthelazydog');
- * // -> 'thequickbrownfoxjumpsoverthelazydog'
+ * // => 'thequickbrownfoxjumpsoverthelazydog'
  *
  * camelCase('theQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('TheQuickBrownFoxJumpsOverTheLazyDog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('The Quick Brown Fox Jumps Over The Lazy Dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('theQUICKBrownFoxJumpsOverTheLazyDog');
- * // -> 'theQUICKBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQUICKBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  *
  * camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
- * // -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+ * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  */
-function camelCase(subjectString) {
+const camelCase = subjectString => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex/25575009#25575009
-  var wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
-  var words = subjectString.split(wordSeparatorRegexp);
+  const wordSeparatorRegexp = /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
+  const words = subjectString.split(wordSeparatorRegexp);
 
-  return words.filter(Boolean).reduce(function (accum, word, index) {
-    var firstChar = word.substring(0, 1);
-    var restChars = word.substring(1);
-    var tempStr = index === 0 ? firstChar.toLowerCase() + restChars : firstChar.toUpperCase() + restChars;
-
+  return words.filter(Boolean).reduce((accum, word, index) => {
+    const firstChar = word.substring(0, 1);
+    const restChars = word.substring(1);
+    const tempStr = index === 0 ? firstChar.toLowerCase() + restChars : firstChar.toUpperCase() + restChars;
     return accum + tempStr;
   }, '');
-}
+};
 
 module.exports = camelCase;

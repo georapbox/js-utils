@@ -12,14 +12,14 @@ Checks if a value is `null`.
 **Example**  
 ```js
 isNull(null);
-// -> true
+// => true
 
 isNull(true);
-// -> false
+// => false
 
 isNull({a: 'a'});
-// -> false
+// => false
 
 isNull();
-// -> false
+// => false
 ```

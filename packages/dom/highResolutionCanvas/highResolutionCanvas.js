@@ -10,9 +10,9 @@
  * @returns {CanvasRenderingContext2D} The 2D rendering context for the drawing surface of the `HTMLCanvasElement`.
  * @example
  *
- * var canvas = document.querySelector('canvas');
+ * const canvas = document.querySelector('canvas');
  *
- * var context = highResolutionCanvas(canvas);
+ * const context = highResolutionCanvas(canvas);
  *
  * // Use the `context` variable from now on to access the `CanvasRenderingContext2D` interface.
  * context.beginPath();
@@ -20,23 +20,22 @@
  * context.fillStyle = "#ff0000";
  * context.fill();
  */
-function highResolutionCanvas(canvas) {
-  var ctx = canvas.getContext('2d');
-  var devicePixelRatio = window.devicePixelRatio || 1;
+const highResolutionCanvas = canvas => {
+  const ctx = canvas.getContext('2d');
+  const devicePixelRatio = window.devicePixelRatio || 1;
 
-  var backingStoreRatio = ctx.webkitBackingStorePixelRatio
+  const backingStoreRatio = ctx.webkitBackingStorePixelRatio
     || ctx.mozBackingStorePixelRatio
     || ctx.msBackingStorePixelRatio
     || ctx.oBackingStorePixelRatio
     || ctx.backingStorePixelRatio
     || 1;
 
-  var ratio = devicePixelRatio / backingStoreRatio;
-  var oldWidth, oldHeight;
+  const ratio = devicePixelRatio / backingStoreRatio;
 
   if (devicePixelRatio !== backingStoreRatio) {
-    oldWidth = canvas.width;
-    oldHeight = canvas.height;
+    const oldWidth = canvas.width;
+    const oldHeight = canvas.height;
 
     canvas.width = Math.round(oldWidth * ratio);
     canvas.height = Math.round(oldHeight * ratio);
@@ -47,5 +46,6 @@ function highResolutionCanvas(canvas) {
   }
 
   return ctx;
-}
+};
+
 module.exports = highResolutionCanvas;

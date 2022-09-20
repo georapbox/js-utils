@@ -1,4 +1,4 @@
-var isFalse = require('./isFalse');
+const isFalse = require('./isFalse');
 
 describe('is/isFalse', function () {
   it('checks if a value is false', function () {

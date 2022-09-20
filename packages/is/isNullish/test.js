@@ -1,7 +1,7 @@
-var isNullish = require('./isNullish');
+const isNullish = require('./isNullish');
 
 describe('is/isNullish', function () {
-  var foo;
+  let foo;
 
   it('checks if a value is null or undefined', function () {
     expect(isNullish()).toBe(true);
@@ -10,6 +10,6 @@ describe('is/isNullish', function () {
 
     expect(isNullish(null)).toBe(true);
 
-    expect(isNullish({ foo: 'bar' })).toBe(false);
+    expect(isNullish({foo: 'bar'})).toBe(false);
   });
 });

@@ -1,8 +1,8 @@
-var pick = require('./pick');
+const pick = require('./pick');
 
 describe('Object/pick', function () {
   it('creates an object composed of the picked object properties', function () {
-    var o1 = Object.create({
+    const o1 = Object.create({
       foo: 'bar'
     });
 
@@ -26,13 +26,13 @@ describe('Object/pick', function () {
 
     O.prototype.foo = 'bar';
 
-    var o2 = new O(1, 2, 3);
+    const o2 = new O(1, 2, 3);
 
-    expect(pick(o1, ['a', 'c', 'foo'])).toStrictEqual({ a: 1, c: 3 });
-    expect(pick(o1, ['a', 'c', 'foo'], false)).toStrictEqual({ a: 1, c: 3, foo: 'bar' });
+    expect(pick(o1, ['a', 'c', 'foo'])).toStrictEqual({a: 1, c: 3});
+    expect(pick(o1, ['a', 'c', 'foo'], false)).toStrictEqual({a: 1, c: 3, foo: 'bar'});
 
-    expect(pick(o2, ['a', 'c', 'foo'])).toStrictEqual({ a: 1, c: 3 });
-    expect(pick(o2, ['a', 'c', 'foo'], false)).toStrictEqual({ a: 1, c: 3, foo: 'bar' });
+    expect(pick(o2, ['a', 'c', 'foo'])).toStrictEqual({a: 1, c: 3});
+    expect(pick(o2, ['a', 'c', 'foo'], false)).toStrictEqual({a: 1, c: 3, foo: 'bar'});
 
     expect(pick(o1, ['d', 'e'])).toStrictEqual({});
     expect(pick(o1, ['d', 'e'], false)).toStrictEqual({});

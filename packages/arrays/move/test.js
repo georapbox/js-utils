@@ -1,8 +1,8 @@
-var move = require('./move');
+const move = require('./move');
 
 describe('Array/move', function () {
   it('moves an array element to a different position', function () {
-    var array = ['A', 'B', 'C', 'D', 'E'];
+    const array = ['A', 'B', 'C', 'D', 'E'];
 
     expect(move(array, 0, 1)).toEqual(['B', 'A', 'C', 'D', 'E']);
 

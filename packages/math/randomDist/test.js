@@ -1,12 +1,12 @@
-var randomDist = require('./randomDist');
+const randomDist = require('./randomDist');
 
 describe('Math/randomDist', function () {
   it('should return a weighted random number that tends to center', function () {
-    var r0 = randomDist(0, 100, 100);
+    const r0 = randomDist(0, 100, 100);
     expect(r0 >= 0 && r0 <= 100).toBe(true);
 
     // Test that min and max can be inverted.
-    var r1 = randomDist(100, 0, 100);
+    const r1 = randomDist(100, 0, 100);
     expect(r1 >= 0 && r1 <= 100).toBe(true);
 
     expect(function () {

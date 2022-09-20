@@ -1,4 +1,4 @@
-var pascalCase = require('./pascalCase');
+const pascalCase = require('./pascalCase');
 
 describe('String/pascalCase', function () {
   it('should convert string to pascal case', function () {

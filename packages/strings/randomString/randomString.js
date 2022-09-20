@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.
+ * Generates a pseudo-random string of specific `len` allowing a set of characters specified by `chars`.
  *
- * @param {Number} length The number of characters of the generated string.
+ * @param {Number} len The number of characters of the generated string.
  * @param {String} [chars='#aA!'] Type of characters to be allowed in the generated string.
  * Allow numeric (`#`) characters, lower-case (`a`) characters, upper-case (`A`) characters, special (`!`) characters.
  * @throws {TypeError} Throws if first argument is not number.
@@ -12,51 +12,48 @@
  * @example
  *
  * randomString(8, '#aA!');
- * // -> '@+[cd{tX'
+ * // => '@+[cd{tX'
  *
  * randomString(8, '#aA');
- * // -> 'jeEmsT8z'
+ * // => 'jeEmsT8z'
  *
  * randomString(8, '#a');
- * // -> 'toae8z3z'
+ * // => 'toae8z3z'
  *
  * randomString(8, '#');
- * // -> '63263257'
+ * // => '63263257'
  *
  * randomString(16);
- * // -> 'g*EY;#5PlO2V!!'
+ * // => 'g*EY;#5PlO2V!!'
  *
  * randomString(16, 'aA');
- * // -> 'YGOSgnoUIHaUvEcp'
+ * // => 'YGOSgnoUIHaUvEcp'
  */
-function randomString(length, chars) {
-  var charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
+const randomString = (len, chars = '#aA!') => {
+  const charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
 
-  if (typeof length !== 'number') {
+  if (typeof len !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
 
-  if (typeof chars !== 'string' && typeof chars !== 'undefined' || chars === '') {
+  if (typeof chars !== 'string' || chars === '') {
     throw new TypeError(charsError);
   }
 
-  var allowedCharsSamples = chars || '#aA!';
-  var mask = '';
-  var result = '';
-  var i = 0;
-  var key;
+  let mask = '';
+  let result = '';
 
-  var mapCharSampleToAllowedChars = {
+  const mapCharSampleToAllowedChars = {
     'a': 'abcdefghijklmnopqrstuvwxyz',
     'A': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     '#': '0123456789',
     '!': '!#$%&()*+,\\-./:;<=>?@[]^_{|}~'
   };
 
-  for (key in mapCharSampleToAllowedChars) {
+  for (const key in mapCharSampleToAllowedChars) {
     if (
       Object.prototype.hasOwnProperty.call(mapCharSampleToAllowedChars, key)
-      && allowedCharsSamples.indexOf(key) > -1
+      && chars.indexOf(key) > -1
     ) {
       mask += mapCharSampleToAllowedChars[key];
     }
@@ -66,11 +63,11 @@ function randomString(length, chars) {
     throw new TypeError(charsError);
   }
 
-  for (i; i < length; i += 1) {
+  for (let i = 0; i < len; i += 1) {
     result += mask[Math.floor(Math.random() * mask.length)];
   }
 
   return result;
-}
+};
 
 module.exports = randomString;

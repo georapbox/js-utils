@@ -10,35 +10,35 @@
  * @param {Boolean} [last] If true or any truthy value, will look for the last occurence of the characters specified.
  * @throws {TypeError} If `subjectString` is not string.
  * @throws {TypeError} If `characters` is not string.
- * @return {String} Returns the result string.
+ * @returns {String} Returns the result string.
  * @example
  *
  * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
- * // -> 'IPSUM DOLOR_SIT AMET'
+ * // => 'IPSUM DOLOR_SIT AMET'
  *
  * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
- * // -> 'SIT AMET'
+ * // => 'SIT AMET'
  *
  * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
- * // -> 'AMET'
+ * // => 'AMET'
  *
  * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
- * // -> ''
+ * // => ''
  *
  * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍊');
- * // -> '🍌🍉🍇🍓'
+ * // => '🍌🍉🍇🍓'
  *
  * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
- * // -> ''
+ * // => ''
  */
-function substringAfter(subjectString, characters, last) {
+const substringAfter = (subjectString, characters, last) => {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
 
-  var index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
+  const index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
 
   return index !== -1 ? subjectString.substring(index + characters.length) : '';
-}
+};
 
 module.exports = substringAfter;

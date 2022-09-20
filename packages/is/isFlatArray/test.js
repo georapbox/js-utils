@@ -1,4 +1,4 @@
-var isFlatArray = require('./isFlatArray');
+const isFlatArray = require('./isFlatArray');
 
 describe('is/isFlatArray', function () {
   it('checks if a value is a flat array', function () {

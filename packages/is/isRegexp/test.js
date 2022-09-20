@@ -1,4 +1,4 @@
-var isRegexp = require('./isRegexp');
+const isRegexp = require('./isRegexp');
 
 describe('is/isRegexp', function () {
   it('checks if a value is a regular expression', function () {

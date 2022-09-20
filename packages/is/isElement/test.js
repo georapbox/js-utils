@@ -1,4 +1,4 @@
-var isElement = require('./isElement');
+const isElement = require('./isElement');
 
 describe('is/isElement', function () {
   it('checks if a value is DOM element', function () {

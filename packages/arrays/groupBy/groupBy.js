@@ -13,7 +13,7 @@
  * groupBy(['one', 'two', 'three', 'four', 'five'], function (item) {
  *   return item.length;
  * });
- * // -> { '3': ['one', 'two'], '4': ['four', 'five'], '5': ['three'] }
+ * // => { '3': ['one', 'two'], '4': ['four', 'five'], '5': ['three'] }
  *
  * groupBy([
  *   { name: 'John' },
@@ -24,19 +24,19 @@
  *   { name: 'Alex' },
  *   { name: 'George' }
  * ], 'name');
- * // -> { 'John': [{'name': 'John'}, {'name': 'John'}], 'George': [{'name': 'George'}, {'name': 'George'}], 'Helen': [{'name': 'Helen'}, {'name': 'Helen'}], 'Alex': [{'name': 'Alex'}] }
+ * // => { 'John': [{'name': 'John'}, {'name': 'John'}], 'George': [{'name': 'George'}, {'name': 'George'}], 'Helen': [{'name': 'Helen'}, {'name': 'Helen'}], 'Alex': [{'name': 'Alex'}] }
  */
-function groupBy(array, iteratee) {
+const groupBy = (array, iteratee) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   return array.reduce(function arrayAggregator(accumulator, item) {
-    var group = typeof iteratee === 'function' ? iteratee(item) : item[iteratee];
+    const group = typeof iteratee === 'function' ? iteratee(item) : item[iteratee];
     accumulator[group] = accumulator[group] || [];
     accumulator[group].push(item);
     return accumulator;
   }, {});
-}
+};
 
 module.exports = groupBy;

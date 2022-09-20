@@ -1,4 +1,4 @@
-var lerp = require('./lerp');
+const lerp = require('./lerp');
 
 describe('Math/lerp', function () {
   it('converts a normalized value to the value that the normalized value points to', function () {

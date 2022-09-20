@@ -4,20 +4,18 @@
  * Checks if a value is `false` (strict equality).
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if the 'value' is false, else false.
+ * @returns {Boolean} True if the 'value' is false, else false.
  * @example
  *
  * isFalse(false);
- * // -> true
+ * // => true
  *
  * isFalse(true);
- * // -> false
+ * // => false
  *
  * isFalse();
- * // -> false
+ * // => false
  */
-function isFalse(value) {
-  return value === false;
-}
+const isFalse = value => value === false;
 
 module.exports = isFalse;

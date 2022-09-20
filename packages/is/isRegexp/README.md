@@ -12,8 +12,8 @@ Checks if a value is a regular expression.
 **Example**  
 ```js
 isRegexp(/^[0-9a-fA-F]+$/);
-// -> true
+// => true
 
 isRegexp('/^[0-9a-fA-F]+$/');
-// -> false
+// => false
 ```

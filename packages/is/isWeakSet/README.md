@@ -12,8 +12,8 @@ Checks if a value is classified as a WeakSet object.
 **Example**  
 ```js
 isWeakSet(new WeakSet());
-// -> true
+// => true
 
 isWeakSet(new Set());
-// -> false
+// => false
 ```

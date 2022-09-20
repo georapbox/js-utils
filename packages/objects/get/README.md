@@ -14,7 +14,7 @@ Gets the `value` at path of `object`. If the resolved value is `undefined`, the 
 
 **Example**
 ```js
-var object = {
+const object = {
   a: [
     {
       b: {
@@ -25,14 +25,14 @@ var object = {
 };
 
 get(object, 'a.0.b.c');
-// -> 3
+// => 3
 
 get(object, ['a', '0', 'b', 'c']);
-// -> 3
+// => 3
 
 get(object, 'a[1].b.c');
-// -> undefined
+// => undefined
 
 get(object, 'a[1].b.c', 'DEFAULT');
-// -> 'DEFAULT'
+// => 'DEFAULT'
 ```

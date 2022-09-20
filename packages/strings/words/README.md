@@ -16,8 +16,8 @@ Splits string into an array of its words. Any punctuation is stripped.
 **Example**  
 ```js
 words('Hello world! \n This is a message from outer\tspace.');
-// -> ['Hello', 'world', 'This', 'is', 'a', 'message', 'from', 'outer', 'space']
+// => ['Hello', 'world', 'This', 'is', 'a', 'message', 'from', 'outer', 'space']
 
 words('🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🥭');
-// -> ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
+// => ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
 ```

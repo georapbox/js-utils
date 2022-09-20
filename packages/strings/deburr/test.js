@@ -1,8 +1,8 @@
-var deburr = require('./deburr');
+const deburr = require('./deburr');
 
 describe('String/deburr', function () {
   it('deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks', function () {
-    var str = 'Maître Corbeau, sur un arbre perché,'
+    const str = 'Maître Corbeau, sur un arbre perché,'
       + 'Tenait en son bec un fromage.'
       + 'Maître Renard, par l’odeur alléché,'
       + 'Lui tint à peu près ce langage.';

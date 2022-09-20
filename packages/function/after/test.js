@@ -1,16 +1,14 @@
-var after = require('./after');
+const after = require('./after');
 
 describe('Function/after', function () {
   it('should invoke a function after it\'s been called n times', function () {
-    var count = 0;
-    var result;
+    let count = 0;
+    let result;
 
-    var doSomething = after(5, function () {
-      return count += 1;
-    });
+    const doSomething = after(5, x => count += x);
 
-    for (var i = 0; i < 10; i += 1) {
-      result = doSomething();
+    for (let i = 0; i < 10; i += 1) {
+      result = doSomething(1);
     }
 
     expect(result).toEqual(6);

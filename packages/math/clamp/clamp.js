@@ -9,28 +9,28 @@
  * @param {Number} min The lower bound.
  * @param {Number} max The upper bound.
  * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @return {Number} The clamped number.
+ * @returns {Number} The clamped number.
  * @example
  *
  * clamp(10, -5, 5);
- * // -> 5
+ * // => 5
  *
  * clamp(-10, -5, 5);
- * // -> -5
+ * // => -5
  *
  * clamp(-15, 0, 100);
- * // -> 0
+ * // => 0
  *
  * clamp(120, 0, 100);
- * // -> 100
+ * // => 100
  *
  * clamp(-5, NaN, 5); // If any of lower or upper bound are `NaN`, they will be converted to `0`.
- * // -> 0
+ * // => 0
  *
  * clamp(120, 100, 0); // The order of lower and upper bounds is reversed (100 > 0)
- * // -> 100
+ * // => 100
  */
-function clamp(value, lower, upper) {
+const clamp = (value, lower, upper) => {
   if (typeof value !== 'number' || typeof lower !== 'number' || typeof upper !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
@@ -44,6 +44,6 @@ function clamp(value, lower, upper) {
   }
 
   return Math.min(Math.max(value, Math.min(lower, upper)), Math.max(lower, upper));
-}
+};
 
 module.exports = clamp;

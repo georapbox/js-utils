@@ -9,7 +9,7 @@
  * @returns {Array} Returns the result array.
  * @example
  *
- * var books = [
+ * const books = [
  *   {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
  *   {title: 'The Mist', author: 'Stephen King'},
  *   {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},
@@ -17,25 +17,21 @@
  * ];
  *
  * pluck(books, 'title');
- * // -> ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
+ * // => ["Around the World in Eighty Days", "The Mist", "Journey to the Center of the Earth", "The Monster in the Closet"]
  *
  * pluck(books, 'author');
- * // -> ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
+ * // => ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
  */
-function pluck(array, key) {
-  var arr, index, len, arrItem;
-
+const pluck = (array, key) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  arr = [];
-  index = -1;
-  len = array.length;
-  arrItem;
+  const arr = [];
+  let index = -1;
 
-  while (++index < len) {
-    arrItem = array[index];
+  while (++index < array.length) {
+    const arrItem = array[index];
 
     if (Object.prototype.hasOwnProperty.call(arrItem, key)) {
       arr[arr.length] = arrItem[key];
@@ -43,6 +39,6 @@ function pluck(array, key) {
   }
 
   return arr;
-}
+};
 
 module.exports = pluck;

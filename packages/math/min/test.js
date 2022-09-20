@@ -1,4 +1,4 @@
-var min = require('./min');
+const min = require('./min');
 
 describe('Math/min', function () {
   it('finds the smallest of zero or more numbers', function () {

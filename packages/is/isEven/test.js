@@ -1,4 +1,4 @@
-var isEven = require('./isEven');
+const isEven = require('./isEven');
 
 describe('is/isEven', function () {
   it('checks if value is even', function () {

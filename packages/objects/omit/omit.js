@@ -8,38 +8,38 @@
  * @returns {Object} Returns the new object.
  * @example
  *
- * var obj = {
+ * const obj = {
  *   a: 'aaa',
  *   b: 'bbb',
  *   c: 'ccc'
  * };
  *
  * omit(obj, ['a', 'c']);
- * // -> { b: 'bbb' }
+ * // => { b: 'bbb' }
  *
  * omit(obj, ['a', 'b', 'c']);
- * // -> {}
+ * // => {}
  *
  * omit(obj);
- * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  *
  * omit(obj, []);
- * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  *
  * omit(obj, ['key_not_exists']);
- * // -> { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  */
-function omit(obj, props) {
+const omit = (obj, props) => {
   if (!Array.isArray(props) || props.length === 0) {
     props = [];
   }
 
-  return Object.keys(obj).reduce(function (accum, key) {
+  return Object.keys(obj).reduce((accum, key) => {
     if (props.indexOf(key) === -1) {
       accum[key] = obj[key];
     }
     return accum;
   }, {});
-}
+};
 
 module.exports = omit;

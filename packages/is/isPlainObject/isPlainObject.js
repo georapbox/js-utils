@@ -6,7 +6,7 @@
  *
  * @NOTE Use with caution as host objects (or objects used by browser host environments to complete the execution environment of ECMAScript) have a number of inconsistencies which are difficult to robustly feature detect cross-platform.
  * @param {*} value The value to check.
- * @return {Boolean} True if value is a plain object, else false.
+ * @returns {Boolean} True if value is a plain object, else false.
  * @example
  *
  * function Foo() {
@@ -14,49 +14,49 @@
  * }
  *
  * isPlainObject({});
- * // -> true
+ * // => true
  *
  * isPlainObject({foo: 'bar'});
- * // -> true
+ * // => true
  *
  * isPlainObject(new Object({foo: 'bar'}));
- * // -> true
+ * // => true
  *
  * isPlainObject(new Foo());
- * // -> false
+ * // => false
  *
  * isPlainObject(Object.create(null));
- * // -> true
+ * // => true
  *
  * isPlainObject(Object.create({}));
- * // -> false
+ * // => false
  *
  * isPlainObject(Object.create({foo: 'bar'}));
- * // -> false
+ * // => false
  *
  * isPlainObject([1, 2, 3]);
- * // -> false
+ * // => false
  *
  * isPlainObject(null);
- * // -> false
+ * // => false
  *
  * isPlainObject();
- * // -> false
+ * // => false
  *
  * isPlainObject(100);
- * // -> false
+ * // => false
  *
  * isPlainObject('lorem ipsum');
- * // -> false
+ * // => false
  */
-function isPlainObject(value) {
+const isPlainObject = value => {
   if (Object.prototype.toString.call(value) !== '[object Object]') {
     return false;
   }
 
-  var proto = Object.getPrototypeOf(value);
+  const proto = Object.getPrototypeOf(value);
 
   return proto === null || proto === Object.prototype;
-}
+};
 
 module.exports = isPlainObject;

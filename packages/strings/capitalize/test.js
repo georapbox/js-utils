@@ -1,4 +1,4 @@
-var capitalize = require('./capitalize');
+const capitalize = require('./capitalize');
 
 describe('String/capitalize', function () {
   it('should capitalize the first character of a string', function () {

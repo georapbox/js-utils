@@ -17,32 +17,32 @@ Combines words by capitalizing all words following the first word and removing s
 **Example**  
 ```js
 camelCase('the quick brown fox jumps over the lazy dog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase('the-quick-brown-fox-jumps-over-the-lazy-dog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase('the_quick_brown_fox_jumps_over_the_lazy_dog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase('thequickbrownfoxjumpsoverthelazydog');
-// -> 'thequickbrownfoxjumpsoverthelazydog'
+// => 'thequickbrownfoxjumpsoverthelazydog'
 
 camelCase('theQuickBrownFoxJumpsOverTheLazyDog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase('TheQuickBrownFoxJumpsOverTheLazyDog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase('The Quick Brown Fox Jumps Over The Lazy Dog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase('theQUICKBrownFoxJumpsOverTheLazyDog');
-// -> 'theQUICKBrownFoxJumpsOverTheLazyDog'
+// => 'theQUICKBrownFoxJumpsOverTheLazyDog'
 
 camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 
 camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
-// -> 'theQuickBrownFoxJumpsOverTheLazyDog'
+// => 'theQuickBrownFoxJumpsOverTheLazyDog'
 ```

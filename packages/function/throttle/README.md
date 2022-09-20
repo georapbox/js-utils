@@ -1,22 +1,23 @@
 <a name="throttle"></a>
 
-## throttle(func, [n]) ⇒ <code>function</code>
+## throttle(fn, [wait]) ⇒ <code>function</code>
 Limits the number of times a function can be called in a given period.
 
 **Returns**: <code>function</code> - The throttled function.  
 **Throws**:
 
-- <code>TypeError</code> If `func` is not function.
+- <code>TypeError</code> If `fn` is not function.
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| func | <code>function</code> |  | The function to be executed. |
+| fn | <code>function</code> |  | The function to be executed. |
 | [wait] | <code>Number</code> | <code>0</code> | Optional. Default value is 0. Time of delay in milliseconds. |
 
-**Example**  
+**Example**
 ```js
 // A method that should be called no more than 4 times per second.
-var throttledHandler = throttle(function () {
+const throttledHandler = throttle(() => {
   // Do your thing here...
 }, 250);
 

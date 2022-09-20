@@ -1,4 +1,4 @@
-var isFalsy = require('./isFalsy');
+const isFalsy = require('./isFalsy');
 
 describe('is/isFalsy', function () {
   it('checks if a value is falsy', function () {
@@ -6,7 +6,7 @@ describe('is/isFalsy', function () {
 
     expect(isFalsy(' ')).toBe(false);
 
-    expect(isFalsy({ foo: 'bar' })).toBe(false);
+    expect(isFalsy({foo: 'bar'})).toBe(false);
 
     expect(isFalsy(false)).toBe(true);
 

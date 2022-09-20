@@ -1,4 +1,4 @@
-var words = require('./words');
+const words = require('./words');
 
 describe('String/words', function () {
   it('should count words in a subject string', function () {

@@ -10,35 +10,35 @@
  * @param {Boolean} [last] If true or any truthy value, will look for the last occurence of the characters specified.
  * @throws {TypeError} If `subjectString` is not string.
  * @throws {TypeError} If `characters` is not string.
- * @return {string} Returns the result string.
+ * @returns {string} Returns the result string.
  * @example
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
- * // -> 'LOREM'
+ * // => 'LOREM'
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
- * // -> 'LOREM_IPSUM DOLOR'
+ * // => 'LOREM_IPSUM DOLOR'
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
- * // -> 'LOREM_IPSUM DOLOR_'
+ * // => 'LOREM_IPSUM DOLOR_'
  *
  * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '???', true); // using a sequense of characters that does not exist
- * // -> ''
+ * // => ''
  *
  * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍊');
- * // -> '🍎🍐'
+ * // => '🍎🍐'
  *
  * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
- * // -> ''
+ * // => ''
  */
-function substringBefore(subjectString, characters, last) {
+const substringBefore = (subjectString, characters, last) => {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
 
-  var index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
+  const index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
 
   return index !== -1 ? subjectString.substring(0, index) : '';
-}
+};
 
 module.exports = substringBefore;

@@ -1,4 +1,4 @@
-var isEmail = require('./isEmail');
+const isEmail = require('./isEmail');
 
 describe('is/isEmail', function () {
   it('should validate various strings as emails', function () {

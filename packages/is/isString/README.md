@@ -12,14 +12,14 @@ Checks if a value is string.
 **Example**  
 ```js
 isString(['a', 'b', 'c', 'd']);
-// -> false
+// => false
 
 isString(100);
-// -> false
+// => false
 
 isString('Lorem ipsum dolor sit amet');
-// -> true
+// => true
 
 isString({ a: 'a', b: 'b' });
-// -> false
+// => false
 ```

@@ -9,31 +9,29 @@
  * @example
  *
  * isFlatArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
- * // -> true
+ * // => true
  *
  * isFlatArray([1, 2, [3], [4, 5], 6, 7, [8], 9]);
- * // -> false
+ * // => false
  *
  * isFlatArray([]);
- * // -> true
+ * // => true
  *
  * isFlatArray(new Set());
- * // -> false
+ * // => false
  */
-function isFlatArray(value) {
-  var i, len;
-
+const isFlatArray = value => {
   if (!Array.isArray(value)) {
     return false;
   }
 
-  for (i = 0, len = value.length; i < len; i += 1) {
+  for (let i = 0; i < value.length; i += 1) {
     if (Array.isArray(value[i])) {
       return false;
     }
   }
 
   return true;
-}
+};
 
 module.exports = isFlatArray;

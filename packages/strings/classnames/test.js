@@ -1,4 +1,4 @@
-var classnames = require('./classnames');
+const classnames = require('./classnames');
 
 describe('String/classnames', function () {
   it('returns empty string if no arguments passed', function () {
@@ -15,10 +15,10 @@ describe('String/classnames', function () {
   });
 
   it ('should ignore arguments of unsupported types', function () {
-    var res = classnames(
+    const res = classnames(
       'foo',
-      { bar: true },
-      [{ baz: true }],
+      {bar: true},
+      [{baz: true}],
       [],
       100,
       Symbol('foo-bar'),
@@ -32,10 +32,10 @@ describe('String/classnames', function () {
   });
 
   it ('combines mixed arguments (strings, objects)', function () {
-    var res = classnames(
+    const res = classnames(
       'a', 'b',
-      { 'c': true },
-      { 'd': false },
+      {'c': true},
+      {'d': false},
       'e', 'f'
     );
 
@@ -43,7 +43,7 @@ describe('String/classnames', function () {
   });
 
   it('it joins the classes if an object is passed with multiple keys', function () {
-    var res = classnames({
+    const res = classnames({
       foo: true,
       bar: true
     });
@@ -53,23 +53,23 @@ describe('String/classnames', function () {
   });
 
   it('all falsy values are ignored', function () {
-    var res = classnames(
-      { 'null': null },
-      { 'undefined': void 0 },
-      { 'empty-string': '' },
-      { 'non-empty-string': 'foo' },
-      { 'white-space': ' ' },
-      { 'function': function () {} },
-      { 'empty-object': {} },
-      { 'non-empty-bject': { foo: 'bar' } },
-      { 'empty-array': [] },
-      { 'non-empty-array': ['foo', 'bar'] },
-      { '1': 1 },
-      { '0': 0 },
-      { '-0': -0 },
-      { 'NaN': NaN },
-      { 'false': false },
-      { 'true': true },
+    const res = classnames(
+      {'null': null},
+      {'undefined': void 0},
+      {'empty-string': ''},
+      {'non-empty-string': 'foo'},
+      {'white-space': ' '},
+      {'function': function () {}},
+      {'empty-object': {}},
+      {'non-empty-bject': {foo: 'bar'}},
+      {'empty-array': []},
+      {'non-empty-array': ['foo', 'bar']},
+      {'1': 1},
+      {'0': 0},
+      {'-0': -0},
+      {'NaN': NaN},
+      {'false': false},
+      {'true': true},
       'Yes, this is a long and strange string.',
       0,
       -0,
@@ -80,7 +80,7 @@ describe('String/classnames', function () {
       NaN
     );
 
-    var expected = 'non-empty-string white-space function empty-object non-empty-bject empty-array non-empty-array 1 true Yes, this is a long and strange string.';
+    const expected = 'non-empty-string white-space function empty-object non-empty-bject empty-array non-empty-array 1 true Yes, this is a long and strange string.';
 
     expect(res).toBe(expected);
   });

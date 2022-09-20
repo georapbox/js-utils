@@ -1,4 +1,4 @@
-var degreesToRadians = require('./degreesToRadians');
+const degreesToRadians = require('./degreesToRadians');
 
 describe('Math/degreesToRadians', function () {
   it('converts degrees to radians', function () {

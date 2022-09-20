@@ -19,23 +19,23 @@ function* generatorFunc() {
 }
 
 isIterable([]);
-// -> true
+// => true
 
 isIterable(new Map());
-// -> true
+// => true
 
 isIterable('');
-// -> true
+// => true
 
 isIterable(generatorFunc());
-// -> true
+// => true
 
 isIterable({});
-// -> false
+// => false
 
 isIterable(0);
-// -> false
+// => false
 
 isIterable(null);
-// -> false
+// => false
 ```

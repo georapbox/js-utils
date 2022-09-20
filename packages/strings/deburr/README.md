@@ -1,8 +1,7 @@
 <a name="deburr"></a>
 
 ## deburr(subjectString) ⇒ <code>String</code>
-Deburrs a string by converting latin-1 supplementary letters to
-basic latin letters and removing combining diacritical marks.
+Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.
 
 **Returns**: <code>String</code> - The deburred string.  
 **Throws**:
@@ -17,14 +16,14 @@ basic latin letters and removing combining diacritical marks.
 
 **Example**  
 ```js
-var str = 'Maître Corbeau, sur un arbre perché,' +
+const str = 'Maître Corbeau, sur un arbre perché,' +
   'Tenait en son bec un fromage.' +
   'Maître Renard, par l’odeur alléché,' +
   'Lui tint à peu près ce langage.';
 
 deburr(str);
-// -> 'Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.'
+// => 'Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.'
 
 deburr('déjà vu');
-// -> 'deja vu'
+// => 'deja vu'
 ```

@@ -1,4 +1,4 @@
-var take = require('./take');
+const take = require('./take');
 
 describe('Array/take', function () {
   it('creates a slice of array with n items taken from the beginning', function () {

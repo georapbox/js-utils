@@ -12,18 +12,18 @@ Checks if a value is classified as a WeakMap object.
 **Example**  
 ```js
 isWeakMap(new WeakMap());
-// -> true
+// => true
 
 isWeakMap(new Map());
-// -> false
+// => false
 
-var obj = {
+const obj = {
   foo: 'bar'
 };
 
 isWeakMap(new WeakMap([[obj, 'foobar']]));
-// -> true
+// => true
 
 isWeakMap([['foo', 'bar'], ['hello', 'world']]);
-// -> false
+// => false
 ```

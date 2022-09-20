@@ -17,14 +17,14 @@ Removes all spaces from a string; optionally removes any escape sequences such a
 **Example**  
 ```js
 squash('Lorem ispum dolor sit amet');
-// -> 'Loremispumdolorsitamet'
+// => 'Loremispumdolorsitamet'
 
 squash('   Lorem   ispum   dolor sit amet  ');
-// -> 'Loremispumdolorsitamet'
+// => 'Loremispumdolorsitamet'
 
 squash('\tLorem \n\vispum \tdolor \fsit \n amet  ');
-// -> '\tLorem\n\vispum\tdolor\fsit\namet'
+// => '\tLorem\n\vispum\tdolor\fsit\namet'
 
 squash('\tLorem \n\vispum \tdolor \fsit \n amet  ', true);
-// -> 'Loremispumdolorsitamet'
+// => 'Loremispumdolorsitamet'
 ```

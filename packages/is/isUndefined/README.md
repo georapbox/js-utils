@@ -11,17 +11,17 @@ Checks if a value is `undefined`.
 
 **Example**  
 ```js
-var foo;
+let foo;
 
 isUndefined(foo);
-// -> true
+// => true
 
 isUndefined(null);
-// -> false
+// => false
 
 isUndefined({foo: 'bar'});
-// -> false
+// => false
 
 isUndefined();
-// -> true
+// => true
 ```

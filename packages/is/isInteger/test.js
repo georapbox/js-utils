@@ -1,4 +1,4 @@
-var isInteger = require('./isInteger');
+const isInteger = require('./isInteger');
 
 describe('is/isInteger', function () {
   function runTests() {
@@ -28,7 +28,7 @@ describe('is/isInteger', function () {
   });
 
   it('checks if a value is integer (Number.isInteger is not supported)', function () {
-    var nativeCode = Number.isInteger;
+    const nativeCode = Number.isInteger;
     Number.isInteger = null;
     runTests();
     Number.isInteger = nativeCode;

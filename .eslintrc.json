@@ -8,7 +8,7 @@
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": "latest"
   },
   "globals": {
     "Promise": false,
@@ -16,14 +16,12 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    // Possible Errors
     "no-empty": ["error", {
       "allowEmptyCatch": true
     }],
     "no-use-before-define": ["error", {
       "functions": false
     }],
-    // Stylistic Issues
     "indent": ["warn", 2, {
       "SwitchCase": 1,
       "ignoredNodes": ["TemplateLiteral"]
@@ -44,7 +42,9 @@
     "operator-linebreak": ["warn", "before"],
     "brace-style": ["warn"],
     "keyword-spacing": ["warn"],
-    "object-curly-spacing": ["warn", "always"],
+    "object-curly-spacing": ["warn", "never"],
+    "array-bracket-spacing": ["warn", "never"],
+    "computed-property-spacing": ["warn", "never"],
     "space-before-blocks": ["warn", "always"],
     "spaced-comment": ["warn", "always"],
     "space-before-function-paren": ["warn", {
@@ -53,7 +53,6 @@
       "asyncArrow": "always"
     }],
     "padded-blocks": ["warn", "never"],
-    // Best Practices
     "curly": ["warn"],
     "eqeqeq": ["error", "always", {
       "null": "ignore"
@@ -63,6 +62,11 @@
       "exceptions": {
         "Property": false
       }
-    }]
+    }],
+    "prefer-rest-params": ["warn"],
+    "prefer-const": ["warn"],
+    "no-var": ["warn"],
+    "no-extra-parens": ["warn", "all"],
+    "space-in-parens": ["warn", "never"]
   }
 }

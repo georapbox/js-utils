@@ -1,8 +1,8 @@
-var substringAfter = require('./substringAfter');
+const substringAfter = require('./substringAfter');
 
 describe('String/substringAfter', function () {
   it('returns a substring after a specific sequence of character(s)', function () {
-    var str = 'LOREM_IPSUM DOLOR_SIT AMET';
+    const str = 'LOREM_IPSUM DOLOR_SIT AMET';
 
     expect(substringAfter(str, 'SIT ')).toBe('AMET');
 

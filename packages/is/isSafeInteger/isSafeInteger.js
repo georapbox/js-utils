@@ -5,37 +5,37 @@
  * (where all numbers, including integer numbers, are technically floating point number).
  *
  * @param {*} value The value to check.
- * @return {Boolean} True if safe integer, else false.
+ * @returns {Boolean} True if safe integer, else false.
  * @example
  *
  * isSafeInteger(3));
- * // -> true
+ * // => true
  *
  * isSafeInteger(Math.pow(2, 53)));
- * // -> false
+ * // => false
  *
  * isSafeInteger(-Math.pow(2, 53))).
- * // -> false
+ * // => false
  *
  * isSafeInteger(Math.pow(2, 53) - 1));
- * // -> true
+ * // => true
  *
  * isSafeInteger(NaN));
- * // -> false
+ * // => false
  *
  * isSafeInteger(Infinity));
- * // -> false
+ * // => false
  *
  * isSafeInteger('3'));
- * // -> false
+ * // => false
  *
  * isSafeInteger(3.1));
- * // -> false
+ * // => false
  *
  * isSafeInteger(3.0));
- * // -> true
+ * // => true
  */
-function isSafeInteger(value) {
+const isSafeInteger = value => {
   if (Number.isSafeInteger) {
     return Number.isSafeInteger(value);
   }
@@ -44,6 +44,6 @@ function isSafeInteger(value) {
     && Math.round(value) === value
     && -(Math.pow(2, 53) - 1) <= value
     && value <= Math.pow(2, 53) - 1;
-}
+};
 
 module.exports = isSafeInteger;

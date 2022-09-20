@@ -1,4 +1,4 @@
-var cookie = require('./cookie');
+const cookie = require('./cookie');
 
 describe('dom/cookie', function () {
   it('should create, read and delete cookies', function () {

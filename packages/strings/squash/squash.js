@@ -8,25 +8,25 @@
  * @xample
  *
  * squash('Lorem ispum dolor sit amet');
- * // -> 'Loremispumdolorsitamet'
+ * // => 'Loremispumdolorsitamet'
  *
  * squash('   Lorem   ispum   dolor sit amet  ');
- * // -> 'Loremispumdolorsitamet'
+ * // => 'Loremispumdolorsitamet'
  *
  * squash('\tLorem \n\vispum \tdolor \fsit \n amet  ');
- * // -> '\tLorem\n\vispum\tdolor\fsit\namet'
+ * // => '\tLorem\n\vispum\tdolor\fsit\namet'
  *
  * squash('\tLorem \n\vispum \tdolor \fsit \n amet  ', true);
- * // -> 'Loremispumdolorsitamet'
+ * // => 'Loremispumdolorsitamet'
  */
-function squash(subjectString, squashEscapeSequences) {
-  var regex = squashEscapeSequences ? /\s+/g : / /g;
+const squash = (subjectString, squashEscapeSequences) => {
+  const regex = squashEscapeSequences ? /\s+/g : / /g;
 
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString.replace(regex, '');
-}
+};
 
 module.exports = squash;

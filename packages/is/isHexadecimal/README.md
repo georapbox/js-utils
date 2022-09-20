@@ -12,17 +12,17 @@ Checks if a value matches a hexadecimal regular expression.
 **Example**  
 ```js
 isHexadecimal('f5f5f5');
-// -> true
+// => true
 
 isHexadecimal('9c0');
-// -> true
+// => true
 
 isHexadecimal(333);
-// -> true
+// => true
 
 isHexadecimal('foo');
-// -> false
+// => false
 
 isHexadecimal(6.6);
-// -> false
+// => false
 ```

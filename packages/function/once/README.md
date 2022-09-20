@@ -1,25 +1,23 @@
 <a name="once"></a>
 
-## once(func, [thisArg]) ⇒ <code>function</code>
+## once(fn) ⇒ <code>function</code>
 Ensure a given functionality only runs once.
 
 **Returns**: <code>function</code> - Returns the new restricted function.  
+**Throws**:
+
+- <code>TypeError</code> If `fn` is not function.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
-| func | <code>function</code> | The function to restrict. |
-| [thisArg] | <code>Object</code> | Value to use as this when executing <code>func</code>. |
+| fn | <code>function</code> | The function to restrict. |
 
-**Example**  
+**Example**
 ```js
-var num = 0;
-var canOnlyFireOnce = once(function () {
-  return 'Number is now ' + (num += 1);
-});
+let num = 0;
+const canOnlyFireOnce = once(() => num += 1);
 
-canOnlyFireOnce();
-// -> "Number is now 1"
-
-canOnlyFireOnce();
-// -> "Number is now 1"
+canOnlyFireOnce(); // => 1
+canOnlyFireOnce(); // => 1
 ```

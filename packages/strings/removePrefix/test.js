@@ -1,4 +1,4 @@
-var removePrefix = require('./removePrefix');
+const removePrefix = require('./removePrefix');
 
 describe('String/removePrefix', function () {
   it('removes a specific prefix from string', function () {

@@ -3,36 +3,32 @@
 /**
  * Ensure a given functionality only runs once.
  *
- * @param {function} func The function to restrict.
- * @param {*} [thisArg] Value to use as this when executing `func`.
- * @return {function} Returns the new restricted function.
+ * @param {function} fn The function to restrict.
+ * @throws {TypeError} If `fn` is not function.
+ * @returns {function} Returns the new restricted function.
  * @example
  *
- * var num = 0;
- * var canOnlyFireOnce = once(function () {
- *   return 'Number is now ' + (num += 1);
- * });
+ * let num = 0;
+ * const canOnlyFireOnce = once(() => num += 1);
  *
- * canOnlyFireOnce();
- * // -> "Number is now 1"
- *
- * canOnlyFireOnce();
- * // -> "Number is now 1"
+ * canOnlyFireOnce(); // => 1
+ * canOnlyFireOnce(); // => 1
  */
-function once(func, thisArg) {
-  var result;
+const once = fn => {
+  let result;
 
-  if (typeof func !== 'function') {
+  if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return function executeOnce() {
-    if (func) {
-      result = func.apply(thisArg || this, arguments);
-      func = null;
+  return (...args) => {
+    if (fn) {
+      result = fn(...args);
+      fn = null;
     }
+
     return result;
   };
-}
+};
 
 module.exports = once;

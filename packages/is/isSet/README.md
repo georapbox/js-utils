@@ -12,8 +12,8 @@ Checks if a value is classified as a Set object.
 **Example**  
 ```js
 isSet(new Set());
-// -> true
+// => true
 
 isSet(new WeakSet());
-// -> false
+// => false
 ```

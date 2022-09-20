@@ -12,26 +12,26 @@ Checks if a value matches a hexadecimal color regular expression.
 **Example**  
 ```js
 isHexColor('#f5f5f5');
-// -> true
+// => true
 
 isHexColor('#9c0');
-// -> true
+// => true
 
 isHexColor('333');
-// -> true
+// => true
 
 isHexColor(333);
-// -> true
+// => true
 
 isHexColor(6.6);
-// -> false
+// => false
 
 isHexColor('foo');
-// -> false
+// => false
 
 isHexColor(null);
-// -> false
+// => false
 
 isHexColor();
-// -> false
+// => false
 ```

@@ -12,11 +12,11 @@ Checks if a value is `true` (strict equality).
 **Example**  
 ```js
 isTrue(true);
-// -> true
+// => true
 
 isTrue(false);
-// -> false
+// => false
 
 isTrue();
-// -> false
+// => false
 ```

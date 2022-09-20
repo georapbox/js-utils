@@ -5,38 +5,38 @@
  *
  * @NOTE: `NaN` is considered to be a number, as so will return true.
  * @param {*} value The value to check.
- * @return {Boolean} True if value is a number, else false.
+ * @returns {Boolean} True if value is a number, else false.
  * @example
  *
  * isNumber(10);
- * // -> true
+ * // => true
  *
  * isNumber('10');
- * // -> false
+ * // => false
  *
  * isNumber(new Date());
- * // -> false
+ * // => false
  *
  * isNumber(new Date().getTime());
- * // -> true
+ * // => true
  *
  * isNumber(true);;
- * // -> false
+ * // => false
  *
  * isNumber(null);;
- * // -> false
+ * // => false
  *
  * isNumber(undefined);;
- * // -> false
+ * // => false
  *
  * isNumber('');
- * // -> false
+ * // => false
  *
  * isNumber(NaN);
- * // -> true
+ * // => true
  */
-function isNumber(value) {
+const isNumber = value => {
   return typeof value === 'number' || Object.prototype.toString.call(value) === '[object Number]';
-}
+};
 
 module.exports = isNumber;

@@ -1,4 +1,4 @@
-var isWeakMap = require('./isWeakMap');
+const isWeakMap = require('./isWeakMap');
 
 describe('is/isWeakMap', function () {
   it('checks if a value is WeakMap', function () {

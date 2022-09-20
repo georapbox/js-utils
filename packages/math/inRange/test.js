@@ -1,4 +1,4 @@
-var inRange = require('./inRange');
+const inRange = require('./inRange');
 
 describe('Math/inRange', function () {
   it('should test if number is in range', function () {

@@ -5,19 +5,19 @@
  *
  * @param {String} subjectString The HTML string to unescape.
  * @throws {TypeError} If `subjectString` is not string.
- * @return {String} The unescaped string.
+ * @returns {String} The unescaped string.
  * @example
  *
  * unescapeHTML('&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;');
- * // -> '<script src="main.js"><\/script>'
+ * // => '<script src="main.js"><\/script>'
  *
  * unescapeHTML('Hello &amp; &lt;span&gt;World&lt;/span&gt;');
- * // -> 'Hello & <span>World</span>'
+ * // => 'Hello & <span>World</span>'
  *
  * unescapeHTML('&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;&#x2F;p&gt;');
- * // -> '<p data-id="1">lorem ipsum</p>'
+ * // => '<p data-id="1">lorem ipsum</p>'
  */
-function unescapeHTML(subjectString) {
+const unescapeHTML = subjectString => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -32,6 +32,6 @@ function unescapeHTML(subjectString) {
     .replace(/&#039;/g, "'") // eslint-disable-line quotes
     .replace(/&#x60;/g, '`')
     .replace(/&#x2F;/g, '/');
-}
+};
 
 module.exports = unescapeHTML;

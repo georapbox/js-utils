@@ -1,4 +1,4 @@
-var isSymbol = require('./isSymbol');
+const isSymbol = require('./isSymbol');
 
 describe('is/isSymbol', function () {
   it('checks if a value is classified as a Symbol primitive', function () {

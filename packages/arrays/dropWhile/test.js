@@ -1,8 +1,8 @@
-var dropWhile = require('./dropWhile');
+const dropWhile = require('./dropWhile');
 
 describe('Array/dropWhile', function () {
   it('creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy', function () {
-    var books = [
+    const books = [
       {
         title: 'Javascript Design Patterns',
         read: false
