@@ -13,7 +13,7 @@
  *   // Do soething...
  * });
  */
-function whichTransitionEnd() {
+const whichTransitionEnd = () => {
   let el = document.createElement('div');
 
   const transitions = {
@@ -31,6 +31,6 @@ function whichTransitionEnd() {
       }
     }
   }
-}
+};
 
 module.exports = whichTransitionEnd;
