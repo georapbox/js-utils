@@ -36,7 +36,6 @@ A collection of dependency-free JavaScript utilities.
 |[uniqBy](https://github.com/georapbox/js-utils/tree/master/packages/arrays/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
 |[zip](https://github.com/georapbox/js-utils/tree/master/packages/arrays/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 
-
 ## String
 
 |Name|Description|
@@ -65,7 +64,6 @@ A collection of dependency-free JavaScript utilities.
 |[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Unescapes a HTML string.|
 |[words](https://github.com/georapbox/js-utils/tree/master/packages/strings/words)|Splits string into an array of its words.|
 
-
 ## Object
 
 |Name|Description|
@@ -74,7 +72,6 @@ A collection of dependency-free JavaScript utilities.
 |[omit](https://github.com/georapbox/js-utils/tree/master/packages/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[pick](https://github.com/georapbox/js-utils/tree/master/packages/objects/pick)|Creates an object composed of the picked object properties.|
 |[pickBy](https://github.com/georapbox/js-utils/tree/master/packages/objects/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
-
 
 ## Function
 
@@ -94,7 +91,6 @@ A collection of dependency-free JavaScript utilities.
 |[pipe](https://github.com/georapbox/js-utils/tree/master/packages/function/pipe)|Performs left-to-right function composition.|
 |[throttle](https://github.com/georapbox/js-utils/tree/master/packages/function/throttle)|Limits the number of times a function can be called in a given period.|
 |[unary](https://github.com/georapbox/js-utils/tree/master/packages/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
-
 
 ## Is
 
@@ -140,7 +136,6 @@ A collection of dependency-free JavaScript utilities.
 |[isWeakMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakMap)|Checks if a value is classified as a WeakMap object.|
 |[isWeakSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakSet)|Checks if a value is classified as a WeakSet object.|
 
-
 ## Math
 
 |Name|Description|
@@ -160,32 +155,33 @@ A collection of dependency-free JavaScript utilities.
 |[roundToNearest](https://github.com/georapbox/js-utils/tree/master/packages/math/roundToNearest)|Rounds a number to the nearest multiple of a value provided.|
 |[roundToPlaces](https://github.com/georapbox/js-utils/tree/master/packages/math/roundToPlaces)|Rounds a number to a number of desired places.|
 
-
 ## DOM
 
 |Name|Description|
 |--------|-----------|
+|[convertImageToBase64](https://github.com/georapbox/js-utils/tree/master/packages/dom/convertImageToBase64)|Converts an image's content to Data URI scheme.|
 |[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
+|[highResolutionCanvas](https://github.com/georapbox/js-utils/tree/master/packages/dom/highResolutionCanvas)|Processes an `HTMLCanvasElement` by downsampling on the canvas to ensure that the drawn visuals do not look blurry on high-DPI screens.|
 |[mediaQuery](https://github.com/georapbox/js-utils/tree/master/packages/dom/mediaQuery)|Determines if the document matches a media query string.|
 |[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
 |[whichAnimationEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
-
-## HTML5 Canvas
-
-|Name|Description|
-|--------|-----------|
-|[convertImageToBase64](https://github.com/georapbox/js-utils/tree/master/packages/canvas/convertImageToBase64)|Converts an image's content to Data URI scheme.|
-|[highResolutionCanvas](https://github.com/georapbox/js-utils/tree/master/packages/canvas/highResolutionCanvas)|Processes an `HTMLCanvasElement` by downsampling on the canvas to ensure that the drawn visuals do not look blurry on high-DPI screens.|
-
-
 ## Installation
 
-- To clone the repository, run: `git clone https://github.com/georapbox/js-utils.git`
-- To install dev dependancies, (from the root folder of the project) run: `$ npm install`
+### Clone repo
 
-## Testing
+```sh
+$ git clone https://github.com/georapbox/js-utils.git
+```
+
+### Install dev dependencies
+
+```sh
+$ npm install
+```
+
+## Test
 
 ```sh
 $ npm run test
