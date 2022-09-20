@@ -1,7 +1,7 @@
 const max = require('./max');
 
-describe('Math/max', function () {
-  it('finds the largest of zero or more numbers', function () {
+describe('Math/max', () => {
+  it('finds the largest of zero or more numbers', () => {
     expect(max(5)).toBe(5);
 
     expect(max([1, -10, 1024, 1024.5, 29])).toBe(1024.5);

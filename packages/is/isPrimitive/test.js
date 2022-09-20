@@ -1,7 +1,7 @@
 const isPrimitive = require('./isPrimitive');
 
-describe('is/isPrimitive', function () {
-  it('checks if value is a primitive data type', function () {
+describe('is/isPrimitive', () => {
+  it('checks if value is a primitive data type', () => {
     expect(isPrimitive(null)).toBe(true);
 
     expect(isPrimitive(undefined)).toBe(true);
@@ -28,7 +28,7 @@ describe('is/isPrimitive', function () {
 
     expect(isPrimitive([])).toBe(false);
 
-    expect(isPrimitive(function () {})).toBe(false);
+    expect(isPrimitive(() => {})).toBe(false);
 
     expect(isPrimitive(new Map())).toBe(false);
 

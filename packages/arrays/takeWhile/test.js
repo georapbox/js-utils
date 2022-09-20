@@ -1,7 +1,7 @@
 const takeWhile = require('./takeWhile');
 
-describe('Array/takeWhile', function () {
-  it('creates a slice of array with elements taken from the beginning, until predicate returns falsy', function () {
+describe('Array/takeWhile', () => {
+  it('creates a slice of array with elements taken from the beginning, until predicate returns falsy', () => {
     const books = [
       {title: 'Javascript Design Patterns', read: false},
       {title: 'Programming Javascript Applications', read: false},
@@ -9,11 +9,11 @@ describe('Array/takeWhile', function () {
       {title: 'Eloquent Javascript', read: false}
     ];
 
-    const firstUnread = takeWhile(books, function (book) {
+    const firstUnread = takeWhile(books, book => {
       return !book.read;
     });
 
-    const firstRead = takeWhile(books, function (book) {
+    const firstRead = takeWhile(books, book => {
       return book.read;
     });
 
@@ -24,14 +24,14 @@ describe('Array/takeWhile', function () {
 
     expect(firstRead).toEqual([]);
 
-    expect(function () {
+    expect(() => {
       return takeWhile({
         title: 'Javascript Design Patterns',
         read: false
       });
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       return takeWhile(books, null);
     }).toThrow(new TypeError('Expected a function for second argument'));
   });

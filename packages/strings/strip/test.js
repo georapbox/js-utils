@@ -1,7 +1,7 @@
 const strip = require('./strip');
 
-describe('String/strip', function () {
-  it('should strip a string from all occurrences of a given substring', function () {
+describe('String/strip', () => {
+  it('should strip a string from all occurrences of a given substring', () => {
     const str = 'Lorem_ipsum_dolor_sit_amet. Lorem+ipsum+dolor+sit+amet. 123456789';
 
     expect(strip(str, '_'))
@@ -16,7 +16,7 @@ describe('String/strip', function () {
     expect(strip(str, 'Lorem'))
       .toEqual('_ipsum_dolor_sit_amet. +ipsum+dolor+sit+amet. 123456789');
 
-    expect(function () {
+    expect(() => {
       return strip(['lorem_ipsum'], '_');
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

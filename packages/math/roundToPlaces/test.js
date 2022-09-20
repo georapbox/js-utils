@@ -1,7 +1,7 @@
 const roundToPlaces = require('./roundToPlaces');
 
-describe('Math/roundToPlaces', function () {
-  it('rounds a number to a number of desired places', function () {
+describe('Math/roundToPlaces', () => {
+  it('rounds a number to a number of desired places', () => {
     const PI = Math.PI;
 
     expect(roundToPlaces(PI, 0)).toBe(3);
@@ -24,7 +24,7 @@ describe('Math/roundToPlaces', function () {
 
     expect(roundToPlaces(NaN, 2)).toBe(NaN);
 
-    expect(function () {
+    expect(() => {
       return roundToPlaces('3.141592653589793', '2');
     }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });

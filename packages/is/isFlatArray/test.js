@@ -1,7 +1,7 @@
 const isFlatArray = require('./isFlatArray');
 
-describe('is/isFlatArray', function () {
-  it('checks if a value is a flat array', function () {
+describe('is/isFlatArray', () => {
+  it('checks if a value is a flat array', () => {
     expect(isFlatArray([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(true);
 
     expect(isFlatArray([1, 2, [3], [4, 5], 6, 7, [8], 9])).toBe(false);

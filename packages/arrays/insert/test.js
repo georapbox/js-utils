@@ -1,7 +1,7 @@
 const insert = require('./insert');
 
-describe('Array/insert', function () {
-  it('inserts elements to array at specific index', function () {
+describe('Array/insert', () => {
+  it('inserts elements to array at specific index', () => {
     const arr = [1, 2, 3];
 
     expect(insert(arr, 0, 'a')).toEqual(['a', 1, 2, 3]);
@@ -26,11 +26,11 @@ describe('Array/insert', function () {
 
     expect(insert(arr, 2, undefined)).toEqual([1, 2, undefined, 3]);
 
-    expect(function () {
+    expect(() => {
       return insert({foo: 'bar'}, 0, ['a', 'b']);
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       return insert(arr, '0', ['a', 'b']);
     }).toThrow(new TypeError('Expected a number for second argument'));
   });

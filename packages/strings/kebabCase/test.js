@@ -1,7 +1,7 @@
 const kebabCase = require('./kebabCase');
 
-describe('String/kebabCase', function () {
-  it('should convert string to kebab case', function () {
+describe('String/kebabCase', () => {
+  it('should convert string to kebab case', () => {
     expect(kebabCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');
 
     expect(kebabCase('the quick brown fox jumps over the lazy dog')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');
@@ -28,7 +28,7 @@ describe('String/kebabCase', function () {
 
     expect(kebabCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('the-quick-brown-fox-jumps-over-the-lazy-dog');
 
-    expect(function () {
+    expect(() => {
       return kebabCase(['the quick brown fox jumps over the lazy dog']);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

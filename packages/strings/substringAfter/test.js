@@ -1,7 +1,7 @@
 const substringAfter = require('./substringAfter');
 
-describe('String/substringAfter', function () {
-  it('returns a substring after a specific sequence of character(s)', function () {
+describe('String/substringAfter', () => {
+  it('returns a substring after a specific sequence of character(s)', () => {
     const str = 'LOREM_IPSUM DOLOR_SIT AMET';
 
     expect(substringAfter(str, 'SIT ')).toBe('AMET');
@@ -18,11 +18,11 @@ describe('String/substringAfter', function () {
 
     expect(substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓')).toBe('');
 
-    expect(function () {
+    expect(() => {
       return substringAfter(null, 'hello');
     }).toThrow(new TypeError('Expected a string for first and second argument'));
 
-    expect(function () {
+    expect(() => {
       return substringAfter(str, null);
     }).toThrow(new TypeError('Expected a string for first and second argument'));
   });

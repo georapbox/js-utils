@@ -1,9 +1,8 @@
 const isPromise = require('./isPromise');
 
-describe('is/isPromise', function () {
-  it('checks if a value is a Promise', function () {
-    function noop() {}
-
+describe('is/isPromise', () => {
+  it('checks if a value is a Promise', () => {
+    const noop = () => void 0;
     const p1 = new Promise(noop, noop);
     const p2 = Promise.resolve('Success');
     const p3 = Promise.reject('Error').catch(noop);
@@ -24,7 +23,7 @@ describe('is/isPromise', function () {
     expect(isPromise(new Map())).toBe(false);
     expect(isPromise(new Set())).toBe(false);
     expect(isPromise(Symbol('Promise'))).toBe(false);
-    expect(isPromise(function () {
+    expect(isPromise(() => {
       return Promise.resolve('Success');
     })).toBe(false);
 

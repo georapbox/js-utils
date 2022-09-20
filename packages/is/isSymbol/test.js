@@ -1,7 +1,7 @@
 const isSymbol = require('./isSymbol');
 
-describe('is/isSymbol', function () {
-  it('checks if a value is classified as a Symbol primitive', function () {
+describe('is/isSymbol', () => {
+  it('checks if a value is classified as a Symbol primitive', () => {
     expect(isSymbol(Symbol())).toBe(true);
 
     expect(isSymbol(Symbol('foo'))).toBe(true);

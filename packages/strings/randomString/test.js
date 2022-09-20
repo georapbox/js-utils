@@ -1,7 +1,7 @@
 const randomString = require('./randomString');
 
-describe('String/randomString', function () {
-  it('generates a pseudo-random string of n characters', function () {
+describe('String/randomString', () => {
+  it('generates a pseudo-random string of n characters', () => {
     const charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
 
     expect(randomString(16)).toHaveLength(16);
@@ -16,23 +16,23 @@ describe('String/randomString', function () {
 
     expect(randomString(10, '!')).toMatch(/[!#$%&()*+,\-./:;<=>?@[\]^_{|}~]/);
 
-    expect(function () {
+    expect(() => {
       return randomString();
     }).toThrow(new TypeError('Expected a number for first argument'));
 
-    expect(function () {
+    expect(() => {
       return randomString(10, '');
     }).toThrow(new TypeError(charsError));
 
-    expect(function () {
+    expect(() => {
       return randomString(10, ' ');
     }).toThrow(new TypeError(charsError));
 
-    expect(function () {
+    expect(() => {
       return randomString(10, '\t\n\v\r');
     }).toThrow(new TypeError(charsError));
 
-    expect(function () {
+    expect(() => {
       return randomString(10, 123);
     }).toThrow(new TypeError(charsError));
   });

@@ -1,7 +1,7 @@
 const isFunction = require('./isFunction');
 
-describe('is/isFunction', function () {
-  it('checks if a value is function', function () {
+describe('is/isFunction', () => {
+  it('checks if a value is function', () => {
     function func() {
       return true;
     }

@@ -1,7 +1,7 @@
 const isOdd = require('./isOdd');
 
-describe('is/isOdd', function () {
-  it('checks if a value is odd', function () {
+describe('is/isOdd', () => {
+  it('checks if a value is odd', () => {
     expect(isOdd(3)).toBe(true);
 
     expect(isOdd(0)).toBe(false);

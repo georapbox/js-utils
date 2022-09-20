@@ -1,7 +1,7 @@
 const isEmpty = require('./isEmpty');
 
-describe('is/isEmpty', function () {
-  it('checks if a value is an empty object, collection, map, or set.', function () {
+describe('is/isEmpty', () => {
+  it('checks if a value is an empty object, collection, map, or set.', () => {
     expect(isEmpty([])).toBe(true);
     expect(isEmpty([1, 2, 3])).toBe(false);
 
@@ -41,10 +41,8 @@ describe('is/isEmpty', function () {
     expect(isEmpty(Boolean(false))).toBe(true);
     expect(isEmpty(new Boolean(false))).toBe(true);
 
-    expect(isEmpty(function noop() {})).toBe(true);
-    expect(isEmpty(function noop() {
-      return 1;
-    })).toBe(true);
+    expect(isEmpty(() => {})).toBe(true);
+    expect(isEmpty(() => 1)).toBe(true);
     expect(isEmpty(class MyClass {})).toBe(true);
     expect(isEmpty(class MyClass {
       constructor(a) {

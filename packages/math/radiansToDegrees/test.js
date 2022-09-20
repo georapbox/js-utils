@@ -1,7 +1,7 @@
 const radiansToDegrees = require('./radiansToDegrees');
 
-describe('Math/radiansToDegrees', function () {
-  it('converts radians to degrees', function () {
+describe('Math/radiansToDegrees', () => {
+  it('converts radians to degrees', () => {
     expect(radiansToDegrees(0)).toBe(0);
 
     expect(radiansToDegrees(Math.PI / 2)).toBe(90);
@@ -14,7 +14,7 @@ describe('Math/radiansToDegrees', function () {
 
     expect(radiansToDegrees(NaN)).toBe(NaN);
 
-    expect(function () {
+    expect(() => {
       return radiansToDegrees('3.14');
     }).toThrow(new TypeError('Expected a number for first argument'));
   });

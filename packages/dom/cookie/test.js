@@ -1,7 +1,7 @@
 const cookie = require('./cookie');
 
-describe('dom/cookie', function () {
-  it('should create, read and delete cookies', function () {
+describe('dom/cookie', () => {
+  it('should create, read and delete cookies', () => {
     cookie.set('cookie-1', 'value-1');
     expect(cookie.get('cookie-1')).toBe('value-1');
 
@@ -44,19 +44,19 @@ describe('dom/cookie', function () {
 
     expect(document.cookie).toBe('');
 
-    expect(function () {
+    expect(() => {
       return cookie.set(null, 'value');
     }).toThrow(new TypeError('Expected a string for first and second argument'));
 
-    expect(function () {
+    expect(() => {
       return cookie.set('name', null);
     }).toThrow(new TypeError('Expected a string for first and second argument'));
 
-    expect(function () {
+    expect(() => {
       return cookie.get(null);
     }).toThrow(new TypeError('Expected a string for first argument'));
 
-    expect(function () {
+    expect(() => {
       return cookie.remove(null);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

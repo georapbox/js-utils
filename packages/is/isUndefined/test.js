@@ -1,9 +1,9 @@
 const isUndefined = require('./isUndefined');
 
-describe('is/isUndefined', function () {
+describe('is/isUndefined', () => {
   let foo;
 
-  it('checks if a value is undefined', function () {
+  it('checks if a value is undefined', () => {
     expect(isUndefined()).toBe(true);
 
     expect(isUndefined(foo)).toBe(true);

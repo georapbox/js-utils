@@ -1,7 +1,7 @@
 const isSafeInteger = require('./isSafeInteger');
 
-describe('is/isSafeInteger', function () {
-  function runTests() {
+describe('is/isSafeInteger', () => {
+  const runTests = () => {
     expect(isSafeInteger(3)).toBe(true);
 
     expect(isSafeInteger(Math.pow(2, 53))).toBe(false);
@@ -19,13 +19,13 @@ describe('is/isSafeInteger', function () {
     expect(isSafeInteger(3.1)).toBe(false);
 
     expect(isSafeInteger(3.0)).toBe(true);
-  }
+  };
 
-  it('check if integer number is in the safe range (Number.isSafeInteger is supported)', function () {
+  it('check if integer number is in the safe range (Number.isSafeInteger is supported)', () => {
     runTests();
   });
 
-  it('check if integer number is in the safe range (Number.isSafeInteger is not supported)', function () {
+  it('check if integer number is in the safe range (Number.isSafeInteger is not supported)', () => {
     const nativeCode = Number.isSafeInteger;
     Number.isSafeInteger = null;
     runTests();

@@ -1,7 +1,7 @@
 const camelCase = require('./camelCase');
 
-describe('String/camel case', function () {
-  it('should convert string to camelCase', function () {
+describe('String/camel case', () => {
+  it('should convert string to camelCase', () => {
     expect(camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
 
     expect(camelCase('the quick brown fox jumps over the lazy dog')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
@@ -24,7 +24,7 @@ describe('String/camel case', function () {
 
     expect(camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
 
-    expect(function () {
+    expect(() => {
       return camelCase(['the quick brown fox jumps over the lazy dog']);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

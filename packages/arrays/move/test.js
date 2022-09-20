@@ -1,7 +1,7 @@
 const move = require('./move');
 
-describe('Array/move', function () {
-  it('moves an array element to a different position', function () {
+describe('Array/move', () => {
+  it('moves an array element to a different position', () => {
     const array = ['A', 'B', 'C', 'D', 'E'];
 
     expect(move(array, 0, 1)).toEqual(['B', 'A', 'C', 'D', 'E']);
@@ -22,15 +22,15 @@ describe('Array/move', function () {
 
     expect(move([], 0, 1)).toEqual([]);
 
-    expect(function () {
+    expect(() => {
       return move(null, 0, 1);
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       return move(array, '0', 1);
     }).toThrow(new TypeError('Expected a number for second and third arguments'));
 
-    expect(function () {
+    expect(() => {
       return move(array, 0, '1');
     }).toThrow(new TypeError('Expected a number for second and third arguments'));
   });

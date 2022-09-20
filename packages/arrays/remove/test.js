@@ -1,7 +1,7 @@
 const remove = require('./remove');
 
-describe('Array/remove', function () {
-  it('removes elements from array at specific index(es)', function () {
+describe('Array/remove', () => {
+  it('removes elements from array at specific index(es)', () => {
     const arr = [1, 2, 3, 4, 5];
 
     expect(remove(arr, 0)).toEqual([2, 3, 4, 5]);
@@ -32,7 +32,7 @@ describe('Array/remove', function () {
 
     expect(remove(arr, '0', '1')).toEqual([1, 2, 3, 4, 5]);
 
-    expect(function () {
+    expect(() => {
       return remove({foo: 'bar'}, [0]);
     }).toThrow(new TypeError('Expected an array for first argument'));
   });

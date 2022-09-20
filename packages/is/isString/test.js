@@ -1,7 +1,7 @@
 const isString = require('./isString');
 
-describe('is/isString', function () {
-  it('checks if a value is string', function () {
+describe('is/isString', () => {
+  it('checks if a value is string', () => {
     expect(isString('404')).toBe(true);
 
     expect(isString(404)).toBe(false);

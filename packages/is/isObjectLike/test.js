@@ -1,7 +1,7 @@
 const isObjectLike = require('./isObjectLike');
 
-describe('is/isObjectLike', function () {
-  it('checks if a value is object-like', function () {
+describe('is/isObjectLike', () => {
+  it('checks if a value is object-like', () => {
     expect(isObjectLike({})).toBe(true);
 
     expect(isObjectLike(new Object())).toBe(true);

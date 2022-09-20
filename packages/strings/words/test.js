@@ -1,7 +1,7 @@
 const words = require('./words');
 
-describe('String/words', function () {
-  it('should count words in a subject string', function () {
+describe('String/words', () => {
+  it('should count words in a subject string', () => {
     expect(words('')).toEqual([]);
 
     expect(words('  ')).toEqual([]);
@@ -20,7 +20,7 @@ describe('String/words', function () {
 
     expect(words('1\t2\r3 4 5')).toEqual(['1', '2', '3', '4', '5']);
 
-    expect(function () {
+    expect(() => {
       return words(null);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

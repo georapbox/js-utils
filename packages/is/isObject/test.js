@@ -1,7 +1,7 @@
 const isObject = require('./isObject');
 
-describe('is/isObject', function () {
-  it('checks if a value is object', function () {
+describe('is/isObject', () => {
+  it('checks if a value is object', () => {
     expect(isObject({})).toBe(true);
 
     expect(isObject(new Object())).toBe(true);

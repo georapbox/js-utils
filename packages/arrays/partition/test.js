@@ -1,7 +1,7 @@
 const partition = require('./partition');
 
-describe('Array/partition', function () {
-  it('creates an array of elements split into two groups', function () {
+describe('Array/partition', () => {
+  it('creates an array of elements split into two groups', () => {
     const users = [{
       name: 'John',
       isAdmin: true
@@ -15,7 +15,7 @@ describe('Array/partition', function () {
 
     const numbers = [1, 3, 5, -4, 6, -2];
 
-    const partitionedNumbers = partition(numbers, function (element) {
+    const partitionedNumbers = partition(numbers, element => {
       return element > 0;
     });
     const positive = partitionedNumbers[0];
@@ -24,7 +24,7 @@ describe('Array/partition', function () {
     expect(positive).toEqual([1, 3, 5, 6]);
     expect(nonPositive).toEqual([-4, -2]);
 
-    const partitionedUsers = partition(users, function (element) {
+    const partitionedUsers = partition(users, element => {
       return element.isAdmin;
     });
     const admins = partitionedUsers[0];
@@ -43,19 +43,19 @@ describe('Array/partition', function () {
       isAdmin: false
     }]);
 
-    expect(partition([], function (element) {
+    expect(partition([], element => {
       return element.isAdmin;
     })).toEqual([[], []]);
 
     expect(partition([1, 2, 3])).toEqual([[1, 2, 3], []]);
 
-    expect(function () {
-      return partition(null, function (element) {
+    expect(() => {
+      return partition(null, element => {
         return element.isAdmin;
       });
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       return partition(users, null);
     }).toThrow(new TypeError('Expected a function for second argument'));
   });

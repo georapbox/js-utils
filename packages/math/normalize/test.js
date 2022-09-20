@@ -1,7 +1,7 @@
 const normalize = require('./normalize');
 
-describe('Math/normalize', function () {
-  it('converts a numeical value from 0 to 1 indicating where it lies within a range of values', function () {
+describe('Math/normalize', () => {
+  it('converts a numeical value from 0 to 1 indicating where it lies within a range of values', () => {
     expect(normalize(23, 0, 33)).toBe(0.696969696969697);
 
     expect(normalize(23, 5, 33)).toBe(0.6428571428571429);
@@ -14,15 +14,15 @@ describe('Math/normalize', function () {
 
     expect(normalize(-5, -5, 33)).toBe(0);
 
-    expect(function () {
+    expect(() => {
       return normalize(null, 0, 33);
     }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
-    expect(function () {
+    expect(() => {
       return normalize(23, null, 33);
     }).toThrow(new TypeError('Expected all arguments to be numbers'));
 
-    expect(function () {
+    expect(() => {
       return normalize(23, 0, null);
     }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });

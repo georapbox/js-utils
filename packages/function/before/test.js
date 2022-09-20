@@ -1,7 +1,7 @@
 const before = require('./before');
 
-describe('Function/before', function () {
-  it('should invoke a function up to 5 times', function () {
+describe('Function/before', () => {
+  it('should invoke a function up to 5 times', () => {
     let count = 0;
     let result;
 
@@ -13,13 +13,13 @@ describe('Function/before', function () {
 
     expect(result).toEqual(5);
 
-    expect(function () {
-      return before('five', function () {
+    expect(() => {
+      return before('five', () => {
         return count += 1;
       });
     }).toThrow(new TypeError('Expected a number for first argument'));
 
-    expect(function () {
+    expect(() => {
       return before(5);
     }).toThrow(new TypeError('Expected a function for second argument'));
   });

@@ -1,7 +1,7 @@
 const isFiniteNum = require('./isFiniteNum');
 
-describe('is/isFiniteNum', function () {
-  function runTests() {
+describe('is/isFiniteNum', () => {
+  const runTests = () => {
     expect(isFiniteNum(Infinity)).toBe(false);
 
     expect(isFiniteNum(-Infinity)).toBe(false);
@@ -17,13 +17,13 @@ describe('is/isFiniteNum', function () {
     expect(isFiniteNum(undefined)).toBe(false);
 
     expect(isFiniteNum(2e64)).toBe(true);
-  }
+  };
 
-  it('checks if a value is finite (Number.isFinite is supported)', function () {
+  it('checks if a value is finite (Number.isFinite is supported)', () => {
     runTests();
   });
 
-  it('checks if a value is finite (Number.isFinite is not supported)', function () {
+  it('checks if a value is finite (Number.isFinite is not supported)', () => {
     const nativeCode = Number.isFinite;
     Number.isFinite = null;
     runTests();

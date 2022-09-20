@@ -1,7 +1,7 @@
 const dropRightWhile = require('./dropRightWhile');
 
-describe('Array/dropRightWhile', function () {
-  it('creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy', function () {
+describe('Array/dropRightWhile', () => {
+  it('creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy', () => {
     const books = [
       {
         title: 'Javascript Design Patterns',
@@ -21,7 +21,7 @@ describe('Array/dropRightWhile', function () {
       }
     ];
 
-    expect(dropRightWhile(books, function (book) {
+    expect(dropRightWhile(books, book => {
       return !book.read;
     })).toEqual([{
       title: 'Javascript Design Patterns',
@@ -31,17 +31,17 @@ describe('Array/dropRightWhile', function () {
       read: true
     }]);
 
-    expect(dropRightWhile(books, function (book) {
+    expect(dropRightWhile(books, book => {
       return book.read;
     })).toHaveLength(4);
 
-    expect(function () {
-      dropRightWhile(null, function (book) {
+    expect(() => {
+      dropRightWhile(null, book => {
         return !book.read;
       });
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       dropRightWhile(books, null);
     }).toThrow(new TypeError('Expected a function for second argument'));
   });

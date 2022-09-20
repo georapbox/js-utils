@@ -1,7 +1,7 @@
 const drop = require('./drop');
 
-describe('Array/drop', function () {
-  it('creates a slice of array with n elements dropped from the beginning', function () {
+describe('Array/drop', () => {
+  it('creates a slice of array with n elements dropped from the beginning', () => {
     const arr = [1, 2, 3, 4, 5];
 
     expect(drop(arr)).toEqual([2, 3, 4, 5]);
@@ -22,11 +22,11 @@ describe('Array/drop', function () {
 
     expect(drop(arr, Number.MAX_VALUE)).toEqual([]);
 
-    expect(function () {
+    expect(() => {
       return drop({}, 2);
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       return drop(arr, '2');
     }).toThrow(new TypeError('Expected a number for second argument'));
   });

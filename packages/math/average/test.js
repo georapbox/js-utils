@@ -1,7 +1,7 @@
 const average = require('./average');
 
-describe('Math/average', function () {
-  it('calculates the average of a set of numbers', function () {
+describe('Math/average', () => {
+  it('calculates the average of a set of numbers', () => {
     expect(average(5, 10, 50, -45, 6, 7)).toBe(5.5);
     expect(average([5, 10, 50, -45, 6, 7])).toBe(5.5);
 

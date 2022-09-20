@@ -1,7 +1,7 @@
 const after = require('./after');
 
-describe('Function/after', function () {
-  it('should invoke a function after it\'s been called n times', function () {
+describe('Function/after', () => {
+  it('should invoke a function after it\'s been called n times', () => {
     let count = 0;
     let result;
 
@@ -13,13 +13,13 @@ describe('Function/after', function () {
 
     expect(result).toEqual(6);
 
-    expect(function () {
-      return after('five', function () {
+    expect(() => {
+      return after('five', () => {
         return count += 1;
       });
     }).toThrow(new TypeError('Expected a number for first argument'));
 
-    expect(function () {
+    expect(() => {
       return after(5);
     }).toThrow(new TypeError('Expected a function for second argument'));
   });

@@ -1,7 +1,7 @@
 const isSet = require('./isSet');
 
-describe('is/isSet', function () {
-  it('checks if a value is WeakMap', function () {
+describe('is/isSet', () => {
+  it('checks if a value is WeakMap', () => {
     expect(isSet(new Set())).toBe(true);
 
     expect(isSet([])).toBe(false);

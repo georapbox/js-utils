@@ -1,7 +1,7 @@
 const groupBy = require('./groupBy');
 
-describe('Array/groupBy', function () {
-  it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
+describe('Array/groupBy', () => {
+  it('Creates an object composed of keys generated from the results of running each element of array through iteratee', () => {
     const arr1 = ['one', 'two', 'three', 'four', 'five'];
 
     const arr2 = [
@@ -37,19 +37,19 @@ describe('Array/groupBy', function () {
 
     expect(groupBy(arr1, 'length')).toEqual(exp1);
 
-    expect(groupBy(arr1, function (item) {
+    expect(groupBy(arr1, item => {
       return item.length;
     })).toEqual(exp1);
 
     expect(groupBy(arr2, 'name')).toEqual(exp2);
 
-    expect(groupBy(arr2, function (item) {
+    expect(groupBy(arr2, item => {
       return item.name;
     })).toEqual(exp2);
 
     expect(groupBy(arr3, Math.floor)).toEqual(exp3);
 
-    expect(function () {
+    expect(() => {
       return groupBy({}, '2');
     }).toThrow(new TypeError('Expected an array for first argument'));
   });

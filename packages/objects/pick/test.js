@@ -1,7 +1,7 @@
 const pick = require('./pick');
 
-describe('Object/pick', function () {
-  it('creates an object composed of the picked object properties', function () {
+describe('Object/pick', () => {
+  it('creates an object composed of the picked object properties', () => {
     const o1 = Object.create({
       foo: 'bar'
     });
@@ -37,43 +37,43 @@ describe('Object/pick', function () {
     expect(pick(o1, ['d', 'e'])).toStrictEqual({});
     expect(pick(o1, ['d', 'e'], false)).toStrictEqual({});
 
-    expect(function () {
+    expect(() => {
       return pick(null, ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(undefined, ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(['a', 'b', 'c'], ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(new Map(), ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(new WeakMap(), ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(new Set(), ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(new WeakSet(), ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(NaN, ['a']);
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(o1, 'a');
     }).toThrow(new TypeError('Expected an array for second argument'));
 
-    expect(function () {
+    expect(() => {
       return pick(o1, ['a', 'b'], 1);
     }).toThrow(new TypeError('Expected a boolean for third argument'));
   });

@@ -1,7 +1,7 @@
 const numberFormat = require('./numberFormat');
 
-describe('String/numberFormat', function () {
-  it('formats a number based on the number of decimal points, the decimal separator and the thousands separator', function () {
+describe('String/numberFormat', () => {
+  it('formats a number based on the number of decimal points, the decimal separator and the thousands separator', () => {
     expect(numberFormat(123456789.12345)).toEqual('123,456,789');
 
     expect(numberFormat(123456789.12345, 3, '.', ',')).toEqual('123,456,789.123');
@@ -12,7 +12,7 @@ describe('String/numberFormat', function () {
 
     expect(numberFormat(NaN)).toBe('');
 
-    expect(function () {
+    expect(() => {
       return numberFormat(null);
     }).toThrow(new TypeError('Expected a number for first argument'));
   });

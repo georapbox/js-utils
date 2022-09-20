@@ -1,7 +1,7 @@
 const dropRight = require('./dropRight');
 
-describe('Array/dropRight', function () {
-  it('creates a slice of array with n elements dropped from the end', function () {
+describe('Array/dropRight', () => {
+  it('creates a slice of array with n elements dropped from the end', () => {
     const arr = [1, 2, 3, 4, 5];
 
     expect(dropRight(arr)).toEqual([1, 2, 3, 4]);
@@ -22,11 +22,11 @@ describe('Array/dropRight', function () {
 
     expect(dropRight(arr, Number.MAX_VALUE)).toEqual([]);
 
-    expect(function () {
+    expect(() => {
       return dropRight({}, 2);
     }).toThrow(new TypeError('Expected an array for first argument'));
 
-    expect(function () {
+    expect(() => {
       return dropRight(arr, '2');
     }).toThrow(new TypeError('Expected a number for second argument'));
   });

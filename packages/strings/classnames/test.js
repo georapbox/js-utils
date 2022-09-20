@@ -1,20 +1,20 @@
 const classnames = require('./classnames');
 
-describe('String/classnames', function () {
-  it('returns empty string if no arguments passed', function () {
+describe('String/classnames', () => {
+  it('returns empty string if no arguments passed', () => {
     expect(classnames()).toBe('');
   });
 
-  it('returns empty string if empty object(s) passed as arguments', function () {
+  it('returns empty string if empty object(s) passed as arguments', () => {
     expect(classnames({})).toBe('');
     expect(classnames({}, {}, {})).toBe('');
   });
 
-  it('returns empty string if all arguments are empty strings', function () {
+  it('returns empty string if all arguments are empty strings', () => {
     expect(classnames('', '', '')).toBe('');
   });
 
-  it ('should ignore arguments of unsupported types', function () {
+  it ('should ignore arguments of unsupported types', () => {
     const res = classnames(
       'foo',
       {bar: true},
@@ -31,7 +31,7 @@ describe('String/classnames', function () {
     expect(res).toBe('foo bar');
   });
 
-  it ('combines mixed arguments (strings, objects)', function () {
+  it ('combines mixed arguments (strings, objects)', () => {
     const res = classnames(
       'a', 'b',
       {'c': true},
@@ -42,7 +42,7 @@ describe('String/classnames', function () {
     expect(res).toBe('a b c e f');
   });
 
-  it('it joins the classes if an object is passed with multiple keys', function () {
+  it('it joins the classes if an object is passed with multiple keys', () => {
     const res = classnames({
       foo: true,
       bar: true
@@ -52,14 +52,14 @@ describe('String/classnames', function () {
     expect(res).toContain('bar');
   });
 
-  it('all falsy values are ignored', function () {
+  it('all falsy values are ignored', () => {
     const res = classnames(
       {'null': null},
       {'undefined': void 0},
       {'empty-string': ''},
       {'non-empty-string': 'foo'},
       {'white-space': ' '},
-      {'function': function () {}},
+      {'function': () => {}},
       {'empty-object': {}},
       {'non-empty-bject': {foo: 'bar'}},
       {'empty-array': []},

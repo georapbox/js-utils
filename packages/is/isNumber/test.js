@@ -1,7 +1,7 @@
 const isNumber = require('./isNumber');
 
-describe('is/isNumber', function () {
-  it('checks if a value is number', function () {
+describe('is/isNumber', () => {
+  it('checks if a value is number', () => {
     expect(isNumber(404)).toBe(true);
 
     expect(isNumber(new Date().getTime())).toBe(true);

@@ -1,6 +1,6 @@
 const pluck = require('./pluck');
 
-describe('Array/pluck', function () {
+describe('Array/pluck', () => {
   const books = [
     {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
     {title: 'The Mist', author: 'Stephen King'},
@@ -8,7 +8,7 @@ describe('Array/pluck', function () {
     {title: 'The Monster in the Closet', author: 'Stephen King'}
   ];
 
-  it('plucks the array', function () {
+  it('plucks the array', () => {
     expect(Array.isArray(pluck(books, 'author'))).toBe(true);
 
     expect(pluck(books, 'author')).toHaveLength(4);
@@ -19,7 +19,7 @@ describe('Array/pluck', function () {
 
     expect(pluck(books)).toHaveLength(0);
 
-    expect(function () {
+    expect(() => {
       return pluck({}, 'author');
     }).toThrow(new TypeError('Expected an array for first argument'));
   });

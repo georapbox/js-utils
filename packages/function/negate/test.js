@@ -1,7 +1,7 @@
 const negate = require('./negate');
 
-describe('Function/negate', function () {
-  it('should negate the result of the predicate function', function () {
+describe('Function/negate', () => {
+  it('should negate the result of the predicate function', () => {
     const isEven = n => n % 2 === 0;
 
     const numbers = [1, 2, 3, 4, 5, 6];
@@ -12,7 +12,7 @@ describe('Function/negate', function () {
 
     expect(odds).toEqual([1, 3, 5]);
 
-    expect(function () {
+    expect(() => {
       return negate();
     }).toThrow(new TypeError('Expected a function for first argument'));
   });

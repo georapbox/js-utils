@@ -1,7 +1,7 @@
 const uniqBy = require('./uniqBy');
 
-describe('Array/uniqBy', function () {
-  it('Creates an object composed of keys generated from the results of running each element of array through iteratee', function () {
+describe('Array/uniqBy', () => {
+  it('Creates an object composed of keys generated from the results of running each element of array through iteratee', () => {
     const arr1 = [
       {id: 1, name: 'John'},
       {id: 2, name: 'George'},
@@ -35,14 +35,14 @@ describe('Array/uniqBy', function () {
       {id: 1, name: 'Helen'}
     ]);
 
-    expect(uniqBy(arr2, function (o) {
+    expect(uniqBy(arr2, o => {
       return Math.floor(o.v);
     })).toEqual([
       {v: 1.6},
       {v: 2.1}
     ]);
 
-    expect(uniqBy(arr3, function (o) {
+    expect(uniqBy(arr3, o => {
       return o.x + o.y + o.z;
     })).toEqual([
       {x: '0', y: '1', z: '2'},
@@ -50,7 +50,7 @@ describe('Array/uniqBy', function () {
       {x: '2', y: '1', z: '0'}
     ]);
 
-    expect(function () {
+    expect(() => {
       return uniqBy({}, 'name');
     }).toThrow(new TypeError('Expected an array for first argument'));
   });

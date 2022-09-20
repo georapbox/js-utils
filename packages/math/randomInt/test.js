@@ -1,7 +1,7 @@
 const randomInt = require('./randomInt');
 
-describe('Math/randomInt', function () {
-  it('returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.', function () {
+describe('Math/randomInt', () => {
+  it('returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.', () => {
     const r0 = randomInt(0, 2);
     const r1 = randomInt(2, 0);
 
@@ -9,7 +9,7 @@ describe('Math/randomInt', function () {
 
     expect(r1 >= 0 && r1 <= 2).toBe(true);
 
-    expect(function () {
+    expect(() => {
       return randomInt();
     }).toThrow(new TypeError('Expected all arguments to be numbers'));
   });

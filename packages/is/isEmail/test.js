@@ -1,7 +1,7 @@
 const isEmail = require('./isEmail');
 
-describe('is/isEmail', function () {
-  it('should validate various strings as emails', function () {
+describe('is/isEmail', () => {
+  it('should validate various strings as emails', () => {
     expect(isEmail('me@example.com')).toBe(true);
 
     expect(isEmail('a.nonymous@example.com')).toBe(true);
@@ -18,7 +18,7 @@ describe('is/isEmail', function () {
 
     expect(isEmail("!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]")).toBe(false); // eslint-disable-line quotes
 
-    expect(function () {
+    expect(() => {
       return isEmail(123);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

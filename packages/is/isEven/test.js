@@ -1,7 +1,7 @@
 const isEven = require('./isEven');
 
-describe('is/isEven', function () {
-  it('checks if value is even', function () {
+describe('is/isEven', () => {
+  it('checks if value is even', () => {
     expect(isEven(2)).toBe(true);
 
     expect(isEven(0)).toBe(true);

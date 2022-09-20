@@ -1,7 +1,7 @@
 const squash = require('./squash');
 
-describe('String/squash', function () {
-  it('removes all spaces from a string', function () {
+describe('String/squash', () => {
+  it('removes all spaces from a string', () => {
     expect(squash('Lorem ispum dolor sit amet')).toBe('Loremispumdolorsitamet');
 
     expect(squash('   Lorem   ispum   dolor sit amet  ')).toBe('Loremispumdolorsitamet');
@@ -11,7 +11,7 @@ describe('String/squash', function () {
     expect(squash('Loremispumdolorsitamet')).toBe('Loremispumdolorsitamet');
   });
 
-  it('removes all spaces from a string including escape sequences', function () {
+  it('removes all spaces from a string including escape sequences', () => {
     const expected = 'Loremispumdolorsitamet';
 
     expect(squash('Lorem ispum dolor sit amet', true)).toBe(expected);
@@ -31,8 +31,8 @@ describe('String/squash', function () {
     ).toBe(expected);
   });
 
-  it('throws TypeError is first argument is not a string', function () {
-    expect(function () {
+  it('throws TypeError is first argument is not a string', () => {
+    expect(() => {
       return squash(['a', 'b', 'c']);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

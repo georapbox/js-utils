@@ -1,13 +1,10 @@
 const isArrayLikeObject = require('./isArrayLikeObject');
 
-describe('is/isArrayLikeObject', function () {
-  function noop() {}
+describe('is/isArrayLikeObject', () => {
+  const noop = () => void 0;
+  const dummy = (...args) => args;
 
-  function dummy(...args) {
-    return args;
-  }
-
-  it('check if value is array-like', function () {
+  it('check if value is array-like', () => {
     const args = dummy();
 
     expect(isArrayLikeObject(args)).toBe(true);

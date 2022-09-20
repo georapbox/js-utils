@@ -1,7 +1,7 @@
 const pascalCase = require('./pascalCase');
 
-describe('String/pascalCase', function () {
-  it('should convert string to pascal case', function () {
+describe('String/pascalCase', () => {
+  it('should convert string to pascal case', () => {
     expect(pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('TheQuickBrownFoxJumpsOverTheLazyDog');
 
     expect(pascalCase('the quick brown fox jumps over the lazy dog')).toBe('TheQuickBrownFoxJumpsOverTheLazyDog');
@@ -26,7 +26,7 @@ describe('String/pascalCase', function () {
 
     expect(pascalCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('TheQuickBrownFoxJumpsOverTheLazyDog');
 
-    expect(function () {
+    expect(() => {
       return pascalCase(['the quick brown fox jumps over the lazy dog']);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

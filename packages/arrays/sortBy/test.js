@@ -1,6 +1,6 @@
 const sortBy = require('./sortBy');
 
-describe('Array/sortBy', function () {
+describe('Array/sortBy', () => {
   const people = [
     {name: 'Elena', age: '2'},
     {name: 'George', age: '33'},
@@ -8,7 +8,7 @@ describe('Array/sortBy', function () {
     {name: 'Vaggelis', age: '30'}
   ];
 
-  it('sorts an array of objects by property', function () {
+  it('sorts an array of objects by property', () => {
     expect(sortBy(people, 'name')).toEqual([
       {name: 'Elena', age: '2'},
       {name: 'George', age: '33'},
@@ -30,7 +30,7 @@ describe('Array/sortBy', function () {
       {name: 'Elena', age: '2'}
     ]);
 
-    expect(sortBy(people, 'age', true, function (age) {
+    expect(sortBy(people, 'age', true, age => {
       return age * 2;
     })).toEqual([
       {name: 'Elena', age: '2'},
@@ -67,7 +67,7 @@ describe('Array/sortBy', function () {
       {name: 'Vaggelis', age: '30'}
     ]);
 
-    expect(function () {
+    expect(() => {
       return sortBy({}, 'age');
     }).toThrow(new TypeError('Expected an array for first argument'));
   });

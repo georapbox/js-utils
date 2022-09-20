@@ -1,7 +1,7 @@
 const omit = require('./omit');
 
-describe('Object/omit', function () {
-  it('Creates an object composed of the own enumerable property paths of object that are not omitted', function () {
+describe('Object/omit', () => {
+  it('Creates an object composed of the own enumerable property paths of object that are not omitted', () => {
     const obj1 = {
       a: 'aaa',
       b: 'bbb',

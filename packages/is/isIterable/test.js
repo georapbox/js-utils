@@ -1,13 +1,13 @@
 const isIterable = require('./isIterable');
 
-describe('is/isIterable', function () {
+describe('is/isIterable', () => {
   function* generatorFunc() {
     yield 'foo';
   }
 
-  function noop() {}
+  const noop = () => void 0;
 
-  it('checks if a value is iterable)', function () {
+  it('checks if a value is iterable)', () => {
     expect(isIterable([])).toBe(true);
     expect(isIterable(new Map())).toBe(true);
     expect(isIterable(new Set())).toBe(true);
@@ -26,24 +26,24 @@ describe('is/isIterable', function () {
     expect(isIterable(Symbol('foo'))).toBe(false);
   });
 
-  it('should throw `TypeError` if `Symbol` is not supported', function () {
+  it('should throw `TypeError` if `Symbol` is not supported', () => {
     const nativeCode = window.Symbol;
 
     window.Symbol = undefined; // emulate `Symbol` not being supported
 
-    expect(function () {
+    expect(() => {
       return isIterable([]);
     }).toThrow(new TypeError('Symbol or Symbol.iterator is not supported by your environment.'));
 
     window.Symbol = nativeCode;
   });
 
-  it('should throw `TypeError` if `Symbol.iterator` is not supported', function () {
+  it('should throw `TypeError` if `Symbol.iterator` is not supported', () => {
     const nativeCode = window.Symbol;
 
     window.Symbol = {}; // emulate `Symbol.iterator` not being supported
 
-    expect(function () {
+    expect(() => {
       return isIterable([]);
     }).toThrow(new TypeError('Symbol or Symbol.iterator is not supported by your environment.'));
 

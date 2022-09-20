@@ -1,7 +1,7 @@
 const intersect = require('./intersect');
 
-describe('Array/intersect', function () {
-  function runTests() {
+describe('Array/intersect', () => {
+  const runTests = () => {
     const arrA = [NaN, 3, 8, 'foo', 'bar'];
     const arrB = [2, 7, 'foo', NaN, 3];
     const arrC = [1, 2, 3, NaN];
@@ -17,20 +17,20 @@ describe('Array/intersect', function () {
 
     expect(intersect(arrE, arrF)).toEqual([null, NaN, void 0]);
 
-    expect(function () {
+    expect(() => {
       return intersect(arrA, {});
     }).toThrow(new TypeError('Expected all arguments to be arrays'));
 
-    expect(function () {
+    expect(() => {
       return intersect({}, arrB);
     }).toThrow(new TypeError('Expected all arguments to be arrays'));
-  }
+  };
 
-  it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is supported)', function () {
+  it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is supported)', () => {
     runTests();
   });
 
-  it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is not supported)', function () {
+  it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is not supported)', () => {
     const nativeCode = Array.prototype.includes;
     Array.prototype.includes = null;
     runTests();

@@ -1,7 +1,7 @@
 const isHexColor = require('./isHexColor');
 
-describe('is/isHexColor', function () {
-  it('checks if a value matches a hexadecimal color regular expression', function () {
+describe('is/isHexColor', () => {
+  it('checks if a value matches a hexadecimal color regular expression', () => {
     expect(isHexColor('#f5f5f5')).toBe(true);
 
     expect(isHexColor('#9c0')).toBe(true);

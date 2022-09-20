@@ -1,7 +1,7 @@
 const min = require('./min');
 
-describe('Math/min', function () {
-  it('finds the smallest of zero or more numbers', function () {
+describe('Math/min', () => {
+  it('finds the smallest of zero or more numbers', () => {
     expect(min(5)).toBe(5);
 
     expect(min([1, -10, 1024, 1024.5, 29])).toBe(-10);

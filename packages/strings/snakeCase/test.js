@@ -1,7 +1,7 @@
 const snakeCase = require('./snakeCase');
 
-describe('String/snake case', function () {
-  it('should convert string to snake_case', function () {
+describe('String/snake case', () => {
+  it('should convert string to snake_case', () => {
     expect(snakeCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
     expect(snakeCase('the quick brown fox jumps over the lazy dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
@@ -24,7 +24,7 @@ describe('String/snake case', function () {
 
     expect(snakeCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
-    expect(function () {
+    expect(() => {
       return snakeCase(['the quick brown fox jumps over the lazy dog']);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

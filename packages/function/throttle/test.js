@@ -1,16 +1,16 @@
 const throttle = require('./throttle');
 
-describe('Function/throttle', function () {
-  beforeEach(function () {
+describe('Function/throttle', () => {
+  beforeEach(() => {
     jest.useFakeTimers();
     jest.spyOn(global, 'setTimeout');
   });
 
-  afterEach(function () {
+  afterEach(() => {
     jest.clearAllTimers();
   });
 
-  it('limits the number of times a function can be called in a given period', function () {
+  it('limits the number of times a function can be called in a given period', () => {
     const func = jest.fn();
     const throttled = throttle(func);
 
@@ -28,8 +28,8 @@ describe('Function/throttle', function () {
     expect(setTimeout).toHaveBeenCalledTimes(2);
   });
 
-  it('throws if first argument is not a function', function () {
-    expect(function () {
+  it('throws if first argument is not a function', () => {
+    expect(() => {
       return throttle();
     }).toThrow(new TypeError('Expected a function for first argument'));
   });

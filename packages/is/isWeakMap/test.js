@@ -1,7 +1,7 @@
 const isWeakMap = require('./isWeakMap');
 
-describe('is/isWeakMap', function () {
-  it('checks if a value is WeakMap', function () {
+describe('is/isWeakMap', () => {
+  it('checks if a value is WeakMap', () => {
     expect(isWeakMap(new WeakMap())).toBe(true);
 
     expect(isWeakMap([])).toBe(false);

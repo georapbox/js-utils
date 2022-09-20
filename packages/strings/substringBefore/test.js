@@ -1,7 +1,7 @@
 const substringBefore = require('./substringBefore');
 
-describe('String/substringBefore', function () {
-  it('should return a substring before a specific sequence of character(s)', function () {
+describe('String/substringBefore', () => {
+  it('should return a substring before a specific sequence of character(s)', () => {
     const str = 'LOREM_IPSUM DOLOR_SIT AMET';
 
     expect(substringBefore(str, 'SIT')).toEqual('LOREM_IPSUM DOLOR_');
@@ -18,11 +18,11 @@ describe('String/substringBefore', function () {
 
     expect(substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎')).toBe('');
 
-    expect(function () {
+    expect(() => {
       return substringBefore(null, 'hello');
     }).toThrow(new TypeError('Expected a string for first and second argument'));
 
-    expect(function () {
+    expect(() => {
       return substringBefore(str, null);
     }).toThrow(new TypeError('Expected a string for first and second argument'));
   });

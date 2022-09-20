@@ -1,7 +1,7 @@
 const isFalsy = require('./isFalsy');
 
-describe('is/isFalsy', function () {
-  it('checks if a value is falsy', function () {
+describe('is/isFalsy', () => {
+  it('checks if a value is falsy', () => {
     expect(isFalsy(true)).toBe(false);
 
     expect(isFalsy(' ')).toBe(false);

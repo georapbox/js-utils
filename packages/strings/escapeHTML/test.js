@@ -1,7 +1,7 @@
 const escapeHTML = require('./escapeHTML');
 
-describe('String/escapeHTML', function () {
-  it('should escape a HTML string', function () {
+describe('String/escapeHTML', () => {
+  it('should escape a HTML string', () => {
     expect(escapeHTML('<script src="main.js"><\/script>')) // eslint-disable-line no-useless-escape
       .toEqual('&lt;script src&#x3D;&quot;main.js&quot;&gt;&lt;&#x2F;script&gt;');
 
@@ -13,7 +13,7 @@ describe('String/escapeHTML', function () {
 
     expect(escapeHTML('`hello world`')).toEqual('&#x60;hello world&#x60;');
 
-    expect(function () {
+    expect(() => {
       return escapeHTML(['Hello & <span>World</span>']);
     }).toThrow(new TypeError('Expected a string for first argument'));
   });

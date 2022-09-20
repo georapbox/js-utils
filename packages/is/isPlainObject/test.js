@@ -1,11 +1,11 @@
 const isPlainObject = require('./isPlainObject');
 
-describe('is/isPlainObject', function () {
+describe('is/isPlainObject', () => {
   function Foo() {
     this.foo = 'bar';
   }
 
-  it('checks if a valud is plain object', function () {
+  it('checks if a valud is plain object', () => {
     expect(isPlainObject({foo: 'bar'})).toBe(true);
 
     expect(isPlainObject(Object.create({}))).toBe(false);
