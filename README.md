@@ -4,7 +4,7 @@
 
 # js-utils
 
-A collection of dependency-free JavaScript utility functions.
+A collection of dependency-free JavaScript utilities.
 
 ## Array
 
