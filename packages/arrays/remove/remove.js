@@ -37,11 +37,7 @@ const remove = (array, ...indexes) => {
     throw new TypeError('Expected an array for first argument');
   }
 
-  return array.filter((_, index) => {
-    return typeof index === 'number' && !Number.isNaN(index)
-      ? indexes.indexOf(index) === -1
-      : false;
-  });
+  return array.filter((_, i) => indexes.indexOf(i) === -1);
 };
 
 module.exports = remove;
