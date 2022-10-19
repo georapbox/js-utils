@@ -41,10 +41,10 @@ const uniqBy = (array, iteratee) => {
     const found = acc.find(item => cb(item) === cb(current));
 
     if (!found) {
-      return [...acc, current];
-    } else {
-      return acc;
+      acc.push(current);
     }
+
+    return acc;
   }, []);
 };
 
