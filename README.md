@@ -45,7 +45,7 @@ A collection of dependency-free JavaScript utilities.
 |[classnames](https://github.com/georapbox/js-utils/tree/master/packages/strings/classnames)|Creates a string by conditionally joining classNames together.|
 |[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/strings/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
 |[deburr](https://github.com/georapbox/js-utils/tree/master/packages/strings/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
-|[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Escapes a HTML string.|
+|[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/escapeHTML)|Converts the characters "&", "<", ">", '"' and "'" in a string to their corresponding HTML entities.|
 |[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the-quick-brown-fox-jumps-over-the-lazy-dog'`.|
 |[lines](https://github.com/georapbox/js-utils/tree/master/packages/strings/lines)|Returns an array with the lines of a a string.|
 |[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/strings/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
@@ -61,7 +61,7 @@ A collection of dependency-free JavaScript utilities.
 |[substringAfter](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringAfter)|Returns a substring after a specific sequence of character(s).|
 |[substringBefore](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringBefore)|Returns a substring before a specific sequence of character(s).|
 |[truncate](https://github.com/georapbox/js-utils/tree/master/packages/strings/truncate)|Truncates a string based on character count.|
-|[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Unescapes a HTML string.|
+|[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.|
 |[words](https://github.com/georapbox/js-utils/tree/master/packages/strings/words)|Splits string into an array of its words.|
 
 ## Object
