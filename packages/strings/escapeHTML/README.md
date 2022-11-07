@@ -2,7 +2,7 @@
 
 ## escapeHTML(subjectString) ⇒ <code>String</code>
 
-Converts the characters "&", "<", ">", '"' and "'" in a string to their corresponding HTML entities.
+Converts the characters `&`, `<`, `>`, `"` and `'` in a string to their corresponding HTML entities.
 
 **Returns**: <code>String</code> - Returns the escaped string.  
 **Throws**:
