@@ -61,6 +61,7 @@ A collection of dependency-free JavaScript utilities.
 |[stripPunctuation](https://github.com/georapbox/js-utils/tree/master/packages/strings/stripPunctuation)|Returns a new string with all of punctuation removed.|
 |[substringAfter](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringAfter)|Returns a substring after a specific sequence of character(s).|
 |[substringBefore](https://github.com/georapbox/js-utils/tree/master/packages/strings/substringBefore)|Returns a substring before a specific sequence of character(s).|
+|[supplant](https://github.com/georapbox/js-utils/tree/master/packages/strings/supplant)|Performs variable substitution in a string.|
 |[truncate](https://github.com/georapbox/js-utils/tree/master/packages/strings/truncate)|Truncates a string based on character count.|
 |[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.|
 |[words](https://github.com/georapbox/js-utils/tree/master/packages/strings/words)|Splits string into an array of its words.|
