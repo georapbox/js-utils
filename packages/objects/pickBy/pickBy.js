@@ -59,7 +59,7 @@
  * });
  * // => {}
  */
-const pickBy = (object, predicate, pickOwnKeys) => {
+const pickBy = (object, predicate, pickOwnKeys = true) => {
   const result = {};
   const type = Object.prototype.toString.call(object);
 
@@ -77,10 +77,6 @@ const pickBy = (object, predicate, pickOwnKeys) => {
 
   if (typeof predicate !== 'function') {
     throw new TypeError('Expected a function for second argument');
-  }
-
-  if (typeof pickOwnKeys === 'undefined') {
-    pickOwnKeys = true;
   }
 
   if (typeof pickOwnKeys !== 'boolean') {
