@@ -3,10 +3,10 @@ const takeRightWhile = require('./takeRightWhile');
 describe('Array/takeRightWhile', () => {
   it('creates a slice of array with n items taken from the end', () => {
     const books = [
-      {title: 'Javascript Design Patterns', read: false},
-      {title: 'Programming Javascript Applications', read: true},
-      {title: 'JavaScript The Good Parts', read: false},
-      {title: 'Eloquent Javascript', read: false}
+      { title: 'Javascript Design Patterns', read: false },
+      { title: 'Programming Javascript Applications', read: true },
+      { title: 'JavaScript The Good Parts', read: false },
+      { title: 'Eloquent Javascript', read: false }
     ];
 
     const unread = takeRightWhile(books, book => {
@@ -18,8 +18,8 @@ describe('Array/takeRightWhile', () => {
     });
 
     expect(unread).toEqual([
-      {title: 'JavaScript The Good Parts', read: false},
-      {title: 'Eloquent Javascript', read: false}
+      { title: 'JavaScript The Good Parts', read: false },
+      { title: 'Eloquent Javascript', read: false }
     ]);
 
     expect(read).toEqual([]);

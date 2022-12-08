@@ -17,8 +17,8 @@ describe('String/classnames', () => {
   it ('should ignore arguments of unsupported types', () => {
     const res = classnames(
       'foo',
-      {bar: true},
-      [{baz: true}],
+      { bar: true },
+      [{ baz: true }],
       [],
       100,
       Symbol('foo-bar'),
@@ -34,8 +34,8 @@ describe('String/classnames', () => {
   it ('combines mixed arguments (strings, objects)', () => {
     const res = classnames(
       'a', 'b',
-      {'c': true},
-      {'d': false},
+      { 'c': true },
+      { 'd': false },
       'e', 'f'
     );
 
@@ -54,22 +54,22 @@ describe('String/classnames', () => {
 
   it('all falsy values are ignored', () => {
     const res = classnames(
-      {'null': null},
-      {'undefined': void 0},
-      {'empty-string': ''},
-      {'non-empty-string': 'foo'},
-      {'white-space': ' '},
-      {'function': () => {}},
-      {'empty-object': {}},
-      {'non-empty-bject': {foo: 'bar'}},
-      {'empty-array': []},
-      {'non-empty-array': ['foo', 'bar']},
-      {'1': 1},
-      {'0': 0},
-      {'-0': -0},
-      {'NaN': NaN},
-      {'false': false},
-      {'true': true},
+      { 'null': null },
+      { 'undefined': void 0 },
+      { 'empty-string': '' },
+      { 'non-empty-string': 'foo' },
+      { 'white-space': ' ' },
+      { 'function': () => {} },
+      { 'empty-object': {} },
+      { 'non-empty-bject': { foo: 'bar' } },
+      { 'empty-array': [] },
+      { 'non-empty-array': ['foo', 'bar'] },
+      { '1': 1 },
+      { '0': 0 },
+      { '-0': -0 },
+      { 'NaN': NaN },
+      { 'false': false },
+      { 'true': true },
       'Yes, this is a long and strange string.',
       0,
       -0,

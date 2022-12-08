@@ -6,7 +6,7 @@ describe('is/isTruthy', () => {
 
     expect(isTruthy(' ')).toBe(true);
 
-    expect(isTruthy({foo: 'bar'})).toBe(true);
+    expect(isTruthy({ foo: 'bar' })).toBe(true);
 
     expect(isTruthy(false)).toBe(false);
 

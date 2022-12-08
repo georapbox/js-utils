@@ -3,10 +3,10 @@ const takeWhile = require('./takeWhile');
 describe('Array/takeWhile', () => {
   it('creates a slice of array with elements taken from the beginning, until predicate returns falsy', () => {
     const books = [
-      {title: 'Javascript Design Patterns', read: false},
-      {title: 'Programming Javascript Applications', read: false},
-      {title: 'JavaScript The Good Parts', read: true},
-      {title: 'Eloquent Javascript', read: false}
+      { title: 'Javascript Design Patterns', read: false },
+      { title: 'Programming Javascript Applications', read: false },
+      { title: 'JavaScript The Good Parts', read: true },
+      { title: 'Eloquent Javascript', read: false }
     ];
 
     const firstUnread = takeWhile(books, book => {
@@ -18,8 +18,8 @@ describe('Array/takeWhile', () => {
     });
 
     expect(firstUnread).toEqual([
-      {title: 'Javascript Design Patterns', read: false},
-      {title: 'Programming Javascript Applications', read: false}
+      { title: 'Javascript Design Patterns', read: false },
+      { title: 'Programming Javascript Applications', read: false }
     ]);
 
     expect(firstRead).toEqual([]);

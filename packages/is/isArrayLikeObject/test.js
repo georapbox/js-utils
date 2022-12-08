@@ -15,9 +15,9 @@ describe('is/isArrayLikeObject', () => {
 
     expect(isArrayLikeObject(0)).toBe(false);
 
-    expect(isArrayLikeObject({foo: 'bar'})).toBe(false);
+    expect(isArrayLikeObject({ foo: 'bar' })).toBe(false);
 
-    expect(isArrayLikeObject({foo: 'bar', length: 10})).toBe(true);
+    expect(isArrayLikeObject({ foo: 'bar', length: 10 })).toBe(true);
 
     expect(isArrayLikeObject(noop)).toBe(false);
 

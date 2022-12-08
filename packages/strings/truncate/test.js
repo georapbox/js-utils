@@ -23,7 +23,7 @@ describe('String/truncate', () => {
     expect(truncate(str, NaN)).toEqual(str);
 
     expect(() => {
-      return truncate({item: str}, 10);
+      return truncate({ item: str }, 10);
     }).toThrow(new TypeError('Expected a string for first argument'));
 
     expect(() => {

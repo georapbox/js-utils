@@ -6,13 +6,13 @@ describe('is/isPlainObject', () => {
   }
 
   it('checks if a valud is plain object', () => {
-    expect(isPlainObject({foo: 'bar'})).toBe(true);
+    expect(isPlainObject({ foo: 'bar' })).toBe(true);
 
     expect(isPlainObject(Object.create({}))).toBe(false);
 
     expect(isPlainObject(Object.create(null))).toBe(true);
 
-    expect(isPlainObject(Object.create({foo: 'bar'}))).toBe(false);
+    expect(isPlainObject(Object.create({ foo: 'bar' }))).toBe(false);
 
     expect(isPlainObject(new Foo())).toBe(false);
 
@@ -22,7 +22,7 @@ describe('is/isPlainObject', () => {
 
     expect(isPlainObject()).toBe(false);
 
-    expect(isPlainObject(new Object({foo: 'bar'}))).toBe(true);
+    expect(isPlainObject(new Object({ foo: 'bar' }))).toBe(true);
 
     expect(isPlainObject(100)).toBe(false);
 
@@ -40,7 +40,7 @@ describe('is/isPlainObject', () => {
 
     expect(isPlainObject(Symbol({}))).toBe(false);
 
-    expect(isPlainObject(Symbol(new Object({foo: 'bar'})))).toBe(false);
+    expect(isPlainObject(Symbol(new Object({ foo: 'bar' })))).toBe(false);
 
     expect(isPlainObject(Symbol(new Foo()))).toBe(false);
   });

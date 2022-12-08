@@ -4,7 +4,7 @@ describe('is/isArray', () => {
   const runTests = () => {
     expect(isArray(['a', 'b', 'c', 'd'])).toBe(true);
 
-    expect(isArray({a: 'a', b: 'b'})).toBe(false);
+    expect(isArray({ a: 'a', b: 'b' })).toBe(false);
 
     expect(isArray('abcdefg')).toBe(false);
 

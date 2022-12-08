@@ -6,10 +6,10 @@ describe('is/isEmpty', () => {
     expect(isEmpty([1, 2, 3])).toBe(false);
 
     expect(isEmpty({})).toBe(true);
-    expect(isEmpty({foo: 'bar'})).toBe(false);
+    expect(isEmpty({ foo: 'bar' })).toBe(false);
     expect(isEmpty(Object.create(null))).toBe(true);
     expect(isEmpty(Object.create({}))).toBe(true);
-    expect(isEmpty(Object.create({foo: 'bar'}))).toBe(true);
+    expect(isEmpty(Object.create({ foo: 'bar' }))).toBe(true);
 
     expect(isEmpty(new Map())).toBe(true);
     expect(isEmpty(new Map().set('foo', 'bar'))).toBe(false);

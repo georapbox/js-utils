@@ -5,13 +5,13 @@ describe('Array/groupBy', () => {
     const arr1 = ['one', 'two', 'three', 'four', 'five'];
 
     const arr2 = [
-      {name: 'John'},
-      {name: 'George'},
-      {name: 'Helen'},
-      {name: 'John'},
-      {name: 'Helen'},
-      {name: 'Alex'},
-      {name: 'George'}
+      { name: 'John' },
+      { name: 'George' },
+      { name: 'Helen' },
+      { name: 'John' },
+      { name: 'Helen' },
+      { name: 'Alex' },
+      { name: 'George' }
     ];
 
     const arr3 = [9.5, 6.3, 4.9, 6.8, 9.0, 9.3];
@@ -23,10 +23,10 @@ describe('Array/groupBy', () => {
     };
 
     const exp2 = {
-      John: [{name: 'John'}, {name: 'John'}],
-      George: [{name: 'George'}, {name: 'George'}],
-      Helen: [{name: 'Helen'}, {name: 'Helen'}],
-      Alex: [{name: 'Alex'}]
+      John: [{ name: 'John' }, { name: 'John' }],
+      George: [{ name: 'George' }, { name: 'George' }],
+      Helen: [{ name: 'Helen' }, { name: 'Helen' }],
+      Alex: [{ name: 'Alex' }]
     };
 
     const exp3 = {

@@ -2,10 +2,10 @@ const pluck = require('./pluck');
 
 describe('Array/pluck', () => {
   const books = [
-    {title: 'Around the World in Eighty Days', author: 'Jules Verne'},
-    {title: 'The Mist', author: 'Stephen King'},
-    {title: 'Journey to the Center of the Earth', author: 'Jules Verne'},
-    {title: 'The Monster in the Closet', author: 'Stephen King'}
+    { title: 'Around the World in Eighty Days', author: 'Jules Verne' },
+    { title: 'The Mist', author: 'Stephen King' },
+    { title: 'Journey to the Center of the Earth', author: 'Jules Verne' },
+    { title: 'The Monster in the Closet', author: 'Stephen King' }
   ];
 
   it('plucks the array', () => {

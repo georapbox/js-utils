@@ -37,19 +37,19 @@ describe('Object/pickBy', () => {
 
     expect(pickBy(o1, value => {
       return typeof value === 'number';
-    })).toStrictEqual({a: 1, c: 3});
+    })).toStrictEqual({ a: 1, c: 3 });
 
     expect(pickBy(o1, value => {
       return typeof value === 'number';
-    }, false)).toStrictEqual({a: 1, c: 3, e: 5});
+    }, false)).toStrictEqual({ a: 1, c: 3, e: 5 });
 
     expect(pickBy(o2, value => {
       return typeof value === 'number';
-    })).toStrictEqual({a: 1, c: 3});
+    })).toStrictEqual({ a: 1, c: 3 });
 
     expect(pickBy(o2, value => {
       return typeof value === 'number';
-    }, false)).toStrictEqual({a: 1, c: 3, d: 4});
+    }, false)).toStrictEqual({ a: 1, c: 3, d: 4 });
 
     expect(pickBy(o1, value => {
       return typeof value === 'function';
@@ -61,7 +61,7 @@ describe('Object/pickBy', () => {
 
     expect(pickBy(o1, (_, key) => {
       return key === 'a';
-    }, false)).toStrictEqual({a: 1});
+    }, false)).toStrictEqual({ a: 1 });
 
     expect(pickBy(o1, (_, key) => {
       return key === 'd';

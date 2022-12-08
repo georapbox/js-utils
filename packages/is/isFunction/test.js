@@ -19,7 +19,7 @@ describe('is/isFunction', () => {
     expect(isFunction(genFunc)).toBe(true);
     expect(isFunction(true)).toBe(false);
     expect(isFunction(1)).toBe(false);
-    expect(isFunction({foo: 'bar'})).toBe(false);
+    expect(isFunction({ foo: 'bar' })).toBe(false);
     expect(isFunction([1, 2, 3])).toBe(false);
     expect(isFunction('foo')).toBe(false);
     expect(isFunction(null)).toBe(false);

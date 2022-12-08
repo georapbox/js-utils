@@ -42,7 +42,7 @@
     "operator-linebreak": ["warn", "before"],
     "brace-style": ["warn"],
     "keyword-spacing": ["warn"],
-    "object-curly-spacing": ["warn", "never"],
+    "object-curly-spacing": ["warn", "always"],
     "array-bracket-spacing": ["warn", "never"],
     "computed-property-spacing": ["warn", "never"],
     "space-before-blocks": ["warn", "always"],

@@ -28,11 +28,11 @@ describe('Object/pick', () => {
 
     const o2 = new O(1, 2, 3);
 
-    expect(pick(o1, ['a', 'c', 'foo'])).toStrictEqual({a: 1, c: 3});
-    expect(pick(o1, ['a', 'c', 'foo'], false)).toStrictEqual({a: 1, c: 3, foo: 'bar'});
+    expect(pick(o1, ['a', 'c', 'foo'])).toStrictEqual({ a: 1, c: 3 });
+    expect(pick(o1, ['a', 'c', 'foo'], false)).toStrictEqual({ a: 1, c: 3, foo: 'bar' });
 
-    expect(pick(o2, ['a', 'c', 'foo'])).toStrictEqual({a: 1, c: 3});
-    expect(pick(o2, ['a', 'c', 'foo'], false)).toStrictEqual({a: 1, c: 3, foo: 'bar'});
+    expect(pick(o2, ['a', 'c', 'foo'])).toStrictEqual({ a: 1, c: 3 });
+    expect(pick(o2, ['a', 'c', 'foo'], false)).toStrictEqual({ a: 1, c: 3, foo: 'bar' });
 
     expect(pick(o1, ['d', 'e'])).toStrictEqual({});
     expect(pick(o1, ['d', 'e'], false)).toStrictEqual({});
