@@ -74,6 +74,7 @@ A collection of dependency-free JavaScript utilities.
 |[omit](https://github.com/georapbox/js-utils/tree/master/packages/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[pick](https://github.com/georapbox/js-utils/tree/master/packages/objects/pick)|Creates an object composed of the picked object properties.|
 |[pickBy](https://github.com/georapbox/js-utils/tree/master/packages/objects/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
+|[trueTypeOf](https://github.com/georapbox/js-utils/tree/master/packages/objects/trueTypeOf)|Determines the true type of a value using `Object.prototype.toString.call()`.|
 
 ## Function
 
