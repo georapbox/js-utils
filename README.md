@@ -192,4 +192,4 @@ $ npm run test
 
 ## License
 
-[The MIT License (MIT)](https://georapbox.mit-license.org/@2015)
+[The MIT License (MIT)](https://github.com/georapbox/js-utils/blob/master/LICENSE)
