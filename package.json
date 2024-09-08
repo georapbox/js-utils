@@ -14,12 +14,12 @@
     "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage",
     "lint": "eslint packages/**/*.js",
-    "jsdoc2md": "jsdoc2md"
+    "docs": "npx jsdoc2md"
   },
   "devDependencies": {
-    "eslint": "~8.23.1",
-    "jest": "~29.0.3",
-    "jest-environment-jsdom": "~29.0.3",
-    "jsdoc-to-markdown": "~7.1.1"
+    "eslint": "~8.57.0",
+    "jest": "~29.7.0",
+    "jest-environment-jsdom": "~29.7.0",
+    "jsdoc-to-markdown": "~9.0.0"
   }
 }

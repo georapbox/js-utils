@@ -4,12 +4,16 @@
 
 # js-utils
 
-A collection of dependency-free JavaScript utilities.
+This repository contains a set of simple, standalone JavaScript utility functions that I've used throughout the years in various projects. It's meant to provide useful tools that developers can easily modify and adapt for their own needs. The focus is on offering individual functions that can be changed as needed, rather than providing a full library.
 
-## Array
+The utilities are organized into packages based on their functionality. Each package contains a set of functions that are related to a specific area of development, such as arrays, strings, objects, functions, etc.
 
-|Name|Description|
-|--------|-----------|
+## Table of Contents
+
+### Array
+
+| Name | Description |
+|------|-------------|
 |[chunk](https://github.com/georapbox/js-utils/tree/master/packages/arrays/chunk)|Creates an array of elements split into groups the length of size specified.|
 |[compact](https://github.com/georapbox/js-utils/tree/master/packages/arrays/compact)|Creates an array with all falsy values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsy.|
 |[diff](https://github.com/georapbox/js-utils/tree/master/packages/arrays/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
@@ -36,10 +40,10 @@ A collection of dependency-free JavaScript utilities.
 |[uniqBy](https://github.com/georapbox/js-utils/tree/master/packages/arrays/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
 |[zip](https://github.com/georapbox/js-utils/tree/master/packages/arrays/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 
-## String
+### String
 
-|Name|Description|
-|--------|-----------|
+| Name | Description |
+|------|-------------|
 |[camelCase](https://github.com/georapbox/js-utils/tree/master/packages/strings/camelCase)|Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'theQuickBrownFoxJumpsOverTheLazyDog'`.|
 |[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/strings/capitalize)|Capitalizes the first character of a string (Optionally, converts the rest of the string to lower case).|
 |[classnames](https://github.com/georapbox/js-utils/tree/master/packages/strings/classnames)|Creates a string by conditionally joining classNames together.|
@@ -66,20 +70,20 @@ A collection of dependency-free JavaScript utilities.
 |[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/strings/unescapeHTML)|Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.|
 |[words](https://github.com/georapbox/js-utils/tree/master/packages/strings/words)|Splits string into an array of its words.|
 
-## Object
+### Object
 
-|Name|Description|
-|--------|-----------|
+| Name | Description |
+|------|-------------|
 |[get](https://github.com/georapbox/js-utils/tree/master/packages/objects/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
 |[omit](https://github.com/georapbox/js-utils/tree/master/packages/objects/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[pick](https://github.com/georapbox/js-utils/tree/master/packages/objects/pick)|Creates an object composed of the picked object properties.|
 |[pickBy](https://github.com/georapbox/js-utils/tree/master/packages/objects/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
 |[trueTypeOf](https://github.com/georapbox/js-utils/tree/master/packages/objects/trueTypeOf)|Determines the true type of a value using `Object.prototype.toString.call()`.|
 
-## Function
+### Function
 
-|Name|Description|
-|--------|-----------|
+| Name | Description |
+|------|-------------|
 |[after](https://github.com/georapbox/js-utils/tree/master/packages/function/after)|Creates a function that invokes `fn` once it's called `n` or more times.|
 |[ary](https://github.com/georapbox/js-utils/tree/master/packages/function/ary)|Creates a function that accepts up to `n` arguments, ignoring any additional arguments.|
 |[before](https://github.com/georapbox/js-utils/tree/master/packages/function/before)|Creates a function that invokes `fn` while it’s called less than `n` times.|
@@ -95,10 +99,10 @@ A collection of dependency-free JavaScript utilities.
 |[throttle](https://github.com/georapbox/js-utils/tree/master/packages/function/throttle)|Limits the number of times a function can be called in a given period.|
 |[unary](https://github.com/georapbox/js-utils/tree/master/packages/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
 
-## Is
+### Is
 
-|Name|Description|
-|--------|-----------|
+| Name | Description |
+|------|-------------|
 |[isArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isArray)|Checks if a value is an array.|
 |[isArrayLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLike)|Checks if a value is array-like.|
 |[isArrayLikeObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLikeObject)|Checks if a value is array-like and object as well.|
@@ -139,10 +143,10 @@ A collection of dependency-free JavaScript utilities.
 |[isWeakMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakMap)|Checks if a value is classified as a WeakMap object.|
 |[isWeakSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakSet)|Checks if a value is classified as a WeakSet object.|
 
-## Math
+### Math
 
-|Name|Description|
-|--------|-----------|
+| Name | Description |
+|------|-------------|
 |[average](https://github.com/georapbox/js-utils/tree/master/packages/math/average)|Calculates the average of a set of numbers.|
 |[clamp](https://github.com/georapbox/js-utils/tree/master/packages/math/clamp)|Clamps number within the inclusive lower and upper bounds.|
 |[degreesToRadians](https://github.com/georapbox/js-utils/tree/master/packages/math/degreesToRadians)|Converts degrees to radians.|
@@ -158,10 +162,10 @@ A collection of dependency-free JavaScript utilities.
 |[roundToNearest](https://github.com/georapbox/js-utils/tree/master/packages/math/roundToNearest)|Rounds a number to the nearest multiple of a value provided.|
 |[roundToPlaces](https://github.com/georapbox/js-utils/tree/master/packages/math/roundToPlaces)|Rounds a number to a number of desired places.|
 
-## DOM
+### DOM
 
-|Name|Description|
-|--------|-----------|
+| Name | Description |
+|------|-------------|
 |[convertImageToBase64](https://github.com/georapbox/js-utils/tree/master/packages/dom/convertImageToBase64)|Converts an image's content to Data URI scheme.|
 |[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
 |[highResolutionCanvas](https://github.com/georapbox/js-utils/tree/master/packages/dom/highResolutionCanvas)|Processes an `HTMLCanvasElement` by downsampling on the canvas to ensure that the drawn visuals do not look blurry on high-DPI screens.|
@@ -170,24 +174,35 @@ A collection of dependency-free JavaScript utilities.
 |[whichAnimationEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
 |[whichTransitionEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
 
-## Installation
+## Development
 
-### Clone repo
+### Installation
+
+#### Clone repo
 
 ```sh
-$ git clone https://github.com/georapbox/js-utils.git
+git clone https://github.com/georapbox/js-utils.git
 ```
 
-### Install dev dependencies
+#### Install dev dependencies
 
 ```sh
-$ npm install
+npm install
 ```
 
-## Test
+### Test
 
 ```sh
-$ npm run test
+npm test
+npm run test:watch # Run tests in watch mode
+```
+
+### Generate documentation
+
+Generates markdown documentation for a single file and prints it to stdout.
+
+```sh
+npm run docs <path-to-file>
 ```
 
 ## License
