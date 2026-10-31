@@ -29,7 +29,15 @@ const intersect = (...arrays) => {
   }
 
   return arrays.reduce((accumArray, currentArray) => {
+    const seen = new Set();
+
     return accumArray.filter(function (element) {
+      if (seen.has(element)) {
+        return false;
+      }
+
+      seen.add(element);
+
       if (Array.prototype.includes) {
         return currentArray.includes(element);
       } else {
