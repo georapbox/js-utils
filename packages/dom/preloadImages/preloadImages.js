@@ -44,7 +44,7 @@ const preloadImages = (images, successCallback, errorCallback, alwaysCallback) =
 
       if (index !== -1) {
         list.splice(index, 1);
-        successCallback && successCallback({
+        successCallback?.({
           event: event,
           remainingImages: list,
           imagesPaths: images,
@@ -52,7 +52,7 @@ const preloadImages = (images, successCallback, errorCallback, alwaysCallback) =
         });
       }
 
-      alwaysCallback && alwaysCallback({
+      alwaysCallback?.({
         remainingImages: list,
         imagesPaths: images,
         currentImage: image
@@ -62,14 +62,14 @@ const preloadImages = (images, successCallback, errorCallback, alwaysCallback) =
 
   const onLoadError = image => {
     image.onerror = function imageLoadError(error) {
-      errorCallback && errorCallback({
+      errorCallback?.({
         error: error,
         remainingImages: list,
         imagesPaths: images,
         currentImage: image
       });
 
-      alwaysCallback && alwaysCallback({
+      alwaysCallback?.({
         remainingImages: list,
         imagesPaths: images,
         currentImage: image

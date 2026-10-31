@@ -45,7 +45,7 @@ const partition = (array, predicate = x => x) => {
 
   for (let index = 0; index < array.length; index += 1) {
     const value = array[index];
-    predicate(value, index, array) ? part1.push(value) : part2.push(value);
+    (predicate(value, index, array) ? part1 : part2).push(value);
   }
 
   return [part1, part2];

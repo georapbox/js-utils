@@ -37,8 +37,9 @@ describe('is/isPromise', () => {
       get [Symbol.toStringTag]() {
         return 'Promise';
       },
-      then() {},
-      catch() {}
+      // oxlint-disable-next-line unicorn/no-thenable
+      then() { },
+      catch() { }
     };
 
     expect(isPromise(fp1)).toBe(false);

@@ -12,7 +12,7 @@ describe('is/isFlatArray', () => {
 
     expect(isFlatArray([])).toBe(true);
 
-    expect(isFlatArray([new Array(3)])).toBe(false);
+    expect(isFlatArray([Array.from({ length: 3 })])).toBe(false);
 
     expect(isFlatArray()).toBe(false);
   });
