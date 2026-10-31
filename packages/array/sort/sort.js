@@ -34,8 +34,9 @@ const sort = (array, ascending = true) => {
     throw new TypeError('Expected an array for first argument');
   }
 
-  return array.filter(el => el != null && !Number.isNaN(el)) // Remove any `null`, `undefined` or `NaN` values.
-    .map(el => typeof el === 'string' ? el.toLowerCase() : el)
+  return array
+    .filter((el) => el != null && !Number.isNaN(el)) // Remove any `null`, `undefined` or `NaN` values.
+    .map((el) => (typeof el === 'string' ? el.toLowerCase() : el))
     .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0) * [-1, 1][+!!ascending]);
 };
 

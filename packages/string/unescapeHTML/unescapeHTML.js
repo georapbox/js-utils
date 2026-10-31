@@ -17,7 +17,7 @@
  * unescapeHTML('&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;/p&gt;');
  * // => '<p data-id="1">lorem ipsum</p>'
  */
-const unescapeHTML = subjectString => {
+const unescapeHTML = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -35,7 +35,7 @@ const unescapeHTML = subjectString => {
   const regexHasEscapedHtml = RegExp(regexEscapedHtml.source);
 
   return regexHasEscapedHtml.test(subjectString)
-    ? subjectString.replace(regexEscapedHtml, tag => htmlUnescapes[tag] || tag)
+    ? subjectString.replace(regexEscapedHtml, (tag) => htmlUnescapes[tag] || tag)
     : subjectString;
 };
 

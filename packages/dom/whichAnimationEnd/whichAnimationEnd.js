@@ -17,10 +17,10 @@ const whichAnimationEnd = () => {
   let el = document.createElement('div');
 
   const animations = {
-    'animation': 'animationend',
-    'OAnimation': 'oAnimationEnd',
-    'MozAnimation': 'animationend',
-    'WebkitAnimation': 'webkitAnimationEnd'
+    animation: 'animationend',
+    OAnimation: 'oAnimationEnd',
+    MozAnimation: 'animationend',
+    WebkitAnimation: 'webkitAnimationEnd'
   };
 
   for (const key in animations) {

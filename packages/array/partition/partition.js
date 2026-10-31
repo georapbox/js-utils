@@ -31,7 +31,7 @@
  * partition(numbers, num => num > 0);
  * // => [[1, 3, 5, 6], [-4, -2]]
  */
-const partition = (array, predicate = x => x) => {
+const partition = (array, predicate = (x) => x) => {
   const part1 = [];
   const part2 = [];
 

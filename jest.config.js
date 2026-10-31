@@ -1,4 +1,4 @@
 module.exports = {
-  'testEnvironment': 'jsdom',
+  testEnvironment: 'jsdom',
   coverageReporters: ['json', 'lcov', 'text', 'clover', 'html']
 };

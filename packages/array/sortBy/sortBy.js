@@ -36,9 +36,9 @@ const sortBy = (array, field, ascending = true, primer) => {
     throw new TypeError('Expected an array for first argument');
   }
 
-  const key = x => typeof primer === 'function' ? primer(x[field]) : x[field];
+  const key = (x) => (typeof primer === 'function' ? primer(x[field]) : x[field]);
 
-  const isPlainObject = value => {
+  const isPlainObject = (value) => {
     if (Object.prototype.toString.call(value) !== '[object Object]') {
       return false;
     }

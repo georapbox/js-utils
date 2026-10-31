@@ -23,7 +23,7 @@
  * isWeakMap([['foo', 'bar'], ['hello', 'world']]);
  * // => false
  */
-const isWeakMap = value => {
+const isWeakMap = (value) => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object WeakMap]';
 };
 

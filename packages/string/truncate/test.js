@@ -2,7 +2,8 @@ const truncate = require('./truncate');
 
 describe('String/truncate', () => {
   it('should truncate a string based on character count', () => {
-    const str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
+    const str =
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
 
     expect(truncate(str, 50, '...')).toEqual('Lorem ipsum dolor sit amet, consectetur adipisicin...');
 

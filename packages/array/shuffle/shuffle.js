@@ -15,7 +15,7 @@
  * shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
  * // => [5, 10, 9, 3, 4, 1, 6, 7, 8, 2]
  */
-const shuffle = array => {
+const shuffle = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -25,7 +25,7 @@ const shuffle = array => {
 
   // While remaining elements to shuffle...
   while (currentIndex) {
-    const randomIndex = Math.random() * currentIndex-- | 0; // Pick a remaining element...
+    const randomIndex = (Math.random() * currentIndex--) | 0; // Pick a remaining element...
     const temporaryValue = newArray[currentIndex]; // And swap it with the current element.
 
     newArray[currentIndex] = newArray[randomIndex];

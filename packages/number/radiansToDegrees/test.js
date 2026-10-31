@@ -8,7 +8,7 @@ describe('Number/radiansToDegrees', () => {
 
     expect(radiansToDegrees(Math.PI)).toBe(180);
 
-    expect(radiansToDegrees(3 * Math.PI / 2)).toBe(270);
+    expect(radiansToDegrees((3 * Math.PI) / 2)).toBe(270);
 
     expect(radiansToDegrees(2 * Math.PI)).toBe(360);
 

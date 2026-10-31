@@ -14,12 +14,12 @@
  *
  * array.map(toInteger); // => [1, 2, 3]
  */
-const unary = fn => {
+const unary = (fn) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return arg => fn(arg);
+  return (arg) => fn(arg);
 };
 
 module.exports = unary;

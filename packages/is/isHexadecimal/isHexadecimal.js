@@ -22,6 +22,6 @@
  * isHexadecimal(6.6);
  * // => false
  */
-const isHexadecimal = value => /^[0-9a-fA-F]+$/.test(value);
+const isHexadecimal = (value) => /^[0-9a-fA-F]+$/.test(value);
 
 module.exports = isHexadecimal;

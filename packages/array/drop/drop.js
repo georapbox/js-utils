@@ -52,9 +52,7 @@ const drop = (array, n) => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   const len = array.length;
 
-  n = n > MAX_SAFE_INTEGER
-    ? len
-    : n == null || n !== n ? 1 : Math.floor(n);
+  n = n > MAX_SAFE_INTEGER ? len : n == null || n !== n ? 1 : Math.floor(n);
 
   return array.slice(n < 0 ? 0 : n, len);
 };

@@ -31,7 +31,7 @@
  * const odds = numbers.filter(negate(isEven));
  * // => [1, 3, 5]
  */
-const negate = fn => {
+const negate = (fn) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }

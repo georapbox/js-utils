@@ -12,7 +12,7 @@
  * compact([0, 1, false, 2, '', 3, null]);
  * // => [1, 2, 3]
  */
-const compact = array => {
+const compact = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }

@@ -19,10 +19,8 @@
  * isBoolean(null);
  * // => false
  */
-const isBoolean = value => {
-  return value === true
-    || value === false
-    || Object.prototype.toString.call(value) === '[object Boolean]';
+const isBoolean = (value) => {
+  return value === true || value === false || Object.prototype.toString.call(value) === '[object Boolean]';
 };
 
 module.exports = isBoolean;

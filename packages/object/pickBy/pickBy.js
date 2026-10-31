@@ -64,13 +64,13 @@ const pickBy = (object, predicate, pickOwnKeys = true) => {
   const type = Object.prototype.toString.call(object);
 
   if (
-    typeof object !== 'object'
-    || object === null
-    || Array.isArray(object)
-    || type === '[object Set]'
-    || type === '[object WeakSet]'
-    || type === '[object Map]'
-    || type === '[object WeakMap]'
+    typeof object !== 'object' ||
+    object === null ||
+    Array.isArray(object) ||
+    type === '[object Set]' ||
+    type === '[object WeakSet]' ||
+    type === '[object Map]' ||
+    type === '[object WeakMap]'
   ) {
     throw new TypeError('Expected a plain object for first argument');
   }

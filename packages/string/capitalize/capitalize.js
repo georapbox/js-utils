@@ -25,9 +25,7 @@ const capitalize = (subjectString, lowerCaseRest = false) => {
 
   const firstChar = subjectString.substring(0, 1).toUpperCase();
 
-  const restStr = lowerCaseRest === true
-    ? subjectString.substring(1).toLocaleLowerCase()
-    : subjectString.substring(1);
+  const restStr = lowerCaseRest === true ? subjectString.substring(1).toLocaleLowerCase() : subjectString.substring(1);
 
   return firstChar + restStr;
 };

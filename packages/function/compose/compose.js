@@ -21,14 +21,18 @@
  */
 const compose = (...fns) => {
   if (fns.length === 0) {
-    return fn => fn;
+    return (fn) => fn;
   }
 
   if (fns.length === 1) {
     return fns[0];
   }
 
-  return fns.reduce((a, b) => (...args) => a(b(...args)));
+  return fns.reduce((a, b) => {
+    return (...args) => {
+      return a(b(...args));
+    };
+  });
 };
 
 module.exports = compose;

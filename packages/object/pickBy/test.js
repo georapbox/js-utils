@@ -35,76 +35,112 @@ describe('Object/pickBy', () => {
 
     const o2 = new O(1, '2', 3);
 
-    expect(pickBy(o1, value => {
-      return typeof value === 'number';
-    })).toStrictEqual({ a: 1, c: 3 });
+    expect(
+      pickBy(o1, (value) => {
+        return typeof value === 'number';
+      })
+    ).toStrictEqual({ a: 1, c: 3 });
 
-    expect(pickBy(o1, value => {
-      return typeof value === 'number';
-    }, false)).toStrictEqual({ a: 1, c: 3, e: 5 });
+    expect(
+      pickBy(
+        o1,
+        (value) => {
+          return typeof value === 'number';
+        },
+        false
+      )
+    ).toStrictEqual({ a: 1, c: 3, e: 5 });
 
-    expect(pickBy(o2, value => {
-      return typeof value === 'number';
-    })).toStrictEqual({ a: 1, c: 3 });
+    expect(
+      pickBy(o2, (value) => {
+        return typeof value === 'number';
+      })
+    ).toStrictEqual({ a: 1, c: 3 });
 
-    expect(pickBy(o2, value => {
-      return typeof value === 'number';
-    }, false)).toStrictEqual({ a: 1, c: 3, d: 4 });
+    expect(
+      pickBy(
+        o2,
+        (value) => {
+          return typeof value === 'number';
+        },
+        false
+      )
+    ).toStrictEqual({ a: 1, c: 3, d: 4 });
 
-    expect(pickBy(o1, value => {
-      return typeof value === 'function';
-    })).toStrictEqual({});
+    expect(
+      pickBy(o1, (value) => {
+        return typeof value === 'function';
+      })
+    ).toStrictEqual({});
 
-    expect(pickBy(o1, value => {
-      return typeof value === 'function';
-    }, false)).toStrictEqual({});
+    expect(
+      pickBy(
+        o1,
+        (value) => {
+          return typeof value === 'function';
+        },
+        false
+      )
+    ).toStrictEqual({});
 
-    expect(pickBy(o1, (_, key) => {
-      return key === 'a';
-    }, false)).toStrictEqual({ a: 1 });
+    expect(
+      pickBy(
+        o1,
+        (_, key) => {
+          return key === 'a';
+        },
+        false
+      )
+    ).toStrictEqual({ a: 1 });
 
-    expect(pickBy(o1, (_, key) => {
-      return key === 'd';
-    }, false)).toStrictEqual({});
+    expect(
+      pickBy(
+        o1,
+        (_, key) => {
+          return key === 'd';
+        },
+        false
+      )
+    ).toStrictEqual({});
 
     expect(() => {
-      return pickBy(null, value => {
+      return pickBy(null, (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(() => {
-      return pickBy(undefined, value => {
+      return pickBy(undefined, (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(() => {
-      return pickBy([], value => {
+      return pickBy([], (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(() => {
-      return pickBy(new Map(), value => {
+      return pickBy(new Map(), (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(() => {
-      return pickBy(new WeakMap(), value => {
+      return pickBy(new WeakMap(), (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(() => {
-      return pickBy(new Set(), value => {
+      return pickBy(new Set(), (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
 
     expect(() => {
-      return pickBy(new WeakSet(), value => {
+      return pickBy(new WeakSet(), (value) => {
         return typeof value === 'number';
       });
     }).toThrow(new TypeError('Expected a plain object for first argument'));
@@ -114,9 +150,13 @@ describe('Object/pickBy', () => {
     }).toThrow(new TypeError('Expected a function for second argument'));
 
     expect(() => {
-      return pickBy(o1, value => {
-        return typeof value === 'number';
-      }, 0);
+      return pickBy(
+        o1,
+        (value) => {
+          return typeof value === 'number';
+        },
+        0
+      );
     }).toThrow(new TypeError('Expected a boolean for third argument'));
   });
 });

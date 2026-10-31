@@ -3,10 +3,10 @@ const get = require('./get');
 describe('Object/get', () => {
   it('Gets the value at path of object. If the resolved value is undefined, the "defaultValue" is returned in its place.', () => {
     const o1 = {
-      'a': [
+      a: [
         {
-          'b': {
-            'c': 3
+          b: {
+            c: 3
           }
         }
       ]

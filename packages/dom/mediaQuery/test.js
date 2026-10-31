@@ -2,7 +2,7 @@ const mediaQuery = require('./mediaQuery');
 
 describe('dom/mediaQuery', () => {
   function mockMediaQueryList(testQuery) {
-    window.matchMedia = jest.fn().mockImplementation(query => {
+    window.matchMedia = jest.fn().mockImplementation((query) => {
       return {
         matches: query === testQuery,
         media: '(min-width: 480px) and (max-width: 768px)',
@@ -21,7 +21,7 @@ describe('dom/mediaQuery', () => {
   let matchMediaListener, unsubscribeMediaQuery;
 
   beforeEach(() => {
-    matchMediaListener = jest.fn().mockImplementation(matches => {
+    matchMediaListener = jest.fn().mockImplementation((matches) => {
       return matches;
     });
   });

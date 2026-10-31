@@ -2,7 +2,9 @@ const camelCase = require('./camelCase');
 
 describe('String/camel case', () => {
   it('should convert string to camelCase', () => {
-    expect(camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
+    expect(camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe(
+      'theQuickBrownFoxJumpsOverTheLazyDog'
+    );
 
     expect(camelCase('the quick brown fox jumps over the lazy dog')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
 
@@ -22,7 +24,9 @@ describe('String/camel case', () => {
 
     expect(camelCase('theQUICKBrownFoxJumpsOverTheLazyDog')).toBe('theQUICKBrownFoxJumpsOverTheLazyDog');
 
-    expect(camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('theQuickBrownFoxJumpsOverTheLazyDog');
+    expect(camelCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe(
+      'theQuickBrownFoxJumpsOverTheLazyDog'
+    );
 
     expect(() => {
       return camelCase(['the quick brown fox jumps over the lazy dog']);

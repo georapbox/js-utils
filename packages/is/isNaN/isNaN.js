@@ -26,7 +26,7 @@
  * isNaN({});        // => false
  * isNaN('blabla');  // => false
  */
-const isNaN = value => {
+const isNaN = (value) => {
   if (Number.isNaN) {
     return Number.isNaN(value);
   }

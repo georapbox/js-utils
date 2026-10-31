@@ -14,7 +14,7 @@
  * canOnlyFireOnce(); // => 1
  * canOnlyFireOnce(); // => 1
  */
-const once = fn => {
+const once = (fn) => {
   let result;
 
   if (typeof fn !== 'function') {

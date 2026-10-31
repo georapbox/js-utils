@@ -35,7 +35,7 @@
  * isNumber(NaN);
  * // => true
  */
-const isNumber = value => {
+const isNumber = (value) => {
   return typeof value === 'number' || Object.prototype.toString.call(value) === '[object Number]';
 };
 

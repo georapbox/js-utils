@@ -39,7 +39,7 @@
  * camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  */
-const camelCase = subjectString => {
+const camelCase = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }

@@ -43,7 +43,7 @@
  *
  * isPrimitive(/s+/g); // => false
  */
-const isPrimitive = value => {
+const isPrimitive = (value) => {
   if (typeof value === 'object') {
     return value === null;
   }

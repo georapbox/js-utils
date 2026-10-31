@@ -30,12 +30,15 @@ const throttle = (fn, wait = 0) => {
     } else {
       clearTimeout(timerId);
 
-      timerId = setTimeout(() => {
-        if (Date.now() - lastRan >= wait) {
-          fn(...args);
-          lastRan = Date.now();
-        }
-      }, wait - (Date.now() - lastRan) || 0);
+      timerId = setTimeout(
+        () => {
+          if (Date.now() - lastRan >= wait) {
+            fn(...args);
+            lastRan = Date.now();
+          }
+        },
+        wait - (Date.now() - lastRan) || 0
+      );
     }
   };
 };

@@ -19,6 +19,6 @@
  * isNull();
  * // => false
  */
-const isNull = value => value === null;
+const isNull = (value) => value === null;
 
 module.exports = isNull;

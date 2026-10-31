@@ -22,7 +22,7 @@
  * isSymbol('foo');
  * // => false
  */
-const isSymbol = value => {
+const isSymbol = (value) => {
   return typeof value === 'symbol' || Object.prototype.toString.call(value) === '[object Symbol]';
 };
 

@@ -1,11 +1,11 @@
 const pipe = require('./pipe.js');
 
 describe('pipe', () => {
-  const capitalize = a => a.toUpperCase();
-  const head = a => a[0];
-  const reverse = a => a.split('').reverse().join('');
-  const inc = x => x + 1;
-  const double = x => x * 2;
+  const capitalize = (a) => a.toUpperCase();
+  const head = (a) => a[0];
+  const reverse = (a) => a.split('').reverse().join('');
+  const inc = (x) => x + 1;
+  const double = (x) => x * 2;
 
   it('should perform left-to-right function composition', () => {
     expect(pipe()(1)).toBe(1);

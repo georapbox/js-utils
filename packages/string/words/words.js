@@ -14,7 +14,7 @@
  * words('🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🥭');
  * // => ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
  */
-const words = subjectString => {
+const words = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }

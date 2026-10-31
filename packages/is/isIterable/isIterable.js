@@ -33,7 +33,7 @@
  * isIterable(null);
  * // => false
  */
-const isIterable = value => {
+const isIterable = (value) => {
   if (typeof Symbol === 'undefined' || !Symbol.iterator) {
     throw new TypeError('Symbol or Symbol.iterator is not supported by your environment.');
   }

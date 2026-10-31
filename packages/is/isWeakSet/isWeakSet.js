@@ -13,7 +13,7 @@
  * isWeakSet(new Set());
  * // => false
  */
-const isWeakSet = value => {
+const isWeakSet = (value) => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object WeakSet]';
 };
 

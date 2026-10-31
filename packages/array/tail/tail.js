@@ -17,7 +17,7 @@
  * tail([]);
  * // => []
  */
-const tail = array => {
+const tail = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }

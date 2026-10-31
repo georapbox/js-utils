@@ -54,7 +54,7 @@
  * isEmpty(null); // => true
  * isEmpty(undefined); // => true
  */
-const isEmpty = value => {
+const isEmpty = (value) => {
   const type = Object.prototype.toString.call(value);
 
   if (value == null) {

@@ -19,7 +19,7 @@
  * isMap({foo: 'bar', 'hello': 'world'});
  * // => false
  */
-const isMap = value => {
+const isMap = (value) => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object Map]';
 };
 

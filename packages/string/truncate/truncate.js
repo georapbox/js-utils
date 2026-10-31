@@ -58,11 +58,7 @@ const truncate = (subjectString, characterCount, delimiter = '') => {
 
   characterCount = Math.floor(characterCount);
 
-  if (
-    characterCount > subjectString.length
-    || characterCount < 0
-    || characterCount !== characterCount
-  ) {
+  if (characterCount > subjectString.length || characterCount < 0 || characterCount !== characterCount) {
     return subjectString;
   }
 

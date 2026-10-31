@@ -17,8 +17,9 @@ describe('Array/sort', () => {
 
     expect(sort(drinks, NaN)).toEqual(['wine', 'tequila', 'martini', 'coffee']);
 
-    expect(sort([4, 6, undefined, 2, 9, -10, 100, 321, -2, null, 99], true))
-      .toEqual([-10, -2, 2, 4, 6, 9, 99, 100, 321]);
+    expect(sort([4, 6, undefined, 2, 9, -10, 100, 321, -2, null, 99], true)).toEqual([
+      -10, -2, 2, 4, 6, 9, 99, 100, 321
+    ]);
 
     expect(() => {
       return sort('efhtechjrd');

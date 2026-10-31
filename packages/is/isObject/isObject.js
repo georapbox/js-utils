@@ -56,7 +56,7 @@
  * isObject(Symbol('foo'));
  * // => false
  */
-const isObject = value => {
+const isObject = (value) => {
   return !!value && (typeof value === 'object' || typeof value === 'function');
 };
 

@@ -52,7 +52,7 @@ const chunk = (array, size) => {
   const result = [Math.ceil(len / size)];
 
   while (index < len) {
-    result[resIndex] = array.slice(index, index += size);
+    result[resIndex] = array.slice(index, (index += size));
     resIndex += 1;
   }
 

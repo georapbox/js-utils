@@ -21,22 +21,29 @@ describe('Array/dropRightWhile', () => {
       }
     ];
 
-    expect(dropRightWhile(books, book => {
-      return !book.read;
-    })).toEqual([{
-      title: 'Javascript Design Patterns',
-      read: false
-    }, {
-      title: 'Programming Javascript Applications',
-      read: true
-    }]);
+    expect(
+      dropRightWhile(books, (book) => {
+        return !book.read;
+      })
+    ).toEqual([
+      {
+        title: 'Javascript Design Patterns',
+        read: false
+      },
+      {
+        title: 'Programming Javascript Applications',
+        read: true
+      }
+    ]);
 
-    expect(dropRightWhile(books, book => {
-      return book.read;
-    })).toHaveLength(4);
+    expect(
+      dropRightWhile(books, (book) => {
+        return book.read;
+      })
+    ).toHaveLength(4);
 
     expect(() => {
-      dropRightWhile(null, book => {
+      dropRightWhile(null, (book) => {
         return !book.read;
       });
     }).toThrow(new TypeError('Expected an array for first argument'));

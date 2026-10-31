@@ -16,7 +16,7 @@
  * uniq(values);
  * // => ['a', 'b', '2', 2, obj, arr, true, false, NaN]
  */
-const uniq = array => {
+const uniq = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }

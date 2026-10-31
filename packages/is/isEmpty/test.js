@@ -44,11 +44,15 @@ describe('is/isEmpty', () => {
     expect(isEmpty(() => {})).toBe(true);
     expect(isEmpty(() => 1)).toBe(true);
     expect(isEmpty(class MyClass {})).toBe(true);
-    expect(isEmpty(class MyClass {
-      constructor(a) {
-        this.a = a;
-      }
-    })).toBe(true);
+    expect(
+      isEmpty(
+        class MyClass {
+          constructor(a) {
+            this.a = a;
+          }
+        }
+      )
+    ).toBe(true);
 
     expect(isEmpty(/s+/g)).toBe(true);
     expect(isEmpty(new RegExp('s+', 'g'))).toBe(true);

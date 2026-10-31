@@ -20,7 +20,7 @@
  * isFlatArray(new Set());
  * // => false
  */
-const isFlatArray = value => {
+const isFlatArray = (value) => {
   if (!Array.isArray(value)) {
     return false;
   }

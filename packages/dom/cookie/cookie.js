@@ -107,4 +107,4 @@ module.exports = (function () {
     get: getCookie,
     remove: removeCookie
   };
-}());
+})();

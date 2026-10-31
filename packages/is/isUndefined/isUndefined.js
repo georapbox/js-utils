@@ -21,6 +21,6 @@
  * isUndefined();
  * // => true
  */
-const isUndefined = value => typeof value === 'undefined';
+const isUndefined = (value) => typeof value === 'undefined';
 
 module.exports = isUndefined;

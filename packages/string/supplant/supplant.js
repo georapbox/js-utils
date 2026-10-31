@@ -34,26 +34,28 @@ const supplant = (subjectString, data) => {
 
   const regexp = /{{([^{{}}]*)}}/g;
 
-  return RegExp(regexp.source).test(subjectString) ? subjectString.replace(regexp, (a, b) => {
-    const p = b.trim().split(/\./); // Split the variable into its dot notation parts.
-    let c = data; // The c variable becomes our cursor that will traverse the object.
+  return RegExp(regexp.source).test(subjectString)
+    ? subjectString.replace(regexp, (a, b) => {
+        const p = b.trim().split(/\./); // Split the variable into its dot notation parts.
+        let c = data; // The c variable becomes our cursor that will traverse the object.
 
-    // Loop over the steps in the dot notation path.
-    for (let i = 0; i < p.length; i += 1) {
-      // If the key doesn't exist in the object do not process.
-      // Mirrors how the function worked for bad values.
-      if (c[p[i]] == null) {
-        return a;
-      }
+        // Loop over the steps in the dot notation path.
+        for (let i = 0; i < p.length; i += 1) {
+          // If the key doesn't exist in the object do not process.
+          // Mirrors how the function worked for bad values.
+          if (c[p[i]] == null) {
+            return a;
+          }
 
-      // Move the cursor up to the next step.
-      c = c[p[i]];
-    }
+          // Move the cursor up to the next step.
+          c = c[p[i]];
+        }
 
-    // If the data is a string or number return it,
-    // otherwise do not process, return the value it was, i.e. {x}
-    return typeof c === 'string' || typeof c === 'number' ? c : a;
-  }) : subjectString;
+        // If the data is a string or number return it,
+        // otherwise do not process, return the value it was, i.e. {x}
+        return typeof c === 'string' || typeof c === 'number' ? c : a;
+      })
+    : subjectString;
 };
 
 module.exports = supplant;

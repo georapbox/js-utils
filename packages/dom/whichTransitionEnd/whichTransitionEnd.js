@@ -17,10 +17,10 @@ const whichTransitionEnd = () => {
   let el = document.createElement('div');
 
   const transitions = {
-    'transition': 'transitionend',
-    'OTransition': 'oTransitionEnd',
-    'MozTransition': 'transitionend',
-    'WebkitTransition': 'webkitTransitionEnd'
+    transition: 'transitionend',
+    OTransition: 'oTransitionEnd',
+    MozTransition: 'transitionend',
+    WebkitTransition: 'webkitTransitionEnd'
   };
 
   for (const key in transitions) {

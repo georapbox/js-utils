@@ -21,6 +21,6 @@
  * isNullish();
  * // => true
  */
-const isNullish = value => value == null;
+const isNullish = (value) => value == null;
 
 module.exports = isNullish;

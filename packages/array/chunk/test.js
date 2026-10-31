@@ -7,16 +7,9 @@ describe('Array/chunk', () => {
       [3, 4]
     ]);
 
-    expect(chunk([1, 2, 3, 4, 5], 2)).toEqual([
-      [1, 2],
-      [3, 4],
-      [5]
-    ]);
+    expect(chunk([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
 
-    expect(chunk([1, 2, 3, 4], 3)).toEqual([
-      [1, 2, 3],
-      [4]
-    ]);
+    expect(chunk([1, 2, 3, 4], 3)).toEqual([[1, 2, 3], [4]]);
 
     expect(chunk([1, 2, 3, 4], 2.7)).toEqual([
       [1, 2],
@@ -26,10 +19,13 @@ describe('Array/chunk', () => {
     expect(chunk([], 2)).toEqual([]);
 
     expect(() => {
-      return chunk({
-        a: 'a',
-        b: 'b'
-      }, 2);
+      return chunk(
+        {
+          a: 'a',
+          b: 'b'
+        },
+        2
+      );
     }).toThrow(new TypeError('Expected an array for first argument'));
 
     expect(() => {

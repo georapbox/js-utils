@@ -31,14 +31,14 @@
  * isFiniteNum('0');
  * // => false
  */
-const isFiniteNum = value => {
+const isFiniteNum = (value) => {
   if (Number.isFinite) {
     return Number.isFinite(value);
   }
 
-  return value != null && typeof value === 'number'
-    && value !== Infinity && value !== -Infinity
-    && !Number.isNaN(value);
+  return (
+    value != null && typeof value === 'number' && value !== Infinity && value !== -Infinity && !Number.isNaN(value)
+  );
 };
 
 module.exports = isFiniteNum;

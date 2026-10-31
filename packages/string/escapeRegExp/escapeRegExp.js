@@ -12,16 +12,14 @@
  * escapeRegExp('*_* +_+ ...');
  * // => '\\*_\\* \\+_\\+ \\.\\.\\.'
  */
-const escapeRegExp = subjectString => {
+const escapeRegExp = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   const regExpChars = /[\\^$.*+?()[\]{}|]/g;
 
-  return RegExp(regExpChars.source).test(subjectString)
-    ? subjectString.replace(regExpChars, '\\$&')
-    : subjectString;
+  return RegExp(regExpChars.source).test(subjectString) ? subjectString.replace(regExpChars, '\\$&') : subjectString;
 };
 
 module.exports = escapeRegExp;

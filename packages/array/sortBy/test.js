@@ -30,9 +30,11 @@ describe('Array/sortBy', () => {
       { name: 'Elena', age: '2' }
     ]);
 
-    expect(sortBy(people, 'age', true, age => {
-      return age * 2;
-    })).toEqual([
+    expect(
+      sortBy(people, 'age', true, (age) => {
+        return age * 2;
+      })
+    ).toEqual([
       { name: 'Elena', age: '2' },
       { name: 'Vaggelis', age: '30' },
       { name: 'Vasiliki', age: '32' },
@@ -46,11 +48,29 @@ describe('Array/sortBy', () => {
       { name: 'George', age: '33' }
     ]);
 
-    expect(sortBy([...people, undefined, null, NaN, 'foo', 100, [1, 2, 3], () => void 0, new Set(), new Map(), Symbol('foo'), new Date()], 'age')).toEqual([
+    expect(
+      sortBy(
+        [
+          ...people,
+          undefined,
+          null,
+          NaN,
+          'foo',
+          100,
+          [1, 2, 3],
+          () => void 0,
+          new Set(),
+          new Map(),
+          Symbol('foo'),
+          new Date()
+        ],
+        'age'
+      )
+    ).toEqual([
       { name: 'Elena', age: '2' },
       { name: 'Vaggelis', age: '30' },
       { name: 'Vasiliki', age: '32' },
-      { name: 'George', age: '33' },
+      { name: 'George', age: '33' }
     ]);
 
     expect(sortBy(people, 'nonExistentProperty')).toEqual([

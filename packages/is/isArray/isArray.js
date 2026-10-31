@@ -19,10 +19,8 @@
  * isArray({ a: 'a', b: 'b' });
  * // => false
  */
-const isArray = value => {
-  return Array.isArray
-    ? Array.isArray(value)
-    : Object.prototype.toString.call(value) === '[object Array]';
+const isArray = (value) => {
+  return Array.isArray ? Array.isArray(value) : Object.prototype.toString.call(value) === '[object Array]';
 };
 
 module.exports = isArray;

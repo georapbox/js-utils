@@ -38,7 +38,7 @@ const preloadImages = (images, successCallback, errorCallback, alwaysCallback) =
     throw new TypeError('Expected an array for first argument');
   }
 
-  const onloadSuccess = image => {
+  const onloadSuccess = (image) => {
     image.onload = function imagesLoadSuccess(event) {
       const index = list.indexOf(this);
 
@@ -60,7 +60,7 @@ const preloadImages = (images, successCallback, errorCallback, alwaysCallback) =
     };
   };
 
-  const onLoadError = image => {
+  const onLoadError = (image) => {
     image.onerror = function imageLoadError(error) {
       errorCallback?.({
         error: error,

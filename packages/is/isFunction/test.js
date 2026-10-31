@@ -10,7 +10,7 @@ describe('is/isFunction', () => {
       return Promise.resolve(true);
     }
 
-    function *genFunc() {
+    function* genFunc() {
       yield true;
     }
 

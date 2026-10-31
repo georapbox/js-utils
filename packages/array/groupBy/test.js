@@ -37,15 +37,19 @@ describe('Array/groupBy', () => {
 
     expect(groupBy(arr1, 'length')).toEqual(exp1);
 
-    expect(groupBy(arr1, item => {
-      return item.length;
-    })).toEqual(exp1);
+    expect(
+      groupBy(arr1, (item) => {
+        return item.length;
+      })
+    ).toEqual(exp1);
 
     expect(groupBy(arr2, 'name')).toEqual(exp2);
 
-    expect(groupBy(arr2, item => {
-      return item.name;
-    })).toEqual(exp2);
+    expect(
+      groupBy(arr2, (item) => {
+        return item.name;
+      })
+    ).toEqual(exp2);
 
     expect(groupBy(arr3, Math.floor)).toEqual(exp3);
 

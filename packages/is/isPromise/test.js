@@ -23,9 +23,11 @@ describe('is/isPromise', () => {
     expect(isPromise(new Map())).toBe(false);
     expect(isPromise(new Set())).toBe(false);
     expect(isPromise(Symbol('Promise'))).toBe(false);
-    expect(isPromise(() => {
-      return Promise.resolve('Success');
-    })).toBe(false);
+    expect(
+      isPromise(() => {
+        return Promise.resolve('Success');
+      })
+    ).toBe(false);
 
     const fp1 = {
       get [Symbol.toStringTag]() {
@@ -38,8 +40,8 @@ describe('is/isPromise', () => {
         return 'Promise';
       },
       // oxlint-disable-next-line unicorn/no-thenable
-      then() { },
-      catch() { }
+      then() {},
+      catch() {}
     };
 
     expect(isPromise(fp1)).toBe(false);

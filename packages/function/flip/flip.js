@@ -12,7 +12,7 @@
  *
  * flipped(1, 2, 3, 4); // => [4, 3, 2, 1]
  */
-const flip = fn => {
+const flip = (fn) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }

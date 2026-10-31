@@ -28,7 +28,7 @@
  * isOdd();
  * // => false
  */
-const isOdd = value => {
+const isOdd = (value) => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }

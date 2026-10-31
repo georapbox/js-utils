@@ -11,7 +11,7 @@
  * collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
  * // => 'Lorem ispum dolor sit amet.'
  */
-const collapseWhitespace = subjectString => {
+const collapseWhitespace = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }

@@ -45,17 +45,19 @@
  * isArrayLikeObject(args));
  * // => true
  */
-const isArrayLikeObject = value => {
+const isArrayLikeObject = (value) => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   const len = !!value && value.length;
 
-  return value != null
-    && typeof value !== 'function'
-    && typeof value === 'object'
-    && typeof len === 'number'
-    && len > -1
-    && len % 1 === 0
-    && len <= MAX_SAFE_INTEGER;
+  return (
+    value != null &&
+    typeof value !== 'function' &&
+    typeof value === 'object' &&
+    typeof len === 'number' &&
+    len > -1 &&
+    len % 1 === 0 &&
+    len <= MAX_SAFE_INTEGER
+  );
 };
 
 module.exports = isArrayLikeObject;

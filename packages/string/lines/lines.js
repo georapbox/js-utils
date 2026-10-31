@@ -19,7 +19,7 @@
  * lines(str2);
  * // => ['You can't make', 'an omelet without', 'breaking a few eggs.']
  */
-const lines = subjectString => {
+const lines = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }

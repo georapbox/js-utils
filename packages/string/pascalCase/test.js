@@ -2,7 +2,9 @@ const pascalCase = require('./pascalCase');
 
 describe('String/pascalCase', () => {
   it('should convert string to pascal case', () => {
-    expect(pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe('TheQuickBrownFoxJumpsOverTheLazyDog');
+    expect(pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ')).toBe(
+      'TheQuickBrownFoxJumpsOverTheLazyDog'
+    );
 
     expect(pascalCase('the quick brown fox jumps over the lazy dog')).toBe('TheQuickBrownFoxJumpsOverTheLazyDog');
 
@@ -24,7 +26,9 @@ describe('String/pascalCase', () => {
 
     expect(pascalCase('theQUICKBrownFoxJumpsOverTheLazyDog')).toBe('TheQUICKBrownFoxJumpsOverTheLazyDog');
 
-    expect(pascalCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe('TheQuickBrownFoxJumpsOverTheLazyDog');
+    expect(pascalCase('the - quick ( * brown# )fox:> < jumps; % over , the ^ lazy & dog')).toBe(
+      'TheQuickBrownFoxJumpsOverTheLazyDog'
+    );
 
     expect(() => {
       return pascalCase(['the quick brown fox jumps over the lazy dog']);

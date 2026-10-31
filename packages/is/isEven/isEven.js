@@ -28,7 +28,7 @@
  * isEven();
  * // => false
  */
-const isEven = value => {
+const isEven = (value) => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }

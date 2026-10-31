@@ -49,7 +49,7 @@
  * isPlainObject('lorem ipsum');
  * // => false
  */
-const isPlainObject = value => {
+const isPlainObject = (value) => {
   if (Object.prototype.toString.call(value) !== '[object Object]') {
     return false;
   }

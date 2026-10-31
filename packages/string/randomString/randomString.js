@@ -30,7 +30,8 @@
  * // => 'YGOSgnoUIHaUvEcp'
  */
 const randomString = (len, chars = '#aA!') => {
-  const charsError = 'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
+  const charsError =
+    'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
 
   if (typeof len !== 'number') {
     throw new TypeError('Expected a number for first argument');
@@ -44,17 +45,14 @@ const randomString = (len, chars = '#aA!') => {
   let result = '';
 
   const mapCharSampleToAllowedChars = {
-    'a': 'abcdefghijklmnopqrstuvwxyz',
-    'A': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    a: 'abcdefghijklmnopqrstuvwxyz',
+    A: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     '#': '0123456789',
     '!': '!#$%&()*+,\\-./:;<=>?@[]^_{|}~'
   };
 
   for (const key in mapCharSampleToAllowedChars) {
-    if (
-      Object.prototype.hasOwnProperty.call(mapCharSampleToAllowedChars, key)
-      && chars.indexOf(key) > -1
-    ) {
+    if (Object.prototype.hasOwnProperty.call(mapCharSampleToAllowedChars, key) && chars.indexOf(key) > -1) {
       mask += mapCharSampleToAllowedChars[key];
     }
   }

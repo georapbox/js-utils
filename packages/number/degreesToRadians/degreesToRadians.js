@@ -23,12 +23,12 @@
  * degreesToRadians(360);
  * // => 6.283185307179586 (2π)
  */
-const degreesToRadians = degrees => {
+const degreesToRadians = (degrees) => {
   if (typeof degrees !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
 
-  return degrees * Math.PI / 180;
+  return (degrees * Math.PI) / 180;
 };
 
 module.exports = degreesToRadians;

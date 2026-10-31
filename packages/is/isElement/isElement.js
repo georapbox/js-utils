@@ -16,7 +16,7 @@
  * isElement(document.getElementsByTagName('head')[0])
  * // => true
  */
-const isElement = value => {
+const isElement = (value) => {
   return !!value && value.nodeType === 1 && value instanceof Element === true;
 };
 

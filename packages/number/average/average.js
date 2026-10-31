@@ -43,7 +43,8 @@ const average = (...nums) => {
   while (len--) {
     const num = nums[len];
 
-    if (Number.isFinite(num)) { // equivalent of
+    if (Number.isFinite(num)) {
+      // equivalent of
       sum += num;
       count += 1;
     }

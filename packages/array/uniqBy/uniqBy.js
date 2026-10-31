@@ -38,7 +38,7 @@ const uniqBy = (array, iteratee) => {
   const cb = typeof iteratee === 'function' ? iteratee : (o) => o[iteratee];
 
   return array.reduce((acc, current) => {
-    const found = acc.find(item => cb(item) === cb(current));
+    const found = acc.find((item) => cb(item) === cb(current));
 
     if (!found) {
       acc.push(current);

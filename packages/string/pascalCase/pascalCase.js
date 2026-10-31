@@ -36,7 +36,7 @@
  * pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  */
-const pascalCase = subjectString => {
+const pascalCase = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }

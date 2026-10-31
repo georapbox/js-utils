@@ -13,7 +13,7 @@
  * isDate(new Date().getTime());
  * // => false
  */
-const isDate = value => {
+const isDate = (value) => {
   return Object.prototype.toString.call(value) === '[object Date]';
 };
 

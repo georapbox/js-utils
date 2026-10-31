@@ -21,9 +21,11 @@ describe('Array/dropWhile', () => {
       }
     ];
 
-    expect(dropWhile(books, book => {
-      return !book.read;
-    })).toEqual([
+    expect(
+      dropWhile(books, (book) => {
+        return !book.read;
+      })
+    ).toEqual([
       {
         title: 'JavaScript The Good Parts',
         read: true
@@ -34,12 +36,14 @@ describe('Array/dropWhile', () => {
       }
     ]);
 
-    expect(dropWhile(books, book => {
-      return book.read;
-    })).toHaveLength(4);
+    expect(
+      dropWhile(books, (book) => {
+        return book.read;
+      })
+    ).toHaveLength(4);
 
     expect(() => {
-      dropWhile(null, book => {
+      dropWhile(null, (book) => {
         return !book.read;
       });
     }).toThrow(new TypeError('Expected an array for first argument'));

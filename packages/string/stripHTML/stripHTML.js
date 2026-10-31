@@ -13,7 +13,7 @@
  * stripHTML(str);
  * // => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quos dicta, doloremque veritatis.'
  */
-const stripHTML = subjectString => {
+const stripHTML = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }

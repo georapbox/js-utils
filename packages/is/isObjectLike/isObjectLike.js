@@ -55,6 +55,6 @@
  * isObjectLike(Symbol('foo'));
  * // => false
  */
-const isObjectLike = value => !!value && typeof value === 'object';
+const isObjectLike = (value) => !!value && typeof value === 'object';
 
 module.exports = isObjectLike;

@@ -2,7 +2,7 @@ const supplant = require('./supplant');
 
 describe('String/supplant', () => {
   it('should do variable substitution on a string', () => {
-    const originalString = /* html */`
+    const originalString = /* html */ `
       <p>My name is {{person.fName}} {{person.lName}} and my job is {{person.position}}.</p>
       <p>
         My hobbies are:
@@ -14,7 +14,7 @@ describe('String/supplant', () => {
       </p>
     `;
 
-    const expectedString = /* html */`
+    const expectedString = /* html */ `
       <p>My name is John Doe and my job is Frontend Developer.</p>
       <p>
         My hobbies are:

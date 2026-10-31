@@ -34,8 +34,8 @@ const zip = (...arrays) => {
   }
 
   return arrays
-    .reduce((a, b) => a.length > b.length ? a : b, []) // Find the longest of the arrays, to begin mapping from this one.
-    .map((_, index) => arrays.map(array => array[index]));
+    .reduce((a, b) => (a.length > b.length ? a : b), []) // Find the longest of the arrays, to begin mapping from this one.
+    .map((_, index) => arrays.map((array) => array[index]));
 };
 
 module.exports = zip;

@@ -14,7 +14,7 @@ describe('String/classnames', () => {
     expect(classnames('', '', '')).toBe('');
   });
 
-  it ('should ignore arguments of unsupported types', () => {
+  it('should ignore arguments of unsupported types', () => {
     const res = classnames(
       'foo',
       { bar: true },
@@ -31,13 +31,8 @@ describe('String/classnames', () => {
     expect(res).toBe('foo bar');
   });
 
-  it ('combines mixed arguments (strings, objects)', () => {
-    const res = classnames(
-      'a', 'b',
-      { 'c': true },
-      { 'd': false },
-      'e', 'f'
-    );
+  it('combines mixed arguments (strings, objects)', () => {
+    const res = classnames('a', 'b', { c: true }, { d: false }, 'e', 'f');
 
     expect(res).toBe('a b c e f');
   });
@@ -54,22 +49,22 @@ describe('String/classnames', () => {
 
   it('all falsy values are ignored', () => {
     const res = classnames(
-      { 'null': null },
-      { 'undefined': void 0 },
+      { null: null },
+      { undefined: void 0 },
       { 'empty-string': '' },
       { 'non-empty-string': 'foo' },
       { 'white-space': ' ' },
-      { 'function': () => {} },
+      { function: () => {} },
       { 'empty-object': {} },
       { 'non-empty-bject': { foo: 'bar' } },
       { 'empty-array': [] },
       { 'non-empty-array': ['foo', 'bar'] },
-      { '1': 1 },
-      { '0': 0 },
+      { 1: 1 },
+      { 0: 0 },
       { '-0': -0 },
-      { 'NaN': NaN },
-      { 'false': false },
-      { 'true': true },
+      { NaN: NaN },
+      { false: false },
+      { true: true },
       'Yes, this is a long and strange string.',
       0,
       -0,
@@ -80,7 +75,8 @@ describe('String/classnames', () => {
       NaN
     );
 
-    const expected = 'non-empty-string white-space function empty-object non-empty-bject empty-array non-empty-array 1 true Yes, this is a long and strange string.';
+    const expected =
+      'non-empty-string white-space function empty-object non-empty-bject empty-array non-empty-array 1 true Yes, this is a long and strange string.';
 
     expect(res).toBe(expected);
   });

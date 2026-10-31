@@ -34,9 +34,7 @@ const curry = (fn, arity) => {
   }
 
   return function curried(...args_a) {
-    return args_a.length >= (arity || fn.length)
-      ? fn(...args_a)
-      : (...args_b) => curried(...args_a, ...args_b);
+    return args_a.length >= (arity || fn.length) ? fn(...args_a) : (...args_b) => curried(...args_a, ...args_b);
   };
 };
 

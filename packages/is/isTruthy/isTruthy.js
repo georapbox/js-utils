@@ -31,6 +31,6 @@
  * isTruthy(NaN);
  * // => false
  */
-const isTruthy = value => !!value;
+const isTruthy = (value) => !!value;
 
 module.exports = isTruthy;

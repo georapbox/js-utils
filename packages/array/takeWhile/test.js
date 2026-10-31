@@ -9,11 +9,11 @@ describe('Array/takeWhile', () => {
       { title: 'Eloquent Javascript', read: false }
     ];
 
-    const firstUnread = takeWhile(books, book => {
+    const firstUnread = takeWhile(books, (book) => {
       return !book.read;
     });
 
-    const firstRead = takeWhile(books, book => {
+    const firstRead = takeWhile(books, (book) => {
       return book.read;
     });
 

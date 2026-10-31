@@ -9,11 +9,11 @@ describe('Array/takeRightWhile', () => {
       { title: 'Eloquent Javascript', read: false }
     ];
 
-    const unread = takeRightWhile(books, book => {
+    const unread = takeRightWhile(books, (book) => {
       return !book.read;
     });
 
-    const read = takeRightWhile(books, book => {
+    const read = takeRightWhile(books, (book) => {
       return book.read;
     });
 
@@ -32,9 +32,11 @@ describe('Array/takeRightWhile', () => {
     }).toThrow(new TypeError('Expected an array for first argument'));
 
     books[3].read = true;
-    expect(takeRightWhile(books, book => {
-      return !book.read;
-    })).toEqual([]);
+    expect(
+      takeRightWhile(books, (book) => {
+        return !book.read;
+      })
+    ).toEqual([]);
 
     expect(() => {
       return takeRightWhile(books, null);

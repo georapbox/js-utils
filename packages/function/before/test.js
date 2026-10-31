@@ -5,7 +5,7 @@ describe('Function/before', () => {
     let count = 0;
     let result;
 
-    const doSomething = before(6, x => count += x);
+    const doSomething = before(6, (x) => (count += x));
 
     for (let i = 0; i < 10; i += 1) {
       result = doSomething(1);
@@ -15,7 +15,7 @@ describe('Function/before', () => {
 
     expect(() => {
       return before('five', () => {
-        return count += 1;
+        return (count += 1);
       });
     }).toThrow(new TypeError('Expected a number for first argument'));
 

@@ -31,6 +31,6 @@
  * isHexColor();
  * // => false
  */
-const isHexColor = value => /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
+const isHexColor = (value) => /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
 
 module.exports = isHexColor;
