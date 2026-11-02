@@ -14,163 +14,163 @@ The utilities are organized into packages based on their functionality. Each pac
 
 | Name | Description |
 |------|-------------|
-|[chunk](https://github.com/georapbox/js-utils/tree/master/packages/array/chunk)|Creates an array of elements split into groups the length of size specified.|
-|[compact](https://github.com/georapbox/js-utils/tree/master/packages/array/compact)|Creates an array with all falsy values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsy.|
-|[diff](https://github.com/georapbox/js-utils/tree/master/packages/array/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
-|[drop](https://github.com/georapbox/js-utils/tree/master/packages/array/drop)|Creates a slice of `array` with `n` elements dropped from the beginning.|
-|[dropRight](https://github.com/georapbox/js-utils/tree/master/packages/array/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
-|[dropRightWhile](https://github.com/georapbox/js-utils/tree/master/packages/array/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
-|[dropWhile](https://github.com/georapbox/js-utils/tree/master/packages/array/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
-|[groupBy](https://github.com/georapbox/js-utils/tree/master/packages/array/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
-|[intersect](https://github.com/georapbox/js-utils/tree/master/packages/array/intersect)|Creates an array of unique values that are included in all given arrays.|
-|[insert](https://github.com/georapbox/js-utils/tree/master/packages/array/insert)|Inserts one or more elements to array at specific index.|
-|[move](https://github.com/georapbox/js-utils/tree/master/packages/array/move)|Move an array element to a different position.|
-|[partition](https://github.com/georapbox/js-utils/tree/master/packages/array/partition)|Creates an array of elements split into two groups (arrays) depending on the result of a predicated function invoked for each iteration.|
-|[pluck](https://github.com/georapbox/js-utils/tree/master/packages/array/pluck)|Retrieves the value of a specified property from all elements in an array.|
-|[remove](https://github.com/georapbox/js-utils/tree/master/packages/array/remove)|Removes one or more elements from an array at the specified index(es).|
-|[shuffle](https://github.com/georapbox/js-utils/tree/master/packages/array/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
-|[tail](https://github.com/georapbox/js-utils/tree/master/packages/array/tail)|Gets all but the first element of array.|
-|[take](https://github.com/georapbox/js-utils/tree/master/packages/array/take)|Creates a slice of array with `n` items taken from the beginning.|
-|[takeRight](https://github.com/georapbox/js-utils/tree/master/packages/array/takeRight)|Creates a slice of array with `n` items taken from the end.|
-|[takeRightWhile](https://github.com/georapbox/js-utils/tree/master/packages/array/takeRightWhile)|Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.|
-|[takeWhile](https://github.com/georapbox/js-utils/tree/master/packages/array/takeWhile)|Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.|
-|[sort](https://github.com/georapbox/js-utils/tree/master/packages/array/sort)|Sorts an **array of primitive values**.|
-|[sortBy](https://github.com/georapbox/js-utils/tree/master/packages/array/sortBy)|Sorts an **array of objects** by a property.|
-|[uniq](https://github.com/georapbox/js-utils/tree/master/packages/array/uniq)|Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.|
-|[uniqBy](https://github.com/georapbox/js-utils/tree/master/packages/array/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
-|[zip](https://github.com/georapbox/js-utils/tree/master/packages/array/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
+|[chunk](./packages/array/chunk)|Creates an array of elements split into groups the length of size specified.|
+|[compact](./packages/array/compact)|Creates an array with all falsy values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsy.|
+|[diff](./packages/array/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
+|[drop](./packages/array/drop)|Creates a slice of `array` with `n` elements dropped from the beginning.|
+|[dropRight](./packages/array/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
+|[dropRightWhile](./packages/array/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
+|[dropWhile](./packages/array/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
+|[groupBy](./packages/array/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
+|[intersect](./packages/array/intersect)|Creates an array of unique values that are included in all given arrays.|
+|[insert](./packages/array/insert)|Inserts one or more elements to array at specific index.|
+|[move](./packages/array/move)|Move an array element to a different position.|
+|[partition](./packages/array/partition)|Creates an array of elements split into two groups (arrays) depending on the result of a predicated function invoked for each iteration.|
+|[pluck](./packages/array/pluck)|Retrieves the value of a specified property from all elements in an array.|
+|[remove](./packages/array/remove)|Removes one or more elements from an array at the specified index(es).|
+|[shuffle](./packages/array/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
+|[tail](./packages/array/tail)|Gets all but the first element of array.|
+|[take](./packages/array/take)|Creates a slice of array with `n` items taken from the beginning.|
+|[takeRight](./packages/array/takeRight)|Creates a slice of array with `n` items taken from the end.|
+|[takeRightWhile](./packages/array/takeRightWhile)|Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.|
+|[takeWhile](./packages/array/takeWhile)|Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.|
+|[sort](./packages/array/sort)|Sorts an **array of primitive values**.|
+|[sortBy](./packages/array/sortBy)|Sorts an **array of objects** by a property.|
+|[uniq](./packages/array/uniq)|Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.|
+|[uniqBy](./packages/array/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
+|[zip](./packages/array/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 
 ### String
 
 | Name | Description |
 |------|-------------|
-|[camelCase](https://github.com/georapbox/js-utils/tree/master/packages/string/camelCase)|Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'theQuickBrownFoxJumpsOverTheLazyDog'`.|
-|[capitalize](https://github.com/georapbox/js-utils/tree/master/packages/string/capitalize)|Capitalizes the first character of a string (Optionally, converts the rest of the string to lower case).|
-|[classnames](https://github.com/georapbox/js-utils/tree/master/packages/string/classnames)|Creates a string by conditionally joining classNames together.|
-|[collapseWhitespace](https://github.com/georapbox/js-utils/tree/master/packages/string/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
-|[deburr](https://github.com/georapbox/js-utils/tree/master/packages/string/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
-|[escapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/string/escapeHTML)|Converts the characters `&`, `<`, `>`, `"` and `'` in a string to their corresponding HTML entities.|
-|[escapeRegExp](https://github.com/georapbox/js-utils/tree/master/packages/string/escapeRegExp)|Escapes `RegExp` special characters in a string.|
-|[kebabCase](https://github.com/georapbox/js-utils/tree/master/packages/string/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the-quick-brown-fox-jumps-over-the-lazy-dog'`.|
-|[lines](https://github.com/georapbox/js-utils/tree/master/packages/string/lines)|Returns an array with the lines of a a string.|
-|[numberFormat](https://github.com/georapbox/js-utils/tree/master/packages/string/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
-|[pascalCase](https://github.com/georapbox/js-utils/tree/master/packages/string/pascalCase)|Converts a string to [pascal case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'TheQuickBrownFoxJumpsOverTheLazyDog'`.|
-|[randomString](https://github.com/georapbox/js-utils/tree/master/packages/string/randomString)|Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.|
-|[removePrefix](https://github.com/georapbox/js-utils/tree/master/packages/string/removePrefix)|Removes substring (prefix) from start of a string.|
-|[removeSuffix](https://github.com/georapbox/js-utils/tree/master/packages/string/removeSuffix)|Removes substring (suffix) from end of a string.|
-|[snakeCase](https://github.com/georapbox/js-utils/tree/master/packages/string/snakeCase)|Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the_quick_brown_fox_jumps_over_the_lazy_dog'`.|
-|[squash](https://github.com/georapbox/js-utils/tree/master/packages/string/squash)|Removes all spaces from a string; optionally removes any escape sequences such as `\t`, `\n`, `\f`, `\r` and `\v`.|
-|[strip](https://github.com/georapbox/js-utils/tree/master/packages/string/strip)|Returns a new string with all occurrences of arguments passed removed.|
-|[stripHTML](https://github.com/georapbox/js-utils/tree/master/packages/string/stripHTML)|Returns a new string with all HTML tags removed.|
-|[stripPunctuation](https://github.com/georapbox/js-utils/tree/master/packages/string/stripPunctuation)|Returns a new string with all of punctuation removed.|
-|[substringAfter](https://github.com/georapbox/js-utils/tree/master/packages/string/substringAfter)|Returns a substring after a specific sequence of character(s).|
-|[substringBefore](https://github.com/georapbox/js-utils/tree/master/packages/string/substringBefore)|Returns a substring before a specific sequence of character(s).|
-|[supplant](https://github.com/georapbox/js-utils/tree/master/packages/string/supplant)|Performs variable substitution in a string.|
-|[truncate](https://github.com/georapbox/js-utils/tree/master/packages/string/truncate)|Truncates a string based on character count.|
-|[unescapeHTML](https://github.com/georapbox/js-utils/tree/master/packages/string/unescapeHTML)|Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.|
-|[words](https://github.com/georapbox/js-utils/tree/master/packages/string/words)|Splits string into an array of its words.|
+|[camelCase](./packages/string/camelCase)|Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'theQuickBrownFoxJumpsOverTheLazyDog'`.|
+|[capitalize](./packages/string/capitalize)|Capitalizes the first character of a string (Optionally, converts the rest of the string to lower case).|
+|[classnames](./packages/string/classnames)|Creates a string by conditionally joining classNames together.|
+|[collapseWhitespace](./packages/string/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
+|[deburr](./packages/string/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
+|[escapeHTML](./packages/string/escapeHTML)|Converts the characters `&`, `<`, `>`, `"` and `'` in a string to their corresponding HTML entities.|
+|[escapeRegExp](./packages/string/escapeRegExp)|Escapes `RegExp` special characters in a string.|
+|[kebabCase](./packages/string/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the-quick-brown-fox-jumps-over-the-lazy-dog'`.|
+|[lines](./packages/string/lines)|Returns an array with the lines of a a string.|
+|[numberFormat](./packages/string/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
+|[pascalCase](./packages/string/pascalCase)|Converts a string to [pascal case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'TheQuickBrownFoxJumpsOverTheLazyDog'`.|
+|[randomString](./packages/string/randomString)|Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.|
+|[removePrefix](./packages/string/removePrefix)|Removes substring (prefix) from start of a string.|
+|[removeSuffix](./packages/string/removeSuffix)|Removes substring (suffix) from end of a string.|
+|[snakeCase](./packages/string/snakeCase)|Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the_quick_brown_fox_jumps_over_the_lazy_dog'`.|
+|[squash](./packages/string/squash)|Removes all spaces from a string; optionally removes any escape sequences such as `\t`, `\n`, `\f`, `\r` and `\v`.|
+|[strip](./packages/string/strip)|Returns a new string with all occurrences of arguments passed removed.|
+|[stripHTML](./packages/string/stripHTML)|Returns a new string with all HTML tags removed.|
+|[stripPunctuation](./packages/string/stripPunctuation)|Returns a new string with all of punctuation removed.|
+|[substringAfter](./packages/string/substringAfter)|Returns a substring after a specific sequence of character(s).|
+|[substringBefore](./packages/string/substringBefore)|Returns a substring before a specific sequence of character(s).|
+|[supplant](./packages/string/supplant)|Performs variable substitution in a string.|
+|[truncate](./packages/string/truncate)|Truncates a string based on character count.|
+|[unescapeHTML](./packages/string/unescapeHTML)|Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.|
+|[words](./packages/string/words)|Splits string into an array of its words.|
 
 ### Number
 
 | Name | Description |
 |------|-------------|
-|[average](https://github.com/georapbox/js-utils/tree/master/packages/number/average)|Calculates the average of a set of numbers.|
-|[clamp](https://github.com/georapbox/js-utils/tree/master/packages/number/clamp)|Clamps number within the inclusive lower and upper bounds.|
-|[degreesToRadians](https://github.com/georapbox/js-utils/tree/master/packages/number/degreesToRadians)|Converts degrees to radians.|
-|[inRange](https://github.com/georapbox/js-utils/tree/master/packages/number/inRange)|Checks if a number is between `min` and `max` including.|
-|[lerp](https://github.com/georapbox/js-utils/tree/master/packages/number/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
-|[normalize](https://github.com/georapbox/js-utils/tree/master/packages/number/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
-|[max](https://github.com/georapbox/js-utils/tree/master/packages/number/max)|Returns the largest of zero or more numbers.|
-|[min](https://github.com/georapbox/js-utils/tree/master/packages/number/min)|Returns the smallest of zero or more numbers.|
-|[radiansToDegrees](https://github.com/georapbox/js-utils/tree/master/packages/number/radiansToDegrees)|Converts radians to degrees.|
-|[randomDist](https://github.com/georapbox/js-utils/tree/master/packages/number/randomDist)|Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.|
-|[randomInt](https://github.com/georapbox/js-utils/tree/master/packages/number/randomInt)|Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.|
-|[randomRange](https://github.com/georapbox/js-utils/tree/master/packages/number/randomRange)|Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.|
-|[roundToNearest](https://github.com/georapbox/js-utils/tree/master/packages/number/roundToNearest)|Rounds a number to the nearest multiple of a value provided.|
-|[roundToPlaces](https://github.com/georapbox/js-utils/tree/master/packages/number/roundToPlaces)|Rounds a number to a number of desired places.|
+|[average](./packages/number/average)|Calculates the average of a set of numbers.|
+|[clamp](./packages/number/clamp)|Clamps number within the inclusive lower and upper bounds.|
+|[degreesToRadians](./packages/number/degreesToRadians)|Converts degrees to radians.|
+|[inRange](./packages/number/inRange)|Checks if a number is between `min` and `max` including.|
+|[lerp](./packages/number/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
+|[normalize](./packages/number/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
+|[max](./packages/number/max)|Returns the largest of zero or more numbers.|
+|[min](./packages/number/min)|Returns the smallest of zero or more numbers.|
+|[radiansToDegrees](./packages/number/radiansToDegrees)|Converts radians to degrees.|
+|[randomDist](./packages/number/randomDist)|Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.|
+|[randomInt](./packages/number/randomInt)|Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.|
+|[randomRange](./packages/number/randomRange)|Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.|
+|[roundToNearest](./packages/number/roundToNearest)|Rounds a number to the nearest multiple of a value provided.|
+|[roundToPlaces](./packages/number/roundToPlaces)|Rounds a number to a number of desired places.|
 
 ### Object
 
 | Name | Description |
 |------|-------------|
-|[get](https://github.com/georapbox/js-utils/tree/master/packages/object/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
-|[omit](https://github.com/georapbox/js-utils/tree/master/packages/object/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
-|[pick](https://github.com/georapbox/js-utils/tree/master/packages/object/pick)|Creates an object composed of the picked object properties.|
-|[pickBy](https://github.com/georapbox/js-utils/tree/master/packages/object/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
-|[trueTypeOf](https://github.com/georapbox/js-utils/tree/master/packages/object/trueTypeOf)|Determines the true type of a value using `Object.prototype.toString.call()`.|
+|[get](./packages/object/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
+|[omit](./packages/object/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
+|[pick](./packages/object/pick)|Creates an object composed of the picked object properties.|
+|[pickBy](./packages/object/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
+|[trueTypeOf](./packages/object/trueTypeOf)|Determines the true type of a value using `Object.prototype.toString.call()`.|
 
 ### Function
 
 | Name | Description |
 |------|-------------|
-|[after](https://github.com/georapbox/js-utils/tree/master/packages/function/after)|Creates a function that invokes `fn` once it's called `n` or more times.|
-|[ary](https://github.com/georapbox/js-utils/tree/master/packages/function/ary)|Creates a function that accepts up to `n` arguments, ignoring any additional arguments.|
-|[before](https://github.com/georapbox/js-utils/tree/master/packages/function/before)|Creates a function that invokes `fn` while it’s called less than `n` times.|
-|[compose](https://github.com/georapbox/js-utils/tree/master/packages/function/compose)|Performs right-to-left function composition.|
-|[curry](https://github.com/georapbox/js-utils/tree/master/packages/function/curry)|Returns a curried equivalent of the provided function.|
-|[debounce](https://github.com/georapbox/js-utils/tree/master/packages/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
-|[flip](https://github.com/georapbox/js-utils/tree/master/packages/function/flip)|Creates a function that invokes the original function with its parameters reversed.|
-|[negate](https://github.com/georapbox/js-utils/tree/master/packages/function/negate)|Creates a function that negates the result of the predicate `fn`.|
-|[once](https://github.com/georapbox/js-utils/tree/master/packages/function/once)|Ensure a given functionality only runs once.|
-|[partial](https://github.com/georapbox/js-utils/tree/master/packages/function/partial)|Creates a new function that invokes the provided function with partials prepended to the arguments it receives.|
-|[partialRight](https://github.com/georapbox/js-utils/tree/master/packages/function/partialRight)|Creates a new function that invokes the provided function with partials appended to the arguments it receives.|
-|[pipe](https://github.com/georapbox/js-utils/tree/master/packages/function/pipe)|Performs left-to-right function composition.|
-|[throttle](https://github.com/georapbox/js-utils/tree/master/packages/function/throttle)|Limits the number of times a function can be called in a given period.|
-|[unary](https://github.com/georapbox/js-utils/tree/master/packages/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
+|[after](./packages/function/after)|Creates a function that invokes `fn` once it's called `n` or more times.|
+|[ary](./packages/function/ary)|Creates a function that accepts up to `n` arguments, ignoring any additional arguments.|
+|[before](./packages/function/before)|Creates a function that invokes `fn` while it’s called less than `n` times.|
+|[compose](./packages/function/compose)|Performs right-to-left function composition.|
+|[curry](./packages/function/curry)|Returns a curried equivalent of the provided function.|
+|[debounce](./packages/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
+|[flip](./packages/function/flip)|Creates a function that invokes the original function with its parameters reversed.|
+|[negate](./packages/function/negate)|Creates a function that negates the result of the predicate `fn`.|
+|[once](./packages/function/once)|Ensure a given functionality only runs once.|
+|[partial](./packages/function/partial)|Creates a new function that invokes the provided function with partials prepended to the arguments it receives.|
+|[partialRight](./packages/function/partialRight)|Creates a new function that invokes the provided function with partials appended to the arguments it receives.|
+|[pipe](./packages/function/pipe)|Performs left-to-right function composition.|
+|[throttle](./packages/function/throttle)|Limits the number of times a function can be called in a given period.|
+|[unary](./packages/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
 
 ### Is
 
 | Name | Description |
 |------|-------------|
-|[isArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isArray)|Checks if a value is an array.|
-|[isArrayLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLike)|Checks if a value is array-like.|
-|[isArrayLikeObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isArrayLikeObject)|Checks if a value is array-like and object as well.|
-|[isBoolean](https://github.com/georapbox/js-utils/tree/master/packages/is/isBoolean)|Checks if a value is boolean.|
-|[isDate](https://github.com/georapbox/js-utils/tree/master/packages/is/isDate)|Checks if a value is a date object.|
-|[isElement](https://github.com/georapbox/js-utils/tree/master/packages/is/isElement)|Checks if a value is a DOM element.|
-|[isEmail](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmail)|Validates a string as email address.|
-|[isEmpty](https://github.com/georapbox/js-utils/tree/master/packages/is/isEmpty)|Checks if a value is an empty object, collection, map, or set.|
-|[isEven](https://github.com/georapbox/js-utils/tree/master/packages/is/isEven)|Checks if a value is even.|
-|[isFalse](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalse)|Checks if a value is `false` (strict equality).|
-|[isFalsy](https://github.com/georapbox/js-utils/tree/master/packages/is/isFalsy)|Checks if a value is falsy.|
-|[isFiniteNum](https://github.com/georapbox/js-utils/tree/master/packages/is/isFiniteNum)|Checks if a value is a finite number.|
-|[isFlatArray](https://github.com/georapbox/js-utils/tree/master/packages/is/isFlatArray)|Checks if a value is a flat array.|
-|[isFunction](https://github.com/georapbox/js-utils/tree/master/packages/is/isFunction)|Checks if a value is a function.|
-|[isHexadecimal](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexadecimal)|Checks if a value matches a hexadecimal regular expression.|
-|[isHexColor](https://github.com/georapbox/js-utils/tree/master/packages/is/isHexColor)|Checks if a value matches a hexadecimal color regular expression.|
-|[isInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isInteger)|Checks if a value is an integer number.|
-|[isIterable](https://github.com/georapbox/js-utils/tree/master/packages/is/isIterable)|Checks if a value is an iterable.|
-|[isMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isMap)|Checks if a value is classified as a Map object.|
-|[isNaN](https://github.com/georapbox/js-utils/tree/master/packages/is/isNaN)|Determines whether the passed value is `NaN` and its type is `Number`.|
-|[isNull](https://github.com/georapbox/js-utils/tree/master/packages/is/isNull)|Checks if a value is `null`.|
-|[isNullish](https://github.com/georapbox/js-utils/tree/master/packages/is/isNullish)|Checks if a value is `null` or `undefined`.|
-|[isNumber](https://github.com/georapbox/js-utils/tree/master/packages/is/isNumber)|Checks if a value is a number.|
-|[isObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isObject)|Checks if a value is the [language type](https://262.ecma-international.org/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
-|[isObjectLike](https://github.com/georapbox/js-utils/tree/master/packages/is/isObjectLike)|Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
-|[isOdd](https://github.com/georapbox/js-utils/tree/master/packages/is/isOdd)|Checks if a value is odd.|
-|[isPlainObject](https://github.com/georapbox/js-utils/tree/master/packages/is/isPlainObject)|Checks if a value is a plain object. An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.|
-|[isPrimitive](https://github.com/georapbox/js-utils/tree/master/packages/is/isPrimitive)|Checks if a value is a primitive data type.|
-|[isPromise](https://github.com/georapbox/js-utils/tree/master/packages/is/isPromise)|Check if a value is a native ES2015 Promise.|
-|[isRegexp](https://github.com/georapbox/js-utils/tree/master/packages/is/isRegexp)|Checks if a value is a regular expression.|
-|[isSafeInteger](https://github.com/georapbox/js-utils/tree/master/packages/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
-|[isSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isSet)|Checks if a value is classified as a Set object.|
-|[isString](https://github.com/georapbox/js-utils/tree/master/packages/is/isString)|Checks if a value is a string.|
-|[isSymbol](https://github.com/georapbox/js-utils/tree/master/packages/is/isSymbol)|Checks if a value is classified as a Symbol primitive.|
-|[isTrue](https://github.com/georapbox/js-utils/tree/master/packages/is/isTrue)|Checks if a value is `true` (strict equality).|
-|[isTruthy](https://github.com/georapbox/js-utils/tree/master/packages/is/isTruthy)|Checks if a value is truthy.|
-|[isUndefined](https://github.com/georapbox/js-utils/tree/master/packages/is/isUndefined)|Checks if a value is `undefined`.|
-|[isWeakMap](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakMap)|Checks if a value is classified as a WeakMap object.|
-|[isWeakSet](https://github.com/georapbox/js-utils/tree/master/packages/is/isWeakSet)|Checks if a value is classified as a WeakSet object.|
+|[isArray](./packages/is/isArray)|Checks if a value is an array.|
+|[isArrayLike](./packages/is/isArrayLike)|Checks if a value is array-like.|
+|[isArrayLikeObject](./packages/is/isArrayLikeObject)|Checks if a value is array-like and object as well.|
+|[isBoolean](./packages/is/isBoolean)|Checks if a value is boolean.|
+|[isDate](./packages/is/isDate)|Checks if a value is a date object.|
+|[isElement](./packages/is/isElement)|Checks if a value is a DOM element.|
+|[isEmail](./packages/is/isEmail)|Validates a string as email address.|
+|[isEmpty](./packages/is/isEmpty)|Checks if a value is an empty object, collection, map, or set.|
+|[isEven](./packages/is/isEven)|Checks if a value is even.|
+|[isFalse](./packages/is/isFalse)|Checks if a value is `false` (strict equality).|
+|[isFalsy](./packages/is/isFalsy)|Checks if a value is falsy.|
+|[isFiniteNum](./packages/is/isFiniteNum)|Checks if a value is a finite number.|
+|[isFlatArray](./packages/is/isFlatArray)|Checks if a value is a flat array.|
+|[isFunction](./packages/is/isFunction)|Checks if a value is a function.|
+|[isHexadecimal](./packages/is/isHexadecimal)|Checks if a value matches a hexadecimal regular expression.|
+|[isHexColor](./packages/is/isHexColor)|Checks if a value matches a hexadecimal color regular expression.|
+|[isInteger](./packages/is/isInteger)|Checks if a value is an integer number.|
+|[isIterable](./packages/is/isIterable)|Checks if a value is an iterable.|
+|[isMap](./packages/is/isMap)|Checks if a value is classified as a Map object.|
+|[isNaN](./packages/is/isNaN)|Determines whether the passed value is `NaN` and its type is `Number`.|
+|[isNull](./packages/is/isNull)|Checks if a value is `null`.|
+|[isNullish](./packages/is/isNullish)|Checks if a value is `null` or `undefined`.|
+|[isNumber](./packages/is/isNumber)|Checks if a value is a number.|
+|[isObject](./packages/is/isObject)|Checks if a value is the [language type](https://262.ecma-international.org/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
+|[isObjectLike](./packages/is/isObjectLike)|Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
+|[isOdd](./packages/is/isOdd)|Checks if a value is odd.|
+|[isPlainObject](./packages/is/isPlainObject)|Checks if a value is a plain object. An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.|
+|[isPrimitive](./packages/is/isPrimitive)|Checks if a value is a primitive data type.|
+|[isPromise](./packages/is/isPromise)|Check if a value is a native ES2015 Promise.|
+|[isRegexp](./packages/is/isRegexp)|Checks if a value is a regular expression.|
+|[isSafeInteger](./packages/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
+|[isSet](./packages/is/isSet)|Checks if a value is classified as a Set object.|
+|[isString](./packages/is/isString)|Checks if a value is a string.|
+|[isSymbol](./packages/is/isSymbol)|Checks if a value is classified as a Symbol primitive.|
+|[isTrue](./packages/is/isTrue)|Checks if a value is `true` (strict equality).|
+|[isTruthy](./packages/is/isTruthy)|Checks if a value is truthy.|
+|[isUndefined](./packages/is/isUndefined)|Checks if a value is `undefined`.|
+|[isWeakMap](./packages/is/isWeakMap)|Checks if a value is classified as a WeakMap object.|
+|[isWeakSet](./packages/is/isWeakSet)|Checks if a value is classified as a WeakSet object.|
 
 ### DOM
 
 | Name | Description |
 |------|-------------|
-|[convertImageToBase64](https://github.com/georapbox/js-utils/tree/master/packages/dom/convertImageToBase64)|Converts an image's content to Data URI scheme.|
-|[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
-|[mediaQuery](https://github.com/georapbox/js-utils/tree/master/packages/dom/mediaQuery)|Determines if the document matches a media query string.|
-|[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
-|[setupHiDPICanvas](https://github.com/georapbox/js-utils/tree/master/packages/dom/setupHiDPICanvas)|Configures an HTMLCanvasElement for sharp rendering on high-DPI screens.|
+|[convertImageToBase64](./packages/dom/convertImageToBase64)|Converts an image's content to Data URI scheme.|
+|[cookie](./packages/dom/cookie)|Create, read and delete cookies.|
+|[mediaQuery](./packages/dom/mediaQuery)|Determines if the document matches a media query string.|
+|[preloadImages](./packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
+|[setupHiDPICanvas](./packages/dom/setupHiDPICanvas)|Configures an HTMLCanvasElement for sharp rendering on high-DPI screens.|
 
 ## Development setup
 
@@ -232,4 +232,4 @@ The file path must be relative to the repository root.
 
 ## License
 
-[The MIT License (MIT)](https://github.com/georapbox/js-utils/blob/master/LICENSE)
+[The MIT License (MIT)](./LICENSE)
