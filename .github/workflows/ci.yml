@@ -36,12 +36,5 @@ jobs:
       - name: Check formatting
         run: npm run fmt:check
 
-      - name: Run tests with coverage
-        run: npm run test:coverage
-
-      - name: Upload coverage to Coveralls
-        uses: coverallsapp/github-action@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          file: coverage/lcov.info
-          format: lcov
+      - name: Run tests
+        run: npm test
