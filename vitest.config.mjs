@@ -8,13 +8,13 @@ export default defineConfig({
         test: {
           name: 'unit',
           environment: 'node',
-          include: ['packages/**/test.js']
+          include: ['src/**/test.js']
         }
       },
       {
         test: {
           name: 'browser',
-          include: ['packages/**/test.browser.js'],
+          include: ['src/**/test.browser.js'],
           browser: {
             enabled: true,
             provider: playwright(),
@@ -26,8 +26,8 @@ export default defineConfig({
     ],
     coverage: {
       provider: 'v8',
-      include: ['packages/**/*.js'],
-      exclude: ['packages/**/test*.js'],
+      include: ['src/**/*.js'],
+      exclude: ['src/**/test*.js'],
       reporter: ['text', 'html', 'lcov']
     }
   }

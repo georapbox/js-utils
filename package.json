@@ -14,7 +14,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "oxlint packages",
+    "lint": "oxlint src",
     "fmt": "oxfmt \"**/*.js\"",
     "fmt:check": "oxfmt --check \"**/*.js\"",
     "docs": "npx jsdoc2md"
