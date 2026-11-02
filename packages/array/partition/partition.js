@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates an array of elements split into two groups (arrays), the first of which contains the elements that the `predicate` returns truthy for,
  * the second of which contains the elements that the `predicate` returns falsy for.
@@ -31,7 +29,7 @@
  * partition(numbers, num => num > 0);
  * // => [[1, 3, 5, 6], [-4, -2]]
  */
-const partition = (array, predicate = (x) => x) => {
+export const partition = (array, predicate = (x) => x) => {
   const part1 = [];
   const part2 = [];
 
@@ -50,5 +48,3 @@ const partition = (array, predicate = (x) => x) => {
 
   return [part1, part2];
 };
-
-module.exports = partition;

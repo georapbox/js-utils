@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is `true` (strict equality).
  *
@@ -16,6 +14,6 @@
  * isTrue();
  * // => false
  */
-const isTrue = (value) => value === true;
-
-module.exports = isTrue;
+export const isTrue = (value) => {
+  return value === true;
+};

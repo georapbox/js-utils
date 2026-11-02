@@ -1,4 +1,5 @@
-const takeWhile = require('./takeWhile');
+import { describe, expect, it } from 'vitest';
+import { takeWhile } from './takeWhile.js';
 
 describe('Array/takeWhile', () => {
   it('creates a slice of array with elements taken from the beginning, until predicate returns falsy', () => {

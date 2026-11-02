@@ -1,4 +1,5 @@
-const isWeakMap = require('./isWeakMap');
+import { describe, expect, it } from 'vitest';
+import { isWeakMap } from './isWeakMap.js';
 
 describe('is/isWeakMap', () => {
   it('checks if a value is WeakMap', () => {

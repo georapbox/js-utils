@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.
  * The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
@@ -23,7 +21,7 @@
  * });
  * // => [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}]
  */
-const takeWhile = (array, predicate) => {
+export const takeWhile = (array, predicate) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -40,5 +38,3 @@ const takeWhile = (array, predicate) => {
 
   return array.slice(0, index);
 };
-
-module.exports = takeWhile;

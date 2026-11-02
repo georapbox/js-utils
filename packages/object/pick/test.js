@@ -1,4 +1,5 @@
-const pick = require('./pick');
+import { describe, expect, it } from 'vitest';
+import { pick } from './pick.js';
 
 describe('Object/pick', () => {
   it('creates an object composed of the picked object properties', () => {

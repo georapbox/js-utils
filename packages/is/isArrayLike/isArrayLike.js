@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is array-like.
  *
@@ -45,7 +43,7 @@
  * isArrayLike(args));
  * // => true
  */
-const isArrayLike = (value) => {
+export const isArrayLike = (value) => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   const len = !!value && value.length;
 
@@ -58,5 +56,3 @@ const isArrayLike = (value) => {
     len <= MAX_SAFE_INTEGER
   );
 };
-
-module.exports = isArrayLike;

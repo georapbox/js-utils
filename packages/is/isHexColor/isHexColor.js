@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value matches a hexadecimal color regular expression.
  *
@@ -31,6 +29,6 @@
  * isHexColor();
  * // => false
  */
-const isHexColor = (value) => /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
-
-module.exports = isHexColor;
+export const isHexColor = (value) => {
+  return /^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/.test(value);
+};

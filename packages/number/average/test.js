@@ -1,4 +1,5 @@
-const average = require('./average');
+import { describe, expect, it } from 'vitest';
+import { average } from './average.js';
 
 describe('Number/average', () => {
   it('calculates the average of a set of numbers', () => {

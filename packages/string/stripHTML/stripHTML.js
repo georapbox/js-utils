@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Removes all HTML tags from a string.
  *
@@ -13,12 +11,10 @@
  * stripHTML(str);
  * // => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quos dicta, doloremque veritatis.'
  */
-const stripHTML = (subjectString) => {
+export const stripHTML = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString.replace(/<[^>]+>/g, '');
 };
-
-module.exports = stripHTML;

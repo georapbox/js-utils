@@ -1,4 +1,5 @@
-const uniqBy = require('./uniqBy');
+import { describe, expect, it } from 'vitest';
+import { uniqBy } from './uniqBy.js';
 
 describe('Array/uniqBy', () => {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', () => {

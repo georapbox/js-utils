@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Determines whether the passed value is `NaN` and its type is `Number`.
  * It is an implementation similar to native `Number.isNaN()` which is a more robust version of the original, global `isNaN()`.
@@ -26,13 +24,6 @@
  * isNaN({});        // => false
  * isNaN('blabla');  // => false
  */
-const isNaN = (value) => {
-  if (Number.isNaN) {
-    return Number.isNaN(value);
-  }
-
-  // NaN is of type "number" and it is also the only primitive value which does not equal itself.
-  return typeof value === 'number' && value !== value;
+export const isNaN = (value) => {
+  return Number.isNaN(value);
 };
-
-module.exports = isNaN;

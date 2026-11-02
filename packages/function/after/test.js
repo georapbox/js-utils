@@ -1,4 +1,5 @@
-const after = require('./after');
+import { describe, expect, it } from 'vitest';
+import { after } from './after.js';
 
 describe('Function/after', () => {
   it("should invoke a function after it's been called n times", () => {

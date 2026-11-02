@@ -1,4 +1,5 @@
-const cookie = require('./cookie');
+import { describe, expect, it } from 'vitest';
+import { cookie } from './cookie.js';
 
 describe('dom/cookie', () => {
   it('should create, read and delete cookies', () => {

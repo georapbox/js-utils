@@ -1,4 +1,5 @@
-const isUndefined = require('./isUndefined');
+import { describe, expect, it } from 'vitest';
+import { isUndefined } from './isUndefined.js';
 
 describe('is/isUndefined', () => {
   it('checks if a value is undefined', () => {

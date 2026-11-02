@@ -1,4 +1,5 @@
-const sortBy = require('./sortBy');
+import { describe, expect, it } from 'vitest';
+import { sortBy } from './sortBy.js';
 
 describe('Array/sortBy', () => {
   const people = [

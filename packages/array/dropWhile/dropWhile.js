@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.
  * The predicate is invoked with three arguments: (`value`, `index`, `array`).
@@ -23,7 +21,7 @@
  * });
  * // => [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
  */
-const dropWhile = (array, predicate) => {
+export const dropWhile = (array, predicate) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -41,5 +39,3 @@ const dropWhile = (array, predicate) => {
 
   return array.slice(index, len);
 };
-
-module.exports = dropWhile;

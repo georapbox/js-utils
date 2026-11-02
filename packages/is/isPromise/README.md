@@ -3,7 +3,7 @@
 ## isPromise(value) ⇒ <code>Boolean</code>
 Check if a value is a native ES2015 Promise.
 
-**Returns**: <code>Boolean</code> - Returns `true` if value is a native ES2015 Promise; otherwise `false`.  
+**Returns**: <code>Boolean</code> - Returns `true` if value is a native ES2015 Promise; otherwise `false`.
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Move an array element to a different position.
  *
@@ -25,7 +23,7 @@
  * move(array, -1, -3);
  * // => ['A', 'B', 'E', 'C', 'D']
  */
-const move = (array, fromIndex, toIndex) => {
+export const move = (array, fromIndex, toIndex) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -51,5 +49,3 @@ const move = (array, fromIndex, toIndex) => {
 
   return resultArray;
 };
-
-module.exports = move;

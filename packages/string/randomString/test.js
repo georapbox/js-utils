@@ -1,4 +1,5 @@
-const randomString = require('./randomString');
+import { describe, expect, it } from 'vitest';
+import { randomString } from './randomString.js';
 
 describe('String/randomString', () => {
   it('generates a pseudo-random string of n characters', () => {

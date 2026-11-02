@@ -1,4 +1,5 @@
-const trueTypeOf = require('./trueTypeOf.js');
+import { describe, expect, it } from 'vitest';
+import { trueTypeOf } from './trueTypeOf.js';
 
 describe('Object/trueTypeOf', () => {
   it('determines the true type of a value', () => {
@@ -31,8 +32,8 @@ describe('Object/trueTypeOf', () => {
     const uint32ArrVar = new Uint32Array();
     const float32ArrVar = new Float32Array();
     const float64ArrVar = new Float64Array();
-    const bigInt64ArrVar = new BigInt64Array(); // eslint-disable-line no-undef
-    const bigUint64ArrVar = new BigUint64Array(); // eslint-disable-line no-undef
+    const bigInt64ArrVar = new BigInt64Array();
+    const bigUint64ArrVar = new BigUint64Array();
     const arrBufVar = new ArrayBuffer();
     const dataViewVar = new DataView(arrBufVar);
     const genVar = function* () {};

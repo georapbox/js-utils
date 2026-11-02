@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a function that negates the result of the predicate `fn`.
  * The `fn` predicate is invoked with the arguments of the created function.
@@ -31,12 +29,10 @@
  * const odds = numbers.filter(negate(isEven));
  * // => [1, 3, 5]
  */
-const negate = (fn) => {
+export const negate = (fn) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
   return (...args) => !fn(...args);
 };
-
-module.exports = negate;

@@ -3,7 +3,7 @@
 ## isEven(value) ⇒ <code>Boolean</code>
 Checks if a value is even.
 
-**Returns**: <code>Boolean</code> - True if number is even, else false.  
+**Returns**: <code>Boolean</code> - True if number is even, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Returns a substring before a specific sequence of character(s).
  * By default looks for the first occurrence of this sequence.
@@ -31,7 +29,7 @@
  * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
  * // => ''
  */
-const substringBefore = (subjectString, characters, last) => {
+export const substringBefore = (subjectString, characters, last) => {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
@@ -40,5 +38,3 @@ const substringBefore = (subjectString, characters, last) => {
 
   return index !== -1 ? subjectString.substring(0, index) : '';
 };
-
-module.exports = substringBefore;

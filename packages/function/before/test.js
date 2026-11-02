@@ -1,4 +1,5 @@
-const before = require('./before');
+import { describe, expect, it } from 'vitest';
+import { before } from './before.js';
 
 describe('Function/before', () => {
   it('should invoke a function up to 5 times', () => {

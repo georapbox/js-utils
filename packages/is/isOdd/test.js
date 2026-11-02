@@ -1,4 +1,5 @@
-const isOdd = require('./isOdd');
+import { describe, expect, it } from 'vitest';
+import { isOdd } from './isOdd.js';
 
 describe('is/isOdd', () => {
   it('checks if a value is odd', () => {

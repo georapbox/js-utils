@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is `null`.
  *
@@ -19,6 +17,6 @@
  * isNull();
  * // => false
  */
-const isNull = (value) => value === null;
-
-module.exports = isNull;
+export const isNull = (value) => {
+  return value === null;
+};

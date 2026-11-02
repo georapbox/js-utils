@@ -1,4 +1,5 @@
-const diff = require('./diff');
+import { describe, expect, it } from 'vitest';
+import { diff } from './diff.js';
 
 describe('Array/diff', () => {
   const a = [1, 2, 3, 4, {}];

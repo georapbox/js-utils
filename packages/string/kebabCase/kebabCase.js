@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  * Combines words of a string by replacing each space with a dash (-).
@@ -42,7 +40,7 @@
  * kebabCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // => 'the-quick-brown-fox-jumps-over-the-lazy-dog'
  */
-const kebabCase = (subjectString) => {
+export const kebabCase = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -55,5 +53,3 @@ const kebabCase = (subjectString) => {
   const result = words.filter(Boolean).join('-');
   return result;
 };
-
-module.exports = kebabCase;

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Clamps number within the inclusive `min` and `max` bounds,
  * making sure it does not go beyond them on either side.
@@ -30,7 +28,7 @@
  * clamp(NaN, 0, 100);
  * // => NaN
  */
-const clamp = (value, min, max) => {
+export const clamp = (value, min, max) => {
   if (typeof value !== 'number') {
     throw new TypeError('value must be a Number');
   }
@@ -81,5 +79,3 @@ const clamp = (value, min, max) => {
 
   return value;
 };
-
-module.exports = clamp;

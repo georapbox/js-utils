@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Performs left-to-right function composition.
  * The leftmost function may have any arity; the remaining functions must be unary.
@@ -19,7 +17,7 @@
  * const shoutGreeting = pipe(greeting, capitalize);
  * shoutGreeting('John', 'Doe'); // => 'HELLO, MY NAME IS JOHN DOE.'
  */
-const pipe = (...fns) => {
+export const pipe = (...fns) => {
   if (fns.length === 0) {
     return (fn) => fn;
   }
@@ -34,5 +32,3 @@ const pipe = (...fns) => {
     };
   });
 };
-
-module.exports = pipe;

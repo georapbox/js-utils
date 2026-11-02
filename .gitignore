@@ -2,7 +2,6 @@
 npm-debug.log
 node_modules/
 docs/
-tests-reporter/
 dist/
-demo.html
 coverage/
+.vitest/

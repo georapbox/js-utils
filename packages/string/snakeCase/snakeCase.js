@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  * Combines words by replacing each space with an underscore (_).
@@ -39,7 +37,7 @@
  * snakeCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // => 'the_quick_brown_fox_jumps_over_the_lazy_dog'
  */
-const snakeCase = (subjectString) => {
+export const snakeCase = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -52,5 +50,3 @@ const snakeCase = (subjectString) => {
   const result = words.filter(Boolean).join('_');
   return result;
 };
-
-module.exports = snakeCase;

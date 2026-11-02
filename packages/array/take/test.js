@@ -1,4 +1,5 @@
-const take = require('./take');
+import { describe, expect, it } from 'vitest';
+import { take } from './take.js';
 
 describe('Array/take', () => {
   it('creates a slice of array with n items taken from the beginning', () => {

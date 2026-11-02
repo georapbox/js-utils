@@ -1,4 +1,5 @@
-const partial = require('./partial.js');
+import { describe, expect, it } from 'vitest';
+import { partial } from './partial.js';
 
 describe('partial', () => {
   it('partially applies provided function to its arguments', () => {

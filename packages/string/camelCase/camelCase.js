@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  * Combines words by capitalizing all words following the first word and removing spaces.
@@ -39,7 +37,7 @@
  * camelCase(' () @#$ @# @the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // => 'theQuickBrownFoxJumpsOverTheLazyDog'
  */
-const camelCase = (subjectString) => {
+export const camelCase = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -55,5 +53,3 @@ const camelCase = (subjectString) => {
     return accum + tempStr;
   }, '');
 };
-
-module.exports = camelCase;

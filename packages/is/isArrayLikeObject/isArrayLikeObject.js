@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is array-like and object as well.
  *
@@ -45,7 +43,7 @@
  * isArrayLikeObject(args));
  * // => true
  */
-const isArrayLikeObject = (value) => {
+export const isArrayLikeObject = (value) => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
   const len = !!value && value.length;
 
@@ -59,5 +57,3 @@ const isArrayLikeObject = (value) => {
     len <= MAX_SAFE_INTEGER
   );
 };
-
-module.exports = isArrayLikeObject;

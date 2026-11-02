@@ -1,4 +1,5 @@
-const removeSuffix = require('./removeSuffix');
+import { describe, expect, it } from 'vitest';
+import { removeSuffix } from './removeSuffix.js';
 
 describe('String/removeSuffix', () => {
   it('removes a specific suffix from string', () => {

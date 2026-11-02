@@ -1,4 +1,5 @@
-const strip = require('./strip');
+import { describe, expect, it } from 'vitest';
+import { strip } from './strip.js';
 
 describe('String/strip', () => {
   it('should strip a string from all occurrences of a given substring', () => {

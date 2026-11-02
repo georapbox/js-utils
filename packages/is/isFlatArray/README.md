@@ -3,7 +3,7 @@
 ## isFlatArray(value) ⇒ <code>Boolean</code>
 Checks if a value is a flat array. If the value is not array, will return `false`.
 
-**Returns**: <code>Boolean</code> - Returns `true` if value is flat array, otherwise returns `false`.  
+**Returns**: <code>Boolean</code> - Returns `true` if value is flat array, otherwise returns `false`.
 
 | Param | Type | Description |
 | --- | --- | --- |

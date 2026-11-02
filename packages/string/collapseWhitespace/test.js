@@ -1,4 +1,5 @@
-const collapseWhitespace = require('./collapseWhitespace');
+import { describe, expect, it } from 'vitest';
+import { collapseWhitespace } from './collapseWhitespace.js';
 
 describe('String/collapseWhitespace', () => {
   it('Converts all adjacent whitespace characters to a single space.', () => {

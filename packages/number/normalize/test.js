@@ -1,4 +1,5 @@
-const normalize = require('./normalize');
+import { describe, expect, it } from 'vitest';
+import { normalize } from './normalize.js';
 
 describe('Number/normalize', () => {
   it('converts a numeical value from 0 to 1 indicating where it lies within a range of values', () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a plain object.
  * An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.
@@ -49,7 +47,7 @@
  * isPlainObject('lorem ipsum');
  * // => false
  */
-const isPlainObject = (value) => {
+export const isPlainObject = (value) => {
   if (Object.prototype.toString.call(value) !== '[object Object]') {
     return false;
   }
@@ -58,5 +56,3 @@ const isPlainObject = (value) => {
 
   return proto === null || proto === Object.prototype;
 };
-
-module.exports = isPlainObject;

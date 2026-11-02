@@ -4,7 +4,7 @@
 
 Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.
 
-**Returns**: <code>\*</code> - Returns the resolved value.  
+**Returns**: <code>\*</code> - Returns the resolved value.
 
 | Param | Type | Description |
 | --- | --- | --- |

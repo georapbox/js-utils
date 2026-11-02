@@ -3,7 +3,7 @@
 ## isHexColor(value) ⇒ <code>Boolean</code>
 Checks if a value matches a hexadecimal color regular expression.
 
-**Returns**: <code>Boolean</code> - True if value is a hexadecimal color regexp, else false.  
+**Returns**: <code>Boolean</code> - True if value is a hexadecimal color regexp, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

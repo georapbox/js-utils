@@ -1,4 +1,5 @@
-const substringAfter = require('./substringAfter');
+import { describe, expect, it } from 'vitest';
+import { substringAfter } from './substringAfter.js';
 
 describe('String/substringAfter', () => {
   it('returns a substring after a specific sequence of character(s)', () => {

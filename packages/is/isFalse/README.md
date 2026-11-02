@@ -3,7 +3,7 @@
 ## isFalse(value) ⇒ <code>Boolean</code>
 Checks if a value is `false` (strict equality).
 
-**Returns**: <code>Boolean</code> - True if the 'value' is false, else false.  
+**Returns**: <code>Boolean</code> - True if the 'value' is false, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,4 +1,5 @@
-const isPlainObject = require('./isPlainObject');
+import { describe, expect, it } from 'vitest';
+import { isPlainObject } from './isPlainObject.js';
 
 describe('is/isPlainObject', () => {
   function Foo() {

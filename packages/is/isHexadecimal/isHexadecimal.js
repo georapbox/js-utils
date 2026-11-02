@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value matches a hexadecimal regular expression.
  *
@@ -22,6 +20,6 @@
  * isHexadecimal(6.6);
  * // => false
  */
-const isHexadecimal = (value) => /^[0-9a-fA-F]+$/.test(value);
-
-module.exports = isHexadecimal;
+export const isHexadecimal = (value) => {
+  return /^[0-9a-fA-F]+$/.test(value);
+};

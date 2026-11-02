@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Removes prefix from start of a string.
  *
@@ -22,12 +20,10 @@
  * removePrefix('__foobar', {});
  * // => TypeError
  */
-const removePrefix = (subjectString, prefix) => {
+export const removePrefix = (subjectString, prefix) => {
   if (typeof subjectString !== 'string' || (typeof prefix !== 'string' && typeof prefix !== 'undefined')) {
     throw new TypeError('Expected all arguments to be strings');
   }
 
   return subjectString.indexOf(prefix) === 0 ? subjectString.slice(prefix.length) : subjectString;
 };
-
-module.exports = removePrefix;

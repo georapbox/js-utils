@@ -1,4 +1,5 @@
-const remove = require('./remove');
+import { describe, expect, it } from 'vitest';
+import { remove } from './remove.js';
 
 describe('Array/remove', () => {
   it('removes elements from array at specific index(es)', () => {

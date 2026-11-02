@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.
  *
@@ -23,7 +21,7 @@
  * get(object, 'a[1].b.c', 'DEFAULT');
  * // => 'DEFAULT'
  */
-const get = (object, path, defaultValue) => {
+export const get = (object, path, defaultValue) => {
   const keys = String.prototype.split.call(path, /[,[\].]+?/);
 
   const result = keys.reduce((accum, key) => {
@@ -36,5 +34,3 @@ const get = (object, path, defaultValue) => {
 
   return result === void 0 || result === object ? defaultValue : result;
 };
-
-module.exports = get;

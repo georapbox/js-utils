@@ -1,7 +1,8 @@
-const intersect = require('./intersect');
+import { describe, expect, it } from 'vitest';
+import { intersect } from './intersect.js';
 
 describe('Array/intersect', () => {
-  const runTests = () => {
+  it('creates an array of unique values that are included in all given arrays', () => {
     const arrA = [NaN, 3, 8, 'foo', 'bar'];
     const arrB = [2, 7, 'foo', NaN, 3];
     const arrC = [1, 2, 3, NaN];
@@ -24,16 +25,24 @@ describe('Array/intersect', () => {
     expect(() => {
       return intersect({}, arrB);
     }).toThrow(new TypeError('Expected all arguments to be arrays'));
-  };
 
-  it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is supported)', () => {
-    runTests();
+    expect(() => {
+      return intersect();
+    }).toThrow(new TypeError('Expected all arguments to be arrays'));
   });
 
-  it('creates an array of unique values that are included in all given arrays (Array.prototype.includes is not supported)', () => {
-    const nativeCode = Array.prototype.includes;
-    Array.prototype.includes = null;
-    runTests();
-    Array.prototype.includes = nativeCode;
+  it('removes duplicate values while preserving their original order', () => {
+    expect(intersect([3, 1, 3, 2, 1], [1, 2, 3])).toEqual([3, 1, 2]);
+    expect(intersect([NaN, NaN, 1, 2], [NaN, 2])).toEqual([NaN, 2]);
+  });
+
+  it('removes duplicate values when only one array is provided', () => {
+    expect(intersect([1, 1, 2, 2, 3])).toEqual([1, 2, 3]);
+  });
+
+  it('returns an empty array when any input array is empty', () => {
+    expect(intersect([], [1, 2])).toEqual([]);
+    expect(intersect([1, 2], [])).toEqual([]);
+    expect(intersect([])).toEqual([]);
   });
 });

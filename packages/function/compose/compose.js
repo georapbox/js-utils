@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Performs right-to-left function composition.
  * The rightmost function may have any arity; the remaining functions must be unary.
@@ -19,7 +17,7 @@
  * const shoutGreeting = compose(capitalize, greeting);
  * shoutGreeting('John', 'Doe'); // => 'HELLO, MY NAME IS JOHN DOE.'
  */
-const compose = (...fns) => {
+export const compose = (...fns) => {
   if (fns.length === 0) {
     return (fn) => fn;
   }
@@ -34,5 +32,3 @@ const compose = (...fns) => {
     };
   });
 };
-
-module.exports = compose;

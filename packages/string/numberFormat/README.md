@@ -5,7 +5,7 @@ Formats a number based on the number of decimal points,
 the decimal separator and the thousands separator.
 If a string is provided as the first argument, will try to convert it.
 
-**Returns**: <code>String</code> - The formatted number as a string.  
+**Returns**: <code>String</code> - The formatted number as a string.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.
  * The higher the iterations, the higher is the possibility the returned value to be closer to the center of the range.
@@ -15,7 +13,7 @@
  * randomDist(0, 100, 200);
  * // => 49.27716133759931
  */
-const randomDist = (min, max, iterations) => {
+export const randomDist = (min, max, iterations) => {
   const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
 
   if (typeof min !== 'number' || typeof max !== 'number' || typeof iterations !== 'number') {
@@ -37,4 +35,4 @@ const randomDist = (min, max, iterations) => {
   return total / iterations;
 };
 
-module.exports = randomDist;
+// export { randomDist };

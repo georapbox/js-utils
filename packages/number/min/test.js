@@ -1,4 +1,5 @@
-const min = require('./min');
+import { describe, expect, it } from 'vitest';
+import { min } from './min.js';
 
 describe('Number/min', () => {
   it('finds the smallest of zero or more numbers', () => {

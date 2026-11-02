@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates an array of elements split into groups the length of `size`.
  * If array can’t be split evenly, the final chunk will be the remaining elements.
@@ -24,7 +22,7 @@
  * chunk([1, 2, 3, 4], 2.7);
  * // => [[1, 2], [3, 4]]
  */
-const chunk = (array, size) => {
+export const chunk = (array, size) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -58,5 +56,3 @@ const chunk = (array, size) => {
 
   return result;
 };
-
-module.exports = chunk;

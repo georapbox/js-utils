@@ -1,4 +1,5 @@
-const max = require('./max');
+import { describe, expect, it } from 'vitest';
+import { max } from './max.js';
 
 describe('Number/max', () => {
   it('finds the largest of zero or more numbers', () => {

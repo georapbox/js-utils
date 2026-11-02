@@ -1,4 +1,5 @@
-const isDate = require('./isDate');
+import { describe, expect, it } from 'vitest';
+import { isDate } from './isDate.js';
 
 describe('is/isDate', () => {
   it('checks if a value is Date object', () => {

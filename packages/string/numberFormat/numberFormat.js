@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Formats a number based on the number of decimal points,
  * the decimal separator and the thousands separator.
@@ -21,7 +19,7 @@
  * numberFormat(123456789.12345, 3, ',', '.');
  * // => '123.456.789,123'
  */
-const numberFormat = (nNumber, nDecimals, sDecimalSeparator, sThousandSeparator) => {
+export const numberFormat = (nNumber, nDecimals, sDecimalSeparator, sThousandSeparator) => {
   if (typeof nNumber !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
@@ -39,5 +37,3 @@ const numberFormat = (nNumber, nDecimals, sDecimalSeparator, sThousandSeparator)
 
   return integerPart.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + sThousandSeparator) + fractionalPart;
 };
-
-module.exports = numberFormat;

@@ -1,4 +1,5 @@
-const clamp = require('./clamp');
+import { describe, expect, it } from 'vitest';
+import { clamp } from './clamp.js';
 
 describe('Number/clamp', () => {
   it('throws TypeError when value is not a number', () => {

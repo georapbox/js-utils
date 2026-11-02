@@ -1,4 +1,5 @@
-const snakeCase = require('./snakeCase');
+import { describe, expect, it } from 'vitest';
+import { snakeCase } from './snakeCase.js';
 
 describe('String/snake case', () => {
   it('should convert string to snake_case', () => {

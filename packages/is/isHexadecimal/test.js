@@ -1,4 +1,5 @@
-const isHexadecimal = require('./isHexadecimal');
+import { expect, describe, it } from 'vitest';
+import { isHexadecimal } from './isHexadecimal.js';
 
 describe('is/isHexadecimal', () => {
   it('checks if a value is hexadecimal', () => {

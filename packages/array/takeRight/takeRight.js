@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a slice of `array` with `n` items taken from the end.
  *
@@ -37,7 +35,7 @@
  * takeRight({}, 2);
  * // => Throws TypeError
  */
-const takeRight = (array, n = 1) => {
+export const takeRight = (array, n = 1) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -54,5 +52,3 @@ const takeRight = (array, n = 1) => {
 
   return array.slice(n < 0 ? 0 : n, len);
 };
-
-module.exports = takeRight;

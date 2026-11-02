@@ -1,4 +1,5 @@
-const lines = require('./lines');
+import { describe, expect, it } from 'vitest';
+import { lines } from './lines.js';
 
 describe('String/lines', () => {
   const str = "You can't make\nan omelet without\r\nbreaking a few eggs.";

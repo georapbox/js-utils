@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Transforms a function of N arguments in such a way that it can
  * be called as a chain of N functions each with a single argument (arity: 1).
@@ -24,7 +22,7 @@
  * const addTwo = addOne(2);
  * addTwo(3); // => 6
  */
-const curry = (fn, arity) => {
+export const curry = (fn, arity) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
@@ -37,5 +35,3 @@ const curry = (fn, arity) => {
     return args_a.length >= (arity || fn.length) ? fn(...args_a) : (...args_b) => curried(...args_a, ...args_b);
   };
 };
-
-module.exports = curry;

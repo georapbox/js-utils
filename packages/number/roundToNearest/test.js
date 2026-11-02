@@ -1,4 +1,5 @@
-const roundToNearest = require('./roundToNearest');
+import { describe, expect, it } from 'vitest';
+import { roundToNearest } from './roundToNearest.js';
 
 describe('Number/roundToNearest', () => {
   it('rounds a number to the nearest multiple of a value provided', () => {

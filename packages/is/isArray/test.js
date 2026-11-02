@@ -1,7 +1,8 @@
-const isArray = require('./isArray');
+import { describe, expect, it } from 'vitest';
+import { isArray } from './isArray.js';
 
 describe('is/isArray', () => {
-  const runTests = () => {
+  it('checks if value is array', () => {
     expect(isArray(['a', 'b', 'c', 'd'])).toBe(true);
 
     expect(isArray({ a: 'a', b: 'b' })).toBe(false);
@@ -11,16 +12,5 @@ describe('is/isArray', () => {
     expect(isArray(null)).toBe(false);
 
     expect(isArray(undefined)).toBe(false);
-  };
-
-  it('checks if value is array (Array.isArray is supported)', () => {
-    runTests();
-  });
-
-  it('checks if value is array (Array.isArray is not supported)', () => {
-    const nativeCode = Array.isArray;
-    Array.isArray = null;
-    runTests();
-    Array.isArray = nativeCode;
   });
 });

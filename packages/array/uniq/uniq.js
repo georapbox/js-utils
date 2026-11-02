@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a duplicate-free version of an array, using [SameValueZero](https://262.ecma-international.org/7.0/#sec-samevaluezero) for equality comparisons,
  * in which only the first occurrence of each element is kept. The order of result values is determined by the order they occur in the array.
@@ -16,12 +14,10 @@
  * uniq(values);
  * // => ['a', 'b', '2', 2, obj, arr, true, false, NaN]
  */
-const uniq = (array) => {
+export const uniq = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   return Array.from(new Set(array));
 };
-
-module.exports = uniq;

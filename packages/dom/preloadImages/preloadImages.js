@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Load images to browser asynchronously so that can be cached.
  *
@@ -31,7 +29,7 @@
  *
  * preloadImages(images, success, fail, always);
  */
-const preloadImages = (images, successCallback, errorCallback, alwaysCallback) => {
+export const preloadImages = (images, successCallback, errorCallback, alwaysCallback) => {
   const list = [];
 
   if (!Array.isArray(images)) {
@@ -85,5 +83,3 @@ const preloadImages = (images, successCallback, errorCallback, alwaysCallback) =
     img.src = images[i];
   }
 };
-
-module.exports = preloadImages;

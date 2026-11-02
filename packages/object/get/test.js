@@ -1,4 +1,5 @@
-const get = require('./get');
+import { describe, expect, it } from 'vitest';
+import { get } from './get.js';
 
 describe('Object/get', () => {
   it('Gets the value at path of object. If the resolved value is undefined, the "defaultValue" is returned in its place.', () => {

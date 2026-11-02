@@ -168,42 +168,67 @@ The utilities are organized into packages based on their functionality. Each pac
 |------|-------------|
 |[convertImageToBase64](https://github.com/georapbox/js-utils/tree/master/packages/dom/convertImageToBase64)|Converts an image's content to Data URI scheme.|
 |[cookie](https://github.com/georapbox/js-utils/tree/master/packages/dom/cookie)|Create, read and delete cookies.|
-|[highResolutionCanvas](https://github.com/georapbox/js-utils/tree/master/packages/dom/highResolutionCanvas)|Processes an `HTMLCanvasElement` by downsampling on the canvas to ensure that the drawn visuals do not look blurry on high-DPI screens.|
 |[mediaQuery](https://github.com/georapbox/js-utils/tree/master/packages/dom/mediaQuery)|Determines if the document matches a media query string.|
 |[preloadImages](https://github.com/georapbox/js-utils/tree/master/packages/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
-|[whichAnimationEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichAnimationEnd)|Detects the supported property name for the "animationend" event.|
-|[whichTransitionEnd](https://github.com/georapbox/js-utils/tree/master/packages/dom/whichTransitionEnd)|Detects the supported property name for the "transitionend" event.|
+|[setupHiDPICanvas](https://github.com/georapbox/js-utils/tree/master/packages/dom/setupHiDPICanvas)|Configures an HTMLCanvasElement for sharp rendering on high-DPI screens.|
 
-## Development
+## Development setup
 
-### Installation
+### Prerequisites
 
-#### Clone repo
+The project requires `Node.js` and `npm` to be installed on your environment. Preferably, use [nvm](https://github.com/nvm-sh/nvm) Node Version Manager and use the version of Node.js specified in the `.nvmrc` file by running `nvm use`.
+
+### Clone the repository
 
 ```sh
 git clone https://github.com/georapbox/js-utils.git
+cd js-utils
 ```
 
-#### Install dev dependencies
+### Install development dependencies
 
 ```sh
 npm install
 ```
 
-### Test
+### Testing
 
 ```sh
 npm test
 npm run test:watch # Run tests in watch mode
 ```
 
+### Linting
+
+Lint all JavaScript files using [Oxlint](https://oxc.rs/docs/guide/usage/linter.html):
+
+```sh
+npm run lint
+```
+
+### Formatting
+
+Format all JavaScript files using [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html):
+
+```sh
+npm run fmt
+```
+
+Check formatting without modifying files:
+
+```sh
+npm run fmt:check
+```
+
 ### Generate documentation
 
-Generates markdown documentation for a single file and prints it to stdout.
+Run the following command from the repository root to generate Markdown documentation for a single file and print it to stdout.
 
 ```sh
 npm run docs <path-to-file>
 ```
+
+The file path must be relative to the repository root.
 
 ## License
 

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Removes suffix from start of a string.
  *
@@ -22,7 +20,7 @@
  * removeSuffix('foobar__', {});
  * // => TypeError
  */
-const removeSuffix = (subjectString, suffix) => {
+export const removeSuffix = (subjectString, suffix) => {
   if (typeof subjectString !== 'string' || (typeof suffix !== 'string' && typeof suffix !== 'undefined')) {
     throw new TypeError('Expected a string for first and second argument argument');
   }
@@ -34,5 +32,3 @@ const removeSuffix = (subjectString, suffix) => {
     ? subjectString.slice(0, strLen - suffixLen)
     : subjectString;
 };
-
-module.exports = removeSuffix;

@@ -1,4 +1,5 @@
-const lerp = require('./lerp');
+import { describe, expect, it } from 'vitest';
+import { lerp } from './lerp.js';
 
 describe('Number/lerp', () => {
   it('converts a normalized value to the value that the normalized value points to', () => {

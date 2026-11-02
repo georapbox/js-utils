@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Splits string into an array of its words. Any punctuation is stripped.
  *
@@ -14,7 +12,7 @@
  * words('🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🥭');
  * // => ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭']
  */
-const words = (subjectString) => {
+export const words = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -25,5 +23,3 @@ const words = (subjectString) => {
 
   return subjectString.replace(punctRegExp, '').match(nonSpaceRegExp) || [];
 };
-
-module.exports = words;

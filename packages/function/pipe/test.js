@@ -1,4 +1,5 @@
-const pipe = require('./pipe.js');
+import { describe, expect, it } from 'vitest';
+import { pipe } from './pipe.js';
 
 describe('pipe', () => {
   const capitalize = (a) => a.toUpperCase();

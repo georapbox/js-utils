@@ -1,4 +1,5 @@
-const capitalize = require('./capitalize');
+import { describe, expect, it } from 'vitest';
+import { capitalize } from './capitalize.js';
 
 describe('String/capitalize', () => {
   it('should capitalize the first character of a string', () => {

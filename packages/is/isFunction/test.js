@@ -1,4 +1,5 @@
-const isFunction = require('./isFunction');
+import { describe, expect, it } from 'vitest';
+import { isFunction } from './isFunction.js';
 
 describe('is/isFunction', () => {
   it('checks if a value is function', () => {

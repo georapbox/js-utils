@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Removes one or more elements from an array at the specified index(es).
  *
@@ -32,12 +30,10 @@
  * remove(arr, NaN);
  * // => [1, 2, 3, 4, 5]
  */
-const remove = (array, ...indexes) => {
+export const remove = (array, ...indexes) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   return array.filter((_, i) => indexes.indexOf(i) === -1);
 };
-
-module.exports = remove;

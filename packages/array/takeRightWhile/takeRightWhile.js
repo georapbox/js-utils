@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.
  * The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
@@ -23,7 +21,7 @@
  * });
  * // => [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
  */
-const takeRightWhile = (array, predicate) => {
+export const takeRightWhile = (array, predicate) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -41,5 +39,3 @@ const takeRightWhile = (array, predicate) => {
 
   return array.slice(index + 1, len);
 };
-
-module.exports = takeRightWhile;

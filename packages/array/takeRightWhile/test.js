@@ -1,4 +1,5 @@
-const takeRightWhile = require('./takeRightWhile');
+import { describe, expect, it } from 'vitest';
+import { takeRightWhile } from './takeRightWhile.js';
 
 describe('Array/takeRightWhile', () => {
   it('creates a slice of array with n items taken from the end', () => {

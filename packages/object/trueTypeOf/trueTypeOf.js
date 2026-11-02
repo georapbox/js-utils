@@ -42,8 +42,6 @@
  * trueTypeOf(new Proxy({}, {})); // => 'object'
  * trueTypeOf(new Promise(() => {})); // => 'promise'
  */
-const trueTypeOf = (value) => {
+export const trueTypeOf = (value) => {
   return Object.prototype.toString.call(value).slice(8, -1).toLowerCase();
 };
-
-module.exports = trueTypeOf;

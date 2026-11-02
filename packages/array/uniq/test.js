@@ -1,4 +1,5 @@
-const uniq = require('./uniq');
+import { describe, expect, it } from 'vitest';
+import { uniq } from './uniq.js';
 
 describe('Array/uniq', () => {
   it('removes duplicate values from an array', () => {

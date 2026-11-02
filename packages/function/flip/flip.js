@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a function that invokes the original function with its parameters reversed.
  *
@@ -12,12 +10,10 @@
  *
  * flipped(1, 2, 3, 4); // => [4, 3, 2, 1]
  */
-const flip = (fn) => {
+export const flip = (fn) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
   return (...args) => fn(...args.reverse());
 };
-
-module.exports = flip;

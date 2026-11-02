@@ -1,4 +1,5 @@
-const escapeRegExp = require('./escapeRegExp');
+import { describe, expect, it } from 'vitest';
+import { escapeRegExp } from './escapeRegExp.js';
 
 describe('String/escapeRegExp', () => {
   it('should RegExp special characters in string', () => {

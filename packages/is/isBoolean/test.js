@@ -1,4 +1,5 @@
-const isBoolean = require('./isBoolean');
+import { expect, describe, it } from 'vitest';
+import { isBoolean } from './isBoolean.js';
 
 describe('is/isBoolean', () => {
   it('checks if a value is boolean', () => {

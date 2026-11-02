@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.
  * The order of grouped values is determined by the order they occur in the `array`.
@@ -26,7 +24,7 @@
  * ], 'name');
  * // => { 'John': [{'name': 'John'}, {'name': 'John'}], 'George': [{'name': 'George'}, {'name': 'George'}], 'Helen': [{'name': 'Helen'}, {'name': 'Helen'}], 'Alex': [{'name': 'Alex'}] }
  */
-const groupBy = (array, iteratee) => {
+export const groupBy = (array, iteratee) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -38,5 +36,3 @@ const groupBy = (array, iteratee) => {
     return accumulator;
   }, {});
 };
-
-module.exports = groupBy;

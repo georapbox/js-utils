@@ -1,11 +1,8 @@
-'use strict';
-
 /**
  * Checks if a value is an iterable.
  *
  * @param {*} value The value to check.
  * @returns {Boolean} Returns `true` if value is iterable; otherwise `false`.
- * @throws {TypeError} If `Symbol` or `Symbol.iterator` is not supported by the environment.
  * @example
  *
  * function* generatorFunc() {
@@ -33,16 +30,6 @@
  * isIterable(null);
  * // => false
  */
-const isIterable = (value) => {
-  if (typeof Symbol === 'undefined' || !Symbol.iterator) {
-    throw new TypeError('Symbol or Symbol.iterator is not supported by your environment.');
-  }
-
-  if (value == null) {
-    return false;
-  }
-
-  return typeof value[Symbol.iterator] === 'function';
+export const isIterable = (value) => {
+  return value != null && typeof value[Symbol.iterator] === 'function';
 };
-
-module.exports = isIterable;

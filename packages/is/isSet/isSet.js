@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is classified as a Set object.
  *
@@ -13,8 +11,6 @@
  * isSet(new WeakSet());
  * // => false
  */
-const isSet = (value) => {
+export const isSet = (value) => {
   return typeof value === 'object' && Object.prototype.toString.call(value) === '[object Set]';
 };
-
-module.exports = isSet;

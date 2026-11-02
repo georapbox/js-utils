@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is even.
  *
@@ -28,12 +26,10 @@
  * isEven();
  * // => false
  */
-const isEven = (value) => {
+export const isEven = (value) => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }
 
   return value % 2 === 0;
 };
-
-module.exports = isEven;

@@ -1,4 +1,5 @@
-const shuffle = require('./shuffle');
+import { describe, expect, it } from 'vitest';
+import { shuffle } from './shuffle.js';
 
 describe('Array/shuffle', () => {
   it('shuffles an array', () => {

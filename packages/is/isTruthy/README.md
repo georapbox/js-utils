@@ -3,7 +3,7 @@
 ## isTruthy(value) ⇒ <code>Boolean</code>
 Checks if a value is a truthy one.
 
-**Returns**: <code>Boolean</code> - Returns `true` if the value is truthy, otherwise `false`.  
+**Returns**: <code>Boolean</code> - Returns `true` if the value is truthy, otherwise `false`.
 
 | Param | Type | Description |
 | --- | --- | --- |

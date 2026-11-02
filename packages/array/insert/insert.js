@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Inserts one or more elements to array at a specific index.
  *
@@ -40,7 +38,7 @@
  * insert(arr, 2);
  * // => [1, 2, 3]
  */
-const insert = (array, start, ...elements) => {
+export const insert = (array, start, ...elements) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -55,5 +53,3 @@ const insert = (array, start, ...elements) => {
 
   return result;
 };
-
-module.exports = insert;

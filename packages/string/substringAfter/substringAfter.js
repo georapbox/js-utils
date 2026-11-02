@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Returns a substring after a specific sequence of character(s).
  * By default looks for the first occuerence of this sequence.
@@ -31,7 +29,7 @@
  * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
  * // => ''
  */
-const substringAfter = (subjectString, characters, last) => {
+export const substringAfter = (subjectString, characters, last) => {
   if (typeof subjectString !== 'string' || typeof characters !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
@@ -40,5 +38,3 @@ const substringAfter = (subjectString, characters, last) => {
 
   return index !== -1 ? subjectString.substring(index + characters.length) : '';
 };
-
-module.exports = substringAfter;

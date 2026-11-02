@@ -1,4 +1,5 @@
-const tail = require('./tail');
+import { describe, expect, it } from 'vitest';
+import { tail } from './tail.js';
 
 describe('Array/tail', () => {
   it('Gets all but the first element of array', () => {

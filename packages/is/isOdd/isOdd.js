@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is odd.
  *
@@ -28,12 +26,10 @@
  * isOdd();
  * // => false
  */
-const isOdd = (value) => {
+export const isOdd = (value) => {
   if (typeof value === 'object' || typeof value === 'undefined') {
     return false;
   }
 
   return value % 2 === 1;
 };
-
-module.exports = isOdd;

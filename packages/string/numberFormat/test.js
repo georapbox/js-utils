@@ -1,4 +1,5 @@
-const numberFormat = require('./numberFormat');
+import { describe, expect, it } from 'vitest';
+import { numberFormat } from './numberFormat.js';
 
 describe('String/numberFormat', () => {
   it('formats a number based on the number of decimal points, the decimal separator and the thousands separator', () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a finite number.
  *
@@ -31,14 +29,6 @@
  * isFiniteNum('0');
  * // => false
  */
-const isFiniteNum = (value) => {
-  if (Number.isFinite) {
-    return Number.isFinite(value);
-  }
-
-  return (
-    value != null && typeof value === 'number' && value !== Infinity && value !== -Infinity && !Number.isNaN(value)
-  );
+export const isFiniteNum = (value) => {
+  return Number.isFinite(value);
 };
-
-module.exports = isFiniteNum;

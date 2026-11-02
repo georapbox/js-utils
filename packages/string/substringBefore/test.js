@@ -1,4 +1,5 @@
-const substringBefore = require('./substringBefore');
+import { describe, expect, it } from 'vitest';
+import { substringBefore } from './substringBefore.js';
 
 describe('String/substringBefore', () => {
   it('should return a substring before a specific sequence of character(s)', () => {

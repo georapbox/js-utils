@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Rounds a number to the nearest multiple of a value provided.
  *
@@ -27,12 +25,10 @@
  * roundToNearest(100);
  * // => NaN
  */
-const roundToNearest = (value, nearest) => {
+export const roundToNearest = (value, nearest) => {
   if (typeof value !== 'number' || typeof nearest !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
   return Math.round(value / nearest) * nearest;
 };
-
-module.exports = roundToNearest;

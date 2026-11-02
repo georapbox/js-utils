@@ -1,4 +1,5 @@
-const unary = require('./unary.js');
+import { describe, expect, it } from 'vitest';
+import { unary } from './unary.js';
 
 describe('Function/unary', () => {
   const fn = (a, b) => [a, b];

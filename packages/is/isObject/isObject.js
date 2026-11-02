@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is the [language type](https://262.ecma-international.org/#sec-ecmascript-language-types) of `Object`.
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
@@ -56,8 +54,6 @@
  * isObject(Symbol('foo'));
  * // => false
  */
-const isObject = (value) => {
+export const isObject = (value) => {
   return !!value && (typeof value === 'object' || typeof value === 'function');
 };
-
-module.exports = isObject;

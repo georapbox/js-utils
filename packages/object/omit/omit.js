@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.
  *
@@ -29,7 +27,7 @@
  * omit(obj, ['key_not_exists']);
  * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
  */
-const omit = (obj, props) => {
+export const omit = (obj, props) => {
   if (!Array.isArray(props) || props.length === 0) {
     props = [];
   }
@@ -41,5 +39,3 @@ const omit = (obj, props) => {
     return accum;
   }, {});
 };
-
-module.exports = omit;

@@ -3,7 +3,7 @@
 ## isOdd(value) ⇒ <code>Boolean</code>
 Checks if a value is odd.
 
-**Returns**: <code>Boolean</code> - True if value is odd, else false.  
+**Returns**: <code>Boolean</code> - True if value is odd, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

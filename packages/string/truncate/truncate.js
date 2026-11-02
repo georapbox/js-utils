@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Truncates a string based on character count.
  *
@@ -43,7 +41,7 @@
  * truncate(str, '10');
  * // Throws TypeError
  */
-const truncate = (subjectString, characterCount, delimiter = '') => {
+export const truncate = (subjectString, characterCount, delimiter = '') => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -70,5 +68,3 @@ const truncate = (subjectString, characterCount, delimiter = '') => {
 
   return truncated;
 };
-
-module.exports = truncate;

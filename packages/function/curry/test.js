@@ -1,4 +1,5 @@
-const curry = require('./curry.js');
+import { describe, expect, it } from 'vitest';
+import { curry } from './curry.js';
 
 describe('curry', () => {
   it('should return a curried function until all expected arguments are satisfied', () => {

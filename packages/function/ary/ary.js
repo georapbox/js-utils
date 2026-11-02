@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a function that accepts up to `n` arguments, ignoring any additional arguments.
  *
@@ -16,7 +14,7 @@
  *
  * array.map(toInteger); // => [1, 2, 3]
  */
-const ary = (fn, n) => {
+export const ary = (fn, n) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
@@ -31,5 +29,3 @@ const ary = (fn, n) => {
     return fn(...args.slice(0, arityCap));
   };
 };
-
-module.exports = ary;

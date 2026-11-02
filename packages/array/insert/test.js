@@ -1,4 +1,5 @@
-const insert = require('./insert');
+import { describe, expect, it } from 'vitest';
+import { insert } from './insert.js';
 
 describe('Array/insert', () => {
   it('inserts elements to array at specific index', () => {

@@ -1,8 +1,9 @@
-const once = require('./once');
+import { describe, expect, it, vi } from 'vitest';
+import { once } from './once.js';
 
 describe('Function/once', () => {
   it('should execute a function only one time', () => {
-    const fn = jest.fn();
+    const fn = vi.fn();
     const canOnlyFireOnce = once(fn);
 
     canOnlyFireOnce('foo');

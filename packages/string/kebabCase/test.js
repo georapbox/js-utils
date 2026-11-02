@@ -1,4 +1,5 @@
-const kebabCase = require('./kebabCase');
+import { describe, expect, it } from 'vitest';
+import { kebabCase } from './kebabCase.js';
 
 describe('String/kebabCase', () => {
   it('should convert string to kebab case', () => {

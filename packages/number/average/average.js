@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Calculates the average of a set of numbers.
  * Accepts any number of numbers as parameters, or an array of numbers.
@@ -30,7 +28,7 @@
  * average(5, 4, null, true, '12', Infinity); // => 0
  * average([5, 4, null, true, '12', Infinity]); // => 0
  */
-const average = (...nums) => {
+export const average = (...nums) => {
   let sum = 0;
   let count = 0;
   let len = nums.length;
@@ -52,5 +50,3 @@ const average = (...nums) => {
 
   return count > 0 ? sum / count : 0;
 };
-
-module.exports = average;

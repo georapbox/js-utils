@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Limits the number of times a function can be called in a given period.
  *
@@ -16,7 +14,7 @@
  *
  * window.addEventListener('resize', throttledHandler, false);
  */
-const throttle = (fn, wait = 0) => {
+export const throttle = (fn, wait = 0) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
@@ -42,5 +40,3 @@ const throttle = (fn, wait = 0) => {
     }
   };
 };
-
-module.exports = throttle;

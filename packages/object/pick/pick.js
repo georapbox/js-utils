@@ -29,7 +29,7 @@
  * pick(object, ['d']);
  * // => {}
  */
-const pick = (object, paths, pickOwnKeys) => {
+export const pick = (object, paths, pickOwnKeys) => {
   const result = {};
   const type = Object.prototype.toString.call(object);
 
@@ -68,5 +68,3 @@ const pick = (object, paths, pickOwnKeys) => {
 
   return result;
 };
-
-module.exports = pick;

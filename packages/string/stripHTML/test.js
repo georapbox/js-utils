@@ -1,4 +1,5 @@
-const stripHTML = require('./stripHTML');
+import { describe, expect, it } from 'vitest';
+import { stripHTML } from './stripHTML.js';
 
 describe('String/stripHTML', () => {
   it('should remove all HTML tags from a string', () => {

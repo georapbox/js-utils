@@ -3,7 +3,7 @@
 ## isWeakMap(value) ⇒ <code>Boolean</code>
 Checks if a value is classified as a WeakMap object.
 
-**Returns**: <code>Boolean</code> - True if value is classified as a WeakMap object, else false.  
+**Returns**: <code>Boolean</code> - True if value is classified as a WeakMap object, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

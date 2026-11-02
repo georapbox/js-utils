@@ -1,4 +1,5 @@
-const compact = require('./compact');
+import { describe, expect, it } from 'vitest';
+import { compact } from './compact.js';
 
 describe('Array/compact', () => {
   const arr = [0, 1, false, 2, '', 3, null];

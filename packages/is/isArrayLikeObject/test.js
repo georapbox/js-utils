@@ -1,4 +1,5 @@
-const isArrayLikeObject = require('./isArrayLikeObject');
+import { expect, describe, it } from 'vitest';
+import { isArrayLikeObject } from './isArrayLikeObject.js';
 
 describe('is/isArrayLikeObject', () => {
   const noop = () => void 0;

@@ -1,4 +1,5 @@
-const pickBy = require('./pickBy');
+import { describe, expect, it } from 'vitest';
+import { pickBy } from './pickBy.js';
 
 describe('Object/pickBy', () => {
   it('creates an object composed of the object enumerable properties that predicate returns truthy for', () => {

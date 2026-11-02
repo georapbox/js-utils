@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Deburrs a string by converting latin-1 supplementary letters to
  * basic latin letters and removing combining diacritical marks.
@@ -11,18 +9,10 @@
  * @returns {String} The deburred string.
  * @example
  *
- * const str = 'Maître Corbeau, sur un arbre perché,' +
- *   'Tenait en son bec un fromage.' +
- *   'Maître Renard, par l’odeur alléché,' +
- *   'Lui tint à peu près ce langage.';
- *
- * deburr(str);
- * // => 'Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.'
- *
- * deburr('déjà vu');
- * // => 'deja vu'
+ * deburr('Maître Corbeau, sur un arbre perché, Tenait en son bec un fromage. Maître Renard, par l’odeur alléché, Lui tint à peu près ce langage.');
+ * // => 'Maitre Corbeau, sur un arbre perche, Tenait en son bec un fromage. Maitre Renard, par l’odeur alleche, Lui tint a peu pres ce langage.'
  */
-const deburr = (subjectString) => {
+export const deburr = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -105,5 +95,3 @@ const deburr = (subjectString) => {
 
   return subjectString.replace(reLatin1, (letter) => deburredLetters[letter]).replace(reComboMark, '');
 };
-
-module.exports = deburr;

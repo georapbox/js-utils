@@ -3,7 +3,7 @@
 ## isString(value) ⇒ <code>Boolean</code>
 Checks if a value is string.
 
-**Returns**: <code>Boolean</code> - True if value is string, else false.  
+**Returns**: <code>Boolean</code> - True if value is string, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

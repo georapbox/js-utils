@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates an array with the lines of a a string.
  *
@@ -19,12 +17,10 @@
  * lines(str2);
  * // => ['You can't make', 'an omelet without', 'breaking a few eggs.']
  */
-const lines = (subjectString) => {
+export const lines = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString.replace(/\r\n/g, '\n').split('\n');
 };
-
-module.exports = lines;

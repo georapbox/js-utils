@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Removes all of the punctuation from a string.
  *
@@ -13,7 +11,7 @@
  * stripPunctuation(str);
  * // => You cant make an omelet without breaking a few eggs
  */
-const stripPunctuation = (subjectString) => {
+export const stripPunctuation = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -24,5 +22,3 @@ const stripPunctuation = (subjectString) => {
 
   return subjectString.replace(punctRegExp, '').replace(spaceRegExp, ' ');
 };
-
-module.exports = stripPunctuation;

@@ -1,4 +1,5 @@
-const supplant = require('./supplant');
+import { describe, expect, it } from 'vitest';
+import { supplant } from './supplant.js';
 
 describe('String/supplant', () => {
   it('should do variable substitution on a string', () => {

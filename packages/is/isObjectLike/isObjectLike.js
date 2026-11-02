@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".
  *
@@ -55,6 +53,6 @@
  * isObjectLike(Symbol('foo'));
  * // => false
  */
-const isObjectLike = (value) => !!value && typeof value === 'object';
-
-module.exports = isObjectLike;
+export const isObjectLike = (value) => {
+  return !!value && typeof value === 'object';
+};

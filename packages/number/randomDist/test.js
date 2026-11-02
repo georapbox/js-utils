@@ -1,4 +1,5 @@
-const randomDist = require('./randomDist');
+import { describe, expect, it } from 'vitest';
+import { randomDist } from './randomDist.js';
 
 describe('Number/randomDist', () => {
   it('should return a weighted random number that tends to center', () => {

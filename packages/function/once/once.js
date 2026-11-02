@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Ensure a given functionality only runs once.
  *
@@ -14,7 +12,7 @@
  * canOnlyFireOnce(); // => 1
  * canOnlyFireOnce(); // => 1
  */
-const once = (fn) => {
+export const once = (fn) => {
   let result;
 
   if (typeof fn !== 'function') {
@@ -30,5 +28,3 @@ const once = (fn) => {
     return result;
   };
 };
-
-module.exports = once;

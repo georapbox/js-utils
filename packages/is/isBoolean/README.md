@@ -3,7 +3,7 @@
 ## isBoolean(value) ⇒ <code>Boolean</code>
 Checks if a value is boolean.
 
-**Returns**: <code>Boolean</code> - True if the 'value' is a boolean value, else false.  
+**Returns**: <code>Boolean</code> - True if the 'value' is a boolean value, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,10 +1,11 @@
-const unescapeHTML = require('./unescapeHTML');
+import { describe, expect, it } from 'vitest';
+import { unescapeHTML } from './unescapeHTML.js';
 
 describe('String/unescapeHTML', () => {
   it('should unescape a HTML string', () => {
     expect(unescapeHTML('&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;')).toEqual(
       '<script src="main.js"></script>'
-    ); // eslint-disable-line no-useless-escape
+    );
 
     expect(unescapeHTML('Hello &amp; &lt;span&gt;World&lt;/span&gt;')).toEqual('Hello & <span>World</span>');
 

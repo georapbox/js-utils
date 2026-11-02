@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Returns a function, that, as long as it continues to be invoked, will not
  * be triggered. The function will be called after it stops being called for
@@ -19,7 +17,7 @@
  *
  * window.addEventListener('resize', debouncedHandler, false);
  */
-const debounce = (fn, wait = 0, immediate = false) => {
+export const debounce = (fn, wait = 0, immediate = false) => {
   let timerId = null;
 
   if (typeof fn !== 'function') {
@@ -41,5 +39,3 @@ const debounce = (fn, wait = 0, immediate = false) => {
     }, wait);
   };
 };
-
-module.exports = debounce;

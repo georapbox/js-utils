@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is string.
  *
@@ -19,8 +17,6 @@
  * isString({ a: 'a', b: 'b' });
  * // => false
  */
-const isString = (value) => {
+export const isString = (value) => {
   return typeof value === 'string' || Object.prototype.toString.call(value) === '[object String]';
 };
-
-module.exports = isString;

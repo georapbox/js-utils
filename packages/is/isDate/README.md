@@ -3,7 +3,7 @@
 ## isDate(value) ⇒ <code>Boolean</code>
 Checks if a value is a date object.
 
-**Returns**: <code>Boolean</code> - True if 'value' is a date, else returns false.  
+**Returns**: <code>Boolean</code> - True if 'value' is a date, else returns false.
 
 | Param | Type | Description |
 | --- | --- | --- |

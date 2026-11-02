@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a falsy one.
  *
@@ -31,6 +29,6 @@
  * isFalsy(NaN);
  * // => true
  */
-const isFalsy = (value) => !value;
-
-module.exports = isFalsy;
+export const isFalsy = (value) => {
+  return !value;
+};

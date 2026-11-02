@@ -1,4 +1,5 @@
-const zip = require('./zip');
+import { describe, expect, it } from 'vitest';
+import { zip } from './zip.js';
 
 describe('Array/zip', () => {
   it('creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on', () => {
@@ -29,6 +30,19 @@ describe('Array/zip', () => {
 
     expect(() => {
       return zip({}, {});
-    }).toThrow(new TypeError('Expected all arguments passed to be arrays'));
+    }).toThrow(new TypeError('Expected all arguments to be arrays'));
+  });
+
+  it('handles sparse arrays by filling missing elements with undefined', () => {
+    const arr1 = Array(3);
+    arr1[2] = 3;
+
+    const arr2 = [10];
+
+    expect(zip(arr1, arr2)).toEqual([
+      [undefined, 10],
+      [undefined, undefined],
+      [3, undefined]
+    ]);
   });
 });

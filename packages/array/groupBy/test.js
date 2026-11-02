@@ -1,4 +1,5 @@
-const groupBy = require('./groupBy');
+import { describe, expect, it } from 'vitest';
+import { groupBy } from './groupBy.js';
 
 describe('Array/groupBy', () => {
   it('Creates an object composed of keys generated from the results of running each element of array through iteratee', () => {

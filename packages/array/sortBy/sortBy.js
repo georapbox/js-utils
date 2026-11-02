@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Sorts an array of plain objects (not in place) by property.
  *
@@ -31,7 +29,7 @@
  * });
  * // => "[{"h_id":8,"city":"Dallas","price":"162500"},{"h_id":4,"city":"Bevery Hills","price":"162500.5"},{"h_id":5,"city":"new York","price":"162500.1"}]"
  */
-const sortBy = (array, field, ascending = true, primer) => {
+export const sortBy = (array, field, ascending = true, primer) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -55,5 +53,3 @@ const sortBy = (array, field, ascending = true, primer) => {
     return (A < B ? -1 : A > B ? 1 : 0) * [-1, 1][+!!ascending];
   });
 };
-
-module.exports = sortBy;

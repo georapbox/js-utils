@@ -1,4 +1,5 @@
-const drop = require('./drop');
+import { describe, expect, it } from 'vitest';
+import { drop } from './drop.js';
 
 describe('Array/drop', () => {
   it('creates a slice of array with n elements dropped from the beginning', () => {

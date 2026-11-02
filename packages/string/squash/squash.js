@@ -19,7 +19,7 @@
  * squash('\tLorem \n\vispum \tdolor \fsit \n amet  ', true);
  * // => 'Loremispumdolorsitamet'
  */
-const squash = (subjectString, squashEscapeSequences) => {
+export const squash = (subjectString, squashEscapeSequences) => {
   const regex = squashEscapeSequences ? /\s+/g : / /g;
 
   if (typeof subjectString !== 'string') {
@@ -28,5 +28,3 @@ const squash = (subjectString, squashEscapeSequences) => {
 
   return subjectString.replace(regex, '');
 };
-
-module.exports = squash;

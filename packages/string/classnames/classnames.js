@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a string by conditionally joining classNames together.
  *
@@ -25,7 +23,7 @@
  * classnames('foo', 0, false, undefined, null, { bar: 1 }, NaN, { baz: 0 }); // falsy values are ignored
  * // => 'foo bar'
  */
-const classnames = (...args) => {
+export const classnames = (...args) => {
   const len = args.length;
   const separator = ' ';
   let result = '';
@@ -54,5 +52,3 @@ const classnames = (...args) => {
 
   return result;
 };
-
-module.exports = classnames;

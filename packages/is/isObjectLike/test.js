@@ -1,4 +1,5 @@
-const isObjectLike = require('./isObjectLike');
+import { describe, expect, it } from 'vitest';
+import { isObjectLike } from './isObjectLike.js';
 
 describe('is/isObjectLike', () => {
   it('checks if a value is object-like', () => {

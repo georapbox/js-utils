@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a new function that invokes the provided function `fn` with `partials` appended to the arguments it receives.
  *
@@ -14,12 +12,10 @@
  *
  * greetMrJoeBlack('Hello'); //=> Hello, Mr. Joe Black.
  */
-const partialRight = (fn, ...args_a) => {
+export const partialRight = (fn, ...args_a) => {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
   return (...args_b) => fn(...args_b, ...args_a);
 };
-
-module.exports = partialRight;

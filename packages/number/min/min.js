@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Finds the smallest of zero or more numbers.
  *
@@ -37,12 +35,10 @@
  * min();
  * // => Infinity
  */
-const min = (...nums) => {
+export const min = (...nums) => {
   if (nums.length === 1 && Array.isArray(nums[0])) {
     nums = nums[0];
   }
 
   return nums.reduce((a, b) => Math.min(a, b), Infinity);
 };
-
-module.exports = min;

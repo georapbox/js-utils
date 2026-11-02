@@ -1,4 +1,5 @@
-const compose = require('./compose.js');
+import { describe, expect, it } from 'vitest';
+import { compose } from './compose.js';
 
 describe('compose', () => {
   const capitalize = (a) => a.toUpperCase();

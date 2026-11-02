@@ -1,4 +1,5 @@
-const isSymbol = require('./isSymbol');
+import { describe, expect, it } from 'vitest';
+import { isSymbol } from './isSymbol.js';
 
 describe('is/isSymbol', () => {
   it('checks if a value is classified as a Symbol primitive', () => {

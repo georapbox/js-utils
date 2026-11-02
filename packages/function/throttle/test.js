@@ -1,31 +1,33 @@
-const throttle = require('./throttle');
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { throttle } from './throttle.js';
 
 describe('Function/throttle', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
-    jest.spyOn(global, 'setTimeout');
+    vi.useFakeTimers();
   });
 
   afterEach(() => {
-    jest.clearAllTimers();
+    vi.useRealTimers();
+    vi.restoreAllMocks();
   });
 
   it('limits the number of times a function can be called in a given period', () => {
-    const func = jest.fn();
+    const setTimeoutSpy = vi.spyOn(globalThis, 'setTimeout');
+    const func = vi.fn();
     const throttled = throttle(func);
 
     throttled();
     throttled();
 
-    expect(setTimeout).toHaveBeenCalledTimes(1);
+    expect(setTimeoutSpy).toHaveBeenCalledTimes(1);
 
     expect(func).toHaveBeenCalledTimes(1);
 
-    jest.advanceTimersByTime(200);
+    vi.advanceTimersByTime(200);
 
     throttled();
 
-    expect(setTimeout).toHaveBeenCalledTimes(2);
+    expect(setTimeoutSpy).toHaveBeenCalledTimes(2);
   });
 
   it('throws if first argument is not a function', () => {

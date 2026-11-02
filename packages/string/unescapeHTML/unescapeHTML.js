@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.
  *
@@ -17,7 +15,7 @@
  * unescapeHTML('&lt;p data-id&#x3D;&quot;1&quot;&gt;lorem ipsum&lt;/p&gt;');
  * // => '<p data-id="1">lorem ipsum</p>'
  */
-const unescapeHTML = (subjectString) => {
+export const unescapeHTML = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -28,7 +26,7 @@ const unescapeHTML = (subjectString) => {
     '&gt;': '>',
     '&quot;': '"',
     '&#34;': '"',
-    '&#39;': "'" // eslint-disable-line quotes
+    '&#39;': "'"
   };
 
   const regexEscapedHtml = /&(?:amp|lt|gt|quot|#34|#39);/g;
@@ -38,5 +36,3 @@ const unescapeHTML = (subjectString) => {
     ? subjectString.replace(regexEscapedHtml, (tag) => htmlUnescapes[tag] || tag)
     : subjectString;
 };
-
-module.exports = unescapeHTML;

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates an array with only the unique values from the first array,
  * by excluding all values from the second array using strict equality for comparisons.
@@ -23,7 +21,7 @@
  * diff(a, []);
  * // => [1, 2, 3, 4, 5, obj]
  */
-const diff = (arrayA, arrayB) => {
+export const diff = (arrayA, arrayB) => {
   if (!Array.isArray(arrayA) || !Array.isArray(arrayB)) {
     throw new TypeError('Expected both arguments to be arrays');
   }
@@ -39,5 +37,3 @@ const diff = (arrayA, arrayB) => {
 
   return arr;
 };
-
-module.exports = diff;

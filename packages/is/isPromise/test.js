@@ -1,4 +1,5 @@
-const isPromise = require('./isPromise');
+import { describe, expect, it } from 'vitest';
+import { isPromise } from './isPromise.js';
 
 describe('is/isPromise', () => {
   it('checks if a value is a Promise', () => {
@@ -39,7 +40,6 @@ describe('is/isPromise', () => {
       get [Symbol.toStringTag]() {
         return 'Promise';
       },
-      // oxlint-disable-next-line unicorn/no-thenable
       then() {},
       catch() {}
     };

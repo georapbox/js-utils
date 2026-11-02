@@ -1,4 +1,5 @@
-const isEmpty = require('./isEmpty');
+import { describe, expect, it } from 'vitest';
+import { isEmpty } from './isEmpty.js';
 
 describe('is/isEmpty', () => {
   it('checks if a value is an empty object, collection, map, or set.', () => {

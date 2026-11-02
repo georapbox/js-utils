@@ -3,7 +3,7 @@
 ## isNull(value) ⇒ <code>Boolean</code>
 Checks if a value is `null`.
 
-**Returns**: <code>Boolean</code> - True if the value is null, else false.  
+**Returns**: <code>Boolean</code> - True if the value is null, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

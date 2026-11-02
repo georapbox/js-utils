@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Capitalizes the first character of a string.
  *
@@ -18,7 +16,7 @@
  * capitalize('hElLo', true);
  * // => 'Hello'
  */
-const capitalize = (subjectString, lowerCaseRest = false) => {
+export const capitalize = (subjectString, lowerCaseRest = false) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -29,5 +27,3 @@ const capitalize = (subjectString, lowerCaseRest = false) => {
 
   return firstChar + restStr;
 };
-
-module.exports = capitalize;

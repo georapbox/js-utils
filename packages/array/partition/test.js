@@ -1,4 +1,5 @@
-const partition = require('./partition');
+import { describe, expect, it } from 'vitest';
+import { partition } from './partition.js';
 
 describe('Array/partition', () => {
   it('creates an array of elements split into two groups', () => {

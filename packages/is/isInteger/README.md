@@ -4,7 +4,7 @@
 Checks if a value is an integer number.
 If the value is NaN or infinite, return false.
 
-**Returns**: <code>Boolean</code> - True if value is integer, else false.  
+**Returns**: <code>Boolean</code> - True if value is integer, else false.
 
 | Param | Type | Description |
 | --- | --- | --- |

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a number.
  *
@@ -35,8 +33,6 @@
  * isNumber(NaN);
  * // => true
  */
-const isNumber = (value) => {
+export const isNumber = (value) => {
   return typeof value === 'number' || Object.prototype.toString.call(value) === '[object Number]';
 };
-
-module.exports = isNumber;

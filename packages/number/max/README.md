@@ -6,7 +6,7 @@ Finds the largest of zero or more numbers.
 NOTE: Prefer using an array of numbers if you want to compare a relatively large amount of numbers.  
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max#getting_the_maximum_element_of_an_array
 
-**Returns**: <code>Number</code> - The largest number from the arguments provided.  
+**Returns**: <code>Number</code> - The largest number from the arguments provided.
 
 | Param | Type | Description |
 | --- | --- | --- |

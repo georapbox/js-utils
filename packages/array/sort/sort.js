@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Sorts an array of primitive values of the same type.
  * Any `null`, `undefined` or `NaN` values are removed from the result array.
@@ -29,7 +27,7 @@
  * sort([4, 6, undefined, 2, 9, -10, 100, 321, -2, null, 99], false);
  * // => [321, 100, 99, 9, 6, 4, 2, -2, -10]
  */
-const sort = (array, ascending = true) => {
+export const sort = (array, ascending = true) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -39,5 +37,3 @@ const sort = (array, ascending = true) => {
     .map((el) => (typeof el === 'string' ? el.toLowerCase() : el))
     .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0) * [-1, 1][+!!ascending]);
 };
-
-module.exports = sort;

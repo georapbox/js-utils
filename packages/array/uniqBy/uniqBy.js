@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.
  * The `iteratee` is invoked with one argument (each element in the array).
@@ -30,7 +28,7 @@
  * });
  * // => [{ v: 1.6 }, { v: 2.1 }]
  */
-const uniqBy = (array, iteratee) => {
+export const uniqBy = (array, iteratee) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -47,5 +45,3 @@ const uniqBy = (array, iteratee) => {
     return acc;
   }, []);
 };
-
-module.exports = uniqBy;

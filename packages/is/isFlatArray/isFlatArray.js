@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a flat array.
  * If the value is not array, will return `false`.
@@ -20,7 +18,7 @@
  * isFlatArray(new Set());
  * // => false
  */
-const isFlatArray = (value) => {
+export const isFlatArray = (value) => {
   if (!Array.isArray(value)) {
     return false;
   }
@@ -33,5 +31,3 @@ const isFlatArray = (value) => {
 
   return true;
 };
-
-module.exports = isFlatArray;

@@ -1,4 +1,5 @@
-const roundToPlaces = require('./roundToPlaces');
+import { describe, expect, it } from 'vitest';
+import { roundToPlaces } from './roundToPlaces.js';
 
 describe('Number/roundToPlaces', () => {
   it('rounds a number to a number of desired places', () => {

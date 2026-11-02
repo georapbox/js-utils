@@ -1,4 +1,5 @@
-const takeRight = require('./takeRight');
+import { describe, expect, it } from 'vitest';
+import { takeRight } from './takeRight.js';
 
 describe('Array/takeRight', () => {
   it('creates a slice of array with n items taken from the end', () => {

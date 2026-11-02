@@ -1,4 +1,5 @@
-const radiansToDegrees = require('./radiansToDegrees');
+import { describe, expect, it } from 'vitest';
+import { radiansToDegrees } from './radiansToDegrees.js';
 
 describe('Number/radiansToDegrees', () => {
   it('converts radians to degrees', () => {

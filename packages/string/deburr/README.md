@@ -16,14 +16,6 @@ Deburrs a string by converting latin-1 supplementary letters to basic latin lett
 
 **Example**  
 ```js
-const str = 'Maître Corbeau, sur un arbre perché,' +
-  'Tenait en son bec un fromage.' +
-  'Maître Renard, par l’odeur alléché,' +
-  'Lui tint à peu près ce langage.';
-
-deburr(str);
-// => 'Maitre Corbeau, sur un arbre perche,Tenait en son bec un fromage.Maitre Renard, par l’odeur alleche,Lui tint a peu pres ce langage.'
-
-deburr('déjà vu');
-// => 'deja vu'
+deburr('Maître Corbeau, sur un arbre perché, Tenait en son bec un fromage. Maître Renard, par l’odeur alléché, Lui tint à peu près ce langage.');
+// => 'Maitre Corbeau, sur un arbre perche, Tenait en son bec un fromage. Maitre Renard, par l’odeur alleche, Lui tint a peu pres ce langage.'
 ```

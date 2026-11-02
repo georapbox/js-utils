@@ -1,4 +1,5 @@
-const isFalsy = require('./isFalsy');
+import { describe, expect, it } from 'vitest';
+import { isFalsy } from './isFalsy.js';
 
 describe('is/isFalsy', () => {
   it('checks if a value is falsy', () => {

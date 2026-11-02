@@ -1,4 +1,5 @@
-const randomRange = require('./randomRange');
+import { describe, expect, it } from 'vitest';
+import { randomRange } from './randomRange.js';
 
 describe('Number/randomRange', () => {
   it('returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.', () => {

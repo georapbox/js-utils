@@ -1,4 +1,5 @@
-const dropRight = require('./dropRight');
+import { describe, expect, it } from 'vitest';
+import { dropRight } from './dropRight.js';
 
 describe('Array/dropRight', () => {
   it('creates a slice of array with n elements dropped from the end', () => {

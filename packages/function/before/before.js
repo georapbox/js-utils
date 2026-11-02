@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a function that invokes `fn` while it’s called less than `n` times.
  * `fn` is invoked with the this binding and arguments of the created function.
@@ -19,7 +17,7 @@
  * button.addEventListener('click', doSomething);
  * // => logs "Do something..." up to 5 times.
  */
-const before = (n, fn) => {
+export const before = (n, fn) => {
   let result;
 
   if (typeof n !== 'number') {
@@ -44,5 +42,3 @@ const before = (n, fn) => {
     return result;
   };
 };
-
-module.exports = before;

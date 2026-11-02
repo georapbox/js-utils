@@ -1,4 +1,5 @@
-const camelCase = require('./camelCase');
+import { describe, expect, it } from 'vitest';
+import { camelCase } from './camelCase.js';
 
 describe('String/camel case', () => {
   it('should convert string to camelCase', () => {

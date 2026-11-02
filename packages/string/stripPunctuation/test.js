@@ -1,4 +1,5 @@
-const stripPunctuation = require('./stripPunctuation');
+import { describe, expect, it } from 'vitest';
+import { stripPunctuation } from './stripPunctuation.js';
 
 describe('String/stripPunctuation', () => {
   it('should remove all of punctuiation from given string', () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is `false` (strict equality).
  *
@@ -16,6 +14,6 @@
  * isFalse();
  * // => false
  */
-const isFalse = (value) => value === false;
-
-module.exports = isFalse;
+export const isFalse = (value) => {
+  return value === false;
+};

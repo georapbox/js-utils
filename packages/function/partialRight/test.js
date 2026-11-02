@@ -1,4 +1,5 @@
-const partialRight = require('./partialRight.js');
+import { describe, expect, it } from 'vitest';
+import { partialRight } from './partialRight.js';
 
 describe('partialRight', () => {
   const greet = (greeting, title, fname, lname) => `${greeting}, ${title} ${fname} ${lname}.`;

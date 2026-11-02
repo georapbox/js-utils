@@ -1,4 +1,5 @@
-const escapeHTML = require('./escapeHTML');
+import { describe, expect, it } from 'vitest';
+import { escapeHTML } from './escapeHTML.js';
 
 describe('String/escapeHTML', () => {
   it('should escape a HTML string', () => {

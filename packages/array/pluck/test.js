@@ -1,4 +1,5 @@
-const pluck = require('./pluck');
+import { describe, expect, it } from 'vitest';
+import { pluck } from './pluck.js';
 
 describe('Array/pluck', () => {
   const books = [

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a truthy one.
  *
@@ -31,6 +29,6 @@
  * isTruthy(NaN);
  * // => false
  */
-const isTruthy = (value) => !!value;
-
-module.exports = isTruthy;
+export const isTruthy = (value) => {
+  return !!value;
+};

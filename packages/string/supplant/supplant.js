@@ -23,7 +23,7 @@
  * supplant(str, data);
  * // => '<p>My name is John Doe and my job is Frontend Developer.</p>'
  */
-const supplant = (subjectString, data) => {
+export const supplant = (subjectString, data) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -57,5 +57,3 @@ const supplant = (subjectString, data) => {
       })
     : subjectString;
 };
-
-module.exports = supplant;

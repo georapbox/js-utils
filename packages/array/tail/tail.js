@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Gets all but the first element of array.
  *
@@ -17,12 +15,10 @@
  * tail([]);
  * // => []
  */
-const tail = (array) => {
+export const tail = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
   return array.slice(1);
 };
-
-module.exports = tail;

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is classified as a Symbol primitive.
  *
@@ -22,8 +20,6 @@
  * isSymbol('foo');
  * // => false
  */
-const isSymbol = (value) => {
+export const isSymbol = (value) => {
   return typeof value === 'symbol' || Object.prototype.toString.call(value) === '[object Symbol]';
 };
-
-module.exports = isSymbol;

@@ -1,4 +1,5 @@
-const isPrimitive = require('./isPrimitive');
+import { describe, expect, it } from 'vitest';
+import { isPrimitive } from './isPrimitive.js';
 
 describe('is/isPrimitive', () => {
   it('checks if value is a primitive data type', () => {

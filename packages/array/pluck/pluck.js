@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Retrieves the value of a specified property from all elements in an array.
  *
@@ -22,7 +20,7 @@
  * pluck(books, 'author');
  * // => ["Jules Verne", "Stephen King", "Jules Verne", "Stephen King"]
  */
-const pluck = (array, key) => {
+export const pluck = (array, key) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -40,5 +38,3 @@ const pluck = (array, key) => {
 
   return arr;
 };
-
-module.exports = pluck;

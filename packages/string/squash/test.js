@@ -1,4 +1,5 @@
-const squash = require('./squash');
+import { describe, expect, it } from 'vitest';
+import { squash } from './squash.js';
 
 describe('String/squash', () => {
   it('removes all spaces from a string', () => {

@@ -1,4 +1,5 @@
-const isWeakSet = require('./isWeakSet');
+import { describe, expect, it } from 'vitest';
+import { isWeakSet } from './isWeakSet.js';
 
 describe('is/isWeakSet', () => {
   it('checks if a value is WeakMap', () => {

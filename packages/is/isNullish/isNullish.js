@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is `null` or `undefined`.
  *
@@ -21,6 +19,6 @@
  * isNullish();
  * // => true
  */
-const isNullish = (value) => value == null;
-
-module.exports = isNullish;
+export const isNullish = (value) => {
+  return value == null;
+};

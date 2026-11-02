@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is `undefined`.
  *
@@ -21,6 +19,6 @@
  * isUndefined();
  * // => true
  */
-const isUndefined = (value) => typeof value === 'undefined';
-
-module.exports = isUndefined;
+export const isUndefined = (value) => {
+  return typeof value === 'undefined';
+};

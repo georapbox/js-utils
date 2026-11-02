@@ -1,4 +1,5 @@
-const dropWhile = require('./dropWhile');
+import { describe, expect, it } from 'vitest';
+import { dropWhile } from './dropWhile.js';
 
 describe('Array/dropWhile', () => {
   it('creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy', () => {

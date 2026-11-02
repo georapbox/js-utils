@@ -1,13 +1,13 @@
 
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["vitest"],
   "categories": {
     "correctness": "error"
   },
   "env": {
     "browser": true,
     "node": true,
-    "jest": true
   },
   "rules": {
     "no-empty": ["error", {
@@ -22,6 +22,8 @@
     "curly": "warn",
     "no-var": "warn",
     "prefer-const": "warn",
-    "prefer-rest-params": "warn"
+    "prefer-rest-params": "warn",
+    "no-undef": "error",
+    "vitest/prefer-importing-vitest-globals": "error"
   }
 }

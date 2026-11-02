@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is array.
  *
@@ -19,8 +17,6 @@
  * isArray({ a: 'a', b: 'b' });
  * // => false
  */
-const isArray = (value) => {
-  return Array.isArray ? Array.isArray(value) : Object.prototype.toString.call(value) === '[object Array]';
+export const isArray = (value) => {
+  return Array.isArray(value);
 };
-
-module.exports = isArray;

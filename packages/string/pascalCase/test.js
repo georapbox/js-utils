@@ -1,4 +1,5 @@
-const pascalCase = require('./pascalCase');
+import { describe, expect, it } from 'vitest';
+import { pascalCase } from './pascalCase.js';
 
 describe('String/pascalCase', () => {
   it('should convert string to pascal case', () => {

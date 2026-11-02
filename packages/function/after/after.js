@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a function that invokes `fn` once it's called `n` or more times.
  * `fn` is invoked with the this binding and arguments of the created function.
@@ -19,7 +17,7 @@
  * button.addEventListener('click', doSomething);
  * // => logs "Do something..." after button is clicked at least 4 times.
  */
-const after = (n, fn) => {
+export const after = (n, fn) => {
   if (typeof n !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
@@ -36,5 +34,3 @@ const after = (n, fn) => {
     }
   };
 };
-
-module.exports = after;

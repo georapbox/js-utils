@@ -1,23 +1,28 @@
-'use strict';
-
 /**
  * Checks if a value is a DOM element.
  *
  * @param {*} value The value to check.
- * @returns {Boolean} True if 'value' is a DOM element, else false.
+ * @returns {Boolean} `true` if the value is a DOM element; otherwise `false`.
  * @example
- *
- * isElement('Lorem ipusm dolr sit amet.');
- * // => false
  *
  * isElement(document.body);
  * // => true
  *
- * isElement(document.getElementsByTagName('head')[0])
+ * isElement(document.createElement('div'));
  * // => true
+ *
+ * isElement(document.createElementNS('http://www.w3.org/2000/svg', 'svg'));
+ * // => true
+ *
+ * isElement(document);
+ * // => false
+ *
+ * isElement(document.createTextNode('Hello'));
+ * // => false
+ *
+ * isElement(null);
+ * // => false
  */
-const isElement = (value) => {
+export const isElement = (value) => {
   return !!value && value.nodeType === 1 && value instanceof Element === true;
 };
-
-module.exports = isElement;

@@ -1,4 +1,5 @@
-const move = require('./move');
+import { describe, expect, it } from 'vitest';
+import { move } from './move.js';
 
 describe('Array/move', () => {
   it('moves an array element to a different position', () => {

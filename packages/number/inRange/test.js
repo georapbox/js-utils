@@ -1,4 +1,5 @@
-const inRange = require('./inRange');
+import { describe, expect, it } from 'vitest';
+import { inRange } from './inRange.js';
 
 describe('Number/inRange', () => {
   it('should test if number is in range', () => {

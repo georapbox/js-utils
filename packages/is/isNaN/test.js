@@ -1,7 +1,8 @@
-const isNaN = require('./isNaN');
+import { describe, expect, it } from 'vitest';
+import { isNaN } from './isNaN.js';
 
 describe('is/isNaN', () => {
-  const runTests = () => {
+  it('check if value is NaN', () => {
     expect(isNaN(NaN)).toBe(true);
     expect(isNaN(NaN)).toBe(true);
     expect(isNaN(Number.NaN)).toBe(true);
@@ -20,16 +21,5 @@ describe('is/isNaN', () => {
     expect(isNaN('37.37')).toBe(false);
     expect(isNaN('')).toBe(false);
     expect(isNaN(' ')).toBe(false);
-  };
-
-  it('check if value is NaN (Number.isNaN is supported)', () => {
-    runTests();
-  });
-
-  it('check if value is NaN (Number.isNaN is not supported)', () => {
-    const nativeCode = Number.isNaN;
-    Number.isNaN = null;
-    runTests();
-    Number.isNaN = nativeCode;
   });
 });

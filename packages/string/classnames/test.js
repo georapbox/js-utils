@@ -1,4 +1,5 @@
-const classnames = require('./classnames');
+import { describe, expect, it } from 'vitest';
+import { classnames } from './classnames.js';
 
 describe('String/classnames', () => {
   it('returns empty string if no arguments passed', () => {
@@ -37,7 +38,7 @@ describe('String/classnames', () => {
     expect(res).toBe('a b c e f');
   });
 
-  it('it joins the classes if an object is passed with multiple keys', () => {
+  it('joins the classes if an object is passed with multiple keys', () => {
     const res = classnames({
       foo: true,
       bar: true

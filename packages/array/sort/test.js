@@ -1,4 +1,5 @@
-const sort = require('./sort');
+import { describe, expect, it } from 'vitest';
+import { sort } from './sort.js';
 
 describe('Array/sort', () => {
   const numbers = [1, 2, 3, 10, 4, 9];

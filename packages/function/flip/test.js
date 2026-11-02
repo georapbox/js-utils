@@ -1,4 +1,5 @@
-const flip = require('./flip.js');
+import { describe, expect, it } from 'vitest';
+import { flip } from './flip.js';
 
 describe('flip', () => {
   it('creates a new function that invokes the original function with its parameters reversed', () => {

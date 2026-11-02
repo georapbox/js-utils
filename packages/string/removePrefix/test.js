@@ -1,4 +1,5 @@
-const removePrefix = require('./removePrefix');
+import { describe, expect, it } from 'vitest';
+import { removePrefix } from './removePrefix.js';
 
 describe('String/removePrefix', () => {
   it('removes a specific prefix from string', () => {

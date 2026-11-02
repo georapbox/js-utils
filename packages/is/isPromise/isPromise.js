@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Check if a value is a native ES2015 Promise.
  *
@@ -21,7 +19,7 @@
  * });
  * // => false
  */
-const isPromise = (value) => {
+export const isPromise = (value) => {
   // Checking with `Object.prototype.toString` should be enough for most cases except for the
   // rare case that a host object's tag is modified via `Symbol.toStringTag`, eg:
   // const obj = {
@@ -38,5 +36,3 @@ const isPromise = (value) => {
     typeof value.catch === 'function'
   );
 };
-
-module.exports = isPromise;

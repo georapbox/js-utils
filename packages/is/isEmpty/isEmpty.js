@@ -54,7 +54,7 @@
  * isEmpty(null); // => true
  * isEmpty(undefined); // => true
  */
-const isEmpty = (value) => {
+export const isEmpty = (value) => {
   const type = Object.prototype.toString.call(value);
 
   if (value == null) {
@@ -75,5 +75,3 @@ const isEmpty = (value) => {
 
   return Object(value) !== value || !Object.keys(value).length;
 };
-
-module.exports = isEmpty;

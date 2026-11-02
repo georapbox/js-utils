@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a slice of `array` with `n` elements dropped from the beginning.
  *
@@ -40,7 +38,7 @@
  * drop({}, 2);
  * // => Throws TypeError
  */
-const drop = (array, n) => {
+export const drop = (array, n) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -56,5 +54,3 @@ const drop = (array, n) => {
 
   return array.slice(n < 0 ? 0 : n, len);
 };
-
-module.exports = drop;

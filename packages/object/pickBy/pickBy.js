@@ -59,7 +59,7 @@
  * });
  * // => {}
  */
-const pickBy = (object, predicate, pickOwnKeys = true) => {
+export const pickBy = (object, predicate, pickOwnKeys = true) => {
   const result = {};
   const type = Object.prototype.toString.call(object);
 
@@ -95,5 +95,3 @@ const pickBy = (object, predicate, pickOwnKeys = true) => {
 
   return result;
 };
-
-module.exports = pickBy;

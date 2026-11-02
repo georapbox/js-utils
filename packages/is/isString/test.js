@@ -1,4 +1,5 @@
-const isString = require('./isString');
+import { describe, expect, it } from 'vitest';
+import { isString } from './isString.js';
 
 describe('is/isString', () => {
   it('checks if a value is string', () => {

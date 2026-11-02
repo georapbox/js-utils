@@ -1,4 +1,5 @@
-const isMap = require('./isMap');
+import { describe, expect, it } from 'vitest';
+import { isMap } from './isMap.js';
 
 describe('is/isMap', () => {
   it('checks if a value is Map', () => {

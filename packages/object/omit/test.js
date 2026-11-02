@@ -1,4 +1,5 @@
-const omit = require('./omit');
+import { describe, expect, it } from 'vitest';
+import { omit } from './omit.js';
 
 describe('Object/omit', () => {
   it('Creates an object composed of the own enumerable property paths of object that are not omitted', () => {

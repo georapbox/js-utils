@@ -1,4 +1,5 @@
-const negate = require('./negate');
+import { describe, expect, it } from 'vitest';
+import { negate } from './negate.js';
 
 describe('Function/negate', () => {
   it('should negate the result of the predicate function', () => {

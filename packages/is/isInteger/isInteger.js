@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is an integer number.
  * If the value is NaN or infinite, return false.
@@ -41,17 +39,6 @@
  * isInteger(Infinity);
  * // => false
  */
-const isInteger = (value) => {
-  if (Number.isInteger) {
-    return Number.isInteger(value);
-  }
-
-  return (
-    (Object.prototype.toString.call(value) === '[object Number]' || typeof value === 'number') &&
-    value !== Infinity &&
-    value !== -Infinity &&
-    Math.floor(value) === value
-  );
+export const isInteger = (value) => {
+  return Number.isInteger(value);
 };
-
-module.exports = isInteger;

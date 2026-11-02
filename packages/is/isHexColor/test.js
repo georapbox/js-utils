@@ -1,4 +1,5 @@
-const isHexColor = require('./isHexColor');
+import { expect, describe, it } from 'vitest';
+import { isHexColor } from './isHexColor.js';
 
 describe('is/isHexColor', () => {
   it('checks if a value matches a hexadecimal color regular expression', () => {

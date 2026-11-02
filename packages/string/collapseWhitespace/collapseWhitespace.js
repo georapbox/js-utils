@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts all adjacent whitespace characters to a single space.
  *
@@ -11,12 +9,10 @@
  * collapseWhitespace('  Lorem   \t ispum dolor sit      \t amet.  ');
  * // => 'Lorem ispum dolor sit amet.'
  */
-const collapseWhitespace = (subjectString) => {
+export const collapseWhitespace = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
   return subjectString.replace(/[\s\xa0]+/g, ' ').replace(/^\s+|\s+$/g, '');
 };
-
-module.exports = collapseWhitespace;

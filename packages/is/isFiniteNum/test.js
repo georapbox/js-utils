@@ -1,7 +1,8 @@
-const isFiniteNum = require('./isFiniteNum');
+import { describe, expect, it } from 'vitest';
+import { isFiniteNum } from './isFiniteNum.js';
 
 describe('is/isFiniteNum', () => {
-  const runTests = () => {
+  it('checks if a value is finite', () => {
     expect(isFiniteNum(Infinity)).toBe(false);
 
     expect(isFiniteNum(-Infinity)).toBe(false);
@@ -17,16 +18,5 @@ describe('is/isFiniteNum', () => {
     expect(isFiniteNum(undefined)).toBe(false);
 
     expect(isFiniteNum(2e64)).toBe(true);
-  };
-
-  it('checks if a value is finite (Number.isFinite is supported)', () => {
-    runTests();
-  });
-
-  it('checks if a value is finite (Number.isFinite is not supported)', () => {
-    const nativeCode = Number.isFinite;
-    Number.isFinite = null;
-    runTests();
-    Number.isFinite = nativeCode;
   });
 });

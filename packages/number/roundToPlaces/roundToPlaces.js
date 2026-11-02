@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Rounds a number to a number of desired places.
  * Feed with negative place values to round to powers of 10.
@@ -40,7 +38,7 @@
  * roundToPlaces(123456789, -3);
  * // => 123457000
  */
-const roundToPlaces = (value, places) => {
+export const roundToPlaces = (value, places) => {
   if (typeof value !== 'number' || typeof places !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
@@ -49,5 +47,3 @@ const roundToPlaces = (value, places) => {
 
   return Math.round(value * mult) / mult;
 };
-
-module.exports = roundToPlaces;

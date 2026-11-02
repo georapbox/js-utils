@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a regular expression.
  *
@@ -13,6 +11,6 @@
  * isRegexp('/^[0-9a-fA-F]+$/');
  * // => false
  */
-const isRegexp = (value) => Object.prototype.toString.call(value) === '[object RegExp]';
-
-module.exports = isRegexp;
+export const isRegexp = (value) => {
+  return Object.prototype.toString.call(value) === '[object RegExp]';
+};

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a primitive data type.
  *
@@ -43,12 +41,10 @@
  *
  * isPrimitive(/s+/g); // => false
  */
-const isPrimitive = (value) => {
+export const isPrimitive = (value) => {
   if (typeof value === 'object') {
     return value === null;
   }
 
   return typeof value !== 'function';
 };
-
-module.exports = isPrimitive;

@@ -1,4 +1,5 @@
-const truncate = require('./truncate');
+import { describe, expect, it } from 'vitest';
+import { truncate } from './truncate.js';
 
 describe('String/truncate', () => {
   it('should truncate a string based on character count', () => {

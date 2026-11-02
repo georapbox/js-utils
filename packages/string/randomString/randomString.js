@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Generates a pseudo-random string of specific `len` allowing a set of characters specified by `chars`.
  *
@@ -29,7 +27,7 @@
  * randomString(16, 'aA');
  * // => 'YGOSgnoUIHaUvEcp'
  */
-const randomString = (len, chars = '#aA!') => {
+export const randomString = (len, chars = '#aA!') => {
   const charsError =
     'Expected a string for second argument, that contains one or more of the following characters: "#", "a", "A", "!"';
 
@@ -67,5 +65,3 @@ const randomString = (len, chars = '#aA!') => {
 
   return result;
 };
-
-module.exports = randomString;

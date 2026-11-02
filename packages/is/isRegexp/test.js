@@ -1,4 +1,5 @@
-const isRegexp = require('./isRegexp');
+import { expect, describe, it } from 'vitest';
+import { isRegexp } from './isRegexp.js';
 
 describe('is/isRegexp', () => {
   it('checks if a value is a regular expression', () => {

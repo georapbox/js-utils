@@ -5,7 +5,7 @@ Calculates the average of a set of numbers.
 Accepts any number of numbers as parameters, or an array of numbers.
 Ommits any non number value.
 
-**Returns**: <code>Number</code> - The average number of the set of data provided.  
+**Returns**: <code>Number</code> - The average number of the set of data provided.
 
 | Param | Type | Description |
 | --- | --- | --- |

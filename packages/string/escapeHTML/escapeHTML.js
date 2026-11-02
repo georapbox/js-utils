@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts the characters "&", "<", ">", '"' and "'" in a string to their corresponding HTML entities.
  *
@@ -17,7 +15,7 @@
  * escapeHTML('<p data-id="1">lorem ipsum</p>');
  * // => '&lt;p data-id=&quot;1&quot;&gt;lorem ipsum&lt;/p&gt;'
  */
-const escapeHTML = (subjectString) => {
+export const escapeHTML = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -27,7 +25,7 @@ const escapeHTML = (subjectString) => {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#39;' // eslint-disable-line quotes
+    "'": '&#39;'
   };
 
   const regexUnescapedHtml = /[&<>"'`]/g;
@@ -37,5 +35,3 @@ const escapeHTML = (subjectString) => {
     ? subjectString.replace(regexUnescapedHtml, (tag) => htmlEscapes[tag] || tag)
     : subjectString;
 };
-
-module.exports = escapeHTML;

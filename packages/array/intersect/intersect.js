@@ -1,11 +1,9 @@
-'use strict';
-
 /**
  * Creates an array of unique values that are included in all given arrays.
  * The order of result values is determined by the order they occur in the first array.
  *
  * @param {...Array} arrays The arrays to intersect.
- * @throws {TypeError} If any of the arguments is not array.
+ * @throws {TypeError} If any argument is not an array or no arrays are provided.
  * @returns {Array} The array of intersecting values.
  * @example
  *
@@ -20,35 +18,19 @@
  * // => [NaN, 3]
  */
 const intersect = (...arrays) => {
-  let len = arrays.length;
-
-  while (len--) {
-    if (!Array.isArray(arrays[len])) {
-      throw new TypeError('Expected all arguments to be arrays');
-    }
+  if (arrays.length === 0 || !arrays.every(Array.isArray)) {
+    throw new TypeError('Expected all arguments to be arrays');
   }
 
-  return arrays.reduce((accumArray, currentArray) => {
-    return accumArray.filter(function (element) {
-      if (Array.prototype.includes) {
-        return currentArray.includes(element);
-      } else {
-        let index = 0;
+  const [firstArray, ...otherArrays] = arrays;
 
-        while (index < currentArray.length) {
-          const currentElement = currentArray[index];
-
-          if (element === currentElement || (Number.isNaN(element) && Number.isNaN(currentElement))) {
-            return true;
-          }
-
-          index += 1;
-        }
-
-        return false;
-      }
-    });
+  const intersection = firstArray.filter((element) => {
+    return otherArrays.every((array) => array.includes(element));
   });
+
+  const uniqueValues = new Set(intersection);
+
+  return [...uniqueValues];
 };
 
-module.exports = intersect;
+export { intersect };

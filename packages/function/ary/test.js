@@ -1,4 +1,5 @@
-const ary = require('./ary.js');
+import { describe, expect, it } from 'vitest';
+import { ary } from './ary.js';
 
 describe('Function/ary', () => {
   const fn = (a, b) => [a, b];

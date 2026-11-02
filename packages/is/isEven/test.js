@@ -1,4 +1,5 @@
-const isEven = require('./isEven');
+import { describe, expect, it } from 'vitest';
+import { isEven } from './isEven.js';
 
 describe('is/isEven', () => {
   it('checks if value is even', () => {

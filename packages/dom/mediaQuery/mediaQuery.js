@@ -17,7 +17,7 @@
  * // Stop listening for media query status changes.
  * unsubscribe();
  */
-const mediaQuery = (mediaQueryString, callback, immediate = true) => {
+export const mediaQuery = (mediaQueryString, callback, immediate = true) => {
   if (typeof mediaQueryString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -40,5 +40,3 @@ const mediaQuery = (mediaQueryString, callback, immediate = true) => {
     mqList.removeEventListener('change', onChange);
   };
 };
-
-module.exports = mediaQuery;

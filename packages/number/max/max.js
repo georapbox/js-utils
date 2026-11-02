@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Finds the largest of zero or more numbers.
  *
@@ -34,12 +32,10 @@
  * max();
  * // => -Infinity
  */
-const max = (...nums) => {
+export const max = (...nums) => {
   if (nums.length === 1 && Array.isArray(nums[0])) {
     nums = nums[0];
   }
 
   return nums.reduce((a, b) => Math.max(a, b), -Infinity);
 };
-
-module.exports = max;

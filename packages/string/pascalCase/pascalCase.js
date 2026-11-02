@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Converts a string to [pascal case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  * Combines words by capitalizing all words (even the first word) and removing spaces.
@@ -36,7 +34,7 @@
  * pascalCase(' () @#$ @# %the quick brown fox jumps over the lazy dog  #!#$% <> ');
  * // => 'TheQuickBrownFoxJumpsOverTheLazyDog'
  */
-const pascalCase = (subjectString) => {
+export const pascalCase = (subjectString) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -53,5 +51,3 @@ const pascalCase = (subjectString) => {
     return accum;
   }, '');
 };
-
-module.exports = pascalCase;

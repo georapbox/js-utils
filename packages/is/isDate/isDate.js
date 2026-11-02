@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a date object.
  *
@@ -13,8 +11,6 @@
  * isDate(new Date().getTime());
  * // => false
  */
-const isDate = (value) => {
+export const isDate = (value) => {
   return Object.prototype.toString.call(value) === '[object Date]';
 };
-
-module.exports = isDate;

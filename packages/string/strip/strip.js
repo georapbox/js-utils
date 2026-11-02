@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a new string with all occurrences of [string1], [string2],... removed.
  *
@@ -23,7 +21,7 @@
  * strip(str, 'Lorem');
  * // => '_ipsum_dolor_sit_amet. +ipsum+dolor+sit+amet. 123456789'
  */
-const strip = (subjectString, ...args) => {
+export const strip = (subjectString, ...args) => {
   if (typeof subjectString !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -34,5 +32,3 @@ const strip = (subjectString, ...args) => {
 
   return subjectString;
 };
-
-module.exports = strip;

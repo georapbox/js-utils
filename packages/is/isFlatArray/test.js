@@ -1,4 +1,5 @@
-const isFlatArray = require('./isFlatArray');
+import { describe, expect, it } from 'vitest';
+import { isFlatArray } from './isFlatArray.js';
 
 describe('is/isFlatArray', () => {
   it('checks if a value is a flat array', () => {

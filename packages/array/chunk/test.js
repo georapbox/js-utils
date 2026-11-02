@@ -1,4 +1,5 @@
-const chunk = require('./chunk');
+import { describe, expect, it } from 'vitest';
+import { chunk } from './chunk.js';
 
 describe('Array/chunk', () => {
   it('creates an array of elements split into groups the length of size specified', () => {

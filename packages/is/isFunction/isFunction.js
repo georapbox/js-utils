@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Checks if a value is a function.
  *
@@ -15,6 +13,6 @@
  * isFunction('This is a test function.');
  * // => false
  */
-const isFunction = (value) => typeof value === 'function';
-
-module.exports = isFunction;
+export const isFunction = (value) => {
+  return typeof value === 'function';
+};

@@ -1,4 +1,5 @@
-const isNumber = require('./isNumber');
+import { describe, expect, it } from 'vitest';
+import { isNumber } from './isNumber.js';
 
 describe('is/isNumber', () => {
   it('checks if a value is number', () => {

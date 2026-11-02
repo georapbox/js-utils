@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Validates a string as email address.
  *
@@ -31,7 +29,7 @@
  * isEmail("!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]");
  * // => false
  */
-const isEmail = (value) => {
+export const isEmail = (value) => {
   if (typeof value !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
@@ -46,5 +44,3 @@ const isEmail = (value) => {
 
   return emailRegex.test(value);
 };
-
-module.exports = isEmail;

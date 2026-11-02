@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Creates a new array with its elements' order randomized,
  * using the Fisher-Yates (aka Knuth) Shuffle algorithm.
@@ -15,7 +13,7 @@
  * shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
  * // => [5, 10, 9, 3, 4, 1, 6, 7, 8, 2]
  */
-const shuffle = (array) => {
+export const shuffle = (array) => {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -34,5 +32,3 @@ const shuffle = (array) => {
 
   return newArray;
 };
-
-module.exports = shuffle;
