@@ -229,6 +229,24 @@ npm run docs <path-to-file>
 
 The file path must be relative to the repository root.
 
+### Git hooks
+
+This repository includes a pre-commit hook that runs linting and formatting checks before each commit.
+
+To enable the hook, run the following command from the repository root:
+
+```sh
+git config --local core.hooksPath .githooks
+```
+
+This configuration only needs to be applied once per clone and does not affect other repositories.
+
+To disable the hook, run:
+
+```sh
+git config --local --unset core.hooksPath
+```
+
 ## License
 
 [The MIT License (MIT)](./LICENSE)
