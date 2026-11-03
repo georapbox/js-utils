@@ -84,10 +84,10 @@ The utilities are organized into categories based on their functionality, such a
 
 | Name | Description |
 |------|-------------|
-|[get](./src/object/get)|Gets the `value` at path of `object`. If the resolved value is `undefined`, the `defaultValue` is returned in its place.|
-|[omit](./src/object/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
-|[pick](./src/object/pick)|Creates an object composed of the picked object properties.|
-|[pickBy](./src/object/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
+|[get](./src/object/get)|Retrieves the value at a specified path within an object.|
+|[omit](./src/object/omit)|Creates a new object excluding the specified own enumerable properties of the source object.|
+|[pick](./src/object/pick)|Creates a new object containing the specified own enumerable properties of the source object.|
+|[pickBy](./src/object/pickBy)|Creates a new object containing the own enumerable properties of the source object for which the predicate returns a truthy value.|
 
 ### Function
 

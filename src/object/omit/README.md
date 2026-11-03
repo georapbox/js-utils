@@ -1,36 +1,40 @@
 <a name="omit"></a>
 
-## omit(obj, props) ⇒ <code>Object</code>
+## omit(obj, [props]) ⇒ <code>object</code>
+Creates a new object excluding the specified own enumerable properties
+of the source object.
 
-Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.
+Only top-level properties are omitted. Inherited and non-enumerable
+properties are not copied. String and symbol property keys are supported.
+The original object is not modified.
 
-**Returns**: <code>Object</code> - Returns the new object.
+**Kind**: global function  
+**Returns**: <code>object</code> - A new object containing the remaining properties.  
+**Throws**:
 
-| Param | Type | Description |
-| --- | --- | --- |
-| obj | <code>Object</code> | The source object. |
-| props | <code>Array</code> | The property paths to omit. |
+- <code>TypeError</code> If the first argument is not an object or the second argument is not an array.
 
-**Example**
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| obj | <code>object</code> |  | The source object. |
+| [props] | <code>Array.&lt;(string\|symbol)&gt;</code> | <code>[]</code> | The property keys to omit. |
+
+**Example**  
 ```js
-const obj = {
-  a: 'aaa',
-  b: 'bbb',
-  c: 'ccc'
-};
+omit({ a: 1, b: 2, c: 3 }, ['a', 'c']);
+// => { b: 2 }
 
-omit(obj, ['a', 'c']);
-// => { b: 'bbb' }
-
-omit(obj, ['a', 'b', 'c']);
+omit({ a: 1, b: 2 }, ['a', 'b']);
 // => {}
 
-omit(obj);
-// => { a: 'aaa', b: 'bbb', c: 'ccc' }
+omit({ a: 1, b: 2 }, ['missing']);
+// => { a: 1, b: 2 }
 
-omit(obj, []);
-// => { a: 'aaa', b: 'bbb', c: 'ccc' }
+omit({ a: 1, b: 2 });
+// => { a: 1, b: 2 }
 
-omit(obj, ['key_not_exists']);
-// => { a: 'aaa', b: 'bbb', c: 'ccc' }
+const key = Symbol('id');
+omit({ [key]: 123, name: 'John' }, [key]);
+// => { name: 'John' }
 ```
