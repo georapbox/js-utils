@@ -14,7 +14,6 @@ The utilities are organized into categories based on their functionality, such a
 | Name | Description |
 |------|-------------|
 |[chunk](./src/array/chunk)|Creates an array of elements split into groups the length of size specified.|
-|[compact](./src/array/compact)|Creates an array with all falsy values removed. 'false', 'null', '0', '""', 'undefined', and 'NaN' are falsy.|
 |[diff](./src/array/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
 |[drop](./src/array/drop)|Creates a slice of `array` with `n` elements dropped from the beginning.|
 |[dropRight](./src/array/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
@@ -35,7 +34,6 @@ The utilities are organized into categories based on their functionality, such a
 |[takeWhile](./src/array/takeWhile)|Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.|
 |[sort](./src/array/sort)|Sorts an **array of primitive values**.|
 |[sortBy](./src/array/sortBy)|Sorts an **array of objects** by a property.|
-|[uniq](./src/array/uniq)|Creates a duplicate-free version of an array, using SameValueZero for equality comparisons.|
 |[uniqBy](./src/array/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
 |[zip](./src/array/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
 
@@ -96,7 +94,6 @@ The utilities are organized into categories based on their functionality, such a
 |[omit](./src/object/omit)|Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.|
 |[pick](./src/object/pick)|Creates an object composed of the picked object properties.|
 |[pickBy](./src/object/pickBy)|Creates an object composed of the object enumerable properties that predicate returns truthy for.|
-|[trueTypeOf](./src/object/trueTypeOf)|Determines the true type of a value using `Object.prototype.toString.call()`.|
 
 ### Function
 
@@ -116,50 +113,6 @@ The utilities are organized into categories based on their functionality, such a
 |[pipe](./src/function/pipe)|Performs left-to-right function composition.|
 |[throttle](./src/function/throttle)|Limits the number of times a function can be called in a given period.|
 |[unary](./src/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
-
-### Is
-
-| Name | Description |
-|------|-------------|
-|[isArray](./src/is/isArray)|Checks if a value is an array.|
-|[isArrayLike](./src/is/isArrayLike)|Checks if a value is array-like.|
-|[isArrayLikeObject](./src/is/isArrayLikeObject)|Checks if a value is array-like and object as well.|
-|[isBoolean](./src/is/isBoolean)|Checks if a value is boolean.|
-|[isDate](./src/is/isDate)|Checks if a value is a date object.|
-|[isElement](./src/is/isElement)|Checks if a value is a DOM element.|
-|[isEmail](./src/is/isEmail)|Validates a string as email address.|
-|[isEmpty](./src/is/isEmpty)|Checks if a value is an empty object, collection, map, or set.|
-|[isEven](./src/is/isEven)|Checks if a value is even.|
-|[isFalse](./src/is/isFalse)|Checks if a value is `false` (strict equality).|
-|[isFalsy](./src/is/isFalsy)|Checks if a value is falsy.|
-|[isFiniteNum](./src/is/isFiniteNum)|Checks if a value is a finite number.|
-|[isFlatArray](./src/is/isFlatArray)|Checks if a value is a flat array.|
-|[isFunction](./src/is/isFunction)|Checks if a value is a function.|
-|[isHexadecimal](./src/is/isHexadecimal)|Checks if a value matches a hexadecimal regular expression.|
-|[isHexColor](./src/is/isHexColor)|Checks if a value matches a hexadecimal color regular expression.|
-|[isInteger](./src/is/isInteger)|Checks if a value is an integer number.|
-|[isIterable](./src/is/isIterable)|Checks if a value is an iterable.|
-|[isMap](./src/is/isMap)|Checks if a value is classified as a Map object.|
-|[isNaN](./src/is/isNaN)|Determines whether the passed value is `NaN` and its type is `Number`.|
-|[isNull](./src/is/isNull)|Checks if a value is `null`.|
-|[isNullish](./src/is/isNullish)|Checks if a value is `null` or `undefined`.|
-|[isNumber](./src/is/isNumber)|Checks if a value is a number.|
-|[isObject](./src/is/isObject)|Checks if a value is the [language type](https://262.ecma-international.org/#sec-ecmascript-language-types) of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, `new String('')`).|
-|[isObjectLike](./src/is/isObjectLike)|Checks if a value is object-like. A value is object-like if it's not `null` and has a `typeof` result of "object".|
-|[isOdd](./src/is/isOdd)|Checks if a value is odd.|
-|[isPlainObject](./src/is/isPlainObject)|Checks if a value is a plain object. An object is considered to be plain if it's created by `{}`, `new Object()`, or `Object.create(null)`.|
-|[isPrimitive](./src/is/isPrimitive)|Checks if a value is a primitive data type.|
-|[isPromise](./src/is/isPromise)|Check if a value is a native ES2015 Promise.|
-|[isRegexp](./src/is/isRegexp)|Checks if a value is a regular expression.|
-|[isSafeInteger](./src/is/isSafeInteger)|Checks if an integer number is in the safe range i.e., it is correctly represented by JavaScript (where all numbers, including integer numbers, are technically floating point number).|
-|[isSet](./src/is/isSet)|Checks if a value is classified as a Set object.|
-|[isString](./src/is/isString)|Checks if a value is a string.|
-|[isSymbol](./src/is/isSymbol)|Checks if a value is classified as a Symbol primitive.|
-|[isTrue](./src/is/isTrue)|Checks if a value is `true` (strict equality).|
-|[isTruthy](./src/is/isTruthy)|Checks if a value is truthy.|
-|[isUndefined](./src/is/isUndefined)|Checks if a value is `undefined`.|
-|[isWeakMap](./src/is/isWeakMap)|Checks if a value is classified as a WeakMap object.|
-|[isWeakSet](./src/is/isWeakSet)|Checks if a value is classified as a WeakSet object.|
 
 ### DOM
 

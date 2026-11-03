@@ -30,9 +30,6 @@
  * // => [[1, 3, 5, 6], [-4, -2]]
  */
 export const partition = (array, predicate = (x) => x) => {
-  const part1 = [];
-  const part2 = [];
-
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -40,6 +37,9 @@ export const partition = (array, predicate = (x) => x) => {
   if (typeof predicate !== 'function') {
     throw new TypeError('Expected a function for second argument');
   }
+
+  const part1 = [];
+  const part2 = [];
 
   for (let index = 0; index < array.length; index += 1) {
     const value = array[index];
