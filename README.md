@@ -174,13 +174,37 @@ npm run fmt:check
 
 ### Generate documentation
 
-Run the following command from the repository root to generate Markdown documentation for a single file and print it to stdout.
+Run the following commands from the repository root to generate Markdown documentation from JSDoc comments.
+
+Documentation is generated as a `README.md` file inside each utility's directory, replacing any existing file.
+
+**Generate documentation for a single utility:**
 
 ```sh
-npm run docs <path-to-file>
+npm run docs -- src/<category-directory>/<utility-directory>
 ```
 
-The file path must be relative to the repository root.
+**Generate documentation for an entire category:**
+
+```sh
+npm run docs -- src/<category-directory>
+```
+
+**Generate documentation for multiple categories:**
+
+```sh
+npm run docs -- src/<category-directory-1> src/<category-directory-2>
+```
+
+**Generate documentation for all utilities:**
+
+```sh
+npm run docs -- src
+```
+
+All arguments must be directory paths relative to the repository root, not individual file paths.
+
+By convention, each utility's JavaScript file must have the same name as its containing directory (e.g., `drop/drop.js`). The script recursively scans the specified directories and generates documentation only for files following this naming convention.
 
 ### Git hooks
 
