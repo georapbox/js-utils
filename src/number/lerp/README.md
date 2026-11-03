@@ -1,20 +1,24 @@
 <a name="lerp"></a>
 
-## lerp(norm, min, max) ⇒ <code>Number</code>
-Takes a normalized value within a range of values and converts
-it to a numerical value that the normalized value points to.
+## lerp(t, start, end) ⇒ <code>number</code>
+Performs linear interpolation between two numbers.
 
-**Returns**: <code>Number</code> - The value that the normalized value points to.  
+The interpolation factor determines the position between `start` and `end`:
+`0` returns `start`, `1` returns `end`, and `0.5` returns the midpoint.
+Values outside the range [0, 1] are allowed for extrapolation.
+
+**Kind**: global function  
+**Returns**: <code>number</code> - The interpolated value.  
 **Throws**:
 
-- <code>TypeError</code> If any of the arguments passed is not a number.
+- <code>TypeError</code> If any argument is not a number.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| norm | <code>Number</code> | The normalized value to convert. |
-| min | <code>Number</code> | The minimum value of the range of values. |
-| max | <code>Number</code> | The maximum value of the range of values. |
+| t | <code>number</code> | The interpolation factor. |
+| start | <code>number</code> | The starting value. |
+| end | <code>number</code> | The ending value. |
 
 **Example**  
 ```js
@@ -32,4 +36,10 @@ lerp(1, 100, 500);
 
 lerp(-0.5, 0, 500);
 // => -250
+
+lerp(1.5, 0, 100);
+// => 150
+
+lerp(0.25, 100, 0);
+// => 75
 ```

@@ -1,24 +1,31 @@
 <a name="randomDist"></a>
 
-## randomDist(min, max, iterations) ⇒ <code>Number</code>
-Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.
-The higher the iterations, the higher is the possibility the returned value to be closer to the center of the range.
+## randomDist(min, max, iterations) ⇒ <code>number</code>
+Returns a random number that tends toward the center of a range.
+The result is the average of uniformly distributed random samples.
+Higher iteration counts make values closer to the center more likely.
 
-**Returns**: <code>Number</code> - The weighted random number.  
+**Kind**: global function  
+**Returns**: <code>number</code> - Returns a random number within the specified range.  
 **Throws**:
 
-- <code>TypeError</code> If one or more of the arguments passed is not a number.
-- <code>RangeError</code> If `iterations` is not a positive number. or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
+- <code>TypeError</code> If any argument is not a number.
+- <code>RangeError</code> If `min` or `max` is not finite, or `iterations` is not a positive finite number after rounding down or exceeds the maximum allowed iterations.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| min | <code>Number</code> | The minimum value of the range. |
-| max | <code>Number</code> | The maximum value of the range. |
-| iterations | <code>Number</code> | The number of the iterations. The value passed is converted to integer internally using `Math.floor()`. |
+| min | <code>number</code> | The minimum value of the range. |
+| max | <code>number</code> | The maximum value of the range. |
+| iterations | <code>number</code> | The number of random samples. Fractional values are rounded down using `Math.floor()`. |
 
 **Example**  
 ```js
+// Uniformly distributed random number.
+randomDist(0, 100, 1);
+// => A random number between 0 and 100
+
+// Random number more likely to be close to the center.
 randomDist(0, 100, 200);
-// => 49.27716133759931
+// => A random number typically close to 50
 ```

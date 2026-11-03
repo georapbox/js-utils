@@ -1,38 +1,48 @@
 /**
- * Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.
- * The higher the iterations, the higher is the possibility the returned value to be closer to the center of the range.
+ * Returns a random number that tends toward the center of a range.
+ * The result is the average of uniformly distributed random samples.
+ * Higher iteration counts make values closer to the center more likely.
  *
- * @param {Number} min The minimum value of the range.
- * @param {Number} max The maximum value of the range.
- * @param {Number} iterations The number of the iterations. The value passed is converted to integer internally using `Math.floor()`.
- * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @throws {RangeError} If `iterations` is not a positive number. or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
- * @returns {Number} The weighted random number.
+ * @param {number} min The minimum value of the range.
+ * @param {number} max The maximum value of the range.
+ * @param {number} iterations The number of random samples. Fractional values are rounded down using `Math.floor()`.
+ * @throws {TypeError} If any argument is not a number.
+ * @throws {RangeError} If `min` or `max` is not finite, or `iterations` is not a positive finite number after rounding down or exceeds the maximum allowed iterations.
+ * @returns {number} Returns a random number within the specified range.
  * @example
  *
+ * // Uniformly distributed random number.
+ * randomDist(0, 100, 1);
+ * // => A random number between 0 and 100
+ *
+ * // Random number more likely to be close to the center.
  * randomDist(0, 100, 200);
- * // => 49.27716133759931
+ * // => A random number typically close to 50
  */
-export const randomDist = (min, max, iterations) => {
-  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-
+export function randomDist(min, max, iterations) {
   if (typeof min !== 'number' || typeof max !== 'number' || typeof iterations !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  if (iterations <= 0 || iterations > MAX_SAFE_INTEGER || iterations !== iterations) {
-    throw new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for third argument');
+  if (!Number.isFinite(min) || !Number.isFinite(max)) {
+    throw new RangeError('Expected finite numbers for first and second arguments');
   }
 
-  iterations = Math.floor(iterations);
+  const count = Math.floor(iterations);
+  const MAX_ITERATIONS = 1_000_000;
+
+  if (!Number.isFinite(count) || count < 1 || count > MAX_ITERATIONS) {
+    throw new RangeError('Expected iterations to be between 1 and 1000000');
+  }
+
+  const lower = Math.min(min, max);
+  const range = Math.max(min, max) - lower;
 
   let total = 0;
 
-  for (let i = 0; i < iterations; i += 1) {
-    total += Math.min(min, max) + Math.random() * (Math.max(min, max) - Math.min(min, max));
+  for (let i = 0; i < count; i += 1) {
+    total += lower + Math.random() * range;
   }
 
-  return total / iterations;
-};
-
-// export { randomDist };
+  return total / count;
+}

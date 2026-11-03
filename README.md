@@ -67,20 +67,18 @@ The utilities are organized into categories based on their functionality, such a
 
 | Name | Description |
 |------|-------------|
-|[average](./src/number/average)|Calculates the average of a set of numbers.|
-|[clamp](./src/number/clamp)|Clamps number within the inclusive lower and upper bounds.|
-|[degreesToRadians](./src/number/degreesToRadians)|Converts degrees to radians.|
-|[inRange](./src/number/inRange)|Checks if a number is between `min` and `max` including.|
-|[lerp](./src/number/lerp)|Takes a normalized value within a range of values and converts it to a numerical value that the normalized value points to.|
-|[normalize](./src/number/normalize)|Takes a value within a range of values and converts that value to a number from 0 to 1 that indicates where it lies in that range.|
-|[max](./src/number/max)|Returns the largest of zero or more numbers.|
-|[min](./src/number/min)|Returns the smallest of zero or more numbers.|
-|[radiansToDegrees](./src/number/radiansToDegrees)|Converts radians to degrees.|
-|[randomDist](./src/number/randomDist)|Returns a weighted random number (that tends to the center) of a range of numbers based on the number of the iterations set.|
-|[randomInt](./src/number/randomInt)|Returns a pseudo-random integer number between a min (inclusive) and a max (inclusive) value.|
-|[randomRange](./src/number/randomRange)|Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.|
-|[roundToNearest](./src/number/roundToNearest)|Rounds a number to the nearest multiple of a value provided.|
-|[roundToPlaces](./src/number/roundToPlaces)|Rounds a number to a number of desired places.|
+|[average](./src/number/average)|Calculates the arithmetic mean of the provided numbers.|
+|[clamp](./src/number/clamp)|Clamps a number within the inclusive minimum and maximum bounds.|
+|[degreesToRadians](./src/number/degreesToRadians)|Converts an angle from degrees to radians.|
+|[inRange](./src/number/inRange)|Checks whether a number is within an inclusive range.|
+|[lerp](./src/number/lerp)|Performs linear interpolation between two numbers.|
+|[normalize](./src/number/normalize)|Normalizes a number relative to a range, returning its position as an interpolation factor.|
+|[radiansToDegrees](./src/number/radiansToDegrees)|Converts an angle from radians to degrees.|
+|[randomDist](./src/number/randomDist)|Returns a random number that tends toward the center of a range.|
+|[randomInt](./src/number/randomInt)|Returns a pseudo-random integer within an inclusive range.|
+|[randomRange](./src/number/randomRange)|Returns a pseudo-random number within a range, including the lower bound and excluding the upper bound under normal floating-point arithmetic.|
+|[roundToNearest](./src/number/roundToNearest)|Rounds a number to the nearest multiple of a given value.|
+|[roundToPlaces](./src/number/roundToPlaces)|Rounds a number to the specified number of decimal places.|
 
 ### Object
 

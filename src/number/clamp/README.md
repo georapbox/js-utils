@@ -1,23 +1,27 @@
 <a name="clamp"></a>
 
-## clamp(value, min, max) ⇒ <code>Number</code>
-Clamps number within the inclusive `min` and `max` bounds, making sure it does not go beyond them on either side.
+## clamp(value, min, max) ⇒ <code>number</code>
+Clamps a number within the inclusive minimum and maximum bounds.
 
-The mplementation is based on proposal for `Nmuber.prototype.clamp` (originally `Math.clamp`):  
-https://tc39.es/proposal-math-clamp
+Based on the TC39 Math.clamp proposal:
+https://tc39.es/proposal-math-clamp/
 
-**Returns**: <code>Number</code> - The clamped number.  
+Returns `NaN` if any argument is `NaN`.
+Supports infinite bounds and preserves signed-zero behavior.
+
+**Kind**: global function  
+**Returns**: <code>number</code> - The clamped number.  
 **Throws**:
 
-- <code>TypeError</code> If any of the arguments is not a number.
-- <code>RangeError</code> If `min` is greater than `max`.
+- <code>TypeError</code> If any argument is not a number.
+- <code>RangeError</code> If `min` is greater than `max`, unless an argument is `NaN`.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>Number</code> | The number to clamp. |
-| min | <code>Number</code> | The lower bound. |
-| max | <code>Number</code> | The upper bound. |
+| value | <code>number</code> | The number to clamp. |
+| min | <code>number</code> | The lower bound. |
+| max | <code>number</code> | The upper bound. |
 
 **Example**  
 ```js
@@ -27,12 +31,15 @@ clamp(10, -5, 5);
 clamp(-10, -5, 5);
 // => -5
 
-clamp(-15, 0, 100);
-// => 0
+clamp(50, 0, 100);
+// => 50
 
-clamp(120, 0, 100);
-// => 100
+clamp(10, -Infinity, Infinity);
+// => 10
 
 clamp(NaN, 0, 100);
 // => NaN
+
+clamp(-0, +0, 10);
+// => +0
 ```

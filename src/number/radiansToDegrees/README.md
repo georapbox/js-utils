@@ -1,32 +1,33 @@
 <a name="radiansToDegrees"></a>
 
-## radiansToDegrees(radians) ⇒ <code>Number</code>
-Converts radians to degrees.
+## radiansToDegrees(radians) ⇒ <code>number</code>
+Converts an angle from radians to degrees.
 
-**Returns**: <code>Number</code> - The result in degrees, after conversion.  
+**Kind**: global function  
+**Returns**: <code>number</code> - The equivalent angle in degrees.  
 **Throws**:
 
-- <code>TypeError</code> If `radians` is not a number.
+- <code>TypeError</code> If the argument is not a number.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| radians | <code>Number</code> | A number representing the radians to convert. |
+| radians | <code>number</code> | The angle in radians. |
 
 **Example**  
 ```js
 radiansToDegrees(0);
 // => 0
 
-radiansToDegrees(1.5707963267948966); // π / 2
+radiansToDegrees(Math.PI / 2);
 // => 90
 
-radiansToDegrees(3.141592653589793); // π
+radiansToDegrees(Math.PI);
 // => 180
 
-radiansToDegrees(4.71238898038469); // 3π / 2
+radiansToDegrees((3 * Math.PI) / 2);
 // => 270
 
-radiansToDegrees(6.283185307179586); // 2π
+radiansToDegrees(2 * Math.PI);
 // => 360
 ```
