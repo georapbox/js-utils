@@ -2,12 +2,19 @@
 
 ## intersect(...arrays) ⇒ <code>Array</code>
 Creates an array of unique values that are included in all given arrays.
-The order of result values is determined by the order they occur in the first array.
+The order of result values is determined by their first occurrence in
+the first array.
 
-**Returns**: <code>Array</code> - The array of intersecting values.  
+Values are compared using SameValueZero equality. This means `NaN` is
+considered equal to `NaN`, and objects are compared by reference.
+Sparse array holes are treated as `undefined` values.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the unique intersecting values.  
 **Throws**:
 
-- <code>TypeError</code> If any of the arguments is not array.
+- <code>TypeError</code> If no arrays are provided or any argument is not an array.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -15,13 +22,15 @@ The order of result values is determined by the order they occur in the first ar
 
 **Example**  
 ```js
-const arrA = [NaN, 3, 8, 'foo', 'bar'];
-const arrB = [2, 7, 'foo', NaN, 3];
-const arrC = [1, 2, 3, NaN];
+intersect([1, 2, 2, 3], [2, 3, 4]);
+// => [2, 3]
 
-intersect(arrA, arrB);
-// => [NaN, 3, 'foo']
-
-intersect(arrA, arrB, arrC);
+intersect([NaN, 3, 8, 'foo'], [3, NaN, 'bar']);
 // => [NaN, 3]
+
+intersect([1, 2, 3], [2, 3], [3, 4]);
+// => [3]
+
+intersect([1, , 3], [undefined, 3]);
+// => [undefined, 3]
 ```

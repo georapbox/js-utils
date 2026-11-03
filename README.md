@@ -7,35 +7,31 @@ This repository contains a collection of simple, standalone JavaScript utility f
 
 The utilities are organized into categories based on their functionality, such as arrays, strings, objects, functions, and more. Each utility is self-contained and can be used independently.
 
-## Table of Contents
+## Utilities
+
+[Array](#array) · [String](#string) · [Number](#number) · [Object](#object) · [Function](#function) · [DOM](#dom)
 
 ### Array
 
 | Name | Description |
 |------|-------------|
-|[chunk](./src/array/chunk)|Creates an array of elements split into groups the length of size specified.|
-|[diff](./src/array/diff)|Returns an array with only the unique values from the first array, by excluding all values from the second array using strict equality for comparisons.|
-|[drop](./src/array/drop)|Creates a slice of `array` with `n` elements dropped from the beginning.|
-|[dropRight](./src/array/dropRight)|Creates a slice of `array` with `n` elements dropped from the end.|
-|[dropRightWhile](./src/array/dropRightWhile)|Creates a slice of `array` excluding elements dropped from the end, until `predicate` returns falsy.|
-|[dropWhile](./src/array/dropWhile)|Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.|
-|[groupBy](./src/array/groupBy)|Creates an object composed of keys generated from the results of running each element of `array` through `iteratee`.|
+|[chunk](./src/array/chunk)|Splits an array into chunks of the specified size.|
+|[diff](./src/array/diff)|Creates a new array containing the values from the first array that are not present in the second array.|
+|[drop](./src/array/drop)|Creates a slice of an array with `n` elements dropped from the beginning.|
+|[dropRight](./src/array/dropRight)|Creates a slice of an array with `n` elements dropped from the end.|
+|[dropRightWhile](./src/array/dropRightWhile)|Creates a new array excluding elements from the end of the input array while the predicate returns a truthy value.|
+|[dropWhile](./src/array/dropWhile)|Creates a new array excluding elements from the beginning of the input array while the predicate returns a truthy value.|
 |[intersect](./src/array/intersect)|Creates an array of unique values that are included in all given arrays.|
-|[insert](./src/array/insert)|Inserts one or more elements to array at specific index.|
-|[move](./src/array/move)|Move an array element to a different position.|
-|[partition](./src/array/partition)|Creates an array of elements split into two groups (arrays) depending on the result of a predicated function invoked for each iteration.|
-|[pluck](./src/array/pluck)|Retrieves the value of a specified property from all elements in an array.|
-|[remove](./src/array/remove)|Removes one or more elements from an array at the specified index(es).|
-|[shuffle](./src/array/shuffle)|Returns a new array with its elements' order randomized, using the Fisher-Yates (aka Knuth) Shuffle algorithm.|
-|[tail](./src/array/tail)|Gets all but the first element of array.|
+|[move](./src/array/move)|Creates a new array with an element moved from one index to another.|
+|[partition](./src/array/partition)|Splits an array into two groups based on the result of a predicate.|
+|[remove](./src/array/remove)|Creates a new array excluding elements at the specified indices.|
+|[shuffle](./src/array/shuffle)|Creates a new array with its elements shuffled into a random order using the Fisher-Yates algorithm.|
 |[take](./src/array/take)|Creates a slice of array with `n` items taken from the beginning.|
-|[takeRight](./src/array/takeRight)|Creates a slice of array with `n` items taken from the end.|
-|[takeRightWhile](./src/array/takeRightWhile)|Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.|
-|[takeWhile](./src/array/takeWhile)|Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.|
-|[sort](./src/array/sort)|Sorts an **array of primitive values**.|
-|[sortBy](./src/array/sortBy)|Sorts an **array of objects** by a property.|
-|[uniqBy](./src/array/uniqBy)|Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.|
-|[zip](./src/array/zip)|Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.|
+|[takeRight](./src/array/takeRight)|Creates a new array containing up to `n` elements from the end of the input array.|
+|[takeRightWhile](./src/array/takeRightWhile)|Creates a slice of an array containing elements from the end until the predicate returns a falsy value.|
+|[takeWhile](./src/array/takeWhile)|Creates a slice of an array containing elements from the beginning until the predicate returns a falsy value.|
+|[uniqBy](./src/array/uniqBy)|Creates a duplicate-free array using an `iteratee` function to compute a unique key for each element.|
+|[zip](./src/array/zip)|Creates a new array of grouped elements by combining values at the same index from each input array.|
 
 ### String
 

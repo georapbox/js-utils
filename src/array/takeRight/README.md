@@ -1,30 +1,32 @@
 <a name="takeRight"></a>
 
-## takeRight(array, [n]) ⇒ <code>Array</code>
-Creates a slice of `array` with `n` items taken from the end.
+## takeRight(array, [n]) ⇒ <code>Array</code> \| <code>Array</code>
+Creates a new array containing up to `n` elements from the end
+of the input array.
 
-**Returns**: <code>Array</code> - The slice of the array.  
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the selected elements.<code>Array</code> - Returns a new array containing the selected items.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `n` is not number but not if is `undefined`.
+- <code>TypeError</code> If `array` is not an array or `n` is not a number.
+- <code>RangeError</code> If `n` is `NaN`.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | array | <code>Array</code> |  | The array to process. |
-| [n] | <code>Number</code> | <code>1</code> | The number of items to take. |
+| [n] | <code>number</code> | <code>1</code> | The number of elements to take. Fractional values are rounded down using `Math.floor()`. |
 
 **Example**  
 ```js
 takeRight([1, 2, 3, 4, 5]);
 // => [5]
 
-takeRight([1, 2, 3, 4, 5], NaN);
-// => [5]
-
 takeRight([1, 2, 3, 4, 5], 3);
 // => [3, 4, 5]
+
+takeRight([1, 2, 3, 4, 5], 2.7);
+// => [4, 5]
 
 takeRight([1, 2, 3, 4, 5], 0);
 // => []
@@ -35,12 +37,6 @@ takeRight([1, 2, 3, 4, 5], -2);
 takeRight([1, 2, 3, 4, 5], 10);
 // => [1, 2, 3, 4, 5]
 
-takeRight([1, 2, 3, 4, 5], Number.MAX_VALUE);
+takeRight([1, 2, 3, 4, 5], Infinity);
 // => [1, 2, 3, 4, 5]
-
-takeRight([1, 2, 3, 4, 5], '2');
-// => Throws TypeError
-
-takeRight({}, 2);
-// => Throws TypeError
 ```

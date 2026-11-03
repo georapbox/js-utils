@@ -1,36 +1,43 @@
 /**
  * Creates an array of unique values that are included in all given arrays.
- * The order of result values is determined by the order they occur in the first array.
+ * The order of result values is determined by their first occurrence in
+ * the first array.
+ *
+ * Values are compared using SameValueZero equality. This means `NaN` is
+ * considered equal to `NaN`, and objects are compared by reference.
+ * Sparse array holes are treated as `undefined` values.
  *
  * @param {...Array} arrays The arrays to intersect.
- * @throws {TypeError} If any argument is not an array or no arrays are provided.
- * @returns {Array} The array of intersecting values.
+ * @returns {Array} A new array containing the unique intersecting values.
+ * @throws {TypeError} If no arrays are provided or any argument is not an array.
  * @example
  *
- * const arrA = [NaN, 3, 8, 'foo', 'bar'];
- * const arrB = [2, 7, 'foo', NaN, 3];
- * const arrC = [1, 2, 3, NaN];
+ * intersect([1, 2, 2, 3], [2, 3, 4]);
+ * // => [2, 3]
  *
- * intersect(arrA, arrB);
- * // => [NaN, 3, 'foo']
- *
- * intersect(arrA, arrB, arrC);
+ * intersect([NaN, 3, 8, 'foo'], [3, NaN, 'bar']);
  * // => [NaN, 3]
+ *
+ * intersect([1, 2, 3], [2, 3], [3, 4]);
+ * // => [3]
+ *
+ * intersect([1, , 3], [undefined, 3]);
+ * // => [undefined, 3]
  */
-const intersect = (...arrays) => {
+export function intersect(...arrays) {
   if (arrays.length === 0 || !arrays.every(Array.isArray)) {
     throw new TypeError('Expected all arguments to be arrays');
   }
 
   const [firstArray, ...otherArrays] = arrays;
+  const sets = otherArrays.map((array) => new Set(array));
+  const result = new Set();
 
-  const intersection = firstArray.filter((element) => {
-    return otherArrays.every((array) => array.includes(element));
-  });
+  for (const value of firstArray) {
+    if (sets.every((set) => set.has(value))) {
+      result.add(value);
+    }
+  }
 
-  const uniqueValues = new Set(intersection);
-
-  return [...uniqueValues];
-};
-
-export { intersect };
+  return [...result];
+}

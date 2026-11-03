@@ -1,32 +1,32 @@
 <a name="dropWhile"></a>
 
-## dropWhile(The, predicate) ⇒ <code>Array</code>
-Creates a slice of `array` excluding elements dropped from the beginning, until `predicate` returns falsy.
-The predicate is invoked with three arguments: (`value`, `index`, `array`).
+## dropWhile(array, predicate) ⇒ <code>Array</code>
+Creates a new array excluding elements from the beginning of the input array
+while the predicate returns a truthy value.
 
-**Returns**: <code>Array</code> - The slice of the array.  
+Iteration is limited to the array's initial length, so elements appended
+during iteration are not visited. The predicate may still modify the array.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the remaining elements.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `predicate` is not function but not if is `undefined`.
+- <code>TypeError</code> If the first argument is not an array or the second argument is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The array to process. |
-| predicate | <code>function</code> | The function invoked per iteration. |
+| predicate | <code>function</code> | The function invoked with `(value, index, array)` for each element. |
 
 **Example**  
 ```js
-const books = [
-  {title: 'Javascript Design Patterns', read: false},
-  {title: 'Programming Javascript Applications', read: false},
-  {title: 'JavaScript The Good Parts', read: true},
-  {title: 'Eloquent Javascript', read: false}
-];
+dropWhile([1, 2, 3, 4, 5], value => value < 4);
+// => [4, 5]
 
-dropWhile(books, function (book, index, books) {
-  return !book.read;
-});
-// => [{title: 'JavaScript The Good Parts', read: true}, {title: 'Eloquent Javascript', read: false}]
+dropWhile([1, 2, 3], value => value > 5);
+// => [1, 2, 3]
+
+dropWhile([1, 2, 3], value => value > 0);
+// => []
 ```

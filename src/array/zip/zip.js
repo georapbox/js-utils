@@ -1,37 +1,40 @@
 /**
- * Creates an array of grouped elements, the first of which contains the first elements of the given arrays,
- * the second of which contains the second elements of the given arrays, and so on.
+ * Creates a new array of grouped elements by combining values at the same
+ * index from each input array.
+ *
+ * The result contains as many groups as the longest input array.
+ * Missing elements, including sparse array holes, are treated as `undefined`.
+ * The original arrays are not modified.
  *
  * @param {...Array} arrays The arrays to process.
+ * @returns {Array} A new array containing the grouped elements.
  * @throws {TypeError} If any argument is not an array.
- * @returns {Array} Returns the new array of grouped elements.
  * @example
  *
  * zip([1, 2, 3], [11, 22, 33], [111, 222, 333]);
  * // => [[1, 11, 111], [2, 22, 222], [3, 33, 333]]
  *
- * zip([1, 2, 3], [11, 22, 33], [111, 222]);
- * // => [[1, 11, 111], [2, 22, 222], [3, 33, undefined]]
- *
  * zip([1, 2, 3], [11, 22], [111]);
  * // => [[1, 11, 111], [2, 22, undefined], [3, undefined, undefined]]
  *
- * zip([], []);
- * // => []
+ * zip([], [1, 2]);
+ * // => [[undefined, 1], [undefined, 2]]
  *
  * zip();
  * // => []
  */
-export const zip = (...arrays) => {
+export function zip(...arrays) {
   if (!arrays.every(Array.isArray)) {
     throw new TypeError('Expected all arguments to be arrays');
   }
 
-  const longestArray = arrays.reduce((a, b) => {
-    return a.length > b.length ? a : b;
-  }, []);
+  let length = 0;
 
-  return Array.from({ length: longestArray.length }, (_, index) => {
+  for (const array of arrays) {
+    length = Math.max(length, array.length);
+  }
+
+  return Array.from({ length }, (_, index) => {
     return arrays.map((array) => array[index]);
   });
-};
+}
