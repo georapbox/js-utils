@@ -1,5 +1,5 @@
-[![Build](https://github.com/georapbox/js-utils/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/georapbox/js-utils/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/georapbox/js-utils?color=blue)](https://github.com/georapbox/js-utils/blob/master/LICENSE)
+[![Build](https://github.com/georapbox/js-utils/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/georapbox/js-utils/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/georapbox/js-utils?color=blue)](https://github.com/georapbox/js-utils/blob/main/LICENSE)
 
 # js-utils
 
