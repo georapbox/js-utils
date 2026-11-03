@@ -1,0 +1,20 @@
+import { describe, expect, it } from 'vitest';
+import { isFlatArray } from './isFlatArray.js';
+
+describe('is/isFlatArray', () => {
+  it('checks if a value is a flat array', () => {
+    expect(isFlatArray([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(true);
+
+    expect(isFlatArray([1, 2, [3], [4, 5], 6, 7, [8], 9])).toBe(false);
+
+    expect(isFlatArray([[1, 2, 3]])).toBe(false);
+
+    expect(isFlatArray(new Set())).toBe(false);
+
+    expect(isFlatArray([])).toBe(true);
+
+    expect(isFlatArray([Array.from({ length: 3 })])).toBe(false);
+
+    expect(isFlatArray()).toBe(false);
+  });
+});
