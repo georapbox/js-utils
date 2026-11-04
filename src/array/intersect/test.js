@@ -11,24 +11,12 @@ describe('Array/intersect', () => {
     const arrF = ['1', void 0, '2', null, '3', NaN];
 
     expect(intersect(arrA, arrB)).toEqual([NaN, 3, 'foo']);
-
     expect(intersect(arrC, arrD)).toEqual([]);
-
     expect(intersect(arrA, arrB, arrC)).toEqual([NaN, 3]);
-
     expect(intersect(arrE, arrF)).toEqual([null, NaN, void 0]);
-
-    expect(() => {
-      return intersect(arrA, {});
-    }).toThrow(new TypeError('Expected all arguments to be arrays'));
-
-    expect(() => {
-      return intersect({}, arrB);
-    }).toThrow(new TypeError('Expected all arguments to be arrays'));
-
-    expect(() => {
-      return intersect();
-    }).toThrow(new TypeError('Expected all arguments to be arrays'));
+    expect(() => intersect(arrA, {})).toThrow(new TypeError('Expected all arguments to be arrays'));
+    expect(() => intersect({}, arrB)).toThrow(new TypeError('Expected all arguments to be arrays'));
+    expect(() => intersect()).toThrow(new TypeError('Expected all arguments to be arrays'));
   });
 
   it('removes duplicate values while preserving their original order', () => {
@@ -36,13 +24,46 @@ describe('Array/intersect', () => {
     expect(intersect([NaN, NaN, 1, 2], [NaN, 2])).toEqual([NaN, 2]);
   });
 
-  it('removes duplicate values when only one array is provided', () => {
-    expect(intersect([1, 1, 2, 2, 3])).toEqual([1, 2, 3]);
+  it('removes duplicate values from one array and returns a new array', () => {
+    const input = [1, 1, 2, 2, 3];
+    const result = intersect(input);
+
+    expect(result).toEqual([1, 2, 3]);
+    expect(result).not.toBe(input);
   });
 
   it('returns an empty array when any input array is empty', () => {
-    expect(intersect([], [1, 2])).toEqual([]);
+    expect(intersect([], [1, 1], [1])).toEqual([]);
     expect(intersect([1, 2], [])).toEqual([]);
     expect(intersect([])).toEqual([]);
+  });
+
+  it('preserves object identity and the first array order', () => {
+    const sharedObject = {};
+    const otherObject = {};
+    const result = intersect([sharedObject, otherObject, sharedObject], [otherObject, sharedObject]);
+
+    expect(result).toHaveLength(2);
+    expect(result[0]).toBe(sharedObject);
+    expect(result[1]).toBe(otherObject);
+    expect(intersect([otherObject], [sharedObject])).toEqual([]);
+  });
+
+  it('deduplicates signed zero using Set semantics', () => {
+    const result = intersect([-0, 0], [-0, 0]);
+
+    expect(result).toHaveLength(1);
+    expect(Object.is(result[0], 0)).toBe(true);
+    expect(Object.is(result[0], -0)).toBe(false);
+  });
+
+  it('handles duplicate values in a sparse first array', () => {
+    const sparseFirstArray = Array(3);
+    sparseFirstArray[1] = 1;
+    sparseFirstArray[2] = 1;
+    const result = intersect(sparseFirstArray, [undefined, 1], [1, undefined]);
+
+    expect(result).toEqual([1]);
+    expect(0 in result).toBe(true);
   });
 });
