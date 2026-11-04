@@ -1,0 +1,29 @@
+
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["vitest"],
+  "categories": {
+    "correctness": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+  },
+  "rules": {
+    "no-empty": ["error", {
+      "allowEmptyCatch": true
+    }],
+    "no-use-before-define": ["error", {
+      "functions": false
+    }],
+    "eqeqeq": ["error", "always", {
+      "null": "ignore"
+    }],
+    "curly": "warn",
+    "no-var": "warn",
+    "prefer-const": "warn",
+    "prefer-rest-params": "warn",
+    "no-undef": "error",
+    "vitest/prefer-importing-vitest-globals": "error"
+  }
+}

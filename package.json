@@ -1,6 +1,7 @@
 {
   "name": "js-utils",
   "version": "1.0.0",
+  "type": "module",
   "description": "A collection of dependency-free JavaScript utilities.",
   "author": "George Raptis <georapbox@gmail.com>",
   "homepage": "https://github.com/georapbox/js-utils",
@@ -10,16 +11,20 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "jest --config jest.config.js",
-    "test:watch": "npm run test -- --watch",
-    "test:coverage": "npm run test -- --coverage",
-    "lint": "eslint packages/**/*.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "oxlint src",
+    "fmt": "oxfmt \"**/*.js\"",
+    "fmt:check": "oxfmt --check \"**/*.js\"",
     "docs": "npx jsdoc2md"
   },
   "devDependencies": {
-    "eslint": "~8.57.0",
-    "jest": "~29.7.0",
-    "jest-environment-jsdom": "~29.7.0",
-    "jsdoc-to-markdown": "~9.0.0"
+    "@vitest/browser-playwright": "~5.0.5",
+    "@vitest/coverage-v8": "~5.0.5",
+    "jsdoc-to-markdown": "~9.0.0",
+    "oxfmt": "~0.75.0",
+    "oxlint": "~1.90.0",
+    "vitest": "~5.0.5"
   }
 }
