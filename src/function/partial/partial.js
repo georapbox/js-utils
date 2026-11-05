@@ -1,29 +1,36 @@
 /**
- * Creates a new function that invokes the provided function `fn` with `partials` prepended to the arguments it receives.
+ * Creates a function that invokes `fn` with the specified partial arguments
+ * prepended to the arguments provided when the returned function is called.
  *
- * @param {function} fn The function to partially apply arguments to.
- * @param {*} [...args] The arguments to be partially applied.
- * @throws {TypeError} Throws if `fn` is not a function.
- * @returns {function} Returns the new partially applied function.
+ * The returned function preserves the caller's `this` binding and
+ * forwards the return value of `fn`.
+ * If no partial arguments are provided, all arguments are forwarded unchanged.
+ *
+ * @param {function} fn The function to partially apply.
+ * @param {...any} partials The arguments to prepend.
+ * @returns {function} The partially applied function.
+ * @throws {TypeError} If `fn` is not a function.
  * @example
  *
- * const add = (a, b, c) => a + b + c;
- * const p1 = partial(add, 1);
- * p1(2, 3); // => 6
+ * const greet = (greeting, firstName, lastName) =>
+ *   `${greeting}, ${firstName} ${lastName}!`;
  *
- * const p2 = partial(add, 10, 20);
- * p2(30); // => 60
+ * const sayHello = partial(greet, 'Hello');
  *
- * const p3 = partial(add, 100, 200, 300);
- * p3(); // => 600
+ * sayHello('John', 'Doe');
+ * // => 'Hello, John Doe!'
  *
- * const p4 = partial(add);
- * p4(5, 10, 15); // => 30
+ * const fn = partial((...args) => args, 1, 2);
+ *
+ * fn(3, 4);
+ * // => [1, 2, 3, 4]
  */
-export const partial = (fn, ...args_a) => {
+export function partial(fn, ...partials) {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return (...args_b) => fn(...args_a, ...args_b);
-};
+  return function (...args) {
+    return fn.apply(this, [...partials, ...args]);
+  };
+}

@@ -1,41 +1,59 @@
 /**
- * Returns a function, that, as long as it continues to be invoked, will not
- * be triggered. The function will be called after it stops being called for
- * 'n' milliseconds. If `immediate` is passed, trigger the function on the
- * leading edge, instead of the trailing.
+ * Creates a debounced function that delays invoking `fn` until `wait`
+ * milliseconds have elapsed since its last call.
  *
- * @param {function} fn The function to be executed.
- * @param {Number} [wait=0] Time of delay in milliseconds. It is required if `immediate` is used.
- * @param {Boolean} [immediate=false] If true or any truthy value, triggers the function on the leading edge.
- * @throws {TypeError} If `fn` is not function.
- * @returns {function} A new debounced function.
+ * By default, `fn` is invoked on the trailing edge with the arguments
+ * and `this` binding of the most recent call.
+ *
+ * When `immediate` is truthy, `fn` is invoked on the leading edge instead,
+ * and subsequent calls are ignored until the function has not been called
+ * for `wait` milliseconds.
+ *
+ * The debounced function always returns `undefined`.
+ *
+ * @param {function} fn The function to debounce.
+ * @param {number} [wait=0] The delay in milliseconds.
+ * @param {boolean} [immediate=false] Whether to invoke `fn` on the leading edge.
+ * @returns {function} The new debounced function.
+ * @throws {TypeError} If `fn` is not a function.
  * @example
  *
- * const debouncedHandler = debounce(() => {
- *   // Do your thing here...
+ * // Trailing-edge debounce
+ * const handleResize = debounce(() => {
+ *   console.log('Window resized');
  * }, 250);
  *
- * window.addEventListener('resize', debouncedHandler, false);
+ * window.addEventListener('resize', handleResize);
+ *
+ * // Leading-edge debounce
+ * const handleClick = debounce(() => {
+ *   console.log('Button clicked');
+ * }, 1000, true);
+ *
+ * button.addEventListener('click', handleClick);
  */
-export const debounce = (fn, wait = 0, immediate = false) => {
-  let timerId = null;
-
+export function debounce(fn, wait = 0, immediate = false) {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return (...args) => {
-    clearTimeout(timerId);
+  let timerId = null;
 
-    if (immediate && !timerId) {
-      fn(...args);
-    }
+  return function (...args) {
+    const callNow = immediate && timerId === null;
+
+    clearTimeout(timerId);
 
     timerId = setTimeout(() => {
       timerId = null;
+
       if (!immediate) {
-        fn(...args);
+        fn.apply(this, args);
       }
     }, wait);
+
+    if (callNow) {
+      fn.apply(this, args);
+    }
   };
-};
+}

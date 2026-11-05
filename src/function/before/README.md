@@ -1,25 +1,38 @@
 <a name="before"></a>
 
-## before(n, func) ⇒ <code>function</code>
-Creates a function that invokes `fn` while it’s called less than `n` times.
-`fn` is invoked with the this binding and arguments of the created function.
+## before(n, fn) ⇒ <code>function</code>
+Creates a function that invokes `fn` while the number of calls
+is less than `n`.
 
-**Returns**: <code>function</code> - Returns the new restricted function.  
+The returned function preserves the caller's `this` binding and
+arguments. Once the threshold is reached, subsequent calls return
+the result of the last invocation without calling `fn` again.
+If `n` is zero or negative, `fn` is never invoked.
+
+**Kind**: global function  
+**Returns**: <code>function</code> - The new restricted function.  
 **Throws**:
 
-- <code>TypeError</code> If `n` is not number.
-- <code>TypeError</code> If `fn` is not function.
+- <code>TypeError</code> If `n` is not an integer or `fn` is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| n | <code>Number</code> | The number of calls before `fn` is no longer invoked. A positive integer is expected. If a negative number or 0, `fn` is never invoked. If `NaN`, `-Infinity` or `Infinity`, `fn` is never invoked. |
-| func | <code>function</code> | The function to restrict. |
+| n | <code>number</code> | The call-count boundary. Must be an integer. |
+| fn | <code>function</code> | The function to restrict. |
 
-**Example**
+**Example**  
 ```js
-const doSomething = before(6, () => console.log('Do something...'));
+let count = 0;
+const callback = before(3, () => ++count);
+
+callback(); // => 1
+callback(); // => 2
+callback(); // => 2
+callback(); // => 2
+
+const doSomething = before(4, () => console.log('Do something...'));
 
 button.addEventListener('click', doSomething);
-// => logs "Do something..." up to 5 times.
+// Logs 'Do something...' on the first 3 clicks only.
 ```

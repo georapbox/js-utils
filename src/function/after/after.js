@@ -1,36 +1,47 @@
 /**
- * Creates a function that invokes `fn` once it's called `n` or more times.
- * `fn` is invoked with the this binding and arguments of the created function.
+ * Creates a function that invokes `fn` after it has been called
+ * at least `n` times.
  *
- * @param {Number} n The number of calls before `fn` is invoked.
- * A positive integer is expected.
- * If a negative number or 0, `fn` is invoked immediately.
- * If `NaN`, `-Infinity` or `Infinity`, `fn` is never invoked.
- * @param {function} fn The function to restrict.
- * @throws {TypeError} If `n` is not number.
- * @throws {TypeError} If `fn` is not function.
- * @returns {function} The new restricted function.
+ * Once the threshold is reached, `fn` is invoked on every subsequent
+ * call with the same `this` binding and arguments.
+ * If `n` is zero or negative, `fn` is invoked on the first call.
+ *
+ * @param {number} n The call-count boundary. Must be an integer.
+ * @param {function} fn The function to invoke.
+ * @returns {function} The new function.
+ * @throws {TypeError} If `n` is not an integer or `fn` is not a function.
  * @example
  *
- * const doSomething = after(4, () => console.log('Do something...');
+ * const callback = after(3, () => console.log('Hello'));
+ *
+ * callback(); // Nothing
+ * callback(); // Nothing
+ * callback(); // Logs 'Hello'
+ * callback(); // Logs 'Hello'
+ *
+ * const doSomething = after(4, () => console.log('Do something...'));
  *
  * button.addEventListener('click', doSomething);
- * // => logs "Do something..." after button is clicked at least 4 times.
+ * // Logs 'Do something...' from the fourth click onward.
  */
-export const after = (n, fn) => {
-  if (typeof n !== 'number') {
-    throw new TypeError('Expected a number for first argument');
+export function after(n, fn) {
+  if (!Number.isInteger(n)) {
+    throw new TypeError('Expected an integer for first argument');
   }
 
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for second argument');
   }
 
-  n = parseInt(n, 10);
+  let remaining = Math.max(0, n);
 
-  return (...args) => {
-    if (--n < 1) {
-      return fn(...args);
+  return function (...args) {
+    if (remaining > 0) {
+      remaining -= 1;
+    }
+
+    if (remaining === 0) {
+      return fn.apply(this, args);
     }
   };
-};
+}

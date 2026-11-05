@@ -93,20 +93,19 @@ The utilities are organized into categories based on their functionality, such a
 
 | Name | Description |
 |------|-------------|
-|[after](./src/function/after)|Creates a function that invokes `fn` once it's called `n` or more times.|
-|[ary](./src/function/ary)|Creates a function that accepts up to `n` arguments, ignoring any additional arguments.|
-|[before](./src/function/before)|Creates a function that invokes `fn` while it’s called less than `n` times.|
-|[compose](./src/function/compose)|Performs right-to-left function composition.|
-|[curry](./src/function/curry)|Returns a curried equivalent of the provided function.|
-|[debounce](./src/function/debounce)|Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for 'n' milliseconds.|
-|[flip](./src/function/flip)|Creates a function that invokes the original function with its parameters reversed.|
-|[negate](./src/function/negate)|Creates a function that negates the result of the predicate `fn`.|
-|[once](./src/function/once)|Ensure a given functionality only runs once.|
-|[partial](./src/function/partial)|Creates a new function that invokes the provided function with partials prepended to the arguments it receives.|
-|[partialRight](./src/function/partialRight)|Creates a new function that invokes the provided function with partials appended to the arguments it receives.|
-|[pipe](./src/function/pipe)|Performs left-to-right function composition.|
-|[throttle](./src/function/throttle)|Limits the number of times a function can be called in a given period.|
-|[unary](./src/function/unary)|Creates a function that accepts up to one argument, ignoring any additional arguments.|
+|[after](./src/function/after)|Creates a function that invokes `fn` after it has been called at least `n` times.|
+|[ary](./src/function/ary)|Creates a function that invokes `fn` with at most `cap` arguments, ignoring any additional arguments.|
+|[before](./src/function/before)|Creates a function that invokes `fn` while the number of calls is less than `n`.|
+|[compose](./src/function/compose)|Creates a function that performs right-to-left function composition.|
+|[curry](./src/function/curry)|Creates a curried function that collects arguments across multiple calls until the specified arity is reached.|
+|[debounce](./src/function/debounce)|Creates a debounced function that delays invoking `fn` until `wait` milliseconds have elapsed since its last call.|
+|[flip](./src/function/flip)|Creates a function that invokes `fn` with its arguments in reverse order.|
+|[negate](./src/function/negate)|Creates a function that negates the truthiness of the result returned by `fn`.|
+|[once](./src/function/once)|Creates a function that invokes `fn` at most once.|
+|[partial](./src/function/partial)|Creates a function that invokes `fn` with the specified partial arguments prepended to the arguments provided when the returned function is called.|
+|[partialRight](./src/function/partialRight)|Creates a function that invokes `fn` with the specified partial arguments appended to the arguments provided when the returned function is called.|
+|[pipe](./src/function/pipe)|Creates a function that performs left-to-right function composition.|
+|[throttle](./src/function/throttle)|Creates a throttled function that invokes `fn` at most once per `wait` milliseconds, apart from an initial leading-edge invocation.|
 
 ### DOM
 

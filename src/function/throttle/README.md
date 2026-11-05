@@ -1,25 +1,42 @@
 <a name="throttle"></a>
 
 ## throttle(fn, [wait]) ⇒ <code>function</code>
-Limits the number of times a function can be called in a given period.
+Creates a throttled function that invokes `fn` at most once per `wait`
+milliseconds, apart from an initial leading-edge invocation.
 
-**Returns**: <code>function</code> - The throttled function.  
+The first call invokes `fn` immediately. Additional calls during the
+interval schedule a trailing-edge invocation with the arguments and
+`this` binding of the most recent call.
+
+During continuous calls, `fn` executes at approximately the specified
+interval. The throttled function always returns `undefined`.
+
+**Kind**: global function  
+**Returns**: <code>function</code> - The new throttled function.  
 **Throws**:
 
-- <code>TypeError</code> If `fn` is not function.
+- <code>TypeError</code> If `fn` is not a function.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| fn | <code>function</code> |  | The function to be executed. |
-| [wait] | <code>Number</code> | <code>0</code> | Optional. Default value is 0. Time of delay in milliseconds. |
+| fn | <code>function</code> |  | The function to throttle. |
+| [wait] | <code>number</code> | <code>0</code> | The minimum interval between invocations, in milliseconds. |
 
-**Example**
+**Example**  
 ```js
-// A method that should be called no more than 4 times per second.
-const throttledHandler = throttle(() => {
-  // Do your thing here...
+// Limit scroll updates to approximately once every 250 milliseconds.
+const handleScroll = throttle(() => {
+  console.log(window.scrollY);
 }, 250);
 
-window.addEventListener('resize', throttledHandler, false);
+window.addEventListener('scroll', handleScroll);
+
+// The most recent arguments are used for trailing calls.
+const log = throttle(value => {
+  console.log(value);
+}, 100);
+
+log('first');  // Logs 'first' immediately
+log('second'); // Schedules 'second' for the trailing edge
 ```

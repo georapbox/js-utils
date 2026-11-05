@@ -1,23 +1,37 @@
 <a name="partialRight"></a>
 
-## partialRight(fn, ...args) ⇒ <code>function</code>
-Creates a new function that invokes the provided function `fn` with `partials` appended to the arguments it receives.
+## partialRight(fn, ...partials) ⇒ <code>function</code>
+Creates a function that invokes `fn` with the specified partial arguments
+appended to the arguments provided when the returned function is called.
 
-**Returns**: <code>function</code> - Returns the new partially applied function.  
+The returned function preserves the caller's `this` binding and
+forwards the return value of `fn`.
+If no partial arguments are provided, all arguments are forwarded unchanged.
+
+**Kind**: global function  
+**Returns**: <code>function</code> - The partially applied function.  
 **Throws**:
 
-- <code>TypeError</code> Throws if `fn` is not a function.
+- <code>TypeError</code> If `fn` is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fn | <code>function</code> | The function to partially apply arguments to. |
-| [...args] | <code>\*</code> | The arguments to be partially applied. |
+| fn | <code>function</code> | The function to partially apply. |
+| ...partials | <code>any</code> | The arguments to append. |
 
-**Example**
+**Example**  
 ```js
-const greet = (greeting, title, fname, lname) => `${greeting}, ${title} ${fname} ${lname}.`;
-const greetMrJoeBlack = partialRight(greet, 'Mr.', 'Joe', 'Black');
+const greet = (greeting, firstName, lastName) =>
+  `${greeting}, ${firstName} ${lastName}!`;
 
-greetMrJoeBlack('Hello'); //=> Hello, Mr. Joe Black.
+const greetJohnDoe = partialRight(greet, 'John', 'Doe');
+
+greetJohnDoe('Hello');
+// => 'Hello, John Doe!'
+
+const fn = partialRight((...args) => args, 1, 2);
+
+fn(3, 4);
+// => [3, 4, 1, 2]
 ```

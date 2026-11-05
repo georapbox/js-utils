@@ -1,31 +1,46 @@
 /**
- * Creates a function that accepts up to `n` arguments, ignoring any additional arguments.
+ * Creates a function that invokes `fn` with at most `cap` arguments,
+ * ignoring any additional arguments.
  *
- * @param {function} fn The function to cap arguments for.
- * @param {Number} n The arity cap.
- * @throws {TypeError} Throws if `fn` is not function.
- * @throws {TypeError} Throws if `n` is not number.
- * @returns {function} Returns the new capped function.
+ * The returned function preserves the caller's `this` binding and
+ * forwards the return value of `fn`.
+ * If `cap` is zero or negative, no arguments are forwarded.
+ *
+ * @param {function} fn The function to restrict.
+ * @param {number} cap The maximum number of arguments to forward. Must be an integer.
+ * @returns {function} The new function with capped arguments.
+ * @throws {TypeError} If `fn` is not a function or `cap` is not an integer.
  * @example
  *
- * const array = ['1', '2', '3'];
+ * const fn = ary((...args) => args, 2);
  *
+ * fn(1, 2, 3, 4);
+ * // => [1, 2]
+ *
+ * const sum = (a, b, c) => a + b + (c ?? 0);
+ * const sumTwo = ary(sum, 2);
+ *
+ * sumTwo(10, 20, 30);
+ * // => 30
+ *
+ * const array = ['1', '2', '3'];
  * const toInteger = ary(parseInt, 1);
  *
- * array.map(toInteger); // => [1, 2, 3]
+ * array.map(toInteger);
+ * // => [1, 2, 3]
  */
-export const ary = (fn, n) => {
+export function ary(fn, cap) {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  if (typeof n !== 'number') {
-    throw new TypeError('Expected a number for second argument');
+  if (!Number.isInteger(cap)) {
+    throw new TypeError('Expected an integer for second argument');
   }
 
-  return (...args) => {
-    const arityCap = n > 0 ? n : 0;
+  const arityCap = Math.max(0, cap);
 
-    return fn(...args.slice(0, arityCap));
+  return function (...args) {
+    return fn.apply(this, args.slice(0, arityCap));
   };
-};
+}
