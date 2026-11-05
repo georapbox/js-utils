@@ -111,11 +111,9 @@ The utilities are organized into categories based on their functionality, such a
 
 | Name | Description |
 |------|-------------|
-|[convertImageToBase64](./src/dom/convertImageToBase64)|Converts an image's content to Data URI scheme.|
-|[cookie](./src/dom/cookie)|Create, read and delete cookies.|
-|[mediaQuery](./src/dom/mediaQuery)|Determines if the document matches a media query string.|
-|[preloadImages](./src/dom/preloadImages)|Asynchronously load images to browser so that can be cached.|
+|[convertImageToBase64](./src/dom/convertImageToBase64)|Fetches an image and converts its content to a Base64-encoded Data URI.|
 |[setupHiDPICanvas](./src/dom/setupHiDPICanvas)|Configures an HTMLCanvasElement for sharp rendering on high-DPI screens.|
+|[subscribeMediaQuery](./src/dom/subscribeMediaQuery)|Subscribes to the matching state of a CSS media query.|
 
 ## Development setup
 
