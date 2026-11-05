@@ -23,7 +23,7 @@
     "lint": "oxlint src",
     "fmt": "oxfmt \"**/*.js\"",
     "fmt:check": "oxfmt --check \"**/*.js\"",
-    "docs": "node scripts/generate-docs.mjs"
+    "docs": "node scripts/docs/generate.mjs"
   },
   "devDependencies": {
     "@vitest/browser-playwright": "~5.0.5",
