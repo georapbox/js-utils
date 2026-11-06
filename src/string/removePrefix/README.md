@@ -1,19 +1,22 @@
 <a name="removePrefix"></a>
 
-## removePrefix(subjectString, [prefix]) ⇒ <code>String</code>
-Removes prefix from start of a string.
+## removePrefix(str, prefix) ⇒ <code>string</code>
+Removes a prefix from the beginning of a string if present.
 
-**Returns**: <code>String</code> - The result string.  
+Returns the original string if it does not start with the specified prefix.
+Only the first occurrence at the beginning is removed.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - The string without the specified prefix, if present.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
-- <code>TypeError</code> If `prefix` is not string but not if is `undefined`.
+- <code>TypeError</code> If either argument is not a string.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| subjectString | <code>String</code> | The string to process. |
-| [prefix] | <code>String</code> | The prefix substring to remove from the original string. |
+| str | <code>string</code> | The string to process. |
+| prefix | <code>string</code> | The prefix to remove. |
 
 **Example**  
 ```js
@@ -21,11 +24,11 @@ removePrefix('__foo', '__');
 // => 'foo'
 
 removePrefix('__foobar', '??');
-// => 'foobar'
+// => '__foobar'
 
-removePrefix('__foobar');
-// => 'foobar'
+removePrefix('foofoo', 'foo');
+// => 'foo'
 
-removePrefix('__foobar', {});
-// => TypeError
+removePrefix('foobar', '');
+// => 'foobar'
 ```

@@ -1,34 +1,31 @@
 /**
- * Removes suffix from start of a string.
+ * Removes a suffix from the end of a string if present.
  *
- * @param {String} subjectString The original string.
- * @param {String} [suffix] The suffix substring to remove from the original string.
- * @throws {TypeError} If `subjectString` is not string.
- * @throws {TypeError} If `suffix` is not string but not if is `undefined`.
- * @returns {String} The result string.
+ * Returns the original string if it does not end with the specified suffix.
+ * Only the last occurrence at the end is removed.
+ *
+ * @param {string} str The string to process.
+ * @param {string} suffix The suffix to remove.
+ * @returns {string} The string without the specified suffix, if present.
+ * @throws {TypeError} If either argument is not a string.
  * @example
  *
  * removeSuffix('foobar__', '__');
- * // => 'foo'
+ * // => 'foobar'
  *
  * removeSuffix('foobar__', '??');
- * // => 'foobar'
+ * // => 'foobar__'
  *
- * removeSuffix('foobar__');
- * // => 'foobar'
+ * removeSuffix('foofoo', 'foo');
+ * // => 'foo'
  *
- * removeSuffix('foobar__', {});
- * // => TypeError
+ * removeSuffix('foobar', '');
+ * // => 'foobar'
  */
-export const removeSuffix = (subjectString, suffix) => {
-  if (typeof subjectString !== 'string' || (typeof suffix !== 'string' && typeof suffix !== 'undefined')) {
-    throw new TypeError('Expected a string for first and second argument argument');
+export function removeSuffix(str, suffix) {
+  if (typeof str !== 'string' || typeof suffix !== 'string') {
+    throw new TypeError('Expected all arguments to be strings');
   }
 
-  const strLen = subjectString.length;
-  const suffixLen = suffix ? suffix.length : 0;
-
-  return subjectString.indexOf(suffix, strLen - suffixLen) !== -1
-    ? subjectString.slice(0, strLen - suffixLen)
-    : subjectString;
-};
+  return str.endsWith(suffix) && suffix.length > 0 ? str.slice(0, -suffix.length) : str;
+}

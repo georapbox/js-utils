@@ -1,31 +1,33 @@
 <a name="classnames"></a>
 
-## classnames() ⇒ <code>String</code>
-Creates a string by conditionally joining classNames together.
+## classnames(...args) ⇒ <code>string</code>
+Creates a string by conditionally joining class names with spaces.
 
-**Returns**: <code>string</code> - Returns the final concatenated string.
+String arguments are included directly. Arrays are flattened recursively.
+For plain objects, each own enumerable property whose value is truthy
+contributes its key as a class name. All other values are ignored.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - The concatenated class names.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ...args | <code>...string</code>\|<code>...object</code> | List of classes to be joined. Falsy arguments or arguments of unsupported type are ignored. |
+| ...args | <code>any</code> | The class names, arrays, and objects to combine. |
 
-**Example**
+**Example**  
 ```js
 classnames('foo', 'bar');
 // => 'foo bar'
 
-classnames('foo', { bar: true });
+classnames('foo', { bar: true, baz: false });
 // => 'foo bar'
 
-classnames('foo', { bar: false });
-// => 'foo'
+classnames('foo', ['bar', 'baz']);
+// => 'foo bar baz'
 
-classnames({ foo: true }, { bar: true });
-// => 'foo bar'
+classnames('foo', ['bar', ['baz', { active: true }]]);
+// => 'foo bar baz active'
 
-classnames({ foo: true, bar: true });
-// => 'foo bar'
-
-classnames('foo', 0, false, undefined, null, { bar: 1 }, NaN, { baz: 0 }); // falsy values are ignored
-// => 'foo bar'
+classnames('foo', null, false, 0, { active: true });
+// => 'foo active'
 ```

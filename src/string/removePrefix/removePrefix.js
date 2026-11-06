@@ -1,29 +1,31 @@
 /**
- * Removes prefix from start of a string.
+ * Removes a prefix from the beginning of a string if present.
  *
- * @param {String} subjectString The string to process.
- * @param {String} [prefix] The prefix substring to remove from the original string.
- * @throws {TypeError} If `subjectString` is not string.
- * @throws {TypeError} If `prefix` is not string but not if is `undefined`.
- * @returns {String} The result string.
+ * Returns the original string if it does not start with the specified prefix.
+ * Only the first occurrence at the beginning is removed.
+ *
+ * @param {string} str The string to process.
+ * @param {string} prefix The prefix to remove.
+ * @returns {string} The string without the specified prefix, if present.
+ * @throws {TypeError} If either argument is not a string.
  * @example
  *
  * removePrefix('__foo', '__');
  * // => 'foo'
  *
  * removePrefix('__foobar', '??');
- * // => 'foobar'
+ * // => '__foobar'
  *
- * removePrefix('__foobar');
- * // => 'foobar'
+ * removePrefix('foofoo', 'foo');
+ * // => 'foo'
  *
- * removePrefix('__foobar', {});
- * // => TypeError
+ * removePrefix('foobar', '');
+ * // => 'foobar'
  */
-export const removePrefix = (subjectString, prefix) => {
-  if (typeof subjectString !== 'string' || (typeof prefix !== 'string' && typeof prefix !== 'undefined')) {
+export function removePrefix(str, prefix) {
+  if (typeof str !== 'string' || typeof prefix !== 'string') {
     throw new TypeError('Expected all arguments to be strings');
   }
 
-  return subjectString.indexOf(prefix) === 0 ? subjectString.slice(prefix.length) : subjectString;
-};
+  return str.startsWith(prefix) ? str.slice(prefix.length) : str;
+}

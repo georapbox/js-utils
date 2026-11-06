@@ -3,13 +3,13 @@
 
 # js-utils
 
-This repository contains a collection of simple, standalone JavaScript utility functions that I've used over the years in various projects. The goal is to provide useful functions that developers can easily use, modify, and adapt to their own needs, rather than offering a complete library.
+This repository contains a collection of simple, standalone JavaScript utility functions that I've used over the years in various projects. Most of these utilities cover functionality that JavaScript doesn't provide directly or that would otherwise require additional code. The goal is not to replace native APIs or offer a complete utility library, but to provide practical functions that developers can easily use, modify, and adapt to their own needs.
 
-The utilities are organized into categories based on their functionality, such as arrays, strings, objects, functions, and more. Each utility is self-contained and can be used independently.
+The utilities are listed alphabetically within each section for easy reference. Each utility is self-contained and can be used independently.
 
 ## Utilities
 
-[Array](#array) · [String](#string) · [Number](#number) · [Object](#object) · [Function](#function) · [DOM](#dom)
+[Array](#array) · [DOM](#dom) · [Function](#function) · [Number](#number) · [Object](#object) · [String](#string)
 
 ### Array
 
@@ -33,35 +33,31 @@ The utilities are organized into categories based on their functionality, such a
 |[uniqBy](./src/array/uniqBy)|Creates a duplicate-free array using an `iteratee` function to compute a unique key for each element.|
 |[zip](./src/array/zip)|Creates a new array of grouped elements by combining values at the same index from each input array.|
 
-### String
+### DOM
 
 | Name | Description |
 |------|-------------|
-|[camelCase](./src/string/camelCase)|Converts a string to [camel case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'theQuickBrownFoxJumpsOverTheLazyDog'`.|
-|[capitalize](./src/string/capitalize)|Capitalizes the first character of a string (Optionally, converts the rest of the string to lower case).|
-|[classnames](./src/string/classnames)|Creates a string by conditionally joining classNames together.|
-|[collapseWhitespace](./src/string/collapseWhitespace)|Converts all adjacent whitespace characters to a single space.|
-|[deburr](./src/string/deburr)|Deburrs a string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.|
-|[escapeHTML](./src/string/escapeHTML)|Converts the characters `&`, `<`, `>`, `"` and `'` in a string to their corresponding HTML entities.|
-|[escapeRegExp](./src/string/escapeRegExp)|Escapes `RegExp` special characters in a string.|
-|[kebabCase](./src/string/kebabCase)|Converts a string to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the-quick-brown-fox-jumps-over-the-lazy-dog'`.|
-|[lines](./src/string/lines)|Returns an array with the lines of a a string.|
-|[numberFormat](./src/string/numberFormat)|Formats a number based on the number of decimal points, the decimal separator and the thousands separator.|
-|[pascalCase](./src/string/pascalCase)|Converts a string to [pascal case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'TheQuickBrownFoxJumpsOverTheLazyDog'`.|
-|[randomString](./src/string/randomString)|Generates a pseudo-random string of specific `length` allowing a set of characters specified by `chars`.|
-|[removePrefix](./src/string/removePrefix)|Removes substring (prefix) from start of a string.|
-|[removeSuffix](./src/string/removeSuffix)|Removes substring (suffix) from end of a string.|
-|[snakeCase](./src/string/snakeCase)|Converts a string to [snake case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles), eg `'the_quick_brown_fox_jumps_over_the_lazy_dog'`.|
-|[squash](./src/string/squash)|Removes all spaces from a string; optionally removes any escape sequences such as `\t`, `\n`, `\f`, `\r` and `\v`.|
-|[strip](./src/string/strip)|Returns a new string with all occurrences of arguments passed removed.|
-|[stripHTML](./src/string/stripHTML)|Returns a new string with all HTML tags removed.|
-|[stripPunctuation](./src/string/stripPunctuation)|Returns a new string with all of punctuation removed.|
-|[substringAfter](./src/string/substringAfter)|Returns a substring after a specific sequence of character(s).|
-|[substringBefore](./src/string/substringBefore)|Returns a substring before a specific sequence of character(s).|
-|[supplant](./src/string/supplant)|Performs variable substitution in a string.|
-|[truncate](./src/string/truncate)|Truncates a string based on character count.|
-|[unescapeHTML](./src/string/unescapeHTML)|Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#34` and `&#39;` in a string to their corresponding characters.|
-|[words](./src/string/words)|Splits string into an array of its words.|
+|[convertImageToBase64](./src/dom/convertImageToBase64)|Fetches an image and converts its content to a Base64-encoded Data URI.|
+|[setupHiDPICanvas](./src/dom/setupHiDPICanvas)|Configures an HTMLCanvasElement for sharp rendering on high-DPI screens.|
+|[subscribeMediaQuery](./src/dom/subscribeMediaQuery)|Subscribes to the matching state of a CSS media query.|
+
+### Function
+
+| Name | Description |
+|------|-------------|
+|[after](./src/function/after)|Creates a function that invokes `fn` after it has been called at least `n` times.|
+|[ary](./src/function/ary)|Creates a function that invokes `fn` with at most `cap` arguments, ignoring any additional arguments.|
+|[before](./src/function/before)|Creates a function that invokes `fn` while the number of calls is less than `n`.|
+|[compose](./src/function/compose)|Creates a function that performs right-to-left function composition.|
+|[curry](./src/function/curry)|Creates a curried function that collects arguments across multiple calls until the specified arity is reached.|
+|[debounce](./src/function/debounce)|Creates a debounced function that delays invoking `fn` until `wait` milliseconds have elapsed since its last call.|
+|[flip](./src/function/flip)|Creates a function that invokes `fn` with its arguments in reverse order.|
+|[negate](./src/function/negate)|Creates a function that negates the truthiness of the result returned by `fn`.|
+|[once](./src/function/once)|Creates a function that invokes `fn` at most once.|
+|[partial](./src/function/partial)|Creates a function that invokes `fn` with the specified partial arguments prepended to the arguments provided when the returned function is called.|
+|[partialRight](./src/function/partialRight)|Creates a function that invokes `fn` with the specified partial arguments appended to the arguments provided when the returned function is called.|
+|[pipe](./src/function/pipe)|Creates a function that performs left-to-right function composition.|
+|[throttle](./src/function/throttle)|Creates a throttled function that invokes `fn` at most once per `wait` milliseconds, apart from an initial leading-edge invocation.|
 
 ### Number
 
@@ -89,31 +85,23 @@ The utilities are organized into categories based on their functionality, such a
 |[pick](./src/object/pick)|Creates a new object containing the specified own enumerable properties of the source object.|
 |[pickBy](./src/object/pickBy)|Creates a new object containing the own enumerable properties of the source object for which the predicate returns a truthy value.|
 
-### Function
+### String
 
 | Name | Description |
 |------|-------------|
-|[after](./src/function/after)|Creates a function that invokes `fn` after it has been called at least `n` times.|
-|[ary](./src/function/ary)|Creates a function that invokes `fn` with at most `cap` arguments, ignoring any additional arguments.|
-|[before](./src/function/before)|Creates a function that invokes `fn` while the number of calls is less than `n`.|
-|[compose](./src/function/compose)|Creates a function that performs right-to-left function composition.|
-|[curry](./src/function/curry)|Creates a curried function that collects arguments across multiple calls until the specified arity is reached.|
-|[debounce](./src/function/debounce)|Creates a debounced function that delays invoking `fn` until `wait` milliseconds have elapsed since its last call.|
-|[flip](./src/function/flip)|Creates a function that invokes `fn` with its arguments in reverse order.|
-|[negate](./src/function/negate)|Creates a function that negates the truthiness of the result returned by `fn`.|
-|[once](./src/function/once)|Creates a function that invokes `fn` at most once.|
-|[partial](./src/function/partial)|Creates a function that invokes `fn` with the specified partial arguments prepended to the arguments provided when the returned function is called.|
-|[partialRight](./src/function/partialRight)|Creates a function that invokes `fn` with the specified partial arguments appended to the arguments provided when the returned function is called.|
-|[pipe](./src/function/pipe)|Creates a function that performs left-to-right function composition.|
-|[throttle](./src/function/throttle)|Creates a throttled function that invokes `fn` at most once per `wait` milliseconds, apart from an initial leading-edge invocation.|
-
-### DOM
-
-| Name | Description |
-|------|-------------|
-|[convertImageToBase64](./src/dom/convertImageToBase64)|Fetches an image and converts its content to a Base64-encoded Data URI.|
-|[setupHiDPICanvas](./src/dom/setupHiDPICanvas)|Configures an HTMLCanvasElement for sharp rendering on high-DPI screens.|
-|[subscribeMediaQuery](./src/dom/subscribeMediaQuery)|Subscribes to the matching state of a CSS media query.|
+|[classnames](./src/string/classnames)|Creates a string by conditionally joining class names with spaces.|
+|[escapeHTML](./src/string/escapeHTML)|Escapes special HTML characters in a string.|
+|[interpolate](./src/string/interpolate)|Replaces placeholders in a string with values from an object.|
+|[lines](./src/string/lines)|Splits a string into an array of lines.|
+|[removePrefix](./src/string/removePrefix)|Removes a prefix from the beginning of a string if present.|
+|[removePunctuation](./src/string/removePunctuation)|Removes Unicode punctuation characters from a string.|
+|[removeSuffix](./src/string/removeSuffix)|Removes a suffix from the end of a string if present.|
+|[substringAfter](./src/string/substringAfter)|Returns the substring after the first occurrence of a delimiter.|
+|[substringBefore](./src/string/substringBefore)|Returns the substring before the first occurrence of a delimiter.|
+|[truncate](./src/string/truncate)|Truncates a string to the specified number of characters.|
+|[unescapeHTML](./src/string/unescapeHTML)|Converts supported HTML entities to their corresponding characters.|
+|[upperFirst](./src/string/upperFirst)|Uppercases the first character of a string without changing the rest.|
+|[words](./src/string/words)|Extracts words from a string using locale-aware word segmentation.|
 
 ## Development setup
 
