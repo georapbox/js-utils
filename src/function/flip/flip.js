@@ -1,19 +1,32 @@
 /**
- * Creates a function that invokes the original function with its parameters reversed.
+ * Creates a function that invokes `fn` with its arguments in reverse order.
  *
- * @param {function} fn The function to invoke with its parameters reversed.
- * @throws {TypeError} Throws if `fn` is not a function.
- * @returns {function} Returns the new flipped function.
+ * The returned function preserves the caller's `this` binding and
+ * forwards the return value of `fn`.
+ * All arguments are reversed, regardless of the function's declared arity.
+ *
+ * @param {function} fn The function whose arguments to reverse.
+ * @returns {function} The new function with reversed arguments.
+ * @throws {TypeError} If `fn` is not a function.
  * @example
  *
  * const flipped = flip((...args) => args);
  *
- * flipped(1, 2, 3, 4); // => [4, 3, 2, 1]
+ * flipped(1, 2, 3, 4);
+ * // => [4, 3, 2, 1]
+ *
+ * const subtract = (a, b) => a - b;
+ * const flippedSubtract = flip(subtract);
+ *
+ * flippedSubtract(10, 3);
+ * // => -7
  */
-export const flip = (fn) => {
+export function flip(fn) {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return (...args) => fn(...args.reverse());
-};
+  return function (...args) {
+    return fn.apply(this, args.reverse());
+  };
+}

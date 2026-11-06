@@ -1,31 +1,34 @@
 <a name="removeSuffix"></a>
 
-## removeSuffix(subjectString, [suffix]) ⇒ <code>String</code>
-Removes suffix from start of a string.
+## removeSuffix(str, suffix) ⇒ <code>string</code>
+Removes a suffix from the end of a string if present.
 
-**Returns**: <code>String</code> - The result string.  
+Returns the original string if it does not end with the specified suffix.
+Only the last occurrence at the end is removed.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - The string without the specified suffix, if present.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
-- <code>TypeError</code> If `suffix` is not string but not if is `undefined`.
+- <code>TypeError</code> If either argument is not a string.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| subjectString | <code>String</code> | The original string. |
-| [suffix] | <code>String</code> | The suffix substring to remove from the original string. |
+| str | <code>string</code> | The string to process. |
+| suffix | <code>string</code> | The suffix to remove. |
 
 **Example**  
 ```js
 removeSuffix('foobar__', '__');
-// => 'foo'
+// => 'foobar'
 
 removeSuffix('foobar__', '??');
-// => 'foobar'
+// => 'foobar__'
 
-removeSuffix('foobar__');
-// => 'foobar'
+removeSuffix('foofoo', 'foo');
+// => 'foo'
 
-removeSuffix('foobar__', {});
-// => TypeError
+removeSuffix('foobar', '');
+// => 'foobar'
 ```

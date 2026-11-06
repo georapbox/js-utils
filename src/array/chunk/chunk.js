@@ -1,13 +1,12 @@
 /**
- * Creates an array of elements split into groups the length of `size`.
- * If array can’t be split evenly, the final chunk will be the remaining elements.
+ * Splits an array into chunks of the specified size.
+ * If the array cannot be split evenly, the final chunk contains the remaining elements.
  *
  * @param {Array} array The array to process.
- * @param {Number} size The length of each chunk. If a float number, it is converted to integer using `Math.floor()`.
- * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `size` is not number.
- * @throws {RangeError} If `size` is not a positive number, or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
- * @returns {Array} The new array containing chunks. If `size` is lower than 1, an empty array is returned.
+ * @param {number} size The size of each chunk. Fractional values are rounded down using `Math.floor()`.
+ * @throws {TypeError} If `array` is not an array or `size` is not a number.
+ * @throws {RangeError} If `size` is not a positive finite number after rounding down.
+ * @returns {Array} Returns a new array containing the chunks.
  * @example
  *
  * chunk([1, 2, 3, 4], 2);
@@ -22,7 +21,7 @@
  * chunk([1, 2, 3, 4], 2.7);
  * // => [[1, 2], [3, 4]]
  */
-export const chunk = (array, size) => {
+export function chunk(array, size) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -31,28 +30,17 @@ export const chunk = (array, size) => {
     throw new TypeError('Expected a number for second argument');
   }
 
-  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+  const chunkSize = Math.floor(size);
 
-  if (size <= 0 || size > MAX_SAFE_INTEGER || size !== size) {
-    throw new RangeError('Expected a positive number lower than Number.MAX_SAFE_INTEGER for second argument');
+  if (!Number.isFinite(chunkSize) || chunkSize < 1) {
+    throw new RangeError('Expected a positive finite number for second argument');
   }
 
-  size = Math.floor(size);
+  const result = [];
 
-  const len = array.length;
-
-  if (!len) {
-    return [];
-  }
-
-  let index = 0;
-  let resIndex = 0;
-  const result = [Math.ceil(len / size)];
-
-  while (index < len) {
-    result[resIndex] = array.slice(index, (index += size));
-    resIndex += 1;
+  for (let index = 0; index < array.length; index += chunkSize) {
+    result.push(array.slice(index, index + chunkSize));
   }
 
   return result;
-};
+}

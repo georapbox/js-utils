@@ -1,13 +1,19 @@
 <a name="diff"></a>
 
 ## diff(arrayA, arrayB) ⇒ <code>Array</code>
-Creates an array with only the unique values from the first array,
-by excluding all values from the second array using strict equality for comparisons.
+Creates a new array containing the values from the first array
+that are not present in the second array.
 
-**Returns**: <code>Array</code> - Array of values not included in the exclusion set.  
+Values are compared using SameValueZero equality. This means `NaN` is
+considered equal to `NaN`, and objects are compared by reference.
+Duplicate values and their original order are preserved.
+Sparse array holes are treated as `undefined` values.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the values not excluded by `arrayB`.  
 **Throws**:
 
-- <code>TypeError</code> If any of the arguments passed are not arrays.
+- <code>TypeError</code> If either argument is not an array.
 
 
 | Param | Type | Description |
@@ -17,16 +23,16 @@ by excluding all values from the second array using strict equality for comparis
 
 **Example**  
 ```js
-const obj = {
-  foo: 'bar'
-};
+diff([1, 1, 2, 2, 3, 4], [2, 4]);
+// => [1, 1, 3]
 
-const a = [1, 2, 3, 4, 5, obj];
-const b = [5, 2, 10, obj];
+diff([1, NaN, 2], [NaN]);
+// => [1, 2]
 
-diff(a, b);
-// => [1, 3, 4]
+const obj = { foo: 'bar' };
+diff([1, 2, obj], [2, obj]);
+// => [1]
 
-diff(a, []);
-// => [1, 2, 3, 4, 5, obj]
+diff([1, , 3], []);
+// => [1, undefined, 3]
 ```

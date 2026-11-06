@@ -1,47 +1,43 @@
 /**
- * Creates a dupliate free array by accepting an `iteratee` which is invoked for each element in array.
- * The `iteratee` is invoked with one argument (each element in the array).
+ * Creates a duplicate-free array using an `iteratee` function to compute a
+ * unique key for each element. Only the first occurrence of each key is kept,
+ * preserving the original order.
  *
- * @param {Array} array The initial array to inspect.
- * @param {Function|String} iteratee The iteratee invoked per element.
- * @throws {TypeError} If `array` is not array.
- * @returns {Array} The duplicate free array.
+ * Keys are compared using SameValueZero equality.
+ *
+ * @param {Array} array The array to process.
+ * @param {function} iteratee The function invoked with each array element to compute its uniqueness key.
+ * @returns {Array} The duplicate-free array.
+ * @throws {TypeError} If `array` is not an array or `iteratee` is not a function.
  * @example
  *
- * const arr1 = [
+ * const arr = [
  *   { id: 1, name: 'John' },
  *   { id: 2, name: 'George' },
  *   { id: 1, name: 'Helen' }
  * ];
  *
- * const arr2 = [
- *   { v: 1.6 },
- *   { v: 2.1 },
- *   { v: 1.1 }
- * ];
- *
- * uniqBy(arr1, 'id');
+ * uniqBy(arr, (item) => item.id);
  * // => [{ id: 1, name: 'John' }, { id: 2, name: 'George' }]
- *
- * uniqBy(arr2, function (o) {
- *   return Math.floor(o.v);
- * });
- * // => [{ v: 1.6 }, { v: 2.1 }]
  */
-export const uniqBy = (array, iteratee) => {
+export function uniqBy(array, iteratee) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  const cb = typeof iteratee === 'function' ? iteratee : (o) => o[iteratee];
+  if (typeof iteratee !== 'function') {
+    throw new TypeError('Expected a function for second argument');
+  }
 
-  return array.reduce((acc, current) => {
-    const found = acc.find((item) => cb(item) === cb(current));
+  const unique = new Map();
 
-    if (!found) {
-      acc.push(current);
+  array.forEach((item) => {
+    const key = iteratee(item);
+
+    if (!unique.has(key)) {
+      unique.set(key, item);
     }
+  });
 
-    return acc;
-  }, []);
-};
+  return [...unique.values()];
+}

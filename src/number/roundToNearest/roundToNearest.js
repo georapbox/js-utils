@@ -1,10 +1,15 @@
 /**
- * Rounds a number to the nearest multiple of a value provided.
+ * Rounds a number to the nearest multiple of a given value.
  *
- * @param {Number} value The number to be rounded.
- * @param {Number} nearest The value to be used in order to find the nearest multiple of.
- * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @returns {Number} The rounded number.
+ * Negative multiples are treated as positive. Halfway values are rounded
+ * toward positive infinity, following JavaScript's Math.round() behavior.
+ * The multiple must be finite and nonzero.
+ *
+ * @param {number} value The number to round.
+ * @param {number} nearest The multiple to round to.
+ * @returns {number} The rounded number.
+ * @throws {TypeError} If either argument is not a number.
+ * @throws {RangeError} If `nearest` is zero or not finite.
  * @example
  *
  * roundToNearest(100, 40);
@@ -16,19 +21,28 @@
  * roundToNearest(180, 40);
  * // => 200
  *
- * roundToNearest(100, 0);
- * // => NaN
+ * roundToNearest(15, -10);
+ * // => 20
  *
- * roundToNearest(100, NaN);
- * // => NaN
+ * roundToNearest(-15, 10);
+ * // => -10
  *
- * roundToNearest(100);
+ * roundToNearest(12.5, 5);
+ * // => 15
+ *
+ * roundToNearest(NaN, 10);
  * // => NaN
  */
-export const roundToNearest = (value, nearest) => {
+export function roundToNearest(value, nearest) {
   if (typeof value !== 'number' || typeof nearest !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  return Math.round(value / nearest) * nearest;
-};
+  if (!Number.isFinite(nearest) || nearest === 0) {
+    throw new RangeError('nearest must be a finite, nonzero number');
+  }
+
+  const step = Math.abs(nearest);
+
+  return Math.round(value / step) * step;
+}

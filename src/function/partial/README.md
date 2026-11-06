@@ -1,31 +1,37 @@
 <a name="partial"></a>
 
-## partial(fn, ...args) ⇒ <code>function</code>
-Creates a new function that invokes the provided function `fn` with `partials` prepended to the arguments it receives.
+## partial(fn, ...partials) ⇒ <code>function</code>
+Creates a function that invokes `fn` with the specified partial arguments
+prepended to the arguments provided when the returned function is called.
 
-**Returns**: <code>function</code> - Returns the new partially applied function.  
+The returned function preserves the caller's `this` binding and
+forwards the return value of `fn`.
+If no partial arguments are provided, all arguments are forwarded unchanged.
+
+**Kind**: global function  
+**Returns**: <code>function</code> - The partially applied function.  
 **Throws**:
 
-- <code>TypeError</code> Throws if `fn` is not a function.
+- <code>TypeError</code> If `fn` is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fn | <code>function</code> | The function to partially apply arguments to. |
-| [...args] | <code>\*</code> | The arguments to be partially applied. |
+| fn | <code>function</code> | The function to partially apply. |
+| ...partials | <code>any</code> | The arguments to prepend. |
 
-**Example**
+**Example**  
 ```js
-const add = (a, b, c) => a + b + c;
-const p1 = partial(add, 1);
-p1(2, 3); // => 6
+const greet = (greeting, firstName, lastName) =>
+  `${greeting}, ${firstName} ${lastName}!`;
 
-const p2 = partial(add, 10, 20);
-p2(30); // => 60
+const sayHello = partial(greet, 'Hello');
 
-const p3 = partial(add, 100, 200, 300);
-p3(); // => 600
+sayHello('John', 'Doe');
+// => 'Hello, John Doe!'
 
-const p4 = partial(add);
-p4(5, 10, 15); // => 30
+const fn = partial((...args) => args, 1, 2);
+
+fn(3, 4);
+// => [1, 2, 3, 4]
 ```

@@ -1,20 +1,23 @@
 <a name="inRange"></a>
 
-## inRange(value, min, max) ⇒ <code>Boolean</code>
-Checks if a number is between `min` and 'max' values including.
-If `min` is greater than `max` the parameters are swapped to support inverted ranges.
+## inRange(value, min, max) ⇒ <code>boolean</code>
+Checks whether a number is within an inclusive range.
 
-**Returns**: <code>Boolean</code> - True if number is in the range; otherwise false.  
+If `min` is greater than `max`, the bounds are treated in reverse order.
+Returns `false` if any argument is `NaN`. Infinite bounds are supported.
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - `true` if the number is within the range; otherwise `false`.  
 **Throws**:
 
-- <code>TypeError</code> If one or more of the arguments passed is not a number.
+- <code>TypeError</code> If any argument is not a number.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>Number</code> | The number to check. |
-| min | <code>Number</code> | The minimum value of the range. |
-| max | <code>Number</code> | The maximum value of the range. |
+| value | <code>number</code> | The number to check. |
+| min | <code>number</code> | The lower bound of the range. |
+| max | <code>number</code> | The upper bound of the range. |
 
 **Example**  
 ```js
@@ -22,14 +25,20 @@ inRange(3, 2, 4);
 // => true
 
 inRange(3, 4, 2);
-// => true (`min` and `max` parameters are swapped)
+// => true
+
+inRange(2, 2, 4);
+// => true
+
+inRange(5, 2, 4);
+// => false
 
 inRange(-3, -2, -6);
 // => true
 
-inRange(4, 8, 2);
-// => true
-
 inRange(4.5, 8.2, 2.1);
 // => true
+
+inRange(NaN, 0, 10);
+// => false
 ```

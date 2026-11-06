@@ -1,13 +1,18 @@
 <a name="shuffle"></a>
 
 ## shuffle(array) ⇒ <code>Array</code>
-Creates a new array with its elements' order randomized,
-using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+Creates a new array with its elements shuffled into a random order
+using the Fisher-Yates algorithm.
 
-**Returns**: <code>Array</code> - Returns a new array with its elements randomized.  
+The original array is not modified. Sparse array holes are treated
+as `undefined` values. Randomness is provided by `Math.random()`
+and is not suitable for cryptographic purposes.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the elements in random order.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If the argument is not an array.
 
 
 | Param | Type | Description |
@@ -16,9 +21,12 @@ using the Fisher-Yates (aka Knuth) Shuffle algorithm.
 
 **Example**  
 ```js
-shuffle(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
-// => ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
+shuffle([1, 2, 3, 4, 5]);
+// => [3, 1, 5, 2, 4] (example result; order varies)
 
-shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-// => [5, 10, 9, 3, 4, 1, 6, 7, 8, 2]
+shuffle(['a', 'b', 'c']);
+// => ['c', 'a', 'b'] (example result; order varies)
+
+shuffle([]);
+// => []
 ```

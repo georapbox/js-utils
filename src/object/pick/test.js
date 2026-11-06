@@ -2,80 +2,149 @@ import { describe, expect, it } from 'vitest';
 import { pick } from './pick.js';
 
 describe('Object/pick', () => {
-  it('creates an object composed of the picked object properties', () => {
-    const o1 = Object.create({
-      foo: 'bar'
+  it('picks the specified properties', () => {
+    const object = { a: 1, b: 2, c: 3 };
+
+    expect(pick(object, ['a', 'c'])).toStrictEqual({ a: 1, c: 3 });
+    expect(pick(object, ['a', 'b', 'c'])).toStrictEqual(object);
+  });
+
+  it('returns an empty object when no properties are specified', () => {
+    expect(pick({ a: 1, b: 2 }, [])).toStrictEqual({});
+  });
+
+  it('ignores properties that do not exist', () => {
+    const object = { a: 1, b: 2 };
+
+    expect(pick(object, ['missing'])).toStrictEqual({});
+    expect(pick(object, ['a', 'missing'])).toStrictEqual({ a: 1 });
+  });
+
+  it('handles duplicate property keys', () => {
+    expect(pick({ a: 1, b: 2 }, ['a', 'a'])).toStrictEqual({ a: 1 });
+  });
+
+  it('supports symbol property keys', () => {
+    const key = Symbol('id');
+    const other = Symbol('other');
+
+    const object = {
+      [key]: 123,
+      [other]: 456,
+      name: 'John'
+    };
+
+    expect(pick(object, [key, 'name'])).toStrictEqual({
+      [key]: 123,
+      name: 'John'
+    });
+  });
+
+  it('does not pick inherited properties', () => {
+    const prototype = { inherited: 'value' };
+    const object = Object.assign(Object.create(prototype), {
+      a: 1,
+      b: 2
     });
 
-    Object.defineProperties(o1, {
-      a: {
-        value: 1
+    expect(pick(object, ['a', 'inherited'])).toStrictEqual({ a: 1 });
+  });
+
+  it('does not pick non-enumerable properties', () => {
+    const object = { a: 1 };
+
+    Object.defineProperty(object, 'hidden', {
+      value: 42,
+      enumerable: false
+    });
+
+    expect(pick(object, ['a', 'hidden'])).toStrictEqual({ a: 1 });
+  });
+
+  it('only picks top-level properties', () => {
+    const object = {
+      user: {
+        name: 'John',
+        age: 30
       },
-      b: {
-        value: 2
-      },
-      c: {
-        value: 3
+      active: true
+    };
+
+    expect(pick(object, ['user.name'])).toStrictEqual({});
+    expect(pick(object, ['user'])).toStrictEqual({
+      user: { name: 'John', age: 30 }
+    });
+  });
+
+  it('supports arrays as source objects', () => {
+    const array = ['a', 'b', 'c'];
+
+    expect(pick(array, [0, 2])).toStrictEqual({
+      0: 'a',
+      2: 'c'
+    });
+
+    expect(pick(array, ['length'])).toStrictEqual({});
+  });
+
+  it('supports class instances', () => {
+    class User {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
       }
-    });
-
-    function O(a, b, c) {
-      this.a = a;
-      this.b = b;
-      this.c = c;
     }
 
-    O.prototype.foo = 'bar';
+    const user = new User('John', 30);
 
-    const o2 = new O(1, 2, 3);
+    expect(pick(user, ['name'])).toStrictEqual({ name: 'John' });
+  });
 
-    expect(pick(o1, ['a', 'c', 'foo'])).toStrictEqual({ a: 1, c: 3 });
-    expect(pick(o1, ['a', 'c', 'foo'], false)).toStrictEqual({ a: 1, c: 3, foo: 'bar' });
+  it('creates a shallow copy of the picked properties', () => {
+    const settings = { theme: 'dark' };
+    const object = { name: 'John', settings };
 
-    expect(pick(o2, ['a', 'c', 'foo'])).toStrictEqual({ a: 1, c: 3 });
-    expect(pick(o2, ['a', 'c', 'foo'], false)).toStrictEqual({ a: 1, c: 3, foo: 'bar' });
+    const result = pick(object, ['settings']);
 
-    expect(pick(o1, ['d', 'e'])).toStrictEqual({});
-    expect(pick(o1, ['d', 'e'], false)).toStrictEqual({});
+    expect(result).toStrictEqual({ settings });
+    expect(result.settings).toBe(settings);
+  });
 
-    expect(() => {
-      return pick(null, ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+  it('returns a new object without modifying the original', () => {
+    const object = { a: 1, b: 2, c: 3 };
 
-    expect(() => {
-      return pick(undefined, ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+    const result = pick(object, ['a', 'c']);
 
-    expect(() => {
-      return pick(['a', 'b', 'c'], ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+    expect(result).toStrictEqual({ a: 1, c: 3 });
+    expect(result).not.toBe(object);
+    expect(object).toStrictEqual({ a: 1, b: 2, c: 3 });
+  });
 
-    expect(() => {
-      return pick(new Map(), ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+  it('handles empty source objects', () => {
+    expect(pick({}, ['a'])).toStrictEqual({});
+    expect(pick({}, [])).toStrictEqual({});
+  });
 
-    expect(() => {
-      return pick(new WeakMap(), ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+  it('handles special property names', () => {
+    const object = JSON.parse('{"__proto__": 1, "constructor": 2, "name": "John"}');
 
-    expect(() => {
-      return pick(new Set(), ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+    const result = pick(object, ['__proto__', 'constructor']);
 
-    expect(() => {
-      return pick(new WeakSet(), ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+    expect(Object.hasOwn(result, '__proto__')).toBe(true);
+    expect(result['__proto__']).toBe(1);
+    expect(result.constructor).toBe(2);
+    expect(Object.hasOwn(result, 'name')).toBe(false);
+  });
 
-    expect(() => {
-      return pick(NaN, ['a']);
-    }).toThrow(new TypeError('Expected a plain object for first argument'));
+  it('throws a TypeError when the first argument is not an object', () => {
+    for (const value of [undefined, null, NaN, 42, 'hello', true, Symbol('key')]) {
+      expect(() => pick(value, ['a'])).toThrow(new TypeError('Expected an object for first argument'));
+    }
+  });
 
-    expect(() => {
-      return pick(o1, 'a');
-    }).toThrow(new TypeError('Expected an array for second argument'));
-
-    expect(() => {
-      return pick(o1, ['a', 'b'], 1);
-    }).toThrow(new TypeError('Expected a boolean for third argument'));
+  it('throws a TypeError when the second argument is not an array', () => {
+    for (const value of [undefined, null, 'a', 42, true, {}]) {
+      expect(() => pick({ a: 1 }, value)).toThrow(new TypeError('Expected an array for second argument'));
+    }
   });
 });

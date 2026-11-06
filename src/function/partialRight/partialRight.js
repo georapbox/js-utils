@@ -1,21 +1,36 @@
 /**
- * Creates a new function that invokes the provided function `fn` with `partials` appended to the arguments it receives.
+ * Creates a function that invokes `fn` with the specified partial arguments
+ * appended to the arguments provided when the returned function is called.
  *
- * @param {function} fn The function to partially apply arguments to.
- * @param {*} [...args] The arguments to be partially applied.
- * @throws {TypeError} Throws if `fn` is not a function.
- * @returns {function} Returns the new partially applied function.
+ * The returned function preserves the caller's `this` binding and
+ * forwards the return value of `fn`.
+ * If no partial arguments are provided, all arguments are forwarded unchanged.
+ *
+ * @param {function} fn The function to partially apply.
+ * @param {...any} partials The arguments to append.
+ * @returns {function} The partially applied function.
+ * @throws {TypeError} If `fn` is not a function.
  * @example
  *
- * const greet = (greeting, title, fname, lname) => `${greeting}, ${title} ${fname} ${lname}.`;
- * const greetMrJoeBlack = partialRight(greet, 'Mr.', 'Joe', 'Black');
+ * const greet = (greeting, firstName, lastName) =>
+ *   `${greeting}, ${firstName} ${lastName}!`;
  *
- * greetMrJoeBlack('Hello'); //=> Hello, Mr. Joe Black.
+ * const greetJohnDoe = partialRight(greet, 'John', 'Doe');
+ *
+ * greetJohnDoe('Hello');
+ * // => 'Hello, John Doe!'
+ *
+ * const fn = partialRight((...args) => args, 1, 2);
+ *
+ * fn(3, 4);
+ * // => [3, 4, 1, 2]
  */
-export const partialRight = (fn, ...args_a) => {
+export function partialRight(fn, ...partials) {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return (...args_b) => fn(...args_b, ...args_a);
-};
+  return function (...args) {
+    return fn.apply(this, [...args, ...partials]);
+  };
+}

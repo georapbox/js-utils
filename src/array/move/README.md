@@ -1,34 +1,40 @@
-<a name="flatten"></a>
+<a name="move"></a>
 
 ## move(array, fromIndex, toIndex) ⇒ <code>Array</code>
-Move an array element to a different position.
+Creates a new array with an element moved from one index to another.
 
-**Returns**: <code>Array</code> - The new array with the element moved to a new position.  
+Negative indices are resolved relative to the original array length.
+If the source index is out of range, the array is returned unchanged.
+Destination indices outside the array bounds are clamped to the nearest
+valid position. Sparse array holes are treated as `undefined` values.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array with the element moved.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `fromIndex` or `toIndex` is not number.
+- <code>TypeError</code> If the first argument is not an array or either index is not an integer.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| array | <code>Array</code> | The array to flatten. |
-| fromIndex | <code>Number</code> | Index of the element to move. If negative, will begin that many elements from the end. |
-| toIndex | <code>Number</code> | Index of the position the element should move to. If negative, will begin that many elements from the end. |
+| array | <code>Array</code> | The array to process. |
+| fromIndex | <code>number</code> | The index of the element to move. |
+| toIndex | <code>number</code> | The destination index. |
 
 **Example**  
 ```js
-const array = ['A', 'B', 'C', 'D', 'E'];
+move(['A', 'B', 'C', 'D'], 0, 2);
+// => ['B', 'C', 'A', 'D']
 
-move(array, 0, 1);
-// => ['B', 'A', 'C', 'D', 'E']
+move(['A', 'B', 'C', 'D'], -1, 1);
+// => ['A', 'D', 'B', 'C']
 
-move(array, 0, array.length - 1);
-// => ['B', 'C', 'D', 'E', 'A']
+move(['A', 'B', 'C', 'D'], 0, -1);
+// => ['B', 'C', 'D', 'A']
 
-move(array, -1, 3);
-// => ['A', 'B', 'C', 'E', 'D']
+move(['A', 'B', 'C'], 0, 10);
+// => ['B', 'C', 'A']
 
-move(array, -1, -3);
-// => ['A', 'B', 'E', 'C', 'D']
+move(['A', 'B', 'C'], 10, 0);
+// => ['A', 'B', 'C']
 ```

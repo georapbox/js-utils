@@ -1,44 +1,49 @@
 /**
- * Creates a function that invokes `fn` while it’s called less than `n` times.
- * `fn` is invoked with the this binding and arguments of the created function.
+ * Creates a function that invokes `fn` while the number of calls
+ * is less than `n`.
  *
- * @param {Number} n The number of calls before `fn` is no longer invoked.
- * A positive integer is expected.
- * If a negative number or 0, `fn` is never invoked.
- * If `NaN`, `-Infinity` or `Infinity`, `fn` is never invoked.
- * @param {function} func The function to restrict.
- * @throws {TypeError} If `n` is not number.
- * @throws {TypeError} If `fn` is not function.
- * @returns {function} Returns the new restricted function.
+ * The returned function preserves the caller's `this` binding and
+ * arguments. Once the threshold is reached, subsequent calls return
+ * the result of the last invocation without calling `fn` again.
+ * If `n` is zero or negative, `fn` is never invoked.
+ *
+ * @param {number} n The call-count boundary. Must be an integer.
+ * @param {function} fn The function to restrict.
+ * @returns {function} The new restricted function.
+ * @throws {TypeError} If `n` is not an integer or `fn` is not a function.
  * @example
  *
- * const doSomething = before(6, () => console.log('Do something...'));
+ * let count = 0;
+ * const callback = before(3, () => ++count);
+ *
+ * callback(); // => 1
+ * callback(); // => 2
+ * callback(); // => 2
+ * callback(); // => 2
+ *
+ * const doSomething = before(4, () => console.log('Do something...'));
  *
  * button.addEventListener('click', doSomething);
- * // => logs "Do something..." up to 5 times.
+ * // Logs 'Do something...' on the first 3 clicks only.
  */
-export const before = (n, fn) => {
-  let result;
-
-  if (typeof n !== 'number') {
-    throw new TypeError('Expected a number for first argument');
+export function before(n, fn) {
+  if (!Number.isInteger(n)) {
+    throw new TypeError('Expected an integer for first argument');
   }
 
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for second argument');
   }
 
-  n = parseInt(n, 10);
+  let remaining = Math.max(0, n - 1);
+  let result;
 
-  return (...args) => {
-    if (--n > 0) {
-      result = fn(...args);
-    }
-
-    if (n <= 1) {
-      fn = void 0;
+  return function (...args) {
+    if (remaining > 0) {
+      remaining--;
+      result = fn.apply(this, args);
     }
 
     return result;
   };
-};
+}

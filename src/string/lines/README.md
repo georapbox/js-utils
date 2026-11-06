@@ -1,28 +1,42 @@
 <a name="lines"></a>
 
-## lines(subjectString) ⇒ <code>Array</code>
-Creates an array with the lines of a a string.
+## lines(str) ⇒ <code>Array</code>
+Splits a string into an array of lines.
 
-**Returns**: <code>Array</code> - An array or strings containing the lines of the string.  
+Recognizes LF (`\n`), CRLF (`\r\n`), CR (`\r`), Unicode line separator
+(`\u2028`), and Unicode paragraph separator (`\u2029`).
+
+Empty lines are preserved, including those at the beginning or end
+of the string. Line terminators are excluded from the result.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - An array containing the lines of the string.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
+- <code>TypeError</code> If `str` is not a string.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| subjectString | <code>String</code> | The string to process. |
+| str | <code>string</code> | The string to split into lines. |
 
 **Example**  
 ```js
-const str = 'You can\'t make\nan omelet without\r\nbreaking a few eggs.';
-const str2 = `You can\'t make
-  an omelet without
-  breaking a few eggs.`;
+lines('Hello\nworld');
+// => ['Hello', 'world']
 
-lines(str);
-// => ['You can't make', 'an omelet without', 'breaking a few eggs.']
+lines('Hello\r\nworld');
+// => ['Hello', 'world']
 
-lines(str2);
-// => ['You can't make', 'an omelet without', 'breaking a few eggs.']
+lines('Hello\rworld');
+// => ['Hello', 'world']
+
+lines('Hello\u2028world\u2029again');
+// => ['Hello', 'world', 'again']
+
+lines('Hello\n\nworld\n');
+// => ['Hello', '', 'world', '']
+
+lines('');
+// => ['']
 ```

@@ -1,51 +1,61 @@
 /**
- * Move an array element to a different position.
+ * Creates a new array with an element moved from one index to another.
+ *
+ * Negative indices are resolved relative to the original array length.
+ * If the source index is out of range, the array is returned unchanged.
+ * Destination indices outside the array bounds are clamped to the nearest
+ * valid position. Sparse array holes are treated as `undefined` values.
  *
  * @param {Array} array The array to process.
- * @param {Number} fromIndex Index of the element to move. If negative, will begin that many elements from the end.
- * @param {Number} toIndex Index of the position the element should move to. If negative, will begin that many elements from the end.
- * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `fromIndex` or `toIndex` is not number.
- * @returns {Array} The new array with the element moved to a new position.
+ * @param {number} fromIndex The index of the element to move.
+ * @param {number} toIndex The destination index.
+ * @returns {Array} A new array with the element moved.
+ * @throws {TypeError} If the first argument is not an array or either index is not an integer.
  * @example
  *
- * const array = ['A', 'B', 'C', 'D', 'E'];
+ * move(['A', 'B', 'C', 'D'], 0, 2);
+ * // => ['B', 'C', 'A', 'D']
  *
- * move(array, 0, 1);
- * // => ['B', 'A', 'C', 'D', 'E']
+ * move(['A', 'B', 'C', 'D'], -1, 1);
+ * // => ['A', 'D', 'B', 'C']
  *
- * move(array, 0, array.length - 1);
- * // => ['B', 'C', 'D', 'E', 'A']
+ * move(['A', 'B', 'C', 'D'], 0, -1);
+ * // => ['B', 'C', 'D', 'A']
  *
- * move(array, -1, 3);
- * // => ['A', 'B', 'C', 'E', 'D']
+ * move(['A', 'B', 'C'], 0, 10);
+ * // => ['B', 'C', 'A']
  *
- * move(array, -1, -3);
- * // => ['A', 'B', 'E', 'C', 'D']
+ * move(['A', 'B', 'C'], 10, 0);
+ * // => ['A', 'B', 'C']
  */
-export const move = (array, fromIndex, toIndex) => {
+export function move(array, fromIndex, toIndex) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  if (typeof fromIndex !== 'number' || typeof toIndex !== 'number') {
-    throw new TypeError('Expected a number for second and third arguments');
+  if (!Number.isInteger(fromIndex) || !Number.isInteger(toIndex)) {
+    throw new TypeError('Expected integer indices for second and third arguments');
   }
 
-  const resultArray = [...array];
+  const result = [...array];
+  const length = result.length;
 
-  if (fromIndex === toIndex) {
-    return resultArray;
+  const startIndex = fromIndex < 0 ? length + fromIndex : fromIndex;
+
+  if (startIndex < 0 || startIndex >= length) {
+    return result;
   }
 
-  const startIndex = fromIndex < 0 ? resultArray.length + fromIndex : fromIndex;
+  const endIndex = toIndex < 0 ? length + toIndex : toIndex;
+  const destination = Math.max(0, Math.min(endIndex, length - 1));
 
-  if (startIndex >= 0 && startIndex < resultArray.length) {
-    const endIndex = toIndex < 0 ? resultArray.length + toIndex : toIndex;
-    const elementToMove = resultArray.splice(fromIndex, 1)[0];
-
-    resultArray.splice(endIndex, 0, elementToMove);
+  if (startIndex === destination) {
+    return result;
   }
 
-  return resultArray;
-};
+  const [element] = result.splice(startIndex, 1);
+
+  result.splice(destination, 0, element);
+
+  return result;
+}

@@ -1,40 +1,45 @@
 /**
- * Returns a substring after a specific sequence of character(s).
- * By default looks for the first occuerence of this sequence.
- * If the character or sequence of characters not found, returns an empty string.
+ * Returns the substring after the first occurrence of a delimiter.
  *
- * @param {String} subjectString The string to process.
- * @param {String} characters The sequence of characters to use as delimiter. Case sensitivity matters.
- * @param {Boolean} [last] If true or any truthy value, will look for the last occurence of the characters specified.
- * @throws {TypeError} If `subjectString` is not string.
- * @throws {TypeError} If `characters` is not string.
- * @returns {String} Returns the result string.
+ * When `last` is truthy, uses the last occurrence instead.
+ * Returns the original string if the delimiter is empty or not found.
+ * Matching is case-sensitive.
+ *
+ * @param {string} str The string to process.
+ * @param {string} delimiter The substring to search for.
+ * @param {boolean} [last=false] Whether to use the last occurrence.
+ * @returns {string} The substring after the delimiter, or the original string if the delimiter is empty or not found.
+ * @throws {TypeError} If `str` or `delimiter` is not a string.
  * @example
  *
- * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
- * // => 'IPSUM DOLOR_SIT AMET'
+ * substringAfter('foo/bar/baz', '/');
+ * // => 'bar/baz'
  *
- * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
- * // => 'SIT AMET'
+ * substringAfter('foo/bar/baz', '/', true);
+ * // => 'baz'
  *
- * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
- * // => 'AMET'
+ * substringAfter('foo/bar/baz', '?');
+ * // => 'foo/bar/baz'
  *
- * substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
- * // => ''
+ * substringAfter('foobar', '');
+ * // => 'foobar'
  *
- * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍊');
- * // => '🍌🍉🍇🍓'
+ * substringAfter('hello-world', 'hello-');
+ * // => 'world'
  *
- * substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
- * // => ''
+ * substringAfter('🍎🍐🍊🍌', '🍊');
+ * // => '🍌'
  */
-export const substringAfter = (subjectString, characters, last) => {
-  if (typeof subjectString !== 'string' || typeof characters !== 'string') {
+export function substringAfter(str, delimiter, last = false) {
+  if (typeof str !== 'string' || typeof delimiter !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
 
-  const index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
+  if (delimiter === '') {
+    return str;
+  }
 
-  return index !== -1 ? subjectString.substring(index + characters.length) : '';
-};
+  const index = last ? str.lastIndexOf(delimiter) : str.indexOf(delimiter);
+
+  return index !== -1 ? str.slice(index + delimiter.length) : str;
+}

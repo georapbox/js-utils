@@ -1,16 +1,18 @@
 /**
- * Clamps number within the inclusive `min` and `max` bounds,
- * making sure it does not go beyond them on either side.
+ * Clamps a number within the inclusive minimum and maximum bounds.
  *
- * The mplementation is based on proposal for `Nmuber.prototype.clamp` (originally `Math.clamp`):
- * https://tc39.es/proposal-math-clamp
+ * Based on the TC39 Math.clamp proposal:
+ * https://tc39.es/proposal-math-clamp/
  *
- * @param {Number} value The number to clamp.
- * @param {Number} min The lower bound.
- * @param {Number} max The upper bound.
- * @throws {TypeError} If any of the arguments is not a number.
- * @throws {RnageError} If `min` is greater than `max`.
- * @returns {Number} The clamped number.
+ * Returns `NaN` if any argument is `NaN`.
+ * Supports infinite bounds and preserves signed-zero behavior.
+ *
+ * @param {number} value The number to clamp.
+ * @param {number} min The lower bound.
+ * @param {number} max The upper bound.
+ * @returns {number} The clamped number.
+ * @throws {TypeError} If any argument is not a number.
+ * @throws {RangeError} If `min` is greater than `max`, unless an argument is `NaN`.
  * @example
  *
  * clamp(10, -5, 5);
@@ -19,29 +21,32 @@
  * clamp(-10, -5, 5);
  * // => -5
  *
- * clamp(-15, 0, 100);
- * // => 0
+ * clamp(50, 0, 100);
+ * // => 50
  *
- * clamp(120, 0, 100);
- * // => 100
+ * clamp(10, -Infinity, Infinity);
+ * // => 10
  *
  * clamp(NaN, 0, 100);
  * // => NaN
+ *
+ * clamp(-0, +0, 10);
+ * // => +0
  */
-export const clamp = (value, min, max) => {
+export function clamp(value, min, max) {
   if (typeof value !== 'number') {
-    throw new TypeError('value must be a Number');
+    throw new TypeError('value must be a number');
   }
 
   if (typeof min !== 'number') {
-    throw new TypeError('min must be a Number');
+    throw new TypeError('min must be a number');
   }
 
   if (typeof max !== 'number') {
-    throw new TypeError('max must be a Number');
+    throw new TypeError('max must be a number');
   }
 
-  if (Number.isNaN(min) || Number.isNaN(max) || Number.isNaN(value)) {
+  if (Number.isNaN(value) || Number.isNaN(min) || Number.isNaN(max)) {
     return NaN;
   }
 
@@ -78,4 +83,4 @@ export const clamp = (value, min, max) => {
   }
 
   return value;
-};
+}

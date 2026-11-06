@@ -1,34 +1,39 @@
 /**
- * Creates a new array with its elements' order randomized,
- * using the Fisher-Yates (aka Knuth) Shuffle algorithm.
+ * Creates a new array with its elements shuffled into a random order
+ * using the Fisher-Yates algorithm.
+ *
+ * The original array is not modified. Sparse array holes are treated
+ * as `undefined` values. Randomness is provided by `Math.random()`
+ * and is not suitable for cryptographic purposes.
  *
  * @param {Array} array The array to shuffle.
- * @throws {TypeError} If `array` is not array.
- * @returns {Array} Returns a new array with its elements randomized.
+ * @returns {Array} A new array containing the elements in random order.
+ * @throws {TypeError} If the argument is not an array.
  * @example
  *
- * shuffle(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
- * // => ['b', 'f', 'h', 'e', 'd', 'c', 'g', 'a']
+ * shuffle([1, 2, 3, 4, 5]);
+ * // => [3, 1, 5, 2, 4] (example result; order varies)
  *
- * shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
- * // => [5, 10, 9, 3, 4, 1, 6, 7, 8, 2]
+ * shuffle(['a', 'b', 'c']);
+ * // => ['c', 'a', 'b'] (example result; order varies)
+ *
+ * shuffle([]);
+ * // => []
  */
-export const shuffle = (array) => {
+export function shuffle(array) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  const newArray = [...array];
-  let currentIndex = newArray.length;
+  const result = [...array];
 
-  // While remaining elements to shuffle...
-  while (currentIndex) {
-    const randomIndex = (Math.random() * currentIndex--) | 0; // Pick a remaining element...
-    const temporaryValue = newArray[currentIndex]; // And swap it with the current element.
+  for (let index = result.length - 1; index > 0; index--) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
 
-    newArray[currentIndex] = newArray[randomIndex];
-    newArray[randomIndex] = temporaryValue;
+    const temp = result[index];
+    result[index] = result[randomIndex];
+    result[randomIndex] = temp;
   }
 
-  return newArray;
-};
+  return result;
+}

@@ -1,10 +1,15 @@
 <a name="zip"></a>
 
-## zip ⇒ <code>Array</code>
-Creates an array of grouped elements, the first of which contains the first elements of the given arrays,
-the second of which contains the second elements of the given arrays, and so on.
+## zip(...arrays) ⇒ <code>Array</code>
+Creates a new array of grouped elements by combining values at the same
+index from each input array.
 
-**Returns**: <code>Array</code> - Returns the new array of grouped elements.  
+The result contains as many groups as the longest input array.
+Missing elements, including sparse array holes, are treated as `undefined`.
+The original arrays are not modified.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the grouped elements.  
 **Throws**:
 
 - <code>TypeError</code> If any argument is not an array.
@@ -14,19 +19,16 @@ the second of which contains the second elements of the given arrays, and so on.
 | --- | --- | --- |
 | ...arrays | <code>Array</code> | The arrays to process. |
 
-**Example**
+**Example**  
 ```js
 zip([1, 2, 3], [11, 22, 33], [111, 222, 333]);
 // => [[1, 11, 111], [2, 22, 222], [3, 33, 333]]
 
-zip([1, 2, 3], [11, 22, 33], [111, 222]);
-// => [[1, 11, 111], [2, 22, 222], [3, 33, undefined]]
-
 zip([1, 2, 3], [11, 22], [111]);
 // => [[1, 11, 111], [2, 22, undefined], [3, undefined, undefined]]
 
-zip([], []);
-// => []
+zip([], [1, 2]);
+// => [[undefined, 1], [undefined, 2]]
 
 zip();
 // => []

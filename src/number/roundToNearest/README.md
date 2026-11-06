@@ -1,18 +1,24 @@
 <a name="roundToNearest"></a>
 
-## roundToNearest(value, nearest) ⇒ <code>Number</code>
-Rounds a number to the nearest multiple of a value provided.
+## roundToNearest(value, nearest) ⇒ <code>number</code>
+Rounds a number to the nearest multiple of a given value.
 
-**Returns**: <code>Number</code> - The rounded number.  
+Negative multiples are treated as positive. Halfway values are rounded
+toward positive infinity, following JavaScript's Math.round() behavior.
+The multiple must be finite and nonzero.
+
+**Kind**: global function  
+**Returns**: <code>number</code> - The rounded number.  
 **Throws**:
 
-- <code>TypeError</code> If one or more of the arguments passed is not a number.
+- <code>TypeError</code> If either argument is not a number.
+- <code>RangeError</code> If `nearest` is zero or not finite.
 
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| value | <code>Number</code> |  | The number to be rounded. |
-| nearest | <code>Number</code> | <code>1</code> | The value to be used in order to find the nearest multiple of. |
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>number</code> | The number to round. |
+| nearest | <code>number</code> | The multiple to round to. |
 
 **Example**  
 ```js
@@ -25,9 +31,15 @@ roundToNearest(140, 40);
 roundToNearest(180, 40);
 // => 200
 
-roundToNearest(113, 0);
-// => 113 (0 is converted to 1)
+roundToNearest(15, -10);
+// => 20
 
-roundToNearest(113, NaN);
-// => 113 (NaN is converted to 1)
+roundToNearest(-15, 10);
+// => -10
+
+roundToNearest(12.5, 5);
+// => 15
+
+roundToNearest(NaN, 10);
+// => NaN
 ```

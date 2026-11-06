@@ -1,38 +1,38 @@
 /**
- * Creates a function that negates the result of the predicate `fn`.
- * The `fn` predicate is invoked with the arguments of the created function.
+ * Creates a function that negates the truthiness of the result returned by `fn`.
+ *
+ * The returned function forwards all arguments to `fn` and preserves
+ * the caller's `this` binding. The result is always a boolean.
  *
  * @param {function} fn The predicate to negate.
- * @throws {TypeError} If `fn` is not function.
- * @returns {function} Returns the new function.
+ * @returns {function} The new function that returns the negated result.
+ * @throws {TypeError} If `fn` is not a function.
  * @example
  *
- * // Example 1
- * const isString = val => typeof val === 'string';
- *
+ * const isString = value => typeof value === 'string';
  * const isNotString = negate(isString);
  *
- * isString('lorem ipsum');
- * // => true
- *
- * isNotString('lorem ipsum');
+ * isNotString('hello');
  * // => false
  *
- * // Example 2
- * const isEven = n => n % 2 === 0;
+ * isNotString(42);
+ * // => true
  *
+ * const isEven = number => number % 2 === 0;
  * const numbers = [1, 2, 3, 4, 5, 6];
  *
- * const evens = numbers.filter(isEven);
+ * numbers.filter(isEven);
  * // => [2, 4, 6]
  *
- * const odds = numbers.filter(negate(isEven));
+ * numbers.filter(negate(isEven));
  * // => [1, 3, 5]
  */
-export const negate = (fn) => {
+export function negate(fn) {
   if (typeof fn !== 'function') {
     throw new TypeError('Expected a function for first argument');
   }
 
-  return (...args) => !fn(...args);
-};
+  return function (...args) {
+    return !fn.apply(this, args);
+  };
+}

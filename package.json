@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A collection of dependency-free JavaScript utilities.",
-  "author": "George Raptis <georapbox@gmail.com>",
+  "author": {
+    "name": "George Raptis",
+    "email": "georapbox@gmail.com"
+  },
   "homepage": "https://github.com/georapbox/js-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:georapbox/js-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/georapbox/js-utils/issues"
   },
   "license": "MIT",
   "scripts": {
@@ -17,12 +23,12 @@
     "lint": "oxlint src",
     "fmt": "oxfmt \"**/*.js\"",
     "fmt:check": "oxfmt --check \"**/*.js\"",
-    "docs": "npx jsdoc2md"
+    "docs": "node scripts/docs/generate.mjs"
   },
   "devDependencies": {
     "@vitest/browser-playwright": "~5.0.5",
     "@vitest/coverage-v8": "~5.0.5",
-    "jsdoc-to-markdown": "~9.0.0",
+    "jsdoc-to-markdown": "~9.1.3",
     "oxfmt": "~0.75.0",
     "oxlint": "~1.90.0",
     "vitest": "~5.0.5"

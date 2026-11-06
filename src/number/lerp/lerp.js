@@ -1,12 +1,15 @@
 /**
- * Takes a normalized value within a range of values and converts
- * it to a numerical value that the normalized value points to.
+ * Performs linear interpolation between two numbers.
  *
- * @param {Number} norm The normalized value to convert.
- * @param {Number} min The minimum value of the range of values.
- * @param {Number} max The maximum value of the range of values.
- * @throws {TypeError} If any of the arguments passed is not a number.
- * @returns {Number} The value that the normalized value points to.
+ * The interpolation factor determines the position between `start` and `end`:
+ * `0` returns `start`, `1` returns `end`, and `0.5` returns the midpoint.
+ * Values outside the range [0, 1] are allowed for extrapolation.
+ *
+ * @param {number} t The interpolation factor.
+ * @param {number} start The starting value.
+ * @param {number} end The ending value.
+ * @returns {number} The interpolated value.
+ * @throws {TypeError} If any argument is not a number.
  * @example
  *
  * lerp(0.75, 0, 365);
@@ -23,11 +26,17 @@
  *
  * lerp(-0.5, 0, 500);
  * // => -250
+ *
+ * lerp(1.5, 0, 100);
+ * // => 150
+ *
+ * lerp(0.25, 100, 0);
+ * // => 75
  */
-export const lerp = (norm, min, max) => {
-  if (typeof norm !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
+export function lerp(t, start, end) {
+  if (typeof t !== 'number' || typeof start !== 'number' || typeof end !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  return (max - min) * norm + min;
-};
+  return start + (end - start) * t;
+}

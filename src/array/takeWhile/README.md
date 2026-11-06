@@ -1,32 +1,32 @@
 <a name="takeWhile"></a>
 
-## takeWhile(array, [predicate]) ⇒ <code>Array</code>
-Creates a slice of `array` with elements taken from the beginning, until `predicate` returns falsy.
-The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
+## takeWhile(array, predicate) ⇒ <code>Array</code>
+Creates a slice of an array containing elements from the beginning
+until the predicate returns a falsy value.
 
-**Returns**: <code>Array</code> - The slice of `array`.  
+Iteration is limited to the array's initial length, so elements appended
+during iteration are not visited. The predicate may still modify the array.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the leading elements that satisfy the predicate.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `predicate` is not function but not if is `undefined`.
+- <code>TypeError</code> If the first argument is not an array or the second argument is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The array to process. |
-| predicate | <code>function</code> | The function invoked per iteration. |
+| predicate | <code>function</code> | The function invoked with `(value, index, array)` for each element. |
 
 **Example**  
 ```js
-const books = [
-  {title: 'Javascript Design Patterns', read: false},
-  {title: 'Programming Javascript Applications', read: false},
-  {title: 'JavaScript: The Good Parts', read: true},
-  {title: 'Eloquent Javascript', read: false}
-];
+takeWhile([1, 2, 3, 4, 5], value => value < 4);
+// => [1, 2, 3]
 
-takeWhile(books, function (book, index, books) {
-  return !book.read;
-});
-// => [{title: 'Javascript Design Patterns', read: false}, {title: 'Programming Javascript Applications', read: false}]
+takeWhile([1, 2, 3], value => value > 5);
+// => []
+
+takeWhile([1, 2, 3], value => value > 0);
+// => [1, 2, 3]
 ```
