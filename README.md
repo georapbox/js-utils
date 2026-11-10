@@ -124,9 +124,12 @@ npm install
 
 ### Testing
 
+Run tests using [Vitest](https://vitest.dev/):
+
 ```sh
-npm test
+npm run test
 npm run test:watch # Run tests in watch mode
+npm run test:ui # Run tests using the web interface
 ```
 
 ### Linting

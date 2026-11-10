@@ -19,6 +19,7 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "lint": "oxlint src",
     "fmt": "oxfmt \"**/*.js\"",
@@ -26,11 +27,19 @@
     "docs": "node scripts/docs/generate.mjs"
   },
   "devDependencies": {
-    "@vitest/browser-playwright": "~5.0.5",
-    "@vitest/coverage-v8": "~5.0.5",
+    "@vitest/browser-playwright": "~5.1.0",
+    "@vitest/coverage-v8": "~5.1.0",
+    "@vitest/ui": "~5.1.0",
     "jsdoc-to-markdown": "~9.1.3",
     "oxfmt": "~0.75.0",
     "oxlint": "~1.90.0",
-    "vitest": "~5.0.5"
+    "vitest": "~5.1.0"
+  },
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11.17.0"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }

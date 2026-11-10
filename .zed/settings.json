@@ -1,23 +1,4 @@
 {
-  "format_on_save": "off",
-  "lsp": {
-    "oxlint": {
-      "initialization_options": {
-        "settings": {
-          "run": "onType",
-          "fixKind": "safe_fix",
-          "unusedDisableDirectives": "deny"
-        }
-      }
-    },
-    "oxfmt": {
-      "initialization_options": {
-        "settings": {
-          "run": "onSave"
-        }
-      }
-    }
-  },
   "languages": {
     "JavaScript": {
       "language_servers": ["vtsls", "oxlint", "oxfmt"],
