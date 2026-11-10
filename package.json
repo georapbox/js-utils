@@ -1,6 +1,7 @@
 {
-  "name": "js-utils",
+  "name": "@georapbox/js-utils",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "description": "A collection of dependency-free JavaScript utilities.",
   "author": {
