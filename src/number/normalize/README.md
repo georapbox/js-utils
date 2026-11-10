@@ -1,38 +1,44 @@
 <a name="normalize"></a>
 
-## normalize(value, min, max) ⇒ <code>Number</code>
-Takes a value within a range of values and converts that value
-to a number from 0 to 1 that indicates where it lies in that range.
+## normalize(value, start, end) ⇒ <code>number</code>
+Normalizes a number relative to a range, returning its position
+as an interpolation factor.
 
-**Returns**: <code>Number</code> - The normalized value.  
+`0` represents `start`, `1` represents `end`, and `0.5` represents
+the midpoint. Values outside the range are allowed and may produce
+results outside [0, 1]. Reversed ranges are supported.
+
+**Kind**: global function  
+**Returns**: <code>number</code> - The normalized value.  
 **Throws**:
 
-- <code>TypeError</code> If any of the arguments passed is not a number.
+- <code>TypeError</code> If any argument is not a number.
+- <code>RangeError</code> If `start` and `end` are equal.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>Number</code> | The numerical value to normalize. |
-| min | <code>Number</code> | The minimum value of the range of values. |
-| max | <code>Number</code> | The maximum value of the range of values. |
+| value | <code>number</code> | The number to normalize. |
+| start | <code>number</code> | The starting value of the range. |
+| end | <code>number</code> | The ending value of the range. |
 
 **Example**  
 ```js
-normalize(23, 0, 33);
-// => 0.696969696969697
+normalize(25, 0, 100);
+// => 0.25
 
-normalize(23, 5, 33);
-// => 0.6428571428571429
+normalize(50, 0, 100);
+// => 0.5
 
-normalize(35, 0, 33);
-// => 1.0606060606060606
-
-normalize(-1, 0, 33);
-// => -0.030303030303030304
-
-normalize(33, -5, 33);
+normalize(100, 0, 100);
 // => 1
 
-normalize(-5, -5, 33);
-// => 0
+normalize(150, 0, 100);
+// => 1.5
+
+normalize(-50, 0, 100);
+// => -0.5
+
+normalize(75, 100, 0);
+// => 0.25
 ```

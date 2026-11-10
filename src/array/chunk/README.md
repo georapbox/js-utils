@@ -1,20 +1,21 @@
 <a name="chunk"></a>
 
 ## chunk(array, size) ⇒ <code>Array</code>
-Creates an array of elements split into groups the length of `size`.
-If array can’t be split evenly, the final chunk will be the remaining elements.
+Splits an array into chunks of the specified size.
+If the array cannot be split evenly, the final chunk contains the remaining elements.
 
-**Returns**: <code>Array</code> - The new array containing chunks. If `size` is lower than 1, an empty array is returned.  
+**Kind**: global function  
+**Returns**: <code>Array</code> - Returns a new array containing the chunks.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
-- <code>TypeError</code> If `size` is not number.
-- <code>RangeError</code> If `size` is not a positive number, or zero, or `NaN`, or greater than `Number.MAX_SAFE_INTEGER`.
+- <code>TypeError</code> If `array` is not an array or `size` is not a number.
+- <code>RangeError</code> If `size` is not a positive finite number after rounding down.
+
 
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The array to process. |
-| size | <code>Number</code> | Optional. The length of each chunk. If a float number, it is converted to integer using `Math.floor()`. |
+| size | <code>number</code> | The size of each chunk. Fractional values are rounded down using `Math.floor()`. |
 
 **Example**  
 ```js

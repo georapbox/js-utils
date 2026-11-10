@@ -1,97 +1,51 @@
 /**
- * Creates an object composed of the object enumerable properties that predicate returns truthy for.
- * The predicate is invoked with two arguments: (value, key).
+ * Creates a new object containing the own enumerable properties
+ * of the source object for which the predicate returns a truthy value.
  *
- * @param {Object} object The source object.
- * @param {function} predicate The function invoked per property.
- * @param {Boolean} [pickOwnKeys=true] If `true` will look up only for own enumerable keys; otherwise will look up in prototype chain.
- * @throws {TypeError} Throws if `object` is not plain object.
- * @throws {TypeError} Throws if `predicate` is not function.
- * @throws {TypeError} Throws if `pickOwnKeys` is not boolean but not undefined.
- * @returns {Object} Returns the new object.
+ * Inherited and non-enumerable properties are ignored.
+ * String and symbol property keys are supported.
+ * The original object is not modified.
+ *
+ * @param {object} object The source object.
+ * @param {function} predicate The function invoked with `(value, key)` for each property.
+ * @returns {object} A new object containing the matching properties.
+ * @throws {TypeError} If the first argument is not an object or the second argument is not a function.
  * @example
  *
- * const object = Object.create({
- *   e: 5
- * });
- *
- * Object.defineProperties(object, {
- *   a: {
- *     value: 1,
- *     enumerable: true
- *   },
- *   b: {
- *     value: '2',
- *     enumerable: true
- *   },
- *   c: {
- *     value: 3,
- *     enumerable: true
- *   },
- *   d: {
- *     value: 4,
- *     enumerable: false
- *   }
- * });
- *
- * pickBy(object, function (value) {
- *   return typeof value === 'number';
- * });
+ * pickBy({ a: 1, b: '2', c: 3 }, (value) => typeof value === 'number');
  * // => { a: 1, c: 3 }
  *
- * pickBy(object, function (value) {
- *   return typeof value === 'number';
- * }, false);
- * // => { a: 1, c: 3, e: 5 }
+ * pickBy({ a: 1, b: 2, c: 3 }, (_, key) => key !== 'b');
+ * // => { a: 1, c: 3 }
  *
- * pickBy(object, function (value) {
- *   return typeof value === 'function';
- * });
- * // => {}
+ * pickBy({ a: 0, b: false, c: 3 }, (value) => Boolean(value));
+ * // => { c: 3 }
  *
- * pickBy(object, function (_, key) {
- *   return key === 'a';
- * });
- * // => { a: 1 }
- *
- * pickBy(object, function (_, key) {
- *   return key === 'd'; // property "d" is not enumerable
- * });
+ * pickBy({ a: 1, b: 2 }, (value) => value > 10);
  * // => {}
  */
-export const pickBy = (object, predicate, pickOwnKeys = true) => {
-  const result = {};
-  const type = Object.prototype.toString.call(object);
-
-  if (
-    typeof object !== 'object' ||
-    object === null ||
-    Array.isArray(object) ||
-    type === '[object Set]' ||
-    type === '[object WeakSet]' ||
-    type === '[object Map]' ||
-    type === '[object WeakMap]'
-  ) {
-    throw new TypeError('Expected a plain object for first argument');
+export function pickBy(object, predicate) {
+  if (object === null || typeof object !== 'object') {
+    throw new TypeError('Expected an object for first argument');
   }
 
   if (typeof predicate !== 'function') {
     throw new TypeError('Expected a function for second argument');
   }
 
-  if (typeof pickOwnKeys !== 'boolean') {
-    throw new TypeError('Expected a boolean for third argument');
-  }
+  const entries = [];
 
-  for (const key in object) {
-    const meetsCriteria = pickOwnKeys
-      ? Object.prototype.hasOwnProperty.call(object, key) && predicate(object[key], key)
-      : predicate(object[key], key);
+  for (const key of Reflect.ownKeys(object)) {
+    if (!Object.prototype.propertyIsEnumerable.call(object, key)) {
+      continue;
+    }
 
-    if (meetsCriteria) {
-      result[key] = object[key];
+    const value = object[key];
+
+    if (predicate(value, key)) {
+      entries.push([key, value]);
     }
   }
 
-  return result;
-};
+  return Object.fromEntries(entries);
+}

@@ -1,40 +1,42 @@
 <a name="substringAfter"></a>
 
-## substringAfter(subjectString, characters, [last]) ⇒ <code>String</code>
-Returns a substring after a specific sequence of character(s).
-By default looks for the first occuerence of this sequence.
-If the character or sequence of characters not found, returns an empty string.
+## substringAfter(str, delimiter, [last]) ⇒ <code>string</code>
+Returns the substring after the first occurrence of a delimiter.
 
-**Returns**: <code>String</code> - Returns the result string.  
+When `last` is truthy, uses the last occurrence instead.
+Returns the original string if the delimiter is empty or not found.
+Matching is case-sensitive.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - The substring after the delimiter, or the original string if the delimiter is empty or not found.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
-- <code>TypeError</code> If `characters` is not string.
+- <code>TypeError</code> If `str` or `delimiter` is not a string.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| subjectString | <code>String</code> |  | The string to process. |
-| characters | <code>String</code> |  | The sequence of characters to use as delimiter. Case sensitivity matters. |
-| [last] | <code>Boolean</code> | <code>undefined</code> | If true or any truthy value, will look for the last occurence of the characters specified. |
+| str | <code>string</code> |  | The string to process. |
+| delimiter | <code>string</code> |  | The substring to search for. |
+| [last] | <code>boolean</code> | <code>false</code> | Whether to use the last occurrence. |
 
 **Example**  
 ```js
-substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_');
-// => 'IPSUM DOLOR_SIT AMET'
+substringAfter('foo/bar/baz', '/');
+// => 'bar/baz'
 
-substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
-// => 'SIT AMET'
+substringAfter('foo/bar/baz', '/', true);
+// => 'baz'
 
-substringAfter('LOREM_IPSUM DOLOR_SIT AMET', 'SIT ');
-// => 'AMET'
+substringAfter('foo/bar/baz', '?');
+// => 'foo/bar/baz'
 
-substringAfter('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
-// => ''
+substringAfter('foobar', '');
+// => 'foobar'
 
-substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍊');
-// => '🍌🍉🍇🍓'
+substringAfter('hello-world', 'hello-');
+// => 'world'
 
-substringAfter('🍎🍐🍊🍌🍉🍇🍓', '🍓');
-// => ''
+substringAfter('🍎🍐🍊🍌', '🍊');
+// => '🍌'
 ```

@@ -1,41 +1,39 @@
 <a name="remove"></a>
 
-## remove(array) ⇒ <code>Array</code>
-Removes one or more elements from an array at the specified index(es).
+## remove(array, ...indexes) ⇒ <code>Array</code>
+Creates a new array excluding elements at the specified indices.
 
-**Returns**: <code>Array</code> - The result array with the elements specified removed.  
+Indices refer to positions in the original array. Duplicate, negative,
+fractional, and out-of-range indices are ignored, as are non-number values.
+The order of remaining elements is preserved.
+Sparse array holes are treated as `undefined` values.
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - A new array containing the remaining elements.  
 **Throws**:
 
-- <code>TypeError</code> If `array` is not array.
+- <code>TypeError</code> If the first argument is not an array.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| array | <code>Array</code> | The initial array to remove elements from. |
-| ...indexes | <code>Number</code> | The index(es) of the elements to be removed. Non numbers are ignored. |
+| array | <code>Array</code> | The array to process. |
+| ...indexes | <code>number</code> | The indices of the elements to remove. |
 
-**Example**
+**Example**  
 ```js
-const arr = [1, 2, 3, 4, 5];
-
-remove(arr, 0);
-// => [2, 3, 4, 5]
-
-remove(arr, 0, 1);
-// => [3, 4, 5]
-
-remove(arr, 0, 4);
+remove([1, 2, 3, 4, 5], 0, 4);
 // => [2, 3, 4]
 
-remove(arr);
-// => [1, 2, 3, 4, 5]
+remove([1, 2, 3, 4, 5], 1, 3);
+// => [1, 3, 5]
 
-remove(arr, arr.length);
-// => [1, 2, 3, 4, 5]
+remove([1, 2, 3], 1, 1, -1);
+// => [1, 3]
 
-remove(arr, arr.length - 1);
-// => [1, 2, 3, 4]
+remove([1, 2, 3], 10);
+// => [1, 2, 3]
 
-remove(arr, NaN);
-// => [1, 2, 3, 4, 5]
+remove([1, , 3], 0);
+// => [undefined, 3]
 ```

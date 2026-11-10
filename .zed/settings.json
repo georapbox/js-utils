@@ -1,39 +1,14 @@
 {
-  "format_on_save": "off",
-  "lsp": {
-    "oxlint": {
-      "initialization_options": {
-        "settings": {
-          "run": "onType",
-          "fixKind": "safe_fix",
-          "unusedDisableDirectives": "deny"
-        }
-      }
-    },
-    "oxfmt": {
-      "initialization_options": {
-        "settings": {
-          "run": "onSave"
-        }
-      }
-    }
-  },
   "languages": {
     "JavaScript": {
-      "language_servers": ["oxlint", "oxfmt", "..."],
+      "language_servers": ["vtsls", "oxlint", "oxfmt"],
       "format_on_save": "on",
       "prettier": {
         "allowed": false
       },
       "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt"
-          }
-        },
-        {
-          "code_action": "source.fixAll.oxc"
-        }
+        { "language_server": { "name": "oxfmt" } },
+        { "code_action": "source.fixAll.oxc" }
       ]
     }
   }

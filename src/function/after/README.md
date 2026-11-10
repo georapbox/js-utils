@@ -1,25 +1,36 @@
 <a name="after"></a>
 
 ## after(n, fn) ⇒ <code>function</code>
-Creates a function that invokes `fn` once it's called `n` or more times.
-`fn` is invoked with the this binding and arguments of the created function.
+Creates a function that invokes `fn` after it has been called
+at least `n` times.
 
-**Returns**: <code>function</code> - The new restricted function.  
+Once the threshold is reached, `fn` is invoked on every subsequent
+call with the same `this` binding and arguments.
+If `n` is zero or negative, `fn` is invoked on the first call.
+
+**Kind**: global function  
+**Returns**: <code>function</code> - The new function.  
 **Throws**:
 
-- <code>TypeError</code> If `n` is not number.
-- <code>TypeError</code> If `fn` is not function.
+- <code>TypeError</code> If `n` is not an integer or `fn` is not a function.
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| n | <code>Number</code> | The number of calls before `fn` is invoked. A positive integer is expected. If a negative number or 0, `fn` is invoked immediately. If `NaN`, `-Infinity` or `Infinity`, `fn` is never invoked. |
-| fn | <code>function</code> | The function to restrict. |
+| n | <code>number</code> | The call-count boundary. Must be an integer. |
+| fn | <code>function</code> | The function to invoke. |
 
-**Example**
+**Example**  
 ```js
-const doSomething = after(4, () => console.log('Do something...');
+const callback = after(3, () => console.log('Hello'));
+
+callback(); // Nothing
+callback(); // Nothing
+callback(); // Logs 'Hello'
+callback(); // Logs 'Hello'
+
+const doSomething = after(4, () => console.log('Do something...'));
 
 button.addEventListener('click', doSomething);
-// => logs "Do something..." after button is clicked at least 4 times.
+// Logs 'Do something...' from the fourth click onward.
 ```

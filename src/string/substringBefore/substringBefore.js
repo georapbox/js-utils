@@ -1,40 +1,42 @@
 /**
- * Returns a substring before a specific sequence of character(s).
- * By default looks for the first occurrence of this sequence.
- * If the character or sequence of characters not found, returns an empty string.
+ * Returns the substring before the first occurrence of a delimiter.
  *
- * @param {String} subjectString The string to process.
- * @param {String} characters The sequence of characters to use as delimiter. Case sensitivity matters.
- * @param {Boolean} [last] If true or any truthy value, will look for the last occurence of the characters specified.
- * @throws {TypeError} If `subjectString` is not string.
- * @throws {TypeError} If `characters` is not string.
- * @returns {string} Returns the result string.
+ * When `last` is truthy, uses the last occurrence instead.
+ * Returns the original string if the delimiter is empty or not found.
+ * Matching is case-sensitive.
+ *
+ * @param {string} str The string to process.
+ * @param {string} delimiter The substring to search for.
+ * @param {boolean} [last=false] Whether to use the last occurrence.
+ * @returns {string} The substring before the delimiter, or the original string if the delimiter is empty or not found.
+ * @throws {TypeError} If `str` or `delimiter` is not a string.
  * @example
  *
- * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
- * // => 'LOREM'
+ * substringBefore('foo/bar/baz', '/');
+ * // => 'foo'
  *
- * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
- * // => 'LOREM_IPSUM DOLOR'
+ * substringBefore('foo/bar/baz', '/', true);
+ * // => 'foo/bar'
  *
- * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
- * // => 'LOREM_IPSUM DOLOR_'
+ * substringBefore('foo/bar/baz', '?');
+ * // => 'foo/bar/baz'
  *
- * substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '???', true); // using a sequense of characters that does not exist
- * // => ''
+ * substringBefore('foobar', '');
+ * // => 'foobar'
  *
- * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍊');
+ * substringBefore('🍎🍐🍊🍌', '🍊');
  * // => '🍎🍐'
- *
- * substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
- * // => ''
  */
-export const substringBefore = (subjectString, characters, last) => {
-  if (typeof subjectString !== 'string' || typeof characters !== 'string') {
+export function substringBefore(str, delimiter, last = false) {
+  if (typeof str !== 'string' || typeof delimiter !== 'string') {
     throw new TypeError('Expected a string for first and second argument');
   }
 
-  const index = !last ? subjectString.indexOf(characters) : subjectString.lastIndexOf(characters);
+  if (delimiter === '') {
+    return str;
+  }
 
-  return index !== -1 ? subjectString.substring(0, index) : '';
-};
+  const index = last ? str.lastIndexOf(delimiter) : str.indexOf(delimiter);
+
+  return index !== -1 ? str.slice(0, index) : str;
+}

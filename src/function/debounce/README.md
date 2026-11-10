@@ -1,28 +1,44 @@
 <a name="debounce"></a>
 
 ## debounce(fn, [wait], [immediate]) ⇒ <code>function</code>
-Returns a function, that, as long as it continues to be invoked, will not
-be triggered. The function will be called after it stops being called for
-'n' milliseconds. If `immediate` is passed, trigger the function on the
-leading edge, instead of the trailing.
+Creates a debounced function that delays invoking `fn` until `wait`
+milliseconds have elapsed since its last call.
 
-**Returns**: <code>function</code> - A new debounced function.  
+By default, `fn` is invoked on the trailing edge with the arguments
+and `this` binding of the most recent call.
+
+When `immediate` is truthy, `fn` is invoked on the leading edge instead,
+and subsequent calls are ignored until the function has not been called
+for `wait` milliseconds.
+
+The debounced function always returns `undefined`.
+
+**Kind**: global function  
+**Returns**: <code>function</code> - The new debounced function.  
 **Throws**:
 
-- <code>TypeError</code> If `fn` is not function.
+- <code>TypeError</code> If `fn` is not a function.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| fn | <code>function</code> |  | The function to be executed. |
-| [wait] | <code>Number</code> | <code>0</code> | Time of delay in milliseconds. It is required if `immediate` is used. |
-| [immediate] | <code>Boolean</code> | <code>false</code> | If true or any truthy value, triggers the function on the leading edge. |
+| fn | <code>function</code> |  | The function to debounce. |
+| [wait] | <code>number</code> | <code>0</code> | The delay in milliseconds. |
+| [immediate] | <code>boolean</code> | <code>false</code> | Whether to invoke `fn` on the leading edge. |
 
-**Example**
+**Example**  
 ```js
-const debouncedHandler = debounce(() => {
-  // Do your thing here...
+// Trailing-edge debounce
+const handleResize = debounce(() => {
+  console.log('Window resized');
 }, 250);
 
-window.addEventListener('resize', debouncedHandler, false);
+window.addEventListener('resize', handleResize);
+
+// Leading-edge debounce
+const handleClick = debounce(() => {
+  console.log('Button clicked');
+}, 1000, true);
+
+button.addEventListener('click', handleClick);
 ```

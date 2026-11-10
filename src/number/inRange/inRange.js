@@ -1,33 +1,41 @@
 /**
- * Checks if a number is between `min` and 'max' values including.
- * If `min` is greater than `max` the parameters are swapped to support inverted ranges.
+ * Checks whether a number is within an inclusive range.
  *
- * @param {Number} value The number to check.
- * @param {Number} min The minimum value of the range.
- * @param {Number} max The maximum value of the range.
- * @throws {TypeError} If one or more of the arguments passed is not a number.
- * @returns {Boolean} True if number is in the range; otherwise false.
+ * If `min` is greater than `max`, the bounds are treated in reverse order.
+ * Returns `false` if any argument is `NaN`. Infinite bounds are supported.
+ *
+ * @param {number} value The number to check.
+ * @param {number} min The lower bound of the range.
+ * @param {number} max The upper bound of the range.
+ * @returns {boolean} `true` if the number is within the range; otherwise `false`.
+ * @throws {TypeError} If any argument is not a number.
  * @example
  *
  * inRange(3, 2, 4);
  * // => true
  *
  * inRange(3, 4, 2);
- * // => true (`min` and `max` parameters are swapped)
+ * // => true
+ *
+ * inRange(2, 2, 4);
+ * // => true
+ *
+ * inRange(5, 2, 4);
+ * // => false
  *
  * inRange(-3, -2, -6);
  * // => true
  *
- * inRange(4, 8, 2);
- * // => true
- *
  * inRange(4.5, 8.2, 2.1);
  * // => true
+ *
+ * inRange(NaN, 0, 10);
+ * // => false
  */
-export const inRange = (value, min, max) => {
+export function inRange(value, min, max) {
   if (typeof value !== 'number' || typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
   return value >= Math.min(min, max) && value <= Math.max(min, max);
-};
+}

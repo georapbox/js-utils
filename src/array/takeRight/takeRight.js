@@ -1,21 +1,23 @@
 /**
- * Creates a slice of `array` with `n` items taken from the end.
+ * Creates a new array containing up to `n` elements from the end
+ * of the input array.
  *
  * @param {Array} array The array to process.
- * @param {Number} [n=1] The number of items to take.
- * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `n` is not number but not if is `undefined`.
- * @returns {Array} The slice of the array.
+ * @param {number} [n=1] The number of elements to take. Fractional values are rounded down using `Math.floor()`.
+ * @returns {Array} A new array containing the selected elements.
+ * @throws {TypeError} If `array` is not an array or `n` is not a number.
+ * @throws {RangeError} If `n` is `NaN`.
+ * @returns {Array} Returns a new array containing the selected items.
  * @example
  *
  * takeRight([1, 2, 3, 4, 5]);
  * // => [5]
  *
- * takeRight([1, 2, 3, 4, 5], NaN);
- * // => [5]
- *
  * takeRight([1, 2, 3, 4, 5], 3);
  * // => [3, 4, 5]
+ *
+ * takeRight([1, 2, 3, 4, 5], 2.7);
+ * // => [4, 5]
  *
  * takeRight([1, 2, 3, 4, 5], 0);
  * // => []
@@ -26,16 +28,10 @@
  * takeRight([1, 2, 3, 4, 5], 10);
  * // => [1, 2, 3, 4, 5]
  *
- * takeRight([1, 2, 3, 4, 5], Number.MAX_VALUE);
+ * takeRight([1, 2, 3, 4, 5], Infinity);
  * // => [1, 2, 3, 4, 5]
- *
- * takeRight([1, 2, 3, 4, 5], '2');
- * // => Throws TypeError
- *
- * takeRight({}, 2);
- * // => Throws TypeError
  */
-export const takeRight = (array, n = 1) => {
+export function takeRight(array, n = 1) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -44,11 +40,11 @@ export const takeRight = (array, n = 1) => {
     throw new TypeError('Expected a number for second argument');
   }
 
-  const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-  const len = array.length;
+  if (Number.isNaN(n)) {
+    throw new RangeError('Expected a valid number for second argument');
+  }
 
-  n = n > MAX_SAFE_INTEGER ? len : n == null || n !== n ? 1 : Math.floor(n);
-  n = len - n;
+  const count = Math.max(0, Math.floor(n));
 
-  return array.slice(n < 0 ? 0 : n, len);
-};
+  return array.slice(Math.max(0, array.length - count));
+}

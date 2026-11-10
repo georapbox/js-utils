@@ -1,27 +1,26 @@
 /**
- * Creates a slice of `array` with elements taken from the end, until `predicate` returns falsy.
- * The `predicate` is invoked with three arguments: (`value`, `index`, `array`).
+ * Creates a slice of an array containing elements from the end
+ * until the predicate returns a falsy value.
+ *
+ * Iteration is limited to the array's initial length, so elements appended
+ * during iteration are not visited. The predicate may still modify the array.
  *
  * @param {Array} array The array to process.
- * @param {function} predicate The function invoked per iteration.
- * @throws {TypeError} If `array` is not array.
- * @throws {TypeError} If `predicate` is not function but not if is `undefined`.
- * @returns {Array} The slice of `array`.
+ * @param {function} predicate The function invoked with `(value, index, array)` for each element.
+ * @returns {Array} A new array containing the trailing elements that satisfy the predicate.
+ * @throws {TypeError} If the first argument is not an array or the second argument is not a function.
  * @example
  *
- * const books = [
- *   {title: 'Javascript Design Patterns', read: false},
- *   {title: 'Programming Javascript Applications', read: true},
- *   {title: 'JavaScript The Good Parts', read: false},
- *   {title: 'Eloquent Javascript', read: false}
- * ];
+ * takeRightWhile([1, 2, 3, 4, 5], value => value > 3);
+ * // => [4, 5]
  *
- * takeRightWhile(books, function (book, index, books) {
- *   return !book.read;
- * });
- * // => [{title: 'JavaScript The Good Parts', read: false}, {title: 'Eloquent Javascript', read: false}]
+ * takeRightWhile([1, 2, 3], value => value > 5);
+ * // => []
+ *
+ * takeRightWhile([1, 2, 3], value => value > 0);
+ * // => [1, 2, 3]
  */
-export const takeRightWhile = (array, predicate) => {
+export function takeRightWhile(array, predicate) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
@@ -30,12 +29,12 @@ export const takeRightWhile = (array, predicate) => {
     throw new TypeError('Expected a function for second argument');
   }
 
-  const len = array.length;
-  let index = len;
+  const length = array.length;
+  let index = length - 1;
 
-  while (--index < len && index >= 0 && predicate(array[index], index, array)) {
-    continue;
+  while (index >= 0 && predicate(array[index], index, array)) {
+    index--;
   }
 
-  return array.slice(index + 1, len);
-};
+  return array.slice(index + 1, length);
+}

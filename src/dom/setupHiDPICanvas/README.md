@@ -9,6 +9,7 @@ The canvas must have a defined display size in CSS, without padding.
 Call this function again when the canvas size or device pixel ratio
 changes. Resizing the canvas clears its contents, so it must be redrawn.
 
+**Kind**: global constant  
 **Returns**: <code>CanvasRenderingContext2D</code> - The 2D rendering context.  
 **Throws**:
 
@@ -19,7 +20,7 @@ changes. Resizing the canvas clears its contents, so it must be redrawn.
 | --- | --- | --- |
 | canvas | <code>HTMLCanvasElement</code> | The canvas element to configure. |
 
-**Example**
+**Example**  
 ```js
 // HTML: <canvas style="width: 300px; height: 150px;"></canvas>
 const canvas = document.querySelector('canvas');

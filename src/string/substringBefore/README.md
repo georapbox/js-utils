@@ -1,41 +1,39 @@
 <a name="substringBefore"></a>
 
-## substringBefore(subjectString, characters, [last]) ⇒ <code>string</code>
-Returns a substring before a specific sequence of character(s).
-By default looks for the first occurrence of this sequence.
-If the character or sequence of characters not found, returns an empty string.
+## substringBefore(str, delimiter, [last]) ⇒ <code>string</code>
+Returns the substring before the first occurrence of a delimiter.
 
-**Returns**: <code>string</code> - Returns the result string.  
+When `last` is truthy, uses the last occurrence instead.
+Returns the original string if the delimiter is empty or not found.
+Matching is case-sensitive.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - The substring before the delimiter, or the original string if the delimiter is empty or not found.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
-- <code>TypeError</code> If `characters` is not string.
+- <code>TypeError</code> If `str` or `delimiter` is not a string.
 
-**Note**: For legacy browsers' support use `String.prototype.lastIndexOf`  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| subjectString | <code>String</code> |  | The string to process. |
-| characters | <code>String</code> |  | The sequence of characters to use as delimiter. Case sensitivity matters. |
-| [last] | <code>Boolean</code> | <code>undefined</code> | If true or any truthy value, will look for the last occurence of the characters specified. |
+| str | <code>string</code> |  | The string to process. |
+| delimiter | <code>string</code> |  | The substring to search for. |
+| [last] | <code>boolean</code> | <code>false</code> | Whether to use the last occurrence. |
 
 **Example**  
 ```js
-substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_');
-// => 'LOREM'
+substringBefore('foo/bar/baz', '/');
+// => 'foo'
 
-substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '_', true);
-// => 'LOREM_IPSUM DOLOR'
+substringBefore('foo/bar/baz', '/', true);
+// => 'foo/bar'
 
-substringBefore('LOREM_IPSUM DOLOR_SIT AMET', 'SIT');
-// => 'LOREM_IPSUM DOLOR_'
+substringBefore('foo/bar/baz', '?');
+// => 'foo/bar/baz'
 
-substringBefore('LOREM_IPSUM DOLOR_SIT AMET', '???'); // using a sequense of characters that does not exist
-// => ''
+substringBefore('foobar', '');
+// => 'foobar'
 
-substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍊');
+substringBefore('🍎🍐🍊🍌', '🍊');
 // => '🍎🍐'
-
-substringBefore('🍎🍐🍊🍌🍉🍇🍓', '🍎');
-// => ''
 ```

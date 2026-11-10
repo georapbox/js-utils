@@ -1,70 +1,46 @@
 /**
- * Creates an object composed of the picked object properties.
+ * Creates a new object containing the specified own enumerable properties
+ * of the source object.
  *
- * @param {Object} object The source object.
- * @param {Array} paths The property paths to pick.
- * @param {Boolean} [pickOwnKeys=true] If `true` will look up only for own keys; otherwise will look up in prototype chain.
- * @throws {TypeError} Throws if `object` is not plain object.
- * @throws {TypeError} Throws if `paths` is not array.
- * @throws {TypeError} Throws if `pickOwnKeys` is not boolean but not undefined.
- * @returns {Object} Returns the new object.
+ * Only top-level properties are picked. Inherited and non-enumerable
+ * properties are ignored. String and symbol property keys are supported.
+ * The original object is not modified.
+ *
+ * @param {object} object The source object.
+ * @param {Array<string|symbol>} paths The property keys to pick.
+ * @returns {object} A new object containing the picked properties.
+ * @throws {TypeError} If the first argument is not an object or the second argument is not an array.
  * @example
  *
- * const object = Object.create({
- *   foo: 'bar'
- * });
- *
- * Object.defineProperties(object, {
- *   a: { value: 1 },
- *   b: { value: 2 },
- *   c: { value: 3 }
- * });
- *
- * pick(object, ['a', 'c', 'foo']);
+ * pick({ a: 1, b: 2, c: 3 }, ['a', 'c']);
  * // => { a: 1, c: 3 }
  *
- * pick(object, ['a', 'c', 'foo'], false);
- * // => { a: 1, c: 3, foo: 'bar' }
- *
- * pick(object, ['d']);
+ * pick({ a: 1, b: 2 }, ['missing']);
  * // => {}
+ *
+ * pick({ a: 1, b: 2 }, []);
+ * // => {}
+ *
+ * const key = Symbol('id');
+ * pick({ [key]: 123, name: 'John' }, [key]);
+ * // => { [key]: 123 }
  */
-export const pick = (object, paths, pickOwnKeys) => {
-  const result = {};
-  const type = Object.prototype.toString.call(object);
-
-  if (
-    typeof object !== 'object' ||
-    object === null ||
-    Array.isArray(object) ||
-    type === '[object Set]' ||
-    type === '[object WeakSet]' ||
-    type === '[object Map]' ||
-    type === '[object WeakMap]'
-  ) {
-    throw new TypeError('Expected a plain object for first argument');
+export function pick(object, paths) {
+  if (object === null || typeof object !== 'object') {
+    throw new TypeError('Expected an object for first argument');
   }
 
   if (!Array.isArray(paths)) {
     throw new TypeError('Expected an array for second argument');
   }
 
-  if (typeof pickOwnKeys === 'undefined') {
-    pickOwnKeys = true;
-  }
+  const entries = [];
 
-  if (typeof pickOwnKeys !== 'boolean') {
-    throw new TypeError('Expected a boolean for third argument');
-  }
-
-  for (let i = 0; i < paths.length; i += 1) {
-    const key = paths[i];
-    const meetsCriteria = pickOwnKeys ? Object.prototype.hasOwnProperty.call(object, key) : key in object;
-
-    if (meetsCriteria) {
-      result[key] = object[key];
+  for (const key of paths) {
+    if (Object.prototype.propertyIsEnumerable.call(object, key)) {
+      entries.push([key, object[key]]);
     }
   }
 
-  return result;
-};
+  return Object.fromEntries(entries);
+}

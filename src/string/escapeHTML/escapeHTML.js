@@ -1,9 +1,27 @@
+const htmlEscapes = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;'
+};
+
 /**
- * Converts the characters "&", "<", ">", '"' and "'" in a string to their corresponding HTML entities.
+ * Escapes special HTML characters in a string.
  *
- * @param {String} subjectString The HTML string to escape.
- * @throws {TypeError} If `subjectString` is not string.
- * @returns {String} Returns the escaped string.
+ * Converts ampersands (&), angle brackets (< >), double quotes ("),
+ * and single quotes (') to their corresponding HTML entities.
+ *
+ * Escapes the entire input, including characters inside attribute values.
+ * When constructing HTML, escape dynamic text or quoted attribute values,
+ * not the HTML markup itself.
+ *
+ * Does not sanitize HTML or make strings safe for every HTML context,
+ * such as JavaScript, CSS, or unquoted attribute values.
+ *
+ * @param {string} str The string to escape.
+ * @returns {string} The escaped string.
+ * @throws {TypeError} If `str` is not a string.
  * @example
  *
  * escapeHTML('<script src="main.js"></script>');
@@ -12,26 +30,22 @@
  * escapeHTML('Hello & <span>World</span>');
  * // => 'Hello &amp; &lt;span&gt;World&lt;/span&gt;'
  *
- * escapeHTML('<p data-id="1">lorem ipsum</p>');
- * // => '&lt;p data-id=&quot;1&quot;&gt;lorem ipsum&lt;/p&gt;'
+ * escapeHTML("It's a beautiful day!");
+ * // => 'It&#39;s a beautiful day!'
+ *
+ * escapeHTML('<p data-id="1">Hello</p>');
+ * // => '&lt;p data-id=&quot;1&quot;&gt;Hello&lt;/p&gt;'
+ *
+ * escapeHTML('Hello world');
+ * // => 'Hello world'
+ *
+ * escapeHTML('');
+ * // => ''
  */
-export const escapeHTML = (subjectString) => {
-  if (typeof subjectString !== 'string') {
+export function escapeHTML(str) {
+  if (typeof str !== 'string') {
     throw new TypeError('Expected a string for first argument');
   }
 
-  const htmlEscapes = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;'
-  };
-
-  const regexUnescapedHtml = /[&<>"'`]/g;
-  const regexHasUnescapedHtml = RegExp(regexUnescapedHtml.source);
-
-  return regexHasUnescapedHtml.test(subjectString)
-    ? subjectString.replace(regexUnescapedHtml, (tag) => htmlEscapes[tag] || tag)
-    : subjectString;
-};
+  return str.replace(/[&<>"']/g, (char) => htmlEscapes[char]);
+}

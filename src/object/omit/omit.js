@@ -1,41 +1,47 @@
 /**
- * Creates an object composed of the own enumerable (not inherited) property paths of object that are not omitted.
+ * Creates a new object excluding the specified own enumerable properties
+ * of the source object.
  *
- * @param {Object} obj The source object.
- * @param {Array} props The property paths to omit.
- * @returns {Object} Returns the new object.
+ * Only top-level properties are omitted. Inherited and non-enumerable
+ * properties are not copied. String and symbol property keys are supported.
+ * The original object is not modified.
+ *
+ * @param {object} obj The source object.
+ * @param {Array<string|symbol>} [props=[]] The property keys to omit.
+ * @returns {object} A new object containing the remaining properties.
+ * @throws {TypeError} If the first argument is not an object or the second argument is not an array.
  * @example
  *
- * const obj = {
- *   a: 'aaa',
- *   b: 'bbb',
- *   c: 'ccc'
- * };
+ * omit({ a: 1, b: 2, c: 3 }, ['a', 'c']);
+ * // => { b: 2 }
  *
- * omit(obj, ['a', 'c']);
- * // => { b: 'bbb' }
- *
- * omit(obj, ['a', 'b', 'c']);
+ * omit({ a: 1, b: 2 }, ['a', 'b']);
  * // => {}
  *
- * omit(obj);
- * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * omit({ a: 1, b: 2 }, ['missing']);
+ * // => { a: 1, b: 2 }
  *
- * omit(obj, []);
- * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * omit({ a: 1, b: 2 });
+ * // => { a: 1, b: 2 }
  *
- * omit(obj, ['key_not_exists']);
- * // => { a: 'aaa', b: 'bbb', c: 'ccc' }
+ * const key = Symbol('id');
+ * omit({ [key]: 123, name: 'John' }, [key]);
+ * // => { name: 'John' }
  */
-export const omit = (obj, props) => {
-  if (!Array.isArray(props) || props.length === 0) {
-    props = [];
+export function omit(obj, props = []) {
+  if (obj === null || typeof obj !== 'object') {
+    throw new TypeError('Expected an object for first argument');
   }
 
-  return Object.keys(obj).reduce((accum, key) => {
-    if (props.indexOf(key) === -1) {
-      accum[key] = obj[key];
-    }
-    return accum;
-  }, {});
-};
+  if (!Array.isArray(props)) {
+    throw new TypeError('Expected an array for second argument');
+  }
+
+  const result = { ...obj };
+
+  for (const key of props) {
+    delete result[key];
+  }
+
+  return result;
+}

@@ -1,39 +1,45 @@
 /**
- * Removes one or more elements from an array at the specified index(es).
+ * Creates a new array excluding elements at the specified indices.
  *
- * @param {Array} array The initial array to remove elements from.
- * @param {Number} ...indexes The index(es) of the elements to be removed. Non numbers are ignored.
- * @throws {TypeError} If `array` is not array.
- * @returns {Array} The result array with the elements specified removed.
+ * Indices refer to positions in the original array. Duplicate, negative,
+ * fractional, and out-of-range indices are ignored, as are non-number values.
+ * The order of remaining elements is preserved.
+ * Sparse array holes are treated as `undefined` values.
+ *
+ * @param {Array} array The array to process.
+ * @param {...number} indexes The indices of the elements to remove.
+ * @returns {Array} A new array containing the remaining elements.
+ * @throws {TypeError} If the first argument is not an array.
  * @example
  *
- * const arr = [1, 2, 3, 4, 5];
- *
- * remove(arr, 0);
- * // => [2, 3, 4, 5]
- *
- * remove(arr, 0, 1);
- * // => [3, 4, 5]
- *
- * remove(arr, 0, 4);
+ * remove([1, 2, 3, 4, 5], 0, 4);
  * // => [2, 3, 4]
  *
- * remove(arr);
- * // => [1, 2, 3, 4, 5]
+ * remove([1, 2, 3, 4, 5], 1, 3);
+ * // => [1, 3, 5]
  *
- * remove(arr, arr.length);
- * // => [1, 2, 3, 4, 5]
+ * remove([1, 2, 3], 1, 1, -1);
+ * // => [1, 3]
  *
- * remove(arr, arr.length - 1);
- * // => [1, 2, 3, 4]
+ * remove([1, 2, 3], 10);
+ * // => [1, 2, 3]
  *
- * remove(arr, NaN);
- * // => [1, 2, 3, 4, 5]
+ * remove([1, , 3], 0);
+ * // => [undefined, 3]
  */
-export const remove = (array, ...indexes) => {
+export function remove(array, ...indexes) {
   if (!Array.isArray(array)) {
     throw new TypeError('Expected an array for first argument');
   }
 
-  return array.filter((_, i) => indexes.indexOf(i) === -1);
-};
+  const excluded = new Set(indexes);
+  const result = [];
+
+  for (let index = 0; index < array.length; index++) {
+    if (!excluded.has(index)) {
+      result.push(array[index]);
+    }
+  }
+
+  return result;
+}

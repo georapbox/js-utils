@@ -1,52 +1,68 @@
 <a name="truncate"></a>
 
-## truncate(string, [characterCount], [delimiter]) ⇒ <code>String</code>
-Truncates a string based on character count.
+## truncate(str, count, [suffix]) ⇒ <code>string</code>
+Truncates a string to the specified number of characters.
 
-**Returns**: <code>String</code> - The truncated string.  
+Uses Unicode grapheme clusters to avoid splitting characters such as
+emojis, flags, and letters with combining marks.
+
+Appends `suffix` only when truncation occurs. The suffix is not
+included in the character count. Whitespace is preserved.
+
+Fractional counts are rounded down. Negative, NaN, and infinite
+counts return the original string.
+
+Treats the input as plain text. HTML markup is not parsed or preserved
+and may be truncated in the middle of a tag.
+
+**Kind**: global function  
+**Returns**: <code>string</code> - The truncated string, or the original if no truncation is needed.  
 **Throws**:
 
-- <code>TypeError</code> If `subjectString` is not string.
-- <code>TypeError</code> If `characterCount` is not number.
+- <code>TypeError</code> If `str` or `suffix` is not a string, or `count` is not a number.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| subjectString | <code>String</code> |  | The string to truncate. |
-| [characterCount] | <code>Number</code> |  | The number of characters the truncated string contains.        If ommitted or falsy, the initial string is returned. |
-| [delimiter] | <code>String</code> | <code>&quot;&quot;</code> | The delimiter to add at the end of the truncated string. |
+| str | <code>string</code> |  | The string to truncate. |
+| count | <code>number</code> |  | The maximum number of characters to retain. |
+| [suffix] | <code>string</code> | <code>&quot;\&quot;\&quot;&quot;</code> | The string to append when truncation occurs. |
 
 **Example**  
 ```js
-const str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas tempora nihil commodi laborum sit eum atque iusto temporibus, odit natus odio accusantium id, labore, possimus laboriosam. Eos, ducimus, blanditiis.';
+truncate('Hello world', 5);
+// => 'Hello'
 
-truncate(str, 50, '...');
-// => 'Lorem ipsum dolor sit amet, consectetur adipisicin...'
+truncate('Hello world', 5, '...');
+// => 'Hello...'
 
-truncate(str, 30, '---');
-// => 'Lorem ipsum dolor sit amet, co---'
+truncate('Hello', 5, '...');
+// => 'Hello'
 
-truncate(str, 30);
-// => 'Lorem ipsum dolor sit amet, co'
+truncate('Hello world', 6, '...');
+// => 'Hello ...'
 
-truncate(str, 0);
-// => ''
+truncate('👩‍💻 Hello', 1, '...');
+// => '👩‍💻...'
 
-truncate(str, 0, '...');
+truncate('🇬🇷 Greece', 1, '...');
+// => '🇬🇷...'
+
+truncate('Hello', 0, '...');
 // => '...'
 
-truncate(str, 3.7);
-// => 'Lor'
+truncate('Hello', 3.7);
+// => 'Hel'
 
-truncate(str, -1);
-// => Returns the original string
+truncate('Hello', -1);
+// => 'Hello'
 
-truncate(str, NaN);
-// => Returns the original string
+truncate('Hello', NaN);
+// => 'Hello'
 
-truncate({item: str}, 10);
-// Throws TypeError
+truncate('Hello', Infinity);
+// => 'Hello'
 
-truncate(str, '10');
+truncate('Hello');
 // Throws TypeError
 ```

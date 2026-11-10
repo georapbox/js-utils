@@ -1,40 +1,37 @@
 <a name="pick"></a>
 
-## pick(object, paths, [pickOwnKeys]) ⇒ <code>Object</code>
-Creates an object composed of the picked object properties.
+## pick(object, paths) ⇒ <code>object</code>
+Creates a new object containing the specified own enumerable properties
+of the source object.
 
-**Returns**: <code>Object</code> - Returns the new object.  
+Only top-level properties are picked. Inherited and non-enumerable
+properties are ignored. String and symbol property keys are supported.
+The original object is not modified.
+
+**Kind**: global function  
+**Returns**: <code>object</code> - A new object containing the picked properties.  
 **Throws**:
 
-- <code>TypeError</code> Throws if `object` is not plain object.
-- <code>TypeError</code> Throws if `paths` is not array.
-- <code>TypeError</code> Throws if `pickOwnKeys` is not boolean but not undefined.
+- <code>TypeError</code> If the first argument is not an object or the second argument is not an array.
 
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| object | <code>Object</code> |  | The source object. |
-| paths | <code>Array</code> |  | The property paths to pick. |
-| [pickOwnKeys] | <code>Boolean</code> | <code>true</code> | If `true` will look up only for own keys; otherwise will look up in prototype chain. |
+| Param | Type | Description |
+| --- | --- | --- |
+| object | <code>object</code> | The source object. |
+| paths | <code>Array.&lt;(string\|symbol)&gt;</code> | The property keys to pick. |
 
-**Example**
+**Example**  
 ```js
-const object = Object.create({
-  foo: 'bar'
-});
-
-Object.defineProperties(object, {
-  a: { value: 1 },
-  b: { value: 2 },
-  c: { value: 3 }
-});
-
-pick(object, ['a', 'c', 'foo']);
+pick({ a: 1, b: 2, c: 3 }, ['a', 'c']);
 // => { a: 1, c: 3 }
 
-pick(object, ['a', 'c', 'foo'], false);
-// => { a: 1, c: 3, foo: 'bar' }
-
-pick(object, ['d']);
+pick({ a: 1, b: 2 }, ['missing']);
 // => {}
+
+pick({ a: 1, b: 2 }, []);
+// => {}
+
+const key = Symbol('id');
+pick({ [key]: 123, name: 'John' }, [key]);
+// => { [key]: 123 }
 ```

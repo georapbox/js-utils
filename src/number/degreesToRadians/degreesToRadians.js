@@ -1,30 +1,30 @@
 /**
- * Converts degrees to radians.
+ * Converts an angle from degrees to radians.
  *
- * @param {Number} degrees A number representing the degrees to convert.
- * @throws {TypeError} If `degrees` is not a number.
- * @returns {Number} The result in radiands, after conversion.
+ * @param {number} degrees The angle in degrees.
+ * @returns {number} The equivalent angle in radians.
+ * @throws {TypeError} If the argument is not a number.
  * @example
  *
  * degreesToRadians(0);
  * // => 0
  *
  * degreesToRadians(90);
- * // => 1.5707963267948966 (π / 2)
+ * // => Math.PI / 2
  *
  * degreesToRadians(180);
- * // => 3.141592653589793 (π)
+ * // => Math.PI
  *
  * degreesToRadians(270);
- * // => 4.71238898038469 (3π / 2)
+ * // => (3 * Math.PI) / 2
  *
  * degreesToRadians(360);
- * // => 6.283185307179586 (2π)
+ * // => 2 * Math.PI
  */
-export const degreesToRadians = (degrees) => {
+export function degreesToRadians(degrees) {
   if (typeof degrees !== 'number') {
     throw new TypeError('Expected a number for first argument');
   }
 
   return (degrees * Math.PI) / 180;
-};
+}
